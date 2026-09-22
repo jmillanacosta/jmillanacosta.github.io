@@ -1,0 +1,13 @@
+# Curated descriptions of current development; kept separate from PyPI metadata.
+- name: rdfsolve
+  repository: https://github.com/jmillanacosta/rdfsolve
+  summary: "RDF schema discovery and conversion, typed Python clients, and SPARQL execution with batching, retries, and query provenance."
+- name: pysec2pri
+  repository: https://github.com/jmillanacosta/pysec2pri
+  summary: "Reconciles retired identifiers and changed gene symbols against current database records, with historical mappings, ambiguity checks, and auditable resolution."
+- name: mapkgsutils
+  repository: https://github.com/jmillanacosta/mapkgsutils
+  summary: "Shared parsing, reconciliation, and release-comparison machinery for biomedical identifier mappings."
+- name: pyaop
+  repository: https://github.com/jmillanacosta/pyaop
+  summary: "Builds and enriches adverse outcome pathway networks from SPARQL sources, with gene, compound, and tissue associations for network visualisation."

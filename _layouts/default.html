@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% seo %}
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/cv.css' | relative_url }}"
+    />
+  </head>
+  <body>
+    <a class="skip-link screen-only" href="#main-content">Skip to CV</a>
+    <main id="main-content" tabindex="-1">{{ content }}</main>
+  </body>
+</html>

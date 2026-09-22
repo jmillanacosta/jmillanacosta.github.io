@@ -1,0 +1,8 @@
+_site/
+.jekyll-cache/
+vendor/
+.bundle/
+linkedin.html
+output/
+tmp/
+node_modules/

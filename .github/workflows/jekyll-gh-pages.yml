@@ -1,0 +1,60 @@
+name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+
+on:
+  push:
+    branches: ["main"]
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7.0.1
+      - name: Setup Pages
+        uses: actions/configure-pages@v6.0.0
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1.0.13
+        with:
+          source: ./
+          destination: ./_site
+      - name: Restore build directory ownership
+        run: sudo chown -R "$(id -u):$(id -g)" _site
+      - name: Set up Node
+        uses: actions/setup-node@v7.0.0
+        with:
+          node-version: "22"
+          cache: npm
+      - name: Install PDF renderer
+        run: npm ci
+      - name: Install matching Chromium and system libraries
+        run: npx playwright install --with-deps chromium
+      - name: Generate downloadable CV
+        timeout-minutes: 5
+        run: node scripts/build-pdf.mjs
+      - name: Check rendered layout
+        timeout-minutes: 5
+        run: node scripts/check-layout.mjs
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v5.0.0
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5.0.1

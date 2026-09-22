@@ -1,0 +1,13 @@
+url: "https://jmillanacosta.github.io"
+baseurl: ""
+title: "Javier Millán Acosta"
+exclude:
+  - vendor
+  - scripts
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - tmp
+  - node_modules
+  - package.json
+  - package-lock.json
