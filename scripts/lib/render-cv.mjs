@@ -53,8 +53,9 @@ async function privateFontconfig() {
   return { file, cleanup: () => rm(dir, { recursive: true, force: true }) };
 }
 
-export async function openCV(siteDir = "_site") {
-  let html = await readFile(path.join(siteDir, "index.html"), "utf8");
+// The CV page is rendered by default; the PDF and the layout check both use it.
+export async function openCV(siteDir = "_site", page = "cv/index.html") {
+  let html = await readFile(path.join(siteDir, page), "utf8");
   const css = await readFile(path.join(siteDir, "assets/css/cv.css"), "utf8");
   if (!html.includes("/assets/css/cv.css"))
     throw new Error("Build the CV first: bundle exec jekyll build");

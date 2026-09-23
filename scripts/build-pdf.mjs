@@ -4,7 +4,7 @@ import path from "node:path";
 import { openCV } from "./lib/render-cv.mjs";
 
 const siteDir = process.argv[2] || "_site";
-const relativeOutput = "output/pdf/javier-millan-acosta-cv.pdf";
+const relativeOutput = "cv/javier-millan-acosta-cv.pdf";
 const updated = new Date().toLocaleDateString("en-US", {
   timeZone: "UTC",
   year: "numeric",
@@ -25,7 +25,7 @@ try {
   });
   const pdf = Buffer.from(data, "base64");
   for (const destination of [
-    relativeOutput,
+    path.join("output", relativeOutput),
     path.join(siteDir, relativeOutput),
   ]) {
     await mkdir(path.dirname(destination), { recursive: true });

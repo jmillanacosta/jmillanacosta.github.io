@@ -1,0 +1,6 @@
+---
+layout: null
+permalink: /cv/index.jsonld
+for: /cv/
+---
+{% include cv-graph.jsonld %}

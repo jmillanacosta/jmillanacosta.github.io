@@ -1,0 +1,29 @@
+<header class="cv-header" id="top">
+  <h1><span property="name foaf:name" content="{{ person.name | escape }}"><span property="givenName foaf:givenName" content="{{ person.given_name | escape }}">{{ person.given_name | escape }}</span> <span property="familyName foaf:familyName" content="{{ person.family_name | escape }}">{{ person.family_name | escape }}</span></span></h1>
+  <p><span property="jobTitle" content="{{ person.job_title | escape }}">{{ person.job_title | escape }}</span>, {% include cv/org.html key=person.works_for property="worksFor" %} · <span property="address" typeof="PostalAddress"><span property="addressLocality" content="{{ person.address.locality | escape }}">{{ person.address.locality | escape }}</span>, <span property="addressCountry" content="{{ person.address.country | escape }}">{{ person.address.country | escape }}</span></span></p>
+  {%- if parts contains " description " %}
+  <p property="description" content="{{ person.description | strip | escape }}">{{ person.description | strip | escape }}</p>
+  {%- endif %}
+  <nav class="contact-links" aria-label="Contact and profiles">
+    <span class="contact-email" property="email" content="{{ person.email | escape }}"><a href="mailto:{{ person.email }}">{{ person.email }}</a></span>
+    {%- for profile in person.profiles %}{% if profile.header %}
+    <a{% unless profile.url == me %} property="sameAs"{% endunless %} href="{{ profile.url | escape }}">{{ profile.label }}</a>
+    {%- endif %}{% endfor %}
+
+  </nav>
+  {%- if mode == "cv" %}
+  <p class="hero-actions screen-only"><a class="button button-primary" href="{{ pdf_url }}" download>Download PDF</a></p>
+  {%- endif %}
+  <div hidden>
+    <span property="foaf:mbox" resource="mailto:{{ person.email }}"></span>
+    <span property="url foaf:homepage" resource="{{ base }}"></span>
+    <span property="image" resource="{{ base }}assets/og-image.png"></span>
+    {%- for profile in person.profiles %}{% unless profile.header or profile.url == me %}
+    <span property="sameAs" resource="{{ profile.url | escape }}"></span>
+    {%- endunless %}{% endfor %}
+    {%- for s in person.same_as %}
+    <span property="sameAs" resource="{{ s }}"></span>
+    {%- endfor %}
+    <span property="identifier" typeof="PropertyValue"><span property="propertyID" content="ORCID"></span><span property="value" content="{{ person.orcid }}"></span><span property="url" resource="{{ me }}"></span></span>
+  </div>
+</header>

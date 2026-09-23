@@ -1,0 +1,10 @@
+<section class="cv-section section-skills" aria-labelledby="skills">
+  <h2 id="skills"><a class="section-title" href="#skills">Technical skills</a></h2>
+  <div class="section-body">
+    <ul>
+      {%- for skill in cv.skills %}
+      <li><strong>{{ skill.name | escape }}:</strong> {% include cv/terms.html text=skill.description %}</li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>

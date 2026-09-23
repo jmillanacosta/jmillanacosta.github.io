@@ -1,0 +1,23 @@
+<section class="cv-section section-teaching" aria-labelledby="teaching">
+  <h2 id="teaching"><a class="section-title" href="#teaching">Teaching</a></h2>
+  <div class="section-body">
+    <p>Teaching contributions at {{ orgs[cv.teaching_provider].name | escape }}:</p>
+    {%- for course in cv.teaching %}
+    <article class="cv-entry teaching-entry"{% if course.iri %} resource="{{ course.iri | escape }}"{% endif %} typeof="Course">
+      <span property="provider" resource="{{ orgs[cv.teaching_provider].iri }}"></span>
+      <h3>{% if course.url %}<a property="url" href="{{ course.url | escape }}">{% endif %}<span property="name" content="{{ course.name | escape }}">{{ course.name | escape }}</span>{% if course.url %}</a>{% endif %}</h3>
+      {%- if course.program or course.code %}
+      <p class="teaching-meta">{% if course.program %}<span property="isPartOf" typeof="EducationalOccupationalProgram">{% if course.program_url %}<a property="url" href="{{ course.program_url | escape }}">{% endif %}<span property="name" content="{{ course.program | escape }}">{{ course.program | escape }}</span>{% if course.program_url %}</a>{% endif %}</span>{% endif %}{% if course.program and course.code %} · {% endif %}{% if course.code %}<span property="courseCode" content="{{ course.code | escape }}">{{ course.code | escape }}</span>{% endif %}</p>
+      {%- endif %}
+      <div class="teaching-description" property="hasCourseInstance" typeof="CourseInstance"><span property="instructor" resource="{{ me }}"></span><p property="description" content="{{ course.description | strip | escape }}">{% include cv/text.html text=course.description mentions=course.mentions %}</p></div>
+    </article>
+    {%- endfor %}
+    <h3>Teaching certifications</h3>
+    <ul>
+      {%- for credential in cv.credentials %}
+      {%- include cv/datatype.liquid value=credential.date %}
+      <li property="hasCredential" typeof="EducationalOccupationalCredential"><span property="name" content="{{ credential.name | escape }}">{{ credential.name | escape }}</span> — {% include cv/org.html key=credential.recognized_by property="recognizedBy" %}, <span property="dateCreated" datatype="{{ datatype }}" content="{{ credential.date }}">{{ credential.date }}</span>.</li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>

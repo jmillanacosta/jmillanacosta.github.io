@@ -28,34 +28,18 @@
       rel="apple-touch-icon"
       href="{{ '/apple-touch-icon.png' | relative_url }}"
     />
+    {%- for format in formats %}
     <link
       rel="alternate"
-      type="application/ld+json"
-      href="{{ '/cv.jsonld' | relative_url }}"
-      title="CV as JSON-LD"
+      type="{{ format.type }}"
+      href="{{ format.url | prepend: page_iri }}"
+      title="{{ format.name }}"
     />
-    <link
-      rel="alternate"
-      type="text/turtle"
-      href="{{ '/cv.ttl' | relative_url }}"
-      title="CV as Turtle"
-    />
-    <link
-      rel="alternate"
-      type="application/n-triples"
-      href="{{ '/cv.nt' | relative_url }}"
-      title="CV as N-Triples"
-    />
-    <link
-      rel="alternate"
-      type="application/rdf+xml"
-      href="{{ '/cv.rdf' | relative_url }}"
-      title="CV as RDF/XML"
-    />
+    {%- endfor %}
     <link
       rel="meta"
       type="application/rdf+xml"
-      href="{{ '/cv.rdf' | relative_url }}"
+      href="{{ 'index.rdf' | prepend: page_iri }}"
       title="FOAF"
     />
     <link
@@ -63,12 +47,6 @@
       type="text/turtle"
       href="{{ '/.well-known/void' | relative_url }}"
       title="VoID dataset description"
-    />
-    <link
-      rel="alternate"
-      type="application/pdf"
-      href="{{ '/output/pdf/javier-millan-acosta-cv.pdf' | relative_url }}"
-      title="CV as PDF"
     />
     <link rel="stylesheet" href="{{ '/assets/css/cv.css' | relative_url }}" />
     <script src="{{ '/assets/js/cv-nav.js' | relative_url }}" defer></script>
@@ -80,8 +58,8 @@
     vocab="https://schema.org/"
     prefix="foaf: http://xmlns.com/foaf/0.1/ dcterms: http://purl.org/dc/terms/ xsd: http://www.w3.org/2001/XMLSchema#"
   >
-    <a class="skip-link screen-only" href="#main-content">Skip to CV</a>
-    {%- if page.sections %}
+    <a class="skip-link screen-only" href="#main-content">Skip to content</a>
+    {%- if page.sections and mode == "cv" %}
     {%- assign employer = orgs[person.works_for] %}
     {%- assign employer_parent = orgs[employer.parent] %}
     <aside
@@ -104,7 +82,7 @@
         <nav class="section-nav" aria-label="CV sections">
           <ol>
             {%- for section in page.sections %}
-            <li><a href="#{{ section.id }}">{{ section.label }}</a></li>
+            <li style="--i: {{ forloop.index0 }}"><a href="#{{ section.id }}">{{ section.label }}</a></li>
             {%- endfor %}
           </ol>
         </nav>
@@ -117,6 +95,7 @@
             <li><a href="{{ profile.url }}">{{ profile.sidebar }}</a></li>
             {%- endif %}{% endfor %}
           </ul>
+          <a class="sidebar-cv" href="{{ '/' | relative_url }}">Home</a>
           <a class="sidebar-pdf" href="{{ pdf_url }}" download>Download PDF</a>
         </div>
       </div>
@@ -125,9 +104,14 @@
     <main
       id="main-content"
       tabindex="-1"
-      resource="{{ base }}"
+      resource="{{ page_iri }}"
       typeof="ProfilePage foaf:PersonalProfileDocument"
     >
+      <nav class="site-nav screen-only" aria-label="Site">
+        <a href="{{ '/' | relative_url }}"{% if mode == "site" %} aria-current="page"{% endif %}>Home</a>
+        <a href="{{ '/cv/' | relative_url }}"{% if mode == "cv" %} aria-current="page"{% endif %}>CV</a>
+        <a href="{{ '/events/' | relative_url }}"{% if mode == "events" %} aria-current="page"{% endif %}>Talks &amp; events</a>
+      </nav>
       {{ content }}
       <footer class="page-footer screen-only">
         <span
@@ -145,7 +129,7 @@
         >
         · Also as
         {%- for format in formats -%}
-          {%- assign f_url = format.url | prepend: base -%}
+          {%- assign f_url = format.url | prepend: page_iri -%}
           {{ " " }}<span property="encoding" resource="{{ f_url }}" typeof="MediaObject"><span property="encodingFormat" content="{{ format.type }}"></span><a property="contentUrl" href="{{ f_url }}" type="{{ format.type }}"><span property="name" content="{{ format.name }}">{{ format.name }}</span></a></span>{% unless forloop.last %},{% endunless %}
         {%- endfor %}
       </footer>

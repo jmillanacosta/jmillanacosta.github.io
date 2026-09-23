@@ -1,0 +1,14 @@
+{%- comment -%}Employment roles (include.jobs) as schema:EmployeeRole, with their organizations.{%- endcomment -%}
+    {%- for job in include.jobs %}
+    <article class="cv-entry" property="worksFor" typeof="EmployeeRole">
+      <span property="roleName" resource="{{ job.occupation }}"></span>
+      <header class="entry-heading">
+        <div><h3 property="roleName" content="{{ job.role | escape }}">{{ job.role | escape }}</h3><p class="entry-organization">{% include cv/org.html key=job.organization property="worksFor" location=true %}</p></div>
+        {%- include cv/datatype.liquid value=job.start %}
+        <p class="entry-date"><time property="startDate" datatype="{{ datatype }}" content="{{ job.start }}" datetime="{{ job.start }}">{% include cv/month.html value=job.start %}</time> – {% if job.end %}{% include cv/datatype.liquid value=job.end %}<time property="endDate" datatype="{{ datatype }}" content="{{ job.end }}" datetime="{{ job.end }}">{% include cv/month.html value=job.end %}</time>{% else %}present{% endif %}{% if job.status %} · <span property="description" content="{{ job.status | escape }}">{{ job.status | escape }}</span>{% endif %}</p>
+      </header>
+      {%- for paragraph in job.description %}
+      <p property="description" content="{{ paragraph | strip | escape }}">{{ paragraph | strip | escape }}</p>
+      {%- endfor %}
+    </article>
+    {%- endfor %}

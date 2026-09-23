@@ -1,23 +1,22 @@
 ---
-title: Javier Millán Acosta
-description: Javier Millán Acosta. Software, interests, and contact details.
+title: Talks & events — Javier Millán Acosta
+description: Talks, posters, workshops, and hackathons, with slides, recordings, and reports.
 layout: default
 image:
   path: /assets/og-image.png
   width: 1200
   height: 630
-  alt: "Javier Millán Acosta"
+  alt: "Javier Millán Acosta, Doctoral Researcher at Maastricht University"
 sections:
-  - { id: open-source-software, label: Software }
-  - { id: contributions, label: Contributions }
-graph: [description, software, contributions]
+  - { id: conferences-hackathons, label: Talks & events }
+graph: [events]
 ---
 {%- comment -%}
-  Rendered from _data (see _data/cv.yml), with RDFa matching this page's JSON-LD graph
+  Rendered from _data (see _data/events.yml), with RDFa matching this page's JSON-LD graph
   (_includes/cv-graph.jsonld); scripts/build-rdf.py checks that the two are identical.
 {%- endcomment -%}
 {%- include cv/data.liquid -%}
 <div class="cv" property="mainEntity foaf:primaryTopic foaf:maker dcterms:creator" resource="{{ me }}" typeof="Person foaf:Person">
 {% include sections/header.html %}
-{% include landing/software.html %}
+{% include landing/events.html %}
 </div>

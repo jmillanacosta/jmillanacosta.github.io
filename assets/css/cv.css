@@ -154,6 +154,8 @@
     "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Helvetica, Arial, sans-serif;
   --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --card: #fcfbf8;
+  --chip: #edeae2;
 }
 
 *,
@@ -274,12 +276,6 @@ h3 {
   padding-block: 0.2rem;
 }
 
-.contact-links .pdf-link {
-  margin-left: auto;
-  white-space: nowrap;
-  font-weight: 600;
-}
-
 .cv-section {
   border-top: 1px solid var(--rule);
   padding-top: 1.1rem;
@@ -342,6 +338,19 @@ li::marker {
   font-weight: 500;
 }
 
+.publication-authors {
+  display: block;
+  margin-top: 0.1rem;
+  color: var(--muted);
+  font-size: 0.85em;
+  line-height: 1.5;
+}
+
+.publication-authors strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
 .publication-details {
   display: block;
   margin-top: 0.15rem;
@@ -375,6 +384,186 @@ li::marker {
   font-size: 0.85em;
 }
 
+/* Landing and events pages. */
+.hero-actions {
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem 1.6rem;
+  margin-top: 1.3rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.45rem 0.95rem;
+  border: 1px solid var(--link);
+  border-radius: 4px;
+  color: var(--link);
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.3;
+  text-decoration: none;
+}
+
+.button:hover,
+.button-primary {
+  color: var(--bg);
+  background: var(--link);
+}
+
+.button-primary:hover {
+  background: var(--text);
+  border-color: var(--text);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .button {
+    transition:
+      color 0.15s ease,
+      background-color 0.15s ease,
+      border-color 0.15s ease;
+  }
+}
+
+.smallcaps {
+  font-size: 0.76em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.entry-note {
+  margin-top: 0.25rem;
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.entry-note > * + * {
+  margin-top: 0.35rem;
+}
+
+/* Landing software: the name in the margin, then what it does and where to get it. */
+.works {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr));
+  gap: 1.4rem 2.2rem;
+  padding: 0;
+  list-style: none;
+}
+
+.works > li,
+.works > li + li {
+  margin: 0;
+  padding: 0;
+}
+
+.work-name {
+  display: block;
+  color: var(--text);
+  font-size: 1.08rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a.work-name:hover {
+  color: var(--link);
+}
+
+.work-text {
+  margin-top: 0.1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.works-more {
+  margin-top: 1.6rem;
+}
+
+.work-meta {
+  margin-top: 0.15rem;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.works-also {
+  margin-top: 1.6rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+}
+
+/* Almanac: entries under a hanging year set in the display serif. */
+.almanac-year {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr);
+  gap: 1rem;
+}
+
+.almanac-year + .almanac-year {
+  margin-top: 0.9rem;
+}
+
+.almanac-numeral {
+  color: color-mix(in srgb, var(--link) 75%, var(--bg));
+  font: 300 1.9rem/1 var(--serif);
+  font-variant-numeric: oldstyle-nums;
+  letter-spacing: -0.02em;
+}
+
+.almanac-entries {
+  padding: 0;
+  list-style: none;
+}
+
+.almanac-entries > li + li,
+.almanac-entry + .almanac-entry {
+  margin-top: 0.85rem;
+}
+
+.almanac-entry > * + * {
+  margin-top: 0.12rem;
+}
+
+.almanac-entry > .entry-note {
+  margin-top: 0.3rem;
+}
+
+.almanac-title {
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.almanac-title a {
+  color: var(--text);
+  text-decoration-color: var(--rule);
+}
+
+.almanac-place {
+  color: var(--muted);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.almanac-role {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.almanac-role .smallcaps {
+  color: var(--link);
+}
+
+@media screen and (width <= 480px) {
+  .almanac-year {
+    grid-template-columns: 3.3rem minmax(0, 1fr);
+    gap: 0.7rem;
+  }
+
+  .almanac-numeral {
+    font-size: 1.5rem;
+  }
+}
+
 /* Screen-only chrome: skip link, section navigation and anchor affordances. */
 .screen-only {
   display: none;
@@ -390,6 +579,10 @@ li::marker {
   .usage,
   .usage-note {
     display: inline;
+  }
+
+  .hero-actions {
+    display: flex;
   }
 
   .skip-link {
@@ -528,6 +721,12 @@ li::marker {
     transition-delay: 0.08s, 0.08s, 0s;
   }
 
+  /* On arrival, the section list writes itself in, one label after another. */
+  .section-nav li {
+    animation: nav-enter 0.55s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    animation-delay: calc(0.15s + var(--i, 0) * 0.055s);
+  }
+
   .sidebar[data-header-visible] .sidebar-name,
   .sidebar[data-header-visible] .sidebar-reveal {
     transform: translateY(-0.4rem);
@@ -571,10 +770,6 @@ li::marker {
 
   .contact-links .contact-email {
     flex-basis: 100%;
-  }
-
-  .contact-links .pdf-link {
-    margin-left: 0;
   }
 
   .sidebar {
@@ -654,6 +849,12 @@ li::marker {
   .sidebar-contact li + li {
     margin: 0;
     padding: 0;
+  }
+
+  .sidebar-cv {
+    display: block;
+    margin-top: 0.9rem;
+    font-weight: 700;
   }
 
   .sidebar-pdf {
@@ -754,10 +955,6 @@ li::marker {
     padding: 0;
   }
 
-  .pdf-link {
-    display: none;
-  }
-
   .cv-section {
     margin-top: 8pt;
     padding-top: 6pt;
@@ -785,6 +982,12 @@ li::marker {
     margin-top: 1pt;
   }
 
+  .publication-authors {
+    font-size: 8.5pt;
+    line-height: 1.35;
+    margin-top: 1pt;
+  }
+
   .publication-details {
     font-size: 8.5pt;
     line-height: 1.35;
@@ -806,5 +1009,117 @@ li::marker {
 
   a {
     text-decoration: none;
+  }
+}
+
+@keyframes nav-enter {
+  from {
+    opacity: 0;
+    transform: translateY(0.45rem);
+  }
+}
+
+/* On wide screens the rail line draws down as the labels arrive. */
+@media screen and (width >= 75rem) and (prefers-reduced-motion: no-preference) {
+  .section-nav ol {
+    animation: rail-draw 0.8s cubic-bezier(0.3, 0.6, 0.2, 1) 0.1s both;
+  }
+}
+
+@keyframes rail-draw {
+  from {
+    clip-path: inset(0 0 100% -1rem);
+  }
+
+  to {
+    clip-path: inset(0 0 0 -1rem);
+  }
+}
+
+/* On screen the page stays plain: one typeface, sentence-case headings, no ornaments.
+   The printed CV keeps its own typography (see @media print). */
+@media screen {
+  :root {
+    --bg: #fdfdfc;
+  }
+
+  main {
+    padding-top: 1.4rem;
+  }
+
+  h1 {
+    font: 600 2.2rem/1.2 var(--sans);
+    letter-spacing: -0.015em;
+  }
+
+  h2 {
+    color: var(--text);
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  .cv-header {
+    border-top: 0;
+    padding-top: 0;
+  }
+
+  .smallcaps {
+    font-size: inherit;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  .almanac-numeral {
+    color: var(--muted);
+    font: 600 1.05rem/1.4 var(--sans);
+    font-variant-numeric: normal;
+    letter-spacing: 0;
+  }
+
+  .almanac-place {
+    font-style: normal;
+  }
+
+  .section-nav ol a {
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  .sidebar-name {
+    font: 600 1rem/1.2 var(--sans);
+    letter-spacing: -0.015em;
+  }
+
+  .site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.4rem;
+    margin-bottom: 2.2rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid var(--rule);
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+
+  .site-nav a {
+    color: var(--muted);
+    text-decoration: none;
+  }
+
+  .site-nav a:hover,
+  .site-nav a[aria-current] {
+    color: var(--text);
+  }
+
+  .site-nav a[aria-current] {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.45em;
+    text-decoration-color: var(--link);
   }
 }

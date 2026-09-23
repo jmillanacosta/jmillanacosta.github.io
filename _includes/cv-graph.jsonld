@@ -11,7 +11,7 @@
   },
   "@graph": [
     {
-      "@id": {{ base | jsonify }},
+      "@id": {{ page_iri | jsonify }},
       "@type": ["ProfilePage", "foaf:PersonalProfileDocument"],
       "name": {{ doc_title | jsonify }},
       "dcterms:title": {{ doc_title | jsonify }},
@@ -23,7 +23,7 @@
       "foaf:maker": {"@id": {{ me | jsonify }}},
       "dcterms:creator": {"@id": {{ me | jsonify }}},
       "encoding": [
-        {%- for format in formats -%}{"@id": {{ format.url | prepend: base | jsonify }}, "@type": "MediaObject", "name": {{ format.name | jsonify }}, "encodingFormat": {{ format.type | jsonify }}, "contentUrl": {"@id": {{ format.url | prepend: base | jsonify }}}}{%- unless forloop.last -%}, {% endunless -%}{%- endfor -%}
+        {%- for format in formats -%}{"@id": {{ format.url | prepend: page_iri | jsonify }}, "@type": "MediaObject", "name": {{ format.name | jsonify }}, "encodingFormat": {{ format.type | jsonify }}, "contentUrl": {"@id": {{ format.url | prepend: page_iri | jsonify }}}}{%- unless forloop.last -%}, {% endunless -%}{%- endfor -%}
       ]
     },
     {
@@ -36,7 +36,9 @@
       "familyName": {{ person.family_name | jsonify }},
       "foaf:familyName": {{ person.family_name | jsonify }},
       "jobTitle": {{ person.job_title | jsonify }},
+      {%- if parts contains " description " %}
       "description": {{ person.description | strip | jsonify }},
+      {%- endif %}
       "email": {{ person.email | jsonify }},
       "foaf:mbox": {"@id": {{ person.email | prepend: "mailto:" | jsonify }}},
       "url": {"@id": {{ base | jsonify }}},
@@ -50,26 +52,38 @@
       ],
       "worksFor": [
         {% include ld/org.json key=person.works_for %}
-        {%- for job in cv.experience -%}
+        {%- if parts contains " roles " %}{% assign ld_jobs = cv.experience %}{% elsif parts contains " current-role " %}{% assign ld_jobs = cv.experience | where_exp: "job", "job.end == nil" %}{% else %}{% assign ld_jobs = "" | split: "" %}{% endif -%}
+        {%- for job in ld_jobs -%}
         , {"@type": "EmployeeRole", "roleName": [{{ job.role | jsonify }}, {"@id": {{ job.occupation | jsonify }}}], "startDate": {% include ld/date.json value=job.start %}{% if job.end %}, "endDate": {% include ld/date.json value=job.end %}{% endif %}, "description": [{% if job.status %}{{ job.status | jsonify }}, {% endif %}{% for paragraph in job.description %}{{ paragraph | strip | jsonify }}{% unless forloop.last %}, {% endunless %}{% endfor %}], "worksFor": {% include ld/org.json key=job.organization location=true %}}
         {%- endfor %}
-      ],
+      ]
+      {%- if parts contains " projects " %},
       "memberOf": [
         {%- for project in cv.funded_projects -%}{"@id": {{ project.iri | jsonify }}, "@type": "ResearchProject", "name": {{ project.name | jsonify }}, "url": {"@id": {{ project.url | jsonify }}}, "funding": {% include ld/grant.json key=project.grant %}}{%- unless forloop.last -%}, {% endunless -%}{%- endfor -%}
-      ],
+      ]
+      {%- endif %}
+      {%- if parts contains " education " %},
       "alumniOf": [
         {%- for edu in cv.education -%}{"@type": "OrganizationRole", "roleName": {{ edu.degree | jsonify }}, "startDate": {% include ld/date.json value=edu.start %}, "endDate": {% include ld/date.json value=edu.end %}, "description": {{ edu.description | strip | jsonify }}{% if edu.taxa %}, "about": [{% for taxon in edu.taxa %}{% assign t = cv.taxa[taxon] %}{"@id": {{ t.iri | jsonify }}, "@type": "Taxon", "name": {{ taxon | jsonify }}, "sameAs": [{% for s in t.same_as %}{"@id": {{ s | jsonify }}}{% unless forloop.last %}, {% endunless %}{% endfor %}]}{% unless forloop.last %}, {% endunless %}{% endfor %}]{% endif %}, "alumniOf": {% include ld/org.json key=edu.organization %}}{%- unless forloop.last -%}, {% endunless -%}{%- endfor -%}
-      ],
+      ]
+      {%- endif %}
+      {%- if parts contains " education " or parts contains " credentials " %},
       "hasCredential": [
-        {%- for edu in cv.education -%}{"@type": "EducationalOccupationalCredential", "name": {{ edu.degree | jsonify }}, "credentialCategory": {"@id": {{ edu.degree_type | jsonify }}}, "about": {"@id": {{ edu.field | jsonify }}}, "recognizedBy": {"@id": {{ orgs[edu.organization].iri | jsonify }}}, "dateCreated": {% include ld/date.json value=edu.end %}}, {% endfor -%}
-        {%- for credential in cv.credentials -%}{"@type": "EducationalOccupationalCredential", "name": {{ credential.name | jsonify }}, "recognizedBy": {% include ld/org.json key=credential.recognized_by %}, "dateCreated": {% include ld/date.json value=credential.date %}}{%- unless forloop.last -%}, {% endunless -%}{%- endfor -%}
-      ],
+        {%- if parts contains " education " %}{% for edu in cv.education -%}{"@type": "EducationalOccupationalCredential", "name": {{ edu.degree | jsonify }}, "credentialCategory": {"@id": {{ edu.degree_type | jsonify }}}, "about": {"@id": {{ edu.field | jsonify }}}, "recognizedBy": {"@id": {{ orgs[edu.organization].iri | jsonify }}}, "dateCreated": {% include ld/date.json value=edu.end %}}{% if parts contains " credentials " %}, {% else %}{% unless forloop.last %}, {% endunless %}{% endif %}{% endfor %}{% endif -%}
+        {%- if parts contains " credentials " %}{% for credential in cv.credentials -%}{"@type": "EducationalOccupationalCredential", "name": {{ credential.name | jsonify }}, "recognizedBy": {% include ld/org.json key=credential.recognized_by %}, "dateCreated": {% include ld/date.json value=credential.date %}}{%- unless forloop.last -%}, {% endunless -%}{%- endfor %}{% endif -%}
+      ]
+      {%- endif %}
+      {%- if parts contains " languages " %},
       "knowsLanguage": [
         {%- for language in cv.languages -%}{"@type": "Role", "description": {{ language.proficiency | jsonify }}, "knowsLanguage": {"@id": {{ language.iri | jsonify }}, "@type": "Language", "name": {{ language.name | jsonify }}, "alternateName": {{ language.code | jsonify }}, "sameAs": [{% for s in language.same_as %}{"@id": {{ s | jsonify }}}{% unless forloop.last %}, {% endunless %}{% endfor %}]}}{%- unless forloop.last -%}, {% endunless -%}{%- endfor -%}
-      ],
+      ]
+      {%- endif %}
+      {%- if parts contains " skills " %},
       "knowsAbout": [
         {%- for term in cv.skill_terms -%}{"@id": {{ term[1] | jsonify }}}{%- unless forloop.last -%}, {% endunless -%}{%- endfor -%}
-      ],
+      ]
+      {%- endif %}
+      {%- if parts contains " events " %},
       "performerIn": [
         {%- for event in events -%}
         {%- if event.funder %}{% assign funding_text = event.funding_note | append: " " | append: orgs[event.funder].name %}{% endif -%}
@@ -84,29 +98,30 @@
         }}{%- unless forloop.last -%}, {% endunless -%}
         {%- endfor -%}
       ]
-    },
-    {%- for community in cv.communities %}
-    {"@id": {{ community.iri | jsonify }}, "@type": "Project", "name": {{ community.name | jsonify }}, "url": {"@id": {{ community.url | jsonify }}}, "contributor": {"@id": {{ me | jsonify }}}},
-    {%- endfor %}
-    {%- for course in cv.teaching %}
-    { {% if course.iri %}"@id": {{ course.iri | jsonify }}, {% endif %}"@type": "Course", "name": {{ course.name | jsonify }}{% if course.url %}, "url": {"@id": {{ course.url | jsonify }}}{% endif %}{% if course.code %}, "courseCode": {{ course.code | jsonify }}{% endif %}{% if course.program %}, "isPartOf": {"@type": "EducationalOccupationalProgram", "name": {{ course.program | jsonify }}{% if course.program_url %}, "url": {"@id": {{ course.program_url | jsonify }}}{% endif %}}{% endif %}, "provider": {"@id": {{ orgs[cv.teaching_provider].iri | jsonify }}}, "hasCourseInstance": {"@type": "CourseInstance", "instructor": {"@id": {{ me | jsonify }}}{% include ld/mentions.json mentions=course.mentions %}, "description": {{ course.description | strip | jsonify }}}},
-    {%- endfor %}
-    {%- for item in software %}
+      {%- endif %}
+    }
+    {%- if parts contains " communities " %}{% for community in cv.communities %},
+    {"@id": {{ community.iri | jsonify }}, "@type": "Project", "name": {{ community.name | jsonify }}, "url": {"@id": {{ community.url | jsonify }}}, "contributor": {"@id": {{ me | jsonify }}}}
+    {%- endfor %}{% endif %}
+    {%- if parts contains " teaching " %}{% for course in cv.teaching %},
+    { {% if course.iri %}"@id": {{ course.iri | jsonify }}, {% endif %}"@type": "Course", "name": {{ course.name | jsonify }}{% if course.url %}, "url": {"@id": {{ course.url | jsonify }}}{% endif %}{% if course.code %}, "courseCode": {{ course.code | jsonify }}{% endif %}{% if course.program %}, "isPartOf": {"@type": "EducationalOccupationalProgram", "name": {{ course.program | jsonify }}{% if course.program_url %}, "url": {"@id": {{ course.program_url | jsonify }}}{% endif %}}{% endif %}, "provider": {"@id": {{ orgs[cv.teaching_provider].iri | jsonify }}}, "hasCourseInstance": {"@type": "CourseInstance", "instructor": {"@id": {{ me | jsonify }}}{% include ld/mentions.json mentions=course.mentions %}, "description": {{ course.description | strip | jsonify }}}}
+    {%- endfor %}{% endif %}
+    {%- if parts contains " software " %}{% for item in software %}
     {%- assign item_stats = stats | where: "id", item.id | first %}
     {%- assign pkg = nil %}{% if item.package %}{% assign pkg = site.data.software | where: "name", item.package | first %}{% endif %}
-    {"@id": {{ item.iri | jsonify }}, "@type": "SoftwareSourceCode", "name": {{ item.name | jsonify }}, "codeRepository": {"@id": {{ item.repository | jsonify }}}{% if item.url %}, "url": {"@id": {{ item.url | jsonify }}}{% endif %}{% if pkg %}, "softwareVersion": {{ pkg.version | jsonify }}, "downloadUrl": {"@id": {{ pkg.pypi_url | jsonify }}}{% if pkg.docs %}, "softwareHelp": {"@id": {{ pkg.docs | jsonify }}}{% endif %}{% endif %}, "author": {"@id": {{ me | jsonify }}}, "description": {{ item.description | strip | jsonify }}, "interactionStatistic": {% include ld/stats.json stats=item_stats %}},
-    {%- endfor %}
-    {%- for item in cv.contributions %}
+    , {"@id": {{ item.iri | jsonify }}, "@type": "SoftwareSourceCode", "name": {{ item.name | jsonify }}, "codeRepository": {"@id": {{ item.repository | jsonify }}}{% if item.url %}, "url": {"@id": {{ item.url | jsonify }}}{% endif %}{% if pkg %}, "softwareVersion": {{ pkg.version | jsonify }}, "downloadUrl": {"@id": {{ pkg.pypi_url | jsonify }}}{% if pkg.docs %}, "softwareHelp": {"@id": {{ pkg.docs | jsonify }}}{% endif %}{% endif %}{% if item.docs %}, "softwareHelp": {"@id": {{ item.docs | jsonify }}}{% endif %}, "author": {"@id": {{ me | jsonify }}}, "description": {{ item.description | strip | jsonify }}, "interactionStatistic": {% include ld/stats.json stats=item_stats %}}
+    {%- endfor %}{% endif %}
+    {%- if parts contains " contributions " %}{% for item in cv.contributions %}
     {%- assign item_stats = stats | where: "id", item.id | first %}
-    {"@id": {{ item.iri | jsonify }}, "@type": "SoftwareSourceCode", "name": {{ item.name | jsonify }}, "url": {"@id": {{ item.url | jsonify }}}{% if item.repository %}, "codeRepository": {"@id": {{ item.repository | jsonify }}}{% endif %}{% if item.doi %}, {{ item.doi_relation | default: "sameAs" | jsonify }}: {"@id": {{ item.doi | prepend: "https://doi.org/" | jsonify }}}{% endif %}, "contributor": {"@type": "Role", "contributor": {"@id": {{ me | jsonify }}}{% include ld/mentions.json mentions=item.mentions %}, "description": {{ item.description | strip | jsonify }}}, "interactionStatistic": {% include ld/stats.json stats=item_stats %}},
-    {%- endfor %}
-    {%- for deliverable in cv.deliverables %}
-    {"@type": "Report", "name": {{ deliverable.title | jsonify }}, "dcterms:title": {{ deliverable.title | jsonify }}, "reportNumber": {{ deliverable.number | jsonify }}, "datePublished": {% include ld/date.json value=deliverable.date %}, "dcterms:date": {% include ld/date.json value=deliverable.date %}{% if deliverable.url %}, "url": {"@id": {{ deliverable.url | jsonify }}}{% endif %}, "funding": {% include ld/grant.json key=deliverable.grant %}, "contributor": {"@id": {{ me | jsonify }}}, "dcterms:contributor": {"@id": {{ me | jsonify }}}},
+    , {"@id": {{ item.iri | jsonify }}, "@type": "SoftwareSourceCode", "name": {{ item.name | jsonify }}, "url": {"@id": {{ item.url | jsonify }}}{% if item.repository %}, "codeRepository": {"@id": {{ item.repository | jsonify }}}{% endif %}{% if item.doi %}, {{ item.doi_relation | default: "sameAs" | jsonify }}: {"@id": {{ item.doi | prepend: "https://doi.org/" | jsonify }}}{% endif %}, "contributor": {"@type": "Role", "contributor": {"@id": {{ me | jsonify }}}{% include ld/mentions.json mentions=item.mentions %}, "description": {{ item.description | strip | jsonify }}}, "interactionStatistic": {% include ld/stats.json stats=item_stats %}}
+    {%- endfor %}{% endif %}
+    {%- if parts contains " publications " %}{% for deliverable in cv.deliverables %}
+    , {"@type": "Report", "name": {{ deliverable.title | jsonify }}, "dcterms:title": {{ deliverable.title | jsonify }}, "reportNumber": {{ deliverable.number | jsonify }}, "datePublished": {% include ld/date.json value=deliverable.date %}, "dcterms:date": {% include ld/date.json value=deliverable.date %}{% if deliverable.url %}, "url": {"@id": {{ deliverable.url | jsonify }}}{% endif %}, "funding": {% include ld/grant.json key=deliverable.grant %}, "contributor": {"@id": {{ me | jsonify }}}, "dcterms:contributor": {"@id": {{ me | jsonify }}}}
     {%- endfor %}
     {%- for pub in site.data.publications %}
     {%- assign pub_same = cv.publication_same_as[pub.doi] %}
     {%- assign venue = cv.venues[pub.journal] %}
-    { {% if pub.doi %}"@id": {{ pub.doi | prepend: "https://doi.org/" | jsonify }}, {% endif %}"@type": "ScholarlyArticle", "name": {{ pub.title | jsonify }}, "dcterms:title": {{ pub.title | jsonify }}, "datePublished": {"@value": {{ pub.year | append: "" | jsonify }}, "@type": "xsd:gYear"}, "dcterms:date": {"@value": {{ pub.year | append: "" | jsonify }}, "@type": "xsd:gYear"}, "genre": {{ pub.type | replace: "-", " " | capitalize | jsonify }}{% if pub.doi %}, "identifier": {{ pub.doi | jsonify }}{% endif %}{% if pub_same %}, "sameAs": {"@id": {{ pub_same | jsonify }}}{% endif %}{% if pub.journal %}, "isPartOf": { {% if venue %}"@id": {{ venue | jsonify }}, {% endif %}"@type": "Periodical", "name": {{ pub.journal | jsonify }}}{% endif %}, "author": {"@id": {{ me | jsonify }}}, "dcterms:creator": {"@id": {{ me | jsonify }}}}{%- unless forloop.last -%},{%- endunless -%}
-    {%- endfor %}
+    , { {% if pub.doi %}"@id": {{ pub.doi | prepend: "https://doi.org/" | jsonify }}, {% endif %}"@type": "ScholarlyArticle", "name": {{ pub.title | jsonify }}, "dcterms:title": {{ pub.title | jsonify }}, "datePublished": {"@value": {{ pub.year | append: "" | jsonify }}, "@type": "xsd:gYear"}, "dcterms:date": {"@value": {{ pub.year | append: "" | jsonify }}, "@type": "xsd:gYear"}, "genre": {{ pub.type | replace: "-", " " | capitalize | jsonify }}{% if pub.doi %}, "identifier": {{ pub.doi | jsonify }}{% endif %}{% if pub_same %}, "sameAs": {"@id": {{ pub_same | jsonify }}}{% endif %}{% if pub.journal %}, "isPartOf": { {% if venue %}"@id": {{ venue | jsonify }}, {% endif %}"@type": "Periodical", "name": {{ pub.journal | jsonify }}}{% endif %}, "author": {% if pub.authors %}{"@list": [{% for a in pub.authors %}{% if a.me %}{"@id": {{ me | jsonify }}}{% else %}{% assign a_full = a.given | append: " " | append: a.family | strip %}{ {% if a.orcid %}"@id": {{ a.orcid | jsonify }}, {% endif %}"@type": "Person", "name": {{ a_full | jsonify }}}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}]}{% else %}{"@id": {{ me | jsonify }}}{% endif %}, "dcterms:creator": {"@id": {{ me | jsonify }}}}
+    {%- endfor %}{% endif %}
   ]
 }

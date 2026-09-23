@@ -1,0 +1,25 @@
+{%- comment -%}Landing: talks and events as an almanac, entries set under hanging years.{%- endcomment -%}
+<section class="cv-section lp-section" aria-labelledby="conferences-hackathons">
+  <h2 id="conferences-hackathons"><a class="section-title" href="#conferences-hackathons">Talks &amp; events</a></h2>
+  <div class="section-body">
+    {%- assign event_years = events | group_by: "year" %}
+    {%- for year_group in event_years %}
+    <div class="almanac-year">
+      <p class="almanac-numeral" aria-hidden="true">{{ year_group.name }}</p>
+      <ul class="almanac-entries">
+        {%- for event in year_group.items %}
+        {%- assign event_name = event.name | append: " " | append: event.year %}
+        {%- assign event_start = event.start | default: event.year | append: "" %}
+        <li class="almanac-entry" property="performerIn" typeof="Role">
+          <p class="almanac-title"><span property="performerIn"{% if event.iri %} resource="{{ event.iri }}"{% endif %} typeof="Event"><span property="keywords" content="{{ event.type }}"></span>{% include cv/datatype.liquid value=event_start %}<span property="startDate" datatype="{{ datatype }}" content="{{ event_start }}"></span>{% if event.end %}{% include cv/datatype.liquid value=event.end %}<span property="endDate" datatype="{{ datatype }}" content="{{ event.end }}"></span>{% endif %}{% if event.recording %}<span property="recordedIn" resource="{{ event.recording | escape }}"></span>{% endif %}{% if event.series %}<span property="superEvent" resource="{{ event.series }}"></span>{% endif %}{% if event.url %}<a property="url" href="{{ event.url }}">{% endif %}<span property="name" content="{{ event_name | escape }}">{{ event.name | escape }}</span>{% if event.url %}</a>{% endif %}{% if event.location == "Online" %}<span property="eventAttendanceMode" resource="https://schema.org/OnlineEventAttendanceMode"></span><span class="almanac-place">, <span property="location" typeof="VirtualLocation"><span property="name" content="Online">online</span></span></span>{% elsif event.location %}<span class="almanac-place">, <span property="location" resource="{{ cv.places[event.location] }}" typeof="Place"><span property="name" content="{{ event.location | escape }}">{{ event.location | escape }}</span></span></span>{% endif %}</span></p>
+          <p class="almanac-role"><span class="smallcaps">{{ event.type }}</span>{% if event.role %} · <span property="roleName" content="{{ event.role | escape }}">{{ event.role | downcase | escape }}</span>{% endif %} · {% include cv/month.html value=event_start %}</p>
+          <div class="entry-note">
+            <p>{% include cv/capfirst.liquid text=event.summary mentions=event.mentions %}<span property="description" content="{{ event.summary | strip | escape }}">{% include cv/text.html text=cap_text mentions=event.mentions %}</span>{% if event.doi %} · <a property="subjectOf" href="https://doi.org/{{ event.doi }}">{{ event.doi }}</a>{% endif %}{% if event.recording %} · <a href="{{ event.recording | escape }}">video</a>{% endif %}{% if event.funder %}{% assign funding_text = event.funding_note | append: " " | append: orgs[event.funder].name %} · <span property="funding" typeof="Grant"><span property="description" content="{{ funding_text | escape }}">{{ event.funding_note | escape }} {% include cv/org.html key=event.funder property="funder" %}</span></span>{% endif %}</p>
+          </div>
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
+    {%- endfor %}
+  </div>
+</section>

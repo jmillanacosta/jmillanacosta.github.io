@@ -82,8 +82,14 @@ def write_yaml_list(path: Path, rows: list[dict]) -> None:
             if value is None:
                 continue
             prefix = "- " if first else "  "
-            text = str(value) if isinstance(value, int) and not isinstance(value, bool) else yaml_str(str(value))
-            lines.append(f"{prefix}{key}: {text}")
+            if isinstance(value, list):
+                lines.append(f"{prefix}{key}:")
+                for item in value:
+                    fields = ", ".join(f"{k}: {yaml_str(str(v))}" for k, v in item.items() if v is not None)
+                    lines.append(f"    - {{ {fields} }}")
+            else:
+                text = str(value) if isinstance(value, int) and not isinstance(value, bool) else yaml_str(str(value))
+                lines.append(f"{prefix}{key}: {text}")
             first = False
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
@@ -93,20 +99,40 @@ def _fold(s: str) -> str:
     return "".join(c for c in unicodedata.normalize("NFD", s) if not unicodedata.combining(c)).lower()
 
 
-def author_position(doi: str) -> str | None:
-    """'N of M' position of Javier Millán Acosta among a DOI's authors, via Crossref."""
+def _is_me(given: str, family: str, orcid: str | None) -> bool:
+    if orcid:
+        return orcid.rstrip("/").endswith(ORCID_ID)
+    full = _fold(f"{given} {family}")
+    return "acosta" in full and ("millan" in full or "javier" in full)
+
+
+def authors(doi: str) -> list[dict]:
+    """Ordered author list from Crossref, or DataCite for DOIs Crossref does not register.
+
+    Each author has given and family names, an ORCID IRI when the metadata has one, and `me` for this CV's
+    subject (matched by ORCID, else by name, since registries split "Millán Acosta" inconsistently).
+    """
+    rows: list[tuple[str, str, str | None]] = []
     try:
-        data = fetch_json(f"https://api.crossref.org/works/{doi}")
-    except (urllib.error.URLError, TimeoutError, ValueError):
-        return None
-    authors = data.get("message", {}).get("author") or []
-    if not authors:
-        return None
-    for i, a in enumerate(authors):
-        family = _fold(a.get("family") or "")
-        if "millan" in family or "acosta" in family:
-            return f"{i + 1} of {len(authors)}"
-    return None
+        message = fetch_json(f"https://api.crossref.org/works/{urllib.parse.quote(doi)}")["message"]
+        rows = [(a.get("given", ""), a.get("family") or a.get("name", ""), a.get("ORCID")) for a in message.get("author", [])]
+    except (urllib.error.URLError, TimeoutError, ValueError, KeyError):
+        try:
+            creators = fetch_json(f"https://api.datacite.org/dois/{urllib.parse.quote(doi)}")["data"]["attributes"]["creators"]
+            for c in creators:
+                orcid = next((n["nameIdentifier"] for n in c.get("nameIdentifiers", []) if "orcid" in n.get("nameIdentifierScheme", "").lower()), None)
+                rows.append((c.get("givenName", ""), c.get("familyName") or c.get("name", ""), orcid))
+        except (urllib.error.URLError, TimeoutError, ValueError, KeyError):
+            return []
+    result = []
+    for given, family, orcid in rows:
+        if not family or family.startswith(":"):  # placeholders such as ":unav"
+            continue
+        orcid = orcid.replace("http://", "https://") if orcid else None
+        if orcid and not orcid.startswith("https://orcid.org/"):
+            orcid = f"https://orcid.org/{orcid}"
+        result.append({"given": given, "family": family, "orcid": orcid, "me": "true" if _is_me(given, family, orcid) else None})
+    return result
 
 
 def update_publications(works: dict) -> None:
@@ -138,7 +164,7 @@ def update_publications(works: dict) -> None:
                 "type": work_type,
                 "doi": doi,
                 "url": url,
-                "position": author_position(doi) if doi else None,
+                "authors": authors(doi) if doi else None,
             }
         )
     orcid_count = len(rows)
@@ -147,7 +173,7 @@ def update_publications(works: dict) -> None:
         {
             **extra,
             "url": f"https://doi.org/{extra['doi']}",
-            "position": author_position(extra["doi"]),
+            "authors": authors(extra["doi"]),
         }
         for extra in EXTRA_WORKS
         if extra["doi"] not in known_dois

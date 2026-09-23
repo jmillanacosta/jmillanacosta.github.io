@@ -12,6 +12,7 @@
   iri: http://www.wikidata.org/entity/Q138033548
 - name: NUTRIM Division I Symposium
   year: 2023
+  cv: false
   start: "2023-09-27"
   location: Maastricht, Netherlands
   type: conference
@@ -31,6 +32,7 @@
   iri: https://www.harmless-project.eu/nanosolveit-conference/
 - name: ByteMAL
   year: 2023
+  cv: false
   start: "2023-05-23"
   location: Aachen, Germany
   type: conference

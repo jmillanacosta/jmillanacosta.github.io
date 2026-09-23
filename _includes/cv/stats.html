@@ -1,6 +1,8 @@
 {%- comment -%}
-  Renders a software entry's usage figures (each " · N label", linked to its source) with RDFa.
-  Parameter: stats (the software entry's code_stats.yml row). Each figure is an anonymous node.
+  A software entry's usage figures with RDFa, each an anonymous InteractionCounter.
+  Only figures that answer "does anyone use this?" are shown: PyPI downloads of at least 100 a
+  month and Docker pulls. Stars, forks, dependents, and small counts stay in the graph, hidden.
+  Parameter: stats (the software entry's code_stats.yml row).
 {%- endcomment -%}
 {%- assign s_stats = include.stats -%}
 {%- include cv/stat-kinds.liquid -%}
@@ -8,7 +10,13 @@
 {%- assign s_value = s_stats[s_kind] | plus: 0 -%}
 {%- if s_value > 0 -%}
 {%- include cv/stat-kind.liquid kind=s_kind stats=s_stats -%}
-{%- if s_value == 1 -%}{%- assign stat_label = stat_label | replace: "downloads", "download" | replace: "pulls", "pull" | replace: "repositories", "repository" | replace: "stars", "star" | replace: "forks", "fork" -%}{%- endif -%}
+{%- assign s_show = false -%}
+{%- if s_kind == "downloads" and s_value >= 100 -%}{%- assign s_show = true -%}{%- endif -%}
+{%- if s_kind == "docker_pulls" -%}{%- assign s_show = true -%}{%- endif -%}
+{%- if s_show -%}
 <span class="usage screen-only" property="interactionStatistic" typeof="InteractionCounter"> · <span property="name" content="{{ stat_name | escape }}"></span>{% if stat_type %}<span property="interactionType" resource="{{ stat_type }}"></span>{% endif %}<a property="url" href="{{ stat_source | escape }}"><span property="userInteractionCount" datatype="xsd:integer" content="{{ s_value }}">{% include cv/number.html value=s_value %}</span> {{ stat_label }}</a></span>
+{%- else -%}
+<span hidden property="interactionStatistic" typeof="InteractionCounter"><span property="name" content="{{ stat_name | escape }}"></span>{% if stat_type %}<span property="interactionType" resource="{{ stat_type }}"></span>{% endif %}<span property="url" resource="{{ stat_source | escape }}"></span><span property="userInteractionCount" datatype="xsd:integer" content="{{ s_value }}"></span></span>
+{%- endif -%}
 {%- endif -%}
 {%- endfor -%}

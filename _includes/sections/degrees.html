@@ -1,0 +1,13 @@
+{%- comment -%}Degrees: the study period (schema:alumniOf OrganizationRole) and the credential awarded.{%- endcomment -%}
+    {%- for edu in cv.education %}
+    {%- include cv/datatype.liquid value=edu.end %}
+    <span hidden property="hasCredential" typeof="EducationalOccupationalCredential"><span property="name" content="{{ edu.degree | escape }}"></span><span property="credentialCategory" resource="{{ edu.degree_type }}"></span><span property="about" resource="{{ edu.field }}"></span><span property="recognizedBy" resource="{{ orgs[edu.organization].iri }}"></span><span property="dateCreated" datatype="{{ datatype }}" content="{{ edu.end }}"></span></span>
+    <article class="cv-entry" property="alumniOf" typeof="OrganizationRole">
+      <header class="entry-heading">
+        <div><h3 property="roleName" content="{{ edu.degree | escape }}">{{ edu.degree | escape }}</h3><p class="entry-organization">{% include cv/org.html key=edu.organization property="alumniOf" %}</p></div>
+        {%- include cv/datatype.liquid value=edu.start %}
+        <p class="entry-date"><time property="startDate" datatype="{{ datatype }}" content="{{ edu.start }}" datetime="{{ edu.start }}">{% include cv/month.html value=edu.start %}</time> – {% include cv/datatype.liquid value=edu.end %}<time property="endDate" datatype="{{ datatype }}" content="{{ edu.end }}" datetime="{{ edu.end }}">{% include cv/month.html value=edu.end %}</time></p>
+      </header>
+      <p property="description" content="{{ edu.description | strip | escape }}">{% include cv/text.html text=edu.description taxa=edu.taxa %}</p>
+    </article>
+    {%- endfor %}

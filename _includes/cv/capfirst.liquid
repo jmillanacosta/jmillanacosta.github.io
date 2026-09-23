@@ -1,0 +1,13 @@
+{%- comment -%}
+  Assigns cap_text: include.text with its first letter in upper case, for sentences written to
+  follow a dash on the CV. Left as is when it begins with a linked phrase (include.mentions), so
+  the link still finds its text.
+{%- endcomment -%}
+{%- assign cap_text = include.text | strip -%}
+{%- assign cap_first_mention = include.mentions | first -%}
+{%- assign cap_skip = false -%}
+{%- if cap_first_mention -%}
+  {%- assign cap_head = cap_text | slice: 0, cap_first_mention.text.size -%}
+  {%- if cap_head == cap_first_mention.text -%}{%- assign cap_skip = true -%}{%- endif -%}
+{%- endif -%}
+{%- unless cap_skip -%}{%- assign cap_rest = cap_text | slice: 1, 10000 -%}{%- assign cap_text = cap_text | slice: 0 | upcase | append: cap_rest -%}{%- endunless -%}

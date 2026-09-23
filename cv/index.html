@@ -1,0 +1,36 @@
+---
+title: Javier Millán Acosta — CV
+description: CV of Javier Millán Acosta, doctoral researcher in biomedical knowledge graphs, RDF schema discovery, and identifier reconciliation at Maastricht University.
+layout: default
+image:
+  path: /assets/og-image.png
+  width: 1200
+  height: 630
+  alt: "Javier Millán Acosta, Doctoral Researcher at Maastricht University"
+sections:
+  - { id: experience, label: Experience }
+  - { id: open-source-software, label: Software }
+  - { id: publications, label: Publications }
+  - { id: conferences-hackathons, label: Conferences }
+  - { id: teaching, label: Teaching }
+  - { id: education, label: Education }
+  - { id: skills, label: Skills }
+  - { id: languages, label: Languages }
+graph: [description, roles, projects, communities, software, contributions, publications, events, teaching, credentials, education, skills, languages]
+---
+{%- comment -%}
+  Rendered from _data (see _data/cv.yml), with RDFa matching this page's JSON-LD graph
+  (_includes/cv-graph.jsonld); scripts/build-rdf.py checks that the two are identical.
+{%- endcomment -%}
+{%- include cv/data.liquid -%}
+<div class="cv" property="mainEntity foaf:primaryTopic foaf:maker dcterms:creator" resource="{{ me }}" typeof="Person foaf:Person">
+{% include sections/header.html %}
+{% include sections/experience.html %}
+{% include sections/software.html %}
+{% include sections/publications.html %}
+{% include sections/events.html %}
+{% include sections/teaching.html %}
+{% include sections/education.html %}
+{% include sections/skills.html %}
+{% include sections/languages.html %}
+</div>

@@ -1,7 +1,7 @@
 """Check every IRI in the published graph: none is minted, every one resolves, and Wikidata items
 carry the name the CV gives them.
 
-Run after scripts/build-rdf.py (reads output/rdf/cv.ttl, or a path given as argument). Requires rdflib. Network access is needed, so this runs locally
+Run after scripts/build-rdf.py (reads every page's graph under output/rdf, or paths given as arguments). Requires rdflib. Network access is needed, so this runs locally
 and in the weekly data workflow rather than on every deploy.
 
 Rules:
@@ -17,8 +17,8 @@ from __future__ import annotations
 import json
 import re
 import socket
-import threading
 import sys
+import threading
 import time
 import urllib.error
 import urllib.parse
@@ -29,7 +29,7 @@ from pathlib import Path
 from rdflib import RDF, Graph, Literal, Namespace, URIRef
 
 ROOT = Path(__file__).resolve().parent.parent
-GRAPH = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "output/rdf/cv.ttl"
+GRAPHS = [Path(a) for a in sys.argv[1:]] or sorted((ROOT / "output/rdf").glob("**/index.ttl"))
 # This site's own files are checked in the local build, since they may not be deployed yet.
 SITE_DIR = ROOT / "_site"
 CANONICAL = "https://jmillanacosta.github.io/"
@@ -55,8 +55,10 @@ def status(iri: str) -> int | str:
         return doi_status(iri.removeprefix("https://doi.org/"))
     if iri.startswith(CANONICAL):
         path = SITE_DIR / urllib.parse.unquote(iri.removeprefix(CANONICAL).split("#")[0] or "index.html")
-        published = ROOT / "output/rdf" / path.name  # build-rdf.py's copies survive jekyll serve rebuilds
-        return 200 if path.exists() or (path / "index.html").exists() or published.exists() else 404
+        relative = path.relative_to(SITE_DIR)
+        published = ROOT / "output/rdf" / relative  # build-rdf.py's copies survive jekyll serve rebuilds
+        pdf = ROOT / "output" / relative
+        return 200 if path.exists() or (path / "index.html").exists() or published.exists() or pdf.exists() else 404
     if iri.startswith(WIKIDATA):
         with _wikidata_lock:
             result = fetch_status(iri)
@@ -114,7 +116,9 @@ def wikidata_names(qids: list[str]) -> dict[str, set[str]]:
 
 
 def main() -> None:
-    graph = Graph().parse(GRAPH, format="turtle")
+    graph = Graph()
+    for path in GRAPHS:
+        graph.parse(path, format="turtle")
     iris = {t for t in graph.subjects() if isinstance(t, URIRef)}
     iris |= {o for p, o in graph.predicate_objects() if isinstance(o, URIRef) and p != RDF.type}
     iris = sorted(

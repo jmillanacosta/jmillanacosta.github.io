@@ -28,7 +28,7 @@ try {
       [],
       "An element extends outside the viewport",
     );
-    assert.equal(layout.background, "rgb(248, 246, 241)");
+    assert.equal(layout.background, "rgb(253, 253, 252)");
     assert.equal(layout.sections, 8);
     assert.equal(layout.entries, 10);
     const { data } = await renderer.call("Page.captureScreenshot", {

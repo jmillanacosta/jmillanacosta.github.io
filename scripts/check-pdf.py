@@ -10,7 +10,7 @@ import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
 from pathlib import Path
 
-PDF = 'output/pdf/javier-millan-acosta-cv.pdf'
+PDF = 'output/cv/javier-millan-acosta-cv.pdf'
 
 def run(*args):
     return subprocess.check_output(args, text=True)
@@ -56,7 +56,7 @@ class Content(HTMLParser):
                 self.headings.append(text)
 
 content = Content()
-content.feed(Path('_site/index.html').read_text())
+content.feed(Path('_site/cv/index.html').read_text())
 text = normalize(run('pdftotext', '-raw', PDF, '-'))
 for block in content.blocks:
     assert normalize(block).casefold() in text.casefold(), f'Missing or reordered text: {block[:100]}'
