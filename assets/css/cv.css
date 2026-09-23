@@ -1,17 +1,148 @@
-.screen-only { display: none; }
-.section-title, .section-title:visited { color: inherit; text-decoration: none; }
-@media screen {
-  html { scroll-padding-top: 2rem; }
-  .skip-link { display: block; position: fixed; z-index: 10; top: .5rem; left: 1rem; padding: .6rem 1rem; color: white; background: #292b28; transform: translateY(-180%); }
-  .skip-link:focus { transform: none; }
-  #main-content:focus { outline: none; }
-  .section-title:hover { text-decoration: underline; text-underline-offset: .3em; }
-  h2:target { color: var(--text); }
+/* Self-hosted static fonts (SIL OFL 1.1, see assets/fonts/OFL.txt); static files embed cleanly in the PDF. */
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/source-sans-3-latin-400-normal.woff2") format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
 }
-@media screen and (prefers-reduced-motion: no-preference) {
-  html { scroll-behavior: smooth; }
-  a { transition: text-decoration-color .15s ease, color .15s ease; }
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/source-sans-3-latin-ext-400-normal.woff2") format("woff2");
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+    U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/source-sans-3-latin-400-italic.woff2") format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/source-sans-3-latin-ext-400-italic.woff2") format("woff2");
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+    U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/source-sans-3-latin-500-normal.woff2") format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/source-sans-3-latin-ext-500-normal.woff2") format("woff2");
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+    U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/source-sans-3-latin-600-normal.woff2") format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/source-sans-3-latin-ext-600-normal.woff2") format("woff2");
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+    U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/source-sans-3-latin-700-normal.woff2") format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/source-sans-3-latin-ext-700-normal.woff2") format("woff2");
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+    U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/source-serif-4-latin-400-normal.woff2") format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/source-serif-4-latin-ext-400-normal.woff2") format("woff2");
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+    U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
 :root {
   color-scheme: light;
   --bg: #f8f6f1;
@@ -19,86 +150,661 @@
   --muted: #565c55;
   --link: #355a4d;
   --rule: #d8d5cc;
-  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --sans:
+    "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
 }
 
-*, *::before, *::after { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 var(--sans); -webkit-font-smoothing: antialiased; }
-main { max-width: 49rem; margin-inline: auto; padding: 3.5rem 2rem 4rem; }
-.cv, .section-body, .entry-heading > div { min-width: 0; }
-p, ul, ol { margin: 0; }
-p + p { margin-top: .55rem; }
-a { color: var(--link); text-decoration-thickness: .06em; text-decoration-color: #9ba99e; text-underline-offset: .18em; overflow-wrap: anywhere; }
-a:visited { color: var(--link); }
-a:hover { text-decoration-color: currentColor; }
-a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-radius: 1px; }
-strong { font-weight: 600; }
-code { font: .9em ui-monospace, SFMono-Regular, Consolas, monospace; }
-h1 { font: 400 2.65rem/1.15 Georgia, "Times New Roman", serif; letter-spacing: -.025em; margin: 0 0 .7rem; }
-h2 { margin: 0 0 .9rem; font-size: .82rem; line-height: 1.4; font-weight: 700; letter-spacing: .075em; text-transform: uppercase; color: var(--link); }
-h3 { margin: 0; font-size: 1em; line-height: 1.45; font-weight: 600; }
-.cv-header { border-top: 3px solid var(--link); padding-top: 1.3rem; margin-bottom: 2rem; }
-.cv-header > p:first-of-type { color: var(--muted); font-size: .94rem; }
-.cv-header > p + p { margin-top: .9rem; }
-.contact-links { display: flex; flex-wrap: wrap; align-items: baseline; gap: .25rem 1rem; margin-top: 1rem; font-size: .84rem; }
-.contact-links a { min-width: 0; padding-block: .2rem; }
-.contact-links .pdf-link { margin-left: auto; white-space: nowrap; font-weight: 600; }
-.cv-section { border-top: 1px solid var(--rule); padding-top: 1.1rem; margin-top: 1.7rem; }
-.section-body > * + * { margin-top: .75rem; }
-.section-body > h3:not(:first-child) { margin-top: 1.1rem; }
-.section-body > .cv-entry + .cv-entry { margin-top: 1.1rem; }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 var(--sans);
+  font-kerning: normal;
+}
+
+main {
+  max-width: 49rem;
+  margin-inline: auto;
+  padding: 3.5rem 2rem 4rem;
+}
+
+p,
+ul,
+ol {
+  margin: 0;
+}
+
+p + p {
+  margin-top: 0.55rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration-thickness: 0.06em;
+  text-decoration-color: #9ba99e;
+  text-underline-offset: 0.18em;
+  overflow-wrap: anywhere;
+}
+
+a:hover {
+  text-decoration-color: currentcolor;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 4px;
+  border-radius: 1px;
+}
+
+strong {
+  font-weight: 600;
+}
+
+code {
+  font:
+    0.9em ui-monospace,
+    SFMono-Regular,
+    Consolas,
+    monospace;
+}
+
+h1 {
+  margin: 0 0 0.7rem;
+  font: 400 2.65rem/1.15 var(--serif);
+  letter-spacing: -0.025em;
+}
+
+h2 {
+  margin: 0 0 0.9rem;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  font-weight: 700;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+  color: var(--link);
+}
+
+h3 {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.45;
+  font-weight: 600;
+}
+
+.section-title {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cv-header {
+  border-top: 3px solid var(--link);
+  padding-top: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.cv-header > p:first-of-type {
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+.cv-header > p + p {
+  margin-top: 0.9rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 1rem;
+  margin-top: 1rem;
+  font-size: 0.84rem;
+}
+
+.contact-links > *,
+.contact-links a {
+  min-width: 0;
+  padding-block: 0.2rem;
+}
+
+.contact-links .pdf-link {
+  margin-left: auto;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.cv-section {
+  border-top: 1px solid var(--rule);
+  padding-top: 1.1rem;
+  margin-top: 1.7rem;
+}
+
+.section-body > * + * {
+  margin-top: 0.75rem;
+}
+
+.section-body > h3:not(:first-child) {
+  margin-top: 1.1rem;
+}
+
+.section-body > .cv-entry + .cv-entry {
+  margin-top: 1.1rem;
+}
+
 /* Dates follow the title and institution in both the DOM and PDF text stream. */
-.entry-heading { margin-bottom: .35rem; }
-.entry-organization { color: var(--muted); font-size: .92em; line-height: 1.45; }
-.entry-date { margin-top: .15rem; color: var(--muted); font-size: .82em; font-variant-numeric: tabular-nums; }
-ul, ol { padding-left: 1.15rem; }
-li { padding-left: .15rem; }
-li + li { margin-top: .55rem; }
-li::marker { color: var(--muted); }
-.publication-list li + li { margin-top: .8rem; }
-.publication-title { display: block; font-weight: 500; }
-.publication-details { display: block; font-size: .85em; line-height: 1.5; color: var(--muted); margin-top: .15rem; }
-.teaching-meta { color: var(--muted); font-size: .85em; margin-top: .15rem; }
-.teaching-entry > p:last-child { margin-top: .3rem; }
-
-@media screen and (max-width: 760px) {
-  main { padding: 2rem 1.5rem 3rem; }
+.entry-heading {
+  margin-bottom: 0.35rem;
 }
-@media screen and (max-width: 480px) {
-  body { font-size: 15px; }
-  main { padding: 1.25rem 1.1rem 2.5rem; }
-  h1 { font-size: 2.1rem; }
-  .cv-header { padding-top: 1rem; }
-  .contact-links { column-gap: .85rem; }
-  .contact-links a[itemprop="email"] { flex-basis: 100%; }
-  .contact-links .pdf-link { margin-left: 0; }
+
+.entry-organization {
+  color: var(--muted);
+  font-size: 0.92em;
+  line-height: 1.45;
+}
+
+.entry-date {
+  margin-top: 0.15rem;
+  color: var(--muted);
+  font-size: 0.82em;
+  font-variant-numeric: tabular-nums;
+}
+
+ul,
+ol {
+  padding-left: 1.15rem;
+}
+
+li {
+  padding-left: 0.15rem;
+}
+
+li + li {
+  margin-top: 0.55rem;
+}
+
+li::marker {
+  color: var(--muted);
+}
+
+.publication-list li + li {
+  margin-top: 0.8rem;
+}
+
+.publication-title {
+  display: block;
+  font-weight: 500;
+}
+
+.publication-details {
+  display: block;
+  margin-top: 0.15rem;
+  color: var(--muted);
+  font-size: 0.85em;
+  line-height: 1.5;
+}
+
+.teaching-meta {
+  margin-top: 0.15rem;
+  color: var(--muted);
+  font-size: 0.85em;
+}
+
+.teaching-description {
+  margin-top: 0.3rem;
+}
+
+.usage,
+.usage a {
+  color: var(--muted);
+  text-decoration-color: var(--rule);
+}
+
+.usage a:hover {
+  text-decoration-color: currentcolor;
+}
+
+.usage-note {
+  color: var(--muted);
+  font-size: 0.85em;
+}
+
+/* Screen-only chrome: skip link, section navigation and anchor affordances. */
+.screen-only {
+  display: none;
+}
+
+@media screen {
+  html {
+    /* Clears the sticky section bar when jumping to a heading. */
+    scroll-padding-top: 4rem;
+  }
+
+  /* Usage figures appear on screen only; the PDF keeps to the record. */
+  .usage,
+  .usage-note {
+    display: inline;
+  }
+
+  .skip-link {
+    display: block;
+    position: fixed;
+    z-index: 10;
+    top: 0.5rem;
+    left: 1rem;
+    padding: 0.6rem 1rem;
+    color: white;
+    background: var(--text);
+    transform: translateY(-180%);
+  }
+
+  .skip-link:focus {
+    transform: none;
+  }
+
+  #main-content:focus {
+    outline: none;
+  }
+
+  .page-footer {
+    display: block;
+    margin-top: 2.5rem;
+    color: var(--muted);
+    font-size: 0.8rem;
+  }
+
+  .section-title:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
+  }
+
+  /* Compact bar: sticky, horizontally scrollable, aligned with the text column. */
+  .sidebar {
+    display: block;
+    position: sticky;
+    z-index: 5;
+    top: 0;
+    padding-inline: max(2rem, calc((100% - 45rem) / 2));
+    background: var(--bg);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .sidebar[data-at-top] {
+    border-bottom-color: transparent;
+  }
+
+  .sidebar-profile,
+  .sidebar-reveal {
+    display: none;
+  }
+
+  .section-nav ol {
+    display: flex;
+    position: relative;
+    gap: 0.15rem;
+    margin-inline: -0.65rem;
+    padding: 0.45rem 0;
+    list-style: none;
+    overflow-x: auto;
+    scrollbar-width: none;
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 0.65rem,
+      #000 calc(100% - 1.5rem),
+      transparent
+    );
+  }
+
+  .section-nav li,
+  .section-nav li + li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .section-nav ol a {
+    display: block;
+    padding: 0.4rem 0.65rem;
+    border-radius: 999px;
+    color: var(--muted);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.075em;
+    line-height: 1.4;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .section-nav a:hover,
+  .section-nav a[aria-current] {
+    color: var(--link);
+  }
+
+  .section-nav ol a[aria-current] {
+    background: color-mix(in srgb, var(--link) 10%, transparent);
+  }
+
+  .section-nav a:focus-visible {
+    outline-offset: -2px;
+  }
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  a {
+    transition:
+      text-decoration-color 0.15s ease,
+      color 0.15s ease;
+  }
+
+  .sidebar,
+  .sidebar a {
+    transition:
+      color 0.15s ease,
+      background-color 0.15s ease,
+      border-color 0.15s ease;
+  }
+
+  /* Settles in gently when shown; fades out quickly before hiding. */
+  .sidebar-name,
+  .sidebar-reveal {
+    transition:
+      opacity 0.4s ease,
+      transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1),
+      visibility 0s;
+  }
+
+  .sidebar-contact {
+    transition-delay: 0.08s, 0.08s, 0s;
+  }
+
+  .sidebar[data-header-visible] .sidebar-name,
+  .sidebar[data-header-visible] .sidebar-reveal {
+    transform: translateY(-0.4rem);
+    transition:
+      opacity 0.15s ease,
+      transform 0.15s ease,
+      visibility 0s 0.15s;
+  }
+}
+
+@media screen and (width <= 760px) {
+  main {
+    padding: 2rem 1.5rem 3rem;
+  }
+
+  .sidebar {
+    padding-inline: 1.5rem;
+  }
+}
+
+@media screen and (width <= 480px) {
+  body {
+    font-size: 16px;
+  }
+
+  main {
+    padding: 1.25rem 1.1rem 2.5rem;
+  }
+
+  h1 {
+    font-size: 2.1rem;
+  }
+
+  .cv-header {
+    padding-top: 1rem;
+  }
+
+  .contact-links {
+    column-gap: 0.85rem;
+  }
+
+  .contact-links .contact-email {
+    flex-basis: 100%;
+  }
+
+  .contact-links .pdf-link {
+    margin-left: 0;
+  }
+
+  .sidebar {
+    padding-inline: 1.1rem;
+  }
+}
+
+/* Wide screens: the navigation becomes a rail in the left margin. */
+@media screen and (width >= 75rem) {
+  html {
+    scroll-padding-top: 2rem;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 3.5rem;
+    left: max(1.5rem, calc(50% - 24.5rem - 12rem));
+    width: 10.5rem;
+    max-height: calc(100vh - 3.5rem);
+    padding: 0 0 1.5rem;
+    overflow-y: auto;
+    background: none;
+    border: 0;
+    font-size: 0.8rem;
+    line-height: 1.45;
+  }
+
+  .sidebar-profile,
+  .sidebar-reveal {
+    display: block;
+  }
+
+  /* Profile and contacts repeat the page header, so they appear once it scrolls away. */
+  .sidebar[data-header-visible] .sidebar-name,
+  .sidebar[data-header-visible] .sidebar-reveal {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .sidebar-profile {
+    margin-bottom: 1.25rem;
+    color: var(--muted);
+  }
+
+  /* Line height and tracking match the page heading, so one scales exactly onto the other. */
+  .sidebar-name {
+    display: block;
+    width: fit-content;
+    margin-bottom: 0.45rem;
+    color: var(--text);
+    font: 1.05rem/1.15 var(--serif);
+    letter-spacing: -0.025em;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .sidebar-profile p + p {
+    margin-top: 0.3rem;
+  }
+
+  .sidebar-contact {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  .sidebar-contact ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.15rem 0.8rem;
+    margin: 0.3rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .sidebar-contact li,
+  .sidebar-contact li + li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .sidebar-pdf {
+    display: inline-block;
+    margin-top: 0.8rem;
+    font-weight: 600;
+  }
+
+  .section-nav ol {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border-left: 1px solid var(--rule);
+    overflow: visible;
+    mask-image: none;
+  }
+
+  .section-nav ol a {
+    margin-left: -1px;
+    padding: 0.3rem 0 0.3rem 0.9rem;
+    border-left: 2px solid transparent;
+    border-radius: 0;
+    white-space: normal;
+  }
+
+  .section-nav ol a:hover {
+    border-left-color: var(--rule);
+  }
+
+  .section-nav ol a[aria-current] {
+    border-left-color: var(--link);
+    background: none;
+  }
 }
 
 @media print {
-  :root { --bg: #fff; --text: #20221f; --muted: #51564e; --link: #293d33; --rule: #cccfc7; }
-  @page { size: A4; margin: 14mm 16mm 18mm; }
-  body { font-size: 10pt; line-height: 1.3; }
-  main { max-width: none; margin: 0; padding: 0; }
-  h1 { font-size: 25pt; margin-bottom: 5pt; }
-  h2 { font-size: 8.5pt; margin-bottom: 7pt; break-after: avoid; }
-  h3 { font-size: 10pt; break-after: avoid; }
-  .cv-header { border-top-width: 2pt; padding-top: 9pt; margin-bottom: 12pt; }
-  .cv-header > p:first-of-type { font-size: 9pt; }
-  .cv-header > p + p { margin-top: 6pt; }
-  .contact-links { font-size: 8.5pt; gap: 2pt 10pt; margin-top: 6pt; }
-  .contact-links a { padding: 0; }
-  .pdf-link { display: none; }
-  .cv-section { margin-top: 10pt; padding-top: 7pt; }
-  .section-body > * + * { margin-top: 6pt; }
-  .section-body > h3:not(:first-child) { margin-top: 9pt; }
-  .section-body > .cv-entry + .cv-entry { margin-top: 8pt; }
-  .entry-heading { margin-bottom: 3pt; break-after: avoid; }
-  .entry-date { font-size: 8.5pt; margin-top: 1pt; }
-  .publication-details { font-size: 8.5pt; line-height: 1.35; margin-top: 1pt; }
-  .publication-list li + li, li + li { margin-top: 4pt; }
-  /* Major subject groups begin on fresh pages; entries never straddle pages. */
-  .section-open-source-software, .section-teaching { break-before: page; margin-top: 0; }
-  .cv-entry, li, .section-education, .section-languages-certifications { break-inside: avoid; }
-  p { orphans: 3; widows: 3; }
-  a { text-decoration: none; }
+  :root {
+    --bg: #fff;
+    --text: #20221f;
+    --muted: #51564e;
+    --link: #293d33;
+    --rule: #cccfc7;
+  }
+
+  @page {
+    size: A4;
+    margin: 14mm 16mm 18mm;
+  }
+
+  body {
+    font-size: 10pt;
+    line-height: 1.3;
+  }
+
+  main {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 25pt;
+    margin-bottom: 5pt;
+  }
+
+  h2 {
+    font-size: 8.5pt;
+    margin-bottom: 7pt;
+    break-after: avoid;
+  }
+
+  h3 {
+    font-size: 10pt;
+    break-after: avoid;
+  }
+
+  .cv-header {
+    border-top-width: 2pt;
+    padding-top: 9pt;
+    margin-bottom: 12pt;
+  }
+
+  .cv-header > p:first-of-type {
+    font-size: 9pt;
+  }
+
+  .cv-header > p + p {
+    margin-top: 6pt;
+  }
+
+  .contact-links {
+    font-size: 8.5pt;
+    gap: 2pt 10pt;
+    margin-top: 6pt;
+  }
+
+  .contact-links a {
+    padding: 0;
+  }
+
+  .pdf-link {
+    display: none;
+  }
+
+  .cv-section {
+    margin-top: 8pt;
+    padding-top: 6pt;
+  }
+
+  .section-body > * + * {
+    margin-top: 5pt;
+  }
+
+  .section-body > h3:not(:first-child) {
+    margin-top: 9pt;
+  }
+
+  .section-body > .cv-entry + .cv-entry {
+    margin-top: 7pt;
+  }
+
+  .entry-heading {
+    margin-bottom: 3pt;
+    break-after: avoid;
+  }
+
+  .entry-date {
+    font-size: 8.5pt;
+    margin-top: 1pt;
+  }
+
+  .publication-details {
+    font-size: 8.5pt;
+    line-height: 1.35;
+    margin-top: 1pt;
+  }
+
+  li + li,
+  .publication-list li + li {
+    margin-top: 3pt;
+  }
+
+  /* Sections flow continuously; entries and headings never straddle pages. */
+  .cv-entry,
+  li,
+  .section-education,
+  .section-languages {
+    break-inside: avoid;
+  }
+
+  a {
+    text-decoration: none;
+  }
 }

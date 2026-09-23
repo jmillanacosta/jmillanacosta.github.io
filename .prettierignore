@@ -1,0 +1,4 @@
+# Liquid templates: reflowing them changes inline spacing in the rendered text.
+index.html
+_includes/
+_layouts/

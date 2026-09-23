@@ -1,0 +1,18 @@
+{%- comment -%}
+  Renders plain text as HTML: escapes it, links each `mentions` text (recorded as schema:mentions),
+  and italicizes each taxon name (recorded as schema:about Taxon). The literal itself is carried
+  separately in a content attribute, so this markup does not change it.
+{%- endcomment -%}
+{%- assign t_html = include.text | strip | escape -%}
+{%- for mention in include.mentions -%}
+  {%- assign t_find = mention.text | escape -%}
+  {%- capture t_link %}<a property="mentions" href="{{ mention.url | escape }}">{{ t_find }}</a>{% endcapture -%}
+  {%- assign t_html = t_html | replace_first: t_find, t_link -%}
+{%- endfor -%}
+{%- for taxon in include.taxa -%}
+  {%- assign t_find = taxon | escape -%}
+  {%- assign t_taxon = cv.taxa[taxon] -%}
+  {%- capture t_em %}<em property="about" resource="{{ t_taxon.iri }}" typeof="Taxon"><span property="name" content="{{ t_find }}">{{ t_find }}</span>{% for s in t_taxon.same_as %}<span property="sameAs" resource="{{ s }}"></span>{% endfor %}</em>{% endcapture -%}
+  {%- assign t_html = t_html | replace_first: t_find, t_em -%}
+{%- endfor -%}
+{{ t_html }}

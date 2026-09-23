@@ -1,0 +1,126 @@
+/*
+ * The page heading flies into the sidebar, driven by scroll position rather than time.
+ * cv-nav.js loads this file only where scroll-driven animations are supported, measures the
+ * flight (--fly-*), and sets data-flight; other browsers keep the fade in cv.css.
+ */
+@media screen and (width >= 75rem) and (prefers-reduced-motion: no-preference) {
+  :root[data-flight] .cv-header h1 {
+    position: relative;
+    z-index: 6;
+    animation:
+      fly-carry linear both,
+      fly-handoff step-end both;
+    animation-timeline: scroll(root), scroll(root);
+    animation-range:
+      0 var(--fly-range),
+      0 var(--fly-range);
+  }
+
+  /* Carried against the scroll, the name glides from the header to its sidebar slot. */
+  :root[data-flight] .cv-header h1 > span {
+    display: inline-block;
+    transform-origin: 0 0;
+    background: var(--bg);
+    box-shadow: 0 0 0 0.5rem var(--bg);
+    animation: fly-name cubic-bezier(0.55, 0, 0.25, 1) both;
+    animation-timeline: scroll(root);
+    animation-range: 0 var(--fly-range);
+  }
+
+  /* Translated content must not give the fixed sidebar its own scrollbar. */
+  :root[data-flight] .sidebar {
+    max-height: none;
+    overflow: visible;
+  }
+
+  /* Attached to the page at first, the section list rides up beside Experience and docks. */
+  :root[data-flight] .sidebar-track {
+    animation: rail-dock linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 var(--rail-rest);
+  }
+
+  :root[data-flight] .sidebar-name {
+    animation: fly-land step-end both;
+    animation-timeline: scroll(root);
+    animation-range: 0 var(--fly-range);
+  }
+
+  /* Header details dissolve before they slide beneath the moving name. */
+  :root[data-flight] .cv-header > :not(h1) {
+    animation: dissolve linear both;
+    animation-timeline: view(block 8.75rem 0);
+    animation-range: exit 0% exit 60%;
+  }
+
+  /* Details settle in just after the name lands, the contacts a beat later. */
+  :root[data-flight] .sidebar .sidebar-reveal {
+    transition: none;
+    animation: settle cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    animation-timeline: scroll(root);
+    animation-range: var(--fly-range) calc(var(--fly-range) + 5rem);
+  }
+
+  :root[data-flight] .sidebar .sidebar-contact {
+    animation-range: calc(var(--fly-range) + 1.5rem)
+      calc(var(--fly-range) + 7rem);
+  }
+}
+
+@keyframes fly-carry {
+  to {
+    translate: 0 var(--fly-range);
+  }
+}
+
+@keyframes fly-handoff {
+  to {
+    visibility: hidden;
+  }
+}
+
+@keyframes rail-dock {
+  from {
+    translate: 0 var(--rail-rest);
+  }
+}
+
+@keyframes fly-name {
+  to {
+    transform: translate(var(--fly-x), var(--fly-y)) scale(var(--fly-scale));
+  }
+}
+
+@keyframes fly-land {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: none;
+  }
+
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+}
+
+@keyframes dissolve {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes settle {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-0.5rem);
+  }
+
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+}

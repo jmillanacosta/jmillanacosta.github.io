@@ -1,7 +1,9 @@
 {
   "name": "jmillanacosta-cv",
   "private": true,
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "build:pdf": "node scripts/build-pdf.mjs",
     "check:layout": "node scripts/check-layout.mjs"

@@ -1,0 +1,13 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
+{%- assign base = site.canonical -%}
+{%- assign modified = site.time | date: "%Y-%m-%d" -%}
+{%- assign paths = "|output/pdf/javier-millan-acosta-cv.pdf|cv.jsonld|cv.ttl|cv.nt|cv.rdf|void.ttl|.well-known/void" | split: "|" -%}
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for path in paths %}
+  <url><loc>{{ base }}{{ path }}</loc><lastmod>{{ modified }}</lastmod></url>
+{%- endfor %}
+</urlset>

@@ -1,0 +1,3 @@
+{%- comment -%}Renders "YYYY-MM" as "Jul 2022" and "YYYY" unchanged.{%- endcomment -%}
+{%- assign m_parts = include.value | append: "" | split: "-" -%}
+{%- if m_parts.size > 1 -%}{%- assign m_index = m_parts[1] | plus: 0 | minus: 1 -%}{{ month_names[m_index] }} {{ m_parts[0] }}{%- else -%}{{ m_parts[0] }}{%- endif -%}

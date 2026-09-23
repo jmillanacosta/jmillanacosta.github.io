@@ -1,0 +1,155 @@
+- name: SWAT4HCLS
+  year: 2025
+  start: "2025-02-24"
+  end: "2025-02-27"
+  location: Barcelona, Spain
+  type: conference
+  role: Poster
+  summary:
+    on-the-fly RDF graph generation and new resource annotators in pyBioDataFuse, with a paper
+    in CEUR Workshop Proceedings.
+  doi: 10.24406/publica-8969
+  iri: http://www.wikidata.org/entity/Q138033548
+- name: NUTRIM Division I Symposium
+  year: 2023
+  start: "2023-09-27"
+  location: Maastricht, Netherlands
+  type: conference
+  role: Pitch
+  summary: “Linked data is meaningful knowledge.”
+  doi: 10.5281/zenodo.8398319
+- name: NanoSolveIT Conference
+  year: 2023
+  start: "2023-08-30"
+  location: Athens, Greece
+  type: conference
+  url: https://www.harmless-project.eu/nanosolveit-conference/
+  role: Poster
+  summary:
+    “Evolving the eNanoMapper Ontology,” on enhancements to the ontology for nanoinformatics data
+    management.
+  iri: https://www.harmless-project.eu/nanosolveit-conference/
+- name: ByteMAL
+  year: 2023
+  start: "2023-05-23"
+  location: Aachen, Germany
+  type: conference
+  role: Poster
+  summary: the eNanoMapper ontology v9.0 and its move to automated, GitHub Actions-based builds.
+  doi: 10.5281/zenodo.8032202
+  iri: https://www.ccls.rwth-aachen.de/cms/ccls/das-ccls/aktuelle-meldungen/~yswth/mustermeldung-1/?lidx=1
+- name: BioSB
+  year: 2023
+  start: "2023-05-09"
+  end: "2023-05-10"
+  location: Egmond aan Zee, Netherlands
+  type: conference
+  role: Poster
+  summary: the eNanoMapper ontology v9.0 and its move to automated, GitHub Actions-based builds.
+  doi: 10.5281/zenodo.8032202
+  series: http://www.wikidata.org/entity/Q100925313
+- name: ELIXIR Toxicology Community Workshop
+  year: 2024
+  start: "2024-05-28"
+  end: "2024-05-29"
+  location: Utrecht, Netherlands
+  type: workshop
+  summary: co-authored the workshop report on FAIRification of toxicological research output.
+  doi: 10.37044/osf.io/un2rw
+  iri: https://www.aanmelder.nl/intoxicom2024firstworkshop
+- name: Ontologies4Chem Workshop
+  year: 2023
+  start: "2023-10-11"
+  end: "2023-10-12"
+  location: Online
+  type: workshop
+  role: Talk
+  summary:
+    the eNanoMapper ontology’s restructured curation, testing, and build workflows, and upcoming
+    CHEMINF updates.
+  doi: 10.5281/zenodo.10218107
+  recording: https://www.youtube.com/watch?v=WnacPWpG72s
+  iri: https://nfdi4chem.de/event/2nd-ontologies4chem-workshop/
+- name: Ontologies for Advanced Materials (Joint workshop of the ELIXIR Tox Community / PINK project)
+  year: 2024
+  start: "2024-02-08"
+  location: Brussels, Belgium
+  type: workshop
+  url: https://tess.elixir-europe.org/events/ontologies-for-advanced-materials
+  role: Talk
+  summary:
+    "“eNanoMapper Ontology: Updated curation and development workflows,” on harmonizing materials
+    and biological ontologies for safe-and-sustainable-by-design data."
+  iri: https://tess.elixir-europe.org/events/ontologies-for-advanced-materials
+- name: ELIXIR BioHackathon Europe
+  year: 2025
+  start: "2025-11-03"
+  end: "2025-11-07"
+  location: Berlin, Germany
+  type: hackathon
+  role: Co-lead
+  summary:
+    "shape-driven knowledge graph integration: a registry of RDF dataset schemas built with rdfsolve
+    (Health-RI news)."
+  mentions:
+    - text: shape-driven knowledge graph integration
+      url: https://github.com/elixir-europe/biohackathon-projects-2025/blob/main/1.md
+    - text: Health-RI news
+      url: https://www.health-ri.nl/en/news/elixir-biohackathon-2025
+  funding_note: Participation as project co-lead funded by
+  funder: elixir
+  iri: http://www.wikidata.org/entity/Q131822746
+- name: ELIXIR BioHackathon Europe
+  year: 2024
+  start: "2024-11-04"
+  end: "2024-11-08"
+  location: Barcelona, Spain
+  type: hackathon
+  summary:
+    worked on pyBioDataFuse and was first author of the report on graph-schema discovery and transformation
+    for database integration, the starting point for rdfsolve.
+  doi: 10.37044/osf.io/ptmg5_v1
+  funding_note: Invited; participation funded by
+  funder: elixir
+  iri: http://www.wikidata.org/entity/Q130642470
+- name: DBCLS BioHackathon
+  year: 2025
+  url: http://2025.biohackathon.org/
+  start: "2025-09-14"
+  end: "2025-09-20"
+  location: Mie, Japan
+  type: hackathon
+  summary: developed RDF schema tooling in rdfsolve, reported in “MCP server tools with RDF shapes.”
+  doi: 10.37044/osf.io/8qeh5_v1
+  funding_note: Personally invited; participation funded by
+  funder: dbcls
+  iri: http://2025.biohackathon.org/
+- name: Virtual Human Platform launch
+  year: 2026
+  start: "2026-05-28"
+  location: Utrecht, Netherlands
+  type: event
+  url: https://www.maastrichtuniversity.nl/news/virtual-human-platform-officially-launched
+  role: Demo
+  summary: showcased the AOP-Suite at the official launch of the VHP4Safety Virtual Human Platform.
+  mentions:
+    - text: AOP-Suite
+      url: https://aopsuite.cloud.vhp4safety.nl
+  iri: https://toxicologie.nl/en/launch-virtual-human-platform/
+- name: ELIXIR CZ–NL Staff Exchange
+  year: 2026
+  start: "2026-08-24"
+  end: "2026-08-28"
+  location: Brno, Czech Republic
+  type: event
+  url: https://www.recetox.muni.cz/en/about-us/news/bridging-metabolomics-and-toxicology-inside-the-elixir-cz-nl-staff-exchange
+  role: Visiting researcher
+  summary:
+    "visited RECETOX, Masaryk University, to bridge computational toxicology and metabolomics:
+    AOP-framework technologies, RDF schema, ontology and identifier alignment, and molecular pathways
+    in untargeted metabolomics."
+  mentions:
+    - text: RECETOX
+      url: https://www.recetox.muni.cz/en
+  funding_note: ELIXIR Staff Exchange grant, funded by
+  funder: elixir

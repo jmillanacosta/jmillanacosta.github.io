@@ -1,0 +1,517 @@
+person:
+  name: Javier Millán Acosta
+  given_name: Javier
+  family_name: Millán Acosta
+  job_title: Doctoral Researcher
+  works_for: tgx
+  email: javier.millanacosta@maastrichtuniversity.nl
+  orcid: 0000-0002-4166-7093
+  address:
+    locality: Maastricht
+    country: Netherlands
+  description:
+    I develop research software for biomedical data integration, from identifier reconciliation
+    and RDF schema discovery to graph-database services and web applications. My doctoral research examines
+    how life sciences datasets can be connected and queried, and how changes in their identifiers affect
+    downstream analyses.
+  profiles:
+    - label: ORCID
+      url: https://orcid.org/0000-0002-4166-7093
+      header: true
+      sidebar: ORCID
+    - label: GitHub
+      url: https://github.com/jmillanacosta
+      header: true
+      sidebar: GitHub
+    - label: Google Scholar
+      url: https://scholar.google.com/citations?user=e2py8rMAAAAJ&hl=nl
+      header: true
+      sidebar: Scholar
+    - label: LinkedIn
+      url: https://www.linkedin.com/in/javier-millanacosta/
+      header: true
+      sidebar: LinkedIn
+    - label: PyPI
+      url: https://pypi.org/user/jmillanacosta/
+      header: true
+    - label: Wikidata
+      url: https://www.wikidata.org/wiki/Q116446553
+    - label: WikiPathways
+      url: https://www.wikipathways.org/authors/Jmillanacosta.html
+  iri: https://orcid.org/0000-0002-4166-7093
+  same_as:
+    - http://www.wikidata.org/entity/Q116446553
+organizations:
+  um:
+    type: CollegeOrUniversity
+    name: Maastricht University
+    iri: https://ror.org/02jz4aj89
+    same_as:
+      - http://www.wikidata.org/entity/Q1137652
+  tgx:
+    type: Organization
+    name: Department of Translational Genomics
+    alternate_name: TGX
+    parent: um
+    location: Maastricht, Netherlands
+    iri: http://www.wikidata.org/entity/Q131790020
+  frieslandcampina:
+    type: Corporation
+    name: FrieslandCampina
+    location: Wageningen, Netherlands
+    iri: https://ror.org/025mtxh67
+    same_as:
+      - http://www.wikidata.org/entity/Q248711
+  irblleida:
+    type: ResearchOrganization
+    name: Institut de Recerca Biomèdica de Lleida
+    alternate_name: IRBLleida
+    iri: https://ror.org/03mfyme49
+    same_as:
+      - http://www.wikidata.org/entity/Q19368039
+  irblleida-neuro:
+    type: Organization
+    name: Clinical Neurosciences lab
+    parent: irblleida
+    location: Lleida, Spain
+    iri: https://www.irblleida.org/en/research/26/clinical-neurosciences
+  wur:
+    type: CollegeOrUniversity
+    name: Wageningen University & Research
+    iri: https://ror.org/04qw24q55
+    same_as:
+      - http://www.wikidata.org/entity/Q422208
+  ec:
+    type: GovernmentOrganization
+    name: European Commission
+    iri: https://ror.org/00k4n6c32
+    same_as:
+      - http://www.wikidata.org/entity/Q8880
+  nwo:
+    type: GovernmentOrganization
+    name: Dutch Research Council
+    alternate_name: NWO
+    iri: https://ror.org/04jsz6e67
+    same_as:
+      - http://www.wikidata.org/entity/Q129724
+  elixir:
+    type: Organization
+    name: ELIXIR
+    iri: https://ror.org/044rwnt51
+    same_as:
+      - http://www.wikidata.org/entity/Q12269561
+  dbcls:
+    type: ResearchOrganization
+    name: Database Center for Life Science
+    alternate_name: DBCLS
+    iri: https://ror.org/018q2r417
+    same_as:
+      - http://www.wikidata.org/entity/Q11346475
+  udl:
+    type: CollegeOrUniversity
+    name: Universitat de Lleida
+    iri: https://ror.org/050c3cw24
+    same_as:
+      - http://www.wikidata.org/entity/Q1235594
+experience:
+  - id: doctoral-researcher
+    role: Doctoral Researcher
+    organization: tgx
+    start: 2022-07
+    status: PhD defense expected 2026
+    description:
+      - Develop Python libraries, data pipelines, and web applications for biomedical knowledge graphs. Work
+        includes RDF schema extraction, typed query interfaces, identifier reconciliation, and integration
+        with graph databases.
+      - Build a registry of life sciences RDF resources, relating vocabulary definitions, observed graph structures,
+        and links between datasets to establish how they can be queried and combined. Study identifier deprecation
+        and its effects on data integration over time.
+    occupation: http://data.europa.eu/esco/occupation/68d973df-bf10-4bf7-9a1b-fbd9f604b9db
+  - id: frieslandcampina-internship
+    role: Researcher (internship)
+    organization: frieslandcampina
+    start: 2021-06
+    end: 2021-10
+    description:
+      - Wrote scripts to extract, harmonize, and analyze food-systems and food-composition data; built dashboards
+        with R Shiny and Power BI.
+    occupation: http://data.europa.eu/esco/occupation/d3edb8f8-3a06-47a0-8fb9-9b212c006aa2
+  - id: irblleida-internship
+    role: Researcher (internship)
+    organization: irblleida-neuro
+    start: 2018-06
+    end: 2018-09
+    description:
+      - Investigated conditioning in ischemic-stroke recovery using ELISA, RNA extraction, and preparation
+        of mouse blood and brain-slice samples.
+    occupation: http://data.europa.eu/esco/occupation/31cc4199-703c-4f8a-9b46-a2070a6d35df
+libraries:
+  - id: rdfsolve
+    name: rdfsolve
+    repository: https://github.com/jmillanacosta/rdfsolve
+    package: rdfsolve
+    description:
+      RDF schema discovery and conversion, typed Python clients, and SPARQL execution with batching,
+      retries, and query provenance.
+    iri: https://github.com/jmillanacosta/rdfsolve
+  - id: pysec2pri
+    name: pysec2pri
+    repository: https://github.com/jmillanacosta/pysec2pri
+    package: pysec2pri
+    description:
+      Reconciles retired identifiers and changed gene symbols against current database records,
+      with historical mappings, ambiguity checks, and auditable resolution.
+    iri: https://github.com/jmillanacosta/pysec2pri
+  - id: mapkgsutils
+    name: mapkgsutils
+    repository: https://github.com/jmillanacosta/mapkgsutils
+    package: mapkgsutils
+    description:
+      Shared parsing, reconciliation, and release-comparison machinery for biomedical identifier
+      mappings.
+    iri: https://github.com/jmillanacosta/mapkgsutils
+  - id: pyaop
+    name: pyaop
+    repository: https://github.com/jmillanacosta/pyaop
+    description:
+      Builds and enriches adverse outcome pathway networks from SPARQL sources, with gene, compound,
+      and tissue associations for network visualization.
+    iri: https://github.com/jmillanacosta/pyaop
+deliverables:
+  - id: nanosolveit-d1-5
+    number: D1.5
+    title: Report on the final ontology releases and guidance
+    grant: nanosolveit
+    date: "2023"
+    url: https://cordis.europa.eu/project/id/814572/results
+  - id: sbd4nano-d6-3
+    number: D6.3
+    title: Case studies in toxicological profiling
+    grant: sbd4nano
+    date: "2023"
+    url: https://cordis.europa.eu/project/id/862195/results
+grants:
+  vhp4safety:
+    name: VHP4Safety
+    program: NWA-ORC
+    number: 1292.19.272
+    funder: nwo
+    url: https://vhp4safety.nl
+    iri: http://www.wikidata.org/entity/Q113519197
+  nanocommons:
+    name: NanoCommons
+    program: H2020
+    number: "731032"
+    funder: ec
+    url: https://cordis.europa.eu/project/id/731032
+    iri: https://cordis.europa.eu/project/id/731032
+  nanosolveit:
+    name: NanoSolveIT
+    program: H2020
+    number: "814572"
+    funder: ec
+    url: https://cordis.europa.eu/project/id/814572
+    iri: https://cordis.europa.eu/project/id/814572
+  sbd4nano:
+    name: SbD4Nano
+    program: H2020
+    number: "862195"
+    funder: ec
+    url: https://cordis.europa.eu/project/id/862195
+    iri: https://cordis.europa.eu/project/id/862195
+contributions:
+  - id: biodatafuse
+    name: BioDataFuse
+    url: https://github.com/BioDataFuse/pyBiodatafuse
+    repository: https://github.com/BioDataFuse/pyBiodatafuse
+    package: pyBiodatafuse
+    doi: 10.5281/zenodo.18468942
+    description:
+      implemented RDF graph generation, AOP-Wiki and WikiPathways integrations, and GraphDB support;
+      developed the corresponding API and Vue interface in biodatafuseUI; code maintenance.
+    mentions:
+      - text: biodatafuseUI
+        url: https://github.com/BioDataFuse/biodatafuseUI
+    iri: https://github.com/BioDataFuse/pyBiodatafuse
+  - id: vhp4safety-platform
+    name: VHP4Safety Virtual Human Platform
+    url: https://platform.vhp4safety.nl
+    repository: https://github.com/VHP4Safety/virtual-human-platform
+    doi: 10.5281/zenodo.17879789
+    description:
+      implemented services and frontend, search and filtering, and glossary integration across
+      Flask and JavaScript. Also developed the AOP-Suite (tutorial), for SPARQL-backed network construction,
+      gene and compound queries, and interactive Cytoscape.js views, integrating the pyAOP library.
+    mentions:
+      - text: AOP-Suite
+        url: https://aopsuite.cloud.vhp4safety.nl
+      - text: tutorial
+        url: https://docs.vhp4safety.nl/en/latest/tutorials/aopsuite/aopsuite.html
+      - text: pyAOP
+        url: https://github.com/jmillanacosta/pyaop
+    iri: https://platform.vhp4safety.nl
+  - id: enanomapper
+    name: eNanoMapper
+    url: https://github.com/enanomapper/ontologies
+    repository: https://github.com/enanomapper/ontologies
+    doi: 10.5281/zenodo.594691
+    description:
+      developed ontology terms and imports for nanosafety; added integrity tests, corrected OWL
+      profile violations, and maintained build and validation workflows.
+    iri: http://www.wikidata.org/entity/Q116446479
+  - id: bridgedb
+    name: BridgeDb
+    url: https://github.com/bridgedb/docker
+    repository: https://github.com/bridgedb/docker
+    docker: bigcatum/bridgedb
+    doi: 10.5281/zenodo.7678824
+    description:
+      automated Docker builds and versioned image releases across the webservice and data repositories;
+      added webservice CI tests.
+    iri: http://www.wikidata.org/entity/Q55582517
+    doi_relation: hasPart
+  - id: cnv-pathway-atlas
+    name: CNV Pathway Atlas
+    url: https://cnvpathwayatlas.github.io/cnv-website/phenotype-browser/
+    repository: https://github.com/cnvpathwayatlas/cnv-website
+    description:
+      built a phenotype-based browser with combined filters, ontology lookups, and an automated
+      data-generation step.
+    iri: https://cnvpathwayatlas.github.io/cnv-website/phenotype-browser/
+personal_tools:
+  - id: seejobs
+    name: seejobs
+    url: https://github.com/jmillanacosta/seejobs
+    repository: https://github.com/jmillanacosta/seejobs
+    description:
+      a terminal interface for Slurm job monitoring, logs, and batch-script preparation over
+      SSH.
+    iri: https://github.com/jmillanacosta/seejobs
+skills:
+  - name: Knowledge graphs and ontologies
+    description:
+      RDF, OWL, and SPARQL; SHACL, VoID, and LinkML for schema extraction and validation; ontology
+      development with ROBOT and ODK; RDFLib, GraphDB, and SPARQL endpoints; MCP tools over RDF shapes.
+  - name: Data integration
+    description:
+      Identifier and label reconciliation, SSSOM mappings, release comparison, and provenance
+      tracking; pandas and Polars.
+  - name: Python
+    description:
+      Libraries and command-line tools with typed APIs and Pydantic models, published on PyPI
+      with Sphinx documentation.
+  - name: Web services and interfaces
+    description:
+      Flask and FastAPI backends; Vue, JavaScript, and TypeScript frontends; Cytoscape.js network
+      views.
+  - name: Testing and delivery
+    description:
+      pytest, tox, Ruff, and mypy; GitHub Actions, GitLab CI, and Jenkins for tests, data updates,
+      and releases; Docker and Slurm.
+funded_projects:
+  - id: vhp4safety
+    name: VHP4Safety
+    url: https://vhp4safety.nl
+    grant: vhp4safety
+    iri: https://vhp4safety.nl
+  - id: sbd4nano
+    name: SbD4Nano
+    url: https://www.sbd4nano.eu
+    grant: sbd4nano
+    iri: http://www.wikidata.org/entity/Q97096689
+  - id: nanosolveit
+    name: NanoSolveIT
+    url: https://nanosolveit.eu
+    grant: nanosolveit
+    iri: http://www.wikidata.org/entity/Q61910892
+  - id: nanocommons
+    name: NanoCommons
+    url: https://cordis.europa.eu/project/id/731032
+    grant: nanocommons
+    iri: http://www.wikidata.org/entity/Q47514913
+communities:
+  - id: wikipathways
+    name: WikiPathways
+    url: https://www.wikipathways.org
+    iri: http://www.wikidata.org/entity/Q7999828
+  - id: enanomapper
+    name: eNanoMapper
+    url: https://www.enanomapper.net
+    iri: http://www.wikidata.org/entity/Q116446479
+  - id: biodatafuse
+    name: BioDataFuse
+    url: https://github.com/BioDataFuse
+    iri: https://github.com/BioDataFuse
+  - id: bridgedb
+    name: BridgeDb
+    url: https://www.bridgedb.org
+    iri: http://www.wikidata.org/entity/Q55582517
+  - id: elixir-toxicology
+    name: ELIXIR Toxicology Community
+    url: https://elixir-europe.org/communities/toxicology
+    iri: http://www.wikidata.org/entity/Q130513081
+  - id: nfdi4chem
+    name: NFDI4Chem
+    url: https://www.nfdi4chem.de
+    iri: http://www.wikidata.org/entity/Q96678459
+  - id: pink
+    name: PINK
+    url: https://pink-project.eu
+    iri: https://pink-project.eu
+teaching_provider: um
+teaching:
+  - id: pra3006
+    name: Programming in the Life Sciences
+    url: https://www.maastrichtuniversity.nl/sites/default/files/2023-05/msp-course-catalogue-2022-2023.pdf#page=119
+    program: Maastricht Science Programme
+    code: PRA3006
+    description:
+      "Programming with life sciences: use web services connecting biological data and visualize
+      results with JavaScript."
+    iri: https://www.maastrichtuniversity.nl/sites/default/files/2023-05/msp-course-catalogue-2022-2023.pdf#page=119
+  - id: brain1005
+    name: Programming I
+    url: https://www.maastrichtuniversity.nl/sites/default/files/2026-05/fpn-course-catalog-2025-2026_4502_Ba_Brain_Science.pdf#page=8
+    program: BSc Brain Science
+    code: BRAIN1005
+    description:
+      Python fundamentals, data visualization, and computational models, linking programming
+      exercises to mathematics and neuroscience.
+    iri: https://www.maastrichtuniversity.nl/sites/default/files/2026-05/fpn-course-catalog-2025-2026_4502_Ba_Brain_Science.pdf#page=8
+  - id: mbs1001
+    name: Biomedical Challenges
+    url: https://fhmlweb.unimaas.nl/modules/Module.aspx?CODE=MBS1001&PER=100&YR=2025
+    program: MSc Biomedical Sciences
+    code: MBS1001
+    description: Supervised student groups during the execution of a research plan around Biomedical Challenges.
+    iri: https://fhmlweb.unimaas.nl/modules/Module.aspx?CODE=MBS1001&PER=100&YR=2025
+  - id: bbs-bioinformatics-tutorials
+    name: Bioinformatics tutorials
+    program: BSc Biomedical Sciences
+    program_url: https://www.maastrichtuniversity.nl/education/bachelor/programmes/biomedical-sciences/courses-and-curriculum
+    code: BBS
+    description:
+      Practical tutorials on BLAST sequence searches, biostatistics with R and SPSS, and biological
+      databases for biomedical science students.
+  - id: pbl-tutoring
+    name: Problem-based learning (PBL) tutoring
+    description:
+      Facilitate small-group learning, supporting students as they explore problems, formulate
+      learning questions, and discuss findings from independent study. UM’s PBL approach.
+    mentions:
+      - text: UM’s PBL approach
+        url: https://www.maastrichtuniversity.nl/pbl
+education:
+  - id: msc-bioinformatics
+    degree: MSc Bioinformatics
+    organization: wur
+    start: 2019-09
+    end: 2021-11
+    description: "Thesis: proposed genes in de novo sesquiterpene synthesis in Pieris brassicae."
+    taxa:
+      - Pieris brassicae
+    degree_type: http://www.wikidata.org/entity/Q950900
+    field: http://edamontology.org/topic_0091
+  - id: bsc-biotechnology
+    degree: BSc Biotechnology
+    organization: udl
+    start: "2015"
+    end: "2019"
+    description: Included an Erasmus exchange at Wageningen University & Research.
+    degree_type: http://www.wikidata.org/entity/Q787674
+    field: http://edamontology.org/topic_3297
+languages:
+  - name: Spanish
+    code: es
+    proficiency: native
+    iri: http://id.loc.gov/vocabulary/iso639-1/es
+    same_as:
+      - http://www.wikidata.org/entity/Q1321
+  - name: Catalan
+    code: ca
+    proficiency: native
+    iri: http://id.loc.gov/vocabulary/iso639-1/ca
+    same_as:
+      - http://www.wikidata.org/entity/Q7026
+  - name: English
+    code: en
+    proficiency: professional
+    iri: http://id.loc.gov/vocabulary/iso639-1/en
+    same_as:
+      - http://www.wikidata.org/entity/Q1860
+  - name: Dutch
+    code: nl
+    proficiency: B1-, certified by Maastricht University, Oct 2023
+    iri: http://id.loc.gov/vocabulary/iso639-1/nl
+    same_as:
+      - http://www.wikidata.org/entity/Q7411
+credentials:
+  - id: pbl-principles
+    name: Introductory Course on the Principles of Problem-Based Learning (PBL)
+    recognized_by: um
+    date: "2023"
+  - id: small-group-teacher-training
+    name: Small Group Teacher Training (tutoring and coaching)
+    recognized_by: um
+    date: "2023"
+places:
+  Maastricht, Netherlands: http://www.wikidata.org/entity/Q1309
+  Wageningen, Netherlands: http://www.wikidata.org/entity/Q1305
+  Lleida, Spain: http://www.wikidata.org/entity/Q15090
+  Barcelona, Spain: http://www.wikidata.org/entity/Q1492
+  Athens, Greece: http://www.wikidata.org/entity/Q1524
+  Aachen, Germany: http://www.wikidata.org/entity/Q1017
+  Egmond aan Zee, Netherlands: http://www.wikidata.org/entity/Q1616324
+  Utrecht, Netherlands: http://www.wikidata.org/entity/Q803
+  Brussels, Belgium: http://www.wikidata.org/entity/Q239
+  Berlin, Germany: http://www.wikidata.org/entity/Q64
+  Mie, Japan: http://www.wikidata.org/entity/Q128196
+  Brno, Czech Republic: http://www.wikidata.org/entity/Q14960
+taxa:
+  Pieris brassicae:
+    iri: http://purl.obolibrary.org/obo/NCBITaxon_7116
+    same_as:
+      - http://www.wikidata.org/entity/Q26764
+venues:
+  Scientific Data: http://www.wikidata.org/entity/Q27725928
+  Bioinformatics: http://www.wikidata.org/entity/Q4914910
+  Toxicology Letters: http://www.wikidata.org/entity/Q1796854
+  Frontiers in Physics: http://www.wikidata.org/entity/Q27725799
+  Nucleic Acids Research: http://www.wikidata.org/entity/Q135122
+  CEUR Workshop Proceedings (SWAT4HCLS 2025): http://www.wikidata.org/entity/Q139669834
+publication_same_as:
+  10.37044/osf.io/un2rw: http://www.wikidata.org/entity/Q131007824
+  10.37044/osf.io/8qeh5_v1: http://www.wikidata.org/entity/Q137438800
+skill_terms:
+  RDF: http://www.wikidata.org/entity/Q54872
+  OWL: http://www.wikidata.org/entity/Q826165
+  SPARQL: http://www.wikidata.org/entity/Q54871
+  SHACL: http://www.wikidata.org/entity/Q29377821
+  VoID: http://www.wikidata.org/entity/Q7939443
+  LinkML: http://www.wikidata.org/entity/Q108911530
+  ROBOT: http://www.wikidata.org/entity/Q116908518
+  ODK: http://www.wikidata.org/entity/Q112336713
+  RDFLib: http://www.wikidata.org/entity/Q7276224
+  GraphDB: http://www.wikidata.org/entity/Q58425577
+  MCP: http://www.wikidata.org/entity/Q133436854
+  SSSOM: http://www.wikidata.org/entity/Q108394480
+  pandas: http://www.wikidata.org/entity/Q15967387
+  Polars: http://www.wikidata.org/entity/Q120549730
+  Pydantic: http://www.wikidata.org/entity/Q107381687
+  PyPI: http://www.wikidata.org/entity/Q2984686
+  Sphinx: http://www.wikidata.org/entity/Q1633731
+  Flask: http://www.wikidata.org/entity/Q289281
+  FastAPI: http://www.wikidata.org/entity/Q101119404
+  Vue: http://www.wikidata.org/entity/Q24589705
+  JavaScript: http://www.wikidata.org/entity/Q2005
+  TypeScript: http://www.wikidata.org/entity/Q978185
+  Cytoscape.js: https://js.cytoscape.org
+  pytest: http://www.wikidata.org/entity/Q28975377
+  tox: https://tox.wiki
+  Ruff: http://www.wikidata.org/entity/Q115911873
+  mypy: http://www.wikidata.org/entity/Q102522075
+  GitHub Actions: http://www.wikidata.org/entity/Q97185096
+  GitLab CI: https://docs.gitlab.com/ci/
+  Jenkins: http://www.wikidata.org/entity/Q7491312
+  Docker: http://www.wikidata.org/entity/Q15206305
+  Slurm: http://www.wikidata.org/entity/Q3459703

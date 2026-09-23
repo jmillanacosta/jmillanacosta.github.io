@@ -1,0 +1,219 @@
+---
+title: Javier Millán Acosta — CV
+description: CV page for Javier Millán Acosta, a doctoral researcher in biomedical knowledge graphs, ontologies, and RDF tooling at Maastricht University (Department of Translational Genomics).
+layout: default
+image:
+  path: /assets/og-image.png
+  width: 1200
+  height: 630
+  alt: "Javier Millán Acosta, Doctoral Researcher at Maastricht University"
+sections:
+  - { id: experience, label: Experience }
+  - { id: open-source-software, label: Software }
+  - { id: publications, label: Publications }
+  - { id: conferences-hackathons, label: Conferences }
+  - { id: teaching, label: Teaching }
+  - { id: education, label: Education }
+  - { id: skills, label: Skills }
+  - { id: languages, label: Languages }
+---
+{%- comment -%}
+  Every statement below is rendered from _data (see _data/cv.yml) and marked up with RDFa that
+  matches the JSON-LD graph in _includes/cv-graph.jsonld; scripts/build-rdf.py checks that the
+  two graphs are identical. Literals are carried in content attributes, so markup in the
+  visible text does not change them.
+{%- endcomment -%}
+{%- include cv/data.liquid -%}
+<div class="cv" property="mainEntity foaf:primaryTopic foaf:maker dcterms:creator" resource="{{ me }}" typeof="Person foaf:Person">
+
+<header class="cv-header" id="top">
+  <h1><span property="name foaf:name" content="{{ person.name | escape }}"><span property="givenName foaf:givenName" content="{{ person.given_name | escape }}">{{ person.given_name | escape }}</span> <span property="familyName foaf:familyName" content="{{ person.family_name | escape }}">{{ person.family_name | escape }}</span></span></h1>
+  <p><span property="jobTitle" content="{{ person.job_title | escape }}">{{ person.job_title | escape }}</span>, {% include cv/org.html key=person.works_for property="worksFor" %} · <span property="address" typeof="PostalAddress"><span property="addressLocality" content="{{ person.address.locality | escape }}">{{ person.address.locality | escape }}</span>, <span property="addressCountry" content="{{ person.address.country | escape }}">{{ person.address.country | escape }}</span></span></p>
+  <p property="description" content="{{ person.description | strip | escape }}">{{ person.description | strip | escape }}</p>
+  <nav class="contact-links" aria-label="Contact and profiles">
+    <span class="contact-email" property="email" content="{{ person.email | escape }}"><a href="mailto:{{ person.email }}">{{ person.email }}</a></span>
+    {%- for profile in person.profiles %}{% if profile.header %}
+    <a{% unless profile.url == me %} property="sameAs"{% endunless %} href="{{ profile.url | escape }}">{{ profile.label }}</a>
+    {%- endif %}{% endfor %}
+    <a class="pdf-link" href="{{ '/output/pdf/javier-millan-acosta-cv.pdf' | relative_url }}" download>Download PDF</a>
+  </nav>
+  <div hidden>
+    <span property="foaf:mbox" resource="mailto:{{ person.email }}"></span>
+    <span property="url foaf:homepage" resource="{{ base }}"></span>
+    <span property="image" resource="{{ base }}assets/og-image.png"></span>
+    {%- for profile in person.profiles %}{% unless profile.header or profile.url == me %}
+    <span property="sameAs" resource="{{ profile.url | escape }}"></span>
+    {%- endunless %}{% endfor %}
+    {%- for s in person.same_as %}
+    <span property="sameAs" resource="{{ s }}"></span>
+    {%- endfor %}
+    <span property="identifier" typeof="PropertyValue"><span property="propertyID" content="ORCID"></span><span property="value" content="{{ person.orcid }}"></span><span property="url" resource="{{ me }}"></span></span>
+  </div>
+</header>
+
+<section class="cv-section section-experience" aria-labelledby="experience">
+  <h2 id="experience"><a class="section-title" href="#experience">Experience</a></h2>
+  <div class="section-body">
+    {%- for job in cv.experience %}
+    <article class="cv-entry" property="worksFor" typeof="EmployeeRole">
+      <span property="roleName" resource="{{ job.occupation }}"></span>
+      <header class="entry-heading">
+        <div><h3 property="roleName" content="{{ job.role | escape }}">{{ job.role | escape }}</h3><p class="entry-organization">{% include cv/org.html key=job.organization property="worksFor" location=true %}</p></div>
+        {%- include cv/datatype.liquid value=job.start %}
+        <p class="entry-date"><time property="startDate" datatype="{{ datatype }}" content="{{ job.start }}" datetime="{{ job.start }}">{% include cv/month.html value=job.start %}</time> – {% if job.end %}{% include cv/datatype.liquid value=job.end %}<time property="endDate" datatype="{{ datatype }}" content="{{ job.end }}" datetime="{{ job.end }}">{% include cv/month.html value=job.end %}</time>{% else %}present{% endif %}{% if job.status %} · <span property="description" content="{{ job.status | escape }}">{{ job.status | escape }}</span>{% endif %}</p>
+      </header>
+      {%- for paragraph in job.description %}
+      <p property="description" content="{{ paragraph | strip | escape }}">{{ paragraph | strip | escape }}</p>
+      {%- endfor %}
+    </article>
+    {%- endfor %}
+    <h3>Projects and communities</h3>
+    <p class="affiliations"><strong>Funded projects:</strong> {% for project in cv.funded_projects %}<span property="memberOf" resource="{{ project.iri }}" typeof="ResearchProject"><a property="url" href="{{ project.url }}"><span property="name" content="{{ project.name | escape }}">{{ project.name | escape }}</span></a> — {% include cv/grant.html key=project.grant property="funding" %}</span>{% unless forloop.last %}; {% endunless %}{% endfor %}.</p>
+    <p class="affiliations"><strong>Open communities:</strong> {% for community in cv.communities %}<span about="{{ community.iri }}" typeof="Project"><span property="contributor" resource="{{ me }}"></span><a property="url" href="{{ community.url }}"><span property="name" content="{{ community.name | escape }}">{{ community.name | escape }}</span></a></span>{% unless forloop.last %}, {% endunless %}{% endfor %}.</p>
+  </div>
+</section>
+
+<section class="cv-section section-open-source-software" aria-labelledby="open-source-software">
+  <h2 id="open-source-software"><a class="section-title" href="#open-source-software">Open-source software</a></h2>
+  <div class="section-body">
+    <h3>Libraries and tools</h3>
+    <ul class="software-list">
+      {%- for item in cv.libraries %}
+      {%- assign item_stats = stats | where: "id", item.id | first %}
+      {%- assign pkg = nil %}{% if item.package %}{% assign pkg = site.data.software | where: "name", item.package | first %}{% endif %}
+      <li resource="{{ item.iri }}" typeof="SoftwareSourceCode"><span property="author" resource="{{ me }}"></span><strong><a property="codeRepository" href="{{ item.repository }}"><span property="name" content="{{ item.name | escape }}">{{ item.name | escape }}</span></a></strong> — <span property="description" content="{{ item.description | strip | escape }}">{{ item.description | strip | escape }}</span>{% if pkg.docs %} · <a property="softwareHelp" href="{{ pkg.docs }}">docs</a>{% endif %}{% if pkg %} · <a property="downloadUrl" href="{{ pkg.pypi_url }}">PyPI</a><span property="softwareVersion" content="{{ pkg.version }}"></span>{% endif %}{% include cv/stats.html stats=item_stats %}</li>
+      {%- endfor %}
+    </ul>
+
+    <h3>Contributions to shared projects</h3>
+    <ul class="software-list">
+      {%- for item in cv.contributions %}
+      {%- assign item_stats = stats | where: "id", item.id | first %}
+      <li resource="{{ item.iri }}" typeof="SoftwareSourceCode">{% if item.repository %}<span property="codeRepository" resource="{{ item.repository }}"></span>{% endif %}<strong><a property="url" href="{{ item.url }}"><span property="name" content="{{ item.name | escape }}">{{ item.name | escape }}</span></a></strong> — <span property="contributor" typeof="Role"><span property="contributor" resource="{{ me }}"></span><span property="description" content="{{ item.description | strip | escape }}">{% include cv/text.html text=item.description mentions=item.mentions %}</span></span>{% if item.doi %} · <a property="{{ item.doi_relation | default: 'sameAs' }}" href="https://doi.org/{{ item.doi }}">Zenodo</a>{% endif %}{% include cv/stats.html stats=item_stats %}</li>
+      {%- endfor %}
+    </ul>
+
+    {%- for item in cv.personal_tools %}
+    {%- assign item_stats = stats | where: "id", item.id | first %}
+    <p resource="{{ item.iri }}" typeof="SoftwareSourceCode"><span property="author" resource="{{ me }}"></span><strong>Personal tooling:</strong> <a property="url codeRepository" href="{{ item.url }}"><span property="name" content="{{ item.name | escape }}">{{ item.name | escape }}</span></a>, <span property="description" content="{{ item.description | strip | escape }}">{{ item.description | strip | escape }}</span>{% include cv/stats.html stats=item_stats %}</p>
+    {%- endfor %}
+
+    <p><a href="https://github.com/search?q=is%3Apr+author%3Ajmillanacosta+is%3Amerged+-user%3Ajmillanacosta&amp;type=pullrequests">Merged contributions</a> · <a href="https://github.com/jmillanacosta?tab=repositories">All repositories</a><span class="usage-note screen-only"> · Usage figures from ecosyste.ms, PyPI, GitHub, and Docker Hub, updated weekly.</span></p>
+  </div>
+</section>
+
+<section class="cv-section section-publications" aria-labelledby="publications">
+  <h2 id="publications"><a class="section-title" href="#publications">Publications</a></h2>
+  <div class="section-body">
+    <p>Further research outputs are available on <a href="{{ me }}">ORCID</a> and <a href="{{ person.profiles | where: 'label', 'Google Scholar' | map: 'url' | first | escape }}">Google Scholar</a>.</p>
+    <ul class="publication-list">
+      {%- for pub in site.data.publications %}
+      {%- assign genre = pub.type | replace: "-", " " | capitalize %}
+      {%- assign pub_same = cv.publication_same_as[pub.doi] %}
+      {%- assign venue = cv.venues[pub.journal] %}
+      <li{% if pub.doi %} resource="https://doi.org/{{ pub.doi }}"{% endif %} typeof="ScholarlyArticle">
+        <span class="publication-title" property="name dcterms:title" content="{{ pub.title | escape }}">{{ pub.title | escape }}</span>
+        <span class="publication-details">{% if pub.journal %}<em property="isPartOf"{% if venue %} resource="{{ venue }}"{% endif %} typeof="Periodical"><span property="name" content="{{ pub.journal | escape }}">{{ pub.journal | escape }}</span></em> · {% endif %}<span property="datePublished dcterms:date" datatype="xsd:gYear" content="{{ pub.year }}">{{ pub.year }}</span> · <span class="publication-type" property="genre" content="{{ genre }}">{{ genre }}</span>{% if pub.doi %} · <span property="identifier" content="{{ pub.doi }}"><a href="https://doi.org/{{ pub.doi }}">{{ pub.doi }}</a></span>{% endif %}</span>
+        <span property="author dcterms:creator" resource="{{ me }}"></span>{% if pub_same %}<span property="sameAs" resource="{{ pub_same }}"></span>{% endif %}
+      </li>
+      {%- endfor %}
+    </ul>
+    {%- if cv.deliverables %}
+    <h3>Project deliverables</h3>
+    <ul class="publication-list">
+      {%- for deliverable in cv.deliverables %}
+      {%- assign grant = cv.grants[deliverable.grant] %}
+      {%- include cv/datatype.liquid value=deliverable.date %}
+      <li typeof="Report">
+        <span class="publication-title"><span property="reportNumber" content="{{ deliverable.number | escape }}">{{ deliverable.number | escape }}</span> <span property="name dcterms:title" content="{{ deliverable.title | escape }}">{{ deliverable.title | escape }}</span></span>
+        <span class="publication-details"><a href="{{ grant.url }}">{{ grant.name | escape }}</a>, {% include cv/grant.html key=deliverable.grant property="funding" %} · <span property="datePublished dcterms:date" datatype="{{ datatype }}" content="{{ deliverable.date }}">{{ deliverable.date }}</span>{% if deliverable.url %} · <a property="url" href="{{ deliverable.url }}">CORDIS</a>{% endif %}</span>
+        <span property="contributor dcterms:contributor" resource="{{ me }}"></span>
+      </li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+  </div>
+</section>
+
+<section class="cv-section section-conferences-hackathons" aria-labelledby="conferences-hackathons">
+  <h2 id="conferences-hackathons"><a class="section-title" href="#conferences-hackathons">Conferences &amp; hackathons</a></h2>
+  <div class="section-body">
+    {%- assign event_groups = events | group_by: "type" %}
+    {%- for type in event_types %}
+    {%- assign group = event_groups | where: "name", type | first %}
+    {%- if group %}
+    {%- if event_groups.size > 1 %}
+    <h3>{% if type == "event" %}Other events{% else %}{{ type | capitalize }}s{% endif %}</h3>
+    {%- endif %}
+    <ul class="event-list">
+      {%- for event in group.items %}
+      {%- assign event_name = event.name | append: " " | append: event.year %}
+      {%- assign event_start = event.start | default: event.year | append: "" %}
+      <li property="performerIn" typeof="Role"><strong><span property="performerIn"{% if event.iri %} resource="{{ event.iri }}"{% endif %} typeof="Event"><span property="keywords" content="{{ event.type }}"></span>{% include cv/datatype.liquid value=event_start %}<span property="startDate" datatype="{{ datatype }}" content="{{ event_start }}"></span>{% if event.end %}{% include cv/datatype.liquid value=event.end %}<span property="endDate" datatype="{{ datatype }}" content="{{ event.end }}"></span>{% endif %}{% if event.recording %}<span property="recordedIn" resource="{{ event.recording | escape }}"></span>{% endif %}{% if event.series %}<span property="superEvent" resource="{{ event.series }}"></span>{% endif %}{% if event.url %}<a property="url" href="{{ event.url }}">{% endif %}<span property="name" content="{{ event_name | escape }}">{{ event_name | escape }}</span>{% if event.url %}</a>{% endif %}{% if event.location == "Online" %}<span property="eventAttendanceMode" resource="https://schema.org/OnlineEventAttendanceMode"></span> (<span property="location" typeof="VirtualLocation"><span property="name" content="Online">Online</span></span>){% elsif event.location %} (<span property="location" resource="{{ cv.places[event.location] }}" typeof="Place"><span property="name" content="{{ event.location | escape }}">{{ event.location | escape }}</span></span>){% endif %}</span></strong> — {% if event.role %}<span property="roleName" content="{{ event.role | escape }}">{{ event.role | escape }}</span>: {% endif %}<span property="description" content="{{ event.summary | strip | escape }}">{% include cv/text.html text=event.summary mentions=event.mentions %}</span>{% if event.doi %} · <a property="subjectOf" href="https://doi.org/{{ event.doi }}">{{ event.doi }}</a>{% endif %}{% if event.recording %} · <a href="{{ event.recording | escape }}">video</a>{% endif %}{% if event.funder %}{% assign funding_text = event.funding_note | append: " " | append: orgs[event.funder].name %} · <span class="event-funding" property="funding" typeof="Grant"><span property="description" content="{{ funding_text | escape }}">{{ event.funding_note | escape }} {% include cv/org.html key=event.funder property="funder" %}</span></span>{% endif %}</li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="cv-section section-teaching" aria-labelledby="teaching">
+  <h2 id="teaching"><a class="section-title" href="#teaching">Teaching</a></h2>
+  <div class="section-body">
+    <p>Teaching contributions at {{ orgs[cv.teaching_provider].name | escape }}:</p>
+    {%- for course in cv.teaching %}
+    <article class="cv-entry teaching-entry"{% if course.iri %} resource="{{ course.iri | escape }}"{% endif %} typeof="Course">
+      <span property="provider" resource="{{ orgs[cv.teaching_provider].iri }}"></span>
+      <h3>{% if course.url %}<a property="url" href="{{ course.url | escape }}">{% endif %}<span property="name" content="{{ course.name | escape }}">{{ course.name | escape }}</span>{% if course.url %}</a>{% endif %}</h3>
+      {%- if course.program or course.code %}
+      <p class="teaching-meta">{% if course.program %}<span property="isPartOf" typeof="EducationalOccupationalProgram">{% if course.program_url %}<a property="url" href="{{ course.program_url | escape }}">{% endif %}<span property="name" content="{{ course.program | escape }}">{{ course.program | escape }}</span>{% if course.program_url %}</a>{% endif %}</span>{% endif %}{% if course.program and course.code %} · {% endif %}{% if course.code %}<span property="courseCode" content="{{ course.code | escape }}">{{ course.code | escape }}</span>{% endif %}</p>
+      {%- endif %}
+      <div class="teaching-description" property="hasCourseInstance" typeof="CourseInstance"><span property="instructor" resource="{{ me }}"></span><p property="description" content="{{ course.description | strip | escape }}">{% include cv/text.html text=course.description mentions=course.mentions %}</p></div>
+    </article>
+    {%- endfor %}
+    <h3>Teaching certifications</h3>
+    <ul>
+      {%- for credential in cv.credentials %}
+      {%- include cv/datatype.liquid value=credential.date %}
+      <li property="hasCredential" typeof="EducationalOccupationalCredential"><span property="name" content="{{ credential.name | escape }}">{{ credential.name | escape }}</span> — {% include cv/org.html key=credential.recognized_by property="recognizedBy" %}, <span property="dateCreated" datatype="{{ datatype }}" content="{{ credential.date }}">{{ credential.date }}</span>.</li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="cv-section section-education" aria-labelledby="education">
+  <h2 id="education"><a class="section-title" href="#education">Education</a></h2>
+  <div class="section-body">
+    {%- for edu in cv.education %}
+    {%- include cv/datatype.liquid value=edu.end %}
+    <span hidden property="hasCredential" typeof="EducationalOccupationalCredential"><span property="name" content="{{ edu.degree | escape }}"></span><span property="credentialCategory" resource="{{ edu.degree_type }}"></span><span property="about" resource="{{ edu.field }}"></span><span property="recognizedBy" resource="{{ orgs[edu.organization].iri }}"></span><span property="dateCreated" datatype="{{ datatype }}" content="{{ edu.end }}"></span></span>
+    <article class="cv-entry" property="alumniOf" typeof="OrganizationRole">
+      <header class="entry-heading">
+        <div><h3 property="roleName" content="{{ edu.degree | escape }}">{{ edu.degree | escape }}</h3><p class="entry-organization">{% include cv/org.html key=edu.organization property="alumniOf" %}</p></div>
+        {%- include cv/datatype.liquid value=edu.start %}
+        <p class="entry-date"><time property="startDate" datatype="{{ datatype }}" content="{{ edu.start }}" datetime="{{ edu.start }}">{% include cv/month.html value=edu.start %}</time> – {% include cv/datatype.liquid value=edu.end %}<time property="endDate" datatype="{{ datatype }}" content="{{ edu.end }}" datetime="{{ edu.end }}">{% include cv/month.html value=edu.end %}</time></p>
+      </header>
+      <p property="description" content="{{ edu.description | strip | escape }}">{% include cv/text.html text=edu.description taxa=edu.taxa %}</p>
+    </article>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="cv-section section-skills" aria-labelledby="skills">
+  <h2 id="skills"><a class="section-title" href="#skills">Technical skills</a></h2>
+  <div class="section-body">
+    <ul>
+      {%- for skill in cv.skills %}
+      <li><strong>{{ skill.name | escape }}:</strong> {% include cv/terms.html text=skill.description %}</li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="cv-section section-languages" aria-labelledby="languages">
+  <h2 id="languages"><a class="section-title" href="#languages">Languages</a></h2>
+  <div class="section-body">
+    <p>{% for language in cv.languages %}<span property="knowsLanguage" typeof="Role"><span property="knowsLanguage" resource="{{ language.iri }}" typeof="Language"><span property="name" content="{{ language.name | escape }}">{{ language.name | escape }}</span><span property="alternateName" content="{{ language.code }}"></span>{% for s in language.same_as %}<span property="sameAs" resource="{{ s }}"></span>{% endfor %}</span> (<span property="description" content="{{ language.proficiency | escape }}">{{ language.proficiency | escape }}</span>)</span>{% unless forloop.last %} · {% endunless %}{% endfor %}</p>
+  </div>
+</section>
+</div>

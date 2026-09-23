@@ -1,6 +1,5 @@
 name: Update CV data
 
-
 on:
   schedule:
     - cron: "0 6 * * 1" # every Monday 06:00 UTC
@@ -25,7 +24,10 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Refresh data from ORCID and PyPI
+      - name: Install YAML parser
+        run: python3 -m pip install pyyaml
+
+      - name: Refresh publications, events, software, and usage data
         run: python3 scripts/update_cv_data.py
 
       - name: Commit changes if any
@@ -37,5 +39,5 @@ jobs:
             exit 0
           fi
           git add _data
-          git commit -m "Sync CV data from ORCID, PyPI, and GitHub"
+          git commit -m "Sync CV data from ORCID, Zenodo, PyPI, ecosyste.ms, and GitHub"
           git push

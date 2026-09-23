@@ -1,0 +1,3 @@
+{%- comment -%}A grant (key in cv.grants) as the object of `property`: "PROGRAM grant NUMBER, Funder".{%- endcomment -%}
+{%- assign g = cv.grants[include.key] -%}
+<span property="{{ include.property }}" resource="{{ g.iri }}" typeof="Grant"><span property="name" content="{{ g.name | escape }}"></span><span property="url" resource="{{ g.url }}"></span><span property="identifier" content="{{ g.number }}"></span><span property="alternateName" content="{{ g.program }} grant {{ g.number }}">{{ g.program }} grant {{ g.number }}</span>, {% include cv/org.html key=g.funder property="funder" %}</span>

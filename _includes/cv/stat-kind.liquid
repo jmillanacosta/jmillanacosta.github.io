@@ -1,0 +1,27 @@
+{%- comment -%}Assigns stat_name, stat_label (short, for display), stat_type, and stat_source for one usage figure.{%- endcomment -%}
+{%- assign stat_type = nil -%}
+{%- case include.kind -%}
+  {%- when "downloads" -%}
+    {%- assign stat_name = "PyPI downloads, " | append: include.stats.downloads_period | replace: "-", " " -%}
+    {%- assign stat_label = "PyPI downloads " | append: include.stats.downloads_period | replace: "-", " " -%}
+    {%- assign stat_type = "https://schema.org/DownloadAction" -%}
+    {%- assign stat_source = include.stats.downloads_source -%}
+  {%- when "docker_pulls" -%}
+    {%- assign stat_name = "Docker Hub pulls" -%}
+    {%- assign stat_label = "Docker pulls" -%}
+    {%- assign stat_type = "https://schema.org/DownloadAction" -%}
+    {%- assign stat_source = include.stats.docker_source -%}
+  {%- when "dependent_repos" -%}
+    {%- assign stat_name = "Dependent repositories" -%}
+    {%- assign stat_label = "dependent repositories" -%}
+    {%- assign stat_source = include.stats.downloads_source -%}
+  {%- when "stars" -%}
+    {%- assign stat_name = "GitHub stars" -%}
+    {%- assign stat_label = "stars" -%}
+    {%- assign stat_type = "https://schema.org/LikeAction" -%}
+    {%- assign stat_source = include.stats.repository_source -%}
+  {%- when "forks" -%}
+    {%- assign stat_name = "GitHub forks" -%}
+    {%- assign stat_label = "forks" -%}
+    {%- assign stat_source = include.stats.repository_source -%}
+{%- endcase -%}

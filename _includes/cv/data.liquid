@@ -1,0 +1,20 @@
+{%- comment -%}
+  Shared inputs for the page's RDFa and the JSON-LD graph, so both render from the same values.
+  Jekyll includes share scope: the variables assigned here are visible to the including template.
+{%- endcomment -%}
+{%- assign cv = site.data.cv -%}
+{%- assign person = cv.person -%}
+{%- assign orgs = cv.organizations -%}
+{%- assign base = site.canonical -%}
+{%- assign me = cv.person.iri -%}
+{%- assign home = site.pages | where: "url", "/" | first -%}
+{%- assign doc_title = home.title -%}
+{%- assign modified = site.time | date: "%Y-%m-%d" -%}
+{%- assign pdf_url = base | append: "output/pdf/javier-millan-acosta-cv.pdf" -%}
+{%- assign formats = site.data.formats -%}
+{%- assign stats = site.data.code_stats -%}
+{%- assign events = site.data.events -%}
+{%- if site.data.events_generated -%}{%- assign events = events | concat: site.data.events_generated -%}{%- endif -%}
+{%- assign events = events | where_exp: "event", "event.hidden != true" | sort: "start", "last" | reverse -%}
+{%- assign event_types = "conference,workshop,hackathon,event" | split: "," -%}
+{%- assign month_names = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec" | split: "," -%}

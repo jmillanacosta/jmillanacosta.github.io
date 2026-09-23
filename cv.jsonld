@@ -1,0 +1,6 @@
+---
+layout: null
+permalink: /cv.jsonld
+sitemap: false
+---
+{% include cv-graph.jsonld %}

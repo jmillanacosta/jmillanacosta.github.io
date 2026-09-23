@@ -1,14 +1,14 @@
 """Check the built CV's text coverage, reading order, fonts and page clearance.
 
 Run after build-pdf.mjs. Requires Poppler (pdftotext, pdfinfo, pdffonts).
-The three-page limit is intentional; review pagination when adding content.
+The four-page limit is intentional; review pagination when adding content.
 """
-from html.parser import HTMLParser
-from pathlib import Path
 import re
 import subprocess
 import unicodedata
 import xml.etree.ElementTree as ET
+from html.parser import HTMLParser
+from pathlib import Path
 
 PDF = 'output/pdf/javier-millan-acosta-cv.pdf'
 
@@ -27,12 +27,16 @@ class Content(HTMLParser):
         self.skip_depth = 0
 
     def handle_starttag(self, tag, attrs):
-        if self.skip_depth or 'screen-only' in dict(attrs).get('class', '').split():
+        if self.skip_depth or 'screen-only' in (dict(attrs).get('class') or '').split():
             if tag not in ('input', 'br', 'hr', 'img', 'meta', 'link'):
                 self.skip_depth += 1
             return
         if tag in ('h1', 'h2', 'h3', 'p', 'li'):
             self.active.append([tag, []])
+
+    def handle_startendtag(self, tag, attrs):
+        # Self-closing void tags (<br />) have no content and must not end a skipped block.
+        pass
 
     def handle_data(self, data):
         if self.skip_depth:
@@ -62,7 +66,7 @@ for heading in content.headings:
 
 info = run('pdfinfo', PDF)
 assert re.search(r'Tagged:\s+yes', info), 'PDF must preserve semantic tags'
-assert re.search(r'Pages:\s+3\b', info), 'Review changed pagination'
+assert re.search(r'Pages:\s+4\b', info), 'Review changed pagination'
 fonts = run('pdffonts', PDF).splitlines()[2:]
 assert fonts and all(re.search(r'yes\s+yes\s+yes\s+\d+\s+\d+\s*$', f) for f in fonts), 'Fonts must be embedded with Unicode mappings'
 
@@ -70,9 +74,10 @@ root = ET.fromstring(run('pdftotext', '-bbox', PDF, '-'))
 ns = {'x': 'http://www.w3.org/1999/xhtml'}
 for number, page in enumerate(root.findall('.//x:page', ns), 1):
     words = page.findall('x:word', ns)
-    # The small running footer is the final eight words on every page.
-    body, footer = words[:-8], words[-8:]
-    assert ' '.join(w.text for w in footer) == f'Javier Millán Acosta · CV {number} / 3'
+    # The small running footer is the final thirteen words on every page.
+    body, footer = words[:-13], words[-13:]
+    footer_text = ' '.join(w.text or '' for w in footer)
+    assert re.fullmatch(rf'Javier Millán Acosta · CV · Updated [A-Z][a-z]+ \d{{1,2}}, \d{{4}} {number} / 4', footer_text), footer_text
     bottom = max(float(w.attrib['yMax']) for w in body)
     clearance = min(float(w.attrib['yMin']) for w in footer) - bottom
     assert clearance >= 24, f'Page {number}: content crowds footer ({clearance:.1f}pt)'

@@ -1,16 +1,154 @@
 <!doctype html>
 <html lang="en">
+  {%- include cv/data.liquid %}
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     {% seo %}
     <link
-      rel="stylesheet"
-      href="{{ '/assets/css/cv.css' | relative_url }}"
+      rel="preload"
+      href="{{ '/assets/fonts/source-sans-3-latin-400-normal.woff2' | relative_url }}"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
+    <link
+      rel="preload"
+      href="{{ '/assets/fonts/source-serif-4-latin-400-normal.woff2' | relative_url }}"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="icon"
+      href="{{ '/favicon.ico' | relative_url }}"
+      sizes="16x16 32x32"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="{{ '/apple-touch-icon.png' | relative_url }}"
+    />
+    <link
+      rel="alternate"
+      type="application/ld+json"
+      href="{{ '/cv.jsonld' | relative_url }}"
+      title="CV as JSON-LD"
+    />
+    <link
+      rel="alternate"
+      type="text/turtle"
+      href="{{ '/cv.ttl' | relative_url }}"
+      title="CV as Turtle"
+    />
+    <link
+      rel="alternate"
+      type="application/n-triples"
+      href="{{ '/cv.nt' | relative_url }}"
+      title="CV as N-Triples"
+    />
+    <link
+      rel="alternate"
+      type="application/rdf+xml"
+      href="{{ '/cv.rdf' | relative_url }}"
+      title="CV as RDF/XML"
+    />
+    <link
+      rel="meta"
+      type="application/rdf+xml"
+      href="{{ '/cv.rdf' | relative_url }}"
+      title="FOAF"
+    />
+    <link
+      rel="describedby"
+      type="text/turtle"
+      href="{{ '/.well-known/void' | relative_url }}"
+      title="VoID dataset description"
+    />
+    <link
+      rel="alternate"
+      type="application/pdf"
+      href="{{ '/output/pdf/javier-millan-acosta-cv.pdf' | relative_url }}"
+      title="CV as PDF"
+    />
+    <link rel="stylesheet" href="{{ '/assets/css/cv.css' | relative_url }}" />
+    <script src="{{ '/assets/js/cv-nav.js' | relative_url }}" defer></script>
+    <script type="application/ld+json">
+      {% include cv-graph.jsonld %}
+    </script>
   </head>
-  <body>
+  <body
+    vocab="https://schema.org/"
+    prefix="foaf: http://xmlns.com/foaf/0.1/ dcterms: http://purl.org/dc/terms/ xsd: http://www.w3.org/2001/XMLSchema#"
+  >
     <a class="skip-link screen-only" href="#main-content">Skip to CV</a>
-    <main id="main-content" tabindex="-1">{{ content }}</main>
+    {%- if page.sections %}
+    {%- assign employer = orgs[person.works_for] %}
+    {%- assign employer_parent = orgs[employer.parent] %}
+    <aside
+      class="sidebar screen-only"
+      aria-label="Profile and sections"
+      data-at-top
+      data-header-visible
+    >
+      <div class="sidebar-profile">
+        <a class="sidebar-name" href="#top">{{ person.name }}</a>
+        <div class="sidebar-reveal">
+          <p>
+            {{ person.job_title }}<br />
+            {%- if employer_parent %}{{ employer_parent.name }}, {% endif %}{{ employer.name }}
+          </p>
+          <p>{{ employer.location }}</p>
+        </div>
+      </div>
+      <div class="sidebar-track">
+        <nav class="section-nav" aria-label="CV sections">
+          <ol>
+            {%- for section in page.sections %}
+            <li><a href="#{{ section.id }}">{{ section.label }}</a></li>
+            {%- endfor %}
+          </ol>
+        </nav>
+        <div class="sidebar-contact sidebar-reveal">
+          <a href="mailto:{{ person.email }}" title="{{ person.email }}"
+            >Email</a
+          >
+          <ul>
+            {%- for profile in person.profiles %}{% if profile.sidebar %}
+            <li><a href="{{ profile.url }}">{{ profile.sidebar }}</a></li>
+            {%- endif %}{% endfor %}
+          </ul>
+          <a class="sidebar-pdf" href="{{ pdf_url }}" download>Download PDF</a>
+        </div>
+      </div>
+    </aside>
+    {%- endif %}
+    <main
+      id="main-content"
+      tabindex="-1"
+      resource="{{ base }}"
+      typeof="ProfilePage foaf:PersonalProfileDocument"
+    >
+      {{ content }}
+      <footer class="page-footer screen-only">
+        <span
+          property="name dcterms:title"
+          content="{{ doc_title | escape }}"
+        ></span>
+        <span property="inLanguage" content="en"></span>
+        Last updated
+        <time
+          property="dateModified dcterms:modified"
+          datatype="xsd:date"
+          content="{{ modified }}"
+          datetime="{{ modified }}"
+          >{{ site.time | date: "%B %-d, %Y" }}</time
+        >
+        · Also as
+        {%- for format in formats -%}
+          {%- assign f_url = format.url | prepend: base -%}
+          {{ " " }}<span property="encoding" resource="{{ f_url }}" typeof="MediaObject"><span property="encodingFormat" content="{{ format.type }}"></span><a property="contentUrl" href="{{ f_url }}" type="{{ format.type }}"><span property="name" content="{{ format.name }}">{{ format.name }}</span></a></span>{% unless forloop.last %},{% endunless %}
+        {%- endfor %}
+      </footer>
+    </main>
   </body>
 </html>

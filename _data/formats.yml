@@ -1,0 +1,9 @@
+- {
+    name: PDF,
+    type: application/pdf,
+    url: output/pdf/javier-millan-acosta-cv.pdf,
+  }
+- { name: JSON-LD, type: application/ld+json, url: cv.jsonld }
+- { name: Turtle, type: text/turtle, url: cv.ttl }
+- { name: N-Triples, type: application/n-triples, url: cv.nt }
+- { name: RDF/XML, type: application/rdf+xml, url: cv.rdf }

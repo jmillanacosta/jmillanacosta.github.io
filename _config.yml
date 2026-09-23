@@ -1,5 +1,6 @@
 url: "https://jmillanacosta.github.io"
 baseurl: ""
+canonical: "https://jmillanacosta.github.io/"
 title: "Javier Millán Acosta"
 exclude:
   - vendor
@@ -11,3 +12,5 @@ exclude:
   - node_modules
   - package.json
   - package-lock.json
+plugins:
+  - jekyll-seo-tag
