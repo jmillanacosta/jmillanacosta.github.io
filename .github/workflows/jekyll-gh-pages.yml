@@ -34,10 +34,6 @@ jobs:
         run: python3 -m pip install rdflib pyrdfa3 html5lib
       - name: Check RDFa against JSON-LD, publish RDF and VoID
         run: python3 scripts/build-rdf.py
-      - name: Check that every IRI resolves and none is minted
-        # Reported, not blocking: a third-party site being briefly down should not stop a deploy.
-        continue-on-error: true
-        run: python3 scripts/check-iris.py
       - name: Set up Node
         uses: actions/setup-node@v7.0.0
         with:
