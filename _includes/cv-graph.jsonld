@@ -41,7 +41,8 @@
       {%- endif %}
       "email": {{ person.email | jsonify }},
       "foaf:mbox": {"@id": {{ person.email | prepend: "mailto:" | jsonify }}},
-      "url": {"@id": {{ base | jsonify }}},
+      {%- assign own = site.data.people | where: "id", me | first %}
+      "url": [{"@id": {{ base | jsonify }}}{% for link in own.links %}{% if link.kind == "website" %}, {"@id": {{ link.url | jsonify }}}{% endif %}{% endfor %}],
       "foaf:homepage": {"@id": {{ base | jsonify }}},
       "image": {"@id": {{ base | append: "assets/og-image.png" | jsonify }}},
       "identifier": {"@type": "PropertyValue", "propertyID": "ORCID", "value": {{ person.orcid | append: "" | jsonify }}, "url": {"@id": {{ me | jsonify }}}},
@@ -49,6 +50,7 @@
       "sameAs": [
         {%- for profile in person.profiles -%}{%- unless profile.url == me -%}{"@id": {{ profile.url | jsonify }}}, {% endunless -%}{%- endfor -%}
         {%- for s in person.same_as -%}{"@id": {{ s | jsonify }}}{%- unless forloop.last -%}, {% endunless -%}{%- endfor -%}
+        {%- for link in own.links -%}{%- if link.kind != "website" -%}, {"@id": {{ link.url | jsonify }}}{%- endif -%}{%- endfor -%}
       ],
       "worksFor": [
         {% include ld/org.json key=person.works_for %}
@@ -121,7 +123,7 @@
     {%- for pub in site.data.publications %}
     {%- assign pub_same = cv.publication_same_as[pub.doi] %}
     {%- assign venue = cv.venues[pub.journal] %}
-    , { {% if pub.doi %}"@id": {{ pub.doi | prepend: "https://doi.org/" | jsonify }}, {% endif %}"@type": "ScholarlyArticle", "name": {{ pub.title | jsonify }}, "dcterms:title": {{ pub.title | jsonify }}, "datePublished": {"@value": {{ pub.year | append: "" | jsonify }}, "@type": "xsd:gYear"}, "dcterms:date": {"@value": {{ pub.year | append: "" | jsonify }}, "@type": "xsd:gYear"}, "genre": {{ pub.type | replace: "-", " " | capitalize | jsonify }}{% if pub.doi %}, "identifier": {{ pub.doi | jsonify }}{% endif %}{% if pub_same %}, "sameAs": {"@id": {{ pub_same | jsonify }}}{% endif %}{% if pub.journal %}, "isPartOf": { {% if venue %}"@id": {{ venue | jsonify }}, {% endif %}"@type": "Periodical", "name": {{ pub.journal | jsonify }}}{% endif %}, "author": {% if pub.authors %}{"@list": [{% for a in pub.authors %}{% if a.me %}{"@id": {{ me | jsonify }}}{% else %}{% assign a_full = a.given | append: " " | append: a.family | strip %}{ {% if a.orcid %}"@id": {{ a.orcid | jsonify }}, {% endif %}"@type": "Person", "name": {{ a_full | jsonify }}}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}]}{% else %}{"@id": {{ me | jsonify }}}{% endif %}, "dcterms:creator": {"@id": {{ me | jsonify }}}}
+    , { {% if pub.doi %}"@id": {{ pub.doi | prepend: "https://doi.org/" | jsonify }}, {% endif %}"@type": "ScholarlyArticle", "name": {{ pub.title | jsonify }}, "dcterms:title": {{ pub.title | jsonify }}, "datePublished": {"@value": {{ pub.year | append: "" | jsonify }}, "@type": "xsd:gYear"}, "dcterms:date": {"@value": {{ pub.year | append: "" | jsonify }}, "@type": "xsd:gYear"}, "genre": {{ pub.type | replace: "-", " " | capitalize | jsonify }}{% if pub.doi %}, "identifier": {{ pub.doi | jsonify }}{% endif %}{% if pub_same %}, "sameAs": {"@id": {{ pub_same | jsonify }}}{% endif %}{% if pub.journal %}, "isPartOf": { {% if venue %}"@id": {{ venue | jsonify }}, {% endif %}"@type": "Periodical", "name": {{ pub.journal | jsonify }}}{% endif %}, "author": {% if pub.authors %}{"@list": [{% for a in pub.authors %}{% if a.me %}{"@id": {{ me | jsonify }}}{% else %}{% assign a_full = a.given | append: " " | append: a.family | strip %}{ {% assign a_id = a.orcid | default: a.wikidata %}{% if a_id %}"@id": {{ a_id | jsonify }}, {% endif %}"@type": "Person", "name": {{ a_full | jsonify }}}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}]}{% else %}{"@id": {{ me | jsonify }}}{% endif %}, "dcterms:creator": {"@id": {{ me | jsonify }}}}
     {%- endfor %}{% endif %}
   ]
 }

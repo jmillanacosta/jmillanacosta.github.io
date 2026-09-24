@@ -300,10 +300,16 @@ hosts:
   pypi.org: PyPI
   hub.docker.com: Docker Hub
   zenodo.org: Zenodo
+  openalex.org: OpenAlex
+  www.wikipathways.org: WikiPathways
+# Other links are named by their address (egonw.github.io); this is for one without an address.
 host_default: Website
 # Where a link came from: a link target with this statement is labeled with its source
 # ("Website (Wikidata)").
 provenance: http://purl.org/dc/terms/source
+# A link target with this statement is a named profile elsewhere (a Scopus author page, a DBLP
+# entry): shown by that name, grouped by source, below the identity links.
+link_title: http://purl.org/dc/terms/title
 # An identifier given as text is shown with this label, unless a link from that host is shown.
 identifier_label: DOI
 
@@ -316,6 +322,7 @@ text:
   also_known_as: Also known as {names}
   also_listed_as: Also listed as {names}
   from_source: "{label} ({source})"
+  elsewhere: "Elsewhere ({source}): {links}"
   kind_of: Kind of {of}
   kinds_of: Kinds of {of}
   by_kind: "By kind: {links}"

@@ -4,3 +4,6 @@ _includes/
 _layouts/
 cv/index.html
 site.json
+# Written by scripts/update_cv_data.py on every run.
+_data/people.yml
+scripts/cache/

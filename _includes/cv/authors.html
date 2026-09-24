@@ -1,7 +1,8 @@
 {%- comment -%}
   A publication's authors as an ordered RDFa list (schema:author, inlist): all of them when there
   are ten or fewer; otherwise the first three, this CV's subject, and the last, with the rest
-  carried as hidden list members so the graph keeps the full, ordered list.
+  carried as hidden list members so the graph keeps the full, ordered list. An author is
+  identified by ORCID, else by their Wikidata item.
 {%- endcomment -%}
 {%- assign a_list = include.authors -%}
 {%- assign a_long = a_list.size | minus: 10 -%}
@@ -19,12 +20,12 @@
 <span property="author" inlist resource="{{ me }}"><strong>{{ person.given_name | slice: 0 }}. {{ person.family_name | escape }}</strong></span>
     {%- else -%}
       {%- capture a_initials -%}{%- assign a_parts = a.given | replace: "-", " " | split: " " -%}{%- for part in a_parts -%}{{ part | slice: 0 }}.{% unless forloop.last %} {% endunless %}{%- endfor -%}{%- endcapture -%}
-<span property="author" inlist{% if a.orcid %} resource="{{ a.orcid }}"{% endif %} typeof="Person"><span property="name" content="{{ a_full | escape }}">{% if a_initials != "" %}{{ a_initials }} {% endif %}{{ a.family | escape }}</span></span>
+<span property="author" inlist{% assign a_id = a.orcid | default: a.wikidata %}{% if a_id %} resource="{{ a_id }}"{% endif %} typeof="Person"><span property="name" content="{{ a_full | escape }}">{% if a_initials != "" %}{{ a_initials }} {% endif %}{{ a.family | escape }}</span></span>
     {%- endif -%}
     {%- assign a_shown_any = true -%}
     {%- assign a_gap = false -%}
   {%- else -%}
-<span property="author" inlist{% if a.orcid %} resource="{{ a.orcid }}"{% endif %} typeof="Person"><span property="name" content="{{ a_full | escape }}"></span></span>
+<span property="author" inlist{% assign a_id = a.orcid | default: a.wikidata %}{% if a_id %} resource="{{ a_id }}"{% endif %} typeof="Person"><span property="name" content="{{ a_full | escape }}"></span></span>
     {%- assign a_gap = true -%}
   {%- endif -%}
 {%- endfor -%}

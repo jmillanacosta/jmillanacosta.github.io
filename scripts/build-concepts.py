@@ -466,7 +466,10 @@ class Concepts:
         for target in targets:
             if not isinstance(target, URIRef) or str(target).startswith(MERGED):
                 continue
-            label = CONFIG["hosts"].get(urlparse(str(target)).netloc, CONFIG["host_default"])
+            if g.value(target, URIRef(CONFIG["link_title"])) is not None:
+                continue  # a named profile, listed under "elsewhere"
+            host = urlparse(str(target)).netloc
+            label = CONFIG["hosts"].get(host) or host.removeprefix("www.") or CONFIG["host_default"]
             source = g.value(target, URIRef(CONFIG["provenance"]))
             if source is not None:
                 label = fill(CONFIG["text"]["from_source"], label=label, source=CONFIG["hosts"].get(urlparse(str(source)).netloc, pretty_iri(str(source))))
@@ -478,6 +481,18 @@ class Concepts:
             if isinstance(identifier, Literal) and not any(f">{label}<" in x for x in links):
                 links.append(f"{label} {html.escape(str(identifier))}")
         return links
+
+    def elsewhere(self, node: URIRef) -> dict[str, list[str]]:
+        """Named profiles on other services, by the source that names them."""
+        g, found = self.graph, defaultdict(list)
+        for target in sorted(g.objects(node, TERMS["same_as"]), key=lambda t: str(g.value(t, URIRef(CONFIG["link_title"])) or "").casefold()):
+            title = g.value(target, URIRef(CONFIG["link_title"]))
+            if title is None:
+                continue
+            source = g.value(target, URIRef(CONFIG["provenance"]))
+            where = CONFIG["hosts"].get(urlparse(str(source)).netloc, pretty_iri(str(source))) if source is not None else ""
+            found[where].append(f'<a class="external" href="{html.escape(str(target))}">{html.escape(str(title))}</a>')
+        return found
 
     # Turtle.
     def publish(self, statements: Graph) -> Graph:
@@ -615,6 +630,8 @@ def render(concepts: Concepts, node: URIRef, shell: str) -> tuple[str, Graph]:
         extra.append(f'<p class="concept-description">{html.escape(str(description))}</p>')
     if identity:
         extra.append('<p class="concept-identity">' + " · ".join(identity) + "</p>")
+    for source, links in concepts.elsewhere(node).items():
+        extra.append(f'<p class="concept-identity concept-elsewhere">{text("elsewhere", source=html.escape(source), links=" · ".join(links))}</p>')
     kicker = f'<a href="/{concepts.category(node)["folder"]}/">{html.escape(" · ".join(labels))}</a>'
     body = [
         *header(kicker, name, *extra),

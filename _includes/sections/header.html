@@ -10,7 +10,21 @@
     <a{% unless profile.url == me %} property="sameAs"{% endunless %} href="{{ profile.url | escape }}">{{ profile.label }}</a>
     {%- endif %}{% endfor %}
 
+    {%- assign own = site.data.people | where: "id", me | first %}
+    {%- if own.links.size > 0 %}
+    <button type="button" class="contact-more screen-only" popovertarget="more-links">+{{ own.links.size }} more</button>
+    {%- endif %}
   </nav>
+  {%- if own.links.size > 0 %}
+  <div id="more-links" class="more-links screen-only" popover>
+    <div class="more-links-head"><p>Also on</p><button type="button" popovertarget="more-links" popovertargetaction="hide" aria-label="Close">×</button></div>
+    <ul>
+      {%- for link in own.links %}
+      <li><a property="{% if link.kind == 'website' %}url{% else %}sameAs{% endif %}" href="{{ link.url | escape }}">{{ link.label | escape }}</a>{% if link.via %}<span class="more-links-via">via {{ link.via | escape }}</span>{% endif %}</li>
+      {%- endfor %}
+    </ul>
+  </div>
+  {%- endif %}
   {%- if mode == "cv" %}
   <p class="hero-actions screen-only"><a class="button button-primary" href="{{ pdf_url }}" download>Download PDF</a></p>
   {%- endif %}

@@ -1,1325 +1,5800 @@
 {
-  "github-item:actions-user": {
-    "checked": "2026-09-24",
-    "value": null
-  },
-  "github-item:adriaque": {
-    "checked": "2026-09-24",
-    "value": null
-  },
-  "github-item:alexandra-valeanu": {
-    "checked": "2026-09-24",
-    "value": null
-  },
-  "github-item:ammar257ammar": {
-    "checked": "2026-09-24",
-    "value": "Q86442640"
-  },
-  "github-item:cthoyt": {
-    "checked": "2026-09-24",
-    "value": "Q47475003"
-  },
-  "github-item:denisesl22": {
-    "checked": "2026-09-24",
-    "value": null
-  },
-  "github-item:djwetstede": {
-    "checked": "2026-09-24",
-    "value": null
-  },
-  "github-item:dominikmartinat": {
-    "checked": "2026-09-24",
-    "value": null
-  },
-  "github-item:dssib": {
-    "checked": "2026-09-24",
-    "value": null
-  },
-  "github-item:egonw": {
-    "checked": "2026-09-24",
-    "value": "Q20895241"
-  },
-  "github-item:fehrhart": {
-    "checked": "2026-09-24",
-    "value": null
-  },
-  "github-item:gerganatancheva123": {
-    "checked": "2026-09-24",
-    "value": null
-  },
-  "github-item:hasanbalci": {
-    "checked": "2026-09-24",
-    "value": "Q130642378"
-  },
-  "github-item:iaortega": {
-    "checked": "2026-09-24",
-    "value": null
-  },
-  "github-item:jannahastings": {
-    "checked": "2026-09-24",
-    "value": "Q27902110"
-  },
-  "github-item:jkchang2015": {
-    "checked": "2026-09-24",
-    "value": null
-  },
-  "github-item:johannehouweling": {
-    "checked": "2026-09-24",
-    "value": null
-  },
-  "github-item:lindeschoenmaker": {
-    "checked": "2026-09-24",
-    "value": null
-  },
-  "github-item:lrieswijk": {
-    "checked": "2026-09-24",
-    "value": null
-  },
-  "github-item:lwinckers": {
-    "checked": "2026-09-24",
-    "value": null
-  },
-  "github-item:marvinm2": {
-    "checked": "2026-09-24",
-    "value": null
-  },
-  "github-item:mirthhe": {
-    "checked": "2026-09-24",
-    "value": null
-  },
-  "github-item:mmarvinm2": {
-    "checked": "2026-09-24",
-    "value": null
-  },
-  "github-item:ntk73": {
-    "checked": "2026-09-24",
-    "value": null
-  },
-  "github-item:nunogit": {
-    "checked": "2026-09-24",
-    "value": null
-  },
-  "github-item:ozancinar": {
-    "checked": "2026-09-24",
-    "value": "Q89571039"
-  },
-  "github-item:shakiraportfolio": {
-    "checked": "2026-09-24",
-    "value": null
-  },
-  "github-item:tabbassidaloii": {
-    "checked": "2026-09-24",
-    "value": "Q89321648"
-  },
-  "github-item:tassosp78": {
-    "checked": "2026-09-24",
-    "value": null
-  },
-  "github-item:uanaf": {
-    "checked": "2026-09-24",
-    "value": null
-  },
-  "github-item:vedina": {
-    "checked": "2026-09-24",
-    "value": "Q27061849"
-  },
-  "github-item:westonslaughter": {
-    "checked": "2026-09-24",
-    "value": null
-  },
-  "github-item:yojanagadiya": {
-    "checked": "2026-09-24",
-    "value": "Q70206064"
-  },
-  "github-item:youphendriks": {
-    "checked": "2026-09-24",
-    "value": null
-  },
-  "github-social:adriaque": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "github-social:alexandra-valeanu": {
-    "checked": "2026-09-24",
-    "value": ["https://www.linkedin.com/in/alexandra-văleanu-1806a2191/"]
-  },
-  "github-social:ammar257ammar": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "github-social:cthoyt": {
-    "checked": "2026-09-24",
-    "value": [
-      "https://scholar.social/@cthoyt",
-      "https://www.linkedin.com/in/cthoyt/"
-    ]
-  },
-  "github-social:denisesl22": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "github-social:djwetstede": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "github-social:dominikmartinat": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "github-social:dssib": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "github-social:egonw": {
-    "checked": "2026-09-24",
-    "value": ["https://social.edu.nl/@egonw", "https://mastodon.social/@egonw"]
-  },
-  "github-social:fehrhart": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "github-social:gerganatancheva123": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "github-social:hasanbalci": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "github-social:iaortega": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "github-social:jannahastings": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "github-social:jkchang2015": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "github-social:johannehouweling": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "github-social:lindeschoenmaker": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "github-social:lrieswijk": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "github-social:lwinckers": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "github-social:marvinm2": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "github-social:mirthhe": {
-    "checked": "2026-09-24",
-    "value": [
-      "https://www.linkedin.com/in/mirtheklaassen/",
-      "https://www.instagram.com/nn.irthe"
-    ]
-  },
-  "github-social:mmarvinm2": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "github-social:ntk73": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "github-social:nunogit": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "github-social:ozancinar": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "github-social:shakiraportfolio": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "github-social:tabbassidaloii": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "github-social:tassosp78": {
-    "checked": "2026-09-24",
-    "value": ["https://www.linkedin.com/in/tassospapadiamantis/"]
-  },
-  "github-social:uanaf": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "github-social:vedina": {
-    "checked": "2026-09-24",
-    "value": [
-      "https://twitter.com/10705013",
-      "https://bsky.app/profile/n107055013.bsky.social"
-    ]
-  },
-  "github-social:westonslaughter": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "github-social:yojanagadiya": {
-    "checked": "2026-09-24",
-    "value": [
-      "https://www.linkedin.com/in/yojana-gadiya-477739113",
-      "https://orcid.org/0000-0002-7683-0452"
-    ]
-  },
-  "github-social:youphendriks": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "github-user:actions-user": {
-    "checked": "2026-09-24",
-    "value": {
-      "blog": "https://github.com/actions",
-      "name": null
-    }
-  },
-  "github-user:adriaque": {
-    "checked": "2026-09-24",
-    "value": {
-      "blog": "",
-      "name": "Alejandro Adriaque Lozano"
-    }
-  },
-  "github-user:alexandra-valeanu": {
-    "checked": "2026-09-24",
-    "value": {
-      "blog": "",
-      "name": "Alexandra Valeanu"
-    }
-  },
-  "github-user:ammar257ammar": {
-    "checked": "2026-09-24",
-    "value": {
-      "blog": "",
-      "name": "Ammar Ammar"
-    }
-  },
-  "github-user:cthoyt": {
-    "checked": "2026-09-24",
-    "value": {
-      "blog": "https://cthoyt.com",
-      "name": "Charles Tapley Hoyt"
-    }
-  },
-  "github-user:denisesl22": {
-    "checked": "2026-09-24",
-    "value": {
-      "blog": "",
-      "name": "De"
-    }
-  },
-  "github-user:djwetstede": {
-    "checked": "2026-09-24",
-    "value": {
-      "blog": "",
-      "name": null
-    }
-  },
-  "github-user:dominikmartinat": {
-    "checked": "2026-09-24",
-    "value": {
-      "blog": "",
-      "name": null
-    }
-  },
-  "github-user:dssib": {
-    "checked": "2026-09-24",
-    "value": {
-      "blog": "sib.swiss",
-      "name": "Ana Claudia Sima"
-    }
-  },
-  "github-user:egonw": {
-    "checked": "2026-09-24",
-    "value": {
-      "blog": "https://chem-bla-ics.linkedchemistry.info/",
-      "name": "Egon Willighagen"
-    }
-  },
-  "github-user:fehrhart": {
-    "checked": "2026-09-24",
-    "value": {
-      "blog": "",
-      "name": "Friederike (Freddie) Ehrhart"
-    }
-  },
-  "github-user:gerganatancheva123": {
-    "checked": "2026-09-24",
-    "value": {
-      "blog": "",
-      "name": null
-    }
-  },
-  "github-user:hasanbalci": {
-    "checked": "2026-09-24",
-    "value": {
-      "blog": "https://hasanbalci.github.io/",
-      "name": "Hasan Balcı"
-    }
-  },
-  "github-user:iaortega": {
-    "checked": "2026-09-24",
-    "value": {
-      "blog": "",
-      "name": "Isaac Arturo Ortega Alvarado"
-    }
-  },
-  "github-user:jannahastings": {
-    "checked": "2026-09-24",
-    "value": {
-      "blog": "",
-      "name": "Janna Hastings"
-    }
-  },
-  "github-user:jkchang2015": {
-    "checked": "2026-09-24",
-    "value": {
-      "blog": "",
-      "name": "JKChang"
-    }
-  },
-  "github-user:johannehouweling": {
-    "checked": "2026-09-24",
-    "value": {
-      "blog": "",
-      "name": "Jente Houweling"
-    }
-  },
-  "github-user:lindeschoenmaker": {
-    "checked": "2026-09-24",
-    "value": {
-      "blog": "",
-      "name": null
-    }
-  },
-  "github-user:lrieswijk": {
-    "checked": "2026-09-24",
-    "value": {
-      "blog": "",
-      "name": "Linda Rieswijk"
-    }
-  },
-  "github-user:lwinckers": {
-    "checked": "2026-09-24",
-    "value": {
-      "blog": "",
-      "name": "Laurent Winckers"
-    }
-  },
-  "github-user:marvinm2": {
-    "checked": "2026-09-24",
-    "value": {
-      "blog": "",
-      "name": "Marvin Martens"
-    }
-  },
-  "github-user:mirthhe": {
-    "checked": "2026-09-24",
-    "value": {
-      "blog": "",
-      "name": "Mirthe"
-    }
-  },
-  "github-user:mmarvinm2": {
-    "checked": "2026-09-24",
-    "value": {
-      "blog": "",
-      "name": null
-    }
-  },
-  "github-user:ntk73": {
-    "checked": "2026-09-24",
-    "value": {
-      "blog": "web.uni-plovdiv.bg/nick",
-      "name": "Nikolay Kochev"
-    }
-  },
-  "github-user:nunogit": {
-    "checked": "2026-09-24",
-    "value": {
-      "blog": "",
-      "name": null
-    }
-  },
-  "github-user:ozancinar": {
-    "checked": "2026-09-24",
-    "value": {
-      "blog": "",
-      "name": "Ozan Çınar"
-    }
-  },
-  "github-user:shakiraportfolio": {
-    "checked": "2026-09-24",
-    "value": {
-      "blog": "",
-      "name": "Shakira"
-    }
-  },
-  "github-user:tabbassidaloii": {
-    "checked": "2026-09-24",
-    "value": {
-      "blog": "",
-      "name": "Tooba Abbassi-Daloii"
-    }
-  },
-  "github-user:tassosp78": {
-    "checked": "2026-09-24",
-    "value": {
-      "blog": "",
-      "name": "Tassos Papadiamantis"
-    }
-  },
-  "github-user:uanaf": {
-    "checked": "2026-09-24",
-    "value": {
-      "blog": "",
-      "name": null
-    }
-  },
-  "github-user:vedina": {
-    "checked": "2026-09-24",
-    "value": {
-      "blog": "http://vedina.users.sourceforge.net",
-      "name": "Nina Jeliazkova"
-    }
-  },
-  "github-user:westonslaughter": {
-    "checked": "2026-09-24",
-    "value": {
-      "blog": "https://westonslaughter.github.io/me/#home",
-      "name": "Wes Slaughter"
-    }
-  },
-  "github-user:yojanagadiya": {
-    "checked": "2026-09-24",
-    "value": {
-      "blog": "",
-      "name": "Yojana Gadiya"
-    }
-  },
-  "github-user:youphendriks": {
-    "checked": "2026-09-24",
-    "value": {
-      "blog": "",
-      "name": "Youp Hendriks"
-    }
-  },
-  "orcid-item:0000-0001-5410-599X": {
-    "checked": "2026-09-24",
-    "value": "Q28865047"
-  },
-  "orcid-item:0000-0001-5706-2163": {
-    "checked": "2026-09-24",
-    "value": "Q28530149"
-  },
-  "orcid-item:0000-0001-5934-3559": {
-    "checked": "2026-09-24",
-    "value": "Q19845608"
-  },
-  "orcid-item:0000-0001-6125-6147": {
-    "checked": "2026-09-24",
-    "value": null
-  },
-  "orcid-item:0000-0001-6611-7883": {
-    "checked": "2026-09-24",
-    "value": "Q117834010"
-  },
-  "orcid-item:0000-0001-7542-0286": {
-    "checked": "2026-09-24",
-    "value": "Q20895241"
-  },
-  "orcid-item:0000-0001-7883-3756": {
-    "checked": "2026-09-24",
-    "value": "Q54302726"
-  },
-  "orcid-item:0000-0001-8319-7758": {
-    "checked": "2026-09-24",
-    "value": "Q130642378"
-  },
-  "orcid-item:0000-0001-8449-1318": {
-    "checked": "2026-09-24",
-    "value": "Q43744369"
-  },
-  "orcid-item:0000-0001-8501-7319": {
-    "checked": "2026-09-24",
-    "value": "Q136396711"
-  },
-  "orcid-item:0000-0001-8907-5348": {
-    "checked": "2026-09-24",
-    "value": "Q51602692"
-  },
-  "orcid-item:0000-0001-9773-4008": {
-    "checked": "2026-09-24",
-    "value": "Q19845625"
-  },
-  "orcid-item:0000-0002-3435-7775": {
-    "checked": "2026-09-24",
-    "value": "Q28530416"
-  },
-  "orcid-item:0000-0002-3469-4923": {
-    "checked": "2026-09-24",
-    "value": "Q27902110"
-  },
-  "orcid-item:0000-0002-4322-6179": {
-    "checked": "2026-09-24",
-    "value": "Q27061849"
-  },
-  "orcid-item:0000-0002-4693-0591": {
-    "checked": "2026-09-24",
-    "value": "Q43370277"
-  },
-  "orcid-item:0000-0002-4751-4637": {
-    "checked": "2026-09-24",
-    "value": "Q45907528"
-  },
-  "orcid-item:0000-0002-4904-3269": {
-    "checked": "2026-09-24",
-    "value": "Q89321648"
-  },
-  "orcid-item:0000-0002-5301-3142": {
-    "checked": "2026-09-24",
-    "value": "Q19845641"
-  },
-  "orcid-item:0000-0002-6943-6887": {
-    "checked": "2026-09-24",
-    "value": "Q59490274"
-  },
-  "orcid-item:0000-0002-7260-2129": {
-    "checked": "2026-09-24",
-    "value": "Q63958202"
-  },
-  "orcid-item:0000-0002-7449-1266": {
-    "checked": "2026-09-24",
-    "value": "Q56888653"
-  },
-  "orcid-item:0000-0002-7683-0452": {
-    "checked": "2026-09-24",
-    "value": "Q70206064"
-  },
-  "orcid-item:0000-0002-7699-8191": {
-    "checked": "2026-09-24",
-    "value": "Q27987764"
-  },
-  "orcid-item:0000-0002-7770-620X": {
-    "checked": "2026-09-24",
-    "value": "Q28025534"
-  },
-  "orcid-item:0000-0002-8399-8990": {
-    "checked": "2026-09-24",
-    "value": "Q86442640"
-  },
-  "orcid-item:0000-0002-9077-5664": {
-    "checked": "2026-09-24",
-    "value": "Q57058833"
-  },
-  "orcid-item:0000-0002-9209-1266": {
-    "checked": "2026-09-24",
-    "value": "Q127038569"
-  },
-  "orcid-item:0000-0003-0329-1977": {
-    "checked": "2026-09-24",
-    "value": "Q89571039"
-  },
-  "orcid-item:0000-0003-1062-5576": {
-    "checked": "2026-09-24",
-    "value": "Q96189622"
-  },
-  "orcid-item:0000-0003-1224-9690": {
-    "checked": "2026-09-24",
-    "value": "Q19851164"
-  },
-  "orcid-item:0000-0003-1661-6304": {
-    "checked": "2026-09-24",
-    "value": "Q114718357"
-  },
-  "orcid-item:0000-0003-1781-5508": {
-    "checked": "2026-09-24",
-    "value": "Q56510144"
-  },
-  "orcid-item:0000-0003-2230-0840": {
-    "checked": "2026-09-24",
-    "value": "Q42369611"
-  },
-  "orcid-item:0000-0003-2391-0384": {
-    "checked": "2026-09-24",
-    "value": "Q58484212"
-  },
-  "orcid-item:0000-0003-2878-4049": {
-    "checked": "2026-09-24",
-    "value": "Q123631021"
-  },
-  "orcid-item:0000-0003-2940-8926": {
-    "checked": "2026-09-24",
-    "value": "Q123631063"
-  },
-  "orcid-item:0000-0003-3213-4495": {
-    "checked": "2026-09-24",
-    "value": "Q118146531"
-  },
-  "orcid-item:0000-0003-4250-4584": {
-    "checked": "2026-09-24",
-    "value": "Q28651697"
-  },
-  "orcid-item:0000-0003-4423-4370": {
-    "checked": "2026-09-24",
-    "value": "Q47475003"
-  },
-  "orcid-item:0009-0007-1364-797X": {
-    "checked": "2026-09-24",
-    "value": null
-  },
-  "orcid-item:0009-0007-2045-4009": {
-    "checked": "2026-09-24",
-    "value": null
-  },
-  "orcid-urls:https://orcid.org/0000-0001-5410-599X": {
-    "checked": "2026-09-24",
-    "value": [
-      "https://scholar.google.com/citations?user=lp_fj-AAAAAJ&hl=en&oi=ao",
-      "https://github.com/khanspers",
-      "https://scholia.toolforge.org/author/Q28865047"
-    ]
-  },
-  "orcid-urls:https://orcid.org/0000-0001-5706-2163": {
-    "checked": "2026-09-24",
-    "value": [
-      "https://gladstone.org/people/alex-pico",
-      "http://nrnb.org/people.html",
-      "http://www.cytoscapeconsortium.org/?page_id=13"
-    ]
-  },
-  "orcid-urls:https://orcid.org/0000-0001-5934-3559": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "orcid-urls:https://orcid.org/0000-0001-6125-6147": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "orcid-urls:https://orcid.org/0000-0001-6611-7883": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "orcid-urls:https://orcid.org/0000-0001-7542-0286": {
-    "checked": "2026-09-24",
-    "value": [
-      "https://cris.maastrichtuniversity.nl/portal/en/persons/egon-willighagen(2ad8fbe2-e873-404d-85c7-e0c125a6ead7).html",
-      "http://egonw.github.io/",
-      "https://chem-bla-ics.linkedchemistry.info/",
-      "https://scholar.google.com/citations?user=u8SjMZ0AAAAJ",
-      "http://github.com/egonw/",
-      "https://social.edu.nl/@egonw",
-      "http://gitlab.com/egonw",
-      "http://figshare.com/authors/chem-bla-ics/96390",
-      "http://sf.net/users/egonw",
-      "https://scholia.toolforge.org/author/Q20895241",
-      "https://w3id.org/np/RAO6OjsPPlixn_uVJhzsAaoi8KaLxT8yKXgt8MOuyNN8U",
-      "https://iupac.org/member/egon-willighagen/",
-      "https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Willighagen%2C%20Egon%22&f=resource_type%3Apresentation&l=list&p=1&s=10&sort=newest",
-      "https://bsky.app/profile/egonw.social.edu.nl.ap.brid.gy"
-    ]
-  },
-  "orcid-urls:https://orcid.org/0000-0001-7883-3756": {
-    "checked": "2026-09-24",
-    "value": ["https://researchmap.jp/shuichikawashima/"]
-  },
-  "orcid-urls:https://orcid.org/0000-0001-8319-7758": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "orcid-urls:https://orcid.org/0000-0001-8449-1318": {
-    "checked": "2026-09-24",
-    "value": [
-      "https://github.com/DeniseSl22",
-      "https://cris.maastrichtuniversity.nl/en/persons/9898711a-b781-46e3-9182-a2162e693de1"
-    ]
-  },
-  "orcid-urls:https://orcid.org/0000-0001-8501-7319": {
-    "checked": "2026-09-24",
-    "value": ["https://twitter.com/kozo2", "https://github.com/kozo2"]
-  },
-  "orcid-urls:https://orcid.org/0000-0001-8907-5348": {
-    "checked": "2026-09-24",
-    "value": ["http://www.di.uniovi.es/~labra"]
-  },
-  "orcid-urls:https://orcid.org/0000-0001-9773-4008": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "orcid-urls:https://orcid.org/0000-0002-3435-7775": {
-    "checked": "2026-09-24",
-    "value": [
-      "https://twitter.com/pennynymark",
-      "https://publons.com/researcher/3184728/penny-nymark/",
-      "https://www.researchgate.net/profile/Penny-Nymark"
-    ]
-  },
-  "orcid-urls:https://orcid.org/0000-0002-4693-0591": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "orcid-urls:https://orcid.org/0000-0002-4751-4637": {
-    "checked": "2026-09-24",
-    "value": [
-      "https://larsgw.github.io",
-      "https://larsgw.blogspot.com",
-      "https://github.com/larsgw",
-      "https://mastodon.social/@larsgw"
-    ]
-  },
-  "orcid-urls:https://orcid.org/0000-0002-4904-3269": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "orcid-urls:https://orcid.org/0000-0002-5301-3142": {
-    "checked": "2026-09-24",
-    "value": ["http://www.bigcat.unimaas.nl", "https://twitter.com/Chris_Evelo"]
-  },
-  "orcid-urls:https://orcid.org/0000-0002-6943-6887": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "orcid-urls:https://orcid.org/0000-0002-7260-2129": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "orcid-urls:https://orcid.org/0000-0002-7449-1266": {
-    "checked": "2026-09-24",
-    "value": ["https://akademienl.social/@jerven"]
-  },
-  "orcid-urls:https://orcid.org/0000-0002-7683-0452": {
-    "checked": "2026-09-24",
-    "value": [
-      "https://www.linkedin.com/in/yojana-gadiya-477739113/",
-      "https://github.com/YojanaGadiya",
-      "https://scholar.google.com.tw/citations?hl=de&user=LDgRXckAAAAJ"
-    ]
-  },
-  "orcid-urls:https://orcid.org/0000-0002-7699-8191": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "orcid-urls:https://orcid.org/0000-0002-7770-620X": {
-    "checked": "2026-09-24",
-    "value": [
-      "https://www.linkedin.com/pub/friederike-ehrhart/74/181/41a?trk=pub-pbmap",
-      "http://purl.org/np/RA1QiaPTiY41EfjjcPLMWu_LnRGAYxGAfqV9puFoklLWU"
-    ]
-  },
-  "orcid-urls:https://orcid.org/0000-0002-8399-8990": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "orcid-urls:https://orcid.org/0000-0002-9077-5664": {
-    "checked": "2026-09-24",
-    "value": [
-      "http://sabiork.h-its.org/",
-      "https://fair-dom.org/",
-      "https://www.h-its.org/"
-    ]
-  },
-  "orcid-urls:https://orcid.org/0000-0002-9209-1266": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "orcid-urls:https://orcid.org/0000-0003-1062-5576": {
-    "checked": "2026-09-24",
-    "value": [
-      "https://nanodash.knowledgepixels.com/user?1&id=https://orcid.org/0000-0003-1062-5576",
-      "https://github.com/burgerga",
-      "https://rescognito.com/0000-0003-1062-5576",
-      "https://openalex.org/authors/A5046703960"
-    ]
-  },
-  "orcid-urls:https://orcid.org/0000-0003-1224-9690": {
-    "checked": "2026-09-24",
-    "value": [
-      "https://cris.maastrichtuniversity.nl/en/persons/1a524433-c2a5-4a11-ac58-45b5b6d426dd"
-    ]
-  },
-  "orcid-urls:https://orcid.org/0000-0003-1661-6304": {
-    "checked": "2026-09-24",
-    "value": ["https://fondufemittendorflab.vai.org/"]
-  },
-  "orcid-urls:https://orcid.org/0000-0003-1781-5508": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "orcid-urls:https://orcid.org/0000-0003-2230-0840": {
-    "checked": "2026-09-24",
-    "value": [
-      "https://cris.maastrichtuniversity.nl/en/persons/a7490e9a-a51d-48a6-ad0f-4e295a3fd29e"
-    ]
-  },
-  "orcid-urls:https://orcid.org/0000-0003-2391-0384": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "orcid-urls:https://orcid.org/0000-0003-2878-4049": {
-    "checked": "2026-09-24",
-    "value": [
-      "https://www.linkedin.com/in/aishwarya-iyer-5a7545173/",
-      "https://github.com/ashviyer"
-    ]
-  },
-  "orcid-urls:https://orcid.org/0000-0003-2940-8926": {
-    "checked": "2026-09-24",
-    "value": ["https://github.com/ayushi-agrawal-gladstone"]
-  },
-  "orcid-urls:https://orcid.org/0000-0003-3213-4495": {
-    "checked": "2026-09-24",
-    "value": ["http://www.linkedin.com/in/ana-claudia-sima"]
-  },
-  "orcid-urls:https://orcid.org/0000-0003-4250-4584": {
-    "checked": "2026-09-24",
-    "value": [
-      "http://www.birmingham.ac.uk/schools/gees/people/profile.aspx?ReferenceId=56477",
-      "https://www.linkedin.com/in/iseult-lynch-b5856910/",
-      "https://twitter.com/iseult5",
-      "http://www.nanocommons.eu",
-      "http://purl.org/np/RASUKBzz2S0W_dJMo3f_l0svPATz6M9zdpGuTXpYBSyMA"
-    ]
-  },
-  "orcid-urls:https://orcid.org/0009-0007-1364-797X": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "orcid-urls:https://orcid.org/0009-0007-2045-4009": {
-    "checked": "2026-09-24",
-    "value": []
-  },
-  "wikidata:Q114718357": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "item": "http://www.wikidata.org/entity/Q114718357",
-        "label": "Elisson N. Lopes",
-        "orcid": "0000-0003-1661-6304"
-      }
-    ]
-  },
-  "wikidata:Q117834010": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "item": "http://www.wikidata.org/entity/Q117834010",
-        "label": "Dominik Martinát",
-        "orcid": "0000-0001-6611-7883"
-      }
-    ]
-  },
-  "wikidata:Q118146531": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "item": "http://www.wikidata.org/entity/Q118146531",
-        "label": "Ana Claudia Sima",
-        "orcid": "0000-0003-3213-4495"
-      }
-    ]
-  },
-  "wikidata:Q123631021": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "item": "http://www.wikidata.org/entity/Q123631021",
-        "label": "Aishwarya Iyer",
-        "orcid": "0000-0003-2878-4049"
-      }
-    ]
-  },
-  "wikidata:Q123631063": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "item": "http://www.wikidata.org/entity/Q123631063",
-        "label": "Ayushi Agrawal",
-        "orcid": "0000-0003-2940-8926"
-      }
-    ]
-  },
-  "wikidata:Q127038569": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "item": "http://www.wikidata.org/entity/Q127038569",
-        "label": "Lucy Sinke",
-        "orcid": "0000-0002-9209-1266"
-      }
-    ]
-  },
-  "wikidata:Q130642378": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "gh": "hasanbalci",
-        "item": "http://www.wikidata.org/entity/Q130642378",
-        "label": "Hasan Balcı",
-        "orcid": "0000-0001-8319-7758",
-        "site": "https://hasanbalci.github.io/"
-      }
-    ]
-  },
-  "wikidata:Q136396711": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "item": "http://www.wikidata.org/entity/Q136396711",
-        "label": "Kozo Nishida",
-        "orcid": "0000-0001-8501-7319"
-      }
-    ]
-  },
-  "wikidata:Q19845608": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "item": "http://www.wikidata.org/entity/Q19845608",
-        "label": "Daniela Digles",
-        "orcid": "0000-0001-5934-3559"
-      }
-    ]
-  },
-  "wikidata:Q19845625": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "gh": "andrawaag",
-        "item": "http://www.wikidata.org/entity/Q19845625",
-        "label": "Andra Waagmeester",
-        "orcid": "0000-0001-9773-4008",
-        "site": "https://cris.maastrichtuniversity.nl/en/persons/andra-waagmeester"
-      }
-    ]
-  },
-  "wikidata:Q19845641": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "gh": "Chris-Evelo",
-        "item": "http://www.wikidata.org/entity/Q19845641",
-        "label": "Chris T. Evelo",
-        "orcid": "0000-0002-5301-3142"
-      }
-    ]
-  },
-  "wikidata:Q19851164": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "item": "http://www.wikidata.org/entity/Q19851164",
-        "label": "Susan Coort",
-        "orcid": "0000-0003-1224-9690"
-      }
-    ]
-  },
-  "wikidata:Q20895241": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "gh": "egonw",
-        "item": "http://www.wikidata.org/entity/Q20895241",
-        "label": "Egon Willighagen",
-        "orcid": "0000-0001-7542-0286",
-        "site": "https://egonw.github.io/"
-      }
-    ]
-  },
-  "wikidata:Q27061849": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "gh": "vedina",
-        "item": "http://www.wikidata.org/entity/Q27061849",
-        "label": "Nina Jeliazkova",
-        "orcid": "0000-0002-4322-6179"
-      }
-    ]
-  },
-  "wikidata:Q27902110": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "gh": "jannahastings",
-        "item": "http://www.wikidata.org/entity/Q27902110",
-        "label": "Janna Hastings",
-        "orcid": "0000-0002-3469-4923",
-        "site": "http://www.babraham.ac.uk/our-research/epigenetics/olivia-casanueva/members/433/janna-hastings"
-      }
-    ]
-  },
-  "wikidata:Q27987764": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "gh": "mkutmon",
-        "item": "http://www.wikidata.org/entity/Q27987764",
-        "label": "Martina Summer-Kutmon",
-        "orcid": "0000-0002-7699-8191",
-        "site": "https://www.maastrichtuniversity.nl/martina.kutmon"
-      }
-    ]
-  },
-  "wikidata:Q28025534": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "item": "http://www.wikidata.org/entity/Q28025534",
-        "label": "Friederike Ehrhart",
-        "orcid": "0000-0002-7770-620X",
-        "site": "https://www.maastrichtuniversity.nl/friederike.ehrhart"
-      }
-    ]
-  },
-  "wikidata:Q28530149": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "item": "http://www.wikidata.org/entity/Q28530149",
-        "label": "Alexander R. Pico",
-        "orcid": "0000-0001-5706-2163"
-      }
-    ]
-  },
-  "wikidata:Q28530416": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "item": "http://www.wikidata.org/entity/Q28530416",
-        "label": "Penny Nymark",
-        "orcid": "0000-0002-3435-7775"
-      }
-    ]
-  },
-  "wikidata:Q28651697": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "item": "http://www.wikidata.org/entity/Q28651697",
-        "label": "Iseult Lynch",
-        "orcid": "0000-0003-4250-4584",
-        "site": "http://www.birmingham.ac.uk/schools/gees/people/profile.aspx?ReferenceId=56477"
-      }
-    ]
-  },
-  "wikidata:Q28865047": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "item": "http://www.wikidata.org/entity/Q28865047",
-        "label": "Kristina Hanspers",
-        "orcid": "0000-0001-5410-599X"
-      }
-    ]
-  },
-  "wikidata:Q42369611": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "item": "http://www.wikidata.org/entity/Q42369611",
-        "label": "Marvin Martens",
-        "orcid": "0000-0003-2230-0840",
-        "site": "https://cris.maastrichtuniversity.nl/en/persons/a7490e9a-a51d-48a6-ad0f-4e295a3fd29e"
-      }
-    ]
-  },
-  "wikidata:Q43370277": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "item": "http://www.wikidata.org/entity/Q43370277",
-        "label": "Anders Riutta",
-        "orcid": "0000-0002-4693-0591"
-      }
-    ]
-  },
-  "wikidata:Q43744369": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "item": "http://www.wikidata.org/entity/Q43744369",
-        "label": "Denise Slenter",
-        "orcid": "0000-0001-8449-1318"
-      }
-    ]
-  },
-  "wikidata:Q45907528": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "gh": "larsgw",
-        "item": "http://www.wikidata.org/entity/Q45907528",
-        "label": "Lars Willighagen",
-        "orcid": "0000-0002-4751-4637",
-        "site": "https://larsgw.github.io/"
-      }
-    ]
-  },
-  "wikidata:Q47475003": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "gh": "cthoyt",
-        "item": "http://www.wikidata.org/entity/Q47475003",
-        "orcid": "0000-0003-4423-4370",
-        "site": "https://cthoyt.com"
-      }
-    ]
-  },
-  "wikidata:Q51602692": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "gh": "labra",
-        "item": "http://www.wikidata.org/entity/Q51602692",
-        "label": "José Emilio Labra Gayo",
-        "orcid": "0000-0001-8907-5348",
-        "site": "http://labra.weso.es"
-      },
-      {
-        "gh": "labra",
-        "item": "http://www.wikidata.org/entity/Q51602692",
-        "label": "José Emilio Labra Gayo",
-        "orcid": "0000-0001-8907-5348",
-        "site": "http://di002.edv.uniovi.es/~labra/"
-      }
-    ]
-  },
-  "wikidata:Q54302726": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "item": "http://www.wikidata.org/entity/Q54302726",
-        "label": "Shuichi Kawashima",
-        "orcid": "0000-0001-7883-3756"
-      }
-    ]
-  },
-  "wikidata:Q56510144": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "item": "http://www.wikidata.org/entity/Q56510144",
-        "label": "Hailiang Mei",
-        "orcid": "0000-0003-1781-5508"
-      }
-    ]
-  },
-  "wikidata:Q56888653": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "item": "http://www.wikidata.org/entity/Q56888653",
-        "label": "Jerven Bolleman",
-        "orcid": "0000-0002-7449-1266"
-      }
-    ]
-  },
-  "wikidata:Q57058833": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "item": "http://www.wikidata.org/entity/Q57058833",
-        "label": "Ulrike Wittig",
-        "orcid": "0000-0002-9077-5664"
-      }
-    ]
-  },
-  "wikidata:Q58484212": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "item": "http://www.wikidata.org/entity/Q58484212",
-        "label": "Toshiaki Katayama",
-        "orcid": "0000-0003-2391-0384"
-      }
-    ]
-  },
-  "wikidata:Q59490274": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "item": "http://www.wikidata.org/entity/Q59490274",
-        "label": "Yasunori Yamamoto",
-        "orcid": "0000-0002-6943-6887"
-      }
-    ]
-  },
-  "wikidata:Q63958202": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "item": "http://www.wikidata.org/entity/Q63958202",
-        "label": "Julia Helmecke",
-        "orcid": "0000-0002-7260-2129"
-      }
-    ]
-  },
-  "wikidata:Q70206064": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "gh": "YojanaGadiya",
-        "item": "http://www.wikidata.org/entity/Q70206064",
-        "label": "Yojana Gadiya",
-        "orcid": "0000-0002-7683-0452"
-      }
-    ]
-  },
-  "wikidata:Q86442640": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "gh": "ammar257ammar",
-        "item": "http://www.wikidata.org/entity/Q86442640",
-        "label": "Ammar Ammar",
-        "orcid": "0000-0002-8399-8990"
-      }
-    ]
-  },
-  "wikidata:Q89321648": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "gh": "tabbassidaloii",
-        "item": "http://www.wikidata.org/entity/Q89321648",
-        "label": "Tooba Abbassi-Daloii",
-        "orcid": "0000-0002-4904-3269"
-      }
-    ]
-  },
-  "wikidata:Q89571039": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "gh": "ozancinar",
-        "item": "http://www.wikidata.org/entity/Q89571039",
-        "label": "Ozan Çınar",
-        "orcid": "0000-0003-0329-1977"
-      }
-    ]
-  },
-  "wikidata:Q96189622": {
-    "checked": "2026-09-24",
-    "value": [
-      {
-        "item": "http://www.wikidata.org/entity/Q96189622",
-        "label": "Gerhard A Burger",
-        "orcid": "0000-0003-1062-5576"
-      }
-    ]
+ "citation:BioDataFuse/pyBiodatafuse/.zenodo.json": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "citation:BioDataFuse/pyBiodatafuse/CITATION.cff": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "file": "https://github.com/BioDataFuse/pyBiodatafuse/blob/HEAD/CITATION.cff",
+    "name": "Tooba Abbassi-Daloii",
+    "orcid": "https://orcid.org/0000-0002-4904-3269"
+   },
+   {
+    "file": "https://github.com/BioDataFuse/pyBiodatafuse/blob/HEAD/CITATION.cff",
+    "name": "Yojana Gadiya",
+    "orcid": "https://orcid.org/0000-0002-7683-0452"
+   },
+   {
+    "file": "https://github.com/BioDataFuse/pyBiodatafuse/blob/HEAD/CITATION.cff",
+    "name": "Javier Millán Acosta",
+    "orcid": "https://orcid.org/0000-0002-4166-7093"
+   },
+   {
+    "file": "https://github.com/BioDataFuse/pyBiodatafuse/blob/HEAD/CITATION.cff",
+    "name": "Egon Willighagen",
+    "orcid": "https://orcid.org/0000-0001-7542-0286"
+   },
+   {
+    "file": "https://github.com/BioDataFuse/pyBiodatafuse/blob/HEAD/CITATION.cff",
+    "name": "Hailiang Mei",
+    "orcid": "https://orcid.org/0000-0003-1781-5508"
+   },
+   {
+    "file": "https://github.com/BioDataFuse/pyBiodatafuse/blob/HEAD/CITATION.cff",
+    "name": "Ana Claudia Sima",
+    "orcid": "https://orcid.org/0000-0003-3213-4495"
+   },
+   {
+    "file": "https://github.com/BioDataFuse/pyBiodatafuse/blob/HEAD/CITATION.cff",
+    "name": "Dominik Martinát",
+    "orcid": "https://orcid.org/0000-0001-6611-7883"
+   },
+   {
+    "file": "https://github.com/BioDataFuse/pyBiodatafuse/blob/HEAD/CITATION.cff",
+    "name": "Alejandro Adriaque Lozano",
+    "orcid": "https://orcid.org/0009-0007-2725-2098"
+   }
+  ]
+ },
+ "citation:BioDataFuse/pyBiodatafuse/codemeta.json": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "citation:VHP4Safety/AOP-Suite/.zenodo.json": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "citation:VHP4Safety/AOP-Suite/CITATION.cff": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "citation:VHP4Safety/AOP-Suite/codemeta.json": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "citation:VHP4Safety/virtual-human-platform/.zenodo.json": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "citation:VHP4Safety/virtual-human-platform/CITATION.cff": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "citation:VHP4Safety/virtual-human-platform/codemeta.json": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "citation:bridgedb/docker/.zenodo.json": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "citation:bridgedb/docker/CITATION.cff": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "citation:bridgedb/docker/codemeta.json": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "citation:cnvpathwayatlas/cnv-website/.zenodo.json": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "citation:cnvpathwayatlas/cnv-website/CITATION.cff": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "citation:cnvpathwayatlas/cnv-website/codemeta.json": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "citation:enanomapper/ontologies/.zenodo.json": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "citation:enanomapper/ontologies/CITATION.cff": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "file": "https://github.com/enanomapper/ontologies/blob/HEAD/CITATION.cff",
+    "name": "Javier Millan Acosta",
+    "orcid": "https://orcid.org/0000-0002-4166-7093"
+   },
+   {
+    "file": "https://github.com/enanomapper/ontologies/blob/HEAD/CITATION.cff",
+    "name": "Denise Slenter",
+    "orcid": "https://orcid.org/0000-0001-8449-1318"
+   }
+  ]
+ },
+ "citation:enanomapper/ontologies/codemeta.json": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "citation:jmillanacosta/mapkgsutils/.zenodo.json": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "citation:jmillanacosta/mapkgsutils/CITATION.cff": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "citation:jmillanacosta/mapkgsutils/codemeta.json": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "citation:jmillanacosta/pyaop/.zenodo.json": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "citation:jmillanacosta/pyaop/CITATION.cff": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "citation:jmillanacosta/pyaop/codemeta.json": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "citation:jmillanacosta/pysec2pri/.zenodo.json": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "citation:jmillanacosta/pysec2pri/CITATION.cff": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "file": "https://github.com/jmillanacosta/pysec2pri/blob/HEAD/CITATION.cff",
+    "name": "Javier Millán Acosta",
+    "orcid": "https://orcid.org/0000-0002-4166-7093"
+   },
+   {
+    "file": "https://github.com/jmillanacosta/pysec2pri/blob/HEAD/CITATION.cff",
+    "name": "Tooba Abbassi-Daloii",
+    "orcid": "https://orcid.org/0000-0002-4904-3269"
+   },
+   {
+    "file": "https://github.com/jmillanacosta/pysec2pri/blob/HEAD/CITATION.cff",
+    "name": "Denise Slenter",
+    "orcid": "https://orcid.org/0000-0001-8449-1318"
+   }
+  ]
+ },
+ "citation:jmillanacosta/pysec2pri/codemeta.json": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "citation:jmillanacosta/rdfsolve/.zenodo.json": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "citation:jmillanacosta/rdfsolve/CITATION.cff": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "citation:jmillanacosta/rdfsolve/codemeta.json": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "citation:jmillanacosta/seejobs/.zenodo.json": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "citation:jmillanacosta/seejobs/CITATION.cff": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "citation:jmillanacosta/seejobs/codemeta.json": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "citation:marvinm2/rnaseq-mito-cachexia-paper/.zenodo.json": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "file": "https://github.com/marvinm2/rnaseq-mito-cachexia-paper/blob/HEAD/.zenodo.json",
+    "name": "Marvin Martens",
+    "orcid": "https://orcid.org/0000-0003-2230-0840"
+   }
+  ]
+ },
+ "citation:marvinm2/rnaseq-mito-cachexia-paper/CITATION.cff": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "file": "https://github.com/marvinm2/rnaseq-mito-cachexia-paper/blob/HEAD/CITATION.cff",
+    "name": "Marvin Martens",
+    "orcid": "https://orcid.org/0000-0003-2230-0840"
+   }
+  ]
+ },
+ "github-citations:adriaque": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-citations:alexandra-valeanu": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-citations:ammar257ammar": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-citations:djwetstede": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-citations:dominikmartinat": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-citations:dssib": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-citations:fehrhart": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-citations:gerganatancheva123": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-citations:hasanbalci": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-citations:iaortega": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-citations:jannahastings": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-citations:jkchang2015": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-citations:johannehouweling": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-citations:lindeschoenmaker": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-citations:lrieswijk": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-citations:lwinckers": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-citations:marvinm2": {
+  "checked": "2026-09-24",
+  "value": [
+   [
+    "marvinm2/rnaseq-mito-cachexia-paper",
+    ".zenodo.json"
+   ],
+   [
+    "marvinm2/rnaseq-mito-cachexia-paper",
+    "CITATION.cff"
+   ]
+  ]
+ },
+ "github-citations:mirthhe": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-citations:mmarvinm2": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-citations:ntk73": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-citations:nunogit": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-citations:shakiraportfolio": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-citations:tabbassidaloii": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-citations:tassosp78": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-citations:uanaf": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-citations:vedina": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-citations:westonslaughter": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-citations:youphendriks": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-item:actions-user": {
+  "checked": "2026-09-24",
+  "value": null
+ },
+ "github-item:adriaque": {
+  "checked": "2026-09-24",
+  "value": null
+ },
+ "github-item:alexandra-valeanu": {
+  "checked": "2026-09-24",
+  "value": null
+ },
+ "github-item:ammar257ammar": {
+  "checked": "2026-09-24",
+  "value": "Q86442640"
+ },
+ "github-item:cthoyt": {
+  "checked": "2026-09-24",
+  "value": "Q47475003"
+ },
+ "github-item:denisesl22": {
+  "checked": "2026-09-24",
+  "value": null
+ },
+ "github-item:djwetstede": {
+  "checked": "2026-09-24",
+  "value": null
+ },
+ "github-item:dominikmartinat": {
+  "checked": "2026-09-24",
+  "value": null
+ },
+ "github-item:dssib": {
+  "checked": "2026-09-24",
+  "value": null
+ },
+ "github-item:egonw": {
+  "checked": "2026-09-24",
+  "value": "Q20895241"
+ },
+ "github-item:fehrhart": {
+  "checked": "2026-09-24",
+  "value": null
+ },
+ "github-item:gerganatancheva123": {
+  "checked": "2026-09-24",
+  "value": null
+ },
+ "github-item:hasanbalci": {
+  "checked": "2026-09-24",
+  "value": "Q130642378"
+ },
+ "github-item:iaortega": {
+  "checked": "2026-09-24",
+  "value": null
+ },
+ "github-item:jannahastings": {
+  "checked": "2026-09-24",
+  "value": "Q27902110"
+ },
+ "github-item:jkchang2015": {
+  "checked": "2026-09-24",
+  "value": null
+ },
+ "github-item:johannehouweling": {
+  "checked": "2026-09-24",
+  "value": null
+ },
+ "github-item:lindeschoenmaker": {
+  "checked": "2026-09-24",
+  "value": null
+ },
+ "github-item:lrieswijk": {
+  "checked": "2026-09-24",
+  "value": null
+ },
+ "github-item:lwinckers": {
+  "checked": "2026-09-24",
+  "value": null
+ },
+ "github-item:marvinm2": {
+  "checked": "2026-09-24",
+  "value": null
+ },
+ "github-item:mirthhe": {
+  "checked": "2026-09-24",
+  "value": null
+ },
+ "github-item:mmarvinm2": {
+  "checked": "2026-09-24",
+  "value": null
+ },
+ "github-item:ntk73": {
+  "checked": "2026-09-24",
+  "value": null
+ },
+ "github-item:nunogit": {
+  "checked": "2026-09-24",
+  "value": null
+ },
+ "github-item:ozancinar": {
+  "checked": "2026-09-24",
+  "value": "Q89571039"
+ },
+ "github-item:shakiraportfolio": {
+  "checked": "2026-09-24",
+  "value": null
+ },
+ "github-item:tabbassidaloii": {
+  "checked": "2026-09-24",
+  "value": "Q89321648"
+ },
+ "github-item:tassosp78": {
+  "checked": "2026-09-24",
+  "value": null
+ },
+ "github-item:uanaf": {
+  "checked": "2026-09-24",
+  "value": null
+ },
+ "github-item:vedina": {
+  "checked": "2026-09-24",
+  "value": "Q27061849"
+ },
+ "github-item:westonslaughter": {
+  "checked": "2026-09-24",
+  "value": null
+ },
+ "github-item:yojanagadiya": {
+  "checked": "2026-09-24",
+  "value": "Q70206064"
+ },
+ "github-item:youphendriks": {
+  "checked": "2026-09-24",
+  "value": null
+ },
+ "github-readme:adriaque": {
+  "checked": "2026-09-24",
+  "value": ""
+ },
+ "github-readme:alexandra-valeanu": {
+  "checked": "2026-09-24",
+  "value": ""
+ },
+ "github-readme:ammar257ammar": {
+  "checked": "2026-09-24",
+  "value": ""
+ },
+ "github-readme:cthoyt": {
+  "checked": "2026-09-24",
+  "value": "### Hi there 👋\n\nI work with biological knowledge graphs, machine learning, and artificial intelligence to identify active molecules and to deconvolute their mechanisms of action.\n\n🧰 My Projects\n\n- 📮 [Bioregistry](https://github.com/biopragmatics/bioregistry): an integrative registry of biological databases, ontologies, and nomenclatures.\n- 🧬 [Biological Expression Language (BEL)](https://biological-expression-language.github.io/): a domain specific language for representing molecular biology\n- 🌶️ [PyBEL](https://github.com/pybel): the computational ecosystem for compiling, querying, and analyzing knowledge graphs encoded in BEL\n- 📛 [PyOBO](https://github.com/pyobo): making ontologies and semantics accessible\n- 🤖 [PyKEEN](https://github.com/pykeen): knowledge graph embedding models for humans \n\n⚖️ My Core Scientific Values\n\n- ♻️ Reproducibility: code is part of the scientific process. It should be documented and re-usable by anyone.\n- 🔓 Openness: science is best when people can build on each others' work. Sharing data, code, and ideas has benefitted everyone, and is also the responsiblity of a scientist to pay forward.\n- 🎯 Thoroughness: quality is dependent on taking great care throughout all steps\n\n📫 My Interblag\n\nBesides my email and blog (on the left), I'm also in the internet in the following places:\n\n- [ORCID](https://orcid.org/0000-0003-4423-4370) \n- [Wikidata](https://www.wikidata.org/wiki/Q47475003)\n- [Google Scholar](https://scholar.google.com/citations?user=PjrpzUIAAAAJ)\n- [DBLP](https://dblp.org/pid/199/2168)\n- <a rel=\"me\" href=\"https://scholar.social/@cthoyt\" title=\"cthoyt\">https://scholar.social/@cthoyt</a>\n\nit turns out i commit a lot (always with squash merges):\n\n[![committers.top badge](https://user-badge.committers.top/germany/cthoyt.svg)](https://user-badge.committers.top/germany/cthoyt)\n"
+ },
+ "github-readme:denisesl22": {
+  "checked": "2026-09-24",
+  "value": ""
+ },
+ "github-readme:djwetstede": {
+  "checked": "2026-09-24",
+  "value": ""
+ },
+ "github-readme:dominikmartinat": {
+  "checked": "2026-09-24",
+  "value": "- 👋 Hi, I’m @DominikMartinat\n- 👀 I’m interested in bioinformatics, wargaming and history.\n- 🌱 I’m currently learning how to make stuff more FAIR.\n- 💞️ I’m looking to collaborate on FAIRification and making stuff mor interoperable via linked data model.\n- 📫 How to reach me ... dominik.martinat@gmail.com\n\n<!---\nDominikMartinat/DominikMartinat is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.\nYou can click the Preview link to take a look at your changes.\n--->\n"
+ },
+ "github-readme:dssib": {
+  "checked": "2026-09-24",
+  "value": ""
+ },
+ "github-readme:egonw": {
+  "checked": "2026-09-24",
+  "value": "### Some selection of Projects\n\n* Funded Research: [VHP4Safety](https://twitter.com/vhp4safety), EFSA grant, [INTOXICOM](https://elixir-europe.org/internal-projects/commissioned-services/integrating-toxicology-community), [FAIR4ChemNL](https://tdcc.nl/projects/tdcc-nes-projects/fair4chemnl-accelerating-the-adoption-of-universal-data-standards-in-chemistry/), [FAIRify](https://tdcc.nl/projects/tdcc-lsh-project-initiatives/)\n* Open Science: [WikiPathways](https://github.com/wikipathways), [Chemistry Development Kit](https://github.com/cdk), [Jmol](https://jmol.org/), [Scholia](https://github.com/wdscholia), [BridgeDb](https://www.bridgedb.org/)\n* ELIXIR: [Bioschemas](https://github.com/bioschemas/), [BridgeDb](https://github.com/bridgedb)\n\n### News\n* 2026-05-28 The VHP4Safety project publicly release 1.0 of the [Virtual Human Platform](https://platform.vhp4safety.nl/)\n* 2026-03-08 [CDK 2.12](https://doi.org/10.59350/gw9at-srp84) was released\n* 2025-11-30 The VHP4Safety [Virtual Human Platform](https://platform.vhp4safety.nl/) is really shaping up\n* 2025-09-01 Two [TDCC](https://tdcc.nl/) grants have started where we will work on more FAIR competency dissemination\n* 2024-10-15 The [paper outlining VHP4Safety](https://doi.org/10.14573/altex.2407211) has been published\n* 2024-09-01 Our BiGCaT group merged with two other groups into the new [Department of Translational Genomics](https://www.maastrichtuniversity.nl/research/translational-genomics)\n* 2024-07-26 My [chem-bla-ics blog](https://chem-bla-ics.linkedchemistry.info/) moved to Git [a year ago](https://github.com/egonw/blog2/commit/097ba23d7c2cdcf848c55ccd537941d99b480abb)\n* 2023-12-15 We received an [NWO Open Science grant](https://doi.org/10.3897/rio.10.e124884) to work on the Chemistry Development Kit\n"
+ },
+ "github-readme:fehrhart": {
+  "checked": "2026-09-24",
+  "value": ""
+ },
+ "github-readme:gerganatancheva123": {
+  "checked": "2026-09-24",
+  "value": ""
+ },
+ "github-readme:hasanbalci": {
+  "checked": "2026-09-24",
+  "value": ""
+ },
+ "github-readme:iaortega": {
+  "checked": "2026-09-24",
+  "value": ""
+ },
+ "github-readme:jannahastings": {
+  "checked": "2026-09-24",
+  "value": ""
+ },
+ "github-readme:jkchang2015": {
+  "checked": "2026-09-24",
+  "value": ""
+ },
+ "github-readme:johannehouweling": {
+  "checked": "2026-09-24",
+  "value": ""
+ },
+ "github-readme:lindeschoenmaker": {
+  "checked": "2026-09-24",
+  "value": ""
+ },
+ "github-readme:lrieswijk": {
+  "checked": "2026-09-24",
+  "value": ""
+ },
+ "github-readme:lwinckers": {
+  "checked": "2026-09-24",
+  "value": ""
+ },
+ "github-readme:marvinm2": {
+  "checked": "2026-09-24",
+  "value": ""
+ },
+ "github-readme:mirthhe": {
+  "checked": "2026-09-24",
+  "value": "# 👋 Hi, I'm [Mirthe](https://github.com/mirthhe)\n\n## About Me  \nI'm a creative and curious developer with a diverse background in **frontend development**, **UI/UX design**, **bioinformatics**, and **data science**. My goal is to make complex concepts accessible — sparking curiosity and sharing knowledge through thoughtful, user-centered design and clean, expressive code. 💡🌐\n\n## What I Do  \n- **UI/UX Design & Front-End Development:** Passionate about crafting intuitive user experiences through design systems, accessibility-first thinking, and responsive, well-documented, semantic code. 🎨🖱️💻  \n\n- **Data Visualization & Data Design:** Making the complex appear simple by transforming data into visuals that inform and inspire. 📊🧠✨  \n\n- **Bioinformatics & Scientific Software:** With an academic foundation in bioinformatics and data science, I build tools that support medical and biological research. 🔬🧬🧪  \n\n- **Tech Stack:** HTML, CSS, JavaScript, R, Python, Bash, Git, and AI tools like LLMs & RAG — always learning and iterating. ⚙️👩‍💻🛠️  \n\n## Current Projects  \nAs UI/UX & Bioinformatics Developer at Maastricht University and University of Applied Sciences Utrecht, I'm currently developing standardized software for the creation of **Physiologically-Based Pharmacokinetic (PBPK)** models and leading the **UI/UX design** for VHP4Safety. This work combines code and design to enable more transparent and accessible toxicology modeling. The repository is private, but feel free to reach out if you're curious or want to collaborate!  \n\nI'm also working on re-launching my portfolio and actively expanding my skills in front-end frameworks (such as React and Bootstrap), alongside a few playful side projects. 🚀\n\n## Outside the Screen  \nWhen I'm not designing interfaces or wrangling code, you'll likely find me exploring nature trails, gaming, or reading up on human behavior and design psychology. I believe great design starts with empathy and real-world inspiration. 🌿📚\n\n## Let's Connect!  \nI'm always open to new ideas, collaborations, or just a good chat about tech, design, or science. Whether you're building a product, visualizing data, or prototyping research tools — let’s connect and create something meaningful together! 🤝✨\n"
+ },
+ "github-readme:mmarvinm2": {
+  "checked": "2026-09-24",
+  "value": ""
+ },
+ "github-readme:ntk73": {
+  "checked": "2026-09-24",
+  "value": ""
+ },
+ "github-readme:nunogit": {
+  "checked": "2026-09-24",
+  "value": ""
+ },
+ "github-readme:ozancinar": {
+  "checked": "2026-09-24",
+  "value": ""
+ },
+ "github-readme:shakiraportfolio": {
+  "checked": "2026-09-24",
+  "value": ""
+ },
+ "github-readme:tabbassidaloii": {
+  "checked": "2026-09-24",
+  "value": ""
+ },
+ "github-readme:tassosp78": {
+  "checked": "2026-09-24",
+  "value": ""
+ },
+ "github-readme:uanaf": {
+  "checked": "2026-09-24",
+  "value": ""
+ },
+ "github-readme:vedina": {
+  "checked": "2026-09-24",
+  "value": ""
+ },
+ "github-readme:westonslaughter": {
+  "checked": "2026-09-24",
+  "value": "- 👋 Hi, I’m @westonslaughter\n\nRivers! \n"
+ },
+ "github-readme:yojanagadiya": {
+  "checked": "2026-09-24",
+  "value": "## Hi there, I am Yojana Gadiya 👋\n\n![Profile Hits](https://rushter.com/counter.svg)\n\n\n- 🔭 I’m currently working as a data scientist at @[Enveda](https://www.envedabio.com/)\n- 😄 Pronouns: She/her\n- 💻 Currently focusing on data aggregation and ETL pipelines for metabolomics data for drug discovery and development\n- 🌱 I love developing Python packages for community use. My works include\n  - [PEMT](https://pypi.org/project/PEMT/) - a pharmaceutical patent mining tool\n  - [pyBiodatafuse](https://pypi.org/project/pyBiodatafuse/) - a modular query biomedical data ingestion pipeline \n- 💬 Ask me about: FAIR, Knowledge graphs, Patent mining, Chemoinformatics\n- 📫 How to reach me: [LinkedIn](https://www.linkedin.com/in/yojana-gadiya-477739113/), [Google Scholar](https://scholar.google.com/citations?user=LDgRXckAAAAJ&hl=en)\n- - 👯 I have been part of several EU/IMI projects in my previous role: [FAIRplus](https://fairplus-project.eu/), [REMEDi4ALL](https://remedi4all.org/), [AMR Accelerator](https://amr-accelerator.eu/)\n- 🤓 I was also a Chemoinformatics FAIR Data Champion at [FAIRsharing.org](https://fairsharing.org/)\n\n\n### Expertise preview\n\n<p>\n  <a href=\"https://github.com/anuraghazra/github-readme-stats\"><img align=\"right\" width=\"50%\" src=\"https://github-readme-stats.vercel.app/api?username=yojanagadiya&hide=contribs,issues&show_icons=true&hide_border=true\" alt=\"Yojana's github stats\" />\n  </a>\n\n  <img alt=\"GraphQL\" src=\"https://img.shields.io/badge/-GraphQL-E10098?style=flat-square&logo=graphql&logoColor=white\" /> <img alt=\"git\" src=\"https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white\" /> <img alt=\"Neo4J\" src=\"https://img.shields.io/badge/Neo4j-008CC1?style=flat-square&logo=neo4j&logoColor=white\" /> <img alt=\"MySQL\" src=\"https://img.shields.io/badge/mysql-%2300f.svg?style=flat-square&logo=mysql&logoColor=white\" /> <img alt=\"AWS\" src=\"https://img.shields.io/badge/AWS-%23FF9900.svg?style=flat-square&logo=amazon-aws&logoColor=white\" /> \n  <br />\n  <img alt=\"LaTeX\" src=\"https://img.shields.io/badge/latex-%23008080.svg?style=flat-square&logo=latex&logoColor=white\" /> <img alt=\"Markdown\" src=\"https://img.shields.io/badge/markdown-%23000000.svg?style=flat-squre&logo=markdown&logoColor=white\" /> <img alt=\"Python\" src=\"https://img.shields.io/badge/python-3670A0?style=flat-squre&logo=python&logoColor=ffdd54\" /> <img alt=\"Matplotlib\" src=\"https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=flat-square&logo=Matplotlib&logoColor=black\" /> \n  <br />\n  ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=flat-square&logo=pandas&logoColor=white) ![Plotly](https://img.shields.io/badge/Plotly-%233F4F75.svg?style=flat-square&logo=plotly&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=flat-square&logo=scikit-learn&logoColor=white) \t![SciPy](https://img.shields.io/badge/SciPy-%230C55A5.svg?style=flat-square&logo=scipy&logoColor=%white) ![CodeCov](https://img.shields.io/badge/codecov-%23ff0077.svg?style=flat-square&logo=codecov&logoColor=white) \n  <br />\n  ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=flat-square&logo=docker&logoColor=white) ![Selenium](https://img.shields.io/badge/-selenium-%43B02A?style=flat-square&logo=selenium&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=flat-square&logo=github&logoColor=white) ![GitLab](https://img.shields.io/badge/gitlab-%23181717.svg?style=flat-square&logo=gitlab&logoColor=white) \n\n<p>\n\n"
+ },
+ "github-readme:youphendriks": {
+  "checked": "2026-09-24",
+  "value": ""
+ },
+ "github-social:adriaque": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-social:alexandra-valeanu": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://www.linkedin.com/in/alexandra-văleanu-1806a2191/"
+  ]
+ },
+ "github-social:ammar257ammar": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-social:cthoyt": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://scholar.social/@cthoyt",
+   "https://www.linkedin.com/in/cthoyt/"
+  ]
+ },
+ "github-social:denisesl22": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-social:djwetstede": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-social:dominikmartinat": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-social:dssib": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-social:egonw": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://social.edu.nl/@egonw",
+   "https://mastodon.social/@egonw"
+  ]
+ },
+ "github-social:fehrhart": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-social:gerganatancheva123": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-social:hasanbalci": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-social:iaortega": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-social:jannahastings": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-social:jkchang2015": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-social:jmillanacosta": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://pypi.org/user/jmillanacosta/"
+  ]
+ },
+ "github-social:johannehouweling": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-social:lindeschoenmaker": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-social:lrieswijk": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-social:lwinckers": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-social:marvinm2": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-social:mirthhe": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://www.linkedin.com/in/mirtheklaassen/",
+   "https://www.instagram.com/nn.irthe"
+  ]
+ },
+ "github-social:mmarvinm2": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-social:ntk73": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-social:nunogit": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-social:ozancinar": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-social:shakiraportfolio": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-social:tabbassidaloii": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-social:tassosp78": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://www.linkedin.com/in/tassospapadiamantis/"
+  ]
+ },
+ "github-social:uanaf": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-social:vedina": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://twitter.com/10705013",
+   "https://bsky.app/profile/n107055013.bsky.social"
+  ]
+ },
+ "github-social:westonslaughter": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-social:yojanagadiya": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://www.linkedin.com/in/yojana-gadiya-477739113",
+   "https://orcid.org/0000-0002-7683-0452"
+  ]
+ },
+ "github-social:youphendriks": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "github-user:actions-user": {
+  "checked": "2026-09-24",
+  "value": {
+   "blog": "https://github.com/actions",
+   "name": null
   }
+ },
+ "github-user:adriaque": {
+  "checked": "2026-09-24",
+  "value": {
+   "blog": "",
+   "name": "Alejandro Adriaque Lozano"
+  }
+ },
+ "github-user:alexandra-valeanu": {
+  "checked": "2026-09-24",
+  "value": {
+   "blog": "",
+   "name": "Alexandra Valeanu"
+  }
+ },
+ "github-user:ammar257ammar": {
+  "checked": "2026-09-24",
+  "value": {
+   "blog": "",
+   "name": "Ammar Ammar"
+  }
+ },
+ "github-user:cthoyt": {
+  "checked": "2026-09-24",
+  "value": {
+   "blog": "https://cthoyt.com",
+   "name": "Charles Tapley Hoyt"
+  }
+ },
+ "github-user:denisesl22": {
+  "checked": "2026-09-24",
+  "value": {
+   "blog": "",
+   "name": "De"
+  }
+ },
+ "github-user:djwetstede": {
+  "checked": "2026-09-24",
+  "value": {
+   "blog": "",
+   "name": null
+  }
+ },
+ "github-user:dominikmartinat": {
+  "checked": "2026-09-24",
+  "value": {
+   "blog": "",
+   "name": null
+  }
+ },
+ "github-user:dssib": {
+  "checked": "2026-09-24",
+  "value": {
+   "blog": "sib.swiss",
+   "name": "Ana Claudia Sima"
+  }
+ },
+ "github-user:egonw": {
+  "checked": "2026-09-24",
+  "value": {
+   "blog": "https://chem-bla-ics.linkedchemistry.info/",
+   "name": "Egon Willighagen"
+  }
+ },
+ "github-user:fehrhart": {
+  "checked": "2026-09-24",
+  "value": {
+   "blog": "",
+   "name": "Friederike (Freddie) Ehrhart"
+  }
+ },
+ "github-user:gerganatancheva123": {
+  "checked": "2026-09-24",
+  "value": {
+   "blog": "",
+   "name": null
+  }
+ },
+ "github-user:hasanbalci": {
+  "checked": "2026-09-24",
+  "value": {
+   "blog": "https://hasanbalci.github.io/",
+   "name": "Hasan Balcı"
+  }
+ },
+ "github-user:iaortega": {
+  "checked": "2026-09-24",
+  "value": {
+   "blog": "",
+   "name": "Isaac Arturo Ortega Alvarado"
+  }
+ },
+ "github-user:jannahastings": {
+  "checked": "2026-09-24",
+  "value": {
+   "blog": "",
+   "name": "Janna Hastings"
+  }
+ },
+ "github-user:jkchang2015": {
+  "checked": "2026-09-24",
+  "value": {
+   "blog": "",
+   "name": "JKChang"
+  }
+ },
+ "github-user:johannehouweling": {
+  "checked": "2026-09-24",
+  "value": {
+   "blog": "",
+   "name": "Jente Houweling"
+  }
+ },
+ "github-user:lindeschoenmaker": {
+  "checked": "2026-09-24",
+  "value": {
+   "blog": "",
+   "name": null
+  }
+ },
+ "github-user:lrieswijk": {
+  "checked": "2026-09-24",
+  "value": {
+   "blog": "",
+   "name": "Linda Rieswijk"
+  }
+ },
+ "github-user:lwinckers": {
+  "checked": "2026-09-24",
+  "value": {
+   "blog": "",
+   "name": "Laurent Winckers"
+  }
+ },
+ "github-user:marvinm2": {
+  "checked": "2026-09-24",
+  "value": {
+   "blog": "",
+   "name": "Marvin Martens"
+  }
+ },
+ "github-user:mirthhe": {
+  "checked": "2026-09-24",
+  "value": {
+   "blog": "",
+   "name": "Mirthe"
+  }
+ },
+ "github-user:mmarvinm2": {
+  "checked": "2026-09-24",
+  "value": {
+   "blog": "",
+   "name": null
+  }
+ },
+ "github-user:ntk73": {
+  "checked": "2026-09-24",
+  "value": {
+   "blog": "web.uni-plovdiv.bg/nick",
+   "name": "Nikolay Kochev"
+  }
+ },
+ "github-user:nunogit": {
+  "checked": "2026-09-24",
+  "value": {
+   "blog": "",
+   "name": null
+  }
+ },
+ "github-user:ozancinar": {
+  "checked": "2026-09-24",
+  "value": {
+   "blog": "",
+   "name": "Ozan Çınar"
+  }
+ },
+ "github-user:shakiraportfolio": {
+  "checked": "2026-09-24",
+  "value": {
+   "blog": "",
+   "name": "Shakira"
+  }
+ },
+ "github-user:tabbassidaloii": {
+  "checked": "2026-09-24",
+  "value": {
+   "blog": "",
+   "name": "Tooba Abbassi-Daloii"
+  }
+ },
+ "github-user:tassosp78": {
+  "checked": "2026-09-24",
+  "value": {
+   "blog": "",
+   "name": "Tassos Papadiamantis"
+  }
+ },
+ "github-user:uanaf": {
+  "checked": "2026-09-24",
+  "value": {
+   "blog": "",
+   "name": null
+  }
+ },
+ "github-user:vedina": {
+  "checked": "2026-09-24",
+  "value": {
+   "blog": "http://vedina.users.sourceforge.net",
+   "name": "Nina Jeliazkova"
+  }
+ },
+ "github-user:westonslaughter": {
+  "checked": "2026-09-24",
+  "value": {
+   "blog": "https://westonslaughter.github.io/me/#home",
+   "name": "Wes Slaughter"
+  }
+ },
+ "github-user:yojanagadiya": {
+  "checked": "2026-09-24",
+  "value": {
+   "blog": "",
+   "name": "Yojana Gadiya"
+  }
+ },
+ "github-user:youphendriks": {
+  "checked": "2026-09-24",
+  "value": {
+   "blog": "",
+   "name": "Youp Hendriks"
+  }
+ },
+ "openalex:https://orcid.org/0000-0001-5410-599X": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5063972221",
+   "orcid": "https://orcid.org/0000-0001-5410-599X"
+  }
+ },
+ "openalex:https://orcid.org/0000-0001-5416-085X": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5028735728",
+   "orcid": "https://orcid.org/0000-0001-5416-085X"
+  }
+ },
+ "openalex:https://orcid.org/0000-0001-5706-2163": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5070456387",
+   "orcid": "https://orcid.org/0000-0001-5706-2163"
+  }
+ },
+ "openalex:https://orcid.org/0000-0001-5934-3559": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5059247283",
+   "orcid": "https://orcid.org/0000-0001-5934-3559"
+  }
+ },
+ "openalex:https://orcid.org/0000-0001-6125-6147": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5114530520",
+   "orcid": "https://orcid.org/0000-0001-6125-6147"
+  }
+ },
+ "openalex:https://orcid.org/0000-0001-6611-7883": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5093405122",
+   "orcid": "https://orcid.org/0000-0001-6611-7883"
+  }
+ },
+ "openalex:https://orcid.org/0000-0001-7542-0286": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5135576456",
+   "orcid": "https://orcid.org/0000-0001-7542-0286"
+  }
+ },
+ "openalex:https://orcid.org/0000-0001-7883-3756": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5039336067",
+   "orcid": "https://orcid.org/0000-0001-7883-3756"
+  }
+ },
+ "openalex:https://orcid.org/0000-0001-8319-7758": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5062979397",
+   "orcid": "https://orcid.org/0000-0001-8319-7758"
+  }
+ },
+ "openalex:https://orcid.org/0000-0001-8449-1318": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5136731725",
+   "orcid": "https://orcid.org/0000-0001-8449-1318"
+  }
+ },
+ "openalex:https://orcid.org/0000-0001-8501-7319": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5034175804",
+   "orcid": "https://orcid.org/0000-0001-8501-7319"
+  }
+ },
+ "openalex:https://orcid.org/0000-0001-8907-5348": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5017967454",
+   "orcid": "https://orcid.org/0000-0001-8907-5348"
+  }
+ },
+ "openalex:https://orcid.org/0000-0001-9773-4008": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5048705669",
+   "orcid": "https://orcid.org/0000-0001-9773-4008"
+  }
+ },
+ "openalex:https://orcid.org/0000-0002-1297-3104": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5140909346",
+   "orcid": "https://orcid.org/0000-0002-1297-3104"
+  }
+ },
+ "openalex:https://orcid.org/0000-0002-1849-5246": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5140911546",
+   "orcid": "https://orcid.org/0000-0002-1849-5246"
+  }
+ },
+ "openalex:https://orcid.org/0000-0002-2061-091X": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5089900113",
+   "orcid": "https://orcid.org/0000-0002-2061-091X"
+  }
+ },
+ "openalex:https://orcid.org/0000-0002-3435-7775": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5018763133",
+   "orcid": "https://orcid.org/0000-0002-3435-7775"
+  }
+ },
+ "openalex:https://orcid.org/0000-0002-4166-7093": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5061091441",
+   "orcid": "https://orcid.org/0000-0002-4166-7093"
+  }
+ },
+ "openalex:https://orcid.org/0000-0002-4322-6179": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5056989071",
+   "orcid": "https://orcid.org/0000-0002-4322-6179"
+  }
+ },
+ "openalex:https://orcid.org/0000-0002-4409-1974": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5073178090",
+   "orcid": "https://orcid.org/0000-0002-4409-1974"
+  }
+ },
+ "openalex:https://orcid.org/0000-0002-4693-0591": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5064769212",
+   "orcid": "https://orcid.org/0000-0002-4693-0591"
+  }
+ },
+ "openalex:https://orcid.org/0000-0002-4751-4637": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5090914801",
+   "orcid": "https://orcid.org/0000-0002-4751-4637"
+  }
+ },
+ "openalex:https://orcid.org/0000-0002-4904-3269": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5080912462",
+   "orcid": "https://orcid.org/0000-0002-4904-3269"
+  }
+ },
+ "openalex:https://orcid.org/0000-0002-5231-0639": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5124127231",
+   "orcid": "https://orcid.org/0000-0002-5231-0639"
+  }
+ },
+ "openalex:https://orcid.org/0000-0002-5301-3142": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5133005017",
+   "orcid": "https://orcid.org/0000-0002-5301-3142"
+  }
+ },
+ "openalex:https://orcid.org/0000-0002-6943-6887": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5135617175",
+   "orcid": "https://orcid.org/0000-0002-6943-6887"
+  }
+ },
+ "openalex:https://orcid.org/0000-0002-7260-2129": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5022180345",
+   "orcid": "https://orcid.org/0000-0002-7260-2129"
+  }
+ },
+ "openalex:https://orcid.org/0000-0002-7449-1266": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5078283120",
+   "orcid": "https://orcid.org/0000-0002-7449-1266"
+  }
+ },
+ "openalex:https://orcid.org/0000-0002-7683-0452": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5004719764",
+   "orcid": "https://orcid.org/0000-0002-7683-0452"
+  }
+ },
+ "openalex:https://orcid.org/0000-0002-7699-8191": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5012726859",
+   "orcid": "https://orcid.org/0000-0002-7699-8191"
+  }
+ },
+ "openalex:https://orcid.org/0000-0002-7770-620X": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5137599660",
+   "orcid": "https://orcid.org/0000-0002-7770-620X"
+  }
+ },
+ "openalex:https://orcid.org/0000-0002-8399-8990": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5066436740",
+   "orcid": "https://orcid.org/0000-0002-8399-8990"
+  }
+ },
+ "openalex:https://orcid.org/0000-0002-8607-9965": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5017246181",
+   "orcid": "https://orcid.org/0000-0002-8607-9965"
+  }
+ },
+ "openalex:https://orcid.org/0000-0002-9077-5664": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5009119354",
+   "orcid": "https://orcid.org/0000-0002-9077-5664"
+  }
+ },
+ "openalex:https://orcid.org/0000-0002-9209-1266": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5051819631",
+   "orcid": "https://orcid.org/0000-0002-9209-1266"
+  }
+ },
+ "openalex:https://orcid.org/0000-0002-9454-4783": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5060151962",
+   "orcid": "https://orcid.org/0000-0002-9454-4783"
+  }
+ },
+ "openalex:https://orcid.org/0000-0003-0329-1977": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5022720376",
+   "orcid": "https://orcid.org/0000-0003-0329-1977"
+  }
+ },
+ "openalex:https://orcid.org/0000-0003-1062-5576": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5046703960",
+   "orcid": "https://orcid.org/0000-0003-1062-5576"
+  }
+ },
+ "openalex:https://orcid.org/0000-0003-1224-9690": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5088503440",
+   "orcid": "https://orcid.org/0000-0003-1224-9690"
+  }
+ },
+ "openalex:https://orcid.org/0000-0003-1661-6304": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5041567966",
+   "orcid": "https://orcid.org/0000-0003-1661-6304"
+  }
+ },
+ "openalex:https://orcid.org/0000-0003-1781-5508": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5124948722",
+   "orcid": "https://orcid.org/0000-0003-1781-5508"
+  }
+ },
+ "openalex:https://orcid.org/0000-0003-2102-3626": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5048229400",
+   "orcid": "https://orcid.org/0000-0003-2102-3626"
+  }
+ },
+ "openalex:https://orcid.org/0000-0003-2230-0840": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5140831444",
+   "orcid": "https://orcid.org/0000-0003-2230-0840"
+  }
+ },
+ "openalex:https://orcid.org/0000-0003-2391-0384": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5031153467",
+   "orcid": "https://orcid.org/0000-0003-2391-0384"
+  }
+ },
+ "openalex:https://orcid.org/0000-0003-2760-7702": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5033016821",
+   "orcid": "https://orcid.org/0000-0003-2760-7702"
+  }
+ },
+ "openalex:https://orcid.org/0000-0003-2878-4049": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5049490324",
+   "orcid": "https://orcid.org/0000-0003-2878-4049"
+  }
+ },
+ "openalex:https://orcid.org/0000-0003-2940-8926": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5045654542",
+   "orcid": "https://orcid.org/0000-0003-2940-8926"
+  }
+ },
+ "openalex:https://orcid.org/0000-0003-3213-4495": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5032183252",
+   "orcid": "https://orcid.org/0000-0003-3213-4495"
+  }
+ },
+ "openalex:https://orcid.org/0000-0003-4250-4584": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5139914806",
+   "orcid": "https://orcid.org/0000-0003-4250-4584"
+  }
+ },
+ "openalex:https://orcid.org/0009-0002-4110-241X": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5102953632",
+   "orcid": "https://orcid.org/0009-0002-4110-241X"
+  }
+ },
+ "openalex:https://orcid.org/0009-0002-7664-0058": {
+  "checked": "2026-09-24",
+  "value": {}
+ },
+ "openalex:https://orcid.org/0009-0003-1183-4991": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5102742045",
+   "orcid": "https://orcid.org/0009-0003-1183-4991"
+  }
+ },
+ "openalex:https://orcid.org/0009-0005-3680-0645": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5052339018",
+   "orcid": "https://orcid.org/0009-0005-3680-0645"
+  }
+ },
+ "openalex:https://orcid.org/0009-0007-1364-797X": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5093329177",
+   "orcid": "https://orcid.org/0009-0007-1364-797X"
+  }
+ },
+ "openalex:https://orcid.org/0009-0007-2045-4009": {
+  "checked": "2026-09-24",
+  "value": {
+   "openalex": "https://openalex.org/A5075686370",
+   "orcid": "https://orcid.org/0009-0007-2045-4009"
+  }
+ },
+ "orcid-claimants:10.1016/j.toxlet.2025.07.1074": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-claimants:10.1038/s41597-026-07345-6": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://orcid.org/0000-0002-4166-7093",
+   "https://orcid.org/0009-0007-1364-797X",
+   "https://orcid.org/0000-0003-2102-3626"
+  ]
+ },
+ "orcid-claimants:10.1093/bioinformatics/btag064": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://orcid.org/0000-0002-4166-7093",
+   "https://orcid.org/0000-0001-6611-7883",
+   "https://orcid.org/0000-0002-8399-8990",
+   "https://orcid.org/0000-0002-4904-3269",
+   "https://orcid.org/0000-0003-3213-4495",
+   "https://orcid.org/0000-0001-7542-0286",
+   "https://orcid.org/0000-0002-7683-0452"
+  ]
+ },
+ "orcid-claimants:10.1093/nar/gkad960": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://orcid.org/0000-0001-5410-599X",
+   "https://orcid.org/0009-0007-2045-4009",
+   "https://orcid.org/0000-0001-8501-7319",
+   "https://orcid.org/0000-0002-4166-7093",
+   "https://orcid.org/0000-0003-2878-4049",
+   "https://orcid.org/0000-0001-5934-3559",
+   "https://orcid.org/0000-0003-2940-8926",
+   "https://orcid.org/0000-0001-8319-7758",
+   "https://orcid.org/0000-0001-9773-4008",
+   "https://orcid.org/0000-0002-4904-3269",
+   "https://orcid.org/0000-0001-8449-1318",
+   "https://orcid.org/0000-0003-1661-6304",
+   "https://orcid.org/0000-0002-7699-8191",
+   "https://orcid.org/0000-0003-2230-0840"
+  ]
+ },
+ "orcid-claimants:10.3389/fphy.2023.1271842": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://orcid.org/0009-0003-1183-4991",
+   "https://orcid.org/0000-0002-2061-091X",
+   "https://orcid.org/0000-0002-4166-7093",
+   "https://orcid.org/0000-0002-8399-8990",
+   "https://orcid.org/0000-0002-4322-6179",
+   "https://orcid.org/0000-0003-4250-4584",
+   "https://orcid.org/0000-0002-1297-3104",
+   "https://orcid.org/0000-0002-5231-0639",
+   "https://orcid.org/0000-0001-5416-085X",
+   "https://orcid.org/0000-0001-9227-0670"
+  ]
+ },
+ "orcid-claimants:10.37044/osf.io/8qeh5_v1": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://orcid.org/0000-0001-8907-5348",
+   "https://orcid.org/0000-0002-7260-2129",
+   "https://orcid.org/0000-0001-7883-3756"
+  ]
+ },
+ "orcid-claimants:10.37044/osf.io/ptmg5_v1": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://orcid.org/0000-0002-4166-7093",
+   "https://orcid.org/0000-0002-7449-1266",
+   "https://orcid.org/0000-0002-4904-3269",
+   "https://orcid.org/0000-0003-2391-0384",
+   "https://orcid.org/0000-0002-7683-0452",
+   "https://orcid.org/0000-0001-7883-3756"
+  ]
+ },
+ "orcid-claimants:10.37044/osf.io/un2rw": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://orcid.org/0000-0002-4166-7093",
+   "https://orcid.org/0000-0002-9077-5664",
+   "https://orcid.org/0009-0002-7664-0058",
+   "https://orcid.org/0000-0002-9209-1266",
+   "https://orcid.org/0009-0002-4110-241X",
+   "https://orcid.org/0000-0002-3435-7775",
+   "https://orcid.org/0000-0003-1062-5576",
+   "https://orcid.org/0000-0003-4250-4584"
+  ]
+ },
+ "orcid-ids:https://orcid.org/0000-0001-5410-599X": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-ids:https://orcid.org/0000-0001-5416-085X": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "label": "Scopus Author ID",
+    "url": "http://www.scopus.com/inward/authorDetails.url?authorID=6602909744&partnerID=MN8TOARS"
+   },
+   {
+    "label": "ResearcherID",
+    "url": "http://www.researcherid.com/rid/D-1568-2015"
+   },
+   {
+    "label": "Loop profile",
+    "url": "http://loop.frontiersin.org/people/313914/overview?referrer=orcid_profile"
+   }
+  ]
+ },
+ "orcid-ids:https://orcid.org/0000-0001-5706-2163": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "label": "Scopus Author ID",
+    "url": "http://www.scopus.com/inward/authorDetails.url?authorID=17342562100&partnerID=MN8TOARS"
+   }
+  ]
+ },
+ "orcid-ids:https://orcid.org/0000-0001-5934-3559": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-ids:https://orcid.org/0000-0001-6125-6147": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-ids:https://orcid.org/0000-0001-6611-7883": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "label": "Scopus Author ID",
+    "url": "https://www.scopus.com/inward/authorDetails.url?authorID=60429818600&partnerID=MN8TOARS"
+   }
+  ]
+ },
+ "orcid-ids:https://orcid.org/0000-0001-7542-0286": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "label": "ISNI",
+    "url": "http://isni.org/isni/0000000389212124"
+   },
+   {
+    "label": "Digital Author ID",
+    "url": "https://en.wikipedia.org/wiki/Digital_Author_Identifier"
+   }
+  ]
+ },
+ "orcid-ids:https://orcid.org/0000-0001-7883-3756": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-ids:https://orcid.org/0000-0001-8319-7758": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "label": "Scopus Author ID",
+    "url": "http://www.scopus.com/inward/authorDetails.url?authorID=58724826900&partnerID=MN8TOARS"
+   }
+  ]
+ },
+ "orcid-ids:https://orcid.org/0000-0001-8449-1318": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "label": "Scopus Author ID",
+    "url": "http://www.scopus.com/authid/detail.url?authorId=56708961400"
+   }
+  ]
+ },
+ "orcid-ids:https://orcid.org/0000-0001-8501-7319": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-ids:https://orcid.org/0000-0001-8907-5348": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "label": "Scopus Author ID",
+    "url": "https://www.scopus.com/inward/authorDetails.url?authorID=57913286100&partnerID=MN8TOARS"
+   },
+   {
+    "label": "Scopus Author ID",
+    "url": "http://www.scopus.com/inward/authorDetails.url?authorID=8374489000&partnerID=MN8TOARS"
+   },
+   {
+    "label": "ResearcherID",
+    "url": "http://www.researcherid.com/rid/L-9181-2014"
+   }
+  ]
+ },
+ "orcid-ids:https://orcid.org/0000-0001-9773-4008": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "label": "Scopus Author ID",
+    "url": "http://www.scopus.com/inward/authorDetails.url?authorID=25652418300&partnerID=MN8TOARS"
+   }
+  ]
+ },
+ "orcid-ids:https://orcid.org/0000-0002-1297-3104": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "label": "Ciência ID",
+    "url": "http://www.cienciavitae.pt//AD1B-51B5-BE7E"
+   }
+  ]
+ },
+ "orcid-ids:https://orcid.org/0000-0002-1849-5246": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "label": "Loop profile",
+    "url": "http://loop.frontiersin.org/people/1577885/overview?referrer=orcid_profile"
+   },
+   {
+    "label": "SciProfiles",
+    "url": "https://sciprofiles.com/profile/1291562"
+   }
+  ]
+ },
+ "orcid-ids:https://orcid.org/0000-0002-2061-091X": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "label": "Scopus Author ID",
+    "url": "http://www.scopus.com/inward/authorDetails.url?authorID=6603260099&partnerID=MN8TOARS"
+   },
+   {
+    "label": "Loop profile",
+    "url": "http://loop.frontiersin.org/people/1527848/overview?referrer=orcid_profile"
+   },
+   {
+    "label": "Scopus Author ID",
+    "url": "http://www.scopus.com/authid/detail.url?authorId=6603260099"
+   }
+  ]
+ },
+ "orcid-ids:https://orcid.org/0000-0002-3435-7775": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "label": "Loop profile",
+    "url": "http://loop.frontiersin.org/people/586709/overview?referrer=orcid_profile"
+   }
+  ]
+ },
+ "orcid-ids:https://orcid.org/0000-0002-4166-7093": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-ids:https://orcid.org/0000-0002-4322-6179": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "label": "Scopus Author ID",
+    "url": "http://www.scopus.com/inward/authorDetails.url?authorID=8378341000&partnerID=MN8TOARS"
+   },
+   {
+    "label": "Loop profile",
+    "url": "http://loop.frontiersin.org/people/740592/overview?referrer=orcid_profile"
+   }
+  ]
+ },
+ "orcid-ids:https://orcid.org/0000-0002-4409-1974": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-ids:https://orcid.org/0000-0002-4693-0591": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-ids:https://orcid.org/0000-0002-4751-4637": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-ids:https://orcid.org/0000-0002-4904-3269": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "label": "Scopus Author ID",
+    "url": "http://www.scopus.com/authid/detail.url?authorId=56667602300"
+   },
+   {
+    "label": "Scopus Author ID",
+    "url": "http://www.scopus.com/inward/authorDetails.url?authorID=56667602300&partnerID=MN8TOARS"
+   }
+  ]
+ },
+ "orcid-ids:https://orcid.org/0000-0002-5231-0639": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "label": "ResearcherID",
+    "url": "http://www.researcherid.com/rid/E-6214-2012"
+   },
+   {
+    "label": "Scopus Author ID",
+    "url": "http://www.scopus.com/inward/authorDetails.url?authorID=6603676954&partnerID=MN8TOARS"
+   },
+   {
+    "label": "SciProfiles",
+    "url": "https://sciprofiles.com/profile/1234568"
+   }
+  ]
+ },
+ "orcid-ids:https://orcid.org/0000-0002-5301-3142": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "label": "Scopus Author ID",
+    "url": "http://www.scopus.com/inward/authorDetails.url?authorID=7003950754&partnerID=MN8TOARS"
+   }
+  ]
+ },
+ "orcid-ids:https://orcid.org/0000-0002-6943-6887": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-ids:https://orcid.org/0000-0002-7260-2129": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "label": "Loop profile",
+    "url": "http://loop.frontiersin.org/people/560844/overview?referrer=orcid_profile"
+   }
+  ]
+ },
+ "orcid-ids:https://orcid.org/0000-0002-7449-1266": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-ids:https://orcid.org/0000-0002-7683-0452": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "label": "Loop profile",
+    "url": "http://loop.frontiersin.org/people/1026896/overview?referrer=orcid_profile"
+   },
+   {
+    "label": "Scopus Author ID",
+    "url": "http://www.scopus.com/inward/authorDetails.url?authorID=57219744038&partnerID=MN8TOARS"
+   },
+   {
+    "label": "ResearcherID",
+    "url": "https://www.webofscience.com/wos/author/record/JKI-2439-2023"
+   },
+   {
+    "label": "SciProfiles",
+    "url": "https://sciprofiles.com/profile/1586617"
+   }
+  ]
+ },
+ "orcid-ids:https://orcid.org/0000-0002-7699-8191": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-ids:https://orcid.org/0000-0002-7770-620X": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-ids:https://orcid.org/0000-0002-8399-8990": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-ids:https://orcid.org/0000-0002-8607-9965": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-ids:https://orcid.org/0000-0002-9077-5664": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-ids:https://orcid.org/0000-0002-9209-1266": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "label": "ResearcherID",
+    "url": "https://www.webofscience.com/wos/author/record/NQF-4558-2025"
+   },
+   {
+    "label": "Scopus Author ID",
+    "url": "http://www.scopus.com/inward/authorDetails.url?authorID=57995927200&partnerID=MN8TOARS"
+   }
+  ]
+ },
+ "orcid-ids:https://orcid.org/0000-0002-9454-4783": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-ids:https://orcid.org/0000-0003-0329-1977": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-ids:https://orcid.org/0000-0003-1062-5576": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "label": "Loop profile",
+    "url": "http://loop.frontiersin.org/people/442508/overview?referrer=orcid_profile"
+   },
+   {
+    "label": "ResearcherID",
+    "url": "https://www.webofscience.com/wos/author/record/JSK-2475-2023"
+   }
+  ]
+ },
+ "orcid-ids:https://orcid.org/0000-0003-1224-9690": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-ids:https://orcid.org/0000-0003-1661-6304": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "label": "Scopus Author ID",
+    "url": "http://www.scopus.com/inward/authorDetails.url?authorID=57221544595&partnerID=MN8TOARS"
+   }
+  ]
+ },
+ "orcid-ids:https://orcid.org/0000-0003-1781-5508": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "label": "Scopus Author ID",
+    "url": "http://www.scopus.com/inward/authorDetails.url?authorID=21743037300&partnerID=MN8TOARS"
+   }
+  ]
+ },
+ "orcid-ids:https://orcid.org/0000-0003-2102-3626": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "label": "Digital Author ID (DAI)",
+    "url": "https://en.wikipedia.org/wiki/Digital_Author_Identifier"
+   },
+   {
+    "label": "Scopus Author ID",
+    "url": "http://www.scopus.com/authid/detail.url?authorId=7003266865"
+   }
+  ]
+ },
+ "orcid-ids:https://orcid.org/0000-0003-2230-0840": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "label": "Loop profile",
+    "url": "http://loop.frontiersin.org/people/542384/overview?referrer=orcid_profile"
+   },
+   {
+    "label": "Scopus Author ID",
+    "url": "http://www.scopus.com/authid/detail.url?authorId=57196088202"
+   }
+  ]
+ },
+ "orcid-ids:https://orcid.org/0000-0003-2391-0384": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "label": "Researcher Name Resolver ID",
+    "url": "https://nrid.nii.ac.jp/nrid/1000060396869/"
+   }
+  ]
+ },
+ "orcid-ids:https://orcid.org/0000-0003-2760-7702": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "label": "Scopus Author ID",
+    "url": "http://www.scopus.com/inward/authorDetails.url?authorID=37073939200&partnerID=MN8TOARS"
+   },
+   {
+    "label": "Loop profile",
+    "url": "http://loop.frontiersin.org/people/1326912/overview?referrer=orcid_profile"
+   }
+  ]
+ },
+ "orcid-ids:https://orcid.org/0000-0003-2878-4049": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-ids:https://orcid.org/0000-0003-2940-8926": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "label": "SciProfiles",
+    "url": "https://sciprofiles.com/profile/2751341"
+   }
+  ]
+ },
+ "orcid-ids:https://orcid.org/0000-0003-3213-4495": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "label": "Scopus Author ID",
+    "url": "http://www.scopus.com/inward/authorDetails.url?authorID=57209820944&partnerID=MN8TOARS"
+   }
+  ]
+ },
+ "orcid-ids:https://orcid.org/0000-0003-4250-4584": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "label": "Scopus Author ID",
+    "url": "http://www.scopus.com/inward/authorDetails.url?authorID=6603538848&partnerID=MN8TOARS"
+   },
+   {
+    "label": "ResearcherID",
+    "url": "http://www.researcherid.com/rid/I-3915-2014"
+   },
+   {
+    "label": "Loop profile",
+    "url": "http://loop.frontiersin.org/people/126618/overview?referrer=orcid_profile"
+   },
+   {
+    "label": "SciProfiles",
+    "url": "https://sciprofiles.com/profile/370970"
+   },
+   {
+    "label": "Ciência ID",
+    "url": "http://www.cienciavitae.pt//6D1A-2192-774D"
+   },
+   {
+    "label": "ResearcherID",
+    "url": "https://www.webofscience.com/wos/author/record/I-3915-2014"
+   },
+   {
+    "label": "Scopus Author ID",
+    "url": "http://www.scopus.com/authid/detail.url?authorId=6603538848"
+   }
+  ]
+ },
+ "orcid-ids:https://orcid.org/0009-0002-4110-241X": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-ids:https://orcid.org/0009-0002-7664-0058": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-ids:https://orcid.org/0009-0003-1183-4991": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-ids:https://orcid.org/0009-0005-3680-0645": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-ids:https://orcid.org/0009-0007-1364-797X": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-ids:https://orcid.org/0009-0007-2045-4009": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-item:0000-0001-5410-599X": {
+  "checked": "2026-09-24",
+  "value": "Q28865047"
+ },
+ "orcid-item:0000-0001-5416-085X": {
+  "checked": "2026-09-24",
+  "value": "Q39585759"
+ },
+ "orcid-item:0000-0001-5706-2163": {
+  "checked": "2026-09-24",
+  "value": "Q28530149"
+ },
+ "orcid-item:0000-0001-5934-3559": {
+  "checked": "2026-09-24",
+  "value": "Q19845608"
+ },
+ "orcid-item:0000-0001-6125-6147": {
+  "checked": "2026-09-24",
+  "value": null
+ },
+ "orcid-item:0000-0001-6611-7883": {
+  "checked": "2026-09-24",
+  "value": "Q117834010"
+ },
+ "orcid-item:0000-0001-7542-0286": {
+  "checked": "2026-09-24",
+  "value": "Q20895241"
+ },
+ "orcid-item:0000-0001-7883-3756": {
+  "checked": "2026-09-24",
+  "value": "Q54302726"
+ },
+ "orcid-item:0000-0001-8319-7758": {
+  "checked": "2026-09-24",
+  "value": "Q130642378"
+ },
+ "orcid-item:0000-0001-8449-1318": {
+  "checked": "2026-09-24",
+  "value": "Q43744369"
+ },
+ "orcid-item:0000-0001-8501-7319": {
+  "checked": "2026-09-24",
+  "value": "Q136396711"
+ },
+ "orcid-item:0000-0001-8907-5348": {
+  "checked": "2026-09-24",
+  "value": "Q51602692"
+ },
+ "orcid-item:0000-0001-9773-4008": {
+  "checked": "2026-09-24",
+  "value": "Q19845625"
+ },
+ "orcid-item:0000-0002-1297-3104": {
+  "checked": "2026-09-24",
+  "value": "Q100409486"
+ },
+ "orcid-item:0000-0002-1849-5246": {
+  "checked": "2026-09-24",
+  "value": "Q88046313"
+ },
+ "orcid-item:0000-0002-2061-091X": {
+  "checked": "2026-09-24",
+  "value": "Q54303216"
+ },
+ "orcid-item:0000-0002-3435-7775": {
+  "checked": "2026-09-24",
+  "value": "Q28530416"
+ },
+ "orcid-item:0000-0002-3469-4923": {
+  "checked": "2026-09-24",
+  "value": "Q27902110"
+ },
+ "orcid-item:0000-0002-4166-7093": {
+  "checked": "2026-09-24",
+  "value": "Q116446553"
+ },
+ "orcid-item:0000-0002-4322-6179": {
+  "checked": "2026-09-24",
+  "value": "Q27061849"
+ },
+ "orcid-item:0000-0002-4409-1974": {
+  "checked": "2026-09-24",
+  "value": "Q140771297"
+ },
+ "orcid-item:0000-0002-4693-0591": {
+  "checked": "2026-09-24",
+  "value": "Q43370277"
+ },
+ "orcid-item:0000-0002-4751-4637": {
+  "checked": "2026-09-24",
+  "value": "Q45907528"
+ },
+ "orcid-item:0000-0002-4904-3269": {
+  "checked": "2026-09-24",
+  "value": "Q89321648"
+ },
+ "orcid-item:0000-0002-5231-0639": {
+  "checked": "2026-09-24",
+  "value": "Q45351113"
+ },
+ "orcid-item:0000-0002-5301-3142": {
+  "checked": "2026-09-24",
+  "value": "Q19845641"
+ },
+ "orcid-item:0000-0002-6943-6887": {
+  "checked": "2026-09-24",
+  "value": "Q59490274"
+ },
+ "orcid-item:0000-0002-7260-2129": {
+  "checked": "2026-09-24",
+  "value": "Q63958202"
+ },
+ "orcid-item:0000-0002-7449-1266": {
+  "checked": "2026-09-24",
+  "value": "Q56888653"
+ },
+ "orcid-item:0000-0002-7683-0452": {
+  "checked": "2026-09-24",
+  "value": "Q70206064"
+ },
+ "orcid-item:0000-0002-7699-8191": {
+  "checked": "2026-09-24",
+  "value": "Q27987764"
+ },
+ "orcid-item:0000-0002-7770-620X": {
+  "checked": "2026-09-24",
+  "value": "Q28025534"
+ },
+ "orcid-item:0000-0002-8399-8990": {
+  "checked": "2026-09-24",
+  "value": "Q86442640"
+ },
+ "orcid-item:0000-0002-8607-9965": {
+  "checked": "2026-09-24",
+  "value": "Q28541054"
+ },
+ "orcid-item:0000-0002-9077-5664": {
+  "checked": "2026-09-24",
+  "value": "Q57058833"
+ },
+ "orcid-item:0000-0002-9209-1266": {
+  "checked": "2026-09-24",
+  "value": "Q127038569"
+ },
+ "orcid-item:0000-0002-9454-4783": {
+  "checked": "2026-09-24",
+  "value": "Q92186214"
+ },
+ "orcid-item:0000-0003-0329-1977": {
+  "checked": "2026-09-24",
+  "value": "Q89571039"
+ },
+ "orcid-item:0000-0003-1062-5576": {
+  "checked": "2026-09-24",
+  "value": "Q96189622"
+ },
+ "orcid-item:0000-0003-1224-9690": {
+  "checked": "2026-09-24",
+  "value": "Q19851164"
+ },
+ "orcid-item:0000-0003-1661-6304": {
+  "checked": "2026-09-24",
+  "value": "Q114718357"
+ },
+ "orcid-item:0000-0003-1781-5508": {
+  "checked": "2026-09-24",
+  "value": "Q56510144"
+ },
+ "orcid-item:0000-0003-2102-3626": {
+  "checked": "2026-09-24",
+  "value": "Q55453416"
+ },
+ "orcid-item:0000-0003-2230-0840": {
+  "checked": "2026-09-24",
+  "value": "Q42369611"
+ },
+ "orcid-item:0000-0003-2391-0384": {
+  "checked": "2026-09-24",
+  "value": "Q58484212"
+ },
+ "orcid-item:0000-0003-2760-7702": {
+  "checked": "2026-09-24",
+  "value": "Q56459199"
+ },
+ "orcid-item:0000-0003-2878-4049": {
+  "checked": "2026-09-24",
+  "value": "Q123631021"
+ },
+ "orcid-item:0000-0003-2940-8926": {
+  "checked": "2026-09-24",
+  "value": "Q123631063"
+ },
+ "orcid-item:0000-0003-3213-4495": {
+  "checked": "2026-09-24",
+  "value": "Q118146531"
+ },
+ "orcid-item:0000-0003-4250-4584": {
+  "checked": "2026-09-24",
+  "value": "Q28651697"
+ },
+ "orcid-item:0000-0003-4423-4370": {
+  "checked": "2026-09-24",
+  "value": "Q47475003"
+ },
+ "orcid-item:0009-0002-4110-241X": {
+  "checked": "2026-09-24",
+  "value": null
+ },
+ "orcid-item:0009-0002-7664-0058": {
+  "checked": "2026-09-24",
+  "value": null
+ },
+ "orcid-item:0009-0003-1183-4991": {
+  "checked": "2026-09-24",
+  "value": null
+ },
+ "orcid-item:0009-0005-3680-0645": {
+  "checked": "2026-09-24",
+  "value": "Q124399961"
+ },
+ "orcid-item:0009-0007-1364-797X": {
+  "checked": "2026-09-24",
+  "value": null
+ },
+ "orcid-item:0009-0007-2045-4009": {
+  "checked": "2026-09-24",
+  "value": null
+ },
+ "orcid-names:https://orcid.org/0000-0001-5416-085X": {
+  "checked": "2026-09-24",
+  "value": [
+   "Martin Himly"
+  ]
+ },
+ "orcid-names:https://orcid.org/0000-0001-9227-0670": {
+  "checked": "2026-09-24",
+  "value": [
+   "Karin Slater"
+  ]
+ },
+ "orcid-names:https://orcid.org/0000-0002-1297-3104": {
+  "checked": "2026-09-24",
+  "value": [
+   "Anastasios Papadiamantis"
+  ]
+ },
+ "orcid-names:https://orcid.org/0000-0002-2061-091X": {
+  "checked": "2026-09-24",
+  "value": [
+   "Georgios Gkoutos"
+  ]
+ },
+ "orcid-names:https://orcid.org/0000-0002-4322-6179": {
+  "checked": "2026-09-24",
+  "value": [
+   "Nina Jeliazkova",
+   "Nina Nikolova"
+  ]
+ },
+ "orcid-names:https://orcid.org/0000-0002-5231-0639": {
+  "checked": "2026-09-24",
+  "value": [
+   "Vladimir Lobaskin"
+  ]
+ },
+ "orcid-names:https://orcid.org/0000-0003-2102-3626": {
+  "checked": "2026-09-24",
+  "value": [
+   "Theo de Kok"
+  ]
+ },
+ "orcid-names:https://orcid.org/0009-0002-4110-241X": {
+  "checked": "2026-09-24",
+  "value": [
+   "Riju Roy Chowdhury"
+  ]
+ },
+ "orcid-names:https://orcid.org/0009-0002-7664-0058": {
+  "checked": "2026-09-24",
+  "value": [
+   "Meike Bunger"
+  ]
+ },
+ "orcid-names:https://orcid.org/0009-0003-1183-4991": {
+  "checked": "2026-09-24",
+  "value": [
+   "Martin Ziegler"
+  ]
+ },
+ "orcid-urls:https://orcid.org/0000-0001-5410-599X": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://scholar.google.com/citations?user=lp_fj-AAAAAJ&hl=en&oi=ao",
+   "https://github.com/khanspers",
+   "https://scholia.toolforge.org/author/Q28865047"
+  ]
+ },
+ "orcid-urls:https://orcid.org/0000-0001-5416-085X": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://www.plus.ac.at/biowissenschaften/der-fachbereich/arbeitsgruppen/ag-himly/martin-himly/"
+  ]
+ },
+ "orcid-urls:https://orcid.org/0000-0001-5706-2163": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://gladstone.org/people/alex-pico",
+   "http://nrnb.org/people.html",
+   "http://www.cytoscapeconsortium.org/?page_id=13"
+  ]
+ },
+ "orcid-urls:https://orcid.org/0000-0001-5934-3559": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-urls:https://orcid.org/0000-0001-6125-6147": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-urls:https://orcid.org/0000-0001-6611-7883": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-urls:https://orcid.org/0000-0001-7542-0286": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://cris.maastrichtuniversity.nl/portal/en/persons/egon-willighagen(2ad8fbe2-e873-404d-85c7-e0c125a6ead7).html",
+   "http://egonw.github.io/",
+   "https://chem-bla-ics.linkedchemistry.info/",
+   "https://scholar.google.com/citations?user=u8SjMZ0AAAAJ",
+   "http://github.com/egonw/",
+   "https://social.edu.nl/@egonw",
+   "http://gitlab.com/egonw",
+   "http://figshare.com/authors/chem-bla-ics/96390",
+   "http://sf.net/users/egonw",
+   "https://scholia.toolforge.org/author/Q20895241",
+   "https://w3id.org/np/RAO6OjsPPlixn_uVJhzsAaoi8KaLxT8yKXgt8MOuyNN8U",
+   "https://iupac.org/member/egon-willighagen/",
+   "https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Willighagen%2C%20Egon%22&f=resource_type%3Apresentation&l=list&p=1&s=10&sort=newest",
+   "https://bsky.app/profile/egonw.social.edu.nl.ap.brid.gy"
+  ]
+ },
+ "orcid-urls:https://orcid.org/0000-0001-7883-3756": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://researchmap.jp/shuichikawashima/"
+  ]
+ },
+ "orcid-urls:https://orcid.org/0000-0001-8319-7758": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-urls:https://orcid.org/0000-0001-8449-1318": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://github.com/DeniseSl22",
+   "https://cris.maastrichtuniversity.nl/en/persons/9898711a-b781-46e3-9182-a2162e693de1"
+  ]
+ },
+ "orcid-urls:https://orcid.org/0000-0001-8501-7319": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://twitter.com/kozo2",
+   "https://github.com/kozo2"
+  ]
+ },
+ "orcid-urls:https://orcid.org/0000-0001-8907-5348": {
+  "checked": "2026-09-24",
+  "value": [
+   "http://www.di.uniovi.es/~labra"
+  ]
+ },
+ "orcid-urls:https://orcid.org/0000-0001-9773-4008": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-urls:https://orcid.org/0000-0002-1297-3104": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-urls:https://orcid.org/0000-0002-1849-5246": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-urls:https://orcid.org/0000-0002-2061-091X": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://gkoutos.github.io/"
+  ]
+ },
+ "orcid-urls:https://orcid.org/0000-0002-3435-7775": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://twitter.com/pennynymark",
+   "https://publons.com/researcher/3184728/penny-nymark/",
+   "https://www.researchgate.net/profile/Penny-Nymark"
+  ]
+ },
+ "orcid-urls:https://orcid.org/0000-0002-4166-7093": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-urls:https://orcid.org/0000-0002-4322-6179": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://scholar.google.com/citations?user=2eBL2WMAAAAJ&hl=en",
+   "https://www.ideaconsult.net/",
+   "https://vedina.users.sourceforge.net/",
+   "https://www.linkedin.com/in/ninajeliazkova/"
+  ]
+ },
+ "orcid-urls:https://orcid.org/0000-0002-4409-1974": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-urls:https://orcid.org/0000-0002-4693-0591": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-urls:https://orcid.org/0000-0002-4751-4637": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://larsgw.github.io",
+   "https://larsgw.blogspot.com",
+   "https://github.com/larsgw",
+   "https://mastodon.social/@larsgw"
+  ]
+ },
+ "orcid-urls:https://orcid.org/0000-0002-4904-3269": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-urls:https://orcid.org/0000-0002-5231-0639": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-urls:https://orcid.org/0000-0002-5301-3142": {
+  "checked": "2026-09-24",
+  "value": [
+   "http://www.bigcat.unimaas.nl",
+   "https://twitter.com/Chris_Evelo"
+  ]
+ },
+ "orcid-urls:https://orcid.org/0000-0002-6943-6887": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-urls:https://orcid.org/0000-0002-7260-2129": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-urls:https://orcid.org/0000-0002-7449-1266": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://akademienl.social/@jerven"
+  ]
+ },
+ "orcid-urls:https://orcid.org/0000-0002-7683-0452": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://www.linkedin.com/in/yojana-gadiya-477739113/",
+   "https://github.com/YojanaGadiya",
+   "https://scholar.google.com.tw/citations?hl=de&user=LDgRXckAAAAJ"
+  ]
+ },
+ "orcid-urls:https://orcid.org/0000-0002-7699-8191": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-urls:https://orcid.org/0000-0002-7770-620X": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://www.linkedin.com/pub/friederike-ehrhart/74/181/41a?trk=pub-pbmap",
+   "http://purl.org/np/RA1QiaPTiY41EfjjcPLMWu_LnRGAYxGAfqV9puFoklLWU"
+  ]
+ },
+ "orcid-urls:https://orcid.org/0000-0002-8399-8990": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-urls:https://orcid.org/0000-0002-8607-9965": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-urls:https://orcid.org/0000-0002-9077-5664": {
+  "checked": "2026-09-24",
+  "value": [
+   "http://sabiork.h-its.org/",
+   "https://fair-dom.org/",
+   "https://www.h-its.org/"
+  ]
+ },
+ "orcid-urls:https://orcid.org/0000-0002-9209-1266": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-urls:https://orcid.org/0000-0002-9454-4783": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://www.linkedin.com/in/laurent-winckers/"
+  ]
+ },
+ "orcid-urls:https://orcid.org/0000-0003-0329-1977": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://github.com/ozancinar"
+  ]
+ },
+ "orcid-urls:https://orcid.org/0000-0003-1062-5576": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://nanodash.knowledgepixels.com/user?1&id=https://orcid.org/0000-0003-1062-5576",
+   "https://github.com/burgerga",
+   "https://rescognito.com/0000-0003-1062-5576",
+   "https://openalex.org/authors/A5046703960"
+  ]
+ },
+ "orcid-urls:https://orcid.org/0000-0003-1224-9690": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://cris.maastrichtuniversity.nl/en/persons/1a524433-c2a5-4a11-ac58-45b5b6d426dd"
+  ]
+ },
+ "orcid-urls:https://orcid.org/0000-0003-1661-6304": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://fondufemittendorflab.vai.org/"
+  ]
+ },
+ "orcid-urls:https://orcid.org/0000-0003-1781-5508": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-urls:https://orcid.org/0000-0003-2102-3626": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://cris.maastrichtuniversity.nl/en/persons/4e16873b-8cc7-4bb9-bc83-035bd1e205cf"
+  ]
+ },
+ "orcid-urls:https://orcid.org/0000-0003-2230-0840": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://cris.maastrichtuniversity.nl/en/persons/a7490e9a-a51d-48a6-ad0f-4e295a3fd29e"
+  ]
+ },
+ "orcid-urls:https://orcid.org/0000-0003-2391-0384": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-urls:https://orcid.org/0000-0003-2760-7702": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-urls:https://orcid.org/0000-0003-2878-4049": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://www.linkedin.com/in/aishwarya-iyer-5a7545173/",
+   "https://github.com/ashviyer"
+  ]
+ },
+ "orcid-urls:https://orcid.org/0000-0003-2940-8926": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://github.com/ayushi-agrawal-gladstone"
+  ]
+ },
+ "orcid-urls:https://orcid.org/0000-0003-3213-4495": {
+  "checked": "2026-09-24",
+  "value": [
+   "http://www.linkedin.com/in/ana-claudia-sima"
+  ]
+ },
+ "orcid-urls:https://orcid.org/0000-0003-4250-4584": {
+  "checked": "2026-09-24",
+  "value": [
+   "http://www.birmingham.ac.uk/schools/gees/people/profile.aspx?ReferenceId=56477",
+   "https://www.linkedin.com/in/iseult-lynch-b5856910/",
+   "https://twitter.com/iseult5",
+   "http://www.nanocommons.eu",
+   "http://purl.org/np/RASUKBzz2S0W_dJMo3f_l0svPATz6M9zdpGuTXpYBSyMA"
+  ]
+ },
+ "orcid-urls:https://orcid.org/0009-0002-4110-241X": {
+  "checked": "2026-09-24",
+  "value": [
+   "https://secantox.weebly.com/people.html"
+  ]
+ },
+ "orcid-urls:https://orcid.org/0009-0002-7664-0058": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-urls:https://orcid.org/0009-0003-1183-4991": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-urls:https://orcid.org/0009-0005-3680-0645": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-urls:https://orcid.org/0009-0007-1364-797X": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "orcid-urls:https://orcid.org/0009-0007-2045-4009": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "wikidata-property:P1006": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "Nationale Thesaurus voor Auteursnamen ID",
+   "pattern": "https://data.bibliotheken.nl/id/thes/p$1"
+  }
+ },
+ "wikidata-property:P1015": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "BIBSYS ID",
+   "pattern": "https://authority.bibsys.no/authority/rest/authorities/html/$1"
+  }
+ },
+ "wikidata-property:P10283": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "OpenAlex ID",
+   "pattern": "https://openalex.org/$1"
+  }
+ },
+ "wikidata-property:P1053": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "Web of Science ResearcherID",
+   "pattern": "https://www.webofscience.com/wos/author/record/$1"
+  }
+ },
+ "wikidata-property:P10557": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "Zotero ID",
+   "pattern": "https://www.zotero.org/$1"
+  }
+ },
+ "wikidata-property:P10832": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "WorldCat Entities ID",
+   "pattern": "https://id.oclc.org/worldcat/entity/$1"
+  }
+ },
+ "wikidata-property:P10861": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "Springer Nature person ID",
+   "pattern": "https://app.dimensions.ai/details/entities/publication/author/ur.$1"
+  }
+ },
+ "wikidata-property:P10897": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "ORKG ID",
+   "pattern": "https://orkg.org/resource/$1"
+  }
+ },
+ "wikidata-property:P11245": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "YouTube handle",
+   "pattern": "https://www.youtube.com/@$1"
+  }
+ },
+ "wikidata-property:P11249": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "KBR person ID",
+   "pattern": "https://uurl.kbr.be/aut/$1"
+  }
+ },
+ "wikidata-property:P11496": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "CiNii Research ID",
+   "pattern": "https://cir.nii.ac.jp/crid/$1"
+  }
+ },
+ "wikidata-property:P1153": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "Scopus author ID",
+   "pattern": "https://www.scopus.com/authid/detail.uri?authorId=$1"
+  }
+ },
+ "wikidata-property:P11534": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "PyPI username",
+   "pattern": "https://pypi.org/user/$1"
+  }
+ },
+ "wikidata-property:P12022": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "iNaturalist user ID",
+   "pattern": "https://www.inaturalist.org/people/$1"
+  }
+ },
+ "wikidata-property:P12045": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "Codeberg username",
+   "pattern": "https://codeberg.org/$1"
+  }
+ },
+ "wikidata-property:P12361": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "Bluesky handle",
+   "pattern": "https://wikidata-externalid-url.toolforge.org/?p=12361&url_prefix=https%3A%2F%2Fbsky.app%2Fprofile%2F&id=$1"
+  }
+ },
+ "wikidata-property:P1280": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "CONOR.SI ID",
+   "pattern": "https://plus-legacy.cobiss.net/cobiss/si/sl/conor/$1"
+  }
+ },
+ "wikidata-property:P13049": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "DDB person (GND) ID",
+   "pattern": "https://www.deutsche-digitale-bibliothek.de/person/gnd/$1"
+  }
+ },
+ "wikidata-property:P13591": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "‎Yale LUX ID",
+   "pattern": "https://lux.collections.yale.edu/view/$1"
+  }
+ },
+ "wikidata-property:P14252": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "PeerJ person ID",
+   "pattern": "https://peerj.com/$1/"
+  }
+ },
+ "wikidata-property:P1556": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "zbMATH author ID",
+   "pattern": "https://zbmath.org/authors/?q=ai:$1"
+  }
+ },
+ "wikidata-property:P1960": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "Google Scholar author ID",
+   "pattern": "https://scholar.google.com/citations?user=$1"
+  }
+ },
+ "wikidata-property:P2002": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "X (Twitter) username",
+   "pattern": "https://x.com/$1"
+  }
+ },
+ "wikidata-property:P2013": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "Facebook username",
+   "pattern": "https://www.facebook.com/$1"
+  }
+ },
+ "wikidata-property:P2037": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "GitHub account",
+   "pattern": "https://github.com/$1"
+  }
+ },
+ "wikidata-property:P2038": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "ResearchGate profile ID",
+   "pattern": "https://www.researchgate.net/profile/$1"
+  }
+ },
+ "wikidata-property:P213": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "ISNI",
+   "pattern": "https://isni.org/isni/$1"
+  }
+ },
+ "wikidata-property:P214": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "VIAF cluster ID",
+   "pattern": "https://viaf.org/en/viaf/$1"
+  }
+ },
+ "wikidata-property:P227": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "GND ID",
+   "pattern": "https://d-nb.info/gnd/$1"
+  }
+ },
+ "wikidata-property:P2381": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "Academic Tree ID",
+   "pattern": "https://academictree.org/math/peopleinfo.php?pid=$1"
+  }
+ },
+ "wikidata-property:P2397": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "YouTube channel ID",
+   "pattern": "https://www.youtube.com/channel/$1"
+  }
+ },
+ "wikidata-property:P244": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "Library of Congress Authorities ID",
+   "pattern": "https://id.loc.gov/authorities/$1"
+  }
+ },
+ "wikidata-property:P2456": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "DBLP author ID",
+   "pattern": "https://dblp.org/pid/$1"
+  }
+ },
+ "wikidata-property:P2671": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "Google Knowledge Graph ID",
+   "pattern": "https://www.google.com/search?kgmid=$1"
+  }
+ },
+ "wikidata-property:P269": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "IdRef ID",
+   "pattern": "https://www.idref.fr/$1"
+  }
+ },
+ "wikidata-property:P2798": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "Loop ID",
+   "pattern": "https://loop.frontiersin.org/people/$1/overview"
+  }
+ },
+ "wikidata-property:P3829": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "Publons author ID",
+   "pattern": "https://publons.com/researcher/$1/"
+  }
+ },
+ "wikidata-property:P3835": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "Mendeley person ID",
+   "pattern": "https://web.archive.org/web/*/https://www.mendeley.com/profiles/$1/"
+  }
+ },
+ "wikidata-property:P4012": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "Semantic Scholar author ID",
+   "pattern": "https://www.semanticscholar.org/author/-/$1"
+  }
+ },
+ "wikidata-property:P4033": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "Mastodon address",
+   "pattern": "https://fedirect.toolforge.org/?id=$1"
+  }
+ },
+ "wikidata-property:P4174": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "Wikimedia username",
+   "pattern": "https://meta.wikimedia.org/wiki/Special:CentralAuth/$1"
+  }
+ },
+ "wikidata-property:P4232": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "Figshare author ID",
+   "pattern": "https://figshare.com/authors/wd/$1"
+  }
+ },
+ "wikidata-property:P4411": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "Quora username",
+   "pattern": "https://www.quora.com/profile/$1"
+  }
+ },
+ "wikidata-property:P4419": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "Videolectures ID",
+   "pattern": "https://videolectures.net/$1/"
+  }
+ },
+ "wikidata-property:P4594": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "arXiv author ID",
+   "pattern": "https://arxiv.org/a/$1.html"
+  }
+ },
+ "wikidata-property:P496": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "ORCID iD",
+   "pattern": "https://orcid.org/$1"
+  }
+ },
+ "wikidata-property:P5029": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "Researchmap ID",
+   "pattern": "https://researchmap.jp/$1"
+  }
+ },
+ "wikidata-property:P5034": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "National Library of Korea ID",
+   "pattern": "https://lod.nl.go.kr/resource/$1"
+  }
+ },
+ "wikidata-property:P5039": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "Authorea author ID",
+   "pattern": "https://www.authorea.com/users/$1"
+  }
+ },
+ "wikidata-property:P6023": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "ResearchGate contributions ID",
+   "pattern": "https://www.researchgate.net/scientific-contributions/$1"
+  }
+ },
+ "wikidata-property:P6178": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "Dimensions author ID",
+   "pattern": "https://app.dimensions.ai/details/entities/publication/author/ur.$1"
+  }
+ },
+ "wikidata-property:P6366": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "Microsoft Academic ID (discontinued)",
+   "pattern": "https://web.archive.org/web/https://academic.microsoft.com/v2/detail/$1"
+  }
+ },
+ "wikidata-property:P6634": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "LinkedIn personal profile ID",
+   "pattern": "https://www.linkedin.com/in/$1/"
+  }
+ },
+ "wikidata-property:P6660": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "Rxivist author ID",
+   "pattern": "https://rxivist.org/authors/$1"
+  }
+ },
+ "wikidata-property:P691": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "NL CR AUT ID",
+   "pattern": "https://aleph.nkp.cz/F/?func=find-c&local_base=aut&ccl_term=ica=$1"
+  }
+ },
+ "wikidata-property:P7238": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "Open Science Framework ID",
+   "pattern": "https://osf.io/$1"
+  }
+ },
+ "wikidata-property:P7449": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "NARCIS researcher ID",
+   "pattern": "https://web.archive.org/web/*/https://www.narcis.nl/person/RecordID/$1"
+  }
+ },
+ "wikidata-property:P7699": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "National Library of Lithuania ID",
+   "pattern": "https://wikidata-externalid-url.toolforge.org/?p=7699&url_prefix=https://viaf.org/processed/LIH%7C&id=$1"
+  }
+ },
+ "wikidata-property:P7783": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "J-GLOBAL ID",
+   "pattern": "https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=$1"
+  }
+ },
+ "wikidata-property:P8159": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "SciProfiles ID",
+   "pattern": "https://sciprofiles.com/profile/$1"
+  }
+ },
+ "wikidata-property:P8446": {
+  "checked": "2026-09-24",
+  "value": null
+ },
+ "wikidata-property:P8827": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "GitLab.com username",
+   "pattern": "https://gitlab.com/$1"
+  }
+ },
+ "wikidata-property:P8964": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "OpenReview.net profile ID",
+   "pattern": "https://openreview.net/profile?id=~$1"
+  }
+ },
+ "wikidata-property:P8980": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "KANTO ID",
+   "pattern": "https://urn.fi/URN:NBN:fi:au:finaf:$1"
+  }
+ },
+ "wikidata-property:P9776": {
+  "checked": "2026-09-24",
+  "value": {
+   "label": "e-Rad researcher number",
+   "pattern": "https://nrid.nii.ac.jp/ja/nrid/10000$1"
+  }
+ },
+ "wikidata-work:10.1016/j.toxlet.2025.07.1074": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "wikidata-work:10.1038/s41597-026-07345-6": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "wikidata-work:10.1093/bioinformatics/btag064": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "wikidata-work:10.1093/nar/gkad960": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "item": "http://www.wikidata.org/entity/Q116446553",
+    "names": [
+     "Javi Millán",
+     "Javier Millán Acosta",
+     "jmillanacosta"
+    ],
+    "orcid": "https://orcid.org/0000-0002-4166-7093",
+    "position": 14
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q123631021",
+    "names": [
+     "Aishwarya Iyer"
+    ],
+    "orcid": "https://orcid.org/0000-0003-2878-4049",
+    "position": 13
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q123631063",
+    "names": [
+     "Ayushi Agrawal"
+    ],
+    "orcid": "https://orcid.org/0000-0003-2940-8926",
+    "position": 1
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q130642378",
+    "names": [
+     "Hasan Balcı"
+    ],
+    "orcid": "https://orcid.org/0000-0001-8319-7758",
+    "position": 2
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q136396711",
+    "names": [
+     "Kozo Nishida"
+    ],
+    "orcid": "https://orcid.org/0000-0001-8501-7319",
+    "position": 16
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q19845608",
+    "names": [
+     "Daniela Digles"
+    ],
+    "orcid": "https://orcid.org/0000-0001-5934-3559",
+    "position": 8
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q19845625",
+    "names": [
+     "A. S. Waagmeester",
+     "A. Waagmeester",
+     "A.S. Waagmeester",
+     "AS Waagmeester",
+     "Andra S Waagmeester",
+     "Andra S. Waagmeester",
+     "Andra Sachinder Waagmeester",
+     "Andra Waagmeester",
+     "আন্ড্রা ভাগমেস্টার"
+    ],
+    "orcid": "https://orcid.org/0000-0001-9773-4008",
+    "position": 9
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q19845641",
+    "names": [
+     "C T A Evelo",
+     "C. Evelo",
+     "C.T. Evelo",
+     "CT Evelo",
+     "Chris Evelo",
+     "Chris T Evelo",
+     "Chris T. Evelo"
+    ],
+    "orcid": "https://orcid.org/0000-0002-5301-3142",
+    "position": 19
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q19851164",
+    "names": [
+     "S Coort",
+     "S.L.M. Coort",
+     "Susan Coort",
+     "Susan L Coort",
+     "Susan L. Coort"
+    ],
+    "orcid": "https://orcid.org/0000-0003-1224-9690",
+    "position": 4
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q20895241",
+    "names": [
+     "E Willighagen",
+     "E. Willighagen",
+     "E.L. Willighagen",
+     "EL Willighagen",
+     "Egon L Willighagen",
+     "Egon L. Willighagen",
+     "Egon Lennert Willighagen",
+     "Egon Willighagen",
+     "Egonw",
+     "Willighagen EL",
+     "Эгон Виллигхаген",
+     "এগোন ভিলিগহাগেন",
+     "埃貢·維利哈根",
+     "埃贡·威利哈根"
+    ],
+    "orcid": "https://orcid.org/0000-0001-7542-0286",
+    "position": 20
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q27987764",
+    "names": [
+     "Kutmon",
+     "Kutmon M",
+     "Kutmon M.",
+     "M Kutmon",
+     "M Summer-Kutmon",
+     "M. Kutmon",
+     "M. Summer-Kutmon",
+     "Martina Kutmon",
+     "Martina Summer-Kutmon",
+     "Mkutmon",
+     "Summer-Kutmon",
+     "Summer-Kutmon M",
+     "Summer-Kutmon M."
+    ],
+    "orcid": "https://orcid.org/0000-0002-7699-8191",
+    "position": 21
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q28025534",
+    "names": [
+     "Ehrhart",
+     "Ehrhart F.",
+     "F Ehrhart",
+     "F. Ehrhart",
+     "Freddie Ehrhart",
+     "Friederike Ehrhart"
+    ],
+    "orcid": "https://orcid.org/0000-0002-7770-620X",
+    "position": 7
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q28530149",
+    "names": [
+     "Alex Pico",
+     "Alexander Pico",
+     "Alexander R Pico",
+     "Alexander R. Pico"
+    ],
+    "orcid": "https://orcid.org/0000-0001-5706-2163",
+    "position": 22
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q28865047",
+    "names": [
+     "Kristina Hanspers"
+    ],
+    "orcid": "https://orcid.org/0000-0001-5410-599X",
+    "position": 3
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q42369611",
+    "names": [
+     "M. Martens",
+     "Marvin",
+     "Marvin Martens"
+    ],
+    "orcid": "https://orcid.org/0000-0003-2230-0840",
+    "position": 5
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q43370277",
+    "names": [
+     "Anders Riutta"
+    ],
+    "orcid": "https://orcid.org/0000-0002-4693-0591",
+    "position": 17
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q43744369",
+    "names": [
+     "D. Slenter",
+     "Denise N. Slenter",
+     "Denise Slenter"
+    ],
+    "orcid": "https://orcid.org/0000-0001-8449-1318",
+    "position": 6
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q45907528",
+    "names": [
+     "Lars Gerard Willighagen",
+     "Lars Willighagen",
+     "لارس وِلیگاگن"
+    ],
+    "orcid": "https://orcid.org/0000-0002-4751-4637",
+    "position": 15
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q89321648",
+    "names": [
+     "Tooba Abbassi-Daloii"
+    ],
+    "orcid": "https://orcid.org/0000-0002-4904-3269",
+    "position": 11
+   }
+  ]
+ },
+ "wikidata-work:10.3389/fphy.2023.1271842": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "item": "http://www.wikidata.org/entity/Q116446553",
+    "names": [
+     "Javi Millán",
+     "Javier Millán Acosta",
+     "jmillanacosta"
+    ],
+    "orcid": "https://orcid.org/0000-0002-4166-7093",
+    "position": 23
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q136007717",
+    "names": [
+     "Dieter Maier"
+    ],
+    "orcid": null,
+    "position": 1
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q20895241",
+    "names": [
+     "E Willighagen",
+     "E. Willighagen",
+     "E.L. Willighagen",
+     "EL Willighagen",
+     "Egon L Willighagen",
+     "Egon L. Willighagen",
+     "Egon Lennert Willighagen",
+     "Egon Willighagen",
+     "Egonw",
+     "Willighagen EL",
+     "Эгон Виллигхаген",
+     "এগোন ভিলিগহাগেন",
+     "埃貢·維利哈根",
+     "埃贡·威利哈根"
+    ],
+    "orcid": "https://orcid.org/0000-0001-7542-0286",
+    "position": 24
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q27061849",
+    "names": [
+     "Jeliazkova",
+     "Jeliazkova N",
+     "Jeliazkova N.",
+     "N Jeliazkova",
+     "N Nikolova",
+     "N Nikolova-Jeliazkova",
+     "N. Jeliazkova",
+     "N. Nikolova",
+     "N. Nikolova-Jeliazkova",
+     "Nikolova",
+     "Nikolova N",
+     "Nikolova N.",
+     "Nikolova-Jeliazkova",
+     "Nikolova-Jeliazkova N",
+     "Nikolova-Jeliazkova N.",
+     "Nina Jeliazkova",
+     "Nina Nikolova",
+     "Nina Nikolova-Jeliazkova",
+     "Nina Sheljaskowa",
+     "Нина Желязкова",
+     "Нина Николова",
+     "Нина Николова-Желязкова",
+     "Ніна Желязкова"
+    ],
+    "orcid": "https://orcid.org/0000-0002-4322-6179",
+    "position": 10
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q28541054",
+    "names": [
+     "H. Sarimveis",
+     "Haralambos Sarimveis"
+    ],
+    "orcid": "https://orcid.org/0000-0002-8607-9965",
+    "position": 18
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q28651697",
+    "names": [
+     "I. Lynch",
+     "Iseult Lynch",
+     "Iseult Yilmaz"
+    ],
+    "orcid": "https://orcid.org/0000-0003-4250-4584",
+    "position": 27
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q86442640",
+    "names": [
+     "A. Ammar",
+     "Ammar Ammar"
+    ],
+    "orcid": "https://orcid.org/0000-0002-8399-8990",
+    "position": 4
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q88046313",
+    "names": [
+     "Thomas E Exner",
+     "Thomas E. Exner",
+     "Thomas Exner"
+    ],
+    "orcid": "https://orcid.org/0000-0002-1849-5246",
+    "position": 2
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q92186214",
+    "names": [
+     "Laurent A Winckers",
+     "Laurent A. Winckers",
+     "Laurent Winckers"
+    ],
+    "orcid": "https://orcid.org/0000-0002-9454-4783",
+    "position": 22
+   }
+  ]
+ },
+ "wikidata-work:10.37044/osf.io/8qeh5_v1": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "item": "http://www.wikidata.org/entity/Q116446553",
+    "names": [
+     "Javi Millán",
+     "Javier Millán Acosta",
+     "jmillanacosta"
+    ],
+    "orcid": "https://orcid.org/0000-0002-4166-7093",
+    "position": 5
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q19845625",
+    "names": [
+     "A. S. Waagmeester",
+     "A. Waagmeester",
+     "A.S. Waagmeester",
+     "AS Waagmeester",
+     "Andra S Waagmeester",
+     "Andra S. Waagmeester",
+     "Andra Sachinder Waagmeester",
+     "Andra Waagmeester",
+     "আন্ড্রা ভাগমেস্টার"
+    ],
+    "orcid": "https://orcid.org/0000-0001-9773-4008",
+    "position": 4
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q51602692",
+    "names": [
+     "J.E. Labra",
+     "J.E. Labra-Gayo",
+     "J.E.L. Gayo",
+     "Jose E. Labra Gayo",
+     "Jose Emilio Labra Gayo",
+     "José Emilio Labra Gayo",
+     "José Labra"
+    ],
+    "orcid": "https://orcid.org/0000-0001-8907-5348",
+    "position": 1
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q54302726",
+    "names": [
+     "Shuichi Kawashima",
+     "川島秀一"
+    ],
+    "orcid": "https://orcid.org/0000-0001-7883-3756",
+    "position": 6
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q59490274",
+    "names": [
+     "Yamamoto Y",
+     "Yasunori Yamamoto",
+     "山本泰智"
+    ],
+    "orcid": "https://orcid.org/0000-0002-6943-6887",
+    "position": 2
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q63958202",
+    "names": [
+     "Julia Helmecke"
+    ],
+    "orcid": "https://orcid.org/0000-0002-7260-2129",
+    "position": 8
+   }
+  ]
+ },
+ "wikidata-work:10.37044/osf.io/ptmg5_v1": {
+  "checked": "2026-09-24",
+  "value": []
+ },
+ "wikidata-work:10.37044/osf.io/un2rw": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "item": "http://www.wikidata.org/entity/Q116446553",
+    "names": [
+     "Javi Millán",
+     "Javier Millán Acosta",
+     "jmillanacosta"
+    ],
+    "orcid": "https://orcid.org/0000-0002-4166-7093",
+    "position": 7
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q117834010",
+    "names": [
+     "Dominik Martinát"
+    ],
+    "orcid": "https://orcid.org/0000-0001-6611-7883",
+    "position": 6
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q124399961",
+    "names": [
+     "Jente Houweling"
+    ],
+    "orcid": "https://orcid.org/0009-0005-3680-0645",
+    "position": 14
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q127038569",
+    "names": [
+     "Lucy Sinke"
+    ],
+    "orcid": "https://orcid.org/0000-0002-9209-1266",
+    "position": 17
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q140771297",
+    "names": [
+     "Rob H Stierum",
+     "Rob Stierum",
+     "Stierum RH"
+    ],
+    "orcid": "https://orcid.org/0000-0002-4409-1974",
+    "position": 4
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q20895241",
+    "names": [
+     "E Willighagen",
+     "E. Willighagen",
+     "E.L. Willighagen",
+     "EL Willighagen",
+     "Egon L Willighagen",
+     "Egon L. Willighagen",
+     "Egon Lennert Willighagen",
+     "Egon Willighagen",
+     "Egonw",
+     "Willighagen EL",
+     "Эгон Виллигхаген",
+     "এগোন ভিলিগহাগেন",
+     "埃貢·維利哈根",
+     "埃贡·威利哈根"
+    ],
+    "orcid": "https://orcid.org/0000-0001-7542-0286",
+    "position": 19
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q28530416",
+    "names": [
+     "P. Nymark",
+     "Penny Nymark"
+    ],
+    "orcid": "https://orcid.org/0000-0002-3435-7775",
+    "position": 5
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q28651697",
+    "names": [
+     "I. Lynch",
+     "Iseult Lynch",
+     "Iseult Yilmaz"
+    ],
+    "orcid": "https://orcid.org/0000-0003-4250-4584",
+    "position": 2
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q42369611",
+    "names": [
+     "M. Martens",
+     "Marvin",
+     "Marvin Martens"
+    ],
+    "orcid": "https://orcid.org/0000-0003-2230-0840",
+    "position": 1
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q56459199",
+    "names": [
+     "C. Wittwehr",
+     "Clemens Wittwehr"
+    ],
+    "orcid": "https://orcid.org/0000-0003-2760-7702",
+    "position": 9
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q57058833",
+    "names": [
+     "Ulrike Wittig"
+    ],
+    "orcid": "https://orcid.org/0000-0002-9077-5664",
+    "position": 8
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q88046313",
+    "names": [
+     "Thomas E Exner",
+     "Thomas E. Exner",
+     "Thomas Exner"
+    ],
+    "orcid": "https://orcid.org/0000-0002-1849-5246",
+    "position": 3
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q89321648",
+    "names": [
+     "Tooba Abbassi-Daloii"
+    ],
+    "orcid": "https://orcid.org/0000-0002-4904-3269",
+    "position": 12
+   },
+   {
+    "item": "http://www.wikidata.org/entity/Q89571039",
+    "names": [
+     "O Cinar",
+     "Ozan Cinar",
+     "Ozan Çınar"
+    ],
+    "orcid": "https://orcid.org/0000-0003-0329-1977",
+    "position": 18
+   }
+  ]
+ },
+ "wikidata:Q100409486": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "ids": [
+     [
+      "P496",
+      "0000-0002-1297-3104"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q100409486",
+    "label": "Anastasios G Papadiamantis",
+    "orcid": "0000-0002-1297-3104"
+   }
+  ]
+ },
+ "wikidata:Q114718357": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "ids": [
+     [
+      "P496",
+      "0000-0003-1661-6304"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q114718357",
+    "label": "Elisson N. Lopes",
+    "orcid": "0000-0003-1661-6304"
+   }
+  ]
+ },
+ "wikidata:Q116446553": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "gh": "jmillanacosta",
+    "ids": [
+     [
+      "P496",
+      "0000-0002-4166-7093"
+     ],
+     [
+      "P2037",
+      "jmillanacosta"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q116446553",
+    "label": "Javier Millán Acosta",
+    "orcid": "0000-0002-4166-7093"
+   }
+  ]
+ },
+ "wikidata:Q117834010": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "ids": [
+     [
+      "P496",
+      "0000-0001-6611-7883"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q117834010",
+    "label": "Dominik Martinát",
+    "orcid": "0000-0001-6611-7883"
+   }
+  ]
+ },
+ "wikidata:Q118146531": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "ids": [
+     [
+      "P496",
+      "0000-0003-3213-4495"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q118146531",
+    "label": "Ana Claudia Sima",
+    "orcid": "0000-0003-3213-4495"
+   }
+  ]
+ },
+ "wikidata:Q123631021": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "ids": [
+     [
+      "P496",
+      "0000-0003-2878-4049"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q123631021",
+    "label": "Aishwarya Iyer",
+    "orcid": "0000-0003-2878-4049"
+   }
+  ]
+ },
+ "wikidata:Q123631063": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "ids": [
+     [
+      "P496",
+      "0000-0003-2940-8926"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q123631063",
+    "label": "Ayushi Agrawal",
+    "orcid": "0000-0003-2940-8926"
+   }
+  ]
+ },
+ "wikidata:Q124399961": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "ids": [
+     [
+      "P496",
+      "0009-0005-3680-0645"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q124399961",
+    "label": "Jente Houweling",
+    "orcid": "0009-0005-3680-0645"
+   }
+  ]
+ },
+ "wikidata:Q127038569": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "ids": [
+     [
+      "P496",
+      "0000-0002-9209-1266"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q127038569",
+    "label": "Lucy Sinke",
+    "orcid": "0000-0002-9209-1266"
+   }
+  ]
+ },
+ "wikidata:Q130642378": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "gh": "hasanbalci",
+    "ids": [
+     [
+      "P496",
+      "0000-0001-8319-7758"
+     ],
+     [
+      "P1960",
+      "TXx-jbMAAAAJ"
+     ],
+     [
+      "P2037",
+      "hasanbalci"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q130642378",
+    "label": "Hasan Balcı",
+    "orcid": "0000-0001-8319-7758",
+    "site": "https://hasanbalci.github.io/"
+   }
+  ]
+ },
+ "wikidata:Q136396711": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "ids": [
+     [
+      "P496",
+      "0000-0001-8501-7319"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q136396711",
+    "label": "Kozo Nishida",
+    "orcid": "0000-0001-8501-7319"
+   }
+  ]
+ },
+ "wikidata:Q140771297": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "ids": [
+     [
+      "P1960",
+      "UWQ4b4IAAAAJ"
+     ],
+     [
+      "P496",
+      "0000-0002-4409-1974"
+     ],
+     [
+      "P2798",
+      "2972065"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q140771297",
+    "label": "Rob Stierum",
+    "orcid": "0000-0002-4409-1974"
+   }
+  ]
+ },
+ "wikidata:Q19845608": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "ids": [
+     [
+      "P496",
+      "0000-0001-5934-3559"
+     ],
+     [
+      "P6178",
+      "01330425432.95"
+     ],
+     [
+      "P10861",
+      "01330425432.95"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q19845608",
+    "label": "Daniela Digles",
+    "orcid": "0000-0001-5934-3559"
+   }
+  ]
+ },
+ "wikidata:Q19845625": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "gh": "andrawaag",
+    "ids": [
+     [
+      "P496",
+      "0000-0001-9773-4008"
+     ],
+     [
+      "P1153",
+      "25652418300"
+     ],
+     [
+      "P2002",
+      "andrawaag"
+     ],
+     [
+      "P2037",
+      "andrawaag"
+     ],
+     [
+      "P4232",
+      "97751"
+     ],
+     [
+      "P2456",
+      "118/8399"
+     ],
+     [
+      "P1960",
+      "klqHM4sAAAAJ"
+     ],
+     [
+      "P4012",
+      "2403074"
+     ],
+     [
+      "P6660",
+      "200091"
+     ],
+     [
+      "P2397",
+      "UCflBtXUtiSUaUl4ySVGApfw"
+     ],
+     [
+      "P4174",
+      "Andrawaag"
+     ],
+     [
+      "P6178",
+      "01154164265.41"
+     ],
+     [
+      "P6023",
+      "2083174977"
+     ],
+     [
+      "P6366",
+      "2009985931"
+     ],
+     [
+      "P6634",
+      "andra-waagmeester-4785792"
+     ],
+     [
+      "P10897",
+      "R68128"
+     ],
+     [
+      "P4033",
+      "Andrawaag@genomic.social"
+     ],
+     [
+      "P10861",
+      "01154164265.41"
+     ],
+     [
+      "P11245",
+      "andrawaagmeester5518"
+     ],
+     [
+      "P12045",
+      "andrawaag"
+     ],
+     [
+      "P12022",
+      "488776"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q19845625",
+    "label": "Andra Waagmeester",
+    "orcid": "0000-0001-9773-4008"
+   }
+  ]
+ },
+ "wikidata:Q19845641": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "gh": "Chris-Evelo",
+    "ids": [
+     [
+      "P496",
+      "0000-0002-5301-3142"
+     ],
+     [
+      "P213",
+      "0000000397135632"
+     ],
+     [
+      "P214",
+      "292237755"
+     ],
+     [
+      "P2037",
+      "Chris-Evelo"
+     ],
+     [
+      "P2002",
+      "Chris_Evelo"
+     ],
+     [
+      "P1960",
+      "2dm_Du0AAAAJ"
+     ],
+     [
+      "P1153",
+      "7003950754"
+     ],
+     [
+      "P1006",
+      "069261504"
+     ],
+     [
+      "P2381",
+      "754143"
+     ],
+     [
+      "P2456",
+      "74/5894"
+     ],
+     [
+      "P7449",
+      "PRS1311973"
+     ],
+     [
+      "P6178",
+      "0724301327.68"
+     ],
+     [
+      "P2013",
+      "chrisevelo"
+     ],
+     [
+      "P6634",
+      "chrisevelo"
+     ],
+     [
+      "P10861",
+      "0724301327.68"
+     ],
+     [
+      "P227",
+      "1209971186"
+     ],
+     [
+      "P10832",
+      "E39PBJfx49FHKfyXCQfBFYgxjC"
+     ],
+     [
+      "P4174",
+      "Chris Evelo"
+     ],
+     [
+      "P13049",
+      "1209971186"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q19845641",
+    "label": "Chris T. Evelo",
+    "orcid": "0000-0002-5301-3142"
+   }
+  ]
+ },
+ "wikidata:Q19851164": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "ids": [
+     [
+      "P496",
+      "0000-0003-1224-9690"
+     ],
+     [
+      "P2002",
+      "SusanCoort"
+     ],
+     [
+      "P1960",
+      "XyHJkkMAAAAJ"
+     ],
+     [
+      "P2456",
+      "01/7107"
+     ],
+     [
+      "P6178",
+      "01252344370.39"
+     ],
+     [
+      "P10861",
+      "01252344370.39"
+     ],
+     [
+      "P227",
+      "120998556X"
+     ],
+     [
+      "P214",
+      "6974158982607256190006"
+     ],
+     [
+      "P4033",
+      "susancoort@akademienl.social"
+     ],
+     [
+      "P13049",
+      "120998556X"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q19851164",
+    "label": "Susan Coort",
+    "orcid": "0000-0003-1224-9690"
+   }
+  ]
+ },
+ "wikidata:Q20895241": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "gh": "egonw",
+    "ids": [
+     [
+      "P214",
+      "81695167"
+     ],
+     [
+      "P496",
+      "0000-0001-7542-0286"
+     ],
+     [
+      "P2037",
+      "egonw"
+     ],
+     [
+      "P213",
+      "0000000389212124"
+     ],
+     [
+      "P1053",
+      "GFN-3033-2022"
+     ],
+     [
+      "P1153",
+      "6507481906"
+     ],
+     [
+      "P4232",
+      "96390"
+     ],
+     [
+      "P1960",
+      "u8SjMZ0AAAAJ"
+     ],
+     [
+      "P2798",
+      "348499"
+     ],
+     [
+      "P2456",
+      "99/3476"
+     ],
+     [
+      "P4174",
+      "Egonw"
+     ],
+     [
+      "P4174",
+      "Egon_Willighagen"
+     ],
+     [
+      "P1006",
+      "308108485"
+     ],
+     [
+      "P4033",
+      "egonw@social.edu.nl"
+     ],
+     [
+      "P6178",
+      "01025257214.29"
+     ],
+     [
+      "P6366",
+      "303257169"
+     ],
+     [
+      "P7449",
+      "PRS1326065"
+     ],
+     [
+      "P6634",
+      "egon-willighagen"
+     ],
+     [
+      "P6023",
+      "39655307"
+     ],
+     [
+      "P10557",
+      "egonw"
+     ],
+     [
+      "P10283",
+      "a5060194743"
+     ],
+     [
+      "P10897",
+      "R68155"
+     ],
+     [
+      "P1015",
+      "14028450"
+     ],
+     [
+      "P227",
+      "120995639X"
+     ],
+     [
+      "P10861",
+      "01025257214.29"
+     ],
+     [
+      "P11249",
+      "14037081"
+     ],
+     [
+      "P12045",
+      "egonw"
+     ],
+     [
+      "P2671",
+      "/g/11ckvf98t2"
+     ],
+     [
+      "P2381",
+      "753992"
+     ],
+     [
+      "P13049",
+      "120995639X"
+     ],
+     [
+      "P12361",
+      "egonw.social.edu.nl.ap.brid.gy"
+     ],
+     [
+      "P12361",
+      "egonw.mastodon.social.ap.brid.gy"
+     ],
+     [
+      "P14252",
+      "egonw"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q20895241",
+    "label": "Egon Willighagen",
+    "orcid": "0000-0001-7542-0286",
+    "site": "https://egonw.github.io/"
+   }
+  ]
+ },
+ "wikidata:Q27061849": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "gh": "vedina",
+    "ids": [
+     [
+      "P2002",
+      "10705013"
+     ],
+     [
+      "P2037",
+      "vedina"
+     ],
+     [
+      "P1960",
+      "2eBL2WMAAAAJ"
+     ],
+     [
+      "P2038",
+      "Nina_Jeliazkova"
+     ],
+     [
+      "P496",
+      "0000-0002-4322-6179"
+     ],
+     [
+      "P1153",
+      "8378341000"
+     ],
+     [
+      "P2456",
+      "83/4154"
+     ],
+     [
+      "P2798",
+      "740592"
+     ],
+     [
+      "P6178",
+      "01073372414.07"
+     ],
+     [
+      "P6634",
+      "ninajeliazkova"
+     ],
+     [
+      "P10861",
+      "01073372414.07"
+     ],
+     [
+      "P4033",
+      "n10705013@mastodon.social"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q27061849",
+    "label": "Nina Jeliazkova",
+    "orcid": "0000-0002-4322-6179"
+   }
+  ]
+ },
+ "wikidata:Q27902110": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "gh": "jannahastings",
+    "ids": [
+     [
+      "P1960",
+      "cz-hhPUAAAAJ"
+     ],
+     [
+      "P2037",
+      "jannahastings"
+     ],
+     [
+      "P496",
+      "0000-0002-3469-4923"
+     ],
+     [
+      "P2456",
+      "85/5079"
+     ],
+     [
+      "P6178",
+      "0606506716.14"
+     ],
+     [
+      "P2002",
+      "jannahastings"
+     ],
+     [
+      "P2013",
+      "jannahastings"
+     ],
+     [
+      "P6634",
+      "janna-hastings-4282981a"
+     ],
+     [
+      "P10861",
+      "0606506716.14"
+     ],
+     [
+      "P227",
+      "122119920X"
+     ],
+     [
+      "P214",
+      "7160544379009980626"
+     ],
+     [
+      "P12361",
+      "jannahastings.bsky.social"
+     ],
+     [
+      "P13591",
+      "person/d51b416f-a98f-4208-b380-745f29c76ad8"
+     ],
+     [
+      "P13049",
+      "122119920X"
+     ],
+     [
+      "P4033",
+      "jannahastings@mastodon.online"
+     ],
+     [
+      "P1015",
+      "1691037120124"
+     ],
+     [
+      "P5034",
+      "KAC202450287"
+     ],
+     [
+      "P244",
+      "no2021015125"
+     ],
+     [
+      "P7699",
+      "LNB:DRNe;=Bf"
+     ],
+     [
+      "P269",
+      "273463608"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q27902110",
+    "label": "Janna Hastings",
+    "orcid": "0000-0002-3469-4923",
+    "site": "http://www.babraham.ac.uk/our-research/epigenetics/olivia-casanueva/members/433/janna-hastings"
+   }
+  ]
+ },
+ "wikidata:Q27987764": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "gh": "mkutmon",
+    "ids": [
+     [
+      "P1960",
+      "w8Y7oXAAAAAJ"
+     ],
+     [
+      "P496",
+      "0000-0002-7699-8191"
+     ],
+     [
+      "P2002",
+      "mkutmon"
+     ],
+     [
+      "P2037",
+      "mkutmon"
+     ],
+     [
+      "P4232",
+      "547830"
+     ],
+     [
+      "P2456",
+      "93/11250"
+     ],
+     [
+      "P6178",
+      "01021325107.94"
+     ],
+     [
+      "P2038",
+      "Martina_Kutmon"
+     ],
+     [
+      "P10861",
+      "01021325107.94"
+     ],
+     [
+      "P4033",
+      "mkutmon@social.edu.nl"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q27987764",
+    "label": "Martina Summer-Kutmon",
+    "orcid": "0000-0002-7699-8191",
+    "site": "https://www.maastrichtuniversity.nl/martina.kutmon"
+   }
+  ]
+ },
+ "wikidata:Q28025534": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "ids": [
+     [
+      "P496",
+      "0000-0002-7770-620X"
+     ],
+     [
+      "P1960",
+      "RM_XJc4AAAAJ"
+     ],
+     [
+      "P6634",
+      "friederike-ehrhart-41a18174"
+     ],
+     [
+      "P6178",
+      "01010764054.61"
+     ],
+     [
+      "P4174",
+      "Fehrhart"
+     ],
+     [
+      "P10861",
+      "01010764054.61"
+     ],
+     [
+      "P227",
+      "1017123535"
+     ],
+     [
+      "P214",
+      "219093961"
+     ],
+     [
+      "P2671",
+      "/g/11ddyj3q8_"
+     ],
+     [
+      "P13049",
+      "1017123535"
+     ],
+     [
+      "P213",
+      "0000000139642412"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q28025534",
+    "label": "Friederike Ehrhart",
+    "orcid": "0000-0002-7770-620X",
+    "site": "https://www.maastrichtuniversity.nl/friederike.ehrhart"
+   }
+  ]
+ },
+ "wikidata:Q28530149": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "ids": [
+     [
+      "P496",
+      "0000-0001-5706-2163"
+     ],
+     [
+      "P1153",
+      "17342562100"
+     ],
+     [
+      "P2456",
+      "80/540"
+     ],
+     [
+      "P2002",
+      "xanderpico"
+     ],
+     [
+      "P1960",
+      "FUsTMX8AAAAJ"
+     ],
+     [
+      "P2038",
+      "Alexander_Pico"
+     ],
+     [
+      "P6178",
+      "010737604377.35"
+     ],
+     [
+      "P10897",
+      "R68143"
+     ],
+     [
+      "P4174",
+      "AlexanderPico"
+     ],
+     [
+      "P10861",
+      "010737604377.35"
+     ],
+     [
+      "P227",
+      "1209952807"
+     ],
+     [
+      "P4033",
+      "xanderpico@qoto.org"
+     ],
+     [
+      "P214",
+      "4303158982599556190007"
+     ],
+     [
+      "P10832",
+      "E39PCjFMRc64vTXbmBTfy3PvpP"
+     ],
+     [
+      "P13049",
+      "1209952807"
+     ],
+     [
+      "P2671",
+      "/g/11c6dhxx7d"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q28530149",
+    "label": "Alexander R. Pico",
+    "orcid": "0000-0001-5706-2163"
+   }
+  ]
+ },
+ "wikidata:Q28530416": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "ids": [
+     [
+      "P1960",
+      "cuyej7sAAAAJ"
+     ],
+     [
+      "P496",
+      "0000-0002-3435-7775"
+     ],
+     [
+      "P213",
+      "0000000098972748"
+     ],
+     [
+      "P2798",
+      "586709"
+     ],
+     [
+      "P244",
+      "n2010183303"
+     ],
+     [
+      "P214",
+      "126274538"
+     ],
+     [
+      "P8980",
+      "000140475"
+     ],
+     [
+      "P6178",
+      "01306363211.33"
+     ],
+     [
+      "P2002",
+      "pennynymark"
+     ],
+     [
+      "P10861",
+      "01306363211.33"
+     ],
+     [
+      "P227",
+      "1209984997"
+     ],
+     [
+      "P10832",
+      "E39PBJvcXHh64WC6gDQHBK9v73"
+     ],
+     [
+      "P4033",
+      "pennyn@mastodon.social"
+     ],
+     [
+      "P13049",
+      "1209984997"
+     ],
+     [
+      "P2671",
+      "/g/11f0zc1310"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q28530416",
+    "label": "Penny Nymark",
+    "orcid": "0000-0002-3435-7775"
+   }
+  ]
+ },
+ "wikidata:Q28541054": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "ids": [
+     [
+      "P1960",
+      "cMSdr64AAAAJ"
+     ],
+     [
+      "P496",
+      "0000-0002-8607-9965"
+     ],
+     [
+      "P2456",
+      "54/5645"
+     ],
+     [
+      "P2671",
+      "/g/11c31tfdsl"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q28541054",
+    "label": "Haralambos Sarimveis",
+    "orcid": "0000-0002-8607-9965"
+   }
+  ]
+ },
+ "wikidata:Q28651697": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "ids": [
+     [
+      "P1960",
+      "4JfAAjsAAAAJ"
+     ],
+     [
+      "P2002",
+      "iseult5"
+     ],
+     [
+      "P496",
+      "0000-0003-4250-4584"
+     ],
+     [
+      "P1153",
+      "6603538848"
+     ],
+     [
+      "P1053",
+      "I-3915-2014"
+     ],
+     [
+      "P2798",
+      "126618"
+     ],
+     [
+      "P1280",
+      "266887011"
+     ],
+     [
+      "P3829",
+      "435900"
+     ],
+     [
+      "P8446",
+      "56F82A27-2C2D-42BB-9D25-E62FFC06B887"
+     ],
+     [
+      "P2671",
+      "/g/11dxhflvys"
+     ],
+     [
+      "P6178",
+      "01363165122.23"
+     ],
+     [
+      "P6634",
+      "iseult-lynch-b5856910"
+     ],
+     [
+      "P10897",
+      "R135898"
+     ],
+     [
+      "P10861",
+      "01363165122.23"
+     ],
+     [
+      "P244",
+      "no2024018398"
+     ],
+     [
+      "P214",
+      "8190170939451115660000"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q28651697",
+    "label": "Iseult Lynch",
+    "orcid": "0000-0003-4250-4584",
+    "site": "http://www.birmingham.ac.uk/schools/gees/people/profile.aspx?ReferenceId=56477"
+   }
+  ]
+ },
+ "wikidata:Q28865047": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "ids": [
+     [
+      "P1960",
+      "Qji_JPIAAAAJ"
+     ],
+     [
+      "P496",
+      "0000-0001-5410-599X"
+     ],
+     [
+      "P2456",
+      "17/7098"
+     ],
+     [
+      "P6178",
+      "0753211707.71"
+     ],
+     [
+      "P10897",
+      "R68134"
+     ],
+     [
+      "P10861",
+      "0753211707.71"
+     ],
+     [
+      "P2671",
+      "/g/11dxhfrfx7"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q28865047",
+    "label": "Kristina Hanspers",
+    "orcid": "0000-0001-5410-599X"
+   }
+  ]
+ },
+ "wikidata:Q39585759": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "ids": [
+     [
+      "P496",
+      "0000-0001-5416-085X"
+     ],
+     [
+      "P1153",
+      "6602909744"
+     ],
+     [
+      "P1053",
+      "D-1568-2015"
+     ],
+     [
+      "P2798",
+      "313914"
+     ],
+     [
+      "P3829",
+      "2426527"
+     ],
+     [
+      "P227",
+      "1241219656"
+     ],
+     [
+      "P214",
+      "3812163211501007580003"
+     ],
+     [
+      "P13049",
+      "1241219656"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q39585759",
+    "label": "Martin Himly",
+    "orcid": "0000-0001-5416-085X"
+   }
+  ]
+ },
+ "wikidata:Q42369611": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "ids": [
+     [
+      "P496",
+      "0000-0003-2230-0840"
+     ],
+     [
+      "P3835",
+      "marvin-martens"
+     ],
+     [
+      "P2798",
+      "542384"
+     ],
+     [
+      "P1960",
+      "GvOHiicAAAAJ"
+     ],
+     [
+      "P2002",
+      "mmarvinm2"
+     ],
+     [
+      "P4033",
+      "Marvin@social.edu.nl"
+     ],
+     [
+      "P2671",
+      "/g/11gcl1c4cs"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q42369611",
+    "label": "Marvin Martens",
+    "orcid": "0000-0003-2230-0840",
+    "site": "https://cris.maastrichtuniversity.nl/en/persons/a7490e9a-a51d-48a6-ad0f-4e295a3fd29e"
+   }
+  ]
+ },
+ "wikidata:Q43370277": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "ids": [
+     [
+      "P496",
+      "0000-0002-4693-0591"
+     ],
+     [
+      "P10897",
+      "R68145"
+     ],
+     [
+      "P4033",
+      "anders@scholar.social"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q43370277",
+    "label": "Anders Riutta",
+    "orcid": "0000-0002-4693-0591"
+   }
+  ]
+ },
+ "wikidata:Q43744369": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "ids": [
+     [
+      "P496",
+      "0000-0001-8449-1318"
+     ],
+     [
+      "P1960",
+      "Le-4tuQAAAAJ"
+     ],
+     [
+      "P4232",
+      "4784898"
+     ],
+     [
+      "P6634",
+      "deniseslenter"
+     ],
+     [
+      "P10897",
+      "R68149"
+     ],
+     [
+      "P6178",
+      "0705125735.07"
+     ],
+     [
+      "P2671",
+      "/g/11f676sy5g"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q43744369",
+    "label": "Denise Slenter",
+    "orcid": "0000-0001-8449-1318"
+   }
+  ]
+ },
+ "wikidata:Q45351113": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "ids": [
+     [
+      "P496",
+      "0000-0002-5231-0639"
+     ],
+     [
+      "P1053",
+      "E-6214-2012"
+     ],
+     [
+      "P3829",
+      "1210787"
+     ],
+     [
+      "P1153",
+      "6603676954"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q45351113",
+    "label": "Vladimir Lobaskin",
+    "orcid": "0000-0002-5231-0639"
+   }
+  ]
+ },
+ "wikidata:Q45907528": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "gh": "larsgw",
+    "ids": [
+     [
+      "P2037",
+      "larsgw"
+     ],
+     [
+      "P496",
+      "0000-0002-4751-4637"
+     ],
+     [
+      "P3835",
+      "lars-willighagen"
+     ],
+     [
+      "P2002",
+      "larswillighagen"
+     ],
+     [
+      "P10283",
+      "A2912709654"
+     ],
+     [
+      "P2456",
+      "236/1729"
+     ],
+     [
+      "P4033",
+      "larsgw@mastodon.social"
+     ],
+     [
+      "P1960",
+      "r9lmG00AAAAJ"
+     ],
+     [
+      "P2671",
+      "/g/11hbth2kmh"
+     ],
+     [
+      "P8827",
+      "larsgw"
+     ],
+     [
+      "P12361",
+      "larswillighagen.bsky.social"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q45907528",
+    "label": "Lars Willighagen",
+    "orcid": "0000-0002-4751-4637",
+    "site": "https://larsgw.github.io/"
+   }
+  ]
+ },
+ "wikidata:Q47475003": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "gh": "cthoyt",
+    "ids": [
+     [
+      "P496",
+      "0000-0003-4423-4370"
+     ],
+     [
+      "P2038",
+      "Charles_Hoyt"
+     ],
+     [
+      "P4232",
+      "4784217"
+     ],
+     [
+      "P2037",
+      "cthoyt"
+     ],
+     [
+      "P1053",
+      "B-5720-2018"
+     ],
+     [
+      "P1960",
+      "PjrpzUIAAAAJ"
+     ],
+     [
+      "P1153",
+      "56305849200"
+     ],
+     [
+      "P4174",
+      "cthoyt"
+     ],
+     [
+      "P5039",
+      "229233"
+     ],
+     [
+      "P2002",
+      "cthoyt"
+     ],
+     [
+      "P2381",
+      "772820"
+     ],
+     [
+      "P3829",
+      "1981638"
+     ],
+     [
+      "P2456",
+      "199/2168"
+     ],
+     [
+      "P2798",
+      "827476"
+     ],
+     [
+      "P4012",
+      "35477117"
+     ],
+     [
+      "P6634",
+      "cthoyt"
+     ],
+     [
+      "P8964",
+      "Charles_Tapley_Hoyt1"
+     ],
+     [
+      "P4594",
+      "hoyt_c_1"
+     ],
+     [
+      "P4033",
+      "cthoyt@scholar.social"
+     ],
+     [
+      "P10283",
+      "A2765723454"
+     ],
+     [
+      "P11534",
+      "cthoyt"
+     ],
+     [
+      "P1556",
+      "hoyt.charles-tapley"
+     ],
+     [
+      "P227",
+      "1203140533"
+     ],
+     [
+      "P214",
+      "5158003823401882178"
+     ],
+     [
+      "P4411",
+      "Charlie-Hoyt-1"
+     ],
+     [
+      "P8159",
+      "1072667"
+     ],
+     [
+      "P7238",
+      "vytn9"
+     ],
+     [
+      "P13049",
+      "1203140533"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q47475003",
+    "orcid": "0000-0003-4423-4370",
+    "site": "https://cthoyt.com"
+   }
+  ]
+ },
+ "wikidata:Q51602692": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "gh": "labra",
+    "ids": [
+     [
+      "P496",
+      "0000-0001-8907-5348"
+     ],
+     [
+      "P1153",
+      "8374489000"
+     ],
+     [
+      "P1053",
+      "L-9181-2014"
+     ],
+     [
+      "P2456",
+      "32/2604"
+     ],
+     [
+      "P1960",
+      "TGfRNZkAAAAJ"
+     ],
+     [
+      "P244",
+      "no2017150147"
+     ],
+     [
+      "P3829",
+      "1348378"
+     ],
+     [
+      "P2037",
+      "labra"
+     ],
+     [
+      "P4419",
+      "jose_emilio_labra_gayo"
+     ],
+     [
+      "P214",
+      "43151110634237061417"
+     ],
+     [
+      "P214",
+      "24155189997782132904"
+     ],
+     [
+      "P4012",
+      "1729679"
+     ],
+     [
+      "P2038",
+      "Jose-Labra-Gayo"
+     ],
+     [
+      "P691",
+      "ctu20191025692"
+     ],
+     [
+      "P4174",
+      "Jelabra"
+     ],
+     [
+      "P227",
+      "119956978X"
+     ],
+     [
+      "P4033",
+      "jelabra@mastodon.social"
+     ],
+     [
+      "P2002",
+      "jelabra"
+     ],
+     [
+      "P1556",
+      "labra-gayo.jose-emilio"
+     ],
+     [
+      "P10832",
+      "E39PBJr3rV79ff7gbBrYQYrcyd"
+     ],
+     [
+      "P213",
+      "0000000486389263"
+     ],
+     [
+      "P13591",
+      "person/3c0cfa05-ccb4-4168-ad6d-7a0ea748e889"
+     ],
+     [
+      "P13049",
+      "119956978X"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q51602692",
+    "label": "José Emilio Labra Gayo",
+    "orcid": "0000-0001-8907-5348",
+    "site": "http://labra.weso.es"
+   },
+   {
+    "gh": "labra",
+    "ids": [
+     [
+      "P496",
+      "0000-0001-8907-5348"
+     ],
+     [
+      "P1153",
+      "8374489000"
+     ],
+     [
+      "P1053",
+      "L-9181-2014"
+     ],
+     [
+      "P2456",
+      "32/2604"
+     ],
+     [
+      "P1960",
+      "TGfRNZkAAAAJ"
+     ],
+     [
+      "P244",
+      "no2017150147"
+     ],
+     [
+      "P3829",
+      "1348378"
+     ],
+     [
+      "P2037",
+      "labra"
+     ],
+     [
+      "P4419",
+      "jose_emilio_labra_gayo"
+     ],
+     [
+      "P214",
+      "43151110634237061417"
+     ],
+     [
+      "P214",
+      "24155189997782132904"
+     ],
+     [
+      "P4012",
+      "1729679"
+     ],
+     [
+      "P2038",
+      "Jose-Labra-Gayo"
+     ],
+     [
+      "P691",
+      "ctu20191025692"
+     ],
+     [
+      "P4174",
+      "Jelabra"
+     ],
+     [
+      "P227",
+      "119956978X"
+     ],
+     [
+      "P4033",
+      "jelabra@mastodon.social"
+     ],
+     [
+      "P2002",
+      "jelabra"
+     ],
+     [
+      "P1556",
+      "labra-gayo.jose-emilio"
+     ],
+     [
+      "P10832",
+      "E39PBJr3rV79ff7gbBrYQYrcyd"
+     ],
+     [
+      "P213",
+      "0000000486389263"
+     ],
+     [
+      "P13591",
+      "person/3c0cfa05-ccb4-4168-ad6d-7a0ea748e889"
+     ],
+     [
+      "P13049",
+      "119956978X"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q51602692",
+    "label": "José Emilio Labra Gayo",
+    "orcid": "0000-0001-8907-5348",
+    "site": "http://di002.edv.uniovi.es/~labra/"
+   }
+  ]
+ },
+ "wikidata:Q54302726": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "ids": [
+     [
+      "P496",
+      "0000-0001-7883-3756"
+     ],
+     [
+      "P5029",
+      "shuichikawashima"
+     ],
+     [
+      "P7783",
+      "201801003095599572"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q54302726",
+    "label": "Shuichi Kawashima",
+    "orcid": "0000-0001-7883-3756"
+   }
+  ]
+ },
+ "wikidata:Q54303216": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "gh": "gkoutos",
+    "ids": [
+     [
+      "P496",
+      "0000-0002-2061-091X"
+     ],
+     [
+      "P1153",
+      "6603260099"
+     ],
+     [
+      "P2456",
+      "24/3635"
+     ],
+     [
+      "P8446",
+      "08A003D5-A372-44A0-B9D2-CD02C716E21B"
+     ],
+     [
+      "P2037",
+      "gkoutos"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q54303216",
+    "label": "Georgios V. Gkoutos",
+    "orcid": "0000-0002-2061-091X"
+   }
+  ]
+ },
+ "wikidata:Q55453416": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "ids": [
+     [
+      "P1153",
+      "7003266865"
+     ],
+     [
+      "P496",
+      "0000-0003-2102-3626"
+     ],
+     [
+      "P6634",
+      "theo-de-kok-b235556"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q55453416",
+    "label": "Theo M C M de Kok",
+    "orcid": "0000-0003-2102-3626",
+    "site": "https://www.maastrichtuniversity.nl/tmcm-de-kok"
+   }
+  ]
+ },
+ "wikidata:Q56459199": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "ids": [
+     [
+      "P496",
+      "0000-0003-2760-7702"
+     ],
+     [
+      "P1153",
+      "37073939200"
+     ],
+     [
+      "P6178",
+      "0700115266.57"
+     ],
+     [
+      "P2456",
+      "162/0566"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q56459199",
+    "label": "Clemens Wittwehr",
+    "orcid": "0000-0003-2760-7702"
+   }
+  ]
+ },
+ "wikidata:Q56510144": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "ids": [
+     [
+      "P496",
+      "0000-0003-1781-5508"
+     ],
+     [
+      "P1153",
+      "21743037300"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q56510144",
+    "label": "Hailiang Mei",
+    "orcid": "0000-0003-1781-5508"
+   }
+  ]
+ },
+ "wikidata:Q56888653": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "ids": [
+     [
+      "P496",
+      "0000-0002-7449-1266"
+     ],
+     [
+      "P2456",
+      "64/8909"
+     ],
+     [
+      "P4033",
+      "jerven@akademienl.social"
+     ],
+     [
+      "P2002",
+      "jervenbolleman"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q56888653",
+    "label": "Jerven Bolleman",
+    "orcid": "0000-0002-7449-1266"
+   }
+  ]
+ },
+ "wikidata:Q57058833": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "ids": [
+     [
+      "P496",
+      "0000-0002-9077-5664"
+     ],
+     [
+      "P227",
+      "1207479845"
+     ],
+     [
+      "P214",
+      "3049158630991223370001"
+     ],
+     [
+      "P13049",
+      "1207479845"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q57058833",
+    "label": "Ulrike Wittig",
+    "orcid": "0000-0002-9077-5664"
+   }
+  ]
+ },
+ "wikidata:Q58484212": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "ids": [
+     [
+      "P496",
+      "0000-0003-2391-0384"
+     ],
+     [
+      "P5029",
+      "toshiakikatayama"
+     ],
+     [
+      "P7783",
+      "201801000137642717"
+     ],
+     [
+      "P6178",
+      "01237652002.94"
+     ],
+     [
+      "P2456",
+      "31/1739"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q58484212",
+    "label": "Toshiaki Katayama",
+    "orcid": "0000-0003-2391-0384"
+   }
+  ]
+ },
+ "wikidata:Q59490274": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "ids": [
+     [
+      "P496",
+      "0000-0002-6943-6887"
+     ],
+     [
+      "P9776",
+      "50470076"
+     ],
+     [
+      "P5029",
+      "yayamamo"
+     ],
+     [
+      "P7783",
+      "202101014410918182"
+     ],
+     [
+      "P11496",
+      "1420564276175229824"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q59490274",
+    "label": "Yasunori Yamamoto",
+    "orcid": "0000-0002-6943-6887"
+   }
+  ]
+ },
+ "wikidata:Q63958202": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "ids": [
+     [
+      "P496",
+      "0000-0002-7260-2129"
+     ],
+     [
+      "P10897",
+      "R49448"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q63958202",
+    "label": "Julia Helmecke",
+    "orcid": "0000-0002-7260-2129"
+   }
+  ]
+ },
+ "wikidata:Q70206064": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "gh": "YojanaGadiya",
+    "ids": [
+     [
+      "P496",
+      "0000-0002-7683-0452"
+     ],
+     [
+      "P2798",
+      "1000457"
+     ],
+     [
+      "P2798",
+      "1026896"
+     ],
+     [
+      "P2037",
+      "YojanaGadiya"
+     ],
+     [
+      "P6634",
+      "yojana-gadiya-477739113"
+     ],
+     [
+      "P10897",
+      "R71718"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q70206064",
+    "label": "Yojana Gadiya",
+    "orcid": "0000-0002-7683-0452"
+   }
+  ]
+ },
+ "wikidata:Q86442640": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "gh": "ammar257ammar",
+    "ids": [
+     [
+      "P496",
+      "0000-0002-8399-8990"
+     ],
+     [
+      "P2002",
+      "ammar257ammar"
+     ],
+     [
+      "P1960",
+      "8ZmXyZcAAAAJ"
+     ],
+     [
+      "P10897",
+      "R135901"
+     ],
+     [
+      "P2037",
+      "ammar257ammar"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q86442640",
+    "label": "Ammar Ammar",
+    "orcid": "0000-0002-8399-8990"
+   }
+  ]
+ },
+ "wikidata:Q88046313": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "ids": [
+     [
+      "P496",
+      "0000-0002-1849-5246"
+     ],
+     [
+      "P2456",
+      "61/1998"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q88046313",
+    "label": "Thomas E Exner",
+    "orcid": "0000-0002-1849-5246"
+   }
+  ]
+ },
+ "wikidata:Q89321648": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "gh": "tabbassidaloii",
+    "ids": [
+     [
+      "P496",
+      "0000-0002-4904-3269"
+     ],
+     [
+      "P6178",
+      "01030411721.57"
+     ],
+     [
+      "P1960",
+      "wEWNulIAAAAJ"
+     ],
+     [
+      "P2037",
+      "tabbassidaloii"
+     ],
+     [
+      "P4033",
+      "Tooba@social.edu.nl"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q89321648",
+    "label": "Tooba Abbassi-Daloii",
+    "orcid": "0000-0002-4904-3269"
+   }
+  ]
+ },
+ "wikidata:Q89571039": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "gh": "ozancinar",
+    "ids": [
+     [
+      "P496",
+      "0000-0003-0329-1977"
+     ],
+     [
+      "P2037",
+      "ozancinar"
+     ],
+     [
+      "P1556",
+      "cinar.ozan"
+     ],
+     [
+      "P1960",
+      "8ju6O2AAAAAJ"
+     ],
+     [
+      "P227",
+      "1156792371"
+     ],
+     [
+      "P6178",
+      "011306654323.43"
+     ],
+     [
+      "P214",
+      "6017152502937210800006"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q89571039",
+    "label": "Ozan Çınar",
+    "orcid": "0000-0003-0329-1977"
+   }
+  ]
+ },
+ "wikidata:Q92186214": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "ids": [
+     [
+      "P496",
+      "0000-0002-9454-4783"
+     ],
+     [
+      "P10897",
+      "R135896"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q92186214",
+    "label": "Laurent Winckers",
+    "orcid": "0000-0002-9454-4783"
+   }
+  ]
+ },
+ "wikidata:Q96189622": {
+  "checked": "2026-09-24",
+  "value": [
+   {
+    "ids": [
+     [
+      "P496",
+      "0000-0003-1062-5576"
+     ],
+     [
+      "P2798",
+      "442508"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q96189622",
+    "label": "Gerhard A Burger",
+    "orcid": "0000-0003-1062-5576"
+   }
+  ]
+ }
 }

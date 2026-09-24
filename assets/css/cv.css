@@ -589,6 +589,14 @@ a.work-name:hover {
     display: flex;
   }
 
+  .contact-more {
+    display: inline;
+  }
+
+  .more-links:popover-open {
+    display: block;
+  }
+
   .skip-link {
     display: block;
     position: fixed;
@@ -1123,6 +1131,71 @@ a.work-name:hover {
   color: var(--muted);
   font-size: 0.88rem;
   line-height: 1.5;
+}
+
+/* More of the person's profiles, behind one quiet button at the end of the contact links. */
+.contact-more {
+  padding: 0.2rem 0;
+  border: 0;
+  background: none;
+  color: var(--link);
+  font: inherit;
+  cursor: pointer;
+  text-decoration: underline dotted;
+  text-underline-offset: 0.18em;
+}
+
+.more-links {
+  width: min(22rem, calc(100vw - 2rem));
+  padding: 1rem 1.2rem 1.1rem;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  box-shadow: 0 12px 32px rgb(0 0 0 / 10%);
+}
+
+.more-links::backdrop {
+  background: rgb(0 0 0 / 6%);
+}
+
+.more-links-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.more-links-head button {
+  padding: 0 0.3rem;
+  border: 0;
+  background: none;
+  color: var(--muted);
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.more-links ul {
+  padding: 0;
+  list-style: none;
+}
+
+.more-links li,
+.more-links li + li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0;
+  padding: 0.35rem 0;
+  border-top: 1px solid color-mix(in srgb, var(--rule) 55%, transparent);
+}
+
+.more-links-via {
+  color: var(--muted);
+  font-size: 0.82rem;
 }
 
 /* Content page: the whole graph as one table, grouped by category. */

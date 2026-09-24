@@ -141,9 +141,10 @@ def _compatible(a: str, b: str) -> bool:
 
 
 def _full_name(given: str, family: str) -> str:
-    """A name with the given/family split, hyphens, and dots ignored: registries split names
-    differently ("Jose Emilio Labra" + "Gayo", "Jose Emilio" + "Labra-Gayo")."""
-    return " ".join(_given_parts(f"{given} {family}"))
+    """A name with the given/family split, hyphens, dots, and parenthesized nicknames ignored:
+    registries split names differently ("Jose Emilio Labra" + "Gayo", "Jose Emilio" +
+    "Labra-Gayo"), and profiles add nicknames ("Friederike (Freddie) Ehrhart")."""
+    return " ".join(_given_parts(re.sub(r"\([^)]*\)", " ", f"{given} {family}")))
 
 
 def orcid_name(orcid: str) -> tuple[str, str] | None:
@@ -157,24 +158,124 @@ def orcid_name(orcid: str) -> tuple[str, str] | None:
     return (given, family) if given and family else None
 
 
-def reconcile_authors(rows: list[dict]) -> None:
-    """ORCID is the source of truth for who an author is. An author listed without an ORCID takes
-    that of the one ORCID-identified author with the same full name (however it is split), or with
-    the same family name and a compatible given name (none if two could fit). Names are left as
-    each source gives them: the shared ORCID, not a rewritten name, says they are one person."""
+def _names_fit(given: str, family: str, full: str) -> bool:
+    """Whether a name written in one piece ("Thomas E. Exner") can be this given and family name:
+    the whole name matches, or every family-name part is in it and the rest fits the given name."""
+    if _full_name(given, family) == _full_name(full, ""):
+        return True
+    parts, surname = _given_parts(full), _given_parts(family)
+    if not surname or not all(part in parts for part in surname):
+        return False
+    rest = [part for part in parts if part not in surname]
+    return not rest or not _given_parts(given) or _compatible(given, " ".join(rest))
+
+
+def orcid_claimants(doi: str) -> list[str]:
+    """The ORCID iDs whose records claim this DOI."""
+    query = urllib.parse.quote(f'doi-self:"{doi}"')
+    try:
+        found = fetch_json(f"https://pub.orcid.org/v3.0/search/?q={query}").get("result") or []
+    except (urllib.error.URLError, TimeoutError, ValueError):
+        return []
+    return [f"https://orcid.org/{r['orcid-identifier']['path']}" for r in found]
+
+
+def orcid_names(orcid: str) -> list[str]:
+    """Every name an ORCID record gives: the main one and its other names."""
+    try:
+        details = fetch_json(f"https://pub.orcid.org/v3.0/{orcid.rsplit('/', 1)[-1]}/personal-details")
+    except (urllib.error.URLError, TimeoutError, ValueError):
+        return []
+    name = details.get("name") or {}
+    main = " ".join(v for v in ((name.get("given-names") or {}).get("value"), (name.get("family-name") or {}).get("value")) if v)
+    others = [o["content"] for o in (details.get("other-names") or {}).get("other-name", []) if o.get("content")]
+    return [n for n in [main, *others] if n]
+
+
+def wikidata_authorship(doi: str) -> list[dict]:
+    """A work's authors on Wikidata, by position (P50 with P1545), each with the author item's
+    names (label and aliases) and ORCID (P496)."""
+    qid = wikidata_item("P356", doi.upper())
+    if not qid:
+        return []
+    claims = wikidata_api({"action": "wbgetentities", "ids": qid, "props": "claims"}).get("entities", {}).get(qid, {}).get("claims", {})
+    positioned = {}
+    for claim in best_rank(claims.get("P50", [])):
+        ordinal = [q["datavalue"]["value"] for q in claim.get("qualifiers", {}).get("P1545", []) if "datavalue" in q]
+        if ordinal and ordinal[0].isdigit() and "datavalue" in claim["mainsnak"]:
+            positioned[claim["mainsnak"]["datavalue"]["value"]["id"]] = int(ordinal[0])
+    authors = []
+    ids = sorted(positioned)
+    for start in range(0, len(ids), 50):
+        params = {"action": "wbgetentities", "ids": "|".join(ids[start : start + 50]), "props": "claims|labels|aliases"}
+        for item, entity in wikidata_api(params).get("entities", {}).items():
+            names = {v["value"] for v in entity.get("labels", {}).values()}
+            names |= {a["value"] for values in entity.get("aliases", {}).values() for a in values}
+            orcid = [c["mainsnak"]["datavalue"]["value"] for c in best_rank(entity.get("claims", {}).get("P496", [])) if "datavalue" in c["mainsnak"]]
+            authors.append({"item": f"http://www.wikidata.org/entity/{item}", "position": positioned[item],
+                            "names": sorted(names), "orcid": f"https://orcid.org/{orcid[0]}" if orcid else None})
+    return authors
+
+
+def reconcile_authors(rows: list[dict], refresh: bool = False) -> None:
+    """ORCID is the source of truth for who an author is. An author listed without one is
+    identified, in order, by:
+    1. the ORCID record of someone who claims the work and whose name fits (only if one fits);
+    2. the work's authorship on Wikidata, by position, when the name there fits: the author
+       item's ORCID, or the item itself when it has none;
+    3. the ORCID of the one identified co-author with the same full name (however it is split),
+       or the same family name and a compatible given name.
+    How each was identified is kept (`via`). Names are left as each source gives them; the shared
+    identifier, not a rewritten name, says they are one person. The one exception is this CV's
+    subject, whose name is split as cv.yml gives it (registries split names inconsistently)."""
     person = yaml.safe_load((DATA_DIR / "cv.yml").read_text(encoding="utf-8"))["person"]
-    people: dict[str, list[tuple[str, str]]] = {}
+    cache = Cache(refresh)
+    me = f"https://orcid.org/{ORCID_ID}"
+    counts = {"ORCID record": 0, "Wikidata": 0, "co-author": 0}
+
+    def unidentified(row: dict) -> list[dict]:
+        return [a for a in row.get("authors") or [] if not a.get("orcid") and not a.get("wikidata") and not a.get("me")]
+
     for row in rows:
         for author in row.get("authors") or []:
             if author.get("me") and not author.get("orcid"):
-                author["orcid"] = f"https://orcid.org/{ORCID_ID}"
-            if author.get("orcid"):
-                people.setdefault(author["orcid"], []).append((author.get("given", ""), author["family"]))
-    matched = 0
+                author["orcid"] = me
+        if not row.get("doi") or not unidentified(row):
+            continue
+        claimed = {a.get("orcid") for a in row["authors"]}
+        for orcid in cache.get(f"orcid-claimants:{row['doi'].lower()}", lambda doi=row["doi"]: orcid_claimants(doi)):
+            if orcid in claimed:
+                continue
+            names = cache.get(f"orcid-names:{orcid}", lambda orcid=orcid: orcid_names(orcid))
+            fits = [a for a in unidentified(row) if any(_names_fit(a.get("given", ""), a["family"], n) for n in names)]
+            if len(fits) == 1:
+                fits[0]["orcid"], fits[0]["via"] = orcid, "ORCID record claims this work"
+                counts["ORCID record"] += 1
+        if not unidentified(row):
+            continue
+        listed = row["authors"]
+        for entry in cache.get(f"wikidata-work:{row['doi'].lower()}", lambda doi=row["doi"]: wikidata_authorship(doi)):
+            index = entry["position"] - 1
+            if not 0 <= index < len(listed):
+                continue
+            author = listed[index]
+            if author.get("orcid") or author.get("wikidata") or author.get("me"):
+                continue
+            if not any(_names_fit(author.get("given", ""), author["family"], n) for n in entry["names"]):
+                continue
+            if entry["orcid"] and entry["orcid"] not in {a.get("orcid") for a in listed}:
+                author["orcid"] = entry["orcid"]
+            author["wikidata"], author["via"] = entry["item"], "Wikidata authorship"
+            counts["Wikidata"] += 1
+    cache.save()
+
+    people: dict[str, list[tuple[str, str]]] = {}
     for row in rows:
         for author in row.get("authors") or []:
             if author.get("orcid"):
-                continue
+                people.setdefault(author["orcid"], []).append((author.get("given", ""), author["family"]))
+    for row in rows:
+        for author in unidentified(row):
             family, given = _fold(author["family"]), author.get("given", "")
             full = _full_name(given, author["family"])
             fits = [
@@ -182,15 +283,15 @@ def reconcile_authors(rows: list[dict]) -> None:
                 if any(_full_name(g, f) == full or (_fold(f) == family and _compatible(given, g)) for g, f in names)
             ]
             if len(fits) == 1:
-                author["orcid"] = fits[0]
-                matched += 1
+                author["orcid"], author["via"] = fits[0], "same name as an identified co-author"
+                counts["co-author"] += 1
     for row in rows:
         for author in row.get("authors") or []:
             author.setdefault("me", None)
             if author["me"] or (author.get("orcid") or "").endswith(ORCID_ID):
                 author["given"], author["family"] = person["given_name"], person["family_name"]
             author["me"] = "true" if (author.get("orcid") or "").endswith(ORCID_ID) else author["me"]
-    print(f"authors: {len(people)} people identified by ORCID; {matched} unidentified listings matched to them")
+    print(f"authors: {len(people)} people identified by ORCID; newly identified: " + ", ".join(f"{n} via {k}" for k, n in counts.items()))
 
 
 def update_publications(works: dict) -> None:
@@ -439,6 +540,13 @@ def wikidata_api(params: dict[str, str]) -> dict:
     raise TimeoutError("Wikidata kept asking to slow down")
 
 
+def best_rank(statements: list[dict]) -> list[dict]:
+    """Wikidata's best-ranked statements: the preferred ones if any, else the normal ones; never
+    deprecated ones (values kept only as a record of being wrong or obsolete)."""
+    preferred = [s for s in statements if s.get("rank") == "preferred"]
+    return preferred or [s for s in statements if s.get("rank", "normal") == "normal"]
+
+
 def wikidata_item(prop: str, value: str) -> str | None:
     """The one Wikidata item with this identifier (e.g. P496, an ORCID), if exactly one has it."""
     try:
@@ -458,15 +566,139 @@ def wikidata_facts(qids: list[str]) -> list[dict[str, str]]:
             claims = entity.get("claims", {})
 
             def values(prop: str, claims: dict = claims) -> list[str]:
-                return [c["mainsnak"]["datavalue"]["value"] for c in claims.get(prop, []) if "datavalue" in c["mainsnak"]]
+                return [c["mainsnak"]["datavalue"]["value"] for c in best_rank(claims.get(prop, [])) if "datavalue" in c["mainsnak"]]
 
-            base = {"item": f"http://www.wikidata.org/entity/{qid}"}
+            base: dict = {"item": f"http://www.wikidata.org/entity/{qid}"}
+            base["ids"] = [
+                [prop, c["mainsnak"]["datavalue"]["value"]]
+                for prop, claims_of in claims.items() for c in best_rank(claims_of)
+                if c["mainsnak"].get("datatype") == "external-id" and "datavalue" in c["mainsnak"]
+            ]
             label = entity.get("labels", {}).get("en", {}).get("value")
             for key, found in (("label", [label] if label else []), ("orcid", values("P496")), ("gh", values("P2037"))):
                 if found:
                     base[key] = found[0]
             rows += [{**base, "site": site} for site in values("P856")] or [base]
     return rows
+
+
+def wikidata_formatters(props: list[str]) -> dict[str, dict[str, str]]:
+    """For identifier properties: their English label and the URL pattern (P1630) that turns a
+    value into a link, where they have one."""
+    found = {}
+    for start in range(0, len(props), 50):
+        params = {"action": "wbgetentities", "ids": "|".join(props[start : start + 50]), "props": "claims|labels", "languages": "en"}
+        for prop, entity in wikidata_api(params).get("entities", {}).items():
+            pattern = [c["mainsnak"]["datavalue"]["value"] for c in best_rank(entity.get("claims", {}).get("P1630", [])) if "datavalue" in c["mainsnak"]]
+            label = entity.get("labels", {}).get("en", {}).get("value")
+            if pattern and label:
+                found[prop] = {"label": label, "pattern": pattern[0]}
+    return found
+
+
+CITATION_FILES = ("CITATION.cff", ".zenodo.json", "codemeta.json")
+
+
+def github_raw(repo: str, path: str) -> str | None:
+    try:
+        with urllib.request.urlopen(urllib.request.Request(f"https://raw.githubusercontent.com/{repo}/HEAD/{path}", headers=HEADERS), timeout=30) as resp:
+            return resp.read().decode("utf-8", "replace")
+    except (urllib.error.URLError, TimeoutError, ValueError):
+        return None
+
+
+def citation_authors(repo: str, path: str) -> list[dict[str, str]]:
+    """The authors a citation file (CITATION.cff, .zenodo.json, codemeta.json) lists with an
+    ORCID, as full names."""
+    text = github_raw(repo, path)
+    if not text:
+        return []
+    try:
+        data = yaml.safe_load(text) if path.endswith(".cff") else json.loads(text)
+    except (yaml.YAMLError, ValueError):
+        return []
+    if not isinstance(data, dict):
+        return []
+    people = data.get("authors") or data.get("creators") or data.get("author") or []
+    people = people if isinstance(people, list) else [people]
+    found = []
+    for p in people:
+        if not isinstance(p, dict):
+            continue
+        orcid = str(p.get("orcid") or p.get("@id") or p.get("identifier") or "")
+        match = re.search(r"\d{4}-\d{4}-\d{4}-\d{3}[\dX]", orcid)
+        name = p.get("name") or " ".join(v for v in (p.get("given-names") or p.get("givenName"), p.get("family-names") or p.get("familyName")) if v)
+        if "," in name:  # "Family, Given"
+            family, _, given = name.partition(",")
+            name = f"{given.strip()} {family.strip()}"
+        if match and name.strip():
+            found.append({"name": name.strip(), "orcid": f"https://orcid.org/{match.group(0)}", "file": f"https://github.com/{repo}/blob/HEAD/{path}"})
+    return found
+
+
+def own_citation_files(login: str) -> list[tuple[str, str]]:
+    """Citation files in repositories the account owns that mention an ORCID (GitHub code search,
+    paced to its rate limit)."""
+    time.sleep(7)
+    try:
+        found = github(f"/search/code?q={urllib.parse.quote(f'orcid user:{login}')}&per_page=30")
+    except (urllib.error.URLError, TimeoutError, ValueError):
+        return []
+    return sorted({(i["repository"]["full_name"], i["path"]) for i in found.get("items", []) if i["path"].rsplit("/", 1)[-1] in CITATION_FILES})
+
+
+def openalex_ids(orcid: str) -> dict[str, str]:
+    """The identifiers OpenAlex links to an author, found by ORCID: links only."""
+    try:
+        ids = fetch_json(f"https://api.openalex.org/authors/orcid:{orcid.rsplit('/', 1)[-1]}").get("ids") or {}
+    except (urllib.error.URLError, TimeoutError, ValueError):
+        return {}
+    return {key: value for key, value in ids.items() if isinstance(value, str) and value.startswith("http")}
+
+
+def orcid_identifiers(orcid: str) -> list[dict[str, str]]:
+    """The external identifiers a person added to their ORCID record, as labeled links."""
+    try:
+        record = fetch_json(f"https://pub.orcid.org/v3.0/{orcid.rsplit('/', 1)[-1]}/external-identifiers")
+    except (urllib.error.URLError, TimeoutError, ValueError):
+        return []
+    return [
+        {"label": i["external-id-type"], "url": i["external-id-url"]["value"]}
+        for i in record.get("external-identifier", []) if (i.get("external-id-url") or {}).get("value")
+    ]
+
+
+def own_links(own: dict, me: str) -> list[dict[str, str]]:
+    """Every link the sources give for the CV's subject that the page header does not already
+    show, labeled (by the source's name for it, else by host, as in _data/concepts.yml), with its
+    kind: a profile (the person elsewhere) or a website (a site of theirs)."""
+    site = yaml.safe_load((DATA_DIR.parent / "_config.yml").read_text(encoding="utf-8"))["canonical"]
+    hosts = yaml.safe_load((DATA_DIR / "concepts.yml").read_text(encoding="utf-8"))["hosts"]
+    shown = {me, site, *(p["url"] for p in PERSON["profiles"] if p.get("header"))}
+    def key(url: str) -> str:
+        """One key for the several addresses of one record (an entity IRI, its wiki page)."""
+        parsed = urllib.parse.urlparse(url.lower().rstrip("/"))
+        return parsed.netloc.removeprefix("www.") + "/" + parsed.path.rsplit("/", 1)[-1]
+
+    shown = {key(u) for u in shown}
+    candidates = [
+        *({"url": u, "source": "", "kind": "profile"} for u in own["same_as"]),
+        *({"url": p["url"], "source": "", "kind": "profile"} for p in PERSON["profiles"] if not p.get("header")),
+        *({"url": a["url"], "source": a.get("source") or me, "kind": "profile"} for a in own["accounts"]),
+        *({**p, "kind": "profile"} for p in own["profiles"]),
+        *({**w, "kind": "website"} for w in own["websites"]),
+    ]
+    links, seen = [], set(shown)
+    for c in candidates:
+        if key(c["url"]) in seen:
+            continue
+        seen.add(key(c["url"]))
+        host = urllib.parse.urlparse(c["url"]).netloc
+        label = c.get("label") or hosts.get(host) or host.removeprefix("www.")
+        source_host = urllib.parse.urlparse(c["source"]).netloc
+        via = hosts.get(source_host) or source_host.removeprefix("www.")
+        links.append({k: v for k, v in {"url": c["url"], "label": label, "kind": c["kind"], "via": via if via != label else ""}.items() if v})
+    return sorted(links, key=lambda link: link["label"].casefold())
 
 
 def update_people(cv: dict, refresh: bool = False) -> None:
@@ -479,9 +711,13 @@ def update_people(cv: dict, refresh: bool = False) -> None:
     1. declared by the person, on their ORCID record (a github.com link) or GitHub profile (an
        orcid.org link);
     2. Wikidata, an item with both the GitHub username (P2037) and the ORCID (P496);
-    3. inferred, only when exactly one co-author fits and it is corroborated: the login or the
-       profile's name is the co-author's name, and they co-authored a paper describing software
-       the account contributed to (the paper is the evidence)."""
+    3. declared in citation metadata (CITATION.cff, .zenodo.json, codemeta.json) of the
+       account's own repositories or of the software it contributed to, for the author whose
+       name fits the account;
+    4. inferred, only when exactly one co-author fits: the login or the profile's name is the
+       co-author's name and they co-authored a paper describing software the account
+       contributed to (the paper is the evidence), or, weaker, the profile's name is exactly
+       the co-author's name."""
     me = f"https://orcid.org/{ORCID_ID}"
     cache = Cache(refresh)
     contributors: dict[str, list[str]] = {}
@@ -521,7 +757,7 @@ def update_people(cv: dict, refresh: bool = False) -> None:
         for login, qid in github_items.items():
             if qid and r["item"].endswith(f"/{qid}"):
                 by_github.setdefault(login.lower(), []).append(r)
-    orcids = sorted({*(o.rsplit("/", 1)[-1] for o in authors), *(r["orcid"] for rs in by_github.values() for r in rs if r.get("orcid"))})
+    orcids = sorted({ORCID_ID, *(o.rsplit("/", 1)[-1] for o in authors), *(r["orcid"] for rs in by_github.values() for r in rs if r.get("orcid"))})
     orcid_items = {o: cache.get(f"orcid-item:{o}", lambda o=o: wikidata_item("P496", o)) for o in orcids}
     by_orcid: dict[str, list[dict[str, str]]] = {}
     for r in facts({q for q in orcid_items.values() if q}):
@@ -572,11 +808,36 @@ def update_people(cv: dict, refresh: bool = False) -> None:
                 declared_accounts.setdefault(orcid, set()).add(match.group(1).lower())
                 if match.group(1).lower() in by_login:
                     identity.setdefault(by_login[match.group(1).lower()], (orcid, "declared on ORCID record", orcid))
+    tracked_citations = {
+        item["id"]: [a for path in CITATION_FILES for a in cache.get(f"citation:{repo}/{path}", lambda repo=repo, path=path: citation_authors(repo, path))]
+        for item in [*cv.get("libraries", []), *cv.get("contributions", []), *cv.get("personal_tools", [])]
+        if (repo := _github_repo(item.get("repository")))
+    }
+
+    def fits_account(login: str, name: str) -> bool:
+        shown = (users.get(login) or {}).get("name") or ""
+        compact = re.sub(r"[^a-z0-9]", "", _fold(login))
+        return (bool(shown) and _full_name(shown, "") == _full_name(name, "")) or re.sub(r"[^a-z0-9]", "", _fold(name)) == compact
+
     for login in logins:
+        profile_url = f"https://github.com/{login}"
+        readme = cache.get(f"github-readme:{login.lower()}", lambda login=login: github_raw(f"{login}/{login}", "README.md") or "")
+        declared = [f"https://orcid.org/{m}" for m in re.findall(r"orcid\.org/(\d{4}-\d{4}-\d{4}-\d{3}[\dX])", readme)]
         for url in cache.get(f"github-social:{login.lower()}", lambda login=login: social(login)):
-            match = re.search(r"orcid\.org/(\d{4}-\d{4}-\d{4}-\d{3}[\dX])", url)
-            if match:
-                identity.setdefault(login, (f"https://orcid.org/{match.group(1)}", "declared on GitHub profile", f"https://github.com/{login}"))
+            declared += [f"https://orcid.org/{m}" for m in re.findall(r"orcid\.org/(\d{4}-\d{4}-\d{4}-\d{3}[\dX])", url)]
+        if len(set(declared)) == 1:
+            identity.setdefault(login, (declared[0], "declared on GitHub profile", profile_url))
+        if login in identity:
+            continue
+        cited = [
+            a for repo, path in cache.get(f"github-citations:{login.lower()}", lambda login=login: own_citation_files(login))
+            for a in cache.get(f"citation:{repo}/{path}", lambda repo=repo, path=path: citation_authors(repo, path))
+        ]
+        cited += [a for software in contributors[login] for a in tracked_citations.get(software, [])]
+        fitting = {a["orcid"]: a["file"] for a in cited if fits_account(login, a["name"])}
+        if len(fitting) == 1:
+            orcid, file = next(iter(fitting.items()))
+            identity[login] = (orcid, "declared in citation metadata", file)
         found = by_github.get(login.lower(), [])
         wikidata_orcid = next((r for r in found if r.get("orcid")), None)
         if wikidata_orcid:
@@ -592,13 +853,29 @@ def update_people(cv: dict, refresh: bool = False) -> None:
         papers = [doi for software in contributors[login] for doi in software_papers.get(software, set()) if fits and doi in papers_by_orcid.get(fits[0], set())]
         if len(fits) == 1 and papers:
             identity[login] = (fits[0], "inferred from name and co-authorship", f"https://doi.org/{papers[0]}")
+            continue
+        same_name = [orcid for orcid, names in names_by_orcid.items() if shown and any(_full_name(shown, "") == _full_name(g, f) for g, f in names)]
+        if len(same_name) == 1:
+            identity[login] = (same_name[0], "inferred from matching name", f"https://github.com/{login}")
+
+    identifier_props = sorted({prop for rs in [*by_github.values(), *by_orcid.values()] for r in rs for prop, _ in r.get("ids") or []})
+    stale_props = [prop for prop in identifier_props if not cache.fresh(f"wikidata-property:{prop}")]
+    fetched_props = wikidata_formatters(stale_props) if stale_props else {}
+    for prop in stale_props:
+        cache.put(f"wikidata-property:{prop}", fetched_props.get(prop))
+    formatters = {prop: cache.entries[f"wikidata-property:{prop}"]["value"] for prop in identifier_props if cache.entries[f"wikidata-property:{prop}"]["value"]}
 
     people: dict[str, dict] = {}
 
     def person(key: str) -> dict:
-        return people.setdefault(key, {"id": key, "names": [], "same_as": [], "accounts": [], "websites": [], "contributes": []})
+        return people.setdefault(key, {"id": key, "names": [], "same_as": [], "accounts": [], "websites": [], "profiles": [], "contributes": []})
 
-    def add_wikidata(entry: dict, rows: list[dict[str, str]]) -> None:
+    def add_profile(entry: dict, url: str, label: str | None, source: str) -> None:
+        known = {u.lower().rstrip("/") for u in [entry["id"], *entry["same_as"], *(p["url"] for p in entry["profiles"]), *(a["url"] for a in entry["accounts"])]}
+        if url.lower().rstrip("/") not in known:
+            entry["profiles"].append({k: v for k, v in {"url": url, "label": label, "source": source}.items() if v})
+
+    def add_wikidata(entry: dict, rows: list[dict]) -> None:
         for r in rows:
             item = r["item"].replace("https://", "http://")
             if item not in entry["same_as"]:
@@ -612,6 +889,10 @@ def update_people(cv: dict, refresh: bool = False) -> None:
                 entry["same_as"].append(account)
             if account and account.lower() not in {a["url"].lower() for a in entry["accounts"]}:
                 entry["accounts"].append({"url": account, "via": "Wikidata", "source": item})
+            for prop, value in r.get("ids") or []:
+                if prop in ("P496", "P2037") or prop not in formatters:
+                    continue
+                add_profile(entry, formatters[prop]["pattern"].replace("$1", urllib.parse.quote(str(value), safe="")), formatters[prop]["label"], item)
 
     for login in logins:
         profile_url = f"https://github.com/{login}"
@@ -634,6 +915,28 @@ def update_people(cv: dict, refresh: bool = False) -> None:
     for orcid in [a.rsplit("/", 1)[-1] for a in authors] + [o for o in orcids if f"https://orcid.org/{o}" in people]:
         if by_orcid.get(orcid):
             add_wikidata(person(f"https://orcid.org/{orcid}"), by_orcid[orcid])
+    # What co-authors' ORCID records say of them: their web links and external identifiers.
+    for orcid in names_by_orcid:
+        if orcid == me:
+            continue
+        entry = person(orcid)
+        for url in cache.get(f"orcid-urls:{orcid}", lambda orcid=orcid: researcher_urls(orcid)):
+            if "github.com" not in url and {"url": url, "source": orcid} not in entry["websites"]:
+                entry["websites"].append({"url": url, "source": orcid})
+        for identifier in cache.get(f"orcid-ids:{orcid}", lambda orcid=orcid: orcid_identifiers(orcid)):
+            add_profile(entry, identifier["url"], identifier["label"], orcid)
+    # What OpenAlex links to each identified person, and the links on contributors' GitHub profiles.
+    for orcid in [*names_by_orcid, me]:
+        ids = cache.get(f"openalex:{orcid}", lambda orcid=orcid: openalex_ids(orcid))
+        for key, url in sorted(ids.items()):
+            if key != "orcid":
+                add_profile(person(orcid), url, None, ids.get("openalex", url))
+    for login in [*logins, GITHUB_USER]:
+        orcid = me if login == GITHUB_USER else identity.get(login, (None, None, None))[0]
+        profile_url = f"https://github.com/{login}"
+        for url in cache.get(f"github-social:{login.lower()}", lambda login=login: social(login)):
+            if "orcid.org" not in url:
+                add_profile(person(orcid or profile_url), url, None, profile_url)
     # Accounts a co-author's ORCID record lists, even when they did not contribute here.
     for orcid, listed in declared_accounts.items():
         entry = person(orcid)
@@ -643,6 +946,26 @@ def update_people(cv: dict, refresh: bool = False) -> None:
                 entry["same_as"].append(url)
             if url.lower() not in {a["url"].lower() for a in entry["accounts"]}:
                 entry["accounts"].append({"url": url, "via": "declared on ORCID record", "source": orcid})
+    # The CV's subject: what their own ORCID record and Wikidata item link to.
+    own = person(me)
+    for url in cache.get(f"orcid-urls:{me}", lambda: researcher_urls(me)):
+        if {"url": url, "source": me} not in own["websites"]:
+            own["websites"].append({"url": url, "source": me})
+    for identifier in cache.get(f"orcid-ids:{me}", lambda: orcid_identifiers(me)):
+        add_profile(own, identifier["url"], identifier["label"], me)
+    for r in by_orcid.get(ORCID_ID, []):
+        item = r["item"].replace("https://", "http://")
+        if item not in own["same_as"]:
+            own["same_as"].append(item)
+        if r.get("site") and {"url": r["site"], "source": item} not in own["websites"]:
+            own["websites"].append({"url": r["site"], "source": item})
+        for prop, value in r.get("ids") or []:
+            if prop != "P496" and prop in formatters:
+                add_profile(own, formatters[prop]["pattern"].replace("$1", urllib.parse.quote(str(value), safe="")), formatters[prop]["label"], item)
+    github_account = f"https://github.com/{GITHUB_USER}"
+    if github_account.lower() not in {a["url"].lower() for a in own["accounts"]}:
+        own["accounts"].append({"url": github_account, "via": "cv.yml", "source": me})
+    own["links"] = own_links(own, me)
     mine = [i for login, ids in contributors.items() if login.lower() == GITHUB_USER.lower() for i in ids]
     if mine:
         person(me)["contributes"] = mine
@@ -695,9 +1018,9 @@ def main() -> None:
     if sys.argv[1:2] == ["people"]:  # only contributors and co-authors; --refresh ignores the cache
         update_people(yaml.safe_load((DATA_DIR / "cv.yml").read_text(encoding="utf-8")), refresh="--refresh" in sys.argv)
         return
-    if sys.argv[1:] == ["authors"]:  # only reconcile the authors already in publications.yml
+    if sys.argv[1:2] == ["authors"]:  # only reconcile the authors in publications.yml; --refresh ignores the cache
         rows = yaml.safe_load((DATA_DIR / "publications.yml").read_text(encoding="utf-8"))
-        reconcile_authors(rows)
+        reconcile_authors(rows, refresh="--refresh" in sys.argv)
         write_yaml_list(DATA_DIR / "publications.yml", rows)
         return
     cv = yaml.safe_load((DATA_DIR / "cv.yml").read_text(encoding="utf-8"))

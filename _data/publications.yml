@@ -17,7 +17,12 @@
         me: "true",
         orcid: "https://orcid.org/0000-0002-4166-7093",
       }
-    - { given: "Theo M.", family: "de Kok" }
+    - {
+        given: "Theo M.",
+        family: "de Kok",
+        orcid: "https://orcid.org/0000-0003-2102-3626",
+        via: "ORCID record claims this work",
+      }
     - { given: "Therese", family: "van Amelsvoort" }
     - {
         given: "Friederike",
@@ -230,8 +235,20 @@
         family: "Lynch",
         orcid: "https://orcid.org/0000-0003-4250-4584",
       }
-    - { given: "Thomas", family: "Exner" }
-    - { given: "Rob", family: "Stierum" }
+    - {
+        given: "Thomas",
+        family: "Exner",
+        orcid: "https://orcid.org/0000-0002-1849-5246",
+        wikidata: "http://www.wikidata.org/entity/Q88046313",
+        via: "Wikidata authorship",
+      }
+    - {
+        given: "Rob",
+        family: "Stierum",
+        orcid: "https://orcid.org/0000-0002-4409-1974",
+        wikidata: "http://www.wikidata.org/entity/Q140771297",
+        via: "Wikidata authorship",
+      }
     - {
         given: "Penny",
         family: "Nymark",
@@ -253,8 +270,19 @@
         family: "Wittig",
         orcid: "https://orcid.org/0000-0002-9077-5664",
       }
-    - { given: "Clemens", family: "Wittwehr" }
-    - { given: "Meike", family: "Bünger" }
+    - {
+        given: "Clemens",
+        family: "Wittwehr",
+        orcid: "https://orcid.org/0000-0003-2760-7702",
+        wikidata: "http://www.wikidata.org/entity/Q56459199",
+        via: "Wikidata authorship",
+      }
+    - {
+        given: "Meike",
+        family: "Bünger",
+        orcid: "https://orcid.org/0009-0002-7664-0058",
+        via: "ORCID record claims this work",
+      }
     - {
         given: "Tooba",
         family: "Abbassi-Daloii",
@@ -266,8 +294,19 @@
         orcid: "https://orcid.org/0000-0003-1062-5576",
       }
     - { given: "Uday", family: "Killi" }
-    - { given: "Jente", family: "Houweling" }
-    - { given: "Riju Roy", family: "Chowdhury" }
+    - {
+        given: "Jente",
+        family: "Houweling",
+        orcid: "https://orcid.org/0009-0005-3680-0645",
+        wikidata: "http://www.wikidata.org/entity/Q124399961",
+        via: "Wikidata authorship",
+      }
+    - {
+        given: "Riju Roy",
+        family: "Chowdhury",
+        orcid: "https://orcid.org/0009-0002-4110-241X",
+        via: "ORCID record claims this work",
+      }
     - {
         given: "Tamara",
         family: "Danilyuk",
@@ -278,7 +317,13 @@
         family: "Sinke",
         orcid: "https://orcid.org/0000-0002-9209-1266",
       }
-    - { given: "Ozan", family: "Çınar" }
+    - {
+        given: "Ozan",
+        family: "Çınar",
+        orcid: "https://orcid.org/0000-0003-0329-1977",
+        wikidata: "http://www.wikidata.org/entity/Q89571039",
+        via: "Wikidata authorship",
+      }
     - {
         given: "Egon",
         family: "Willighagen",
@@ -291,9 +336,25 @@
   doi: "10.3389/fphy.2023.1271842"
   url: "https://doi.org/10.3389/fphy.2023.1271842"
   authors:
-    - { given: "Dieter", family: "Maier" }
-    - { given: "Thomas E.", family: "Exner" }
-    - { given: "Anastasios G.", family: "Papadiamantis" }
+    - {
+        given: "Dieter",
+        family: "Maier",
+        wikidata: "http://www.wikidata.org/entity/Q136007717",
+        via: "Wikidata authorship",
+      }
+    - {
+        given: "Thomas E.",
+        family: "Exner",
+        orcid: "https://orcid.org/0000-0002-1849-5246",
+        wikidata: "http://www.wikidata.org/entity/Q88046313",
+        via: "Wikidata authorship",
+      }
+    - {
+        given: "Anastasios G.",
+        family: "Papadiamantis",
+        orcid: "https://orcid.org/0000-0002-1297-3104",
+        via: "ORCID record claims this work",
+      }
     - {
         given: "Ammar",
         family: "Ammar",
@@ -303,20 +364,57 @@
     - { given: "Philip", family: "Doganis" }
     - { given: "Ian", family: "Rouse" }
     - { given: "Luke T.", family: "Slater" }
-    - { given: "Georgios V.", family: "Gkoutos" }
-    - { given: "Nina", family: "Jeliazkova" }
+    - {
+        given: "Georgios V.",
+        family: "Gkoutos",
+        orcid: "https://orcid.org/0000-0002-2061-091X",
+        via: "ORCID record claims this work",
+      }
+    - {
+        given: "Nina",
+        family: "Jeliazkova",
+        orcid: "https://orcid.org/0000-0002-4322-6179",
+        via: "ORCID record claims this work",
+      }
     - { given: "Hilmar", family: "Ilgenfritz" }
-    - { given: "Martin", family: "Ziegler" }
+    - {
+        given: "Martin",
+        family: "Ziegler",
+        orcid: "https://orcid.org/0009-0003-1183-4991",
+        via: "ORCID record claims this work",
+      }
     - { given: "Beatrix", family: "Gerhard" }
     - { given: "Sebastian", family: "Kopetsky" }
     - { given: "Deven", family: "Joshi" }
     - { given: "Lee", family: "Walker" }
     - { given: "Claus", family: "Svendsen" }
-    - { given: "Haralambos", family: "Sarimveis" }
-    - { given: "Vladimir", family: "Lobaskin" }
-    - { given: "Martin", family: "Himly" }
+    - {
+        given: "Haralambos",
+        family: "Sarimveis",
+        orcid: "https://orcid.org/0000-0002-8607-9965",
+        wikidata: "http://www.wikidata.org/entity/Q28541054",
+        via: "Wikidata authorship",
+      }
+    - {
+        given: "Vladimir",
+        family: "Lobaskin",
+        orcid: "https://orcid.org/0000-0002-5231-0639",
+        via: "ORCID record claims this work",
+      }
+    - {
+        given: "Martin",
+        family: "Himly",
+        orcid: "https://orcid.org/0000-0001-5416-085X",
+        via: "ORCID record claims this work",
+      }
     - { given: "Jeaphianne", family: "van Rijn" }
-    - { given: "Laurent", family: "Winckers" }
+    - {
+        given: "Laurent",
+        family: "Winckers",
+        orcid: "https://orcid.org/0000-0002-9454-4783",
+        wikidata: "http://www.wikidata.org/entity/Q92186214",
+        via: "Wikidata authorship",
+      }
     - {
         given: "Javier",
         family: "Millán Acosta",
