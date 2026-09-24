@@ -1,5 +1,5 @@
 {
-  "name": "jmillanacosta-cv",
+  "name": "cv-site",
   "private": true,
   "engines": {
     "node": ">=22"

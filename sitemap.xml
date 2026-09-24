@@ -2,12 +2,25 @@
 layout: null
 permalink: /sitemap.xml
 ---
+{%- comment -%}
+  The pages, each with its downloads (_data/formats.yml), and the dataset description.
+  scripts/build-concepts.py adds the concept pages after the build.
+{%- endcomment -%}
 {%- assign base = site.canonical -%}
 {%- assign modified = site.time | date: "%Y-%m-%d" -%}
-{%- assign paths = "|index.jsonld|index.ttl|index.nt|index.rdf|cv/|cv/javier-millan-acosta-cv.pdf|cv/index.jsonld|cv/index.ttl|cv/index.nt|cv/index.rdf|events/|events/index.jsonld|events/index.ttl|events/index.nt|events/index.rdf|void.ttl|.well-known/void" | split: "|" -%}
+{%- assign pages = site.pages | where_exp: "p", "p.graph" | sort: "url" -%}
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{%- for path in paths %}
+{%- for p in pages %}
+{%- assign path = p.url | remove_first: "/" | replace: "index.html", "" %}
+{%- case path %}{% when "cv/" %}{% assign mode = "cv" %}{% when "events/" %}{% assign mode = "events" %}{% else %}{% assign mode = "site" %}{% endcase %}
   <url><loc>{{ base }}{{ path }}</loc><lastmod>{{ modified }}</lastmod></url>
+{%- for format in site.data.formats %}
+{%- if format.mode == nil or format.mode == mode %}
+  <url><loc>{{ base }}{{ path }}{{ format.url }}</loc><lastmod>{{ modified }}</lastmod></url>
+{%- endif %}
 {%- endfor %}
+{%- endfor %}
+  <url><loc>{{ base }}void.ttl</loc><lastmod>{{ modified }}</lastmod></url>
+  <url><loc>{{ base }}.well-known/void</loc><lastmod>{{ modified }}</lastmod></url>
 </urlset>

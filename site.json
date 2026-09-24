@@ -1,0 +1,21 @@
+---
+layout: null
+permalink: /site.json
+---
+{%- comment -%}
+  Who the site is about, for the build scripts (scripts/build-pdf.mjs, build-og.mjs,
+  lib/render-cv.mjs), from _config.yml and _data: they cannot read YAML themselves. The address
+  is the canonical one, which `jekyll serve` leaves alone (it rewrites site.url to localhost).
+{%- endcomment -%}
+{%- assign person = site.data.cv.person -%}
+{%- assign org = site.data.cv.organizations[person.works_for] -%}
+{%- assign parent = site.data.cv.organizations[org.parent] -%}
+{%- assign pdf_format = site.data.formats | where: "mode", "cv" | first -%}
+{
+  "canonical": {{ site.canonical | jsonify }},
+  "name": {{ person.name | jsonify }},
+  "job_title": {{ person.job_title | jsonify }},
+  "organization": {{ parent.name | default: org.name | jsonify }},
+  "headline": {{ person.headline | jsonify }},
+  "pdf": {{ pdf_format.url | prepend: "cv/" | jsonify }}
+}

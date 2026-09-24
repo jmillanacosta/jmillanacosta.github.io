@@ -1,0 +1,19 @@
+# Publications not (yet) on the ORCID record, added to _data/publications.yml by
+# scripts/update_cv_data.py.
+- title: LP-63 Making the AOP-Wiki knowledge graph usable across disciplines in toxicological assessment
+  year: "2025"
+  journal: Toxicology Letters
+  type: conference-abstract
+  doi: 10.1016/j.toxlet.2025.07.1074
+- title:
+    "Extended RDF support for Biomedical Knowledge Graphs in pyBioDataFuse: on-the-fly RDF graph
+    generation and new resource annotators"
+  year: "2025"
+  journal: CEUR Workshop Proceedings (SWAT4HCLS 2025)
+  type: conference-paper
+  doi: 10.24406/publica-8969
+- title: MCP server tools with RDF shapes
+  year: "2025"
+  journal: null
+  type: preprint
+  doi: 10.37044/osf.io/8qeh5_v1

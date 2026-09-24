@@ -1277,6 +1277,26 @@ a.work-name:hover {
   }
 }
 
+/* Until the page and its fonts have loaded (see _includes/site-assets.html), nothing shows and
+   nothing moves; then the page fades in at once, in its own fonts. */
+@media screen {
+  html.is-loading body {
+    opacity: 0;
+  }
+
+  html.is-loading *,
+  html.is-loading *::before,
+  html.is-loading *::after {
+    animation-play-state: paused !important;
+  }
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  body {
+    transition: opacity 0.18s ease;
+  }
+}
+
 /* The header stays put between pages; the sections below it settle in on arrival, one after
    another. Subdued, and off for readers who prefer less motion. */
 @media screen and (prefers-reduced-motion: no-preference) {

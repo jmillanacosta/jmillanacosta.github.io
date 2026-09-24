@@ -1,15 +1,18 @@
-// Renders the 1200×630 social preview (assets/og-image.png) with the site's fonts and palette.
-// Rerun after changing the name, role or focus below: node scripts/build-og.mjs
+// Renders the 1200×630 social preview (assets/og-image.png) with the site's fonts and palette,
+// from the build's site.json (name, role, and headline in _data/cv.yml; address in _config.yml).
+// Rerun after changing them: bundle exec jekyll build && node scripts/build-og.mjs
 import { readFile } from "node:fs/promises";
 import { chromium } from "playwright";
 
 const OUTPUT = "assets/og-image.png";
+const site = JSON.parse(
+  await readFile(`${process.argv[2] || "_site"}/site.json`, "utf8"),
+);
 const card = {
-  name: "Javier Millán Acosta",
-  role: "Doctoral Researcher · Maastricht University",
-  focus:
-    "Research software for biomedical knowledge graphs, RDF tooling, and data integration",
-  url: "jmillanacosta.github.io",
+  name: site.name,
+  role: `${site.job_title} · ${site.organization}`,
+  focus: site.headline,
+  url: new URL(site.canonical).host,
 };
 
 /** @param {string} file */

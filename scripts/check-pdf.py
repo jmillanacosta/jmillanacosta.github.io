@@ -10,7 +10,12 @@ import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
 from pathlib import Path
 
-PDF = 'output/cv/javier-millan-acosta-cv.pdf'
+import yaml
+
+ROOT = Path(__file__).resolve().parent.parent
+PDF_NAME = next(f['url'] for f in yaml.safe_load((ROOT / '_data/formats.yml').read_text(encoding='utf-8')) if f.get('mode') == 'cv')
+PDF = f'output/cv/{PDF_NAME}'
+NAME = yaml.safe_load((ROOT / '_data/cv.yml').read_text(encoding='utf-8'))['person']['name']
 
 def run(*args):
     return subprocess.check_output(args, text=True)
@@ -77,7 +82,7 @@ for number, page in enumerate(root.findall('.//x:page', ns), 1):
     # The small running footer is the final thirteen words on every page.
     body, footer = words[:-13], words[-13:]
     footer_text = ' '.join(w.text or '' for w in footer)
-    assert re.fullmatch(rf'Javier Millán Acosta · CV · Updated [A-Z][a-z]+ \d{{1,2}}, \d{{4}} {number} / 4', footer_text), footer_text
+    assert re.fullmatch(rf'{re.escape(NAME)} · CV · Updated [A-Z][a-z]+ \d{{1,2}}, \d{{4}} {number} / 4', footer_text), footer_text
     bottom = max(float(w.attrib['yMax']) for w in body)
     clearance = min(float(w.attrib['yMin']) for w in footer) - bottom
     assert clearance >= 24, f'Page {number}: content crowds footer ({clearance:.1f}pt)'

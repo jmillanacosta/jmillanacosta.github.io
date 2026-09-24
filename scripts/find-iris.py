@@ -30,8 +30,9 @@ _getaddrinfo = socket.getaddrinfo
 socket.getaddrinfo = lambda *args, **kwargs: [r for r in _getaddrinfo(*args, **kwargs) if r[0] == socket.AF_INET] or _getaddrinfo(*args, **kwargs)
 
 ROOT = Path(__file__).resolve().parent.parent
+SITE_URL = yaml.safe_load((ROOT / "_config.yml").read_text(encoding="utf-8"))["url"]
 HEADERS = {
-    "User-Agent": "jmillanacosta-cv-iri-finder/1.0 (https://jmillanacosta.github.io)",
+    "User-Agent": f"cv-iri-finder/1.0 ({SITE_URL})",
     "Accept": "application/json",
 }
 LIMIT = int(sys.argv[sys.argv.index("--limit") + 1]) if "--limit" in sys.argv else 5

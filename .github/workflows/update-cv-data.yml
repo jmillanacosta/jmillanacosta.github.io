@@ -27,17 +27,20 @@ jobs:
       - name: Install YAML parser
         run: python3 -m pip install pyyaml
 
-      - name: Refresh publications, events, software, and usage data
+      - name: Refresh publications, events, software, usage, and people data
         run: python3 scripts/update_cv_data.py
+        env:
+          # Authenticated GitHub calls (contributors, profiles) are not limited to 60 an hour.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit changes if any
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet -- _data; then
+          if git diff --quiet -- _data scripts/cache && [ -z "$(git ls-files --others --exclude-standard _data scripts/cache)" ]; then
             echo "No data changes."
             exit 0
           fi
-          git add _data
+          git add _data scripts/cache
           git commit -m "Sync CV data from ORCID, Zenodo, PyPI, ecosyste.ms, and GitHub"
           git push

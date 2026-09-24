@@ -1,10 +1,14 @@
 // Run after `bundle exec jekyll build`. Uses the same HTML and print CSS as the site.
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { openCV } from "./lib/render-cv.mjs";
 
 const siteDir = process.argv[2] || "_site";
-const relativeOutput = "cv/javier-millan-acosta-cv.pdf";
+// Who the CV is about and where the PDF goes, from the build (site.json).
+const site = JSON.parse(
+  await readFile(path.join(siteDir, "site.json"), "utf8"),
+);
+const relativeOutput = site.pdf;
 const updated = new Date().toLocaleDateString("en-US", {
   timeZone: "UTC",
   year: "numeric",
@@ -21,7 +25,7 @@ try {
     generateDocumentOutline: true,
     displayHeaderFooter: true,
     headerTemplate: "<span></span>",
-    footerTemplate: `<div style="font:8.5px &quot;Source Sans 3&quot;,Arial,sans-serif;color:#62665e;width:100%;margin:0 15mm;display:flex;justify-content:space-between"><span>Javier Millán Acosta · CV · Updated ${updated}</span><span><span class="pageNumber"></span> / <span class="totalPages"></span></span></div>`,
+    footerTemplate: `<div style="font:8.5px &quot;Source Sans 3&quot;,Arial,sans-serif;color:#62665e;width:100%;margin:0 15mm;display:flex;justify-content:space-between"><span>${site.name} · CV · Updated ${updated}</span><span><span class="pageNumber"></span> / <span class="totalPages"></span></span></div>`,
   });
   const pdf = Buffer.from(data, "base64");
   for (const destination of [

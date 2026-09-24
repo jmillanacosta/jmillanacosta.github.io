@@ -11,7 +11,12 @@
         orcid: "https://orcid.org/0009-0007-1364-797X",
       }
     - { given: "Yuanyuan", family: "Duan" }
-    - { given: "Javier Millán", family: "Acosta", me: "true" }
+    - {
+        given: "Javier",
+        family: "Millán Acosta",
+        me: "true",
+        orcid: "https://orcid.org/0000-0002-4166-7093",
+      }
     - { given: "Theo M.", family: "de Kok" }
     - { given: "Therese", family: "van Amelsvoort" }
     - {
@@ -75,7 +80,12 @@
   doi: "10.37044/osf.io/ptmg5_v1"
   url: "https://doi.org/10.37044/osf.io/ptmg5_v1"
   authors:
-    - { given: "Javier Millán", family: "Acosta", me: "true" }
+    - {
+        given: "Javier",
+        family: "Millán Acosta",
+        me: "true",
+        orcid: "https://orcid.org/0000-0002-4166-7093",
+      }
     - {
         given: "Shuichi",
         family: "Kawashima",
@@ -91,9 +101,17 @@
         family: "Bolleman",
         orcid: "https://orcid.org/0000-0002-7449-1266",
       }
-    - { given: "Dominik", family: "Martinat" }
+    - {
+        given: "Dominik",
+        family: "Martinat",
+        orcid: "https://orcid.org/0000-0001-6611-7883",
+      }
     - { given: "Harald", family: "Detering" }
-    - { given: "Jose Emilio Labra", family: "Gayo" }
+    - {
+        given: "Jose Emilio Labra",
+        family: "Gayo",
+        orcid: "https://orcid.org/0000-0001-8907-5348",
+      }
     - {
         given: "Yojana",
         family: "Gadiya",
@@ -111,10 +129,23 @@
   doi: "10.1016/j.toxlet.2025.07.1074"
   url: "https://doi.org/10.1016/j.toxlet.2025.07.1074"
   authors:
-    - { given: "M.", family: "Martens" }
+    - {
+        given: "M.",
+        family: "Martens",
+        orcid: "https://orcid.org/0000-0003-2230-0840",
+      }
     - { given: "S.", family: "Adil" }
-    - { given: "J. Millán", family: "Acosta", me: "true" }
-    - { given: "E.", family: "Willighagen" }
+    - {
+        given: "Javier",
+        family: "Millán Acosta",
+        me: "true",
+        orcid: "https://orcid.org/0000-0002-4166-7093",
+      }
+    - {
+        given: "E.",
+        family: "Willighagen",
+        orcid: "https://orcid.org/0000-0001-7542-0286",
+      }
 - title: "Extended RDF support for Biomedical Knowledge Graphs in pyBioDataFuse: on-the-fly RDF graph generation and new resource annotators"
   year: "2025"
   journal: "CEUR Workshop Proceedings (SWAT4HCLS 2025)"
@@ -122,10 +153,27 @@
   doi: "10.24406/publica-8969"
   url: "https://doi.org/10.24406/publica-8969"
   authors:
-    - { given: "Javier Millán", family: "Acosta", me: "true" }
-    - { given: "Egon", family: "Willighagen" }
-    - { given: "Yojana", family: "Gadiya" }
-    - { given: "Tooba", family: "Abbassi-Daloii" }
+    - {
+        given: "Javier",
+        family: "Millán Acosta",
+        me: "true",
+        orcid: "https://orcid.org/0000-0002-4166-7093",
+      }
+    - {
+        given: "Egon",
+        family: "Willighagen",
+        orcid: "https://orcid.org/0000-0001-7542-0286",
+      }
+    - {
+        given: "Yojana",
+        family: "Gadiya",
+        orcid: "https://orcid.org/0000-0002-7683-0452",
+      }
+    - {
+        given: "Tooba",
+        family: "Abbassi-Daloii",
+        orcid: "https://orcid.org/0000-0002-4904-3269",
+      }
 - title: "MCP server tools with RDF shapes"
   year: "2025"
   type: "preprint"
@@ -143,8 +191,17 @@
         orcid: "https://orcid.org/0000-0002-6943-6887",
       }
     - { given: "Akira R.", family: "Kinjo" }
-    - { given: "Andra", family: "Waagmeester" }
-    - { given: "Javier", family: "Acosta", me: "true" }
+    - {
+        given: "Andra",
+        family: "Waagmeester",
+        orcid: "https://orcid.org/0000-0001-9773-4008",
+      }
+    - {
+        given: "Javier",
+        family: "Millán Acosta",
+        me: "true",
+        orcid: "https://orcid.org/0000-0002-4166-7093",
+      }
     - {
         given: "Shuichi",
         family: "Kawashima",
@@ -163,7 +220,11 @@
   doi: "10.37044/osf.io/un2rw"
   url: "https://doi.org/10.37044/osf.io/un2rw"
   authors:
-    - { given: "Marvin", family: "Martens" }
+    - {
+        given: "Marvin",
+        family: "Martens",
+        orcid: "https://orcid.org/0000-0003-2230-0840",
+      }
     - {
         given: "Iseult",
         family: "Lynch",
@@ -176,8 +237,17 @@
         family: "Nymark",
         orcid: "https://orcid.org/0000-0002-3435-7775",
       }
-    - { given: "Dominik", family: "Martinát" }
-    - { given: "Javier Millán", family: "Acosta", me: "true" }
+    - {
+        given: "Dominik",
+        family: "Martinát",
+        orcid: "https://orcid.org/0000-0001-6611-7883",
+      }
+    - {
+        given: "Javier",
+        family: "Millán Acosta",
+        me: "true",
+        orcid: "https://orcid.org/0000-0002-4166-7093",
+      }
     - {
         given: "Ulrike",
         family: "Wittig",
@@ -224,7 +294,11 @@
     - { given: "Dieter", family: "Maier" }
     - { given: "Thomas E.", family: "Exner" }
     - { given: "Anastasios G.", family: "Papadiamantis" }
-    - { given: "Ammar", family: "Ammar" }
+    - {
+        given: "Ammar",
+        family: "Ammar",
+        orcid: "https://orcid.org/0000-0002-8399-8990",
+      }
     - { given: "Andreas", family: "Tsoumanis" }
     - { given: "Philip", family: "Doganis" }
     - { given: "Ian", family: "Rouse" }
@@ -243,11 +317,24 @@
     - { given: "Martin", family: "Himly" }
     - { given: "Jeaphianne", family: "van Rijn" }
     - { given: "Laurent", family: "Winckers" }
-    - { given: "Javier", family: "Millán Acosta", me: "true" }
-    - { given: "Egon", family: "Willighagen" }
+    - {
+        given: "Javier",
+        family: "Millán Acosta",
+        me: "true",
+        orcid: "https://orcid.org/0000-0002-4166-7093",
+      }
+    - {
+        given: "Egon",
+        family: "Willighagen",
+        orcid: "https://orcid.org/0000-0001-7542-0286",
+      }
     - { given: "Georgia", family: "Melagraki" }
     - { given: "Antreas", family: "Afantitis" }
-    - { given: "Iseult", family: "Lynch" }
+    - {
+        given: "Iseult",
+        family: "Lynch",
+        orcid: "https://orcid.org/0000-0003-4250-4584",
+      }
 - title: "WikiPathways 2024: next generation pathway database"
   year: "2023"
   journal: "Nucleic Acids Research"
@@ -321,8 +408,8 @@
         orcid: "https://orcid.org/0000-0003-2878-4049",
       }
     - {
-        given: "Javier Millán",
-        family: "Acosta",
+        given: "Javier",
+        family: "Millán Acosta",
         orcid: "https://orcid.org/0000-0002-4166-7093",
         me: "true",
       }

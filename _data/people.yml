@@ -1,0 +1,601 @@
+# Written by scripts/update_cv_data.py: contributors (GitHub) and co-authors (ORCID), with what Wikidata
+# knows of them. Every name and website keeps its source.
+- id: https://github.com/GerganaTancheva123
+  names:
+    - name: GerganaTancheva123
+      source: https://github.com/GerganaTancheva123
+  contributes:
+    - enanomapper
+- id: https://github.com/JKChang2015
+  names:
+    - name: JKChang
+      source: https://github.com/JKChang2015
+  contributes:
+    - enanomapper
+- id: https://github.com/LindeSchoenmaker
+  names:
+    - name: LindeSchoenmaker
+      source: https://github.com/LindeSchoenmaker
+  contributes:
+    - vhp4safety-platform
+- id: https://github.com/ShakiraPortfolio
+  names:
+    - name: Shakira
+      source: https://github.com/ShakiraPortfolio
+  contributes:
+    - vhp4safety-platform
+- id: https://github.com/TassosP78
+  names:
+    - name: Tassos Papadiamantis
+      source: https://github.com/TassosP78
+  contributes:
+    - enanomapper
+- id: https://github.com/UanaF
+  names:
+    - name: UanaF
+      source: https://github.com/UanaF
+  contributes:
+    - enanomapper
+- id: https://github.com/adriaque
+  names:
+    - name: Alejandro Adriaque Lozano
+      source: https://github.com/adriaque
+  contributes:
+    - biodatafuse
+- id: https://github.com/djwetstede
+  names:
+    - name: djwetstede
+      source: https://github.com/djwetstede
+  contributes:
+    - biodatafuse
+- id: https://github.com/fehrhart
+  names:
+    - name: Friederike (Freddie) Ehrhart
+      source: https://github.com/fehrhart
+  contributes:
+    - enanomapper
+- id: https://github.com/iaortega
+  names:
+    - name: Isaac Arturo Ortega Alvarado
+      source: https://github.com/iaortega
+  contributes:
+    - vhp4safety-platform
+- id: https://github.com/johannehouweling
+  names:
+    - name: Jente Houweling
+      source: https://github.com/johannehouweling
+  contributes:
+    - vhp4safety-platform
+- id: https://github.com/lrieswijk
+  names:
+    - name: Linda Rieswijk
+      source: https://github.com/lrieswijk
+  contributes:
+    - enanomapper
+- id: https://github.com/lwinckers
+  names:
+    - name: Laurent Winckers
+      source: https://github.com/lwinckers
+  contributes:
+    - enanomapper
+- id: https://github.com/marvinm2
+  names:
+    - name: Marvin Martens
+      source: https://github.com/marvinm2
+  contributes:
+    - aop-suite
+    - vhp4safety-platform
+    - bridgedb
+- id: https://github.com/mirthhe
+  names:
+    - name: Mirthe
+      source: https://github.com/mirthhe
+  contributes:
+    - aop-suite
+    - vhp4safety-platform
+- id: https://github.com/mmarvinm2
+  names:
+    - name: mmarvinm2
+      source: https://github.com/mmarvinm2
+  contributes:
+    - aop-suite
+- id: https://github.com/ntk73
+  names:
+    - name: Nikolay Kochev
+      source: https://github.com/ntk73
+  websites:
+    - url: https://web.uni-plovdiv.bg/nick
+      source: https://github.com/ntk73
+  contributes:
+    - enanomapper
+- id: https://github.com/nunogit
+  names:
+    - name: nunogit
+      source: https://github.com/nunogit
+  contributes:
+    - bridgedb
+- id: https://github.com/westonslaughter
+  names:
+    - name: Wes Slaughter
+      source: https://github.com/westonslaughter
+  websites:
+    - url: https://westonslaughter.github.io/me/#home
+      source: https://github.com/westonslaughter
+  contributes:
+    - enanomapper
+- id: https://github.com/youphendriks
+  names:
+    - name: Youp Hendriks
+      source: https://github.com/youphendriks
+  contributes:
+    - aop-suite
+    - biodatafuse
+    - vhp4safety-platform
+- id: https://orcid.org/0000-0001-5410-599X
+  names:
+    - name: Kristina Hanspers
+      source: http://www.wikidata.org/entity/Q28865047
+  same_as:
+    - http://www.wikidata.org/entity/Q28865047
+    - https://github.com/khanspers
+  accounts:
+    - url: https://github.com/khanspers
+      via: declared on ORCID record
+      source: https://orcid.org/0000-0001-5410-599X
+- id: https://orcid.org/0000-0001-5706-2163
+  names:
+    - name: Alexander R. Pico
+      source: http://www.wikidata.org/entity/Q28530149
+  same_as:
+    - http://www.wikidata.org/entity/Q28530149
+- id: https://orcid.org/0000-0001-5934-3559
+  names:
+    - name: Daniela Digles
+      source: http://www.wikidata.org/entity/Q19845608
+  same_as:
+    - http://www.wikidata.org/entity/Q19845608
+- id: https://orcid.org/0000-0001-6611-7883
+  names:
+    - name: DominikMartinat
+      source: https://github.com/DominikMartinat
+    - name: Dominik Martinát
+      source: http://www.wikidata.org/entity/Q117834010
+  same_as:
+    - https://github.com/DominikMartinat
+    - http://www.wikidata.org/entity/Q117834010
+  accounts:
+    - url: https://github.com/DominikMartinat
+      via: inferred from name and co-authorship
+      source: https://doi.org/10.1093/bioinformatics/btag064
+  contributes:
+    - biodatafuse
+- id: https://orcid.org/0000-0001-7542-0286
+  names:
+    - name: Egon Willighagen
+      source: https://github.com/egonw
+    - name: Egon Willighagen
+      source: http://www.wikidata.org/entity/Q20895241
+  same_as:
+    - https://github.com/egonw
+    - http://www.wikidata.org/entity/Q20895241
+  accounts:
+    - url: https://github.com/egonw
+      via: declared on ORCID record
+      source: https://orcid.org/0000-0001-7542-0286
+  websites:
+    - url: https://chem-bla-ics.linkedchemistry.info/
+      source: https://github.com/egonw
+    - url: https://egonw.github.io/
+      source: http://www.wikidata.org/entity/Q20895241
+  contributes:
+    - aop-suite
+    - biodatafuse
+    - vhp4safety-platform
+    - enanomapper
+    - bridgedb
+- id: https://orcid.org/0000-0001-7883-3756
+  names:
+    - name: Shuichi Kawashima
+      source: http://www.wikidata.org/entity/Q54302726
+  same_as:
+    - http://www.wikidata.org/entity/Q54302726
+- id: https://orcid.org/0000-0001-8319-7758
+  names:
+    - name: Hasan Balcı
+      source: https://github.com/hasanbalci
+    - name: Hasan Balcı
+      source: http://www.wikidata.org/entity/Q130642378
+  same_as:
+    - https://github.com/hasanbalci
+    - http://www.wikidata.org/entity/Q130642378
+  accounts:
+    - url: https://github.com/hasanbalci
+      via: Wikidata
+      source: http://www.wikidata.org/entity/Q130642378
+  websites:
+    - url: https://hasanbalci.github.io/
+      source: https://github.com/hasanbalci
+    - url: https://hasanbalci.github.io/
+      source: http://www.wikidata.org/entity/Q130642378
+  contributes:
+    - biodatafuse
+- id: https://orcid.org/0000-0001-8449-1318
+  names:
+    - name: De
+      source: https://github.com/DeniseSl22
+    - name: Denise Slenter
+      source: http://www.wikidata.org/entity/Q43744369
+  same_as:
+    - https://github.com/DeniseSl22
+    - http://www.wikidata.org/entity/Q43744369
+  accounts:
+    - url: https://github.com/DeniseSl22
+      via: declared on ORCID record
+      source: https://orcid.org/0000-0001-8449-1318
+  contributes:
+    - biodatafuse
+    - enanomapper
+- id: https://orcid.org/0000-0001-8501-7319
+  names:
+    - name: Kozo Nishida
+      source: http://www.wikidata.org/entity/Q136396711
+  same_as:
+    - http://www.wikidata.org/entity/Q136396711
+    - https://github.com/kozo2
+  accounts:
+    - url: https://github.com/kozo2
+      via: declared on ORCID record
+      source: https://orcid.org/0000-0001-8501-7319
+- id: https://orcid.org/0000-0001-8907-5348
+  names:
+    - name: José Emilio Labra Gayo
+      source: http://www.wikidata.org/entity/Q51602692
+  same_as:
+    - http://www.wikidata.org/entity/Q51602692
+    - https://github.com/labra
+  accounts:
+    - url: https://github.com/labra
+      via: Wikidata
+      source: http://www.wikidata.org/entity/Q51602692
+  websites:
+    - url: http://labra.weso.es
+      source: http://www.wikidata.org/entity/Q51602692
+    - url: http://di002.edv.uniovi.es/~labra/
+      source: http://www.wikidata.org/entity/Q51602692
+- id: https://orcid.org/0000-0001-9773-4008
+  names:
+    - name: Andra Waagmeester
+      source: http://www.wikidata.org/entity/Q19845625
+  same_as:
+    - http://www.wikidata.org/entity/Q19845625
+    - https://github.com/andrawaag
+  accounts:
+    - url: https://github.com/andrawaag
+      via: Wikidata
+      source: http://www.wikidata.org/entity/Q19845625
+  websites:
+    - url: https://cris.maastrichtuniversity.nl/en/persons/andra-waagmeester
+      source: http://www.wikidata.org/entity/Q19845625
+- id: https://orcid.org/0000-0002-3435-7775
+  names:
+    - name: Penny Nymark
+      source: http://www.wikidata.org/entity/Q28530416
+  same_as:
+    - http://www.wikidata.org/entity/Q28530416
+- id: https://orcid.org/0000-0002-3469-4923
+  names:
+    - name: Janna Hastings
+      source: https://github.com/jannahastings
+    - name: Janna Hastings
+      source: http://www.wikidata.org/entity/Q27902110
+  same_as:
+    - https://github.com/jannahastings
+    - http://www.wikidata.org/entity/Q27902110
+  accounts:
+    - url: https://github.com/jannahastings
+      via: Wikidata
+      source: http://www.wikidata.org/entity/Q27902110
+  websites:
+    - url: http://www.babraham.ac.uk/our-research/epigenetics/olivia-casanueva/members/433/janna-hastings
+      source: http://www.wikidata.org/entity/Q27902110
+  contributes:
+    - enanomapper
+- id: https://orcid.org/0000-0002-4166-7093
+  contributes:
+    - rdfsolve
+    - pysec2pri
+    - mapkgsutils
+    - pyaop
+    - aop-suite
+    - biodatafuse
+    - vhp4safety-platform
+    - enanomapper
+    - bridgedb
+    - cnv-pathway-atlas
+    - seejobs
+- id: https://orcid.org/0000-0002-4322-6179
+  names:
+    - name: Nina Jeliazkova
+      source: https://github.com/vedina
+    - name: Nina Jeliazkova
+      source: http://www.wikidata.org/entity/Q27061849
+  same_as:
+    - https://github.com/vedina
+    - http://www.wikidata.org/entity/Q27061849
+  accounts:
+    - url: https://github.com/vedina
+      via: Wikidata
+      source: http://www.wikidata.org/entity/Q27061849
+  websites:
+    - url: http://vedina.users.sourceforge.net
+      source: https://github.com/vedina
+  contributes:
+    - enanomapper
+- id: https://orcid.org/0000-0002-4693-0591
+  names:
+    - name: Anders Riutta
+      source: http://www.wikidata.org/entity/Q43370277
+  same_as:
+    - http://www.wikidata.org/entity/Q43370277
+- id: https://orcid.org/0000-0002-4751-4637
+  names:
+    - name: Lars Willighagen
+      source: http://www.wikidata.org/entity/Q45907528
+  same_as:
+    - http://www.wikidata.org/entity/Q45907528
+    - https://github.com/larsgw
+  accounts:
+    - url: https://github.com/larsgw
+      via: Wikidata
+      source: http://www.wikidata.org/entity/Q45907528
+  websites:
+    - url: https://larsgw.github.io/
+      source: http://www.wikidata.org/entity/Q45907528
+- id: https://orcid.org/0000-0002-4904-3269
+  names:
+    - name: Tooba Abbassi-Daloii
+      source: https://github.com/tabbassidaloii
+    - name: Tooba Abbassi-Daloii
+      source: http://www.wikidata.org/entity/Q89321648
+  same_as:
+    - https://github.com/tabbassidaloii
+    - http://www.wikidata.org/entity/Q89321648
+  accounts:
+    - url: https://github.com/tabbassidaloii
+      via: Wikidata
+      source: http://www.wikidata.org/entity/Q89321648
+  contributes:
+    - biodatafuse
+- id: https://orcid.org/0000-0002-5301-3142
+  names:
+    - name: Chris T. Evelo
+      source: http://www.wikidata.org/entity/Q19845641
+  same_as:
+    - http://www.wikidata.org/entity/Q19845641
+    - https://github.com/Chris-Evelo
+  accounts:
+    - url: https://github.com/Chris-Evelo
+      via: Wikidata
+      source: http://www.wikidata.org/entity/Q19845641
+- id: https://orcid.org/0000-0002-6943-6887
+  names:
+    - name: Yasunori Yamamoto
+      source: http://www.wikidata.org/entity/Q59490274
+  same_as:
+    - http://www.wikidata.org/entity/Q59490274
+- id: https://orcid.org/0000-0002-7260-2129
+  names:
+    - name: Julia Helmecke
+      source: http://www.wikidata.org/entity/Q63958202
+  same_as:
+    - http://www.wikidata.org/entity/Q63958202
+- id: https://orcid.org/0000-0002-7449-1266
+  names:
+    - name: Jerven Bolleman
+      source: http://www.wikidata.org/entity/Q56888653
+  same_as:
+    - http://www.wikidata.org/entity/Q56888653
+- id: https://orcid.org/0000-0002-7683-0452
+  names:
+    - name: Yojana Gadiya
+      source: https://github.com/YojanaGadiya
+    - name: Yojana Gadiya
+      source: http://www.wikidata.org/entity/Q70206064
+  same_as:
+    - https://github.com/YojanaGadiya
+    - http://www.wikidata.org/entity/Q70206064
+  accounts:
+    - url: https://github.com/YojanaGadiya
+      via: declared on ORCID record
+      source: https://orcid.org/0000-0002-7683-0452
+  contributes:
+    - biodatafuse
+- id: https://orcid.org/0000-0002-7699-8191
+  names:
+    - name: Martina Summer-Kutmon
+      source: http://www.wikidata.org/entity/Q27987764
+  same_as:
+    - http://www.wikidata.org/entity/Q27987764
+    - https://github.com/mkutmon
+  accounts:
+    - url: https://github.com/mkutmon
+      via: Wikidata
+      source: http://www.wikidata.org/entity/Q27987764
+  websites:
+    - url: https://www.maastrichtuniversity.nl/martina.kutmon
+      source: http://www.wikidata.org/entity/Q27987764
+- id: https://orcid.org/0000-0002-7770-620X
+  names:
+    - name: Friederike Ehrhart
+      source: http://www.wikidata.org/entity/Q28025534
+  same_as:
+    - http://www.wikidata.org/entity/Q28025534
+  websites:
+    - url: https://www.maastrichtuniversity.nl/friederike.ehrhart
+      source: http://www.wikidata.org/entity/Q28025534
+- id: https://orcid.org/0000-0002-8399-8990
+  names:
+    - name: Ammar Ammar
+      source: https://github.com/ammar257ammar
+    - name: Ammar Ammar
+      source: http://www.wikidata.org/entity/Q86442640
+  same_as:
+    - https://github.com/ammar257ammar
+    - http://www.wikidata.org/entity/Q86442640
+  accounts:
+    - url: https://github.com/ammar257ammar
+      via: Wikidata
+      source: http://www.wikidata.org/entity/Q86442640
+  contributes:
+    - biodatafuse
+- id: https://orcid.org/0000-0002-9077-5664
+  names:
+    - name: Ulrike Wittig
+      source: http://www.wikidata.org/entity/Q57058833
+  same_as:
+    - http://www.wikidata.org/entity/Q57058833
+- id: https://orcid.org/0000-0002-9209-1266
+  names:
+    - name: Lucy Sinke
+      source: http://www.wikidata.org/entity/Q127038569
+  same_as:
+    - http://www.wikidata.org/entity/Q127038569
+- id: https://orcid.org/0000-0003-0329-1977
+  names:
+    - name: Ozan Çınar
+      source: https://github.com/ozancinar
+    - name: Ozan Çınar
+      source: http://www.wikidata.org/entity/Q89571039
+  same_as:
+    - https://github.com/ozancinar
+    - http://www.wikidata.org/entity/Q89571039
+  accounts:
+    - url: https://github.com/ozancinar
+      via: Wikidata
+      source: http://www.wikidata.org/entity/Q89571039
+  contributes:
+    - aop-suite
+    - vhp4safety-platform
+- id: https://orcid.org/0000-0003-1062-5576
+  names:
+    - name: Gerhard A Burger
+      source: http://www.wikidata.org/entity/Q96189622
+  same_as:
+    - http://www.wikidata.org/entity/Q96189622
+    - https://github.com/burgerga
+  accounts:
+    - url: https://github.com/burgerga
+      via: declared on ORCID record
+      source: https://orcid.org/0000-0003-1062-5576
+- id: https://orcid.org/0000-0003-1224-9690
+  names:
+    - name: Susan Coort
+      source: http://www.wikidata.org/entity/Q19851164
+  same_as:
+    - http://www.wikidata.org/entity/Q19851164
+- id: https://orcid.org/0000-0003-1661-6304
+  names:
+    - name: Elisson N. Lopes
+      source: http://www.wikidata.org/entity/Q114718357
+  same_as:
+    - http://www.wikidata.org/entity/Q114718357
+- id: https://orcid.org/0000-0003-1781-5508
+  names:
+    - name: Hailiang Mei
+      source: http://www.wikidata.org/entity/Q56510144
+  same_as:
+    - http://www.wikidata.org/entity/Q56510144
+- id: https://orcid.org/0000-0003-2230-0840
+  names:
+    - name: Marvin Martens
+      source: http://www.wikidata.org/entity/Q42369611
+  same_as:
+    - http://www.wikidata.org/entity/Q42369611
+  websites:
+    - url: https://cris.maastrichtuniversity.nl/en/persons/a7490e9a-a51d-48a6-ad0f-4e295a3fd29e
+      source: http://www.wikidata.org/entity/Q42369611
+- id: https://orcid.org/0000-0003-2391-0384
+  names:
+    - name: Toshiaki Katayama
+      source: http://www.wikidata.org/entity/Q58484212
+  same_as:
+    - http://www.wikidata.org/entity/Q58484212
+- id: https://orcid.org/0000-0003-2878-4049
+  names:
+    - name: Aishwarya Iyer
+      source: http://www.wikidata.org/entity/Q123631021
+  same_as:
+    - http://www.wikidata.org/entity/Q123631021
+    - https://github.com/ashviyer
+  accounts:
+    - url: https://github.com/ashviyer
+      via: declared on ORCID record
+      source: https://orcid.org/0000-0003-2878-4049
+- id: https://orcid.org/0000-0003-2940-8926
+  names:
+    - name: Ayushi Agrawal
+      source: http://www.wikidata.org/entity/Q123631063
+  same_as:
+    - http://www.wikidata.org/entity/Q123631063
+    - https://github.com/ayushi-agrawal-gladstone
+  accounts:
+    - url: https://github.com/ayushi-agrawal-gladstone
+      via: declared on ORCID record
+      source: https://orcid.org/0000-0003-2940-8926
+- id: https://orcid.org/0000-0003-3213-4495
+  names:
+    - name: Ana Claudia Sima
+      source: https://github.com/dssib
+    - name: Ana Claudia Sima
+      source: http://www.wikidata.org/entity/Q118146531
+  same_as:
+    - https://github.com/dssib
+    - http://www.wikidata.org/entity/Q118146531
+  accounts:
+    - url: https://github.com/dssib
+      via: inferred from name and co-authorship
+      source: https://doi.org/10.1093/bioinformatics/btag064
+  websites:
+    - url: https://sib.swiss
+      source: https://github.com/dssib
+  contributes:
+    - biodatafuse
+- id: https://orcid.org/0000-0003-4250-4584
+  names:
+    - name: Iseult Lynch
+      source: http://www.wikidata.org/entity/Q28651697
+  same_as:
+    - http://www.wikidata.org/entity/Q28651697
+  websites:
+    - url: http://www.birmingham.ac.uk/schools/gees/people/profile.aspx?ReferenceId=56477
+      source: http://www.wikidata.org/entity/Q28651697
+- id: https://orcid.org/0000-0003-4423-4370
+  names:
+    - name: Charles Tapley Hoyt
+      source: https://github.com/cthoyt
+  same_as:
+    - https://github.com/cthoyt
+    - http://www.wikidata.org/entity/Q47475003
+  accounts:
+    - url: https://github.com/cthoyt
+      via: Wikidata
+      source: http://www.wikidata.org/entity/Q47475003
+  websites:
+    - url: https://cthoyt.com
+      source: https://github.com/cthoyt
+    - url: https://cthoyt.com
+      source: http://www.wikidata.org/entity/Q47475003
+  contributes:
+    - biodatafuse
+- id: https://orcid.org/0009-0007-1364-797X
+  names:
+    - name: Alexandra Valeanu
+      source: https://github.com/alexandra-valeanu
+  same_as:
+    - https://github.com/alexandra-valeanu
+  accounts:
+    - url: https://github.com/alexandra-valeanu
+      via: inferred from name and co-authorship
+      source: https://doi.org/10.1038/s41597-026-07345-6
+  contributes:
+    - cnv-pathway-atlas

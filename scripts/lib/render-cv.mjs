@@ -30,7 +30,6 @@ function bounded(operation, label, timeout = 60000) {
   ]).finally(() => clearTimeout(timer));
 }
 
-const SITE_URL = "https://jmillanacosta.github.io";
 const FONT_DIR = fileURLToPath(new URL("../fonts/", import.meta.url));
 
 // Chromium embeds web fonts in PDFs as unhinted Type 3 glyphs; only installed fonts are
@@ -64,7 +63,11 @@ export async function openCV(siteDir = "_site", page = "cv/index.html") {
     // Without the web font declarations, the same families resolve to the installed copies.
     () => `<style>${css.replace(/@font-face\s*{[^}]*}/g, "")}</style>`,
   );
-  html = html.replace("<head>", `<head><base href="${SITE_URL}/">`);
+  // The site's address, from the build (site.json renders _config.yml and _data/cv.yml).
+  const site = JSON.parse(
+    await readFile(path.join(siteDir, "site.json"), "utf8"),
+  );
+  html = html.replace("<head>", `<head><base href="${site.canonical}">`);
   // The printed CV links to the original sources, not to the site's concept pages.
   html = html.replace(/<script[^>]*concepts\.js[^>]*><\/script>/, "");
 

@@ -26,17 +26,19 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
+import yaml
 from rdflib import RDF, Graph, Literal, Namespace, URIRef
 
 ROOT = Path(__file__).resolve().parent.parent
+SITE_URL = yaml.safe_load((ROOT / "_config.yml").read_text(encoding="utf-8"))["url"]
 GRAPHS = [Path(a) for a in sys.argv[1:]] or sorted((ROOT / "output/rdf").glob("**/index.ttl"))
 # This site's own files are checked in the local build, since they may not be deployed yet.
 SITE_DIR = ROOT / "_site"
-CANONICAL = "https://jmillanacosta.github.io/"
+CANONICAL = yaml.safe_load((ROOT / "_config.yml").read_text(encoding="utf-8"))["canonical"]
 SCHEMA = Namespace("https://schema.org/")
 WIKIDATA = "http://www.wikidata.org/entity/"
 HEADERS = {
-    "User-Agent": "jmillanacosta-cv-iri-check/1.0 (https://jmillanacosta.github.io)",
+    "User-Agent": f"cv-iri-check/1.0 ({SITE_URL})",
     # Prefer machine-readable representations; some services refuse requests without an Accept header.
     "Accept": "application/ld+json, application/json;q=0.9, text/turtle;q=0.8, text/html;q=0.7, */*;q=0.5",
 }

@@ -16,11 +16,14 @@
 {%- assign page_path = graph_page | remove_first: "/" | replace: "index.html", "" -%}
 {%- assign page_iri = base | append: page_path -%}
 {%- assign html_page = site.pages | where: "url", graph_page | first -%}
-{%- assign doc_title = html_page.title -%}
+{%- if html_page.title -%}{%- assign doc_title = site.title | append: " — " | append: html_page.title -%}{%- else -%}{%- assign doc_title = site.title -%}{%- endif -%}
 {%- case page_path -%}{%- when "cv/" -%}{%- assign mode = "cv" -%}{%- when "events/" -%}{%- assign mode = "events" -%}{%- else -%}{%- assign mode = "site" -%}{%- endcase -%}
 {%- assign parts = html_page.graph | join: " " | prepend: " " | append: " " -%}
 {%- assign modified = site.time | date: "%Y-%m-%d" -%}
-{%- assign pdf_url = base | append: "cv/javier-millan-acosta-cv.pdf" -%}
+{%- assign pdf_format = site.data.formats | where: "mode", "cv" | first -%}
+{%- assign pdf_url = base | append: "cv/" | append: pdf_format.url -%}
+{%- assign github_profile = person.profiles | where: "label", "GitHub" | first -%}
+{%- assign github_login = github_profile.url | split: "/" | last -%}
 {%- assign formats_mode = site.data.formats | where: "mode", mode -%}
 {%- assign formats = site.data.formats | where_exp: "f", "f.mode == nil" -%}
 {%- assign formats = formats_mode | concat: formats -%}

@@ -169,8 +169,13 @@ class Concepts:
     def types(self, node: object) -> list[str]:
         return sorted(local(t) for t in self.graph.objects(node, RDF.type) if str(t).startswith(str(V)))  # type: ignore[arg-type]
 
+    def names(self, node: object) -> list[str]:
+        """Every name the sources give, the fullest first (most words, then longest)."""
+        found = {str(n) for n in self.graph.objects(node, TERMS["name"])}  # type: ignore[arg-type]
+        return sorted(found, key=lambda n: (-len(n.split()), -len(n), n))
+
     def name(self, node: object) -> str:
-        names = sorted(str(n) for n in self.graph.objects(node, TERMS["name"]))  # type: ignore[arg-type]
+        names = self.names(node)
         return names[0] if names else pretty_iri(str(node))
 
     def labels(self, node: object) -> list[str]:
@@ -353,6 +358,14 @@ class Concepts:
             rows[label].append(self.value(o, around=node))
         if g.value(node, V[dates["start"]]) is not None:
             rows[dates["label"]].append(self.dates(node))
+        return self.drop_plain(rows)
+
+    @staticmethod
+    def drop_plain(rows: dict[str, list[str]]) -> dict[str, list[str]]:
+        """A bare link is dropped where the same row also has it with more said (a role)."""
+        for values in rows.values():
+            for plain in [v for v in values if any(o != v and o.startswith(v) for o in values)]:
+                values.remove(plain)
         return rows
 
     def reverse_label(self, predicate: object, subject: object) -> str:
@@ -454,7 +467,10 @@ class Concepts:
             if not isinstance(target, URIRef) or str(target).startswith(MERGED):
                 continue
             label = CONFIG["hosts"].get(urlparse(str(target)).netloc, CONFIG["host_default"])
-            item = f'<a class="external" href="{html.escape(str(target))}">{label}</a>'
+            source = g.value(target, URIRef(CONFIG["provenance"]))
+            if source is not None:
+                label = fill(CONFIG["text"]["from_source"], label=label, source=CONFIG["hosts"].get(urlparse(str(source)).netloc, pretty_iri(str(source))))
+            item = f'<a class="external" href="{html.escape(str(target))}">{html.escape(label)}</a>'
             if item not in links:
                 links.append(item)
         label = CONFIG["identifier_label"]
@@ -592,6 +608,9 @@ def render(concepts: Concepts, node: URIRef, shell: str) -> tuple[str, Graph]:
     extra = []
     if alternate:
         extra.append(f'<p class="concept-alternate">{html.escape(text("also_known_as", names=", ".join(alternate)))}</p>')
+    listed = concepts.names(node)[1:]
+    if listed:
+        extra.append(f'<p class="concept-alternate">{html.escape(text("also_listed_as", names=", ".join(listed)))}</p>')
     if description is not None:
         extra.append(f'<p class="concept-description">{html.escape(str(description))}</p>')
     if identity:
@@ -758,7 +777,7 @@ def main() -> None:
     previous = clear_previous()
     graph = Graph()
     for source in CONFIG["sources"]:
-        graph.parse(SITE / source / "index.jsonld", format="json-ld")
+        graph.parse(SITE / source, format="json-ld")
     concepts = Concepts(graph)
     files = CONFIG["files"]
     shell = (SITE / files["shell"]).read_text(encoding="utf-8")

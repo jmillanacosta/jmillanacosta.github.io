@@ -2,6 +2,12 @@ url: "https://jmillanacosta.github.io"
 baseurl: ""
 canonical: "https://jmillanacosta.github.io/"
 title: "Javier Millán Acosta"
+# Everything about the person (name, ORCID, work, profiles) is in _data/cv.yml; this file holds
+# only the site's own settings. Every page shares the social preview (scripts/build-og.mjs).
+defaults:
+  - scope: { path: "" }
+    values:
+      image: { path: /assets/og-image.png, width: 1200, height: 630 }
 exclude:
   - vendor
   - scripts
