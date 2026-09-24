@@ -121,7 +121,7 @@
   end: "2025-09-20"
   location: Mie, Japan
   type: hackathon
-  summary: developed RDF schema tooling in rdfsolve, reported in “MCP server tools with RDF shapes.”
+  summary: developed RDF schema tooling in rdfsolve.”
   doi: 10.37044/osf.io/8qeh5_v1
   funding_note: Personally invited; participation funded by
   funder: dbcls

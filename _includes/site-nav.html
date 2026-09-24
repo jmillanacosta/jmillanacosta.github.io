@@ -1,0 +1,7 @@
+{%- comment -%}Site navigation; `mode` marks the current page.{%- endcomment -%}
+    <nav class="site-nav screen-only" aria-label="Site">
+      <a href="{{ '/' | relative_url }}"{% if mode == "site" %} aria-current="page"{% endif %}>Home</a>
+      <a href="{{ '/cv/' | relative_url }}"{% if mode == "cv" %} aria-current="page"{% endif %}>CV</a>
+      <a href="{{ '/events/' | relative_url }}"{% if mode == "events" %} aria-current="page"{% endif %}>My events</a>
+      <a class="site-nav-end" href="{{ '/content/' | relative_url }}">Content</a>
+    </nav>

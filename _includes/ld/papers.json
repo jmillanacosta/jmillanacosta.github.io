@@ -1,0 +1,4 @@
+{%- comment -%}The publications describing a software entry, as a "subjectOf" member.{%- endcomment -%}
+{%- if include.item.publications -%}
+, "subjectOf": [{% for pp_doi in include.item.publications %}{"@id": {{ pp_doi | prepend: "https://doi.org/" | jsonify }}}{% unless forloop.last %}, {% endunless %}{% endfor %}]
+{%- endif -%}

@@ -1037,6 +1037,246 @@ a.work-name:hover {
   }
 }
 
+/* Concept pages: what a thing is, what it states, and what points to it. */
+.concept-kind {
+  color: var(--link);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.concept-header h1 {
+  margin-top: 0.2rem;
+}
+
+.cv-header > .concept-alternate {
+  color: var(--muted);
+}
+
+.concept-description {
+  max-width: 40rem;
+}
+
+.cv-header > .concept-identity {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: 11rem minmax(0, 1fr);
+  gap: 0.7rem 1.5rem;
+  margin: 0;
+}
+
+.facts dt {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.facts dd {
+  margin: 0;
+}
+
+.facts ul {
+  padding: 0;
+  list-style: none;
+}
+
+.facts li,
+.facts li + li {
+  margin: 0;
+  padding: 0;
+}
+
+.facts li + li {
+  margin-top: 0.35rem;
+}
+
+.concept-meta {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* A paper cited where it is mentioned (an event, a software entry), as in the publication list. */
+.citation {
+  display: block;
+  margin-top: 0.35rem;
+}
+
+.citation .publication-title {
+  color: inherit;
+  font-weight: 500;
+}
+
+.concept-citation {
+  display: block;
+  margin-top: 0.3rem;
+}
+
+.facts li + li:has(.publication-title) {
+  margin-top: 0.7rem;
+}
+
+.concept-note {
+  display: block;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+/* Content page: the whole graph as one table, grouped by category. */
+.content-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.content-toolbar[hidden] {
+  display: none;
+}
+
+.content-filter {
+  flex: 1 1 auto;
+  max-width: 22rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.92rem;
+}
+
+.content-filter:focus {
+  outline: 2px solid color-mix(in srgb, var(--link) 45%, transparent);
+  outline-offset: 1px;
+  border-color: var(--link);
+}
+
+.content-count {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.content-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.94rem;
+}
+
+.content-table thead th {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  padding: 0.5rem 0.6rem;
+  background: var(--bg);
+  border-bottom: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+.content-table td {
+  padding: 0.42rem 0.6rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--rule) 55%, transparent);
+  vertical-align: baseline;
+}
+
+.content-table td:first-child,
+.content-table th:first-child {
+  padding-left: 0;
+}
+
+.content-table tbody tr:not(.content-group-head):hover td {
+  background: color-mix(in srgb, var(--link) 4%, transparent);
+}
+
+.content-table td a {
+  text-decoration-color: color-mix(in srgb, currentcolor 30%, transparent);
+}
+
+.content-table .num {
+  width: 4.5rem;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+
+.content-kind {
+  width: 11rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.content-group-head th {
+  padding: 1.5rem 0 0.45rem;
+  border-bottom: 1px solid var(--rule);
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.content-group-head th a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.content-group-head th a:hover {
+  color: var(--link);
+}
+
+.content-group-count {
+  margin-left: 0.3rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+@media screen and (width <= 600px) {
+  .content-table thead th:last-child,
+  .content-table td:last-child {
+    display: none;
+  }
+
+  .content-kind {
+    width: auto;
+  }
+}
+
+/* Names on the other pages that lead to a concept page: quiet until pointed at. */
+.concept-link {
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: color-mix(in srgb, currentcolor 35%, transparent);
+}
+
+.concept-link:hover {
+  color: var(--link);
+  text-decoration-style: solid;
+}
+
+@media print {
+  .concept-link {
+    text-decoration: none;
+  }
+}
+
+@media screen and (width <= 600px) {
+  .facts {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.15rem;
+  }
+
+  .facts dd + dt {
+    margin-top: 0.8rem;
+  }
+}
+
 /* The header stays put between pages; the sections below it settle in on arrival, one after
    another. Subdued, and off for readers who prefer less motion. */
 @media screen and (prefers-reduced-motion: no-preference) {
@@ -1206,6 +1446,11 @@ a.work-name:hover {
     border-bottom: 1px solid var(--rule);
     font-size: 0.95rem;
     font-weight: 500;
+  }
+
+  /* The content page's link sits at the far end of the bar. */
+  .site-nav-end {
+    margin-left: auto;
   }
 
   .site-nav a {

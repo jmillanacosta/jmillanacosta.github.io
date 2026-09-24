@@ -65,6 +65,8 @@ export async function openCV(siteDir = "_site", page = "cv/index.html") {
     () => `<style>${css.replace(/@font-face\s*{[^}]*}/g, "")}</style>`,
   );
   html = html.replace("<head>", `<head><base href="${SITE_URL}/">`);
+  // The printed CV links to the original sources, not to the site's concept pages.
+  html = html.replace(/<script[^>]*concepts\.js[^>]*><\/script>/, "");
 
   const fonts = await privateFontconfig();
   const browser = await chromium

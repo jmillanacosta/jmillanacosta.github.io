@@ -1,8 +1,8 @@
-{%- comment -%}An organization (key in cv.organizations), with its parent one level up and its place.{%- endcomment -%}
+{%- comment -%}An organization (key in cv.organizations), with its parent one level up and their places.{%- endcomment -%}
 {%- assign lo = orgs[include.key] -%}
 {%- assign lo_parent = orgs[lo.parent] -%}
 {"@id": {{ lo.iri | jsonify }}, "@type": {{ lo.type | jsonify }}, "name": {{ lo.name | jsonify }}
 {%- if lo.alternate_name %}, "alternateName": {{ lo.alternate_name | jsonify }}{% endif %}
 {%- if lo.same_as %}, "sameAs": [{% for s in lo.same_as %}{"@id": {{ s | jsonify }}}{% unless forloop.last %}, {% endunless %}{% endfor %}]{% endif %}
-{%- if lo_parent %}, "parentOrganization": {"@id": {{ lo_parent.iri | jsonify }}, "@type": {{ lo_parent.type | jsonify }}, "name": {{ lo_parent.name | jsonify }}{% if lo_parent.alternate_name %}, "alternateName": {{ lo_parent.alternate_name | jsonify }}{% endif %}{% if lo_parent.same_as %}, "sameAs": [{% for s in lo_parent.same_as %}{"@id": {{ s | jsonify }}}{% unless forloop.last %}, {% endunless %}{% endfor %}]{% endif %}}{% endif %}
-{%- if lo.location and include.location %}, "location": {"@id": {{ cv.places[lo.location] | jsonify }}, "@type": "Place", "name": {{ lo.location | jsonify }}}{% endif %}}
+{%- if lo_parent %}, "parentOrganization": {"@id": {{ lo_parent.iri | jsonify }}, "@type": {{ lo_parent.type | jsonify }}, "name": {{ lo_parent.name | jsonify }}{% if lo_parent.alternate_name %}, "alternateName": {{ lo_parent.alternate_name | jsonify }}{% endif %}{% if lo_parent.same_as %}, "sameAs": [{% for s in lo_parent.same_as %}{"@id": {{ s | jsonify }}}{% unless forloop.last %}, {% endunless %}{% endfor %}]{% endif %}{% include ld/places.json org=lo_parent %}}{% endif %}
+{%- include ld/places.json org=lo %}}

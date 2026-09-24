@@ -1,0 +1,7 @@
+{%- comment -%}An organization's places (location and other_locations), as a "location" member.{%- endcomment -%}
+{%- assign lp_org = include.org -%}
+{%- if lp_org.location -%}
+{%- assign lp_names = "" | split: "" | push: lp_org.location -%}
+{%- if lp_org.other_locations %}{% assign lp_names = lp_names | concat: lp_org.other_locations %}{% endif -%}
+, "location": [{% for lp_name in lp_names %}{"@id": {{ cv.places[lp_name] | jsonify }}, "@type": "Place", "name": {{ lp_name | jsonify }}}{% unless forloop.last %}, {% endunless %}{% endfor %}]
+{%- endif -%}

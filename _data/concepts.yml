@@ -1,0 +1,335 @@
+# How scripts/build-concepts.py turns the site's graph into concept pages. The script holds no
+# labels, categories, or wording of its own: everything it names, groups, or orders is here.
+# Terms are local names in `vocabulary` (e.g. `name` is https://schema.org/name).
+
+# The pages whose JSON-LD graphs are merged (relative to the site root), and the vocabulary.
+sources: ["", cv/, events/]
+vocabulary: https://schema.org/
+vocabulary_prefix: schema # in the Turtle files
+
+# Files the script reads and writes, relative to the site root.
+files:
+  shell: concepts/shell.html
+  index: concepts/index.json
+  sitemap: sitemap.xml # the site's own sitemap; every page written is added to it
+  manifest: concepts/manifest.json
+
+# Who the graph is about: the main entity of any page of this type. Their name fills {owner}
+# below; links to them go to `home`.
+profile:
+  type: ProfilePage
+  subject: mainEntity
+  modified: dateModified # the sitemap's last-modified date
+home: /
+
+# Core terms the script reads.
+terms:
+  name: name
+  description: description
+  alternate_name: alternateName
+  same_as: sameAs
+  url: url
+  identifier: identifier
+
+# Nodes of these types are never concepts (the site's own pages and files).
+excluded_types: [ProfilePage, MediaObject]
+
+# Unnamed nodes of these types are concepts in their own right (keyed by type and name); other
+# unnamed nodes (roles, grants, counters) are read through as details of what points to them.
+unnamed_concept_types:
+  - Course
+  - EducationalOccupationalProgram
+  - Event
+  - Organization
+  - Periodical
+  - Person
+  - Place
+  - Project
+  - Report
+  - ResearchProject
+  - ScholarlyArticle
+  - SoftwareSourceCode
+
+# An unnamed node of these types with exactly the name of an identified node of the same type
+# (e.g. an author with an ORCID elsewhere) is taken to be that node.
+merge_by_name: [Person]
+
+# What each type is called on its concept page.
+type_labels:
+  CollegeOrUniversity: University
+  Corporation: Company
+  Course: Course
+  EducationalOccupationalProgram: Study program
+  Event: Event
+  GovernmentOrganization: Public funder
+  Grant: Grant
+  Language: Language
+  Organization: Organization
+  Periodical: Journal
+  Person: Person
+  Place: Place
+  Project: Community
+  Report: Report
+  ResearchOrganization: Research institute
+  ResearchProject: Research project
+  ScholarlyArticle: Publication
+  SoftwareSourceCode: Software
+  Taxon: Organism
+  VirtualLocation: Online
+
+# For untyped nodes: the label given when something points to them with this predicate.
+untyped_labels:
+  knowsAbout: Skill
+untyped_default: Concept
+
+# Each concept lives under its category (/places/lleida-spain/); each category has a page listing
+# its members. A category is chosen by type (first match in this order), or by untyped label.
+categories:
+  - {
+      folder: publications,
+      title: Publications,
+      types: [ScholarlyArticle, Report],
+    }
+  - { folder: journals, title: Journals, types: [Periodical] }
+  - { folder: people, title: People, types: [Person] }
+  - folder: places
+    title: Places
+    types: [Place]
+    lists: location
+    activity:
+      {
+        through: location,
+        predicates: [worksFor, alumniOf],
+        label: Activity here,
+      }
+  - { folder: event, title: Events, types: [Event] }
+  - { folder: software, title: Software, types: [SoftwareSourceCode] }
+  - { folder: projects, title: Projects, types: [Project, ResearchProject] }
+  - { folder: grants, title: Grants, types: [Grant] }
+  - folder: courses
+    title: Courses and programs
+    types: [Course, EducationalOccupationalProgram]
+  - { folder: languages, title: Languages, types: [Language] }
+  - { folder: organisms, title: Organisms, types: [Taxon] }
+  - folder: organizations
+    title: Organizations
+    types:
+      [
+        CollegeOrUniversity,
+        Corporation,
+        GovernmentOrganization,
+        ResearchOrganization,
+        Organization,
+      ]
+  - { folder: skills, title: Skills, labels: [Skill] }
+# `existing: true` marks a category page the site already renders (it is not generated).
+# `lists: location` makes the category page list, under each member, what points to it that way.
+# `activity` makes each member's page read through what points to it (`through`, e.g. the
+# organizations based in a place) to the roles held there (`predicates`), under `label`.
+other_category: { folder: concepts, title: Concepts }
+
+# Text values that sort things into kinds (Hackathon, Journal article). Each kind gets a page
+# under the category of what it sorts, in `folder` (/event/kind/hackathon/), next to an index of
+# that category's kinds (/event/kind/).
+kinds:
+  predicates: [keywords, genre]
+  folder: kind
+  label: Kind
+
+# Predicates shown in the page header rather than as statements.
+header: [name, alternateName, description, sameAs, url, identifier]
+
+# Dates: a start and end become one row; things of `open_ended_types` without an end are ongoing.
+dates:
+  start: startDate
+  end: endDate
+  single: [datePublished, dateCreated]
+  label: When
+  open_ended_types: [EmployeeRole]
+  open_ended: present
+  months: [Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
+  day: "{month} {day}, {year}"
+  month: "{month} {year}"
+  range_in_month: "{month} {start}–{end}, {year}"
+  range: "{start} – {end}"
+
+# Papers: things of these types read as citations wherever they appear, as in the CV's list:
+# the title, the authors (the graph's subject in bold; long lists shortened to the first few,
+# the subject, and the last), then venue · date · kind · identifier.
+citation:
+  types: [ScholarlyArticle, Report]
+  authors: author
+  venue: isPartOf
+  dates: [datePublished]
+  kind: genre
+  number: reportNumber
+  identifier: identifier
+  shorten: { over: 10, first: 3 }
+  gap: " … "
+
+# How unnamed nodes read in one line.
+summary:
+  headline: [roleName, name] # the first of these present leads the line
+  note: description # shown below, in smaller type
+  skip: [sameAs, roleName, name, mentions]
+  counter: # e.g. "1,554 PyPI downloads last month"
+    type: InteractionCounter
+    count: userInteractionCount
+    source: url
+  identifier: # e.g. "ORCID: 0000-…"
+    type: PropertyValue
+    scheme: propertyID
+    value: value
+
+# How a statement reads from its subject's page ("forward") and from its object's page
+# ("reverse"). Unlisted predicates are spelled out ("courseCode" → "Course code", "… of").
+forward:
+  about: About
+  alumniOf: Studied at
+  author: Authors
+  codeRepository: Code
+  contributor: Contributors
+  courseCode: Course code
+  credentialCategory: Credential
+  dateCreated: Awarded
+  datePublished: Published
+  downloadUrl: Download
+  eventAttendanceMode: Attendance
+  funder: Funder
+  funding: Funding
+  hasCourseInstance: Taught
+  interactionStatistic: Usage
+  isPartOf: Part of
+  location: Where
+  memberOf: Member of
+  parentOrganization: Part of
+  provider: Offered by
+  recognizedBy: Awarded by
+  recordedIn: Recording
+  reportNumber: Number
+  softwareHelp: Documentation
+  softwareVersion: Version
+  subjectOf: Described in
+  superEvent: Series
+  worksFor: Organization
+# Forward labels that depend on the object's type.
+forward_by_object_type:
+  isPartOf: { Periodical: Published in }
+reverse:
+  about: Subject of
+  alumniOf: Alumni
+  author: Author of
+  contributor: Contributor to
+  credentialCategory: Credentials
+  funder: Funds
+  hasCredential: Held by
+  instructor: Taught by
+  isPartOf: Includes
+  knowsAbout: Known by
+  knowsLanguage: Spoken by
+  location: Based here
+  memberOf: Members
+  mentions: Mentioned in
+  parentOrganization: Includes
+  performerIn: Participation
+  provider: Offers
+  recognizedBy: Awarded
+  subjectOf: Describes
+  superEvent: Editions
+  worksFor: Roles here
+# Reverse labels that depend on the subject's type.
+reverse_by_subject_type:
+  location: { Event: Held here }
+reverse_default: "{label} of"
+# Predicates never listed as connections.
+reverse_skip: [sameAs, url]
+
+# Rows read in this order; the rest follow alphabetically.
+order:
+  - Kind
+  - When
+  - Where
+  - Series
+  - Organization
+  - Part of
+  - Authors
+  - Published
+  - Published in
+  - Offered by
+  - Awarded by
+  - Funder
+  - Funding
+  - Code
+  - Documentation
+  - Download
+  - Version
+  - Usage
+  - Recording
+  - Described in
+  - Based here
+  - Activity here
+  - Roles here
+  - Participation
+  - Held here
+  - Editions
+  - Author of
+  - Contributor to
+  - Members
+  - Includes
+  - Offers
+  - Funds
+  - Awarded
+  - Alumni
+
+# Names for the places identifiers and links point to, by host.
+hosts:
+  doi.org: DOI
+  github.com: GitHub
+  orcid.org: ORCID
+  ror.org: ROR
+  www.wikidata.org: Wikidata
+  purl.obolibrary.org: OBO
+  id.loc.gov: Library of Congress
+  data.europa.eu: ESCO
+  cordis.europa.eu: CORDIS
+  pypi.org: PyPI
+  hub.docker.com: Docker Hub
+  zenodo.org: Zenodo
+host_default: Website
+# An identifier given as text is shown with this label, unless a link from that host is shown.
+identifier_label: DOI
+
+# Wording. Placeholders in braces are filled by the script.
+text:
+  title: "{name} · {owner}"
+  details: Details
+  connections: Connections
+  category: Category
+  also_known_as: Also known as {names}
+  kind_of: Kind of {of}
+  kinds_of: Kinds of {of}
+  by_kind: "By kind: {links}"
+  other_kinds: Other kinds
+  summary: "{kind} in {owner}'s CV graph."
+  kind_summary: "{name}: {count} in {owner}'s CV graph."
+  category_summary: "{title} in {owner}'s CV graph."
+  footer: 'Also as <a href="index.ttl" type="text/turtle">Turtle</a>'
+slug_length: 60
+
+# The content page (/content/): everything in the graph as one table, grouped by category, after
+# the site's own pages. `nav` is the page's link in the top bar, marked current there.
+content:
+  folder: content
+  title: Content
+  kicker: Overview
+  nav: /content/
+  pages:
+    - { name: Home, path: / }
+    - { name: CV, path: /cv/ }
+    - { name: My events, path: /events/ }
+  pages_title: Pages
+  lede: "{count} concepts in {categories} categories."
+  filter: Filter by name or kind
+  shown: "{shown} of {total}"
+  columns: { name: Name, kind: Kind, year: Year, links: Links }
+  links_hint: Concepts it is connected to

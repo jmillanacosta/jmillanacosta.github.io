@@ -12,7 +12,7 @@
         {%- assign own_site = false %}{% if item.url and item.url != item.repository %}{% assign own_site = true %}{% endif %}
         <a class="work-name" property="{% if own_site %}url{% else %}codeRepository{% if item.url %} url{% endif %}{% endif %}" href="{% if own_site %}{{ item.url }}{% else %}{{ item.repository }}{% endif %}"><span property="name" content="{{ item.name | escape }}">{{ item.name | escape }}</span></a>
         <p class="work-text" property="description" content="{{ work_text }}">{{ work_text | slice: 0 | upcase }}{{ work_text | slice: 1, 1000 }}</p>
-        <p class="work-meta">{% if pkg %}<a property="downloadUrl" href="{{ pkg.pypi_url }}">PyPI</a><span property="softwareVersion" content="{{ pkg.version }}"></span>{% else %}<a{% if own_site %} property="codeRepository"{% endif %} href="{{ item.repository }}">GitHub</a>{% endif %}{% if pkg.docs %} · <a property="softwareHelp" href="{{ pkg.docs }}">docs</a>{% endif %}{% if item.docs %} · <a property="softwareHelp" href="{{ item.docs }}">tutorial</a>{% endif %}{% include cv/stats.html stats=item_stats %}<span property="author" resource="{{ me }}"></span></p>
+        <p class="work-meta">{% if pkg %}<a property="downloadUrl" href="{{ pkg.pypi_url }}">PyPI</a><span property="softwareVersion" content="{{ pkg.version }}"></span>{% else %}<a{% if own_site %} property="codeRepository"{% endif %} href="{{ item.repository }}">GitHub</a>{% endif %}{% if pkg.docs %} · <a property="softwareHelp" href="{{ pkg.docs }}">docs</a>{% endif %}{% if item.docs %} · <a property="softwareHelp" href="{{ item.docs }}">tutorial</a>{% endif %}{% include cv/papers.html item=item %}{% include cv/stats.html stats=item_stats %}<span property="author" resource="{{ me }}"></span></p>
       </li>
       {%- endfor %}
     </ul>
@@ -27,7 +27,7 @@
       <li class="work" resource="{{ item.iri }}" typeof="SoftwareSourceCode">
         <a class="work-name" property="url" href="{{ item.url }}"><span property="name" content="{{ item.name | escape }}">{{ item.name | escape }}</span></a>
         <p class="work-text" property="contributor" typeof="Role"><span property="contributor" resource="{{ me }}"></span>{% include cv/capfirst.liquid text=item.description mentions=item.mentions %}<span property="description" content="{{ item.description | strip | escape }}">{% include cv/text.html text=cap_text mentions=item.mentions %}</span></p>
-        <p class="work-meta">{% if item.repository %}<a property="codeRepository" href="{{ item.repository }}">GitHub</a>{% endif %}{% if item.doi %}{% if item.repository %} · {% endif %}<a property="{{ item.doi_relation | default: 'sameAs' }}" href="https://doi.org/{{ item.doi }}">Zenodo</a>{% endif %}{% include cv/stats.html stats=item_stats %}</p>
+        <p class="work-meta">{% if item.repository %}<a property="codeRepository" href="{{ item.repository }}">GitHub</a>{% endif %}{% if item.doi %}{% if item.repository %} · {% endif %}<a property="{{ item.doi_relation | default: 'sameAs' }}" href="https://doi.org/{{ item.doi }}">Zenodo</a>{% endif %}{% include cv/papers.html item=item %}{% include cv/stats.html stats=item_stats %}</p>
       </li>
       {%- endfor %}
     </ul>

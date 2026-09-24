@@ -87,7 +87,7 @@ def describe(description: Graph, folder: str, graph: Graph) -> URIRef:
     add((dataset, RDF.type, VOID.Dataset))
     add((dataset, RDF.type, DCAT.Dataset))
     add((dataset, DCTERMS.title, Literal(str(graph.value(page, SCHEMA.name)), lang="en")))
-    add((dataset, DCTERMS.description, Literal(f"The {PAGES[folder]} graph, rendered from the same source as the page's RDFa.", lang="en")))
+    add((dataset, DCTERMS.description, Literal(f"The {PAGES[folder]} graph.", lang="en")))
     person = graph.value(page, SCHEMA.mainEntity)
     if person is None:
         sys.exit("The graph has no schema:mainEntity for the page")

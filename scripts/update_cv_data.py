@@ -256,7 +256,7 @@ def update_events(works: dict) -> None:
     Records without a named venue are listed for review instead of being published half-empty.
     """
     curated = (DATA_DIR / "events.yml").read_text(encoding="utf-8")
-    known = {d.lower() for d in re.findall(r"^\s*doi:\s*\"?([^\s\"]+)", curated, re.M)}
+    known = {d.lower() for d in re.findall(r"^\s*doi:\s*\"?([^\s\"]+)", curated, re.MULTILINE)}
     rows, review = [], []
     for row in orcid_events(works) + zenodo_events():
         dois = {str(row.get(k)).lower() for k in ("doi", "_concept") if row.get(k)}

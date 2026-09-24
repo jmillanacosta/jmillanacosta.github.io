@@ -14,3 +14,21 @@ exclude:
   - package-lock.json
 plugins:
   - jekyll-seo-tag
+# Concept pages are written into _site after the build (scripts/build-concepts.py), each under
+# its category; keep them across rebuilds while serving.
+keep_files:
+  - concepts
+  - content
+  - courses
+  - event
+  - grants
+  - journals
+  - languages
+  - organisms
+  - organizations
+  - people
+  - places
+  - projects
+  - publications
+  - skills
+  - software

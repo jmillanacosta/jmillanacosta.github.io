@@ -1,0 +1,22 @@
+<!doctype html>
+{%- comment -%}
+  Page frame for the concept pages, which scripts/build-concepts.py writes after the build: it
+  reads this page (/concepts/shell.html) and fills the three placeholders.
+{%- endcomment -%}
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--concept:head-->
+    {%- include site-assets.html %}
+  </head>
+  <body data-page="concept">
+    <a class="skip-link screen-only" href="#main-content">Skip to content</a>
+    {%- assign mode = "concept" %}
+    {%- include site-nav.html %}
+    <main id="main-content" tabindex="-1">
+      <!--concept:body-->
+      <footer class="page-footer screen-only"><!--concept:footer--></footer>
+    </main>
+  </body>
+</html>

@@ -31,9 +31,11 @@ jobs:
       - name: Restore build directory ownership
         run: sudo chown -R "$(id -u):$(id -g)" _site
       - name: Install RDF tools
-        run: python3 -m pip install rdflib pyrdfa3 html5lib
+        run: python3 -m pip install rdflib pyrdfa3 html5lib pyyaml
       - name: Check RDFa against JSON-LD, publish RDF and VoID
         run: python3 scripts/build-rdf.py
+      - name: Write a page for every concept in the graph
+        run: python3 scripts/build-concepts.py
       - name: Set up Node
         uses: actions/setup-node@v7.0.0
         with:

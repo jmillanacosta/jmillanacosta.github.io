@@ -1,0 +1,8 @@
+{%- comment -%}
+  An organization's places (location and other_locations) as RDFa with no visible text.
+  skip_first=true leaves out the main location, when the page already shows it.
+{%- endcomment -%}
+{%- assign pl_org = include.org -%}
+{%- assign pl_all = pl_org.other_locations -%}
+{%- unless include.skip_first %}{% if pl_org.location %}<span property="location" resource="{{ cv.places[pl_org.location] }}" typeof="Place"><span property="name" content="{{ pl_org.location | escape }}"></span></span>{% endif %}{% endunless -%}
+{%- for pl_name in pl_all %}<span property="location" resource="{{ cv.places[pl_name] }}" typeof="Place"><span property="name" content="{{ pl_name | escape }}"></span></span>{% endfor -%}
