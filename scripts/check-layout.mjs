@@ -1,4 +1,5 @@
 // Checks actual rendered overflow, responsive layout, and the fixed light palette.
+// The section bar's labels scroll sideways inside their own list, so they may extend past the edge.
 import assert from "node:assert/strict";
 import { mkdir, writeFile } from "node:fs/promises";
 import { openCV } from "./lib/render-cv.mjs";
@@ -18,7 +19,7 @@ try {
       features: [{ name: "prefers-color-scheme", value: "dark" }],
     });
     const { result } = await renderer.call("Runtime.evaluate", {
-      expression: `JSON.stringify({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,background:getComputedStyle(document.body).backgroundColor,sections:document.querySelectorAll('.cv-section').length,entries:document.querySelectorAll('.cv-entry').length,overflow:[...document.querySelectorAll('main *')].filter(e=>{const r=e.getBoundingClientRect();return r.width && (r.right>innerWidth+1||r.left<0)}).map(e=>e.tagName+'.'+e.className)})`,
+      expression: `JSON.stringify({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,background:getComputedStyle(document.body).backgroundColor,sections:document.querySelectorAll('.cv-section').length,entries:document.querySelectorAll('.cv-entry').length,overflow:[...document.querySelectorAll('main *')].filter(e=>{const r=e.getBoundingClientRect();return r.width && !e.closest('.section-nav ol') && (r.right>innerWidth+1||r.left<0)}).map(e=>e.tagName+'.'+e.className)})`,
     });
     const layout = JSON.parse(result.value);
     assert.equal(layout.width, width);

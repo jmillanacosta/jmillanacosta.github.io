@@ -1,6 +1,6 @@
 {%- comment -%}Landing: libraries I maintain, then shared projects I contribute to, in the same grid.{%- endcomment -%}
 <section class="cv-section lp-section" aria-labelledby="open-source-software">
-  <h2 id="open-source-software"><a class="section-title" href="#open-source-software">Software</a></h2>
+  <h2 id="open-source-software"><a class="section-title" href="#open-source-software">Software I maintain</a></h2>
   <div class="section-body">
     <ul class="works">
       {%- assign own_software = cv.libraries | concat: cv.personal_tools %}
@@ -19,7 +19,7 @@
   </div>
 </section>
 <section class="cv-section lp-section" aria-labelledby="contributions">
-  <h2 id="contributions"><a class="section-title" href="#contributions">Contributions</a></h2>
+  <h2 id="contributions"><a class="section-title" href="#contributions">Software contributions</a> </h2>
   <div class="section-body">
     <ul class="works">
       {%- for item in cv.contributions %}
@@ -31,6 +31,8 @@
       </li>
       {%- endfor %}
     </ul>
-    <p class="works-more"><a class="button" href="https://github.com/search?q=is%3Apr+author%3Ajmillanacosta+is%3Amerged+-user%3Ajmillanacosta&amp;type=pullrequests">Merged pull requests in other projects</a></p>
+    <p class="works-more"><a class="button"
+      href="https://github.com/search?q=is%3Apr+author%3Ajmillanacosta+is%3Amerged+-user%3Ajmillanacosta&amp;type=pullrequests">All merged
+          pull requests in other projects</a></p>
   </div>
 </section>

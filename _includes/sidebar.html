@@ -1,0 +1,45 @@
+{%- comment -%}
+  CV section navigation. It follows the page header in the document, so on narrow screens the
+  bar sits right under the header's buttons and sticks to the top from there; on wide screens it
+  is a rail in the left margin. assets/js/cv-nav.js tracks the current section.
+{%- endcomment -%}
+{%- assign employer = orgs[person.works_for] %}
+{%- assign employer_parent = orgs[employer.parent] %}
+<aside
+  class="sidebar screen-only"
+  aria-label="Profile and sections"
+  data-at-top
+  data-header-visible
+>
+  <div class="sidebar-profile">
+    <a class="sidebar-name" href="#top">{{ person.name }}</a>
+    <div class="sidebar-reveal">
+      <p>
+        {{ person.job_title }}<br />
+        {%- if employer_parent %}{{ employer_parent.name }}, {% endif %}{{ employer.name }}
+      </p>
+      <p>{{ employer.location }}</p>
+    </div>
+  </div>
+  <div class="sidebar-track">
+    <nav class="section-nav" aria-label="CV sections">
+      <ol>
+        {%- for section in page.sections %}
+        <li style="--i: {{ forloop.index0 }}"><a href="#{{ section.id }}">{{ section.label }}</a></li>
+        {%- endfor %}
+      </ol>
+    </nav>
+    <div class="sidebar-contact sidebar-reveal">
+      <a href="mailto:{{ person.email }}" title="{{ person.email }}"
+        >Email</a
+      >
+      <ul>
+        {%- for profile in person.profiles %}{% if profile.sidebar %}
+        <li><a href="{{ profile.url }}">{{ profile.sidebar }}</a></li>
+        {%- endif %}{% endfor %}
+      </ul>
+      <a class="sidebar-cv" href="{{ '/' | relative_url }}">Home</a>
+      <a class="sidebar-pdf" href="{{ pdf_url }}" download>Download PDF</a>
+    </div>
+  </div>
+</aside>

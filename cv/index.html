@@ -25,6 +25,7 @@ graph: [description, roles, projects, communities, software, contributions, publ
 {%- include cv/data.liquid -%}
 <div class="cv" property="mainEntity foaf:primaryTopic foaf:maker dcterms:creator" resource="{{ me }}" typeof="Person foaf:Person">
 {% include sections/header.html %}
+{% include sidebar.html %}
 {% include sections/experience.html %}
 {% include sections/software.html %}
 {% include sections/publications.html %}

@@ -55,63 +55,22 @@
     </script>
   </head>
   <body
+    data-page="{{ mode }}"
     vocab="https://schema.org/"
     prefix="foaf: http://xmlns.com/foaf/0.1/ dcterms: http://purl.org/dc/terms/ xsd: http://www.w3.org/2001/XMLSchema#"
   >
     <a class="skip-link screen-only" href="#main-content">Skip to content</a>
-    {%- if page.sections and mode == "cv" %}
-    {%- assign employer = orgs[person.works_for] %}
-    {%- assign employer_parent = orgs[employer.parent] %}
-    <aside
-      class="sidebar screen-only"
-      aria-label="Profile and sections"
-      data-at-top
-      data-header-visible
-    >
-      <div class="sidebar-profile">
-        <a class="sidebar-name" href="#top">{{ person.name }}</a>
-        <div class="sidebar-reveal">
-          <p>
-            {{ person.job_title }}<br />
-            {%- if employer_parent %}{{ employer_parent.name }}, {% endif %}{{ employer.name }}
-          </p>
-          <p>{{ employer.location }}</p>
-        </div>
-      </div>
-      <div class="sidebar-track">
-        <nav class="section-nav" aria-label="CV sections">
-          <ol>
-            {%- for section in page.sections %}
-            <li style="--i: {{ forloop.index0 }}"><a href="#{{ section.id }}">{{ section.label }}</a></li>
-            {%- endfor %}
-          </ol>
-        </nav>
-        <div class="sidebar-contact sidebar-reveal">
-          <a href="mailto:{{ person.email }}" title="{{ person.email }}"
-            >Email</a
-          >
-          <ul>
-            {%- for profile in person.profiles %}{% if profile.sidebar %}
-            <li><a href="{{ profile.url }}">{{ profile.sidebar }}</a></li>
-            {%- endif %}{% endfor %}
-          </ul>
-          <a class="sidebar-cv" href="{{ '/' | relative_url }}">Home</a>
-          <a class="sidebar-pdf" href="{{ pdf_url }}" download>Download PDF</a>
-        </div>
-      </div>
-    </aside>
-    {%- endif %}
+    <nav class="site-nav screen-only" aria-label="Site">
+      <a href="{{ '/' | relative_url }}"{% if mode == "site" %} aria-current="page"{% endif %}>Home</a>
+      <a href="{{ '/cv/' | relative_url }}"{% if mode == "cv" %} aria-current="page"{% endif %}>CV</a>
+      <a href="{{ '/events/' | relative_url }}"{% if mode == "events" %} aria-current="page"{% endif %}>Events</a>
+    </nav>
     <main
       id="main-content"
       tabindex="-1"
       resource="{{ page_iri }}"
       typeof="ProfilePage foaf:PersonalProfileDocument"
     >
-      <nav class="site-nav screen-only" aria-label="Site">
-        <a href="{{ '/' | relative_url }}"{% if mode == "site" %} aria-current="page"{% endif %}>Home</a>
-        <a href="{{ '/cv/' | relative_url }}"{% if mode == "cv" %} aria-current="page"{% endif %}>CV</a>
-        <a href="{{ '/events/' | relative_url }}"{% if mode == "events" %} aria-current="page"{% endif %}>Talks &amp; events</a>
-      </nav>
       {{ content }}
       <footer class="page-footer screen-only">
         <span

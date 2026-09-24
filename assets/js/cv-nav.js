@@ -17,6 +17,77 @@
   let chosen = -1;
   let queued = false;
 
+  // In the horizontal bar, a highlight glides between labels. Each edge is a spring: the edge
+  // facing the direction of travel is stiff and leads, the other lags and catches up, so the
+  // highlight stretches, overshoots a touch, and settles.
+  const indicator = document.createElement("li");
+  indicator.className = "section-nav-indicator";
+  indicator.setAttribute("aria-hidden", "true");
+  list?.prepend(indicator);
+  nav.classList.add("has-indicator");
+  const edges = {
+    left: NaN,
+    right: NaN,
+    vLeft: 0,
+    vRight: 0,
+    toLeft: 0,
+    toRight: 0,
+  };
+  let springing = false;
+  let lastFrame = 0;
+  const renderIndicator = () => {
+    indicator.style.transform = `translateX(${edges.left}px)`;
+    indicator.style.width = `${Math.max(0, edges.right - edges.left)}px`;
+  };
+  const spring = (now) => {
+    const dt = Math.min(1 / 30, (now - lastFrame) / 1000 || 1 / 60);
+    lastFrame = now;
+    const rightward = edges.toLeft + edges.toRight > edges.left + edges.right;
+    const lead = { k: 300, c: 26 };
+    const trail = { k: 120, c: 18 };
+    const l = rightward ? trail : lead;
+    const r = rightward ? lead : trail;
+    edges.vLeft += (l.k * (edges.toLeft - edges.left) - l.c * edges.vLeft) * dt;
+    edges.vRight +=
+      (r.k * (edges.toRight - edges.right) - r.c * edges.vRight) * dt;
+    edges.left += edges.vLeft * dt;
+    edges.right += edges.vRight * dt;
+    renderIndicator();
+    const resting =
+      Math.abs(edges.toLeft - edges.left) +
+        Math.abs(edges.toRight - edges.right) <
+        0.5 && Math.abs(edges.vLeft) + Math.abs(edges.vRight) < 1;
+    if (resting) {
+      edges.left = edges.toLeft;
+      edges.right = edges.toRight;
+      renderIndicator();
+      springing = false;
+    } else requestAnimationFrame(spring);
+  };
+  const moveIndicator = (link, instant = false) => {
+    indicator.style.opacity = link ? "1" : "0";
+    if (!link) return;
+    // Measured against the list, whose content scrolls sideways under the indicator.
+    const box = list.getBoundingClientRect();
+    const rect = link.getBoundingClientRect();
+    edges.toLeft = rect.left - box.left + list.scrollLeft;
+    edges.toRight = edges.toLeft + rect.width;
+    indicator.style.top = `${rect.top - box.top}px`;
+    indicator.style.height = `${rect.height}px`;
+    if (instant || reducedMotion.matches || Number.isNaN(edges.left)) {
+      edges.left = edges.toLeft;
+      edges.right = edges.toRight;
+      edges.vLeft = edges.vRight = 0;
+      renderIndicator();
+      return;
+    }
+    if (!springing) {
+      springing = true;
+      lastFrame = performance.now();
+      requestAnimationFrame(spring);
+    }
+  };
+
   // The reading line sits a third of the way down, then slides to the bottom edge over the
   // last stretch of the page, so short closing sections each get their turn in order.
   const readingIndex = () => {
@@ -38,9 +109,14 @@
     });
     // In the horizontal bar, center the current label without moving the page.
     const active = links[index];
+    moveIndicator(active);
     if (active && list && list.scrollWidth > list.clientWidth) {
       list.scrollTo({
-        left: active.offsetLeft - (list.clientWidth - active.offsetWidth) / 2,
+        left:
+          active.getBoundingClientRect().left -
+          list.getBoundingClientRect().left +
+          list.scrollLeft -
+          (list.clientWidth - active.offsetWidth) / 2,
         behavior: reducedMotion.matches ? "auto" : "smooth",
       });
     }
@@ -48,7 +124,11 @@
 
   const update = () => {
     queued = false;
-    sidebar.toggleAttribute("data-at-top", scrollY < 1);
+    // Until the compact bar sticks, it has no rule beneath it.
+    sidebar.toggleAttribute(
+      "data-at-top",
+      sidebar.getBoundingClientRect().top > 0.5,
+    );
     // The sidebar profile repeats the header, so it appears only once the header has passed the rail's top edge.
     sidebar.toggleAttribute(
       "data-header-visible",
@@ -147,6 +227,7 @@
   addEventListener("scroll", schedule, { passive: true });
   addEventListener("resize", () => {
     measure();
+    moveIndicator(links[current], true);
     schedule();
   });
   motionMedia.addEventListener("change", measure);

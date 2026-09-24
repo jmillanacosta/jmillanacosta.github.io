@@ -10,7 +10,7 @@ person:
     locality: Maastricht
     country: Netherlands
   description: >-
-    I work on software that makes biomedical data interoperable: how can schema and identifier reconciliation across databases and their releases improve the services and tools we build with them?
+    I work on software that makes biomedical data interoperable: schema and identifier reconciliation across databases and their releases to improve access to services and the tools we build with them.
   profiles:
     - label: ORCID
       url: https://orcid.org/0000-0002-4166-7093
@@ -120,14 +120,13 @@ experience:
       - >-
         Thesis on the interoperability of life sciences data: how independently maintained RDF resources
         can be described, discovered, and queried together, and how the continual revision of the underlying
-        databases affects the results of integrating them.
+        databases affects integration and downstream usage.
       - >-
         Database description: I developed rdfsolve to mine schemas and paths from SPARQL endpoints and RDF dumps into descriptive (VoID) and prescriptive (SHACL) formats, generate typed Python models, and derive mappings
         across datasets. I maintain a registry of life sciences RDF resources recording what each exposes
         and how it links to the others.
       - >-
-        Database evolution: I conceptualized a methodology to capture the historical events of identifier deprecation and label aliasing and supersession across ChEBI, Ensembl, HGNC, HMDB, NCBI, UniProt,
-        VGNC, and Wikidata, and compare releases as the basis for measuring how these revisions propagate
+        Database evolution: I conceptualized a methodology to capture the historical events of identifier deprecation and label aliasing and supersession across ChEBI, Ensembl, HGNC, HMDB, NCBI, UniProt, and virtually any database with a release archive where deprecation events are explicit or implicit, and compare releases as the basis for measuring how these revisions propagate
         into downstream tools and resources (manuscript in preparation).
     occupation: http://data.europa.eu/esco/occupation/68d973df-bf10-4bf7-9a1b-fbd9f604b9db
   - id: frieslandcampina-internship

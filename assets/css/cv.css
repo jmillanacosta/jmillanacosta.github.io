@@ -570,6 +570,10 @@ a.work-name:hover {
 }
 
 @media screen {
+  body {
+    overflow-x: clip;
+  }
+
   html {
     /* Clears the sticky section bar when jumping to a heading. */
     scroll-padding-top: 4rem;
@@ -617,18 +621,27 @@ a.work-name:hover {
     text-underline-offset: 0.3em;
   }
 
-  /* Compact bar: sticky, horizontally scrollable, aligned with the text column. */
+  /* Compact bar: right under the header's buttons, then sticky; horizontally scrollable.
+     Its background and rule reach the window edges once it sticks. */
   .sidebar {
     display: block;
     position: sticky;
     z-index: 5;
     top: 0;
-    padding-inline: max(2rem, calc((100% - 45rem) / 2));
+    margin-top: -0.6rem;
+    background: var(--bg);
+  }
+
+  .sidebar::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0 calc(50% - 50vw);
     background: var(--bg);
     border-bottom: 1px solid var(--rule);
   }
 
-  .sidebar[data-at-top] {
+  .sidebar[data-at-top]::before {
     border-bottom-color: transparent;
   }
 
@@ -680,8 +693,23 @@ a.work-name:hover {
     color: var(--link);
   }
 
-  .section-nav ol a[aria-current] {
+  .section-nav:not(.has-indicator) ol a[aria-current] {
     background: color-mix(in srgb, var(--link) 10%, transparent);
+  }
+
+  .section-nav ol a {
+    position: relative;
+    z-index: 1;
+  }
+
+  .section-nav-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--link) 12%, transparent);
+    pointer-events: none;
+    transition: opacity 0.2s ease;
   }
 
   .section-nav a:focus-visible {
@@ -741,10 +769,6 @@ a.work-name:hover {
   main {
     padding: 2rem 1.5rem 3rem;
   }
-
-  .sidebar {
-    padding-inline: 1.5rem;
-  }
 }
 
 @media screen and (width <= 480px) {
@@ -771,10 +795,6 @@ a.work-name:hover {
   .contact-links .contact-email {
     flex-basis: 100%;
   }
-
-  .sidebar {
-    padding-inline: 1.1rem;
-  }
 }
 
 /* Wide screens: the navigation becomes a rail in the left margin. */
@@ -800,6 +820,11 @@ a.work-name:hover {
   .sidebar-profile,
   .sidebar-reveal {
     display: block;
+  }
+
+  .sidebar::before,
+  .section-nav-indicator {
+    display: none;
   }
 
   /* Profile and contacts repeat the page header, so they appear once it scrolls away. */
@@ -1012,6 +1037,63 @@ a.work-name:hover {
   }
 }
 
+/* The header stays put between pages; the sections below it settle in on arrival, one after
+   another. Subdued, and off for readers who prefer less motion. */
+@media screen and (prefers-reduced-motion: no-preference) {
+  body:not([data-page="events"]) .cv > section {
+    animation: page-enter 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    animation-delay: 0.45s;
+  }
+
+  body:not([data-page="events"]) .cv > section:nth-of-type(1) {
+    animation-delay: 0.1s;
+  }
+
+  body:not([data-page="events"]) .cv > section:nth-of-type(2) {
+    animation-delay: 0.2s;
+  }
+
+  body:not([data-page="events"]) .cv > section:nth-of-type(3) {
+    animation-delay: 0.3s;
+  }
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(0.4rem);
+  }
+}
+
+/* Events page: on arrival the entries unfold one after another, like the CV's section list,
+   each year appearing with its first entry. */
+@media screen and (prefers-reduced-motion: no-preference) {
+  [data-page="events"] .almanac-entry,
+  [data-page="events"] .almanac-numeral {
+    animation: entry-unfold 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    animation-delay: calc(0.1s + var(--i, 0) * 0.07s);
+  }
+}
+
+@keyframes entry-unfold {
+  from {
+    opacity: 0;
+    transform: translateY(0.6rem);
+    clip-path: inset(0 0 100% 0);
+  }
+
+  60% {
+    clip-path: inset(0 0 0 0);
+  }
+
+  /* Ends unclipped, so focus outlines and descenders are never cut off. */
+  to {
+    opacity: 1;
+    transform: none;
+    clip-path: none;
+  }
+}
+
 @keyframes nav-enter {
   from {
     opacity: 0;
@@ -1044,7 +1126,24 @@ a.work-name:hover {
   }
 
   main {
-    padding-top: 1.4rem;
+    padding-top: 2.2rem;
+  }
+
+  @media (width <= 760px) {
+    .site-nav {
+      width: calc(100% - 3rem);
+    }
+  }
+
+  @media (width <= 480px) {
+    .site-nav {
+      width: calc(100% - 2.2rem);
+      margin-top: 1rem;
+    }
+
+    main {
+      padding-top: 1.6rem;
+    }
   }
 
   h1 {
@@ -1095,11 +1194,14 @@ a.work-name:hover {
     letter-spacing: -0.015em;
   }
 
+  /* Above the CV's section bar, aligned with the text column. */
   .site-nav {
     display: flex;
     flex-wrap: wrap;
     gap: 0.25rem 1.4rem;
-    margin-bottom: 2.2rem;
+    width: calc(100% - 4rem);
+    max-width: 45rem;
+    margin: 1.4rem auto 0;
     padding-bottom: 0.7rem;
     border-bottom: 1px solid var(--rule);
     font-size: 0.95rem;
@@ -1107,8 +1209,26 @@ a.work-name:hover {
   }
 
   .site-nav a {
+    position: relative;
     color: var(--muted);
     text-decoration: none;
+  }
+
+  /* The underline marks the current page and grows in when the page loads. */
+  .site-nav a::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -0.3rem;
+    left: 0;
+    height: 2px;
+    border-radius: 1px;
+    background: var(--link);
+    transform: scaleX(0);
+  }
+
+  .site-nav a[aria-current]::after {
+    transform: scaleX(1);
   }
 
   .site-nav a:hover,
@@ -1116,10 +1236,16 @@ a.work-name:hover {
     color: var(--text);
   }
 
-  .site-nav a[aria-current] {
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 0.45em;
-    text-decoration-color: var(--link);
+  @media (prefers-reduced-motion: no-preference) {
+    .site-nav a[aria-current]::after {
+      animation: underline-in 0.45s cubic-bezier(0.3, 0.7, 0.3, 1) 0.1s
+        backwards;
+    }
+  }
+}
+
+@keyframes underline-in {
+  from {
+    transform: scaleX(0);
   }
 }
