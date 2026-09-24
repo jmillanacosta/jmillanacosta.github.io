@@ -57,6 +57,9 @@ jobs:
         run: python3 scripts/check-pdf.py
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5.0.0
+        with:
+          # Publishes /.well-known/void, which a dot-folder would otherwise leave out.
+          include-hidden-files: "true"
 
   deploy:
     environment:

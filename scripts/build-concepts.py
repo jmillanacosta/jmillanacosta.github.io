@@ -506,29 +506,67 @@ class Concepts:
         return self.publish(out)
 
 
+def document(concepts: Concepts, statements: Graph, page: str, name: str, about: object) -> Graph:
+    """What a page offers machines: the statements it shows, plus the page itself (what it is,
+    what it is about, who it is by)."""
+    config, doc = CONFIG["signposting"], Graph()
+    doc += statements
+    doc.bind(CONFIG["vocabulary_prefix"], V)
+    node = URIRef(page)
+    for kind in config["page_types"]:
+        doc.add((node, RDF.type, V[kind]))
+    doc.add((node, TERMS["name"], Literal(name, lang="en")))
+    if isinstance(about, URIRef) and not str(about).startswith(MERGED):
+        doc.add((node, V[config["about"]], about))
+    if isinstance(concepts.me, URIRef):
+        doc.add((node, V[config["author"]], concepts.me))
+    return doc
+
+
+def signposts(concepts: Concepts, about: object) -> list[str]:
+    """FAIR Signposting in the head: each format, the page's and its subject's types, the author,
+    and a persistent identifier to cite, when the subject has one."""
+    config = CONFIG["signposting"]
+    links = [
+        f'<link rel="describedby alternate" type="{f["type"]}" href="{f["file"]}" title="{html.escape(f["name"])}" />'
+        for f in CONFIG["formats"]
+    ]
+    types = [V[t] for t in config["page_types"]]
+    if about is not None:
+        types += [V[t] for t in concepts.types(about)]
+    links += [f'<link rel="type" href="{html.escape(str(t))}" />' for t in dict.fromkeys(types)]
+    if isinstance(concepts.me, URIRef):
+        links.append(f'<link rel="author" href="{html.escape(str(concepts.me))}" />')
+    if isinstance(about, URIRef) and urlparse(str(about)).netloc in config["persistent_hosts"]:
+        links.append(f'<link rel="cite-as" href="{html.escape(str(about))}" />')
+    return links
+
+
 def frame(
-    shell: str, concepts: Concepts, name: str, summary: str, page: str, body: list[str], about: str | None,
-    current: str | None = None, scripts: Sequence[str] = (),
-) -> str:
-    """A page in the site's frame. `current` marks that link in the top bar as the current page."""
-    described: dict[str, object] = {"@context": CONFIG["vocabulary"], "@id": page, "@type": "WebPage", "name": name}
-    if about:
-        described["about"] = {"@id": about}
+    shell: str, concepts: Concepts, name: str, summary: str, page: str, body: list[str],
+    statements: Graph, about: object = None, current: str | None = None, scripts: Sequence[str] = (),
+) -> tuple[str, Graph]:
+    """A page in the site's frame, with its graph. `current` marks that link in the top bar."""
+    doc = document(concepts, statements, page, name, about)
+    embedded = doc.serialize(format="json-ld", context={"@vocab": str(V), CONFIG["vocabulary_prefix"]: str(V)})
+    safe = embedded.replace("</", "<\\/")  # a script element must not contain "</"
     head = "\n".join([
         f"<title>{html.escape(text('title', name=name, owner=concepts.owner))}</title>",
         f'<meta name="description" content="{html.escape(summary[:300])}" />',
         f'<link rel="canonical" href="{html.escape(page)}" />',
-        '<link rel="alternate" type="text/turtle" href="index.ttl" title="Turtle" />',
-        f'<script type="application/ld+json">{json.dumps(described, ensure_ascii=False)}</script>',
+        *signposts(concepts, about),
+        f'<script type="application/ld+json">{safe}</script>',
         *(f'<script src="{src}" defer></script>' for src in scripts),
     ])
     if current:
         shell = shell.replace(f'href="{current}"', f'href="{current}" aria-current="page"', 1)
-    return (
+    formats = ", ".join(f'<a href="{f["file"]}" type="{f["type"]}">{html.escape(f["name"])}</a>' for f in CONFIG["formats"])
+    page_html = (
         shell.replace("<!--concept:head-->", head)
         .replace("<!--concept:body-->", "\n".join(body))
-        .replace("<!--concept:footer-->", text("footer"))
+        .replace("<!--concept:footer-->", text("footer", formats=formats))
     )
+    return page_html, doc
 
 
 def header(kicker: str, title: str, *extra: str) -> list[str]:
@@ -545,7 +583,7 @@ def section(heading: str | None, rows: dict[str, list[str]]) -> str:
     return f'<section class="cv-section" aria-labelledby="{anchor}"><h2 id="{anchor}">{html.escape(heading)}</h2>{definition_list(rows)}</section>'
 
 
-def render(concepts: Concepts, node: URIRef, shell: str) -> str:
+def render(concepts: Concepts, node: URIRef, shell: str) -> tuple[str, Graph]:
     g = concepts.graph
     name, labels = concepts.name(node), concepts.labels(node)
     description = g.value(node, TERMS["description"])
@@ -566,11 +604,10 @@ def render(concepts: Concepts, node: URIRef, shell: str) -> str:
         "</div>",
     ]
     summary = str(description) if description is not None else text("summary", kind=labels[0], owner=concepts.owner)
-    about = None if str(node).startswith(MERGED) else str(node)
-    return frame(shell, concepts, name, summary, BASE + concepts.paths[node], body, about)
+    return frame(shell, concepts, name, summary, BASE + concepts.paths[node], body, concepts.statements(node), node)
 
 
-def render_kind(concepts: Concepts, predicate: URIRef, value: str, shell: str) -> str:
+def render_kind(concepts: Concepts, predicate: URIRef, value: str, shell: str) -> tuple[str, Graph]:
     """A kind (Hackathon, Journal article): everything of that kind, and the other kinds."""
     name, members = capital(value), concepts.members(predicate, value)
     rows: dict[str, list[str]] = defaultdict(list)
@@ -584,10 +621,11 @@ def render_kind(concepts: Concepts, predicate: URIRef, value: str, shell: str) -
     kicker = f'<a href="/{concepts.kind_index(home)}">{html.escape(text("kind_of", of=" / ".join(of)))}</a>'
     body = [*header(kicker, name), section(text("connections"), rows), "</div>"]
     summary = text("kind_summary", name=name, count=len(members), owner=concepts.owner)
-    return frame(shell, concepts, name, summary, BASE + concepts.kind_paths[(predicate, value)], body, None)
+    page = BASE + concepts.kind_paths[(predicate, value)]
+    return frame(shell, concepts, name, summary, page, body, concepts.listing(members, predicate))
 
 
-def render_category(concepts: Concepts, category: dict[str, Any], members: list[URIRef], shell: str) -> str:
+def render_category(concepts: Concepts, category: dict[str, Any], members: list[URIRef], shell: str) -> tuple[str, Graph]:
     """A category: its members grouped by kind or label; with `lists`, each member with what
     points to it through that predicate (a place, and what is based or held there)."""
     g, title = concepts.graph, category["title"]
@@ -611,10 +649,10 @@ def render_category(concepts: Concepts, category: dict[str, Any], members: list[
         by_kind.append(f'<p class="concept-identity">{text("by_kind", links=links)}</p>')
     body = [*header(html.escape(text("category")), title, *by_kind), content, "</div>"]
     summary = text("category_summary", title=title, owner=concepts.owner)
-    return frame(shell, concepts, title, summary, BASE + category["folder"] + "/", body, None)
+    return frame(shell, concepts, title, summary, BASE + category["folder"] + "/", body, concepts.listing(members))
 
 
-def render_kinds(concepts: Concepts, category: dict[str, Any], shell: str) -> str:
+def render_kinds(concepts: Concepts, category: dict[str, Any], shell: str) -> tuple[str, Graph]:
     """A category's kinds (/event/kind/), each with how many things it sorts."""
     title = text("kinds_of", of=category["title"].lower())
     rows: dict[str, list[str]] = defaultdict(list)
@@ -624,10 +662,11 @@ def render_kinds(concepts: Concepts, category: dict[str, Any], shell: str) -> st
     kicker = f'<a href="/{category["folder"]}/">{html.escape(category["title"])}</a>'
     body = [*header(kicker, title), section(None, rows), "</div>"]
     summary = text("category_summary", title=title, owner=concepts.owner)
-    return frame(shell, concepts, title, summary, BASE + concepts.kind_index(category["folder"]), body, None)
+    members = [m for p, v in concepts.kinds_in(category["folder"]) for m in concepts.members(p, v)]
+    return frame(shell, concepts, title, summary, BASE + concepts.kind_index(category["folder"]), body, concepts.listing(members))
 
 
-def render_content(concepts: Concepts, grouped: dict[str, list[URIRef]], categories: dict[str, dict[str, Any]], shell: str) -> str:
+def render_content(concepts: Concepts, grouped: dict[str, list[URIRef]], categories: dict[str, dict[str, Any]], shell: str) -> tuple[str, Graph]:
     """Everything as one table: the site's pages, then each category and its members, with each
     member's kind, year, and how many concepts it is connected to. A filter narrows it (content.js)."""
     config, g = CONFIG["content"], concepts.graph
@@ -673,8 +712,9 @@ def render_content(concepts: Concepts, grouped: dict[str, list[URIRef]], categor
         f'<section class="cv-section content-section">{toolbar}<table class="content-table">{head}{"".join(groups)}</table></section>',
         "</div>",
     ]
-    return frame(shell, concepts, config["title"], fill(config["lede"], count=total, categories=len(grouped)),
-                 BASE + config["folder"] + "/", body, None, current=config["nav"], scripts=["/assets/js/content.js"])
+    summary = fill(config["lede"], count=total, categories=len(grouped))
+    return frame(shell, concepts, config["title"], summary, BASE + config["folder"] + "/", body,
+                 concepts.listing(concepts.nodes), current=config["nav"], scripts=["/assets/js/content.js"])
 
 
 def merge_sitemap(urls: list[str], stale: list[str], lastmod: str) -> None:
@@ -688,10 +728,13 @@ def merge_sitemap(urls: list[str], stale: list[str], lastmod: str) -> None:
     sitemap.write_text(head + "\n  " + "\n  ".join(kept + added) + "\n</urlset>\n", encoding="utf-8")
 
 
-def write(folder: str, page: str, turtle: Graph) -> None:
+def write(folder: str, rendered: tuple[str, Graph]) -> None:
+    """A page and its graph in every configured format, side by side."""
+    page, graph = rendered
     (SITE / folder).mkdir(parents=True, exist_ok=True)
     (SITE / folder / "index.html").write_text(page, encoding="utf-8")
-    (SITE / folder / "index.ttl").write_text(turtle.serialize(format="turtle"), encoding="utf-8")
+    for f in CONFIG["formats"]:
+        (SITE / folder / f["file"]).write_text(graph.serialize(format=f["rdflib"]), encoding="utf-8")
 
 
 def clear_previous() -> list[str]:
@@ -704,7 +747,7 @@ def clear_previous() -> list[str]:
     # Deepest first, so a category's folder is empty by the time it is reached.
     for path in sorted(previous, key=lambda p: -p.count("/")):
         target = SITE / path
-        for name in ("index.html", "index.ttl"):
+        for name in ("index.html", *(f["file"] for f in CONFIG["formats"])):
             (target / name).unlink(missing_ok=True)
         if target.is_dir() and not any(target.iterdir()):
             target.rmdir()
@@ -722,14 +765,14 @@ def main() -> None:
     index: dict[str, dict[str, str]] = {}
 
     for node in concepts.nodes:
-        write(concepts.paths[node], render(concepts, node, shell), concepts.statements(node))
+        write(concepts.paths[node], render(concepts, node, shell))
         key = unquote(str(node).removeprefix(MERGED)) if str(node).startswith(MERGED) else str(node)
         index[key] = {"path": "/" + concepts.paths[node], "name": concepts.name(node)}
     for key, node in concepts.aliases.items():
         if node in concepts.paths:
             index[key] = {"path": "/" + concepts.paths[node], "name": concepts.name(node)}
     for (predicate, value), path in concepts.kind_paths.items():
-        write(path, render_kind(concepts, predicate, value, shell), concepts.listing(concepts.members(predicate, value), predicate))
+        write(path, render_kind(concepts, predicate, value, shell))
         index[f"kind:{local(predicate)}|{value}"] = {"path": "/" + path, "name": capital(value)}
 
     hubs = []
@@ -739,15 +782,14 @@ def main() -> None:
         grouped[concepts.category(node)["folder"]].append(node)
     for folder, members in sorted(grouped.items()):
         if not categories[folder].get("existing"):
-            write(f"{folder}/", render_category(concepts, categories[folder], members, shell), concepts.listing(members))
+            write(f"{folder}/", render_category(concepts, categories[folder], members, shell))
             hubs.append(f"{folder}/")
     for folder in sorted(set(concepts.kind_homes.values())):
-        members = [m for p, v in concepts.kinds_in(folder) for m in concepts.members(p, v)]
-        write(concepts.kind_index(folder), render_kinds(concepts, categories[folder], shell), concepts.listing(members))
+        write(concepts.kind_index(folder), render_kinds(concepts, categories[folder], shell))
         hubs.append(concepts.kind_index(folder))
 
     content = f"{CONFIG['content']['folder']}/"
-    write(content, render_content(concepts, grouped, categories, shell), concepts.listing(concepts.nodes))
+    write(content, render_content(concepts, grouped, categories, shell))
     hubs.append(content)
 
     paths = [*hubs, *concepts.paths.values(), *concepts.kind_paths.values()]

@@ -313,8 +313,28 @@ text:
   summary: "{kind} in {owner}'s CV graph."
   kind_summary: "{name}: {count} in {owner}'s CV graph."
   category_summary: "{title} in {owner}'s CV graph."
-  footer: 'Also as <a href="index.ttl" type="text/turtle">Turtle</a>'
+  footer: "Also as {formats}"
 slug_length: 60
+
+# What every generated page offers machines. Its graph (the statements it shows, plus the page
+# itself) is embedded as JSON-LD and written next to it in each format, all announced in the head
+# with FAIR Signposting (https://signposting.org): describedby and alternate for each format, type
+# for what the page and its subject are, author for the graph's subject, and cite-as for a
+# subject whose identifier is persistent (one of `persistent_hosts`).
+formats:
+  - {
+      file: index.jsonld,
+      type: application/ld+json,
+      rdflib: json-ld,
+      name: JSON-LD,
+    }
+  - { file: index.ttl, type: text/turtle, rdflib: turtle, name: Turtle }
+  - { file: index.nt, type: application/n-triples, rdflib: nt, name: N-Triples }
+signposting:
+  page_types: [AboutPage]
+  about: about
+  author: author
+  persistent_hosts: [doi.org, orcid.org, ror.org, www.wikidata.org]
 
 # The content page (/content/): everything in the graph as one table, grouped by category, after
 # the site's own pages. `nav` is the page's link in the top bar, marked current there.

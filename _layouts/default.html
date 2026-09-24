@@ -8,7 +8,7 @@
     {%- include site-assets.html %}
     {%- for format in formats %}
     <link
-      rel="alternate"
+      rel="alternate{% if format.describes %} describedby{% endif %}"
       type="{{ format.type }}"
       href="{{ format.url | prepend: page_iri }}"
       title="{{ format.name }}"
@@ -23,9 +23,13 @@
     <link
       rel="describedby"
       type="text/turtle"
-      href="{{ '/.well-known/void' | relative_url }}"
+      href="{{ '/void.ttl' | relative_url }}"
       title="VoID dataset description"
     />
+    {%- comment -%}FAIR Signposting (https://signposting.org): what the page is, and by whom.{%- endcomment %}
+    <link rel="type" href="https://schema.org/ProfilePage" />
+    <link rel="type" href="https://schema.org/AboutPage" />
+    <link rel="author" href="{{ me }}" />
     <script type="application/ld+json">
       {% include cv-graph.jsonld %}
     </script>

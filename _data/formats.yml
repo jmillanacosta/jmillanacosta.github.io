@@ -1,11 +1,22 @@
-# Downloads of each page, relative to the page (/, /cv/, or /events/); `mode: cv` limits one to the CV.
+# Downloads of each page, relative to the page (/, /cv/, or /events/); `mode: cv` limits one to the
+# CV. `describes: true` marks the page's graph, announced as FAIR Signposting describedby.
 - {
     name: PDF,
     type: application/pdf,
     url: javier-millan-acosta-cv.pdf,
     mode: cv,
   }
-- { name: JSON-LD, type: application/ld+json, url: index.jsonld }
-- { name: Turtle, type: text/turtle, url: index.ttl }
-- { name: N-Triples, type: application/n-triples, url: index.nt }
-- { name: RDF/XML, type: application/rdf+xml, url: index.rdf }
+- {
+    name: JSON-LD,
+    type: application/ld+json,
+    url: index.jsonld,
+    describes: true,
+  }
+- { name: Turtle, type: text/turtle, url: index.ttl, describes: true }
+- {
+    name: N-Triples,
+    type: application/n-triples,
+    url: index.nt,
+    describes: true,
+  }
+- { name: RDF/XML, type: application/rdf+xml, url: index.rdf, describes: true }
