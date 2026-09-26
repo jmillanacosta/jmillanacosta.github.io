@@ -29,6 +29,10 @@
   stars: 0
   forks: 0
   repository_source: "https://github.com/jmillanacosta/pyaop"
+- id: "aop-suite"
+  stars: 0
+  forks: 0
+  repository_source: "https://github.com/VHP4Safety/AOP-Suite"
 - id: "biodatafuse"
   downloads: 50
   downloads_period: "last-month"
@@ -47,7 +51,7 @@
   forks: 15
   repository_source: "https://github.com/enanomapper/ontologies"
 - id: "bridgedb"
-  docker_pulls: 5800
+  docker_pulls: 5887
   docker_source: "https://hub.docker.com/r/bigcatum/bridgedb"
   stars: 6
   forks: 4
@@ -57,6 +61,3 @@
   forks: 1
   repository_source: "https://github.com/cnvpathwayatlas/cnv-website"
 - id: "seejobs"
-  stars: 3
-  forks: 0
-  repository_source: "https://github.com/jmillanacosta/seejobs"

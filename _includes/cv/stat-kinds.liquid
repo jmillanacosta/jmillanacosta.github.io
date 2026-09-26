@@ -1,2 +1,1 @@
-{%- comment -%}Usage figures shown for software, in display order; zero or missing values are left out.{%- endcomment -%}
-{%- assign stat_kinds = "downloads,docker_pulls,dependent_repos,stars,forks" | split: "," -%}
+{%- assign stat_kinds = site.data.stat_kinds | map: "id" -%}

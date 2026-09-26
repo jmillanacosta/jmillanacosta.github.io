@@ -1,3 +1,0 @@
-{%- comment -%}A typed date literal for "YYYY", "YYYY-MM", or "YYYY-MM-DD".{%- endcomment -%}
-{%- include cv/datatype.liquid value=include.value -%}
-{"@value": {{ include.value | append: "" | jsonify }}, "@type": {{ datatype | jsonify }}}

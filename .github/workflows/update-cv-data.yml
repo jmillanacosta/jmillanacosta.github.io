@@ -19,16 +19,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7.0.1
 
-      - name: Set up Python
-        uses: actions/setup-python@v7.0.0
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v10.2.0
         with:
-          python-version: "3.x"
+          version: "0.12.18"
+          enable-cache: true
 
-      - name: Install YAML parser
-        run: python3 -m pip install pyyaml
-
-      - name: Refresh publications, events, software, usage, and people data
-        run: python3 scripts/update_cv_data.py
+      - name: Refresh publications, events, software, usage, and collaborators data
+        run: uv run --locked python scripts/update_cv_data.py
         env:
           # Authenticated GitHub calls (contributors, profiles) are not limited to 60 an hour.
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

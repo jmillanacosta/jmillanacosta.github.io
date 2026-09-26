@@ -1,5 +1,0 @@
-{%- comment -%}Usage figures of one software entry, as anonymous InteractionCounter nodes.{%- endcomment -%}
-{%- assign js_stats = include.stats -%}
-{%- include cv/stat-kinds.liquid -%}
-{%- assign js_first = true -%}
-[{%- for js_kind in stat_kinds -%}{%- assign js_value = js_stats[js_kind] | plus: 0 -%}{%- if js_value > 0 -%}{%- include cv/stat-kind.liquid kind=js_kind stats=js_stats -%}{%- unless js_first %}, {% endunless -%}{"@type": "InteractionCounter", "name": {{ stat_name | jsonify }}, "userInteractionCount": {"@value": {{ js_value | append: "" | jsonify }}, "@type": "xsd:integer"}{% if stat_type %}, "interactionType": {"@id": {{ stat_type | jsonify }}}{% endif %}, "url": {"@id": {{ stat_source | jsonify }}}}{%- assign js_first = false -%}{%- endif -%}{%- endfor -%}]

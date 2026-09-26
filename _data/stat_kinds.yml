@@ -1,0 +1,23 @@
+- id: downloads
+  name: "PyPI downloads, {$period}"
+  label: "PyPI downloads {$period}"
+  type: https://schema.org/DownloadAction
+  source: downloads_source
+- id: docker_pulls
+  name: Docker Hub pulls
+  label: Docker pulls
+  type: https://schema.org/DownloadAction
+  source: docker_source
+- id: dependent_repos
+  name: Dependent repositories
+  label: dependent repositories
+  source: downloads_source
+- id: stars
+  name: GitHub stars
+  label: stars
+  type: https://schema.org/LikeAction
+  source: repository_source
+- id: forks
+  name: GitHub forks
+  label: forks
+  source: repository_source

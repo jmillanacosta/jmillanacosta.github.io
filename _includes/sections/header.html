@@ -10,7 +10,7 @@
     <a{% unless profile.url == me %} property="sameAs"{% endunless %} href="{{ profile.url | escape }}">{{ profile.label }}</a>
     {%- endif %}{% endfor %}
 
-    {%- assign own = site.data.people | where: "id", me | first %}
+    {%- assign own = site.data.collaborators | where: "id", me | first %}
     {%- if own.links.size > 0 %}
     <button type="button" class="contact-more screen-only" popovertarget="more-links">+{{ own.links.size }} more</button>
     {%- endif %}

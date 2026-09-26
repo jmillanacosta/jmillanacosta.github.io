@@ -1,18 +1,8 @@
 {%- comment -%}
-  Fonts, icons, styles, and scripts shared by every page, including the concept pages. On screen,
-  the page is shown once it has loaded and its fonts are ready (at most 1.5 s), so text never
-  flickers from a fallback font to the site's; without scripts it shows at once.
+  Fonts, icons, styles, and scripts shared by every page, including the concept pages. The fonts
+  are preloaded and shown only if they arrive at once (font-display: optional in cv.css), so
+  text never swaps typeface while being read.
 {%- endcomment -%}
-    <script>
-      (() => {
-        const root = document.documentElement;
-        root.classList.add("is-loading");
-        const loaded = new Promise((done) => addEventListener("load", done, { once: true }));
-        const ready = loaded.then(() => document.fonts?.ready);
-        const patience = new Promise((done) => setTimeout(done, 1500));
-        Promise.race([ready, patience]).then(() => root.classList.remove("is-loading"));
-      })();
-    </script>
     <link
       rel="preload"
       href="{{ '/assets/fonts/source-sans-3-latin-400-normal.woff2' | relative_url }}"

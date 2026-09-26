@@ -2,13 +2,16 @@
 # labels, categories, or wording of its own: everything it names, groups, or orders is here.
 # Terms are local names in `vocabulary` (e.g. `name` is https://schema.org/name).
 
-# The graphs that are merged (relative to the site root): the pages' own, and the people around
-# them (graph/people.jsonld: contributors and co-authors, from GitHub, ORCID, and Wikidata).
+# The graphs that are merged (relative to the site root): the pages' own, the collaborators
+# around them (graph/collaborators.jsonld: contributors and co-authors, from GitHub, ORCID, and
+# Wikidata), and what the sources say of the works (graph/works.jsonld: the software's
+# repositories, and the main subjects of the publications on Wikidata).
 sources:
   - index.jsonld
   - cv/index.jsonld
   - events/index.jsonld
-  - graph/people.jsonld
+  - graph/collaborators.jsonld
+  - graph/works.jsonld
 vocabulary: https://schema.org/
 vocabulary_prefix: schema # in the Turtle files
 
@@ -37,7 +40,7 @@ terms:
   identifier: identifier
 
 # Nodes of these types are never concepts (the site's own pages and files).
-excluded_types: [ProfilePage, MediaObject]
+excluded_types: [ProfilePage, MediaObject, WebPage]
 
 # Unnamed nodes of these types are concepts in their own right (keyed by type and name); other
 # unnamed nodes (roles, grants, counters) are read through as details of what points to them.
@@ -61,6 +64,7 @@ merge_by_name: [Person]
 
 # What each type is called on its concept page.
 type_labels:
+  Thing: Skill
   CollegeOrUniversity: University
   Corporation: Company
   Course: Course
@@ -71,7 +75,8 @@ type_labels:
   Language: Language
   Organization: Organization
   Periodical: Journal
-  Person: Person
+  Person: Collaborator
+  DefinedTerm: Topic
   Place: Place
   Project: Community
   Report: Report
@@ -96,19 +101,18 @@ categories:
       types: [ScholarlyArticle, Report],
     }
   - { folder: journals, title: Journals, types: [Periodical] }
-  - { folder: people, title: People, types: [Person] }
+  - { folder: collaborators, title: Collaborators, types: [Person] }
   - folder: places
     title: Places
     types: [Place]
     lists: location
-    activity:
-      {
-        through: location,
-        predicates: [worksFor, alumniOf],
-        label: Activity here,
-      }
   - { folder: event, title: Events, types: [Event] }
-  - { folder: software, title: Software, types: [SoftwareSourceCode] }
+  - {
+      folder: software,
+      title: Software,
+      many: tools,
+      types: [SoftwareSourceCode],
+    }
   - { folder: projects, title: Projects, types: [Project, ResearchProject] }
   - { folder: grants, title: Grants, types: [Grant] }
   - folder: courses
@@ -126,11 +130,10 @@ categories:
         ResearchOrganization,
         Organization,
       ]
-  - { folder: skills, title: Skills, labels: [Skill] }
+  - { folder: skills, title: Skills, types: [Thing], labels: [Skill] }
+  - { folder: topics, title: Topics, types: [DefinedTerm] }
 # `existing: true` marks a category page the site already renders (it is not generated).
 # `lists: location` makes the category page list, under each member, what points to it that way.
-# `activity` makes each member's page read through what points to it (`through`, e.g. the
-# organizations based in a place) to the roles held there (`predicates`), under `label`.
 other_category: { folder: concepts, title: Concepts }
 
 # Text values that sort things into kinds (Hackathon, Journal article). Each kind gets a page
@@ -191,6 +194,9 @@ summary:
 forward:
   about: About
   alumniOf: Studied at
+  maintainer: Maintained by
+  programmingLanguage: Written in
+  softwareRequirements: Requires
   author: Authors
   codeRepository: Code
   contributor: Contributors
@@ -204,6 +210,9 @@ forward:
   funding: Funding
   hasCourseInstance: Taught
   interactionStatistic: Usage
+  affiliation: Affiliated with
+  knowsLanguage: Speaks
+  knows: Relations
   isPartOf: Part of
   location: Where
   memberOf: Member of
@@ -222,6 +231,12 @@ forward_by_object_type:
   isPartOf: { Periodical: Published in }
 reverse:
   about: Subject of
+  affiliation: Affiliated
+  hasOccupation: Occupation of
+  knows: Relations
+  maintainer: Maintains
+  programmingLanguage: Language of
+  softwareRequirements: Required by
   alumniOf: Alumni
   author: Author of
   contributor: Contributor to
@@ -245,6 +260,7 @@ reverse:
 # Reverse labels that depend on the subject's type.
 reverse_by_subject_type:
   location: { Event: Held here }
+  about: { SoftwareSourceCode: Topic of }
 reverse_default: "{label} of"
 # Predicates never listed as connections.
 reverse_skip: [sameAs, url]
@@ -300,18 +316,23 @@ hosts:
   pypi.org: PyPI
   hub.docker.com: Docker Hub
   zenodo.org: Zenodo
+  scholar.google.com: Google Scholar
+  www.linkedin.com: LinkedIn
+  linkedin.com: LinkedIn
   openalex.org: OpenAlex
   www.wikipathways.org: WikiPathways
 # Other links are named by their address (egonw.github.io); this is for one without an address.
 host_default: Website
-# Where a link came from: a link target with this statement is labeled with its source
-# ("Website (Wikidata)").
+# Where a link came from: a link target with this statement is shown with its source ("via Wikidata").
 provenance: http://purl.org/dc/terms/source
 # A link target with this statement is a named profile elsewhere (a Scopus author page, a DBLP
-# entry): shown by that name, grouped by source, below the identity links.
+# entry): shown by that name.
 link_title: http://purl.org/dc/terms/title
 # An identifier given as text is shown with this label, unless a link from that host is shown.
 identifier_label: DOI
+identity:
+  inline: 4
+  first: [orcid.org, wikidata.org, github.com, scholar.google.com, linkedin.com]
 
 # Wording. Placeholders in braces are filled by the script.
 text:
@@ -321,8 +342,10 @@ text:
   category: Category
   also_known_as: Also known as {names}
   also_listed_as: Also listed as {names}
-  from_source: "{label} ({source})"
-  elsewhere: "Elsewhere ({source}): {links}"
+  via: via {source}
+  more: +{count} more
+  also_on: Also on
+  close: Close
   kind_of: Kind of {of}
   kinds_of: Kinds of {of}
   by_kind: "By kind: {links}"
@@ -330,7 +353,13 @@ text:
   summary: "{kind} in {owner}'s CV graph."
   kind_summary: "{name}: {count} in {owner}'s CV graph."
   category_summary: "{title} in {owner}'s CV graph."
-  footer: "Also as {formats}"
+  footer: "Also as {formats} · {schema}"
+  through: also through {names}
+  others: "{count} more"
+  together: "{items} and {last}"
+  more_leaves: "{count} more"
+  closest: "{name} shares the most connections with {names}."
+  topics: " on {names}"
 slug_length: 60
 
 # What every generated page offers machines. Its graph (the statements it shows, plus the page
@@ -370,3 +399,204 @@ content:
   shown: "{shown} of {total}"
   columns: { name: Name, kind: Kind, year: Year, links: Links }
   links_hint: Concepts it is connected to
+  schema_link: See how the kinds of concepts connect in the schema.
+
+tree:
+  limit: 8
+  shared: 2
+  closest: 2
+
+# The story on each concept page: how the owner of the site is connected to the concept. Each
+# line is a path from the owner: `to` goes to an intermediate thing, `then` goes on from it to the
+# concept. Without `then`, `to` goes to the concept itself. A role (an unnamed node) can be the
+# intermediate; then its name and dates are shown. The paths are SPARQL property paths. They are
+# read by rdfsolve and checked against the mined schema of the site.
+story:
+  topics: about
+  prefixes:
+    schema: https://schema.org/
+    rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  paths:
+    collaborators:
+      - label: Between us
+        to: schema:knows
+        then: schema:knows
+        say: ["{name} is my {things}.", "{name} is my {things}."]
+      - label: Co-authored
+        to: ^(schema:author/rdf:rest*/rdf:first)
+        then: schema:author/rdf:rest*/rdf:first
+        say:
+          [
+            "We are co-authors of a publication{topics}.",
+            "We are co-authors of {count} publications{topics}.",
+          ]
+      - label: Contributed to the same software
+        to: ^schema:author|^schema:contributor/^schema:contributor
+        then: schema:contributor
+        say:
+          [
+            "We have collaborated as contributors to {things}.",
+            "We have collaborated as contributors to {things}.",
+          ]
+      - label: Coworkers at
+        to: schema:worksFor|schema:worksFor/schema:worksFor|schema:affiliation
+        then: ^schema:worksFor|^schema:affiliation
+        say:
+          [
+            "We have been coworkers at {things}.",
+            "We have been coworkers at {things}.",
+          ]
+      - label: Studied at the same place
+        to: schema:alumniOf/schema:alumniOf
+        then: ^schema:alumniOf
+        say:
+          [
+            "We have both studied at {things}.",
+            "We have both studied at {things}.",
+          ]
+      - label: Our work presented at
+        to: schema:performerIn/schema:performerIn
+        then: ^schema:performerIn/schema:subjectOf/schema:author/rdf:rest*/rdf:first
+        say:
+          [
+            "Our joint work was presented at {things}.",
+            "Our joint work was presented at {things}.",
+          ]
+    publications:
+      - label: Author
+        to: ^(schema:author/rdf:rest*/rdf:first)
+      - label: Contributor
+        to: ^schema:contributor
+      - label: Describes
+        to: ^schema:author|^schema:contributor/^schema:contributor
+        then: schema:subjectOf
+      - label: Presented at
+        to: schema:performerIn/schema:performerIn
+        then: ^schema:performerIn/schema:subjectOf
+    journals:
+      - label: Published your papers
+        to: ^(schema:author/rdf:rest*/rdf:first)
+        then: schema:isPartOf
+    event:
+      - label: Presented
+        to: schema:performerIn
+        then: schema:performerIn
+    places:
+      - label: Events there
+        to: schema:performerIn/schema:performerIn
+        then: schema:location
+      - label: Organizations there
+        to: schema:worksFor|schema:worksFor/schema:worksFor|schema:alumniOf/schema:alumniOf
+        then: schema:location
+    software:
+      - label: Author
+        to: ^schema:author
+      - label: Contributed
+        to: ^schema:contributor
+        then: ^schema:contributor
+      - label: Described in
+        to: ^(schema:author/rdf:rest*/rdf:first)
+        then: ^schema:subjectOf
+    projects:
+      - label: Member
+        to: schema:memberOf
+      - label: Contributor
+        to: ^schema:contributor
+    grants:
+      - label: Funds your project
+        to: schema:memberOf
+        then: schema:funding
+      - label: Funds your report
+        to: ^schema:contributor
+        then: schema:funding
+    organizations:
+      - label: Works here
+        to: schema:worksFor
+      - label: Affiliated
+        to: schema:affiliation
+      - label: Worked here
+        to: schema:worksFor
+        then: schema:worksFor
+      - label: Studied here
+        to: schema:alumniOf
+        then: schema:alumniOf
+      - label: Includes
+        to: schema:worksFor
+        then: schema:parentOrganization
+      - label: Funded your projects
+        to: schema:memberOf
+        then: schema:funding/schema:funder
+      - label: Taught for
+        to: ^schema:instructor/^schema:hasCourseInstance
+        then: schema:provider
+      - label: Recognized your credentials
+        to: schema:hasCredential
+        then: schema:recognizedBy
+    courses:
+      - label: Taught
+        to: ^schema:instructor
+        then: ^schema:hasCourseInstance
+    languages:
+      - label: Speaks
+        to: schema:knowsLanguage
+        then: schema:knowsLanguage
+    organisms:
+      - label: Studied
+        to: schema:alumniOf
+        then: schema:about
+    skills:
+      - label: Listed as a skill
+        to: schema:knowsAbout
+    concepts:
+      - label: Occupation
+        to: schema:hasOccupation
+
+# The schema page (/schema/): the graphs of the site are mined by rdfsolve, and the schema is
+# drawn as a diagram and given in the formats of rdfsolve.
+schema:
+  folder: schema
+  title: Schema
+  kicker: Overview
+  dataset: site
+  lede: "{classes} classes and {links} links between them, mined from every graph on this site."
+  diagram_title: Site RDF schema
+  hint: Each class links to what it points to. Point at one to follow its links; open it to see its members.
+  list_title: The same, as a list
+  graph:
+    width: 1200
+    height: 860
+    inner: [290, 215]
+    outer: [520, 375]
+    pull: 0.45
+    wrap: 16
+    char: 7.6
+    line: 17
+    pad: 12
+  downloads_title: Downloads
+  schema_file: site.schema.json
+  void:
+    base: .well-known/void#
+    files: [.well-known/void, void.ttl]
+    description: "Linked data used to built the site was defined with rdfsolve: each graph, its classes, and the links between them."
+  downloads:
+    - {
+        file: site.schema.json,
+        name: rdfsolve schema,
+        note: "the mined schema: patterns, counts, and the queries behind them",
+      }
+    - {
+        file: models.py,
+        name: Pydantic models,
+        note: typed Python classes for each class,
+      }
+    - { file: shapes.ttl, name: SHACL shapes }
+    - {
+        file: ../void.ttl,
+        name: VoID,
+        note: the site's data as it is now,
+        with class,
+        property,
+        and link partitions,
+      }
+    - { file: schema.linkml.yaml, name: LinkML }
+    - { file: diagram.mmd, name: Mermaid diagram }

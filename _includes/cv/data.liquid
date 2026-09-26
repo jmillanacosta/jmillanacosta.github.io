@@ -10,9 +10,9 @@
 {%- comment -%}
   Three pages share this data: the landing page (/), the CV (/cv/), and talks and events
   (/events/). Each page lists the parts of the graph it states in front matter (`graph`), so its
-  RDFa and JSON-LD agree. A graph file names its page in front matter (`for`); an HTML page is its own.
+  RDFa and JSON-LD agree.
 {%- endcomment -%}
-{%- assign graph_page = page.for | default: page.url -%}
+{%- assign graph_page = page.url -%}
 {%- assign page_path = graph_page | remove_first: "/" | replace: "index.html", "" -%}
 {%- assign page_iri = base | append: page_path -%}
 {%- assign html_page = site.pages | where: "url", graph_page | first -%}

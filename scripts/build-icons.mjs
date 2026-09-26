@@ -1,9 +1,20 @@
 // Renders the favicon (favicon.ico with 16 and 32 px images) and apple-touch-icon.png from the
-// site's serif and palette. Rerun after changing the mark: node scripts/build-icons.mjs
+// site's serif and palette. The mark is the initials of person.given_name and person.family_name
+// in _data/cv.yml. Rerun after changing them: node scripts/build-icons.mjs
 import { readFile, writeFile } from "node:fs/promises";
 import { chromium } from "playwright";
 
 const font = `url(data:font/woff2;base64,${(await readFile("assets/fonts/source-serif-4-latin-400-normal.woff2")).toString("base64")}) format("woff2")`;
+
+const cv = await readFile("_data/cv.yml", "utf8");
+/** @param {string} key */
+const field = (key) =>
+  (cv.match(new RegExp(`^  ${key}: *"?([^"\\n]+)"?$`, "m")) ?? [])[1] ?? "";
+const initials = `${field("given_name")} ${field("family_name")}`
+  .split(/\s+/)
+  .filter(Boolean)
+  .map((word) => word[0].toUpperCase())
+  .join("");
 
 /** @param {number} size @param {number} radius */
 const html = (size, radius) => `<!doctype html>
@@ -14,11 +25,12 @@ const html = (size, radius) => `<!doctype html>
     width: ${size}px; height: ${size}px; border-radius: ${radius}px;
     display: grid; place-items: center;
     background: #355a4d; color: #f8f6f1;
-    font: 400 ${Math.round(size * 0.78)}px/1 "Source Serif 4", serif;
+    font: 400 ${Math.round((size * 0.78) / Math.max(1, initials.length * 0.62))}px/1 "Source Serif 4", serif;
+    letter-spacing: -0.02em;
     padding-bottom: ${Math.round(size * 0.06)}px; box-sizing: border-box;
   }
 </style>
-<div>J</div>`;
+<div>${initials}</div>`;
 
 // An ICO file can hold PNG images directly: a 6-byte header, a 16-byte entry per image, then the data.
 /** @param {Buffer[]} pngs @param {number[]} sizes */

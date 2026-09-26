@@ -1,0 +1,4777 @@
+# Written by scripts/update_cv_data.py: contributors (GitHub) and co-authors (ORCID), with what Wikidata
+# knows of them. Every name and website keeps its source.
+- id: https://orcid.org/0000-0001-5410-599X
+  names:
+  - name: Kristina Hanspers
+    source: http://www.wikidata.org/entity/Q28865047
+  same_as:
+  - http://www.wikidata.org/entity/Q28865047
+  - https://github.com/khanspers
+  accounts:
+  - url: https://github.com/khanspers
+    via: declared on ORCID record
+    source: https://orcid.org/0000-0001-5410-599X
+  websites:
+  - url: https://scholar.google.com/citations?user=lp_fj-AAAAAJ&hl=en&oi=ao
+    source: https://orcid.org/0000-0001-5410-599X
+  - url: https://scholia.toolforge.org/author/Q28865047
+    source: https://orcid.org/0000-0001-5410-599X
+  profiles:
+  - url: https://scholar.google.com/citations?user=Qji_JPIAAAAJ
+    label: Google Scholar author ID
+    source: http://www.wikidata.org/entity/Q28865047
+  - url: https://dblp.org/pid/17%2F7098
+    label: DBLP author ID
+    source: http://www.wikidata.org/entity/Q28865047
+  - url: https://app.dimensions.ai/details/entities/publication/author/ur.0753211707.71
+    label: Dimensions author ID
+    source: http://www.wikidata.org/entity/Q28865047
+  - url: https://orkg.org/resource/R68134
+    label: ORKG ID
+    source: http://www.wikidata.org/entity/Q28865047
+  - url: https://www.google.com/search?kgmid=%2Fg%2F11dxhfrfx7
+    label: Google Knowledge Graph ID
+    source: http://www.wikidata.org/entity/Q28865047
+  - url: https://openalex.org/A5063972221
+    source: https://openalex.org/A5063972221
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q5566337
+    value_label: Gladstone Institutes
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - datatype: http://www.w3.org/2001/XMLSchema#dateTime
+    equivalent:
+    - https://schema.org/startTime
+    - https://schema.org/startDate
+    - https://schema.org/dateCreated
+    - https://schema.org/birthDate
+    label: date of birth
+    property: http://www.wikidata.org/entity/P569
+    value: '2000-01-01T00:00:00Z'
+  - equivalent:
+    - https://schema.org/alumniOf
+    - https://schema.org/affiliation
+    label: educated at
+    property: http://www.wikidata.org/entity/P69
+    value: http://www.wikidata.org/entity/Q185246
+    value_label: Uppsala University
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q19798802
+    value_label: Kristina
+- id: https://orcid.org/0000-0001-5416-085X
+  names:
+  - name: Martin Himly
+    source: http://www.wikidata.org/entity/Q39585759
+  same_as:
+  - http://www.wikidata.org/entity/Q39585759
+  websites:
+  - url: https://www.plus.ac.at/biowissenschaften/der-fachbereich/arbeitsgruppen/ag-himly/martin-himly/
+    source: https://orcid.org/0000-0001-5416-085X
+  profiles:
+  - url: https://www.scopus.com/authid/detail.uri?authorId=6602909744
+    label: Scopus author ID
+    source: http://www.wikidata.org/entity/Q39585759
+  - url: https://www.webofscience.com/wos/author/record/D-1568-2015
+    label: Web of Science ResearcherID
+    source: http://www.wikidata.org/entity/Q39585759
+  - url: https://loop.frontiersin.org/people/313914/overview
+    label: Loop ID
+    source: http://www.wikidata.org/entity/Q39585759
+  - url: https://publons.com/researcher/2426527/
+    label: Publons author ID
+    source: http://www.wikidata.org/entity/Q39585759
+  - url: https://d-nb.info/gnd/1241219656
+    label: GND ID
+    source: http://www.wikidata.org/entity/Q39585759
+  - url: https://viaf.org/en/viaf/3812163211501007580003
+    label: VIAF cluster ID
+    source: http://www.wikidata.org/entity/Q39585759
+  - url: https://www.deutsche-digitale-bibliothek.de/person/gnd/1241219656
+    label: DDB person (GND) ID
+    source: http://www.wikidata.org/entity/Q39585759
+  - url: http://www.scopus.com/inward/authorDetails.url?authorID=6602909744&partnerID=MN8TOARS
+    label: Scopus Author ID
+    source: https://orcid.org/0000-0001-5416-085X
+  - url: http://www.researcherid.com/rid/D-1568-2015
+    label: ResearcherID
+    source: https://orcid.org/0000-0001-5416-085X
+  - url: http://loop.frontiersin.org/people/313914/overview?referrer=orcid_profile
+    label: Loop profile
+    source: https://orcid.org/0000-0001-5416-085X
+  - url: https://openalex.org/A5028735728
+    source: https://openalex.org/A5028735728
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1622272
+    value_label: university teacher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q2919046
+    value_label: biochemist
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q27265
+    value_label: University of Salzburg
+    value_type: https://schema.org/Organization
+  - equivalent:
+    - https://schema.org/location
+    - https://schema.org/itemLocation
+    - https://schema.org/birthPlace
+    label: place of birth
+    property: http://www.wikidata.org/entity/P19
+    value: http://www.wikidata.org/entity/Q483522
+    value_label: Villach
+    value_type: https://schema.org/City
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - datatype: http://www.w3.org/2001/XMLSchema#dateTime
+    equivalent:
+    - https://schema.org/startTime
+    - https://schema.org/startDate
+    - https://schema.org/dateCreated
+    - https://schema.org/birthDate
+    label: date of birth
+    property: http://www.wikidata.org/entity/P569
+    value: '1970-01-01T00:00:00Z'
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q18002399
+    value_label: Martin
+- id: https://orcid.org/0000-0001-5706-2163
+  names:
+  - name: Alexander R. Pico
+    source: http://www.wikidata.org/entity/Q28530149
+  same_as:
+  - http://www.wikidata.org/entity/Q28530149
+  websites:
+  - url: https://gladstone.org/people/alex-pico
+    source: https://orcid.org/0000-0001-5706-2163
+  - url: http://nrnb.org/people.html
+    source: https://orcid.org/0000-0001-5706-2163
+  - url: http://www.cytoscapeconsortium.org/?page_id=13
+    source: https://orcid.org/0000-0001-5706-2163
+  profiles:
+  - url: https://www.scopus.com/authid/detail.uri?authorId=17342562100
+    label: Scopus author ID
+    source: http://www.wikidata.org/entity/Q28530149
+  - url: https://dblp.org/pid/80%2F540
+    label: DBLP author ID
+    source: http://www.wikidata.org/entity/Q28530149
+  - url: https://x.com/xanderpico
+    label: X (Twitter) username
+    source: http://www.wikidata.org/entity/Q28530149
+  - url: https://scholar.google.com/citations?user=FUsTMX8AAAAJ
+    label: Google Scholar author ID
+    source: http://www.wikidata.org/entity/Q28530149
+  - url: https://www.researchgate.net/profile/Alexander_Pico
+    label: ResearchGate profile ID
+    source: http://www.wikidata.org/entity/Q28530149
+  - url: https://app.dimensions.ai/details/entities/publication/author/ur.010737604377.35
+    label: Dimensions author ID
+    source: http://www.wikidata.org/entity/Q28530149
+  - url: https://orkg.org/resource/R68143
+    label: ORKG ID
+    source: http://www.wikidata.org/entity/Q28530149
+  - url: https://meta.wikimedia.org/wiki/Special:CentralAuth/AlexanderPico
+    label: Wikimedia username
+    source: http://www.wikidata.org/entity/Q28530149
+  - url: https://d-nb.info/gnd/1209952807
+    label: GND ID
+    source: http://www.wikidata.org/entity/Q28530149
+  - url: https://fedirect.toolforge.org/?id=xanderpico%40qoto.org
+    label: Mastodon address
+    source: http://www.wikidata.org/entity/Q28530149
+  - url: https://viaf.org/en/viaf/4303158982599556190007
+    label: VIAF cluster ID
+    source: http://www.wikidata.org/entity/Q28530149
+  - url: https://id.oclc.org/worldcat/entity/E39PCjFMRc64vTXbmBTfy3PvpP
+    label: WorldCat Entities ID
+    source: http://www.wikidata.org/entity/Q28530149
+  - url: https://www.deutsche-digitale-bibliothek.de/person/gnd/1209952807
+    label: DDB person (GND) ID
+    source: http://www.wikidata.org/entity/Q28530149
+  - url: https://www.google.com/search?kgmid=%2Fg%2F11c6dhxx7d
+    label: Google Knowledge Graph ID
+    source: http://www.wikidata.org/entity/Q28530149
+  - url: http://www.scopus.com/inward/authorDetails.url?authorID=17342562100&partnerID=MN8TOARS
+    label: Scopus Author ID
+    source: https://orcid.org/0000-0001-5706-2163
+  - url: https://openalex.org/A5070456387
+    source: https://openalex.org/A5070456387
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q20739288
+    value_label: neurobiologist
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q2919046
+    value_label: biochemist
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q41546637
+    value_label: Wikimedian
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q5566337
+    value_label: Gladstone Institutes
+  - equivalent:
+    - https://schema.org/isPartOf
+    - https://schema.org/location
+    - https://schema.org/itemLocation
+    - https://schema.org/nationality
+    - https://schema.org/addressCountry
+    label: country of citizenship
+    property: http://www.wikidata.org/entity/P27
+    value: http://www.wikidata.org/entity/Q30
+    value_label: United States
+    value_type: https://schema.org/Country
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - datatype: http://www.w3.org/2001/XMLSchema#dateTime
+    equivalent:
+    - https://schema.org/startTime
+    - https://schema.org/startDate
+    - https://schema.org/dateCreated
+    - https://schema.org/birthDate
+    label: date of birth
+    property: http://www.wikidata.org/entity/P569
+    value: '2000-01-01T00:00:00Z'
+  - equivalent:
+    - https://schema.org/alumniOf
+    - https://schema.org/affiliation
+    label: educated at
+    property: http://www.wikidata.org/entity/P69
+    value: http://www.wikidata.org/entity/Q270272
+    value_label: The Rockefeller University
+  - equivalent:
+    - https://schema.org/alumniOf
+    - https://schema.org/affiliation
+    label: educated at
+    property: http://www.wikidata.org/entity/P69
+    value: http://www.wikidata.org/entity/Q766145
+    value_label: University of Oregon
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/familyName
+    label: family name
+    property: http://www.wikidata.org/entity/P734
+    value: http://www.wikidata.org/entity/Q36912280
+    value_label: Pico
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q923
+    value_label: Alexander
+- id: https://orcid.org/0000-0001-5934-3559
+  names:
+  - name: Daniela Digles
+    source: http://www.wikidata.org/entity/Q19845608
+  same_as:
+  - http://www.wikidata.org/entity/Q19845608
+  profiles:
+  - url: https://app.dimensions.ai/details/entities/publication/author/ur.01330425432.95
+    label: Dimensions author ID
+    source: http://www.wikidata.org/entity/Q19845608
+  - url: https://openalex.org/A5059247283
+    source: https://openalex.org/A5059247283
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q482980
+    value_label: author
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q165980
+    value_label: University of Vienna
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q19845663
+    value_label: University of Vienna, Department of Pharmaceutical Chemistry, Althanstrasse 14, 1090
+      Vienna, Austria
+    value_type: https://schema.org/Organization
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - datatype: http://www.w3.org/2001/XMLSchema#dateTime
+    equivalent:
+    - https://schema.org/startTime
+    - https://schema.org/startDate
+    - https://schema.org/dateCreated
+    - https://schema.org/birthDate
+    label: date of birth
+    property: http://www.wikidata.org/entity/P569
+    value: '2000-01-01T00:00:00Z'
+  - equivalent:
+    - https://schema.org/familyName
+    - https://schema.org/name
+    label: family name
+    property: http://www.wikidata.org/entity/P734
+    value: http://www.wikidata.org/entity/Q19845713
+    value_label: Digles
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q1096053
+    value_label: Daniela
+- id: https://orcid.org/0000-0001-6125-6147
+  profiles:
+  - url: https://openalex.org/A5114530520
+    source: https://openalex.org/A5114530520
+- id: https://orcid.org/0000-0001-6611-7883
+  names:
+  - name: Dominik Martinát
+    source: http://www.wikidata.org/entity/Q117834010
+  same_as:
+  - http://www.wikidata.org/entity/Q117834010
+  profiles:
+  - url: https://www.scopus.com/inward/authorDetails.url?authorID=60429818600&partnerID=MN8TOARS
+    label: Scopus Author ID
+    source: https://orcid.org/0000-0001-6611-7883
+  - url: https://openalex.org/A5093405122
+    source: https://openalex.org/A5093405122
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q12764792
+    value_label: doctoral student
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q13360278
+    value_label: Faculty of Science, Palacký University Olomouc
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - equivalent:
+    - https://schema.org/alumniOf
+    - https://schema.org/affiliation
+    label: educated at
+    property: http://www.wikidata.org/entity/P69
+    value: http://www.wikidata.org/entity/Q13360278
+    value_label: Faculty of Science, Palacký University Olomouc
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q18199009
+    value_label: Dominik
+- id: https://orcid.org/0000-0001-7542-0286
+  names:
+  - name: Egon Willighagen
+    source: http://www.wikidata.org/entity/Q20895241
+  same_as:
+  - http://www.wikidata.org/entity/Q20895241
+  - https://github.com/egonw
+  accounts:
+  - url: https://github.com/egonw
+    via: Wikidata
+    source: http://www.wikidata.org/entity/Q20895241
+  websites:
+  - url: https://egonw.github.io/
+    source: http://www.wikidata.org/entity/Q20895241
+  - url: https://cris.maastrichtuniversity.nl/portal/en/persons/egon-willighagen(2ad8fbe2-e873-404d-85c7-e0c125a6ead7).html
+    source: https://orcid.org/0000-0001-7542-0286
+  - url: http://egonw.github.io/
+    source: https://orcid.org/0000-0001-7542-0286
+  - url: https://chem-bla-ics.linkedchemistry.info/
+    source: https://orcid.org/0000-0001-7542-0286
+  - url: https://scholar.google.com/citations?user=u8SjMZ0AAAAJ
+    source: https://orcid.org/0000-0001-7542-0286
+  - url: https://social.edu.nl/@egonw
+    source: https://orcid.org/0000-0001-7542-0286
+  - url: http://gitlab.com/egonw
+    source: https://orcid.org/0000-0001-7542-0286
+  - url: http://figshare.com/authors/chem-bla-ics/96390
+    source: https://orcid.org/0000-0001-7542-0286
+  - url: http://sf.net/users/egonw
+    source: https://orcid.org/0000-0001-7542-0286
+  - url: https://scholia.toolforge.org/author/Q20895241
+    source: https://orcid.org/0000-0001-7542-0286
+  - url: https://w3id.org/np/RAO6OjsPPlixn_uVJhzsAaoi8KaLxT8yKXgt8MOuyNN8U
+    source: https://orcid.org/0000-0001-7542-0286
+  - url: https://iupac.org/member/egon-willighagen/
+    source: https://orcid.org/0000-0001-7542-0286
+  - url: https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Willighagen%2C%20Egon%22&f=resource_type%3Apresentation&l=list&p=1&s=10&sort=newest
+    source: https://orcid.org/0000-0001-7542-0286
+  - url: https://bsky.app/profile/egonw.social.edu.nl.ap.brid.gy
+    source: https://orcid.org/0000-0001-7542-0286
+  profiles:
+  - url: https://viaf.org/en/viaf/81695167
+    label: VIAF cluster ID
+    source: http://www.wikidata.org/entity/Q20895241
+  - url: https://isni.org/isni/0000000389212124
+    label: ISNI
+    source: http://www.wikidata.org/entity/Q20895241
+  - url: https://www.webofscience.com/wos/author/record/GFN-3033-2022
+    label: Web of Science ResearcherID
+    source: http://www.wikidata.org/entity/Q20895241
+  - url: https://www.scopus.com/authid/detail.uri?authorId=6507481906
+    label: Scopus author ID
+    source: http://www.wikidata.org/entity/Q20895241
+  - url: https://figshare.com/authors/wd/96390
+    label: Figshare author ID
+    source: http://www.wikidata.org/entity/Q20895241
+  - url: https://scholar.google.com/citations?user=u8SjMZ0AAAAJ
+    label: Google Scholar author ID
+    source: http://www.wikidata.org/entity/Q20895241
+  - url: https://loop.frontiersin.org/people/348499/overview
+    label: Loop ID
+    source: http://www.wikidata.org/entity/Q20895241
+  - url: https://dblp.org/pid/99%2F3476
+    label: DBLP author ID
+    source: http://www.wikidata.org/entity/Q20895241
+  - url: https://meta.wikimedia.org/wiki/Special:CentralAuth/Egonw
+    label: Wikimedia username
+    source: http://www.wikidata.org/entity/Q20895241
+  - url: https://meta.wikimedia.org/wiki/Special:CentralAuth/Egon_Willighagen
+    label: Wikimedia username
+    source: http://www.wikidata.org/entity/Q20895241
+  - url: https://data.bibliotheken.nl/id/thes/p308108485
+    label: Nationale Thesaurus voor Auteursnamen ID
+    source: http://www.wikidata.org/entity/Q20895241
+  - url: https://fedirect.toolforge.org/?id=egonw%40social.edu.nl
+    label: Mastodon address
+    source: http://www.wikidata.org/entity/Q20895241
+  - url: https://app.dimensions.ai/details/entities/publication/author/ur.01025257214.29
+    label: Dimensions author ID
+    source: http://www.wikidata.org/entity/Q20895241
+  - url: https://web.archive.org/web/https://academic.microsoft.com/v2/detail/303257169
+    label: Microsoft Academic ID (discontinued)
+    source: http://www.wikidata.org/entity/Q20895241
+  - url: https://web.archive.org/web/*/https://www.narcis.nl/person/RecordID/PRS1326065
+    label: NARCIS researcher ID
+    source: http://www.wikidata.org/entity/Q20895241
+  - url: https://www.linkedin.com/in/egon-willighagen/
+    label: LinkedIn personal profile ID
+    source: http://www.wikidata.org/entity/Q20895241
+  - url: https://www.researchgate.net/scientific-contributions/39655307
+    label: ResearchGate contributions ID
+    source: http://www.wikidata.org/entity/Q20895241
+  - url: https://www.zotero.org/egonw
+    label: Zotero ID
+    source: http://www.wikidata.org/entity/Q20895241
+  - url: https://openalex.org/a5060194743
+    label: OpenAlex ID
+    source: http://www.wikidata.org/entity/Q20895241
+  - url: https://orkg.org/resource/R68155
+    label: ORKG ID
+    source: http://www.wikidata.org/entity/Q20895241
+  - url: https://authority.bibsys.no/authority/rest/authorities/html/14028450
+    label: BIBSYS ID
+    source: http://www.wikidata.org/entity/Q20895241
+  - url: https://d-nb.info/gnd/120995639X
+    label: GND ID
+    source: http://www.wikidata.org/entity/Q20895241
+  - url: https://uurl.kbr.be/aut/14037081
+    label: KBR person ID
+    source: http://www.wikidata.org/entity/Q20895241
+  - url: https://codeberg.org/egonw
+    label: Codeberg username
+    source: http://www.wikidata.org/entity/Q20895241
+  - url: https://www.google.com/search?kgmid=%2Fg%2F11ckvf98t2
+    label: Google Knowledge Graph ID
+    source: http://www.wikidata.org/entity/Q20895241
+  - url: https://academictree.org/math/peopleinfo.php?pid=753992
+    label: Academic Tree ID
+    source: http://www.wikidata.org/entity/Q20895241
+  - url: https://www.deutsche-digitale-bibliothek.de/person/gnd/120995639X
+    label: DDB person (GND) ID
+    source: http://www.wikidata.org/entity/Q20895241
+  - url: https://wikidata-externalid-url.toolforge.org/?p=12361&url_prefix=https%3A%2F%2Fbsky.app%2Fprofile%2F&id=egonw.social.edu.nl.ap.brid.gy
+    label: Bluesky handle
+    source: http://www.wikidata.org/entity/Q20895241
+  - url: https://wikidata-externalid-url.toolforge.org/?p=12361&url_prefix=https%3A%2F%2Fbsky.app%2Fprofile%2F&id=egonw.mastodon.social.ap.brid.gy
+    label: Bluesky handle
+    source: http://www.wikidata.org/entity/Q20895241
+  - url: https://peerj.com/egonw/
+    label: PeerJ person ID
+    source: http://www.wikidata.org/entity/Q20895241
+  - url: http://isni.org/isni/0000000389212124
+    label: ISNI
+    source: https://orcid.org/0000-0001-7542-0286
+  - url: https://en.wikipedia.org/wiki/Digital_Author_Identifier
+    label: Digital Author ID
+    source: https://orcid.org/0000-0001-7542-0286
+  - url: https://openalex.org/A5135576456
+    source: https://openalex.org/A5135576456
+  statements:
+  - equivalent: []
+    label: field of work
+    property: http://www.wikidata.org/entity/P101
+    value: http://www.wikidata.org/entity/Q128570
+    value_label: bioinformatics
+  - equivalent: []
+    label: field of work
+    property: http://www.wikidata.org/entity/P101
+    value: http://www.wikidata.org/entity/Q2329
+    value_label: chemistry
+  - equivalent: []
+    label: field of work
+    property: http://www.wikidata.org/entity/P101
+    value: http://www.wikidata.org/entity/Q309823
+    value_label: open science
+  - equivalent: []
+    label: field of work
+    property: http://www.wikidata.org/entity/P101
+    value: http://www.wikidata.org/entity/Q54837
+    value_label: Semantic Web
+  - equivalent: []
+    label: field of work
+    property: http://www.wikidata.org/entity/P101
+    value: http://www.wikidata.org/entity/Q910164
+    value_label: cheminformatics
+  - equivalent: []
+    label: academic thesis
+    property: http://www.wikidata.org/entity/P1026
+    value: http://www.wikidata.org/entity/Q25713029
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q2732142
+    value_label: statistician
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q41546637
+    value_label: Wikimedian
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q482980
+    value_label: author
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q5482740
+    value_label: programmer
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q593644
+    value_label: chemist
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q864503
+    value_label: biologist
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q876864
+    value_label: editing staff
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q1137652
+    value_label: Maastricht University
+    value_type: https://schema.org/Organization
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q185246
+    value_label: Uppsala University
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q219564
+    value_label: Karolinska Institutet
+    value_type: https://schema.org/Organization
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q35794
+    value_label: University of Cambridge
+    value_type: https://schema.org/EducationalOrganization
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q422208
+    value_label: Wageningen University & Research
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q54096
+    value_label: University of Cologne
+  - equivalent: []
+    label: nominated for
+    property: http://www.wikidata.org/entity/P1411
+    value: http://www.wikidata.org/entity/Q119882229
+    value_label: Excellence in Biocuration Advanced Career Award
+  - equivalent:
+    - https://schema.org/knowsLanguage
+    label: languages spoken, written or signed
+    property: http://www.wikidata.org/entity/P1412
+    value: http://www.wikidata.org/entity/Q1860
+    value_label: English
+    value_type: https://schema.org/Language
+  - equivalent:
+    - https://schema.org/knowsLanguage
+    label: languages spoken, written or signed
+    property: http://www.wikidata.org/entity/P1412
+    value: http://www.wikidata.org/entity/Q188
+    value_label: German
+  - equivalent:
+    - https://schema.org/knowsLanguage
+    label: languages spoken, written or signed
+    property: http://www.wikidata.org/entity/P1412
+    value: http://www.wikidata.org/entity/Q7411
+    value_label: Dutch
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q1137652
+    value_label: Maastricht University
+    value_type: https://schema.org/Organization
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q131790020
+    value_label: Department of Translational Genomics
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q19845644
+    value_label: Department of Bioinformatics - BiGCaT
+    value_type: https://schema.org/Organization
+  - equivalent:
+    - https://schema.org/url
+    label: official blog URL
+    property: http://www.wikidata.org/entity/P1581
+    value: https://chem-bla-ics.linkedchemistry.info/
+  - equivalent:
+    - https://schema.org/award
+    label: award received
+    property: http://www.wikidata.org/entity/P166
+    value: http://www.wikidata.org/entity/Q45315956
+    value_label: Blue Obelisk Award
+  - equivalent:
+    - https://schema.org/image
+    label: image
+    property: http://www.wikidata.org/entity/P18
+    value: http://commons.wikimedia.org/wiki/Special:FilePath/Egon%20Willighagen.jpg
+  - equivalent: []
+    label: doctoral advisor
+    property: http://www.wikidata.org/entity/P184
+    value: http://www.wikidata.org/entity/Q27061944
+    value_label: Lutgarde Buydens
+  - equivalent: []
+    label: doctoral advisor
+    property: http://www.wikidata.org/entity/P184
+    value: http://www.wikidata.org/entity/Q27134800
+    value_label: Ron Wehrens
+  - equivalent: []
+    label: doctoral advisor
+    property: http://www.wikidata.org/entity/P184
+    value: http://www.wikidata.org/entity/Q908710
+    value_label: Peter Murray-Rust
+  - equivalent: []
+    label: doctoral student
+    property: http://www.wikidata.org/entity/P185
+    value: http://www.wikidata.org/entity/Q116446553
+    value_label: Javier Millán Acosta
+  - equivalent: []
+    label: doctoral student
+    property: http://www.wikidata.org/entity/P185
+    value: http://www.wikidata.org/entity/Q19845625
+    value_label: Andra Waagmeester
+  - equivalent: []
+    label: doctoral student
+    property: http://www.wikidata.org/entity/P185
+    value: http://www.wikidata.org/entity/Q29998663
+    value_label: Ryan Miller
+  - equivalent: []
+    label: doctoral student
+    property: http://www.wikidata.org/entity/P185
+    value: http://www.wikidata.org/entity/Q42369611
+    value_label: Marvin Martens
+  - equivalent: []
+    label: doctoral student
+    property: http://www.wikidata.org/entity/P185
+    value: http://www.wikidata.org/entity/Q43744369
+    value_label: Denise Slenter
+  - equivalent: []
+    label: doctoral student
+    property: http://www.wikidata.org/entity/P185
+    value: http://www.wikidata.org/entity/Q86442640
+    value_label: Ammar Ammar
+  - equivalent:
+    - https://schema.org/location
+    - https://schema.org/itemLocation
+    - https://schema.org/birthPlace
+    label: place of birth
+    property: http://www.wikidata.org/entity/P19
+    value: http://www.wikidata.org/entity/Q1310
+    value_label: Arnhem
+    value_type: https://schema.org/City
+  - equivalent:
+    - https://schema.org/isPartOf
+    - https://schema.org/location
+    - https://schema.org/itemLocation
+    - https://schema.org/nationality
+    - https://schema.org/addressCountry
+    label: country of citizenship
+    property: http://www.wikidata.org/entity/P27
+    value: http://www.wikidata.org/entity/Q29999
+    value_label: Kingdom of the Netherlands
+    value_type: https://schema.org/Country
+  - equivalent:
+    - https://schema.org/sameAs
+    label: exact match
+    property: http://www.wikidata.org/entity/P2888
+    value: https://w3id.org/scholarlydata/person/egon-willighagen
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - datatype: http://www.w3.org/2001/XMLSchema#string
+    equivalent: []
+    label: Commons category
+    property: http://www.wikidata.org/entity/P373
+    value: Egon Willighagen
+  - equivalent:
+    - https://schema.org/memberOf
+    - https://schema.org/isPartOf
+    - https://schema.org/affiliation
+    label: member of
+    property: http://www.wikidata.org/entity/P463
+    value: http://www.wikidata.org/entity/Q2066202
+    value_label: Royal Netherlands Chemical Society
+  - equivalent: []
+    label: on focus list of Wikimedia project
+    property: http://www.wikidata.org/entity/P5008
+    value: http://www.wikidata.org/entity/Q87748614
+    value_label: WikiProject COVID-19
+  - datatype: http://www.w3.org/2001/XMLSchema#dateTime
+    equivalent:
+    - https://schema.org/startTime
+    - https://schema.org/startDate
+    - https://schema.org/dateCreated
+    - https://schema.org/birthDate
+    label: date of birth
+    property: http://www.wikidata.org/entity/P569
+    value: '1974-10-27T00:00:00Z'
+  - equivalent:
+    - https://schema.org/alumniOf
+    - https://schema.org/affiliation
+    label: educated at
+    property: http://www.wikidata.org/entity/P69
+    value: http://www.wikidata.org/entity/Q632004
+    value_label: Radboud University
+  - equivalent:
+    - https://schema.org/familyName
+    - https://schema.org/name
+    label: family name
+    property: http://www.wikidata.org/entity/P734
+    value: http://www.wikidata.org/entity/Q20895523
+    value_label: Willighagen
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q20000517
+    value_label: Lennert
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q987902
+    value_label: Egon
+  - equivalent: []
+    label: notable work
+    property: http://www.wikidata.org/entity/P800
+    value: http://www.wikidata.org/entity/Q2383032
+    value_type: https://schema.org/Project
+  - equivalent:
+    - https://schema.org/url
+    label: official website
+    property: http://www.wikidata.org/entity/P856
+    value: https://egonw.github.io/
+  - datatype: http://www.w3.org/2001/XMLSchema#decimal
+    equivalent: []
+    label: social media followers
+    property: http://www.wikidata.org/entity/P8687
+    value: '4597'
+- id: https://orcid.org/0000-0001-7883-3756
+  names:
+  - name: Shuichi Kawashima
+    source: http://www.wikidata.org/entity/Q54302726
+  same_as:
+  - http://www.wikidata.org/entity/Q54302726
+  websites:
+  - url: https://researchmap.jp/shuichikawashima/
+    source: https://orcid.org/0000-0001-7883-3756
+  profiles:
+  - url: https://researchmap.jp/shuichikawashima
+    label: Researchmap ID
+    source: http://www.wikidata.org/entity/Q54302726
+  - url: https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=201801003095599572
+    label: J-GLOBAL ID
+    source: http://www.wikidata.org/entity/Q54302726
+  - url: https://openalex.org/A5039336067
+    source: https://openalex.org/A5039336067
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q11346475
+    value_label: Database Division for Life Science
+    value_type: https://schema.org/ResearchOrganization
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q11492802
+    value_label: Research Organization of Information and Systems
+  - datatype: http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
+    equivalent:
+    - https://schema.org/name
+    label: name in native language
+    language: ja
+    property: http://www.wikidata.org/entity/P1559
+    value: 川島秀一
+  - equivalent:
+    - https://schema.org/isPartOf
+    - https://schema.org/location
+    - https://schema.org/itemLocation
+    - https://schema.org/nationality
+    - https://schema.org/addressCountry
+    label: country of citizenship
+    property: http://www.wikidata.org/entity/P27
+    value: http://www.wikidata.org/entity/Q17
+    value_label: Japan
+    value_type: https://schema.org/Country
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+- id: https://orcid.org/0000-0001-8319-7758
+  names:
+  - name: Hasan Balcı
+    source: http://www.wikidata.org/entity/Q130642378
+  same_as:
+  - http://www.wikidata.org/entity/Q130642378
+  - https://github.com/hasanbalci
+  accounts:
+  - url: https://github.com/hasanbalci
+    via: Wikidata
+    source: http://www.wikidata.org/entity/Q130642378
+  websites:
+  - url: https://hasanbalci.github.io/
+    source: http://www.wikidata.org/entity/Q130642378
+  profiles:
+  - url: https://scholar.google.com/citations?user=TXx-jbMAAAAJ
+    label: Google Scholar author ID
+    source: http://www.wikidata.org/entity/Q130642378
+  - url: http://www.scopus.com/inward/authorDetails.url?authorID=58724826900&partnerID=MN8TOARS
+    label: Scopus Author ID
+    source: https://orcid.org/0000-0001-8319-7758
+  - url: https://openalex.org/A5062979397
+    source: https://openalex.org/A5062979397
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/isPartOf
+    - https://schema.org/location
+    - https://schema.org/itemLocation
+    - https://schema.org/nationality
+    - https://schema.org/addressCountry
+    label: country of citizenship
+    property: http://www.wikidata.org/entity/P27
+    value: http://www.wikidata.org/entity/Q43
+    value_label: Turkey
+    value_type: https://schema.org/Country
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - equivalent:
+    - https://schema.org/url
+    label: official website
+    property: http://www.wikidata.org/entity/P856
+    value: https://hasanbalci.github.io/
+- id: https://orcid.org/0000-0001-8449-1318
+  names:
+  - name: Denise Slenter
+    source: http://www.wikidata.org/entity/Q43744369
+  same_as:
+  - http://www.wikidata.org/entity/Q43744369
+  - https://github.com/denisesl22
+  accounts:
+  - url: https://github.com/denisesl22
+    via: declared on ORCID record
+    source: https://orcid.org/0000-0001-8449-1318
+  websites:
+  - url: https://cris.maastrichtuniversity.nl/en/persons/9898711a-b781-46e3-9182-a2162e693de1
+    source: https://orcid.org/0000-0001-8449-1318
+  profiles:
+  - url: https://scholar.google.com/citations?user=Le-4tuQAAAAJ
+    label: Google Scholar author ID
+    source: http://www.wikidata.org/entity/Q43744369
+  - url: https://figshare.com/authors/wd/4784898
+    label: Figshare author ID
+    source: http://www.wikidata.org/entity/Q43744369
+  - url: https://www.linkedin.com/in/deniseslenter/
+    label: LinkedIn personal profile ID
+    source: http://www.wikidata.org/entity/Q43744369
+  - url: https://orkg.org/resource/R68149
+    label: ORKG ID
+    source: http://www.wikidata.org/entity/Q43744369
+  - url: https://app.dimensions.ai/details/entities/publication/author/ur.0705125735.07
+    label: Dimensions author ID
+    source: http://www.wikidata.org/entity/Q43744369
+  - url: https://www.google.com/search?kgmid=%2Fg%2F11f676sy5g
+    label: Google Knowledge Graph ID
+    source: http://www.wikidata.org/entity/Q43744369
+  - url: http://www.scopus.com/authid/detail.url?authorId=56708961400
+    label: Scopus Author ID
+    source: https://orcid.org/0000-0001-8449-1318
+  - url: https://openalex.org/A5136731725
+    source: https://openalex.org/A5136731725
+  statements:
+  - equivalent: []
+    label: field of work
+    property: http://www.wikidata.org/entity/P101
+    value: http://www.wikidata.org/entity/Q12149006
+    value_label: metabolomics
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q2904006
+    value_label: bioinformatician
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q593644
+    value_label: chemist
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q1137652
+    value_label: Maastricht University
+    value_type: https://schema.org/Organization
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q131790020
+    value_label: Department of Translational Genomics
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q19845644
+    value_label: Department of Bioinformatics - BiGCaT
+    value_type: https://schema.org/Organization
+  - equivalent: []
+    label: doctoral advisor
+    property: http://www.wikidata.org/entity/P184
+    value: http://www.wikidata.org/entity/Q19845641
+    value_label: Chris T. Evelo
+  - equivalent: []
+    label: doctoral advisor
+    property: http://www.wikidata.org/entity/P184
+    value: http://www.wikidata.org/entity/Q20895241
+    value_label: Egon Willighagen
+  - equivalent:
+    - https://schema.org/isPartOf
+    - https://schema.org/location
+    - https://schema.org/itemLocation
+    - https://schema.org/nationality
+    - https://schema.org/addressCountry
+    label: country of citizenship
+    property: http://www.wikidata.org/entity/P27
+    value: http://www.wikidata.org/entity/Q29999
+    value_label: Kingdom of the Netherlands
+    value_type: https://schema.org/Country
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - equivalent: []
+    label: on focus list of Wikimedia project
+    property: http://www.wikidata.org/entity/P5008
+    value: http://www.wikidata.org/entity/Q60687720
+    value_label: gender gap on Dutch Wikipedia
+  - equivalent:
+    - https://schema.org/alumniOf
+    - https://schema.org/affiliation
+    label: educated at
+    property: http://www.wikidata.org/entity/P69
+    value: http://www.wikidata.org/entity/Q214341
+    value_label: University of Amsterdam
+    value_type: https://schema.org/ResearchOrganization
+  - equivalent:
+    - https://schema.org/alumniOf
+    - https://schema.org/affiliation
+    label: educated at
+    property: http://www.wikidata.org/entity/P69
+    value: http://www.wikidata.org/entity/Q280824
+    value_label: Eindhoven University of Technology
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q1193018
+    value_label: Denise
+- id: https://orcid.org/0000-0001-8501-7319
+  names:
+  - name: Kozo Nishida
+    source: http://www.wikidata.org/entity/Q136396711
+  same_as:
+  - http://www.wikidata.org/entity/Q136396711
+  - https://github.com/kozo2
+  accounts:
+  - url: https://github.com/kozo2
+    via: declared on ORCID record
+    source: https://orcid.org/0000-0001-8501-7319
+  websites:
+  - url: https://twitter.com/kozo2
+    source: https://orcid.org/0000-0001-8501-7319
+  profiles:
+  - url: https://openalex.org/A5034175804
+    source: https://openalex.org/A5034175804
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+- id: https://orcid.org/0000-0001-8907-5348
+  names:
+  - name: José Emilio Labra Gayo
+    source: http://www.wikidata.org/entity/Q51602692
+  same_as:
+  - http://www.wikidata.org/entity/Q51602692
+  - https://github.com/labra
+  accounts:
+  - url: https://github.com/labra
+    via: Wikidata
+    source: http://www.wikidata.org/entity/Q51602692
+  websites:
+  - url: http://labra.weso.es
+    source: http://www.wikidata.org/entity/Q51602692
+  - url: http://di002.edv.uniovi.es/~labra/
+    source: http://www.wikidata.org/entity/Q51602692
+  - url: http://www.di.uniovi.es/~labra
+    source: https://orcid.org/0000-0001-8907-5348
+  profiles:
+  - url: https://www.scopus.com/authid/detail.uri?authorId=8374489000
+    label: Scopus author ID
+    source: http://www.wikidata.org/entity/Q51602692
+  - url: https://www.webofscience.com/wos/author/record/L-9181-2014
+    label: Web of Science ResearcherID
+    source: http://www.wikidata.org/entity/Q51602692
+  - url: https://dblp.org/pid/32%2F2604
+    label: DBLP author ID
+    source: http://www.wikidata.org/entity/Q51602692
+  - url: https://scholar.google.com/citations?user=TGfRNZkAAAAJ
+    label: Google Scholar author ID
+    source: http://www.wikidata.org/entity/Q51602692
+  - url: https://id.loc.gov/authorities/no2017150147
+    label: Library of Congress Authorities ID
+    source: http://www.wikidata.org/entity/Q51602692
+  - url: https://publons.com/researcher/1348378/
+    label: Publons author ID
+    source: http://www.wikidata.org/entity/Q51602692
+  - url: https://videolectures.net/jose_emilio_labra_gayo/
+    label: Videolectures ID
+    source: http://www.wikidata.org/entity/Q51602692
+  - url: https://viaf.org/en/viaf/43151110634237061417
+    label: VIAF cluster ID
+    source: http://www.wikidata.org/entity/Q51602692
+  - url: https://viaf.org/en/viaf/24155189997782132904
+    label: VIAF cluster ID
+    source: http://www.wikidata.org/entity/Q51602692
+  - url: https://www.semanticscholar.org/author/-/1729679
+    label: Semantic Scholar author ID
+    source: http://www.wikidata.org/entity/Q51602692
+  - url: https://www.researchgate.net/profile/Jose-Labra-Gayo
+    label: ResearchGate profile ID
+    source: http://www.wikidata.org/entity/Q51602692
+  - url: https://aleph.nkp.cz/F/?func=find-c&local_base=aut&ccl_term=ica=ctu20191025692
+    label: NL CR AUT ID
+    source: http://www.wikidata.org/entity/Q51602692
+  - url: https://meta.wikimedia.org/wiki/Special:CentralAuth/Jelabra
+    label: Wikimedia username
+    source: http://www.wikidata.org/entity/Q51602692
+  - url: https://d-nb.info/gnd/119956978X
+    label: GND ID
+    source: http://www.wikidata.org/entity/Q51602692
+  - url: https://fedirect.toolforge.org/?id=jelabra%40mastodon.social
+    label: Mastodon address
+    source: http://www.wikidata.org/entity/Q51602692
+  - url: https://x.com/jelabra
+    label: X (Twitter) username
+    source: http://www.wikidata.org/entity/Q51602692
+  - url: https://zbmath.org/authors/?q=ai:labra-gayo.jose-emilio
+    label: zbMATH author ID
+    source: http://www.wikidata.org/entity/Q51602692
+  - url: https://id.oclc.org/worldcat/entity/E39PBJr3rV79ff7gbBrYQYrcyd
+    label: WorldCat Entities ID
+    source: http://www.wikidata.org/entity/Q51602692
+  - url: https://isni.org/isni/0000000486389263
+    label: ISNI
+    source: http://www.wikidata.org/entity/Q51602692
+  - url: https://lux.collections.yale.edu/view/person%2F3c0cfa05-ccb4-4168-ad6d-7a0ea748e889
+    label: ‎Yale LUX ID
+    source: http://www.wikidata.org/entity/Q51602692
+  - url: https://www.deutsche-digitale-bibliothek.de/person/gnd/119956978X
+    label: DDB person (GND) ID
+    source: http://www.wikidata.org/entity/Q51602692
+  - url: https://www.scopus.com/inward/authorDetails.url?authorID=57913286100&partnerID=MN8TOARS
+    label: Scopus Author ID
+    source: https://orcid.org/0000-0001-8907-5348
+  - url: http://www.scopus.com/inward/authorDetails.url?authorID=8374489000&partnerID=MN8TOARS
+    label: Scopus Author ID
+    source: https://orcid.org/0000-0001-8907-5348
+  - url: http://www.researcherid.com/rid/L-9181-2014
+    label: ResearcherID
+    source: https://orcid.org/0000-0001-8907-5348
+  - url: https://openalex.org/A5017967454
+    source: https://openalex.org/A5017967454
+  statements:
+  - equivalent: []
+    label: field of work
+    property: http://www.wikidata.org/entity/P101
+    value: http://www.wikidata.org/entity/Q21198
+    value_label: computer science
+  - equivalent: []
+    label: field of work
+    property: http://www.wikidata.org/entity/P101
+    value: http://www.wikidata.org/entity/Q54837
+    value_label: Semantic Web
+  - equivalent: []
+    label: field of work
+    property: http://www.wikidata.org/entity/P101
+    value: http://www.wikidata.org/entity/Q80993
+    value_label: software engineering
+  - equivalent: []
+    label: field of work
+    property: http://www.wikidata.org/entity/P101
+    value: http://www.wikidata.org/entity/Q9143
+    value_label: programming language
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1622272
+    value_label: university teacher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q81096
+    value_label: engineer
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q82594
+    value_label: computer scientist
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q901
+    value_label: scientist
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q2303432
+    value_label: University of Oviedo
+    value_type: https://schema.org/Collection
+  - equivalent:
+    - https://schema.org/isPartOf
+    label: participant in
+    property: http://www.wikidata.org/entity/P1344
+    value: http://www.wikidata.org/entity/Q44062313
+    value_type: https://schema.org/Hackathon
+  - equivalent:
+    - https://schema.org/knowsLanguage
+    label: languages spoken, written or signed
+    property: http://www.wikidata.org/entity/P1412
+    value: http://www.wikidata.org/entity/Q1321
+    value_label: Spanish
+    value_type: https://schema.org/Language
+  - equivalent:
+    - https://schema.org/knowsLanguage
+    label: languages spoken, written or signed
+    property: http://www.wikidata.org/entity/P1412
+    value: http://www.wikidata.org/entity/Q1860
+    value_label: English
+    value_type: https://schema.org/Language
+  - equivalent:
+    - https://schema.org/image
+    label: image
+    property: http://www.wikidata.org/entity/P18
+    value: http://commons.wikimedia.org/wiki/Special:FilePath/Jose%20Emilio%20Labra%20Gayo.png
+  - equivalent:
+    - https://schema.org/location
+    - https://schema.org/itemLocation
+    - https://schema.org/birthPlace
+    label: place of birth
+    property: http://www.wikidata.org/entity/P19
+    value: http://www.wikidata.org/entity/Q14317
+    value_label: Oviedo
+  - equivalent:
+    - https://schema.org/familyName
+    - https://schema.org/name
+    label: second family name in Spanish name
+    property: http://www.wikidata.org/entity/P1950
+    value: http://www.wikidata.org/entity/Q36943791
+    value_label: Gayo
+  - equivalent:
+    - https://schema.org/isPartOf
+    - https://schema.org/location
+    - https://schema.org/itemLocation
+    - https://schema.org/nationality
+    - https://schema.org/addressCountry
+    label: country of citizenship
+    property: http://www.wikidata.org/entity/P27
+    value: http://www.wikidata.org/entity/Q29
+    value_label: Spain
+    value_type: https://schema.org/Country
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - datatype: http://www.w3.org/2001/XMLSchema#dateTime
+    equivalent:
+    - https://schema.org/startTime
+    - https://schema.org/startDate
+    - https://schema.org/dateCreated
+    - https://schema.org/birthDate
+    label: date of birth
+    property: http://www.wikidata.org/entity/P569
+    value: '1969-01-01T00:00:00Z'
+  - equivalent: []
+    label: maintained by WikiProject
+    property: http://www.wikidata.org/entity/P6104
+    value: http://www.wikidata.org/entity/Q8487137
+    value_label: WikiProject Mathematics
+  - equivalent:
+    - https://schema.org/alumniOf
+    - https://schema.org/affiliation
+    label: educated at
+    property: http://www.wikidata.org/entity/P69
+    value: http://www.wikidata.org/entity/Q11681590
+    value_label: Escuela de Ingeniería Informática (Universidad de Oviedo)
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/familyName
+    label: family name
+    property: http://www.wikidata.org/entity/P734
+    value: http://www.wikidata.org/entity/Q37458333
+    value_label: Labra
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q97582349
+    value_label: José Emilio
+  - equivalent:
+    - https://schema.org/url
+    label: official website
+    property: http://www.wikidata.org/entity/P856
+    value: http://di002.edv.uniovi.es/~labra/
+  - equivalent:
+    - https://schema.org/url
+    label: official website
+    property: http://www.wikidata.org/entity/P856
+    value: http://labra.weso.es
+  - datatype: http://www.w3.org/2001/XMLSchema#decimal
+    equivalent: []
+    label: social media followers
+    property: http://www.wikidata.org/entity/P8687
+    value: '104'
+  - datatype: http://www.w3.org/2001/XMLSchema#decimal
+    equivalent: []
+    label: social media followers
+    property: http://www.wikidata.org/entity/P8687
+    value: '105'
+- id: https://orcid.org/0000-0001-9773-4008
+  names:
+  - name: Andra Waagmeester
+    source: http://www.wikidata.org/entity/Q19845625
+  same_as:
+  - http://www.wikidata.org/entity/Q19845625
+  - https://github.com/andrawaag
+  accounts:
+  - url: https://github.com/andrawaag
+    via: Wikidata
+    source: http://www.wikidata.org/entity/Q19845625
+  profiles:
+  - url: https://www.scopus.com/authid/detail.uri?authorId=25652418300
+    label: Scopus author ID
+    source: http://www.wikidata.org/entity/Q19845625
+  - url: https://x.com/andrawaag
+    label: X (Twitter) username
+    source: http://www.wikidata.org/entity/Q19845625
+  - url: https://figshare.com/authors/wd/97751
+    label: Figshare author ID
+    source: http://www.wikidata.org/entity/Q19845625
+  - url: https://dblp.org/pid/118%2F8399
+    label: DBLP author ID
+    source: http://www.wikidata.org/entity/Q19845625
+  - url: https://scholar.google.com/citations?user=klqHM4sAAAAJ
+    label: Google Scholar author ID
+    source: http://www.wikidata.org/entity/Q19845625
+  - url: https://www.semanticscholar.org/author/-/2403074
+    label: Semantic Scholar author ID
+    source: http://www.wikidata.org/entity/Q19845625
+  - url: https://rxivist.org/authors/200091
+    label: Rxivist author ID
+    source: http://www.wikidata.org/entity/Q19845625
+  - url: https://www.youtube.com/channel/UCflBtXUtiSUaUl4ySVGApfw
+    label: YouTube channel ID
+    source: http://www.wikidata.org/entity/Q19845625
+  - url: https://meta.wikimedia.org/wiki/Special:CentralAuth/Andrawaag
+    label: Wikimedia username
+    source: http://www.wikidata.org/entity/Q19845625
+  - url: https://app.dimensions.ai/details/entities/publication/author/ur.01154164265.41
+    label: Dimensions author ID
+    source: http://www.wikidata.org/entity/Q19845625
+  - url: https://www.researchgate.net/scientific-contributions/2083174977
+    label: ResearchGate contributions ID
+    source: http://www.wikidata.org/entity/Q19845625
+  - url: https://web.archive.org/web/https://academic.microsoft.com/v2/detail/2009985931
+    label: Microsoft Academic ID (discontinued)
+    source: http://www.wikidata.org/entity/Q19845625
+  - url: https://www.linkedin.com/in/andra-waagmeester-4785792/
+    label: LinkedIn personal profile ID
+    source: http://www.wikidata.org/entity/Q19845625
+  - url: https://orkg.org/resource/R68128
+    label: ORKG ID
+    source: http://www.wikidata.org/entity/Q19845625
+  - url: https://fedirect.toolforge.org/?id=Andrawaag%40genomic.social
+    label: Mastodon address
+    source: http://www.wikidata.org/entity/Q19845625
+  - url: https://www.youtube.com/@andrawaagmeester5518
+    label: YouTube handle
+    source: http://www.wikidata.org/entity/Q19845625
+  - url: https://codeberg.org/andrawaag
+    label: Codeberg username
+    source: http://www.wikidata.org/entity/Q19845625
+  - url: https://www.inaturalist.org/people/488776
+    label: iNaturalist user ID
+    source: http://www.wikidata.org/entity/Q19845625
+  - url: http://www.scopus.com/inward/authorDetails.url?authorID=25652418300&partnerID=MN8TOARS
+    label: Scopus Author ID
+    source: https://orcid.org/0000-0001-9773-4008
+  - url: https://openalex.org/A5048705669
+    source: https://openalex.org/A5048705669
+  statements:
+  - equivalent: []
+    label: field of work
+    property: http://www.wikidata.org/entity/P101
+    value: http://www.wikidata.org/entity/Q1048526
+    value_label: biomedical informatics
+  - equivalent: []
+    label: field of work
+    property: http://www.wikidata.org/entity/P101
+    value: http://www.wikidata.org/entity/Q54837
+    value_label: Semantic Web
+  - equivalent: []
+    label: field of work
+    property: http://www.wikidata.org/entity/P101
+    value: http://www.wikidata.org/entity/Q864269
+    value_label: biodiversity informatics
+  - equivalent: []
+    label: academic thesis
+    property: http://www.wikidata.org/entity/P1026
+    value: http://www.wikidata.org/entity/Q124306321
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q901
+    value_label: scientist
+  - equivalent:
+    - https://schema.org/isPartOf
+    label: participant in
+    property: http://www.wikidata.org/entity/P1344
+    value: http://www.wikidata.org/entity/Q37807682
+    value_label: WikidataCon 2017
+  - equivalent:
+    - https://schema.org/isPartOf
+    label: participant in
+    property: http://www.wikidata.org/entity/P1344
+    value: http://www.wikidata.org/entity/Q42449814
+    value_label: WikidataCon 2019
+  - equivalent:
+    - https://schema.org/isPartOf
+    label: participant in
+    property: http://www.wikidata.org/entity/P1344
+    value: http://www.wikidata.org/entity/Q44062313
+    value_type: https://schema.org/Hackathon
+  - equivalent:
+    - https://schema.org/isPartOf
+    label: participant in
+    property: http://www.wikidata.org/entity/P1344
+    value: http://www.wikidata.org/entity/Q56236021
+    value_label: 11th International SWAT4HCLS conference
+  - equivalent:
+    - https://schema.org/knowsLanguage
+    label: languages spoken, written or signed
+    property: http://www.wikidata.org/entity/P1412
+    value: http://www.wikidata.org/entity/Q150
+    value_label: French
+    value_type: https://schema.org/Language
+  - equivalent:
+    - https://schema.org/knowsLanguage
+    label: languages spoken, written or signed
+    property: http://www.wikidata.org/entity/P1412
+    value: http://www.wikidata.org/entity/Q1860
+    value_label: English
+    value_type: https://schema.org/Language
+  - equivalent:
+    - https://schema.org/knowsLanguage
+    label: languages spoken, written or signed
+    property: http://www.wikidata.org/entity/P1412
+    value: http://www.wikidata.org/entity/Q33989
+    value_label: Sranan Tongo
+  - equivalent:
+    - https://schema.org/knowsLanguage
+    label: languages spoken, written or signed
+    property: http://www.wikidata.org/entity/P1412
+    value: http://www.wikidata.org/entity/Q7411
+    value_label: Dutch
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q130279433
+    value_label: Department of Medical Informatics
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q28381786
+    value_label: Micelio
+  - equivalent:
+    - https://schema.org/image
+    label: image
+    property: http://www.wikidata.org/entity/P18
+    value: http://commons.wikimedia.org/wiki/Special:FilePath/Andra%20Waagmeester%202024.jpg
+  - equivalent:
+    - https://schema.org/image
+    label: image
+    property: http://www.wikidata.org/entity/P18
+    value: http://commons.wikimedia.org/wiki/Special:FilePath/Andra%20Waagmeester-IMG%201302.JPG
+  - equivalent: []
+    label: doctoral advisor
+    property: http://www.wikidata.org/entity/P184
+    value: http://www.wikidata.org/entity/Q19845641
+    value_label: Chris T. Evelo
+  - equivalent: []
+    label: doctoral advisor
+    property: http://www.wikidata.org/entity/P184
+    value: http://www.wikidata.org/entity/Q19851164
+    value_label: Susan Coort
+  - equivalent: []
+    label: doctoral advisor
+    property: http://www.wikidata.org/entity/P184
+    value: http://www.wikidata.org/entity/Q20895241
+    value_label: Egon Willighagen
+  - equivalent:
+    - https://schema.org/location
+    - https://schema.org/itemLocation
+    - https://schema.org/birthPlace
+    label: place of birth
+    property: http://www.wikidata.org/entity/P19
+    value: http://www.wikidata.org/entity/Q803
+    value_label: Utrecht
+  - equivalent:
+    - https://schema.org/isPartOf
+    - https://schema.org/location
+    - https://schema.org/itemLocation
+    - https://schema.org/nationality
+    - https://schema.org/addressCountry
+    label: country of citizenship
+    property: http://www.wikidata.org/entity/P27
+    value: http://www.wikidata.org/entity/Q29999
+    value_label: Kingdom of the Netherlands
+    value_type: https://schema.org/Country
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - datatype: http://www.w3.org/2001/XMLSchema#string
+    equivalent: []
+    label: Commons category
+    property: http://www.wikidata.org/entity/P373
+    value: Andra Waagmeester
+  - equivalent:
+    - https://schema.org/homeLocation
+    - https://schema.org/location
+    - https://schema.org/itemLocation
+    label: residence
+    property: http://www.wikidata.org/entity/P551
+    value: http://www.wikidata.org/entity/Q31
+    value_label: Belgium
+    value_type: https://schema.org/Country
+  - equivalent: []
+    label: website account on
+    property: http://www.wikidata.org/entity/P553
+    value: http://www.wikidata.org/entity/Q16958215
+    value_label: iNaturalist
+    value_type: https://schema.org/MobileApplication
+  - datatype: http://www.w3.org/2001/XMLSchema#dateTime
+    equivalent:
+    - https://schema.org/startTime
+    - https://schema.org/startDate
+    - https://schema.org/dateCreated
+    - https://schema.org/birthDate
+    label: date of birth
+    property: http://www.wikidata.org/entity/P569
+    value: '2000-01-01T00:00:00Z'
+  - equivalent:
+    - https://schema.org/alumniOf
+    - https://schema.org/affiliation
+    label: educated at
+    property: http://www.wikidata.org/entity/P69
+    value: http://www.wikidata.org/entity/Q1137652
+    value_label: Maastricht University
+    value_type: https://schema.org/Organization
+  - equivalent:
+    - https://schema.org/alumniOf
+    - https://schema.org/affiliation
+    label: educated at
+    property: http://www.wikidata.org/entity/P69
+    value: http://www.wikidata.org/entity/Q214341
+    value_label: University of Amsterdam
+    value_type: https://schema.org/ResearchOrganization
+  - equivalent:
+    - https://schema.org/familyName
+    - https://schema.org/name
+    label: family name
+    property: http://www.wikidata.org/entity/P734
+    value: http://www.wikidata.org/entity/Q17538781
+    value_label: Waagmeester
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q19845682
+    value_label: Andra
+  - datatype: http://www.w3.org/2001/XMLSchema#decimal
+    equivalent: []
+    label: social media followers
+    property: http://www.wikidata.org/entity/P8687
+    value: '177'
+- id: https://orcid.org/0000-0002-1297-3104
+  names:
+  - name: Anastasios G Papadiamantis
+    source: http://www.wikidata.org/entity/Q100409486
+  same_as:
+  - http://www.wikidata.org/entity/Q100409486
+  profiles:
+  - url: http://www.cienciavitae.pt//AD1B-51B5-BE7E
+    label: Ciência ID
+    source: https://orcid.org/0000-0002-1297-3104
+  - url: https://openalex.org/A5140909346
+    source: https://openalex.org/A5140909346
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+- id: https://orcid.org/0000-0002-1849-5246
+  names:
+  - name: Thomas E Exner
+    source: http://www.wikidata.org/entity/Q88046313
+  same_as:
+  - http://www.wikidata.org/entity/Q88046313
+  profiles:
+  - url: https://dblp.org/pid/61%2F1998
+    label: DBLP author ID
+    source: http://www.wikidata.org/entity/Q88046313
+  - url: http://loop.frontiersin.org/people/1577885/overview?referrer=orcid_profile
+    label: Loop profile
+    source: https://orcid.org/0000-0002-1849-5246
+  - url: https://sciprofiles.com/profile/1291562
+    label: SciProfiles
+    source: https://orcid.org/0000-0002-1849-5246
+  - url: https://openalex.org/A5140911546
+    source: https://openalex.org/A5140911546
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/familyName
+    label: family name
+    property: http://www.wikidata.org/entity/P734
+    value: http://www.wikidata.org/entity/Q35882291
+    value_label: Exner
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q16428906
+    value_label: Thomas
+- id: https://orcid.org/0000-0002-2061-091X
+  names:
+  - name: Georgios V. Gkoutos
+    source: http://www.wikidata.org/entity/Q54303216
+  same_as:
+  - http://www.wikidata.org/entity/Q54303216
+  - https://github.com/gkoutos
+  accounts:
+  - url: https://github.com/gkoutos
+    via: Wikidata
+    source: http://www.wikidata.org/entity/Q54303216
+  websites:
+  - url: https://gkoutos.github.io/
+    source: https://orcid.org/0000-0002-2061-091X
+  profiles:
+  - url: https://www.scopus.com/authid/detail.uri?authorId=6603260099
+    label: Scopus author ID
+    source: http://www.wikidata.org/entity/Q54303216
+  - url: https://dblp.org/pid/24%2F3635
+    label: DBLP author ID
+    source: http://www.wikidata.org/entity/Q54303216
+  - url: http://www.scopus.com/inward/authorDetails.url?authorID=6603260099&partnerID=MN8TOARS
+    label: Scopus Author ID
+    source: https://orcid.org/0000-0002-2061-091X
+  - url: http://loop.frontiersin.org/people/1527848/overview?referrer=orcid_profile
+    label: Loop profile
+    source: https://orcid.org/0000-0002-2061-091X
+  - url: http://www.scopus.com/authid/detail.url?authorId=6603260099
+    label: Scopus Author ID
+    source: https://orcid.org/0000-0002-2061-091X
+  - url: https://openalex.org/A5089900113
+    source: https://openalex.org/A5089900113
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q223429
+    value_label: University of Birmingham
+    value_type: https://schema.org/EducationalOrganization
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q30282345
+    value_label: Medical Research Council Harwell
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q319761
+    value_label: Aberystwyth University
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q35794
+    value_label: University of Cambridge
+    value_type: https://schema.org/EducationalOrganization
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q77084221
+    value_label: Health Data Research UK
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q7894775
+    value_label: University Hospitals Birmingham NHS Foundation Trust
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - equivalent: []
+    label: on focus list of Wikimedia project
+    property: http://www.wikidata.org/entity/P5008
+    value: http://www.wikidata.org/entity/Q87748614
+    value_label: WikiProject COVID-19
+  - equivalent:
+    - https://schema.org/alumniOf
+    - https://schema.org/affiliation
+    label: educated at
+    property: http://www.wikidata.org/entity/P69
+    value: http://www.wikidata.org/entity/Q189022
+    value_label: Imperial College London
+    value_type: https://schema.org/EducationalOrganization
+- id: https://orcid.org/0000-0002-3435-7775
+  names:
+  - name: Penny Nymark
+    source: http://www.wikidata.org/entity/Q28530416
+  same_as:
+  - http://www.wikidata.org/entity/Q28530416
+  websites:
+  - url: https://twitter.com/pennynymark
+    source: https://orcid.org/0000-0002-3435-7775
+  - url: https://publons.com/researcher/3184728/penny-nymark/
+    source: https://orcid.org/0000-0002-3435-7775
+  - url: https://www.researchgate.net/profile/Penny-Nymark
+    source: https://orcid.org/0000-0002-3435-7775
+  profiles:
+  - url: https://scholar.google.com/citations?user=cuyej7sAAAAJ
+    label: Google Scholar author ID
+    source: http://www.wikidata.org/entity/Q28530416
+  - url: https://isni.org/isni/0000000098972748
+    label: ISNI
+    source: http://www.wikidata.org/entity/Q28530416
+  - url: https://loop.frontiersin.org/people/586709/overview
+    label: Loop ID
+    source: http://www.wikidata.org/entity/Q28530416
+  - url: https://id.loc.gov/authorities/n2010183303
+    label: Library of Congress Authorities ID
+    source: http://www.wikidata.org/entity/Q28530416
+  - url: https://viaf.org/en/viaf/126274538
+    label: VIAF cluster ID
+    source: http://www.wikidata.org/entity/Q28530416
+  - url: https://urn.fi/URN:NBN:fi:au:finaf:000140475
+    label: KANTO ID
+    source: http://www.wikidata.org/entity/Q28530416
+  - url: https://app.dimensions.ai/details/entities/publication/author/ur.01306363211.33
+    label: Dimensions author ID
+    source: http://www.wikidata.org/entity/Q28530416
+  - url: https://x.com/pennynymark
+    label: X (Twitter) username
+    source: http://www.wikidata.org/entity/Q28530416
+  - url: https://d-nb.info/gnd/1209984997
+    label: GND ID
+    source: http://www.wikidata.org/entity/Q28530416
+  - url: https://id.oclc.org/worldcat/entity/E39PBJvcXHh64WC6gDQHBK9v73
+    label: WorldCat Entities ID
+    source: http://www.wikidata.org/entity/Q28530416
+  - url: https://fedirect.toolforge.org/?id=pennyn%40mastodon.social
+    label: Mastodon address
+    source: http://www.wikidata.org/entity/Q28530416
+  - url: https://www.deutsche-digitale-bibliothek.de/person/gnd/1209984997
+    label: DDB person (GND) ID
+    source: http://www.wikidata.org/entity/Q28530416
+  - url: https://www.google.com/search?kgmid=%2Fg%2F11f0zc1310
+    label: Google Knowledge Graph ID
+    source: http://www.wikidata.org/entity/Q28530416
+  - url: http://loop.frontiersin.org/people/586709/overview?referrer=orcid_profile
+    label: Loop profile
+    source: https://orcid.org/0000-0002-3435-7775
+  - url: https://openalex.org/A5018763133
+    source: https://openalex.org/A5018763133
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q3126128
+    value_label: geneticist
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q1137652
+    value_label: Maastricht University
+    value_type: https://schema.org/Organization
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q21015571
+    value_label: Finnish Institute of Occupational Health
+    value_type: https://schema.org/ResearchOrganization
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q219564
+    value_label: Karolinska Institutet
+    value_type: https://schema.org/Organization
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q127218913
+    value_label: TGX
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q219564
+    value_label: Karolinska Institutet
+    value_type: https://schema.org/Organization
+  - equivalent:
+    - https://schema.org/isPartOf
+    - https://schema.org/location
+    - https://schema.org/itemLocation
+    - https://schema.org/nationality
+    - https://schema.org/addressCountry
+    label: country of citizenship
+    property: http://www.wikidata.org/entity/P27
+    value: http://www.wikidata.org/entity/Q34
+    value_label: Sweden
+    value_type: https://schema.org/Country
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - datatype: http://www.w3.org/2001/XMLSchema#dateTime
+    equivalent:
+    - https://schema.org/startTime
+    - https://schema.org/startDate
+    - https://schema.org/dateCreated
+    - https://schema.org/birthDate
+    label: date of birth
+    property: http://www.wikidata.org/entity/P569
+    value: '2000-01-01T00:00:00Z'
+  - equivalent:
+    - https://schema.org/alumniOf
+    - https://schema.org/affiliation
+    label: educated at
+    property: http://www.wikidata.org/entity/P69
+    value: http://www.wikidata.org/entity/Q28695
+    value_label: University of Helsinki
+    value_type: https://schema.org/Collection
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/familyName
+    label: family name
+    property: http://www.wikidata.org/entity/P734
+    value: http://www.wikidata.org/entity/Q39250026
+    value_label: Nymark
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q18324373
+    value_label: Penny
+- id: https://orcid.org/0000-0002-4166-7093
+  same_as:
+  - http://www.wikidata.org/entity/Q116446553
+  accounts:
+  - url: https://github.com/jmillanacosta
+    via: cv.yml
+    source: https://orcid.org/0000-0002-4166-7093
+  profiles:
+  - url: https://openalex.org/A5061091441
+    source: https://openalex.org/A5061091441
+  - url: https://pypi.org/user/jmillanacosta/
+    source: https://github.com/jmillanacosta
+  - url: https://github.com/jmillanacosta
+    label: GitHub account
+    source: http://www.wikidata.org/entity/Q116446553
+  links:
+  - url: https://openalex.org/A5061091441
+    label: OpenAlex
+    kind: profile
+  - url: http://www.wikidata.org/entity/Q116446553
+    label: Wikidata
+    kind: profile
+  - url: https://www.wikipathways.org/authors/Jmillanacosta.html
+    label: WikiPathways
+    kind: profile
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q1137652
+    value_label: Maastricht University
+    value_type: https://schema.org/Organization
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q131790020
+    value_label: Department of Translational Genomics
+  - equivalent: []
+    label: doctoral advisor
+    property: http://www.wikidata.org/entity/P184
+    value: http://www.wikidata.org/entity/Q20895241
+    value_label: Egon Willighagen
+  - equivalent:
+    - https://schema.org/familyName
+    - https://schema.org/name
+    label: second family name in Spanish name
+    property: http://www.wikidata.org/entity/P1950
+    value: http://www.wikidata.org/entity/Q16148765
+    value_label: Acosta
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - equivalent:
+    - https://schema.org/familyName
+    - https://schema.org/name
+    label: family name
+    property: http://www.wikidata.org/entity/P734
+    value: http://www.wikidata.org/entity/Q35675645
+    value_label: Millán
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q1142232
+    value_label: Javier
+- id: https://orcid.org/0000-0002-4322-6179
+  names:
+  - name: Nina Jeliazkova
+    source: http://www.wikidata.org/entity/Q27061849
+  same_as:
+  - http://www.wikidata.org/entity/Q27061849
+  - https://github.com/vedina
+  accounts:
+  - url: https://github.com/vedina
+    via: Wikidata
+    source: http://www.wikidata.org/entity/Q27061849
+  websites:
+  - url: https://scholar.google.com/citations?user=2eBL2WMAAAAJ&hl=en
+    source: https://orcid.org/0000-0002-4322-6179
+  - url: https://www.ideaconsult.net/
+    source: https://orcid.org/0000-0002-4322-6179
+  - url: https://vedina.users.sourceforge.net/
+    source: https://orcid.org/0000-0002-4322-6179
+  - url: https://www.linkedin.com/in/ninajeliazkova/
+    source: https://orcid.org/0000-0002-4322-6179
+  profiles:
+  - url: https://x.com/10705013
+    label: X (Twitter) username
+    source: http://www.wikidata.org/entity/Q27061849
+  - url: https://scholar.google.com/citations?user=2eBL2WMAAAAJ
+    label: Google Scholar author ID
+    source: http://www.wikidata.org/entity/Q27061849
+  - url: https://www.researchgate.net/profile/Nina_Jeliazkova
+    label: ResearchGate profile ID
+    source: http://www.wikidata.org/entity/Q27061849
+  - url: https://www.scopus.com/authid/detail.uri?authorId=8378341000
+    label: Scopus author ID
+    source: http://www.wikidata.org/entity/Q27061849
+  - url: https://dblp.org/pid/83%2F4154
+    label: DBLP author ID
+    source: http://www.wikidata.org/entity/Q27061849
+  - url: https://loop.frontiersin.org/people/740592/overview
+    label: Loop ID
+    source: http://www.wikidata.org/entity/Q27061849
+  - url: https://app.dimensions.ai/details/entities/publication/author/ur.01073372414.07
+    label: Dimensions author ID
+    source: http://www.wikidata.org/entity/Q27061849
+  - url: https://www.linkedin.com/in/ninajeliazkova/
+    label: LinkedIn personal profile ID
+    source: http://www.wikidata.org/entity/Q27061849
+  - url: https://fedirect.toolforge.org/?id=n10705013%40mastodon.social
+    label: Mastodon address
+    source: http://www.wikidata.org/entity/Q27061849
+  - url: http://www.scopus.com/inward/authorDetails.url?authorID=8378341000&partnerID=MN8TOARS
+    label: Scopus Author ID
+    source: https://orcid.org/0000-0002-4322-6179
+  - url: http://loop.frontiersin.org/people/740592/overview?referrer=orcid_profile
+    label: Loop profile
+    source: https://orcid.org/0000-0002-4322-6179
+  - url: https://openalex.org/A5056989071
+    source: https://openalex.org/A5056989071
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q183888
+    value_label: software developer
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q82594
+    value_label: computer scientist
+  - equivalent:
+    - https://schema.org/award
+    label: award received
+    property: http://www.wikidata.org/entity/P166
+    value: http://www.wikidata.org/entity/Q45315956
+    value_label: Blue Obelisk Award
+  - equivalent:
+    - https://schema.org/isPartOf
+    - https://schema.org/location
+    - https://schema.org/itemLocation
+    - https://schema.org/nationality
+    - https://schema.org/addressCountry
+    label: country of citizenship
+    property: http://www.wikidata.org/entity/P27
+    value: http://www.wikidata.org/entity/Q219
+    value_label: Bulgaria
+    value_type: https://schema.org/Country
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - datatype: http://www.w3.org/2001/XMLSchema#dateTime
+    equivalent:
+    - https://schema.org/startTime
+    - https://schema.org/startDate
+    - https://schema.org/dateCreated
+    - https://schema.org/birthDate
+    label: date of birth
+    property: http://www.wikidata.org/entity/P569
+    value: '2000-01-01T00:00:00Z'
+  - equivalent:
+    - https://schema.org/alumniOf
+    - https://schema.org/affiliation
+    label: educated at
+    property: http://www.wikidata.org/entity/P69
+    value: http://www.wikidata.org/entity/Q1342013
+    value_label: Saint Petersburg State University of Information Technologies, Mechanics and Optics
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q1508902
+    value_label: Nina
+  - datatype: http://www.w3.org/2001/XMLSchema#decimal
+    equivalent: []
+    label: social media followers
+    property: http://www.wikidata.org/entity/P8687
+    value: '3'
+  - datatype: http://www.w3.org/2001/XMLSchema#decimal
+    equivalent: []
+    label: social media followers
+    property: http://www.wikidata.org/entity/P8687
+    value: '4'
+- id: https://orcid.org/0000-0002-4409-1974
+  names:
+  - name: Rob Stierum
+    source: http://www.wikidata.org/entity/Q140771297
+  same_as:
+  - http://www.wikidata.org/entity/Q140771297
+  profiles:
+  - url: https://scholar.google.com/citations?user=UWQ4b4IAAAAJ
+    label: Google Scholar author ID
+    source: http://www.wikidata.org/entity/Q140771297
+  - url: https://loop.frontiersin.org/people/2972065/overview
+    label: Loop ID
+    source: http://www.wikidata.org/entity/Q140771297
+  - url: https://openalex.org/A5073178090
+    source: https://openalex.org/A5073178090
+  statements:
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q1867222
+    value_label: Netherlands Organisation for Applied Scientific Research
+    value_type: https://schema.org/Organization
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+- id: https://orcid.org/0000-0002-4693-0591
+  names:
+  - name: Anders Riutta
+    source: http://www.wikidata.org/entity/Q43370277
+  same_as:
+  - http://www.wikidata.org/entity/Q43370277
+  profiles:
+  - url: https://orkg.org/resource/R68145
+    label: ORKG ID
+    source: http://www.wikidata.org/entity/Q43370277
+  - url: https://fedirect.toolforge.org/?id=anders%40scholar.social
+    label: Mastodon address
+    source: http://www.wikidata.org/entity/Q43370277
+  - url: https://openalex.org/A5064769212
+    source: https://openalex.org/A5064769212
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q5566337
+    value_label: Gladstone Institutes
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - datatype: http://www.w3.org/2001/XMLSchema#dateTime
+    equivalent:
+    - https://schema.org/startTime
+    - https://schema.org/startDate
+    - https://schema.org/dateCreated
+    - https://schema.org/birthDate
+    label: date of birth
+    property: http://www.wikidata.org/entity/P569
+    value: '2000-01-01T00:00:00Z'
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q8843357
+    value_label: Anders
+  - datatype: http://www.w3.org/2001/XMLSchema#decimal
+    equivalent: []
+    label: social media followers
+    property: http://www.wikidata.org/entity/P8687
+    value: '20'
+- id: https://orcid.org/0000-0002-4751-4637
+  names:
+  - name: Lars Willighagen
+    source: http://www.wikidata.org/entity/Q45907528
+  same_as:
+  - http://www.wikidata.org/entity/Q45907528
+  - https://github.com/larsgw
+  accounts:
+  - url: https://github.com/larsgw
+    via: Wikidata
+    source: http://www.wikidata.org/entity/Q45907528
+  websites:
+  - url: https://larsgw.github.io/
+    source: http://www.wikidata.org/entity/Q45907528
+  - url: https://larsgw.github.io
+    source: https://orcid.org/0000-0002-4751-4637
+  - url: https://larsgw.blogspot.com
+    source: https://orcid.org/0000-0002-4751-4637
+  - url: https://mastodon.social/@larsgw
+    source: https://orcid.org/0000-0002-4751-4637
+  profiles:
+  - url: https://web.archive.org/web/*/https://www.mendeley.com/profiles/lars-willighagen/
+    label: Mendeley person ID
+    source: http://www.wikidata.org/entity/Q45907528
+  - url: https://x.com/larswillighagen
+    label: X (Twitter) username
+    source: http://www.wikidata.org/entity/Q45907528
+  - url: https://openalex.org/A2912709654
+    label: OpenAlex ID
+    source: http://www.wikidata.org/entity/Q45907528
+  - url: https://dblp.org/pid/236%2F1729
+    label: DBLP author ID
+    source: http://www.wikidata.org/entity/Q45907528
+  - url: https://fedirect.toolforge.org/?id=larsgw%40mastodon.social
+    label: Mastodon address
+    source: http://www.wikidata.org/entity/Q45907528
+  - url: https://scholar.google.com/citations?user=r9lmG00AAAAJ
+    label: Google Scholar author ID
+    source: http://www.wikidata.org/entity/Q45907528
+  - url: https://www.google.com/search?kgmid=%2Fg%2F11hbth2kmh
+    label: Google Knowledge Graph ID
+    source: http://www.wikidata.org/entity/Q45907528
+  - url: https://gitlab.com/larsgw
+    label: GitLab.com username
+    source: http://www.wikidata.org/entity/Q45907528
+  - url: https://wikidata-externalid-url.toolforge.org/?p=12361&url_prefix=https%3A%2F%2Fbsky.app%2Fprofile%2F&id=larswillighagen.bsky.social
+    label: Bluesky handle
+    source: http://www.wikidata.org/entity/Q45907528
+  - url: https://openalex.org/A5090914801
+    source: https://openalex.org/A5090914801
+  statements:
+  - equivalent: []
+    label: field of work
+    property: http://www.wikidata.org/entity/P101
+    value: http://www.wikidata.org/entity/Q1026962
+    value_label: digital humanities
+  - equivalent: []
+    label: field of work
+    property: http://www.wikidata.org/entity/P101
+    value: http://www.wikidata.org/entity/Q7150
+    value_label: ecology
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q5482740
+    value_label: programmer
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q864503
+    value_label: biologist
+  - equivalent:
+    - https://schema.org/url
+    label: official blog URL
+    property: http://www.wikidata.org/entity/P1581
+    value: https://larsgw.blogspot.com/
+  - equivalent:
+    - https://schema.org/url
+    label: official blog URL
+    property: http://www.wikidata.org/entity/P1581
+    value: https://larsgw.github.io/blog/
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - equivalent:
+    - https://schema.org/alumniOf
+    - https://schema.org/affiliation
+    label: educated at
+    property: http://www.wikidata.org/entity/P69
+    value: http://www.wikidata.org/entity/Q632004
+    value_label: Radboud University
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/familyName
+    label: family name
+    property: http://www.wikidata.org/entity/P734
+    value: http://www.wikidata.org/entity/Q20895523
+    value_label: Willighagen
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q1261347
+    value_label: Gerard
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q15635262
+    value_label: Lars
+  - equivalent:
+    - https://schema.org/url
+    label: official website
+    property: http://www.wikidata.org/entity/P856
+    value: https://larsgw.github.io/
+  - datatype: http://www.w3.org/2001/XMLSchema#decimal
+    equivalent: []
+    label: social media followers
+    property: http://www.wikidata.org/entity/P8687
+    value: '103'
+  - datatype: http://www.w3.org/2001/XMLSchema#decimal
+    equivalent: []
+    label: social media followers
+    property: http://www.wikidata.org/entity/P8687
+    value: '105'
+  - datatype: http://www.w3.org/2001/XMLSchema#decimal
+    equivalent: []
+    label: social media followers
+    property: http://www.wikidata.org/entity/P8687
+    value: '98'
+- id: https://orcid.org/0000-0002-4904-3269
+  names:
+  - name: Tooba Abbassi-Daloii
+    source: http://www.wikidata.org/entity/Q89321648
+  same_as:
+  - http://www.wikidata.org/entity/Q89321648
+  - https://github.com/tabbassidaloii
+  accounts:
+  - url: https://github.com/tabbassidaloii
+    via: Wikidata
+    source: http://www.wikidata.org/entity/Q89321648
+  profiles:
+  - url: https://app.dimensions.ai/details/entities/publication/author/ur.01030411721.57
+    label: Dimensions author ID
+    source: http://www.wikidata.org/entity/Q89321648
+  - url: https://scholar.google.com/citations?user=wEWNulIAAAAJ
+    label: Google Scholar author ID
+    source: http://www.wikidata.org/entity/Q89321648
+  - url: https://fedirect.toolforge.org/?id=Tooba%40social.edu.nl
+    label: Mastodon address
+    source: http://www.wikidata.org/entity/Q89321648
+  - url: http://www.scopus.com/authid/detail.url?authorId=56667602300
+    label: Scopus Author ID
+    source: https://orcid.org/0000-0002-4904-3269
+  - url: http://www.scopus.com/inward/authorDetails.url?authorID=56667602300&partnerID=MN8TOARS
+    label: Scopus Author ID
+    source: https://orcid.org/0000-0002-4904-3269
+  - url: https://openalex.org/A5080912462
+    source: https://openalex.org/A5080912462
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q131790020
+    value_label: Department of Translational Genomics
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q56682938
+    value_label: Amsterdam UMC
+  - equivalent: []
+    label: doctoral advisor
+    property: http://www.wikidata.org/entity/P184
+    value: http://www.wikidata.org/entity/Q57190543
+    value_label: Peter A.C. 't Hoen
+  - equivalent: []
+    label: doctoral advisor
+    property: http://www.wikidata.org/entity/P184
+    value: http://www.wikidata.org/entity/Q59661580
+    value_label: Silvère M van der Maarel
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+- id: https://orcid.org/0000-0002-5231-0639
+  names:
+  - name: Vladimir Lobaskin
+    source: http://www.wikidata.org/entity/Q45351113
+  same_as:
+  - http://www.wikidata.org/entity/Q45351113
+  profiles:
+  - url: https://www.webofscience.com/wos/author/record/E-6214-2012
+    label: Web of Science ResearcherID
+    source: http://www.wikidata.org/entity/Q45351113
+  - url: https://publons.com/researcher/1210787/
+    label: Publons author ID
+    source: http://www.wikidata.org/entity/Q45351113
+  - url: https://www.scopus.com/authid/detail.uri?authorId=6603676954
+    label: Scopus author ID
+    source: http://www.wikidata.org/entity/Q45351113
+  - url: http://www.researcherid.com/rid/E-6214-2012
+    label: ResearcherID
+    source: https://orcid.org/0000-0002-5231-0639
+  - url: http://www.scopus.com/inward/authorDetails.url?authorID=6603676954&partnerID=MN8TOARS
+    label: Scopus Author ID
+    source: https://orcid.org/0000-0002-5231-0639
+  - url: https://sciprofiles.com/profile/1234568
+    label: SciProfiles
+    source: https://orcid.org/0000-0002-5231-0639
+  - url: https://openalex.org/A5124127231
+    source: https://openalex.org/A5124127231
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q1068258
+    value_label: University College Dublin
+    value_type: https://schema.org/Organization
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q2253934
+    value_label: Vladimir
+- id: https://orcid.org/0000-0002-5301-3142
+  names:
+  - name: Chris T. Evelo
+    source: http://www.wikidata.org/entity/Q19845641
+  same_as:
+  - http://www.wikidata.org/entity/Q19845641
+  - https://github.com/Chris-Evelo
+  accounts:
+  - url: https://github.com/Chris-Evelo
+    via: Wikidata
+    source: http://www.wikidata.org/entity/Q19845641
+  websites:
+  - url: http://www.bigcat.unimaas.nl
+    source: https://orcid.org/0000-0002-5301-3142
+  - url: https://twitter.com/Chris_Evelo
+    source: https://orcid.org/0000-0002-5301-3142
+  profiles:
+  - url: https://isni.org/isni/0000000397135632
+    label: ISNI
+    source: http://www.wikidata.org/entity/Q19845641
+  - url: https://viaf.org/en/viaf/292237755
+    label: VIAF cluster ID
+    source: http://www.wikidata.org/entity/Q19845641
+  - url: https://x.com/Chris_Evelo
+    label: X (Twitter) username
+    source: http://www.wikidata.org/entity/Q19845641
+  - url: https://scholar.google.com/citations?user=2dm_Du0AAAAJ
+    label: Google Scholar author ID
+    source: http://www.wikidata.org/entity/Q19845641
+  - url: https://www.scopus.com/authid/detail.uri?authorId=7003950754
+    label: Scopus author ID
+    source: http://www.wikidata.org/entity/Q19845641
+  - url: https://data.bibliotheken.nl/id/thes/p069261504
+    label: Nationale Thesaurus voor Auteursnamen ID
+    source: http://www.wikidata.org/entity/Q19845641
+  - url: https://academictree.org/math/peopleinfo.php?pid=754143
+    label: Academic Tree ID
+    source: http://www.wikidata.org/entity/Q19845641
+  - url: https://dblp.org/pid/74%2F5894
+    label: DBLP author ID
+    source: http://www.wikidata.org/entity/Q19845641
+  - url: https://web.archive.org/web/*/https://www.narcis.nl/person/RecordID/PRS1311973
+    label: NARCIS researcher ID
+    source: http://www.wikidata.org/entity/Q19845641
+  - url: https://app.dimensions.ai/details/entities/publication/author/ur.0724301327.68
+    label: Dimensions author ID
+    source: http://www.wikidata.org/entity/Q19845641
+  - url: https://www.facebook.com/chrisevelo
+    label: Facebook username
+    source: http://www.wikidata.org/entity/Q19845641
+  - url: https://www.linkedin.com/in/chrisevelo/
+    label: LinkedIn personal profile ID
+    source: http://www.wikidata.org/entity/Q19845641
+  - url: https://d-nb.info/gnd/1209971186
+    label: GND ID
+    source: http://www.wikidata.org/entity/Q19845641
+  - url: https://id.oclc.org/worldcat/entity/E39PBJfx49FHKfyXCQfBFYgxjC
+    label: WorldCat Entities ID
+    source: http://www.wikidata.org/entity/Q19845641
+  - url: https://meta.wikimedia.org/wiki/Special:CentralAuth/Chris%20Evelo
+    label: Wikimedia username
+    source: http://www.wikidata.org/entity/Q19845641
+  - url: https://www.deutsche-digitale-bibliothek.de/person/gnd/1209971186
+    label: DDB person (GND) ID
+    source: http://www.wikidata.org/entity/Q19845641
+  - url: http://www.scopus.com/inward/authorDetails.url?authorID=7003950754&partnerID=MN8TOARS
+    label: Scopus Author ID
+    source: https://orcid.org/0000-0002-5301-3142
+  - url: https://openalex.org/A5133005017
+    source: https://openalex.org/A5133005017
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q104188750
+    value_label: life scientist
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1622272
+    value_label: university teacher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q482980
+    value_label: author
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q1137652
+    value_label: Maastricht University
+    value_type: https://schema.org/Organization
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q19845644
+    value_label: Department of Bioinformatics - BiGCaT
+    value_type: https://schema.org/Organization
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q55449596
+    value_label: Maastricht Centre for Systems Biology
+  - equivalent:
+    - https://schema.org/award
+    label: award received
+    property: http://www.wikidata.org/entity/P166
+    value: http://www.wikidata.org/entity/Q27990536
+    value_label: Agilent Technologies Thought Leader Award
+  - equivalent: []
+    label: doctoral advisor
+    property: http://www.wikidata.org/entity/P184
+    value: http://www.wikidata.org/entity/Q31208672
+    value_label: P.Th. Henderson
+  - equivalent: []
+    label: doctoral student
+    property: http://www.wikidata.org/entity/P185
+    value: http://www.wikidata.org/entity/Q19845625
+    value_label: Andra Waagmeester
+  - equivalent: []
+    label: doctoral student
+    property: http://www.wikidata.org/entity/P185
+    value: http://www.wikidata.org/entity/Q27987764
+    value_label: Martina Summer-Kutmon
+  - equivalent: []
+    label: doctoral student
+    property: http://www.wikidata.org/entity/P185
+    value: http://www.wikidata.org/entity/Q28792013
+    value_label: Anwesha Bohler
+  - equivalent: []
+    label: doctoral student
+    property: http://www.wikidata.org/entity/P185
+    value: http://www.wikidata.org/entity/Q28865045
+    value_label: Thomas Kelder
+  - equivalent: []
+    label: doctoral student
+    property: http://www.wikidata.org/entity/P185
+    value: http://www.wikidata.org/entity/Q28865050
+    value_label: Martijn P van Iersel
+  - equivalent: []
+    label: doctoral student
+    property: http://www.wikidata.org/entity/P185
+    value: http://www.wikidata.org/entity/Q29998663
+    value_label: Ryan Miller
+  - equivalent: []
+    label: doctoral student
+    property: http://www.wikidata.org/entity/P185
+    value: http://www.wikidata.org/entity/Q40560523
+    value_label: Elisa Cirillo
+  - equivalent: []
+    label: doctoral student
+    property: http://www.wikidata.org/entity/P185
+    value: http://www.wikidata.org/entity/Q42369611
+    value_label: Marvin Martens
+  - equivalent: []
+    label: doctoral student
+    property: http://www.wikidata.org/entity/P185
+    value: http://www.wikidata.org/entity/Q43744369
+    value_label: Denise Slenter
+  - equivalent: []
+    label: doctoral student
+    property: http://www.wikidata.org/entity/P185
+    value: http://www.wikidata.org/entity/Q62383754
+    value_label: Amadeo Muñoz Garcia
+  - equivalent: []
+    label: doctoral student
+    property: http://www.wikidata.org/entity/P185
+    value: http://www.wikidata.org/entity/Q86442640
+    value_label: Ammar Ammar
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - datatype: http://www.w3.org/2001/XMLSchema#dateTime
+    equivalent:
+    - https://schema.org/startTime
+    - https://schema.org/startDate
+    - https://schema.org/dateCreated
+    - https://schema.org/birthDate
+    label: date of birth
+    property: http://www.wikidata.org/entity/P569
+    value: '1957-01-01T00:00:00Z'
+  - equivalent:
+    - https://schema.org/familyName
+    - https://schema.org/name
+    label: family name
+    property: http://www.wikidata.org/entity/P734
+    value: http://www.wikidata.org/entity/Q19845754
+    value_label: Evelo
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q15885228
+    value_label: Theodorus
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q18194758
+    value_label: Christoffel
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q21141858
+    value_label: Anthonius
+  - datatype: http://www.w3.org/2001/XMLSchema#decimal
+    equivalent: []
+    label: social media followers
+    property: http://www.wikidata.org/entity/P8687
+    value: '1869'
+- id: https://orcid.org/0000-0002-6943-6887
+  names:
+  - name: Yasunori Yamamoto
+    source: http://www.wikidata.org/entity/Q59490274
+  same_as:
+  - http://www.wikidata.org/entity/Q59490274
+  profiles:
+  - url: https://nrid.nii.ac.jp/ja/nrid/1000050470076
+    label: e-Rad researcher number
+    source: http://www.wikidata.org/entity/Q59490274
+  - url: https://researchmap.jp/yayamamo
+    label: Researchmap ID
+    source: http://www.wikidata.org/entity/Q59490274
+  - url: https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202101014410918182
+    label: J-GLOBAL ID
+    source: http://www.wikidata.org/entity/Q59490274
+  - url: https://cir.nii.ac.jp/crid/1420564276175229824
+    label: CiNii Research ID
+    source: http://www.wikidata.org/entity/Q59490274
+  - url: https://openalex.org/A5135617175
+    source: https://openalex.org/A5135617175
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/affiliation
+    - https://schema.org/worksFor
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q11346475
+    value_label: Database Division for Life Science
+    value_type: https://schema.org/ResearchOrganization
+  - equivalent:
+    - https://schema.org/isPartOf
+    - https://schema.org/location
+    - https://schema.org/itemLocation
+    - https://schema.org/nationality
+    - https://schema.org/addressCountry
+    label: country of citizenship
+    property: http://www.wikidata.org/entity/P27
+    value: http://www.wikidata.org/entity/Q17
+    value_label: Japan
+    value_type: https://schema.org/Country
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+- id: https://orcid.org/0000-0002-7260-2129
+  names:
+  - name: Julia Helmecke
+    source: http://www.wikidata.org/entity/Q63958202
+  same_as:
+  - http://www.wikidata.org/entity/Q63958202
+  profiles:
+  - url: https://orkg.org/resource/R49448
+    label: ORKG ID
+    source: http://www.wikidata.org/entity/Q63958202
+  - url: http://loop.frontiersin.org/people/560844/overview?referrer=orcid_profile
+    label: Loop profile
+    source: https://orcid.org/0000-0002-7260-2129
+  - url: https://openalex.org/A5022180345
+    source: https://openalex.org/A5022180345
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/affiliation
+    - https://schema.org/worksFor
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q1203864
+    value_label: Leibniz Institute DSMZ-German Collection of Microorganisms and Cell Cultures
+    value_type: https://schema.org/ResearchOrganization
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/familyName
+    label: family name
+    property: http://www.wikidata.org/entity/P734
+    value: http://www.wikidata.org/entity/Q83356960
+    value_label: Helmecke
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q2737173
+    value_label: Julia
+- id: https://orcid.org/0000-0002-7449-1266
+  names:
+  - name: Jerven Bolleman
+    source: http://www.wikidata.org/entity/Q56888653
+  same_as:
+  - http://www.wikidata.org/entity/Q56888653
+  websites:
+  - url: https://akademienl.social/@jerven
+    source: https://orcid.org/0000-0002-7449-1266
+  profiles:
+  - url: https://dblp.org/pid/64%2F8909
+    label: DBLP author ID
+    source: http://www.wikidata.org/entity/Q56888653
+  - url: https://fedirect.toolforge.org/?id=jerven%40akademienl.social
+    label: Mastodon address
+    source: http://www.wikidata.org/entity/Q56888653
+  - url: https://x.com/jervenbolleman
+    label: X (Twitter) username
+    source: http://www.wikidata.org/entity/Q56888653
+  - url: https://openalex.org/A5078283120
+    source: https://openalex.org/A5078283120
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q3152521
+    value_label: SIB Swiss Institute of Bioinformatics
+    value_type: https://schema.org/ResearchOrganization
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - datatype: http://www.w3.org/2001/XMLSchema#decimal
+    equivalent: []
+    label: social media followers
+    property: http://www.wikidata.org/entity/P8687
+    value: '149'
+  - datatype: http://www.w3.org/2001/XMLSchema#decimal
+    equivalent: []
+    label: social media followers
+    property: http://www.wikidata.org/entity/P8687
+    value: '150'
+- id: https://orcid.org/0000-0002-7683-0452
+  names:
+  - name: Yojana Gadiya
+    source: http://www.wikidata.org/entity/Q70206064
+  same_as:
+  - http://www.wikidata.org/entity/Q70206064
+  - https://github.com/YojanaGadiya
+  accounts:
+  - url: https://github.com/YojanaGadiya
+    via: Wikidata
+    source: http://www.wikidata.org/entity/Q70206064
+  websites:
+  - url: https://www.linkedin.com/in/yojana-gadiya-477739113/
+    source: https://orcid.org/0000-0002-7683-0452
+  - url: https://scholar.google.com.tw/citations?hl=de&user=LDgRXckAAAAJ
+    source: https://orcid.org/0000-0002-7683-0452
+  profiles:
+  - url: https://loop.frontiersin.org/people/1000457/overview
+    label: Loop ID
+    source: http://www.wikidata.org/entity/Q70206064
+  - url: https://loop.frontiersin.org/people/1026896/overview
+    label: Loop ID
+    source: http://www.wikidata.org/entity/Q70206064
+  - url: https://www.linkedin.com/in/yojana-gadiya-477739113/
+    label: LinkedIn personal profile ID
+    source: http://www.wikidata.org/entity/Q70206064
+  - url: https://orkg.org/resource/R71718
+    label: ORKG ID
+    source: http://www.wikidata.org/entity/Q70206064
+  - url: http://loop.frontiersin.org/people/1026896/overview?referrer=orcid_profile
+    label: Loop profile
+    source: https://orcid.org/0000-0002-7683-0452
+  - url: http://www.scopus.com/inward/authorDetails.url?authorID=57219744038&partnerID=MN8TOARS
+    label: Scopus Author ID
+    source: https://orcid.org/0000-0002-7683-0452
+  - url: https://www.webofscience.com/wos/author/record/JKI-2439-2023
+    label: ResearcherID
+    source: https://orcid.org/0000-0002-7683-0452
+  - url: https://sciprofiles.com/profile/1586617
+    label: SciProfiles
+    source: https://orcid.org/0000-0002-7683-0452
+  - url: https://openalex.org/A5004719764
+    source: https://openalex.org/A5004719764
+  statements:
+  - equivalent: []
+    label: academic thesis
+    property: http://www.wikidata.org/entity/P1026
+    value: http://www.wikidata.org/entity/Q141100515
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/affiliation
+    - https://schema.org/worksFor
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q161057
+    value_label: Fraunhofer Society
+  - equivalent:
+    - https://schema.org/affiliation
+    - https://schema.org/worksFor
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q94505592
+    value_label: Enveda
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q1451981
+    value_label: Fraunhofer Institute for Algorithms and Scientific Computing
+    value_type: https://schema.org/Organization
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q67200492
+    value_label: Fraunhofer SCAI - Department of Bioinformatics
+    value_type: https://schema.org/department
+  - equivalent: []
+    label: doctoral advisor
+    property: http://www.wikidata.org/entity/P184
+    value: http://www.wikidata.org/entity/Q30002209
+    value_label: Martin Hofmann-Apitius
+  - equivalent: []
+    label: doctoral advisor
+    property: http://www.wikidata.org/entity/P184
+    value: http://www.wikidata.org/entity/Q43273712
+    value_label: Diana Imhof
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - equivalent: []
+    label: on focus list of Wikimedia project
+    property: http://www.wikidata.org/entity/P5008
+    value: http://www.wikidata.org/entity/Q87748614
+    value_label: WikiProject COVID-19
+  - equivalent:
+    - https://schema.org/affiliation
+    - https://schema.org/alumniOf
+    label: educated at
+    property: http://www.wikidata.org/entity/P69
+    value: http://www.wikidata.org/entity/Q152171
+    value_label: University of Bonn
+  - equivalent:
+    - https://schema.org/affiliation
+    - https://schema.org/alumniOf
+    label: educated at
+    property: http://www.wikidata.org/entity/P69
+    value: http://www.wikidata.org/entity/Q5444268
+    value_label: Fergusson College
+- id: https://orcid.org/0000-0002-7699-8191
+  names:
+  - name: Martina Summer-Kutmon
+    source: http://www.wikidata.org/entity/Q27987764
+  same_as:
+  - http://www.wikidata.org/entity/Q27987764
+  - https://github.com/mkutmon
+  accounts:
+  - url: https://github.com/mkutmon
+    via: Wikidata
+    source: http://www.wikidata.org/entity/Q27987764
+  websites:
+  - url: https://www.maastrichtuniversity.nl/martina.kutmon
+    source: http://www.wikidata.org/entity/Q27987764
+  profiles:
+  - url: https://scholar.google.com/citations?user=w8Y7oXAAAAAJ
+    label: Google Scholar author ID
+    source: http://www.wikidata.org/entity/Q27987764
+  - url: https://x.com/mkutmon
+    label: X (Twitter) username
+    source: http://www.wikidata.org/entity/Q27987764
+  - url: https://figshare.com/authors/wd/547830
+    label: Figshare author ID
+    source: http://www.wikidata.org/entity/Q27987764
+  - url: https://dblp.org/pid/93%2F11250
+    label: DBLP author ID
+    source: http://www.wikidata.org/entity/Q27987764
+  - url: https://app.dimensions.ai/details/entities/publication/author/ur.01021325107.94
+    label: Dimensions author ID
+    source: http://www.wikidata.org/entity/Q27987764
+  - url: https://www.researchgate.net/profile/Martina_Kutmon
+    label: ResearchGate profile ID
+    source: http://www.wikidata.org/entity/Q27987764
+  - url: https://fedirect.toolforge.org/?id=mkutmon%40social.edu.nl
+    label: Mastodon address
+    source: http://www.wikidata.org/entity/Q27987764
+  - url: https://openalex.org/A5012726859
+    source: https://openalex.org/A5012726859
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1125292
+    value_label: postdoctoral researcher
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q1137652
+    value_label: Maastricht University
+    value_type: https://schema.org/Organization
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q19845644
+    value_label: Department of Bioinformatics - BiGCaT
+    value_type: https://schema.org/Organization
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q55449596
+    value_label: Maastricht Centre for Systems Biology
+  - equivalent:
+    - https://schema.org/image
+    label: image
+    property: http://www.wikidata.org/entity/P18
+    value: http://commons.wikimedia.org/wiki/Special:FilePath/Martina-SummerKutmon.png
+  - equivalent: []
+    label: doctoral advisor
+    property: http://www.wikidata.org/entity/P184
+    value: http://www.wikidata.org/entity/Q19845641
+    value_label: Chris T. Evelo
+  - equivalent: []
+    label: doctoral advisor
+    property: http://www.wikidata.org/entity/P184
+    value: http://www.wikidata.org/entity/Q19851164
+    value_label: Susan Coort
+  - equivalent: []
+    label: doctoral student
+    property: http://www.wikidata.org/entity/P185
+    value: http://www.wikidata.org/entity/Q28792013
+    value_label: Anwesha Bohler
+  - equivalent:
+    - https://schema.org/isPartOf
+    - https://schema.org/location
+    - https://schema.org/itemLocation
+    - https://schema.org/nationality
+    - https://schema.org/addressCountry
+    label: country of citizenship
+    property: http://www.wikidata.org/entity/P27
+    value: http://www.wikidata.org/entity/Q40
+    value_label: Austria
+    value_type: https://schema.org/Country
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - datatype: http://www.w3.org/2001/XMLSchema#dateTime
+    equivalent:
+    - https://schema.org/startTime
+    - https://schema.org/startDate
+    - https://schema.org/dateCreated
+    - https://schema.org/birthDate
+    label: date of birth
+    property: http://www.wikidata.org/entity/P569
+    value: '2000-01-01T00:00:00Z'
+  - equivalent:
+    - https://schema.org/alumniOf
+    - https://schema.org/affiliation
+    label: educated at
+    property: http://www.wikidata.org/entity/P69
+    value: http://www.wikidata.org/entity/Q1137652
+    value_label: Maastricht University
+    value_type: https://schema.org/Organization
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q4963627
+    value_label: Martina
+  - equivalent:
+    - https://schema.org/url
+    label: official website
+    property: http://www.wikidata.org/entity/P856
+    value: https://www.maastrichtuniversity.nl/martina.kutmon
+  - datatype: http://www.w3.org/2001/XMLSchema#decimal
+    equivalent: []
+    label: social media followers
+    property: http://www.wikidata.org/entity/P8687
+    value: '8'
+- id: https://orcid.org/0000-0002-7770-620X
+  names:
+  - name: Friederike Ehrhart
+    source: http://www.wikidata.org/entity/Q28025534
+  same_as:
+  - http://www.wikidata.org/entity/Q28025534
+  websites:
+  - url: https://www.maastrichtuniversity.nl/friederike.ehrhart
+    source: http://www.wikidata.org/entity/Q28025534
+  - url: https://www.linkedin.com/pub/friederike-ehrhart/74/181/41a?trk=pub-pbmap
+    source: https://orcid.org/0000-0002-7770-620X
+  - url: http://purl.org/np/RA1QiaPTiY41EfjjcPLMWu_LnRGAYxGAfqV9puFoklLWU
+    source: https://orcid.org/0000-0002-7770-620X
+  profiles:
+  - url: https://scholar.google.com/citations?user=RM_XJc4AAAAJ
+    label: Google Scholar author ID
+    source: http://www.wikidata.org/entity/Q28025534
+  - url: https://www.linkedin.com/in/friederike-ehrhart-41a18174/
+    label: LinkedIn personal profile ID
+    source: http://www.wikidata.org/entity/Q28025534
+  - url: https://app.dimensions.ai/details/entities/publication/author/ur.01010764054.61
+    label: Dimensions author ID
+    source: http://www.wikidata.org/entity/Q28025534
+  - url: https://meta.wikimedia.org/wiki/Special:CentralAuth/Fehrhart
+    label: Wikimedia username
+    source: http://www.wikidata.org/entity/Q28025534
+  - url: https://d-nb.info/gnd/1017123535
+    label: GND ID
+    source: http://www.wikidata.org/entity/Q28025534
+  - url: https://viaf.org/en/viaf/219093961
+    label: VIAF cluster ID
+    source: http://www.wikidata.org/entity/Q28025534
+  - url: https://www.google.com/search?kgmid=%2Fg%2F11ddyj3q8_
+    label: Google Knowledge Graph ID
+    source: http://www.wikidata.org/entity/Q28025534
+  - url: https://www.deutsche-digitale-bibliothek.de/person/gnd/1017123535
+    label: DDB person (GND) ID
+    source: http://www.wikidata.org/entity/Q28025534
+  - url: https://isni.org/isni/0000000139642412
+    label: ISNI
+    source: http://www.wikidata.org/entity/Q28025534
+  - url: https://openalex.org/A5137599660
+    source: https://openalex.org/A5137599660
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q104188750
+    value_label: life scientist
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q1137652
+    value_label: Maastricht University
+    value_type: https://schema.org/Organization
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q1167435
+    value_label: Fraunhofer Institute for Biomedical Engineering
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q2594321
+    value_label: Radboud University Medical Centre
+    value_type: https://schema.org/Hospital
+  - equivalent:
+    - https://schema.org/knowsLanguage
+    label: languages spoken, written or signed
+    property: http://www.wikidata.org/entity/P1412
+    value: http://www.wikidata.org/entity/Q1860
+    value_label: English
+    value_type: https://schema.org/Language
+  - equivalent:
+    - https://schema.org/knowsLanguage
+    label: languages spoken, written or signed
+    property: http://www.wikidata.org/entity/P1412
+    value: http://www.wikidata.org/entity/Q188
+    value_label: German
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q131790020
+    value_label: Department of Translational Genomics
+  - equivalent:
+    - https://schema.org/addressCountry
+    - https://schema.org/isPartOf
+    - https://schema.org/location
+    - https://schema.org/itemLocation
+    - https://schema.org/nationality
+    label: country of citizenship
+    property: http://www.wikidata.org/entity/P27
+    value: http://www.wikidata.org/entity/Q183
+    value_label: Germany
+    value_type: https://schema.org/Country
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - datatype: http://www.w3.org/2001/XMLSchema#dateTime
+    equivalent:
+    - https://schema.org/startTime
+    - https://schema.org/startDate
+    - https://schema.org/dateCreated
+    - https://schema.org/birthDate
+    label: date of birth
+    property: http://www.wikidata.org/entity/P569
+    value: '2000-01-01T00:00:00Z'
+  - equivalent:
+    - https://schema.org/alumniOf
+    - https://schema.org/affiliation
+    label: educated at
+    property: http://www.wikidata.org/entity/P69
+    value: http://www.wikidata.org/entity/Q101267538
+    value_label: Julius-Maximilians-Universität Würzburg Biozentrum
+  - equivalent:
+    - https://schema.org/alumniOf
+    - https://schema.org/affiliation
+    label: educated at
+    property: http://www.wikidata.org/entity/P69
+    value: http://www.wikidata.org/entity/Q1167435
+    value_label: Fraunhofer Institute for Biomedical Engineering
+  - equivalent:
+    - https://schema.org/familyName
+    - https://schema.org/name
+    label: family name
+    property: http://www.wikidata.org/entity/P734
+    value: http://www.wikidata.org/entity/Q37183532
+    value_label: Ehrhart
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q18352956
+    value_label: Friederike
+  - equivalent:
+    - https://schema.org/url
+    label: official website
+    property: http://www.wikidata.org/entity/P856
+    value: https://www.maastrichtuniversity.nl/friederike.ehrhart
+- id: https://orcid.org/0000-0002-8399-8990
+  names:
+  - name: Ammar Ammar
+    source: http://www.wikidata.org/entity/Q86442640
+  same_as:
+  - http://www.wikidata.org/entity/Q86442640
+  - https://github.com/ammar257ammar
+  accounts:
+  - url: https://github.com/ammar257ammar
+    via: Wikidata
+    source: http://www.wikidata.org/entity/Q86442640
+  profiles:
+  - url: https://x.com/ammar257ammar
+    label: X (Twitter) username
+    source: http://www.wikidata.org/entity/Q86442640
+  - url: https://scholar.google.com/citations?user=8ZmXyZcAAAAJ
+    label: Google Scholar author ID
+    source: http://www.wikidata.org/entity/Q86442640
+  - url: https://orkg.org/resource/R135901
+    label: ORKG ID
+    source: http://www.wikidata.org/entity/Q86442640
+  - url: https://openalex.org/A5066436740
+    source: https://openalex.org/A5066436740
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/affiliation
+    - https://schema.org/worksFor
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q1137652
+    value_label: Maastricht University
+    value_type: https://schema.org/Organization
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q19845644
+    value_label: Department of Bioinformatics - BiGCaT
+    value_type: https://schema.org/Organization
+  - equivalent: []
+    label: doctoral advisor
+    property: http://www.wikidata.org/entity/P184
+    value: http://www.wikidata.org/entity/Q19845641
+    value_label: Chris T. Evelo
+  - equivalent: []
+    label: doctoral advisor
+    property: http://www.wikidata.org/entity/P184
+    value: http://www.wikidata.org/entity/Q20895241
+    value_label: Egon Willighagen
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - equivalent:
+    - https://schema.org/affiliation
+    - https://schema.org/alumniOf
+    label: educated at
+    property: http://www.wikidata.org/entity/P69
+    value: http://www.wikidata.org/entity/Q1137652
+    value_label: Maastricht University
+    value_type: https://schema.org/Organization
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q20000567
+    value_label: Ammar
+- id: https://orcid.org/0000-0002-8607-9965
+  names:
+  - name: Haralambos Sarimveis
+    source: http://www.wikidata.org/entity/Q28541054
+  same_as:
+  - http://www.wikidata.org/entity/Q28541054
+  profiles:
+  - url: https://scholar.google.com/citations?user=cMSdr64AAAAJ
+    label: Google Scholar author ID
+    source: http://www.wikidata.org/entity/Q28541054
+  - url: https://dblp.org/pid/54%2F5645
+    label: DBLP author ID
+    source: http://www.wikidata.org/entity/Q28541054
+  - url: https://www.google.com/search?kgmid=%2Fg%2F11c31tfdsl
+    label: Google Knowledge Graph ID
+    source: http://www.wikidata.org/entity/Q28541054
+  - url: https://openalex.org/A5017246181
+    source: https://openalex.org/A5017246181
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q1640726
+    value_label: National Technical University of Athens
+    value_type: https://schema.org/Organization
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - datatype: http://www.w3.org/2001/XMLSchema#dateTime
+    equivalent:
+    - https://schema.org/startTime
+    - https://schema.org/startDate
+    - https://schema.org/dateCreated
+    - https://schema.org/birthDate
+    label: date of birth
+    property: http://www.wikidata.org/entity/P569
+    value: '2000-01-01T00:00:00Z'
+- id: https://orcid.org/0000-0002-9077-5664
+  names:
+  - name: Ulrike Wittig
+    source: http://www.wikidata.org/entity/Q57058833
+  same_as:
+  - http://www.wikidata.org/entity/Q57058833
+  websites:
+  - url: http://sabiork.h-its.org/
+    source: https://orcid.org/0000-0002-9077-5664
+  - url: https://fair-dom.org/
+    source: https://orcid.org/0000-0002-9077-5664
+  - url: https://www.h-its.org/
+    source: https://orcid.org/0000-0002-9077-5664
+  profiles:
+  - url: https://d-nb.info/gnd/1207479845
+    label: GND ID
+    source: http://www.wikidata.org/entity/Q57058833
+  - url: https://viaf.org/en/viaf/3049158630991223370001
+    label: VIAF cluster ID
+    source: http://www.wikidata.org/entity/Q57058833
+  - url: https://www.deutsche-digitale-bibliothek.de/person/gnd/1207479845
+    label: DDB person (GND) ID
+    source: http://www.wikidata.org/entity/Q57058833
+  - url: https://openalex.org/A5009119354
+    source: https://openalex.org/A5009119354
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q1555500
+    value_label: Heidelberg Institute for Theoretical Studies
+    value_type: https://schema.org/ResearchOrganization
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q324206
+    value_label: University Hospital Heidelberg
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - equivalent:
+    - https://schema.org/alumniOf
+    - https://schema.org/affiliation
+    label: educated at
+    property: http://www.wikidata.org/entity/P69
+    value: http://www.wikidata.org/entity/Q151510
+    value_label: Heidelberg University
+  - equivalent:
+    - https://schema.org/alumniOf
+    - https://schema.org/affiliation
+    label: educated at
+    property: http://www.wikidata.org/entity/P69
+    value: http://www.wikidata.org/entity/Q154804
+    value_label: Leipzig University
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/familyName
+    label: family name
+    property: http://www.wikidata.org/entity/P734
+    value: http://www.wikidata.org/entity/Q21507845
+    value_label: Wittig
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q18924997
+    value_label: Ulrike
+- id: https://orcid.org/0000-0002-9209-1266
+  names:
+  - name: Lucy Sinke
+    source: http://www.wikidata.org/entity/Q127038569
+  same_as:
+  - http://www.wikidata.org/entity/Q127038569
+  profiles:
+  - url: https://www.webofscience.com/wos/author/record/NQF-4558-2025
+    label: ResearcherID
+    source: https://orcid.org/0000-0002-9209-1266
+  - url: http://www.scopus.com/inward/authorDetails.url?authorID=57995927200&partnerID=MN8TOARS
+    label: Scopus Author ID
+    source: https://orcid.org/0000-0002-9209-1266
+  - url: https://openalex.org/A5051819631
+    source: https://openalex.org/A5051819631
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q156598
+    value_label: Leiden University
+    value_type: https://schema.org/Organization
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q13365715
+    value_label: Lucy
+- id: https://orcid.org/0000-0002-9454-4783
+  names:
+  - name: Laurent Winckers
+    source: http://www.wikidata.org/entity/Q92186214
+  same_as:
+  - http://www.wikidata.org/entity/Q92186214
+  websites:
+  - url: https://www.linkedin.com/in/laurent-winckers/
+    source: https://orcid.org/0000-0002-9454-4783
+  profiles:
+  - url: https://orkg.org/resource/R135896
+    label: ORKG ID
+    source: http://www.wikidata.org/entity/Q92186214
+  - url: https://openalex.org/A5060151962
+    source: https://openalex.org/A5060151962
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/affiliation
+    - https://schema.org/worksFor
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q1137652
+    value_label: Maastricht University
+    value_type: https://schema.org/Organization
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q19845644
+    value_label: Department of Bioinformatics - BiGCaT
+    value_type: https://schema.org/Organization
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q16763977
+    value_label: Laurent
+- id: https://orcid.org/0000-0003-0329-1977
+  names:
+  - name: Ozan Çınar
+    source: http://www.wikidata.org/entity/Q89571039
+  same_as:
+  - http://www.wikidata.org/entity/Q89571039
+  - https://github.com/ozancinar
+  accounts:
+  - url: https://github.com/ozancinar
+    via: Wikidata
+    source: http://www.wikidata.org/entity/Q89571039
+  profiles:
+  - url: https://zbmath.org/authors/?q=ai:cinar.ozan
+    label: zbMATH author ID
+    source: http://www.wikidata.org/entity/Q89571039
+  - url: https://scholar.google.com/citations?user=8ju6O2AAAAAJ
+    label: Google Scholar author ID
+    source: http://www.wikidata.org/entity/Q89571039
+  - url: https://d-nb.info/gnd/1156792371
+    label: GND ID
+    source: http://www.wikidata.org/entity/Q89571039
+  - url: https://app.dimensions.ai/details/entities/publication/author/ur.011306654323.43
+    label: Dimensions author ID
+    source: http://www.wikidata.org/entity/Q89571039
+  - url: https://viaf.org/en/viaf/6017152502937210800006
+    label: VIAF cluster ID
+    source: http://www.wikidata.org/entity/Q89571039
+  - url: https://openalex.org/A5022720376
+    source: https://openalex.org/A5022720376
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1622272
+    value_label: university teacher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q3400985
+    value_label: academic
+  - equivalent:
+    - https://schema.org/affiliation
+    - https://schema.org/worksFor
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q1137652
+    value_label: Maastricht University
+    value_type: https://schema.org/Organization
+  - equivalent:
+    - https://schema.org/affiliation
+    - https://schema.org/worksFor
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q756126
+    value_label: Middle East Technical University
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q131790020
+    value_label: Department of Translational Genomics
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q19845644
+    value_label: Department of Bioinformatics - BiGCaT
+    value_type: https://schema.org/Organization
+  - datatype: http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
+    equivalent:
+    - https://schema.org/name
+    label: name in native language
+    language: tr
+    property: http://www.wikidata.org/entity/P1559
+    value: Ozan Çınar
+  - equivalent:
+    - https://schema.org/isPartOf
+    - https://schema.org/location
+    - https://schema.org/itemLocation
+    - https://schema.org/nationality
+    - https://schema.org/addressCountry
+    label: country of citizenship
+    property: http://www.wikidata.org/entity/P27
+    value: http://www.wikidata.org/entity/Q43
+    value_label: Turkey
+    value_type: https://schema.org/Country
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - datatype: http://www.w3.org/2001/XMLSchema#dateTime
+    equivalent:
+    - https://schema.org/startTime
+    - https://schema.org/startDate
+    - https://schema.org/dateCreated
+    - https://schema.org/birthDate
+    label: date of birth
+    property: http://www.wikidata.org/entity/P569
+    value: '1986-01-01T00:00:00Z'
+  - equivalent: []
+    label: maintained by WikiProject
+    property: http://www.wikidata.org/entity/P6104
+    value: http://www.wikidata.org/entity/Q8487137
+    value_label: WikiProject Mathematics
+  - equivalent:
+    - https://schema.org/affiliation
+    - https://schema.org/alumniOf
+    label: educated at
+    property: http://www.wikidata.org/entity/P69
+    value: http://www.wikidata.org/entity/Q756126
+    value_label: Middle East Technical University
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/familyName
+    label: family name
+    property: http://www.wikidata.org/entity/P734
+    value: http://www.wikidata.org/entity/Q14702638
+    value_label: Çınar
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q1536309
+    value_label: Ozan
+- id: https://orcid.org/0000-0003-1062-5576
+  names:
+  - name: Gerhard A Burger
+    source: http://www.wikidata.org/entity/Q96189622
+  same_as:
+  - http://www.wikidata.org/entity/Q96189622
+  - https://github.com/burgerga
+  accounts:
+  - url: https://github.com/burgerga
+    via: declared on ORCID record
+    source: https://orcid.org/0000-0003-1062-5576
+  websites:
+  - url: https://nanodash.knowledgepixels.com/user?1&id=https://orcid.org/0000-0003-1062-5576
+    source: https://orcid.org/0000-0003-1062-5576
+  - url: https://rescognito.com/0000-0003-1062-5576
+    source: https://orcid.org/0000-0003-1062-5576
+  - url: https://openalex.org/authors/A5046703960
+    source: https://orcid.org/0000-0003-1062-5576
+  profiles:
+  - url: https://loop.frontiersin.org/people/442508/overview
+    label: Loop ID
+    source: http://www.wikidata.org/entity/Q96189622
+  - url: http://loop.frontiersin.org/people/442508/overview?referrer=orcid_profile
+    label: Loop profile
+    source: https://orcid.org/0000-0003-1062-5576
+  - url: https://www.webofscience.com/wos/author/record/JSK-2475-2023
+    label: ResearcherID
+    source: https://orcid.org/0000-0003-1062-5576
+  - url: https://openalex.org/A5046703960
+    source: https://openalex.org/A5046703960
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/familyName
+    label: family name
+    property: http://www.wikidata.org/entity/P734
+    value: http://www.wikidata.org/entity/Q1014886
+    value_label: Burger
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q7996169
+    value_label: Gerhard
+- id: https://orcid.org/0000-0003-1224-9690
+  names:
+  - name: Susan Coort
+    source: http://www.wikidata.org/entity/Q19851164
+  same_as:
+  - http://www.wikidata.org/entity/Q19851164
+  websites:
+  - url: https://cris.maastrichtuniversity.nl/en/persons/1a524433-c2a5-4a11-ac58-45b5b6d426dd
+    source: https://orcid.org/0000-0003-1224-9690
+  profiles:
+  - url: https://x.com/SusanCoort
+    label: X (Twitter) username
+    source: http://www.wikidata.org/entity/Q19851164
+  - url: https://scholar.google.com/citations?user=XyHJkkMAAAAJ
+    label: Google Scholar author ID
+    source: http://www.wikidata.org/entity/Q19851164
+  - url: https://dblp.org/pid/01%2F7107
+    label: DBLP author ID
+    source: http://www.wikidata.org/entity/Q19851164
+  - url: https://app.dimensions.ai/details/entities/publication/author/ur.01252344370.39
+    label: Dimensions author ID
+    source: http://www.wikidata.org/entity/Q19851164
+  - url: https://d-nb.info/gnd/120998556X
+    label: GND ID
+    source: http://www.wikidata.org/entity/Q19851164
+  - url: https://viaf.org/en/viaf/6974158982607256190006
+    label: VIAF cluster ID
+    source: http://www.wikidata.org/entity/Q19851164
+  - url: https://fedirect.toolforge.org/?id=susancoort%40akademienl.social
+    label: Mastodon address
+    source: http://www.wikidata.org/entity/Q19851164
+  - url: https://www.deutsche-digitale-bibliothek.de/person/gnd/120998556X
+    label: DDB person (GND) ID
+    source: http://www.wikidata.org/entity/Q19851164
+  - url: https://openalex.org/A5088503440
+    source: https://openalex.org/A5088503440
+  statements:
+  - equivalent: []
+    label: academic thesis
+    property: http://www.wikidata.org/entity/P1026
+    value: http://www.wikidata.org/entity/Q43747132
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q482980
+    value_label: author
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q60739955
+    value_label: healthcare scientist
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q1137652
+    value_label: Maastricht University
+    value_type: https://schema.org/Organization
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q131790020
+    value_label: Department of Translational Genomics
+  - equivalent: []
+    label: doctoral advisor
+    property: http://www.wikidata.org/entity/P184
+    value: http://www.wikidata.org/entity/Q43747758
+    value_label: Jan F.C. Glatz
+  - equivalent: []
+    label: doctoral student
+    property: http://www.wikidata.org/entity/P185
+    value: http://www.wikidata.org/entity/Q19845625
+    value_label: Andra Waagmeester
+  - equivalent: []
+    label: doctoral student
+    property: http://www.wikidata.org/entity/P185
+    value: http://www.wikidata.org/entity/Q27987764
+    value_label: Martina Summer-Kutmon
+  - equivalent: []
+    label: doctoral student
+    property: http://www.wikidata.org/entity/P185
+    value: http://www.wikidata.org/entity/Q40560523
+    value_label: Elisa Cirillo
+  - equivalent:
+    - https://schema.org/isPartOf
+    - https://schema.org/location
+    - https://schema.org/itemLocation
+    - https://schema.org/nationality
+    - https://schema.org/addressCountry
+    label: country of citizenship
+    property: http://www.wikidata.org/entity/P27
+    value: http://www.wikidata.org/entity/Q29999
+    value_label: Kingdom of the Netherlands
+    value_type: https://schema.org/Country
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - equivalent: []
+    label: on focus list of Wikimedia project
+    property: http://www.wikidata.org/entity/P5008
+    value: http://www.wikidata.org/entity/Q60687720
+    value_label: gender gap on Dutch Wikipedia
+  - datatype: http://www.w3.org/2001/XMLSchema#dateTime
+    equivalent:
+    - https://schema.org/startTime
+    - https://schema.org/startDate
+    - https://schema.org/dateCreated
+    - https://schema.org/birthDate
+    label: date of birth
+    property: http://www.wikidata.org/entity/P569
+    value: '2000-01-01T00:00:00Z'
+  - equivalent:
+    - https://schema.org/familyName
+    - https://schema.org/name
+    label: family name
+    property: http://www.wikidata.org/entity/P734
+    value: http://www.wikidata.org/entity/Q19851075
+    value_label: Coort
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q14936243
+    value_label: Susan
+- id: https://orcid.org/0000-0003-1661-6304
+  names:
+  - name: Elisson N. Lopes
+    source: http://www.wikidata.org/entity/Q114718357
+  same_as:
+  - http://www.wikidata.org/entity/Q114718357
+  websites:
+  - url: https://fondufemittendorflab.vai.org/
+    source: https://orcid.org/0000-0003-1661-6304
+  profiles:
+  - url: http://www.scopus.com/inward/authorDetails.url?authorID=57221544595&partnerID=MN8TOARS
+    label: Scopus Author ID
+    source: https://orcid.org/0000-0003-1661-6304
+  - url: https://openalex.org/A5041567966
+    source: https://openalex.org/A5041567966
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+- id: https://orcid.org/0000-0003-1781-5508
+  names:
+  - name: Hailiang Mei
+    source: http://www.wikidata.org/entity/Q56510144
+  same_as:
+  - http://www.wikidata.org/entity/Q56510144
+  profiles:
+  - url: https://www.scopus.com/authid/detail.uri?authorId=21743037300
+    label: Scopus author ID
+    source: http://www.wikidata.org/entity/Q56510144
+  - url: http://www.scopus.com/inward/authorDetails.url?authorID=21743037300&partnerID=MN8TOARS
+    label: Scopus Author ID
+    source: https://orcid.org/0000-0003-1781-5508
+  - url: https://openalex.org/A5124948722
+    source: https://openalex.org/A5124948722
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+- id: https://orcid.org/0000-0003-2102-3626
+  names:
+  - name: Theo M C M de Kok
+    source: http://www.wikidata.org/entity/Q55453416
+  same_as:
+  - http://www.wikidata.org/entity/Q55453416
+  websites:
+  - url: https://www.maastrichtuniversity.nl/tmcm-de-kok
+    source: http://www.wikidata.org/entity/Q55453416
+  - url: https://cris.maastrichtuniversity.nl/en/persons/4e16873b-8cc7-4bb9-bc83-035bd1e205cf
+    source: https://orcid.org/0000-0003-2102-3626
+  profiles:
+  - url: https://www.scopus.com/authid/detail.uri?authorId=7003266865
+    label: Scopus author ID
+    source: http://www.wikidata.org/entity/Q55453416
+  - url: https://www.linkedin.com/in/theo-de-kok-b235556/
+    label: LinkedIn personal profile ID
+    source: http://www.wikidata.org/entity/Q55453416
+  - url: https://en.wikipedia.org/wiki/Digital_Author_Identifier
+    label: Digital Author ID (DAI)
+    source: https://orcid.org/0000-0003-2102-3626
+  - url: http://www.scopus.com/authid/detail.url?authorId=7003266865
+    label: Scopus Author ID
+    source: https://orcid.org/0000-0003-2102-3626
+  - url: https://openalex.org/A5048229400
+    source: https://openalex.org/A5048229400
+  statements:
+  - equivalent: []
+    label: academic thesis
+    property: http://www.wikidata.org/entity/P1026
+    value: http://www.wikidata.org/entity/Q127223057
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1622272
+    value_label: university teacher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q1137652
+    value_label: Maastricht University
+    value_type: https://schema.org/Organization
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q131790020
+    value_label: Department of Translational Genomics
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q55449596
+    value_label: Maastricht Centre for Systems Biology
+  - equivalent: []
+    label: doctoral advisor
+    property: http://www.wikidata.org/entity/P184
+    value: http://www.wikidata.org/entity/Q28747176
+    value_label: Jos Kleinjans
+  - equivalent: []
+    label: doctoral student
+    property: http://www.wikidata.org/entity/P185
+    value: http://www.wikidata.org/entity/Q88153803
+    value_label: Julian Krauskopf
+  - equivalent:
+    - https://schema.org/location
+    - https://schema.org/itemLocation
+    - https://schema.org/birthPlace
+    label: place of birth
+    property: http://www.wikidata.org/entity/P19
+    value: http://www.wikidata.org/entity/Q4681121
+    value_label: Goirle
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - datatype: http://www.w3.org/2001/XMLSchema#dateTime
+    equivalent:
+    - https://schema.org/startTime
+    - https://schema.org/startDate
+    - https://schema.org/dateCreated
+    - https://schema.org/birthDate
+    label: date of birth
+    property: http://www.wikidata.org/entity/P569
+    value: '1963-02-21T00:00:00Z'
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/familyName
+    label: family name
+    property: http://www.wikidata.org/entity/P734
+    value: http://www.wikidata.org/entity/Q16871500
+    value_label: Kok
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q7062902
+    value_label: Theo
+  - equivalent:
+    - https://schema.org/url
+    label: official website
+    property: http://www.wikidata.org/entity/P856
+    value: https://www.maastrichtuniversity.nl/tmcm-de-kok
+- id: https://orcid.org/0000-0003-2230-0840
+  names:
+  - name: Marvin Martens
+    source: http://www.wikidata.org/entity/Q42369611
+  same_as:
+  - http://www.wikidata.org/entity/Q42369611
+  websites:
+  - url: https://cris.maastrichtuniversity.nl/en/persons/a7490e9a-a51d-48a6-ad0f-4e295a3fd29e
+    source: http://www.wikidata.org/entity/Q42369611
+  - url: https://cris.maastrichtuniversity.nl/en/persons/a7490e9a-a51d-48a6-ad0f-4e295a3fd29e
+    source: https://orcid.org/0000-0003-2230-0840
+  profiles:
+  - url: https://web.archive.org/web/*/https://www.mendeley.com/profiles/marvin-martens/
+    label: Mendeley person ID
+    source: http://www.wikidata.org/entity/Q42369611
+  - url: https://loop.frontiersin.org/people/542384/overview
+    label: Loop ID
+    source: http://www.wikidata.org/entity/Q42369611
+  - url: https://scholar.google.com/citations?user=GvOHiicAAAAJ
+    label: Google Scholar author ID
+    source: http://www.wikidata.org/entity/Q42369611
+  - url: https://x.com/mmarvinm2
+    label: X (Twitter) username
+    source: http://www.wikidata.org/entity/Q42369611
+  - url: https://fedirect.toolforge.org/?id=Marvin%40social.edu.nl
+    label: Mastodon address
+    source: http://www.wikidata.org/entity/Q42369611
+  - url: https://www.google.com/search?kgmid=%2Fg%2F11gcl1c4cs
+    label: Google Knowledge Graph ID
+    source: http://www.wikidata.org/entity/Q42369611
+  - url: http://loop.frontiersin.org/people/542384/overview?referrer=orcid_profile
+    label: Loop profile
+    source: https://orcid.org/0000-0003-2230-0840
+  - url: http://www.scopus.com/authid/detail.url?authorId=57196088202
+    label: Scopus Author ID
+    source: https://orcid.org/0000-0003-2230-0840
+  - url: https://openalex.org/A5140831444
+    source: https://openalex.org/A5140831444
+  statements:
+  - equivalent: []
+    label: academic thesis
+    property: http://www.wikidata.org/entity/P1026
+    value: http://www.wikidata.org/entity/Q124381797
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q1137652
+    value_label: Maastricht University
+    value_type: https://schema.org/Organization
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q131790020
+    value_label: Department of Translational Genomics
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q19845644
+    value_label: Department of Bioinformatics - BiGCaT
+    value_type: https://schema.org/Organization
+  - equivalent: []
+    label: doctoral advisor
+    property: http://www.wikidata.org/entity/P184
+    value: http://www.wikidata.org/entity/Q19845641
+    value_label: Chris T. Evelo
+  - equivalent: []
+    label: doctoral advisor
+    property: http://www.wikidata.org/entity/P184
+    value: http://www.wikidata.org/entity/Q20895241
+    value_label: Egon Willighagen
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - equivalent:
+    - https://schema.org/alumniOf
+    - https://schema.org/affiliation
+    label: educated at
+    property: http://www.wikidata.org/entity/P69
+    value: http://www.wikidata.org/entity/Q1137652
+    value_label: Maastricht University
+    value_type: https://schema.org/Organization
+  - equivalent:
+    - https://schema.org/alumniOf
+    - https://schema.org/affiliation
+    label: educated at
+    property: http://www.wikidata.org/entity/P69
+    value: http://www.wikidata.org/entity/Q1144549
+    value_label: Pierre and Marie Curie University
+  - equivalent:
+    - https://schema.org/alumniOf
+    - https://schema.org/affiliation
+    label: educated at
+    property: http://www.wikidata.org/entity/P69
+    value: http://www.wikidata.org/entity/Q2668892
+    value_label: transnationale Universiteit Limburg
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/familyName
+    label: family name
+    property: http://www.wikidata.org/entity/P734
+    value: http://www.wikidata.org/entity/Q16876487
+    value_label: Martens
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q16279095
+    value_label: Marvin
+  - equivalent:
+    - https://schema.org/url
+    label: official website
+    property: http://www.wikidata.org/entity/P856
+    value: https://cris.maastrichtuniversity.nl/en/persons/a7490e9a-a51d-48a6-ad0f-4e295a3fd29e
+  - datatype: http://www.w3.org/2001/XMLSchema#decimal
+    equivalent: []
+    label: social media followers
+    property: http://www.wikidata.org/entity/P8687
+    value: '4'
+  - datatype: http://www.w3.org/2001/XMLSchema#decimal
+    equivalent: []
+    label: social media followers
+    property: http://www.wikidata.org/entity/P8687
+    value: '5'
+  - datatype: http://www.w3.org/2001/XMLSchema#decimal
+    equivalent: []
+    label: social media followers
+    property: http://www.wikidata.org/entity/P8687
+    value: '6'
+- id: https://orcid.org/0000-0003-2391-0384
+  names:
+  - name: Toshiaki Katayama
+    source: http://www.wikidata.org/entity/Q58484212
+  same_as:
+  - http://www.wikidata.org/entity/Q58484212
+  profiles:
+  - url: https://researchmap.jp/toshiakikatayama
+    label: Researchmap ID
+    source: http://www.wikidata.org/entity/Q58484212
+  - url: https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=201801000137642717
+    label: J-GLOBAL ID
+    source: http://www.wikidata.org/entity/Q58484212
+  - url: https://app.dimensions.ai/details/entities/publication/author/ur.01237652002.94
+    label: Dimensions author ID
+    source: http://www.wikidata.org/entity/Q58484212
+  - url: https://dblp.org/pid/31%2F1739
+    label: DBLP author ID
+    source: http://www.wikidata.org/entity/Q58484212
+  - url: https://nrid.nii.ac.jp/nrid/1000060396869/
+    label: Researcher Name Resolver ID
+    source: https://orcid.org/0000-0003-2391-0384
+  - url: https://openalex.org/A5031153467
+    source: https://openalex.org/A5031153467
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/affiliation
+    - https://schema.org/worksFor
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q11346475
+    value_label: Database Division for Life Science
+    value_type: https://schema.org/ResearchOrganization
+  - equivalent:
+    - https://schema.org/isPartOf
+    - https://schema.org/location
+    - https://schema.org/itemLocation
+    - https://schema.org/nationality
+    - https://schema.org/addressCountry
+    label: country of citizenship
+    property: http://www.wikidata.org/entity/P27
+    value: http://www.wikidata.org/entity/Q17
+    value_label: Japan
+    value_type: https://schema.org/Country
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - equivalent:
+    - https://schema.org/affiliation
+    - https://schema.org/alumniOf
+    label: educated at
+    property: http://www.wikidata.org/entity/P69
+    value: http://www.wikidata.org/entity/Q336264
+    value_label: Kyoto University
+- id: https://orcid.org/0000-0003-2760-7702
+  names:
+  - name: Clemens Wittwehr
+    source: http://www.wikidata.org/entity/Q56459199
+  same_as:
+  - http://www.wikidata.org/entity/Q56459199
+  profiles:
+  - url: https://www.scopus.com/authid/detail.uri?authorId=37073939200
+    label: Scopus author ID
+    source: http://www.wikidata.org/entity/Q56459199
+  - url: https://app.dimensions.ai/details/entities/publication/author/ur.0700115266.57
+    label: Dimensions author ID
+    source: http://www.wikidata.org/entity/Q56459199
+  - url: https://dblp.org/pid/162%2F0566
+    label: DBLP author ID
+    source: http://www.wikidata.org/entity/Q56459199
+  - url: http://www.scopus.com/inward/authorDetails.url?authorID=37073939200&partnerID=MN8TOARS
+    label: Scopus Author ID
+    source: https://orcid.org/0000-0003-2760-7702
+  - url: http://loop.frontiersin.org/people/1326912/overview?referrer=orcid_profile
+    label: Loop profile
+    source: https://orcid.org/0000-0003-2760-7702
+  - url: https://openalex.org/A5033016821
+    source: https://openalex.org/A5033016821
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q1500915
+    value_label: Joint Research Centre
+    value_type: https://schema.org/GovernmentOrganization
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q16671839
+    value_label: Fourth Framework Programme
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q50035077
+    value_label: Joint Research Centre, Ispra
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+- id: https://orcid.org/0000-0003-2878-4049
+  names:
+  - name: Aishwarya Iyer
+    source: http://www.wikidata.org/entity/Q123631021
+  same_as:
+  - http://www.wikidata.org/entity/Q123631021
+  - https://github.com/ashviyer
+  accounts:
+  - url: https://github.com/ashviyer
+    via: declared on ORCID record
+    source: https://orcid.org/0000-0003-2878-4049
+  websites:
+  - url: https://www.linkedin.com/in/aishwarya-iyer-5a7545173/
+    source: https://orcid.org/0000-0003-2878-4049
+  profiles:
+  - url: https://openalex.org/A5049490324
+    source: https://openalex.org/A5049490324
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q19845644
+    value_label: Department of Bioinformatics - BiGCaT
+    value_type: https://schema.org/Organization
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+- id: https://orcid.org/0000-0003-2940-8926
+  names:
+  - name: Ayushi Agrawal
+    source: http://www.wikidata.org/entity/Q123631063
+  same_as:
+  - http://www.wikidata.org/entity/Q123631063
+  - https://github.com/ayushi-agrawal-gladstone
+  accounts:
+  - url: https://github.com/ayushi-agrawal-gladstone
+    via: declared on ORCID record
+    source: https://orcid.org/0000-0003-2940-8926
+  profiles:
+  - url: https://sciprofiles.com/profile/2751341
+    label: SciProfiles
+    source: https://orcid.org/0000-0003-2940-8926
+  - url: https://openalex.org/A5045654542
+    source: https://openalex.org/A5045654542
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+- id: https://orcid.org/0000-0003-3213-4495
+  names:
+  - name: Ana Claudia Sima
+    source: http://www.wikidata.org/entity/Q118146531
+  same_as:
+  - http://www.wikidata.org/entity/Q118146531
+  websites:
+  - url: http://www.linkedin.com/in/ana-claudia-sima
+    source: https://orcid.org/0000-0003-3213-4495
+  profiles:
+  - url: http://www.scopus.com/inward/authorDetails.url?authorID=57209820944&partnerID=MN8TOARS
+    label: Scopus Author ID
+    source: https://orcid.org/0000-0003-3213-4495
+  - url: https://openalex.org/A5032183252
+    source: https://openalex.org/A5032183252
+  statements:
+  - equivalent: []
+    label: field of work
+    property: http://www.wikidata.org/entity/P101
+    value: http://www.wikidata.org/entity/Q1891170
+    value_label: semantic search
+  - equivalent: []
+    label: field of work
+    property: http://www.wikidata.org/entity/P101
+    value: http://www.wikidata.org/entity/Q33002955
+    value_label: knowledge graph
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q19845668
+    value_label: CALIPHO
+    value_type: https://schema.org/Organization
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+- id: https://orcid.org/0000-0003-4250-4584
+  names:
+  - name: Iseult Lynch
+    source: http://www.wikidata.org/entity/Q28651697
+  same_as:
+  - http://www.wikidata.org/entity/Q28651697
+  websites:
+  - url: http://www.birmingham.ac.uk/schools/gees/people/profile.aspx?ReferenceId=56477
+    source: http://www.wikidata.org/entity/Q28651697
+  - url: http://www.birmingham.ac.uk/schools/gees/people/profile.aspx?ReferenceId=56477
+    source: https://orcid.org/0000-0003-4250-4584
+  - url: https://www.linkedin.com/in/iseult-lynch-b5856910/
+    source: https://orcid.org/0000-0003-4250-4584
+  - url: https://twitter.com/iseult5
+    source: https://orcid.org/0000-0003-4250-4584
+  - url: http://www.nanocommons.eu
+    source: https://orcid.org/0000-0003-4250-4584
+  - url: http://purl.org/np/RASUKBzz2S0W_dJMo3f_l0svPATz6M9zdpGuTXpYBSyMA
+    source: https://orcid.org/0000-0003-4250-4584
+  profiles:
+  - url: https://scholar.google.com/citations?user=4JfAAjsAAAAJ
+    label: Google Scholar author ID
+    source: http://www.wikidata.org/entity/Q28651697
+  - url: https://x.com/iseult5
+    label: X (Twitter) username
+    source: http://www.wikidata.org/entity/Q28651697
+  - url: https://www.scopus.com/authid/detail.uri?authorId=6603538848
+    label: Scopus author ID
+    source: http://www.wikidata.org/entity/Q28651697
+  - url: https://www.webofscience.com/wos/author/record/I-3915-2014
+    label: Web of Science ResearcherID
+    source: http://www.wikidata.org/entity/Q28651697
+  - url: https://loop.frontiersin.org/people/126618/overview
+    label: Loop ID
+    source: http://www.wikidata.org/entity/Q28651697
+  - url: https://plus-legacy.cobiss.net/cobiss/si/sl/conor/266887011
+    label: CONOR.SI ID
+    source: http://www.wikidata.org/entity/Q28651697
+  - url: https://publons.com/researcher/435900/
+    label: Publons author ID
+    source: http://www.wikidata.org/entity/Q28651697
+  - url: https://www.google.com/search?kgmid=%2Fg%2F11dxhflvys
+    label: Google Knowledge Graph ID
+    source: http://www.wikidata.org/entity/Q28651697
+  - url: https://app.dimensions.ai/details/entities/publication/author/ur.01363165122.23
+    label: Dimensions author ID
+    source: http://www.wikidata.org/entity/Q28651697
+  - url: https://www.linkedin.com/in/iseult-lynch-b5856910/
+    label: LinkedIn personal profile ID
+    source: http://www.wikidata.org/entity/Q28651697
+  - url: https://orkg.org/resource/R135898
+    label: ORKG ID
+    source: http://www.wikidata.org/entity/Q28651697
+  - url: https://id.loc.gov/authorities/no2024018398
+    label: Library of Congress Authorities ID
+    source: http://www.wikidata.org/entity/Q28651697
+  - url: https://viaf.org/en/viaf/8190170939451115660000
+    label: VIAF cluster ID
+    source: http://www.wikidata.org/entity/Q28651697
+  - url: http://www.scopus.com/inward/authorDetails.url?authorID=6603538848&partnerID=MN8TOARS
+    label: Scopus Author ID
+    source: https://orcid.org/0000-0003-4250-4584
+  - url: http://www.researcherid.com/rid/I-3915-2014
+    label: ResearcherID
+    source: https://orcid.org/0000-0003-4250-4584
+  - url: http://loop.frontiersin.org/people/126618/overview?referrer=orcid_profile
+    label: Loop profile
+    source: https://orcid.org/0000-0003-4250-4584
+  - url: https://sciprofiles.com/profile/370970
+    label: SciProfiles
+    source: https://orcid.org/0000-0003-4250-4584
+  - url: http://www.cienciavitae.pt//6D1A-2192-774D
+    label: Ciência ID
+    source: https://orcid.org/0000-0003-4250-4584
+  - url: http://www.scopus.com/authid/detail.url?authorId=6603538848
+    label: Scopus Author ID
+    source: https://orcid.org/0000-0003-4250-4584
+  - url: https://openalex.org/A5139914806
+    source: https://openalex.org/A5139914806
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q218506
+    value_label: Lund University
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q223429
+    value_label: University of Birmingham
+    value_type: https://schema.org/EducationalOrganization
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q223429
+    value_label: University of Birmingham
+    value_type: https://schema.org/EducationalOrganization
+  - equivalent:
+    - https://schema.org/award
+    label: award received
+    property: http://www.wikidata.org/entity/P166
+    value: http://www.wikidata.org/entity/Q18340034
+    value_label: John Jeyes Award
+  - equivalent:
+    - https://schema.org/image
+    label: image
+    property: http://www.wikidata.org/entity/P18
+    value: http://commons.wikimedia.org/wiki/Special:FilePath/Iseult%20Lynch%20Jan%202020.jpg
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - datatype: http://www.w3.org/2001/XMLSchema#string
+    equivalent: []
+    label: Commons category
+    property: http://www.wikidata.org/entity/P373
+    value: Iseult Lynch
+  - datatype: http://www.w3.org/2001/XMLSchema#dateTime
+    equivalent:
+    - https://schema.org/startTime
+    - https://schema.org/startDate
+    - https://schema.org/dateCreated
+    - https://schema.org/birthDate
+    label: date of birth
+    property: http://www.wikidata.org/entity/P569
+    value: '2000-01-01T00:00:00Z'
+  - equivalent:
+    - https://schema.org/alumniOf
+    - https://schema.org/affiliation
+    label: educated at
+    property: http://www.wikidata.org/entity/P69
+    value: http://www.wikidata.org/entity/Q1068258
+    value_label: University College Dublin
+    value_type: https://schema.org/Organization
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/familyName
+    label: family name
+    property: http://www.wikidata.org/entity/P734
+    value: http://www.wikidata.org/entity/Q945123
+    value_label: Lynch
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q91802800
+    value_label: Iseult
+  - equivalent:
+    - https://schema.org/url
+    label: official website
+    property: http://www.wikidata.org/entity/P856
+    value: http://www.birmingham.ac.uk/schools/gees/people/profile.aspx?ReferenceId=56477
+  - datatype: http://www.w3.org/2001/XMLSchema#decimal
+    equivalent: []
+    label: social media followers
+    property: http://www.wikidata.org/entity/P8687
+    value: '1761'
+- id: https://orcid.org/0009-0002-4110-241X
+  websites:
+  - url: https://secantox.weebly.com/people.html
+    source: https://orcid.org/0009-0002-4110-241X
+  profiles:
+  - url: https://openalex.org/A5102953632
+    source: https://openalex.org/A5102953632
+- id: https://orcid.org/0009-0002-7664-0058
+- id: https://orcid.org/0009-0003-1183-4991
+  profiles:
+  - url: https://openalex.org/A5102742045
+    source: https://openalex.org/A5102742045
+- id: https://orcid.org/0009-0005-3680-0645
+  names:
+  - name: Jente Houweling
+    source: http://www.wikidata.org/entity/Q124399961
+  same_as:
+  - http://www.wikidata.org/entity/Q124399961
+  profiles:
+  - url: https://openalex.org/A5052339018
+    source: https://openalex.org/A5052339018
+  statements:
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q1055186
+    value_label: Netherlands National Institute for Public Health and the Environment
+    value_type: https://schema.org/MedicalOrganization
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q131790020
+    value_label: Department of Translational Genomics
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+- id: https://orcid.org/0009-0007-1364-797X
+  profiles:
+  - url: https://openalex.org/A5093329177
+    source: https://openalex.org/A5093329177
+- id: https://orcid.org/0009-0007-2045-4009
+  profiles:
+  - url: https://openalex.org/A5075686370
+    source: https://openalex.org/A5075686370

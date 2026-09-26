@@ -2,6 +2,7 @@ url: "https://jmillanacosta.github.io"
 baseurl: ""
 canonical: "https://jmillanacosta.github.io/"
 title: "Javier Millán Acosta"
+description: "Research software for biomedical knowledge graphs, RDF tooling, and data integration"
 # Everything about the person (name, ORCID, work, profiles) is in _data/cv.yml; this file holds
 # only the site's own settings. Every page shares the social preview (scripts/build-og.mjs).
 defaults:
@@ -18,11 +19,37 @@ exclude:
   - node_modules
   - package.json
   - package-lock.json
+  - Makefile
+  - pyproject.toml
+  - uv.lock
+  - output
+  - schema
+# How data updates behave (scripts/update_cv_data.py).
+updates:
+  # Slow lookups (Wikidata, ORCID records, GitHub profiles) are cached here and redone after this
+  # many days; `--refresh` redoes them at once.
+  cache_file: scripts/cache/collaborators.json
+  cache_days: 30
+  # Accounts that commit to repositories but are not people, besides those GitHub marks as bots.
+  ignored_accounts: [actions-user, github-actions, web-flow, ghost]
+  # Files in repositories that list authors with their ORCID iDs.
+  citation_files: [CITATION.cff, .zenodo.json, codemeta.json]
+  # ORCID work types that are talks or posters: they go to events, not publications.
+  event_work_types: [lecture-speech, conference-poster]
+  # Wikidata properties that are never published: sex or gender (P21).
+  wikidata_withheld: [P21]
 plugins:
   - jekyll-seo-tag
-# Concept pages are written into _site after the build (scripts/build-concepts.py), each under
-# its category; keep them across rebuilds while serving.
+# Concept pages, page graphs, the schema page and VoID are written into _site after the build
+# (make concepts), the concept pages each under their category, and the CV PDF (make pdf) into
+# cv/; keep them across rebuilds while serving.
 keep_files:
+  - index.
+  - cv/
+  - events/index.
+  - graph
+  - void.ttl
+  - .well-known
   - concepts
   - content
   - courses
@@ -32,9 +59,11 @@ keep_files:
   - languages
   - organisms
   - organizations
-  - people
+  - collaborators
   - places
   - projects
+  - schema
   - publications
   - skills
+  - topics
   - software

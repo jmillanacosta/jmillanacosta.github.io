@@ -31,9 +31,6 @@
     <link rel="type" href="https://schema.org/ProfilePage" />
     <link rel="type" href="https://schema.org/AboutPage" />
     <link rel="author" href="{{ me }}" />
-    <script type="application/ld+json">
-      {% include cv-graph.jsonld %}
-    </script>
   </head>
   <body
     data-page="{{ mode }}"
@@ -68,6 +65,7 @@
           {%- assign f_url = format.url | prepend: page_iri -%}
           {{ " " }}<span property="encoding" resource="{{ f_url }}" typeof="MediaObject"><span property="encodingFormat" content="{{ format.type }}"></span><a property="contentUrl" href="{{ f_url }}" type="{{ format.type }}"><span property="name" content="{{ format.name }}">{{ format.name }}</span></a></span>{% unless forloop.last %},{% endunless %}
         {%- endfor %}
+        · <a href="/{{ site.data.concepts.schema.folder }}/">{{ site.data.concepts.schema.title }}</a>
       </footer>
     </main>
   </body>

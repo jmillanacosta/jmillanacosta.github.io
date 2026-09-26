@@ -6,7 +6,7 @@
 {%- for term in cv.skill_terms -%}
   {%- assign k_find = term[0] | escape -%}
   {%- if k_html contains k_find -%}
-    {%- capture k_span %}<span property="knowsAbout" resource="{{ term[1] }}"><span about="{{ term[1] }}" property="name">{{ k_find }}</span></span>{% endcapture -%}
+    {%- capture k_span %}<span property="knowsAbout" resource="{{ term[1] }}"><span about="{{ term[1] }}" typeof="Thing" property="name">{{ k_find }}</span></span>{% endcapture -%}
     {%- assign k_html = k_html | replace_first: k_find, k_span -%}
   {%- endif -%}
 {%- endfor -%}

@@ -30,16 +30,19 @@ jobs:
           destination: ./_site
       - name: Restore build directory ownership
         run: sudo chown -R "$(id -u):$(id -g)" _site
-      - name: Install RDF tools
-        run: python3 -m pip install rdflib pyrdfa3 html5lib pyyaml
-      - name: Check RDFa against JSON-LD, publish RDF and VoID
-        run: python3 scripts/build-rdf.py
-      - name: Write a page for every concept in the graph
-        run: python3 scripts/build-concepts.py
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v10.2.0
+        with:
+          version: "0.12.18"
+          enable-cache: true
+      - name: Install Python dependencies from uv.lock
+        run: uv sync --locked
+      - name: Write the linked data, concept pages, schema page, and VoID
+        run: make concepts
       - name: Set up Node
         uses: actions/setup-node@v7.0.0
         with:
-          node-version: "22"
+          node-version-file: .nvmrc
           cache: npm
       - name: Install PDF renderer
         run: npm ci
@@ -54,7 +57,7 @@ jobs:
       - name: Install PDF inspection tools
         run: sudo apt-get install -y --no-install-recommends poppler-utils
       - name: Check PDF text, pagination, and fonts
-        run: python3 scripts/check-pdf.py
+        run: uv run --locked python scripts/check-pdf.py
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5.0.0
         with:

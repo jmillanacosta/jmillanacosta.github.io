@@ -1,6 +1,6 @@
 ---
 title: CV
-description: Curriculum vitae, with experience, software, publications, events, teaching, and education.
+description: Curriculum vitae, with experience, software, publications, cv-events, teaching, and education.
 layout: default
 sections:
   - { id: experience, label: Experience }
@@ -11,11 +11,11 @@ sections:
   - { id: education, label: Education }
   - { id: skills, label: Skills }
   - { id: languages, label: Languages }
-graph: [description, roles, projects, communities, software, contributions, publications, events, teaching, credentials, education, skills, languages]
+graph: [description, roles, projects, communities, software, contributions, publications, cv-events, teaching, credentials, education, skills, languages]
 ---
 {%- comment -%}
   Rendered from _data (see _data/cv.yml), with RDFa matching this page's JSON-LD graph
-  (_includes/cv-graph.jsonld); scripts/build-rdf.py checks that the two are identical.
+  (scripts/build-graph.py); scripts/build-rdf.py checks that the two are identical.
 {%- endcomment -%}
 {%- include cv/data.liquid -%}
 <div class="cv" property="mainEntity foaf:primaryTopic foaf:maker dcterms:creator" resource="{{ me }}" typeof="Person foaf:Person">

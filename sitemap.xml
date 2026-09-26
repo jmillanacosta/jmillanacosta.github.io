@@ -21,6 +21,7 @@ permalink: /sitemap.xml
 {%- endif %}
 {%- endfor %}
 {%- endfor %}
+  <url><loc>{{ base }}{{ site.data.concepts.schema.folder }}/</loc><lastmod>{{ modified }}</lastmod></url>
   <url><loc>{{ base }}void.ttl</loc><lastmod>{{ modified }}</lastmod></url>
   <url><loc>{{ base }}.well-known/void</loc><lastmod>{{ modified }}</lastmod></url>
 </urlset>

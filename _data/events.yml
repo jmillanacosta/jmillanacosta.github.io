@@ -121,11 +121,22 @@
   end: "2025-09-20"
   location: Mie, Japan
   type: hackathon
-  summary: developed RDF schema tooling in rdfsolve.”
+  summary: developed RDF schema tooling in rdfsolve.
   doi: 10.37044/osf.io/8qeh5_v1
   funding_note: Personally invited; participation funded by
   funder: dbcls
   iri: http://2025.biohackathon.org/
+- name: RDA 21st Plenary Meeting [part of International Data Week 2023]
+  year: 2023
+  url: https://www.rd-alliance.org/plenaries/idw-2023-p21/
+  start: "2023-10-23"
+  end: "2023-10-26"
+  location: Salzburg, Austria
+  type: conference
+  role: Pitch
+  doi: 10.5281/zenodo.10038710
+  summary: Pitched "Adopting SSSOM for FAIRer BridgeDb mappings" during the "Let’s talk about FAIR mappings! Towards common practices for sharing mappings and crosswalks BoF - Birds of a Feather" session.
+  #iri: https://www.rd-alliance.org/plenaries/idw-2023-p21/
 - name: Virtual Human Platform launch
   year: 2026
   start: "2026-05-28"

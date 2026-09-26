@@ -1,3 +1,0 @@
-{%- comment -%}A grant (key in cv.grants) with its funder.{%- endcomment -%}
-{%- assign lg = cv.grants[include.key] -%}
-{"@id": {{ lg.iri | jsonify }}, "@type": "Grant", "name": {{ lg.name | jsonify }}, "alternateName": {{ lg.program | append: " grant " | append: lg.number | jsonify }}, "identifier": {{ lg.number | append: "" | jsonify }}, "url": {"@id": {{ lg.url | jsonify }}}, "funder": {% include ld/org.json key=lg.funder %}}

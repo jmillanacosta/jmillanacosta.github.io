@@ -1,0 +1,18 @@
+[project]
+name = "cv-site"
+version = "0"
+requires-python = ">=3.12"
+dependencies = [
+    "html5lib>=1.1",
+    "pyoxigraph>=0.5.11",
+    "pyrdfa3>=3.6",
+    "pyyaml>=6",
+    "rdflib>=7.1",
+    "rdfsolve[validation]",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+rdfsolve = { git = "https://github.com/jmillanacosta/rdfsolve", branch = "0.1.0" }

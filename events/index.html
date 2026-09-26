@@ -8,7 +8,7 @@ graph: [events]
 ---
 {%- comment -%}
   Rendered from _data (see _data/events.yml), with RDFa matching this page's JSON-LD graph
-  (_includes/cv-graph.jsonld); scripts/build-rdf.py checks that the two are identical.
+  (scripts/build-graph.py); scripts/build-rdf.py checks that the two are identical.
 {%- endcomment -%}
 {%- include cv/data.liquid -%}
 <div class="cv" property="mainEntity foaf:primaryTopic foaf:maker dcterms:creator" resource="{{ me }}" typeof="Person foaf:Person">

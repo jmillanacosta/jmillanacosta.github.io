@@ -1,18 +1,17 @@
-"""Check every IRI in the published graph: none is minted, every one resolves, and Wikidata items
-carry the name the CV gives them.
+"""Check every IRI in the published graphs: no IRI is minted, every IRI resolves, and each
+Wikidata item has the name that the CV gives it.
 
-Run after scripts/build-rdf.py (reads every page's graph under output/rdf, or paths given as arguments). Requires rdflib. Network access is needed, so this runs locally
-and in the weekly data workflow rather than on every deploy.
+Run after scripts/build-rdf.py. The graphs under output/rdf are read, or the files given as
+arguments. Network access is necessary, so this check runs locally and in the weekly data
+workflow, not on every deploy.
 
 Rules:
-- The only IRIs on this site are the page and its published files; a fragment of the page
-  (e.g. /#org-x) would be a minted identifier and fails.
+- The only IRIs of this site are its pages and their files. A fragment of a page (for example
+  /#org-x) is a minted identifier and fails.
 - Every other subject or object IRI must dereference (HTTP status below 400 after redirects).
-- A Wikidata item that has a schema:name in the graph must have that name (or a close variant)
-  as its English label, alias, or a label in another language; mismatches are listed for review.
+- A Wikidata item with a schema:name must have that name (or a close variant) as a label or an
+  alias, in any language. Differences are listed for review.
 """
-
-from __future__ import annotations
 
 import json
 import re
@@ -26,27 +25,30 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
+import pyoxigraph as ox
 import yaml
-from rdflib import RDF, Graph, Literal, Namespace, URIRef
+from rdfsolve.sparql_helper import SparqlHelper
 
 ROOT = Path(__file__).resolve().parent.parent
-SITE_URL = yaml.safe_load((ROOT / "_config.yml").read_text(encoding="utf-8"))["url"]
+CONFIG = yaml.safe_load((ROOT / "_config.yml").read_text(encoding="utf-8"))
+CANONICAL = CONFIG["canonical"]
 GRAPHS = [Path(a) for a in sys.argv[1:]] or sorted((ROOT / "output/rdf").glob("**/index.ttl"))
-# This site's own files are checked in the local build, since they may not be deployed yet.
+# The files of this site are checked in the local build, because they can be not deployed yet.
 SITE_DIR = ROOT / "_site"
-CANONICAL = yaml.safe_load((ROOT / "_config.yml").read_text(encoding="utf-8"))["canonical"]
-SCHEMA = Namespace("https://schema.org/")
-WIKIDATA = "http://www.wikidata.org/entity/"
+AGENT = f"cv-iri-check/1.0 ({CONFIG['url']})"
 HEADERS = {
-    "User-Agent": f"cv-iri-check/1.0 ({SITE_URL})",
-    # Prefer machine-readable representations; some services refuse requests without an Accept header.
+    "User-Agent": AGENT,
+    # Machine-readable forms first. Some services refuse requests without an Accept header.
     "Accept": "application/ld+json, application/json;q=0.9, text/turtle;q=0.8, text/html;q=0.7, */*;q=0.5",
 }
-# Hosts that refuse automated requests; their IRIs are reported as unverified, not failed.
+WIKIDATA = "http://www.wikidata.org/entity/"
+NAME = "https://schema.org/name"
+RDF_TYPE = "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+# These hosts refuse automated requests. Their IRIs are reported as not verified, not as failed.
 BOT_BLOCKING = ("www.linkedin.com",)
-_wikidata_lock = threading.Lock()
 # Vocabulary IRIs (classes, properties, enumeration members) are not data about the CV.
 VOCABULARY = ("https://schema.org/", "http://xmlns.com/foaf/", "http://purl.org/dc/", "http://www.w3.org/")
+_wikidata_lock = threading.Lock()
 
 _getaddrinfo = socket.getaddrinfo
 socket.getaddrinfo = lambda *args, **kwargs: [r for r in _getaddrinfo(*args, **kwargs) if r[0] == socket.AF_INET] or _getaddrinfo(*args, **kwargs)
@@ -58,11 +60,11 @@ def status(iri: str) -> int | str:
     if iri.startswith(CANONICAL):
         path = SITE_DIR / urllib.parse.unquote(iri.removeprefix(CANONICAL).split("#")[0] or "index.html")
         relative = path.relative_to(SITE_DIR)
-        published = ROOT / "output/rdf" / relative  # build-rdf.py's copies survive jekyll serve rebuilds
+        published = ROOT / "output/rdf" / relative  # The copies of build-rdf.py stay after jekyll serve rebuilds.
         pdf = ROOT / "output" / relative
         return 200 if path.exists() or (path / "index.html").exists() or published.exists() or pdf.exists() else 404
     if iri.startswith(WIKIDATA):
-        with _wikidata_lock:
+        with _wikidata_lock:  # Wikidata asks for one request at a time.
             result = fetch_status(iri)
             time.sleep(0.3)
             return result
@@ -70,9 +72,10 @@ def status(iri: str) -> int | str:
 
 
 def doi_status(doi: str) -> int | str:
-    """A DOI resolves if the DOI system has a handle for it; publisher pages often block bots."""
+    """A DOI resolves if the DOI system has a handle for it. Publisher pages often block bots."""
+    request = urllib.request.Request(f"https://doi.org/api/handles/{urllib.parse.quote(doi)}", headers=HEADERS)
     try:
-        with urllib.request.urlopen(urllib.request.Request(f"https://doi.org/api/handles/{urllib.parse.quote(doi)}", headers=HEADERS), timeout=30) as response:
+        with urllib.request.urlopen(request, timeout=30) as response:
             return 200 if json.loads(response.read()).get("responseCode") == 1 else 404
     except urllib.error.HTTPError as error:
         return error.code
@@ -81,7 +84,7 @@ def doi_status(doi: str) -> int | str:
 
 
 def fetch_status(iri: str) -> int | str:
-    last: str = "no response"
+    last = "no response"
     for attempt in range(4):
         for method in ("HEAD", "GET"):
             try:
@@ -101,36 +104,41 @@ def fetch_status(iri: str) -> int | str:
     return last
 
 
-def wikidata_names(qids: list[str]) -> dict[str, set[str]]:
-    names: dict[str, set[str]] = {}
-    for start in range(0, len(qids), 50):
-        batch = qids[start : start + 50]
-        url = "https://www.wikidata.org/w/api.php?" + urllib.parse.urlencode(
-            {"action": "wbgetentities", "ids": "|".join(batch), "props": "labels|aliases", "format": "json"}
-        )
-        with urllib.request.urlopen(urllib.request.Request(url, headers=HEADERS), timeout=30) as response:
-            entities = json.loads(response.read())["entities"]
-        for qid, entity in entities.items():
-            found = {v["value"].casefold() for v in entity.get("labels", {}).values()}
-            found |= {a["value"].casefold() for values in entity.get("aliases", {}).values() for a in values}
-            names[qid] = found
+def wikidata_names(items: list[str]) -> dict[str, set[str]]:
+    """The labels and aliases of Wikidata items, in all languages, in lower case."""
+    names: dict[str, set[str]] = {item: set() for item in items}
+    with SparqlHelper("https://query.wikidata.org/sparql", user_agent=AGENT, timeout=60) as wikidata:
+        for start in range(0, len(items), 50):
+            values = " ".join(f"<{item}>" for item in items[start : start + 50])
+            query = (
+                "SELECT ?item ?name WHERE { VALUES ?item { " + values + " } "
+                "?item <http://www.w3.org/2000/01/rdf-schema#label>|<http://www.w3.org/2004/02/skos/core#altLabel> ?name }"
+            )
+            for row in wikidata.select(query)["results"]["bindings"]:
+                names[row["item"]["value"]].add(row["name"]["value"].casefold())
     return names
 
 
+def matches(name: str, known: set[str]) -> bool:
+    """True if a label or an alias is the name, a part of it, or the qualifier in its brackets."""
+    wanted = name.casefold()
+    qualifiers = [q.casefold() for q in re.findall(r"\(([^)]+)\)", name)]
+    return any(
+        wanted == c or wanted.split(",")[0] == c or wanted in c or c in wanted or any(q in c for q in qualifiers)
+        for c in known
+    )
+
+
 def main() -> None:
-    graph = Graph()
-    for path in GRAPHS:
-        graph.parse(path, format="turtle")
-    iris = {t for t in graph.subjects() if isinstance(t, URIRef)}
-    iris |= {o for p, o in graph.predicate_objects() if isinstance(o, URIRef) and p != RDF.type}
+    statements = [t for path in GRAPHS for t in ox.parse(path=path)]
+    iris = {t.subject.value for t in statements if isinstance(t.subject, ox.NamedNode)}
+    iris |= {t.object.value for t in statements if isinstance(t.object, ox.NamedNode) and t.predicate.value != RDF_TYPE}
     iris = sorted(
-        str(i) for i in iris
-        if (not str(i).startswith(VOCABULARY) or str(i).startswith("http://www.w3.org/ns/")) and not str(i).startswith("mailto:")
+        i for i in iris
+        if (not i.startswith(VOCABULARY) or i.startswith("http://www.w3.org/ns/")) and not i.startswith("mailto:")
     )
     problems, unverified = [], []
-
-    minted = [i for i in iris if i.startswith(CANONICAL) and "#" in i]
-    problems += [f"minted IRI: {i}" for i in minted]
+    problems += [f"minted IRI: {i}" for i in iris if i.startswith(CANONICAL) and "#" in i]
 
     with ThreadPoolExecutor(max_workers=8) as pool:
         results = dict(zip(iris, pool.map(status, iris), strict=True))
@@ -138,28 +146,26 @@ def main() -> None:
         if isinstance(code, int) and code < 400:
             continue
         if urllib.parse.urlparse(iri).netloc in BOT_BLOCKING:
-            unverified.append(f"unverified (host refuses automated requests, {code}): {iri}")
+            unverified.append(f"not verified (the host refuses automated requests, {code}): {iri}")
         else:
             problems.append(f"does not resolve ({code}): {iri}")
 
-    named = {str(s): str(o) for s, o in graph.subject_objects(SCHEMA.name) if str(s).startswith(WIKIDATA) and isinstance(o, Literal)}
-    known = wikidata_names([i.removeprefix(WIKIDATA) for i in named])
+    named = {
+        t.subject.value: t.object.value
+        for t in statements
+        if t.predicate.value == NAME and t.subject.value.startswith(WIKIDATA) and isinstance(t.object, ox.Literal)
+    }
+    known = wikidata_names(sorted(named))
     for iri, name in sorted(named.items()):
-        candidates = known.get(iri.removeprefix(WIKIDATA), set())
-        wanted = name.casefold()
-        qualifiers = [q.casefold() for q in re.findall(r"\(([^)]+)\)", name)]
-        if not any(
-            wanted == c or wanted.split(",")[0] == c or wanted in c or c in wanted or any(q in c for q in qualifiers)
-            for c in candidates
-        ):
-            problems.append(f"Wikidata label mismatch: {iri} is named {name!r} in the CV; Wikidata has {sorted(candidates)[:4]}")
+        if not matches(name, known[iri]):
+            problems.append(f"Wikidata label mismatch: {iri} is named {name!r} in the CV; Wikidata has {sorted(known[iri])[:4]}")
 
     print(f"{len(iris)} IRIs checked; {len(named)} Wikidata items compared by name.")
     for line in unverified + problems:
         print("  " + line)
     if problems:
         sys.exit(f"{len(problems)} IRI problems")
-    print("Every IRI resolves, none is minted, and every Wikidata item matches its name.")
+    print("Every IRI resolves, no IRI is minted, and every Wikidata item has its name.")
 
 
 if __name__ == "__main__":

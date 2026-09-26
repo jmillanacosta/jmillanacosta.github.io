@@ -5,5 +5,7 @@ _layouts/
 cv/index.html
 site.json
 # Written by scripts/update_cv_data.py on every run.
-_data/people.yml
+_data/collaborators.yml
+_data/repositories.yml
 scripts/cache/
+.venv/

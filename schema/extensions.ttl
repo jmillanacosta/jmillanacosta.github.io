@@ -1,0 +1,40 @@
+# Declarations that this site adds to schema.org. These declarations are read by rdfsolve
+# together with the published vocabularies. Each line lets a class have one more property,
+# or lets a property have one more kind of value.
+
+@prefix schema: <https://schema.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+# Pages and people are also described with FOAF. FOAF is read by many linked-data crawlers.
+schema:Person rdfs:subClassOf foaf:Person .
+schema:ProfilePage rdfs:subClassOf foaf:PersonalProfileDocument .
+
+# The Role pattern of schema.org (https://schema.org/Role). A role node is put in place of the
+# value of a property. The role node repeats that property, and it can have dates and a title.
+schema:worksFor schema:rangeIncludes schema:EmployeeRole; schema:domainIncludes schema:EmployeeRole .
+schema:alumniOf schema:rangeIncludes schema:OrganizationRole; schema:domainIncludes schema:OrganizationRole .
+schema:performerIn schema:rangeIncludes schema:Role; schema:domainIncludes schema:Role .
+schema:knowsLanguage schema:rangeIncludes schema:Role; schema:domainIncludes schema:Role .
+schema:contributor schema:rangeIncludes schema:Role; schema:domainIncludes schema:Role .
+schema:knows schema:rangeIncludes schema:Role; schema:domainIncludes schema:Role .
+
+# The text of a role can mention tools and pages. The funding of a talk is given on the role.
+schema:mentions schema:domainIncludes schema:Role, schema:CourseInstance .
+schema:funding schema:domainIncludes schema:Role .
+
+# The subject of a study is given on the study (an OrganizationRole), for example an organism.
+schema:about schema:domainIncludes schema:OrganizationRole .
+
+# Communities are projects. Contributors are given for them.
+schema:contributor schema:domainIncludes schema:Project .
+
+# Released source code has versions, downloads, documentation and requirements, as applications have.
+schema:softwareVersion schema:domainIncludes schema:SoftwareSourceCode .
+schema:downloadUrl schema:domainIncludes schema:SoftwareSourceCode .
+schema:softwareHelp schema:domainIncludes schema:SoftwareSourceCode .
+schema:softwareRequirements schema:domainIncludes schema:SoftwareSourceCode .
+
+# The authors of a publication are kept in order, as an RDF list.
+schema:author schema:rangeIncludes rdf:List .

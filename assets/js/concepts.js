@@ -1,4 +1,4 @@
-// Names of concepts (organizations, places, software, events, publications, people, skills)
+// Names of concepts (organizations, places, software, events, publications, collaborators, skills)
 (() => {
   const scriptUrl = document.currentScript?.src || location.href;
   const indexUrl = new URL("../../concepts/index.json", scriptUrl);
