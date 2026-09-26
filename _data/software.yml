@@ -1,14 +1,14 @@
-- name: "rdfsolve"
-  summary: "Wraps several RDF schema solver tools"
-  version: "0.0.2"
-  pypi_url: "https://pypi.org/project/rdfsolve/"
-  docs: "https://rdfsolve.readthedocs.io"
-- name: "pysec2pri"
-  summary: "Secondary to primary identifier mapping"
-  version: "0.3.12"
-  pypi_url: "https://pypi.org/project/pysec2pri/"
-  docs: "https://pysec2pri.readthedocs.io"
-- name: "mapkgsutils"
-  summary: "Utils shared by several mapping set generation tools for biomedical databases"
-  version: "0.2.9"
-  pypi_url: "https://pypi.org/project/mapkgsutils/"
+- name: rdfsolve
+  summary: Wraps several RDF schema solver tools
+  version: 0.0.2
+  pypi_url: https://pypi.org/project/rdfsolve/
+  docs: https://rdfsolve.readthedocs.io
+- name: pysec2pri
+  summary: Secondary to primary identifier mapping
+  version: 0.3.12
+  pypi_url: https://pypi.org/project/pysec2pri/
+  docs: https://pysec2pri.readthedocs.io
+- name: mapkgsutils
+  summary: Utils shared by several mapping set generation tools for biomedical databases
+  version: 0.2.9
+  pypi_url: https://pypi.org/project/mapkgsutils/

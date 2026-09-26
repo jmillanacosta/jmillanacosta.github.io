@@ -1,13 +1,7 @@
-"""The linked data of each page, made from _data as records of the shapes in shapes.py.
-
-Each function below makes records from one kind of entry in _data. Each value is checked by
-rdfsolve against the published vocabularies (schema.org, FOAF, DCMI Terms). The RDFa of a page
-must give the same graph. This is checked by build-rdf.py.
-
-Run after `bundle exec jekyll build`.
-"""
+"""Page records are checked with rdfsolve and published as JSON-LD and RDFa."""
 
 import datetime
+import html
 import json
 import re
 import sys
@@ -16,7 +10,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 import yaml
-from rdflib import XSD, Graph, Literal, URIRef
+from rdflib import BNode, XSD, Graph, Literal, URIRef
 from rdflib.namespace import FOAF
 from rdfsolve.api import RDFList
 
@@ -27,6 +21,7 @@ SITE = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "_site"
 DATA = {path.stem: yaml.safe_load(path.read_text(encoding="utf-8")) or [] for path in (ROOT / "_data").glob("*.yml")}
 CONFIG = yaml.safe_load((ROOT / "_config.yml").read_text(encoding="utf-8"))
 CV = DATA["cv"]
+SOFTWARE = CV["libraries"] + CV["contributions"] + CV["personal_tools"]
 HOME = CONFIG["canonical"]
 ME = CV["person"]["iri"]
 CONTEXT = {
@@ -47,7 +42,8 @@ def key(url):
 
 def things(value):
     if isinstance(value, dict):
-        yield from [value] if "iri" in value else []
+        if "iri" in value:
+            yield value
         for item in value.values():
             yield from things(item)
     elif isinstance(value, list):
@@ -107,6 +103,7 @@ def organization(key):
         org["iri"],
         name=org["name"],
         alternateName=org.get("alternate_name"),
+        url=org.get("url"),
         sameAs=org.get("same_as", []),
         location=[place(name) for name in [org["location"], *org.get("other_locations", [])]],
         parentOrganization=organization(org.get("parent")),
@@ -156,6 +153,7 @@ def software(entry):
         softwareHelp=[link for link in (package.get("docs"), entry.get("docs")) if link],
         author=ME,
         description=entry["description"],
+        mentions=mentioned(entry),
         subjectOf=[doi(name) for name in entry.get("publications", [])],
         interactionStatistic=counters(entry),
     )
@@ -230,7 +228,7 @@ def article(entry):
         dcterms_date=year(entry["year"]),
         genre=entry["type"].replace("-", " ").capitalize() if entry.get("type") else None,
         identifier=entry["doi"],
-        sameAs=CV["publication_same_as"].get(entry["doi"]),
+        sameAs=[iri for iri in (CV["publication_same_as"].get(entry["doi"]), entry.get("wikidata")) if iri],
         isPartOf=new("Periodical", CV["venues"].get(journal), name=journal) if journal else None,
         author=RDFList(items=authors) if authors else ME,
         dcterms_creator=ME,
@@ -238,7 +236,16 @@ def article(entry):
 
 
 def event(entry):
+    details = next((row for row in DATA.get("events_wikidata", []) if row["iri"] == entry.get("iri")), {})
+    entry = {**details, **entry}
     online = entry["location"] == "Online"
+    projects = {row["id"]: row for row in CV["funded_projects"]}
+    organizers = [organization(entry["organizer"])] if entry.get("organizer") else [
+        new("Organization", ALIASES.get(key(row["iri"]), row["iri"]), name=row["name"]) for row in details.get("organizers", [])
+    ]
+    series = entry.get("series")
+    if series and series == details.get("series"):
+        series = new("Event", series, name=details.get("series_name"))
     return new(
         "Event",
         entry.get("iri"),
@@ -248,7 +255,9 @@ def event(entry):
         endDate=entry.get("end"),
         url=entry.get("url"),
         recordedIn=entry.get("recording"),
-        superEvent=entry.get("series"),
+        superEvent=series,
+        organizer=organizers,
+        about=project(projects[entry["project"]]) if entry.get("project") else None,
         eventAttendanceMode="https://schema.org/OnlineEventAttendanceMode" if online else None,
         location=new("VirtualLocation", name="Online") if online else place(entry["location"]),
     )
@@ -434,12 +443,20 @@ def wikidata(kind, statements, stated, own):
     fields = defaultdict(list)
     people = {someone["id"] for someone in DATA["collaborators"]}
     for statement in statements:
+        if statement["property"] == "http://www.wikidata.org/entity/P101":
+            fields["knowsAbout"].append(new("DefinedTerm", statement["value"], name=statement.get("value_label")))
+            continue
         literal = Literal(statement["value"], lang=statement.get("language"), datatype=None if statement.get("language") else statement.get("datatype"))
         item = None if "datatype" in statement else ALIASES.get(key(statement["value"]))
         if not own and (not item or SCHEMA + "knowsLanguage" in statement["equivalent"]):
             continue
         typed = statement.get("value_type", "").removeprefix(SCHEMA)
-        node = URIRef(item) if item else new(typed, statement["value"], name=statement.get("value_label")) if typed in CLASSES else URIRef(statement["value"])
+        if item:
+            node = URIRef(item)
+        elif typed in CLASSES:
+            node = new(typed, statement["value"], name=statement.get("value_label"))
+        else:
+            node = URIRef(statement["value"])
         for prop in statement["equivalent"]:
             name = shapes.field_name(kind, prop)
             if "datatype" not in statement and links_to(kind, name):
@@ -476,7 +493,7 @@ def collaborator_records():
         for account in someone.get("accounts", []):
             if account.get("via") in ("declared on ORCID record", "Wikidata"):
                 records.append(new("WebPage", account["url"], dcterms_source=URIRef(account["source"])))
-    for entry in [*CV["libraries"], *CV["contributions"], *CV["personal_tools"]]:
+    for entry in SOFTWARE:
         contributors = [someone["id"] for someone in people if entry["id"] in someone.get("contributes", [])]
         if contributors:
             records.append(new("SoftwareSourceCode", entry["iri"], contributor=contributors))
@@ -484,17 +501,18 @@ def collaborator_records():
 
 
 def subject_records():
+    """Each work is about its main subjects in Wikidata and its topics in OpenAlex."""
     return [
         new("ScholarlyArticle", doi(row["doi"]), about=[
             URIRef(ALIASES[key(s["iri"])]) if key(s["iri"]) in ALIASES else new("DefinedTerm", s["iri"], name=s["name"])
-            for s in row["subjects"]
+            for s in row.get("subjects", []) + row.get("topics", [])
         ])
-        for row in DATA["publications"] if row.get("subjects")
+        for row in DATA["publications"] if row.get("subjects") or row.get("topics")
     ]
 
 
 def repository_records():
-    listed = {entry["id"]: entry["iri"] for entry in [*CV["libraries"], *CV["contributions"], *CV["personal_tools"]]}
+    listed = {entry["id"]: entry["iri"] for entry in SOFTWARE}
     records = []
     for row in DATA["repositories"]:
         owner = next((i for i in (ALIASES.get(key(u)) for u in (row["owner"], row.get("owner_website")) if u) if i and i != listed[row["id"]]), None)
@@ -504,7 +522,7 @@ def repository_records():
 
 
 def pages():
-    """The pages that give the parts of the graph in their front matter."""
+    """Graph sections are read from each page’s front matter."""
     found = []
     for source in sorted([*ROOT.glob("*.html"), *ROOT.glob("[!_]*/index.html")]):
         match = re.match(r"---\n(.*?)\n---", source.read_text(encoding="utf-8"), re.S)
@@ -517,6 +535,24 @@ def pages():
     return found
 
 
+def rdfa(graph):
+    """Each triple is written as one RDFa span. Blank nodes and literal types are kept."""
+    def resource(node):
+        return f"[_:{node}]" if isinstance(node, BNode) else str(node)
+
+    lines = ['<div id="page-rdfa" hidden>']
+    for subject, predicate, value in sorted(graph):
+        attrs = {"about": resource(subject), "property": str(predicate)}
+        if isinstance(value, Literal):
+            attrs.update(content=str(value), lang=value.language or "")
+            attrs["datatype"] = str(value.datatype or "")
+        else:
+            attrs["resource"] = resource(value)
+        attributes = " ".join(f'{key}="{html.escape(value, quote=True)}"' for key, value in attrs.items())
+        lines.append(f"<span {attributes}></span>")
+    return "\n".join(lines) + "\n</div>"
+
+
 def write(records, name, embed_in=None):
     graph = Graph()
     for record in records:
@@ -525,10 +561,15 @@ def write(records, name, embed_in=None):
     target = SITE / name
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(body, encoding="utf-8")
-    if embed_in and (html := SITE / embed_in).exists():
-        markup = re.sub(r'\s*<script type="application/ld\+json">.*?</script>', "", html.read_text(encoding="utf-8"), flags=re.S)
-        script = f'<script type="application/ld+json">{json.dumps(json.loads(body), ensure_ascii=False)}</script>\n</head>'
-        html.write_text(markup.replace("</head>", script, 1), encoding="utf-8")
+    if embed_in:
+        page = SITE / embed_in
+        markup = page.read_text(encoding="utf-8")
+        markup = re.sub(r'\s*<script type="application/ld\+json">.*?</script>', "", markup, flags=re.S)
+        markup = re.sub(r'\s*<div id="page-rdfa" hidden>.*?</div>', "", markup, flags=re.S)
+        compact = json.dumps(json.loads(body), ensure_ascii=False).replace("</", "<\\/")
+        markup = markup.replace("</head>", f'<script type="application/ld+json">{compact}</script>\n</head>', 1)
+        markup = markup.replace("</body>", rdfa(graph) + "\n</body>", 1)
+        page.write_text(markup, encoding="utf-8")
     print(f"{name}: {len(graph)} triples")
 
 

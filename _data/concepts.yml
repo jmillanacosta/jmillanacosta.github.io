@@ -1,11 +1,7 @@
-# How scripts/build-concepts.py turns the site's graph into concept pages. The script holds no
-# labels, categories, or wording of its own: everything it names, groups, or orders is here.
+# Labels, categories and page order used by scripts/build-concepts.py.
 # Terms are local names in `vocabulary` (e.g. `name` is https://schema.org/name).
 
-# The graphs that are merged (relative to the site root): the pages' own, the collaborators
-# around them (graph/collaborators.jsonld: contributors and co-authors, from GitHub, ORCID, and
-# Wikidata), and what the sources say of the works (graph/works.jsonld: the software's
-# repositories, and the main subjects of the publications on Wikidata).
+# The graphs that are merged (relative to the site root): pages + collaborators + works
 sources:
   - index.jsonld
   - cv/index.jsonld
@@ -15,7 +11,7 @@ sources:
 vocabulary: https://schema.org/
 vocabulary_prefix: schema # in the Turtle files
 
-# Files the script reads and writes, relative to the site root.
+# Input and output files, relative to the site root.
 files:
   shell: concepts/shell.html
   index: concepts/index.json
@@ -30,7 +26,7 @@ profile:
   modified: dateModified # the sitemap's last-modified date
 home: /
 
-# Core terms the script reads.
+# Core graph terms.
 terms:
   name: name
   description: description
@@ -87,13 +83,12 @@ type_labels:
   Taxon: Organism
   VirtualLocation: Online
 
-# For untyped nodes: the label given when something points to them with this predicate.
+# Untyped labels
 untyped_labels:
   knowsAbout: Skill
 untyped_default: Concept
 
-# Each concept lives under its category (/places/lleida-spain/); each category has a page listing
-# its members. A category is chosen by type (first match in this order), or by untyped label.
+# Concepts are grouped by type (first match), then by label.
 categories:
   - {
       folder: publications,
@@ -132,13 +127,10 @@ categories:
       ]
   - { folder: skills, title: Skills, types: [Thing], labels: [Skill] }
   - { folder: topics, title: Topics, types: [DefinedTerm] }
-# `existing: true` marks a category page the site already renders (it is not generated).
-# `lists: location` makes the category page list, under each member, what points to it that way.
+
 other_category: { folder: concepts, title: Concepts }
 
-# Text values that sort things into kinds (Hackathon, Journal article). Each kind gets a page
-# under the category of what it sorts, in `folder` (/event/kind/hackathon/), next to an index of
-# that category's kinds (/event/kind/).
+# Kinds of things
 kinds:
   predicates: [keywords, genre]
   folder: kind
@@ -161,9 +153,7 @@ dates:
   range_in_month: "{month} {start}–{end}, {year}"
   range: "{start} – {end}"
 
-# Papers: things of these types read as citations wherever they appear, as in the CV's list:
-# the title, the authors (the graph's subject in bold; long lists shortened to the first few,
-# the subject, and the last), then venue · date · kind · identifier.
+# Papers
 citation:
   types: [ScholarlyArticle, Report]
   authors: author
@@ -189,8 +179,7 @@ summary:
     scheme: propertyID
     value: value
 
-# How a statement reads from its subject's page ("forward") and from its object's page
-# ("reverse"). Unlisted predicates are spelled out ("courseCode" → "Course code", "… of").
+# How a statement reads
 forward:
   about: About
   alumniOf: Studied at
@@ -265,7 +254,7 @@ reverse_default: "{label} of"
 # Predicates never listed as connections.
 reverse_skip: [sameAs, url]
 
-# Rows read in this order; the rest follow alphabetically.
+# Rows are shown in this order, then alphabetically.
 order:
   - Kind
   - When
@@ -321,7 +310,7 @@ hosts:
   linkedin.com: LinkedIn
   openalex.org: OpenAlex
   www.wikipathways.org: WikiPathways
-# Other links are named by their address (egonw.github.io); this is for one without an address.
+# Other links are named by their address
 host_default: Website
 # Where a link came from: a link target with this statement is shown with its source ("via Wikidata").
 provenance: http://purl.org/dc/terms/source
@@ -358,15 +347,12 @@ text:
   others: "{count} more"
   together: "{items} and {last}"
   more_leaves: "{count} more"
-  closest: "{name} shares the most connections with {names}."
+  closest: "{name} and I share the most connections with {names}."
   topics: " on {names}"
 slug_length: 60
 
-# What every generated page offers machines. Its graph (the statements it shows, plus the page
-# itself) is embedded as JSON-LD and written next to it in each format, all announced in the head
-# with FAIR Signposting (https://signposting.org): describedby and alternate for each format, type
-# for what the page and its subject are, author for the graph's subject, and cite-as for a
-# subject whose identifier is persistent (one of `persistent_hosts`).
+# The page graph is embedded as JSON-LD and exported in these formats.
+# Downloads, types, authors and persistent identifiers are linked with FAIR Signposting.
 formats:
   - {
       file: index.jsonld,
@@ -393,18 +379,32 @@ content:
     - { name: Home, path: / }
     - { name: CV, path: /cv/ }
     - { name: My events, path: /events/ }
+    - { name: Papers and topics, path: /publications/}
   pages_title: Pages
-  lede: "{count} concepts in {categories} categories."
+  lede: "All {count} concepts in {categories} categories."
   filter: Filter by name or kind
   shown: "{shown} of {total}"
   columns: { name: Name, kind: Kind, year: Year, links: Links }
   links_hint: Concepts it is connected to
-  schema_link: See how the kinds of concepts connect in the schema.
+  schema_link: See schema.
+
+# The publications page (/publications/): each publication under its categories (Wikidata main
+# subjects and OpenAlex topics), newest first.
+topics:
+  category: publications
+  sources:
+    - { name: Wikidata, prefix: "http://www.wikidata.org/entity/" }
+    - { name: OpenAlex, prefix: "https://openalex.org/" }
+  none: No category
+  lede: "My publications are about {topics}"
+  shown: 3 # topics named in the lede; the others open on request
+  more: "and {count} more topics"
 
 tree:
   limit: 8
   shared: 2
   closest: 2
+  closest_in: [collaborators] # only these pages name the concepts that share the most connections
 
 # The story on each concept page: how the owner of the site is connected to the concept. Each
 # line is a path from the owner: `to` goes to an intermediate thing, `then` goes on from it to the
@@ -486,7 +486,7 @@ story:
         to: schema:performerIn/schema:performerIn
         then: schema:location
       - label: Organizations there
-        to: schema:worksFor|schema:worksFor/schema:worksFor|schema:alumniOf/schema:alumniOf
+        to: schema:worksFor|schema:worksFor/schema:worksFor|schema:alumniOf/schema:alumniOf|schema:performerIn/schema:performerIn/schema:organizer
         then: schema:location
     software:
       - label: Author
@@ -510,6 +510,9 @@ story:
         to: ^schema:contributor
         then: schema:funding
     organizations:
+      - label: Visited at
+        to: schema:performerIn/schema:performerIn
+        then: schema:organizer
       - label: Works here
         to: schema:worksFor
       - label: Affiliated
@@ -552,7 +555,7 @@ story:
         to: schema:hasOccupation
 
 # The schema page (/schema/): the graphs of the site are mined by rdfsolve, and the schema is
-# drawn as a diagram and given in the formats of rdfsolve.
+# shown as a tree of classes from Person and given in the formats of rdfsolve.
 schema:
   folder: schema
   title: Schema
@@ -560,24 +563,21 @@ schema:
   dataset: site
   lede: "{classes} classes and {links} links between them, mined from every graph on this site."
   diagram_title: Site RDF schema
-  hint: Each class links to what it points to. Point at one to follow its links; open it to see its members.
-  list_title: The same, as a list
-  graph:
-    width: 1200
-    height: 860
-    inner: [290, 215]
-    outer: [520, 375]
-    pull: 0.45
-    wrap: 16
-    char: 7.6
-    line: 17
-    pad: 12
+  hint: The classes of this site as a tree from Person.
+  root: Person # the class that the tree starts from
+  properties: ["{count} property", "{count} properties"]
+  instances: instances
+  unreached: Not reached from Person
+  value_names: # types of values that are not classes of the site
+    Literal: literal
+    Resource: IRI
+    BlankNode: node
   downloads_title: Downloads
   schema_file: site.schema.json
   void:
     base: .well-known/void#
     files: [.well-known/void, void.ttl]
-    description: "Linked data used to built the site was defined with rdfsolve: each graph, its classes, and the links between them."
+    description: "The site's linked data is described with rdfsolve: graphs, classes and their links."
   downloads:
     - {
         file: site.schema.json,

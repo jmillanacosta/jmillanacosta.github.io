@@ -1,15 +1,7 @@
-{%- comment -%}
-  An organization (key in cv.organizations) as the object of `property`, preceded by its parent,
-  identified by its registered IRI with its sameAs links and its places. location=true shows
-  its main place; otherwise the places are stated without visible text.
-{%- endcomment -%}
-{%- assign o = orgs[include.key] -%}
-{%- assign o_show_location = include.location -%}
-<span property="{{ include.property }}" resource="{{ o.iri }}" typeof="{{ o.type }}">
-{%- if o.parent -%}
-{%- assign o_parent = orgs[o.parent] -%}
-<span property="parentOrganization" resource="{{ o_parent.iri }}" typeof="{{ o_parent.type }}"><span property="name" content="{{ o_parent.name | escape }}">{{ o_parent.name | escape }}</span>{% if o_parent.alternate_name %} (<span property="alternateName" content="{{ o_parent.alternate_name | escape }}">{{ o_parent.alternate_name | escape }}</span>){% endif %}{% for s in o_parent.same_as %}<span property="sameAs" resource="{{ s }}"></span>{% endfor %}{% include cv/places.html org=o_parent %}</span>,{{ " " }}
+{%- assign org = orgs[include.key] -%}
+{%- assign parent = orgs[org.parent] -%}
+{%- if parent -%}
+  {% include cv/name.html name=parent.name iri=parent.iri type=parent.type %}{% if parent.alternate_name %} ({{ parent.alternate_name | escape }}){% endif %},{{ " " }}
 {%- endif -%}
-<span property="name" content="{{ o.name | escape }}">{{ o.name | escape }}</span>{% if o.alternate_name %} (<span property="alternateName" content="{{ o.alternate_name | escape }}">{{ o.alternate_name | escape }}</span>){% endif %}{% for s in o.same_as %}<span property="sameAs" resource="{{ s }}"></span>{% endfor %}
-{%- if o_show_location and o.location %} · <span property="location" resource="{{ cv.places[o.location] }}" typeof="Place"><span property="name" content="{{ o.location | escape }}">{{ o.location | escape }}</span></span>{% include cv/places.html org=o skip_first=true %}{% else %}{% include cv/places.html org=o %}{% endif -%}
-</span>
+{% include cv/name.html name=org.name iri=org.iri type=org.type %}{% if org.alternate_name %} ({{ org.alternate_name | escape }}){% endif %}
+{%- if include.location and org.location %} · {% assign include_iri = cv.places[org.location] %}{% include cv/name.html name=org.location iri=include_iri type="Place" %}{% endif -%}

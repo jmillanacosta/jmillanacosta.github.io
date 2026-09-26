@@ -6,5 +6,5 @@ linkedin.html
 output/
 tmp/
 node_modules/
-*pyc.venv/
+.venv/
 *.pyc

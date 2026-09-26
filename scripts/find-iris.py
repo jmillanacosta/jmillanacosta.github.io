@@ -1,15 +1,4 @@
-"""Find candidate IRIs for each concept of the CV. The candidates are written to
-output/iri-candidates.yml for review. The chosen IRIs are then put in the data files.
-
-Wikidata is asked with SPARQL through rdfsolve: a text search (the MediaWiki search service of
-the Wikidata query service), and exact matches for the identifiers that the CV already has
-(ORCID, ROR, ISO 639, DOI, ISSN, NCBI Taxonomy, repositories). Scholarly articles are in the
-scholarly query service of Wikidata, the other items in the main one. Ontology terms (EDAM, the Software
-Ontology, NCBI Taxonomy) are searched in OLS through rdfsolve. ROR, ESCO, Crossref and the
-Library of Congress are asked through their own web APIs.
-
-Usage: python3 scripts/find-iris.py [--limit N]
-"""
+"""Identifier candidates are fetched for the configured CV and saved for review."""
 
 import json
 import re
@@ -25,22 +14,18 @@ from typing import Any
 
 import yaml
 from rdfsolve.api import OntologyLookup
-from rdfsolve.sparql_helper import SparqlHelper
+from cvdata import wikidata
 
 ROOT = Path(__file__).resolve().parent.parent
 AGENT = f"cv-iri-finder/1.0 ({yaml.safe_load((ROOT / '_config.yml').read_text(encoding='utf-8'))['url']})"
 LIMIT = int(sys.argv[sys.argv.index("--limit") + 1]) if "--limit" in sys.argv else 5
-# Since the graph split of 2025, scholarly articles are in their own Wikidata query service.
-WIKIDATA = SparqlHelper("https://query.wikidata.org/sparql", user_agent=AGENT, timeout=60)
-SCHOLARLY = SparqlHelper("https://query-scholarly.wikidata.org/sparql", user_agent=AGENT, timeout=60)
 OLS = OntologyLookup(max_requests=1000)
 # Wikidata asks for one request at a time.
 _wikidata_lock = threading.Lock()
 
 
 def get(url: str, attempts: int = 4) -> Any:
-    """Get JSON from a web API. A rate-limited or failed request is tried again, so that it is
-    not read as "no results"."""
+    """A failed request is retried before it is reported."""
     for attempt in range(attempts):
         try:
             request = urllib.request.Request(url, headers={"User-Agent": AGENT, "Accept": "application/json"})
@@ -56,49 +41,43 @@ def get(url: str, attempts: int = 4) -> Any:
     return None
 
 
-def wikidata_rows(query: str, *, scholarly: bool = False) -> list[dict]:
+def candidates(iris: list[str], *, scholarly: bool = False) -> list[dict]:
+    """The English label and description of each item, read through the rdfsolve client."""
+    records = wikidata.read(iris, scholarly=scholarly)
+    return [
+        {"iri": iri, "label": wikidata.first(getattr(records.get(iri), "label", None)), "description": wikidata.first(getattr(records.get(iri), "description", None))}
+        for iri in iris
+    ]
+
+
+def search_iris(term, limit, *, complete=False):
+    query = urllib.parse.urlencode({"action": "query", "list": "search", "srsearch": term, "srlimit": limit, "format": "json"})
+    response = get("https://www.wikidata.org/w/api.php?" + query)
+    if response is None or "error" in response or (complete and "continue" in response):
+        raise ValueError(f"Incomplete Wikidata search: {term}")
+    return ["http://www.wikidata.org/entity/" + row["title"] for row in response.get("query", {}).get("search", [])]
+
+
+def wikidata_search(term: str) -> list[dict]:
+    """The items that the full-text search of Wikidata finds, with their labels."""
     with _wikidata_lock:
-        return (SCHOLARLY if scholarly else WIKIDATA).select(query)["results"]["bindings"]
+        return candidates(search_iris(term, LIMIT))
 
 
-def candidate(row: dict) -> dict:
-    return {
-        "iri": row["item"]["value"],
-        "label": row.get("label", {}).get("value"),
-        "description": row.get("description", {}).get("value"),
-    }
+def by_identifier(prop: str, identifiers: list[str], *, scholarly: bool = False) -> dict[str, list[dict]]:
+    """The items whose property (P496, for example) has each identifier (a registered CURIE or an
+    IRI), found by rdfsolve."""
+    with _wikidata_lock:
+        found = wikidata.items(identifiers, prop, scholarly=scholarly)
+        return {identifier: candidates(iris, scholarly=scholarly) for identifier, iris in found.items() if iris}
 
 
-def wikidata(term: str) -> list[dict]:
-    """Items found by the full-text search of Wikidata, in the order of the search."""
-    rows = wikidata_rows(f"""SELECT ?item ?label ?description WHERE {{
-  SERVICE wikibase:mwapi {{
-    bd:serviceParam wikibase:api "Search"; wikibase:endpoint "www.wikidata.org";
-      mwapi:srsearch {json.dumps(term)}; mwapi:srlimit "{LIMIT}" .
-    ?title wikibase:apiOutput mwapi:title . ?rank wikibase:apiOrdinal true .
-  }}
-  BIND(IRI(CONCAT(STR(wd:), ?title)) AS ?item)
-  OPTIONAL {{ ?item rdfs:label ?label FILTER(LANG(?label) = "en") }}
-  OPTIONAL {{ ?item schema:description ?description FILTER(LANG(?description) = "en") }}
-}} ORDER BY ?rank""")
-    return [candidate(row) for row in rows]
-
-
-def by_identifier(prop: str, values: list[str], *, scholarly: bool = False) -> dict[str, list[dict]]:
-    """Exact Wikidata matches for identifiers that the CV already has."""
-    if not values:
-        return {}
-    listed = " ".join(json.dumps(v) for v in values)
-    rows = wikidata_rows(
-        f"SELECT ?value ?item ?label ?description WHERE {{ VALUES ?value {{ {listed} }} ?item wdt:{prop} ?value . "
-        'OPTIONAL { ?item rdfs:label ?label FILTER(LANG(?label) = "en") } '
-        'OPTIONAL { ?item schema:description ?description FILTER(LANG(?description) = "en") } }',
-        scholarly=scholarly,
-    )
-    found: dict[str, list[dict]] = {}
-    for row in rows:
-        found.setdefault(row["value"]["value"], []).append(candidate(row))
-    return found
+def by_statement(prop: str, values: list[str]) -> dict[str, list[dict]]:
+    """The items with a statement of the property with each value (for values of no registered
+    identifier scheme), found by the statement search of Wikidata."""
+    with _wikidata_lock:
+        found = {value: search_iris("haswbstatement:" + json.dumps(f"{prop}={value}"), LIMIT) for value in values}
+        return {value: candidates(iris) for value, iris in found.items() if iris}
 
 
 def ols(term: str, ontologies: str) -> list[dict]:
@@ -133,35 +112,22 @@ def issn(doi: str) -> list[str]:
     return (data or {}).get("message", {}).get("ISSN", [])
 
 
-SOURCES = {
-    "occupation": lambda t: {"esco": esco(t), "wikidata": wikidata(t)},
-    "organization": lambda t: {"ror": ror(t), "wikidata": wikidata(t)},
-    "place": lambda t: {"wikidata": wikidata(t)},
-    "language": lambda t: {"iso639-1": iso639(t.split("|")[1]), "wikidata": wikidata(t.split("|")[0] + " language")},
-    "skill": lambda t: {"ols": ols(t, "edam,swo"), "wikidata": wikidata(t)},
-    "taxon": lambda t: {"ols": ols(t, "ncbitaxon"), "wikidata": wikidata(t)},
-    "event": lambda t: {"wikidata": wikidata(t)},
-    "project": lambda t: {"wikidata": wikidata(t)},
-    "journal": lambda t: {"wikidata": wikidata(t)},
-    "degree": lambda t: {"wikidata": wikidata(t)},
-    "field": lambda t: {"ols": ols(t, "edam"), "wikidata": wikidata(t)},
-    "software": lambda t: {"wikidata": wikidata(t), "ols": ols(t, "swo")},
-}
+ONTOLOGIES = {"skill": "edam,swo", "taxon": "ncbitaxon", "field": "edam", "software": "swo"}
 
-SKILL_TERMS = [
-    "RDF", "OWL", "SPARQL", "SHACL", "VoID vocabulary", "LinkML", "ROBOT ontology tool", "Ontology Development Kit",
-    "RDFLib", "GraphDB", "Model Context Protocol", "SSSOM", "pandas software", "Polars dataframe", "Pydantic",
-    "Python programming language", "PyPI", "Sphinx documentation generator", "Flask web framework", "FastAPI",
-    "Vue.js", "JavaScript", "TypeScript", "Cytoscape.js", "pytest", "tox", "Ruff linter", "mypy", "GitHub Actions",
-    "GitLab CI", "Jenkins software", "Docker software", "Slurm Workload Manager", "knowledge graph",
-    "ontology engineering", "data integration", "identifier mapping", "R Shiny", "Power BI", "ELISA",
-    "RNA extraction", "BLAST", "SPSS", "R programming language",
-]
-# Organizations that are not in the CV yet, with their ROR identifiers.
-OTHER_ORGANIZATIONS = {"RECETOX": "032hzqh22", "Masaryk University": "02j46qs45"}
-DEGREES = ["Master of Science", "Bachelor of Science", "Doctor of Philosophy"]
-FIELDS = ["bioinformatics", "biotechnology"]
-OCCUPATIONS = ["doctoral researcher", "PhD candidate", "researcher", "research intern"]
+
+def search(job: tuple[str, str]) -> dict:
+    kind, term = job
+    if kind == "language":
+        name, code = term.split("|", 1)
+        return {"iso639-1": iso639(code), "wikidata": wikidata_search(name + " language")}
+    found = {"wikidata": wikidata_search(term)}
+    if kind == "organization":
+        found["ror"] = ror(term)
+    elif kind == "occupation":
+        found["esco"] = esco(term)
+    if kind in ONTOLOGIES:
+        found["ols"] = ols(term, ONTOLOGIES[kind])
+    return found
 
 
 def data(name: str) -> Any:
@@ -169,52 +135,51 @@ def data(name: str) -> Any:
 
 
 def inventory() -> dict[str, list[str]]:
-    """The terms to search, by kind of concept."""
+    """Search terms are taken from the configured content."""
     cv, events, publications = data("cv"), data("events"), data("publications")
     places = {o["location"] for o in cv["organizations"].values() if o.get("location")}
     places |= {e["location"] for e in events if e.get("location") and e["location"] != "Online"}
     places.add(f"{cv['person']['address']['locality']}, {cv['person']['address']['country']}")
     return {
-        "occupation": OCCUPATIONS,
-        "organization": sorted({o["name"] for o in cv["organizations"].values()} | set(OTHER_ORGANIZATIONS)),
+        "occupation": sorted({job["role"] for job in cv["experience"]}),
+        "organization": sorted({o["name"] for o in cv["organizations"].values()}),
         "place": sorted(p.split(",")[0] for p in places),
         "language": [f"{lang['name']}|{lang['code']}" for lang in cv["languages"]],
-        "skill": SKILL_TERMS,
+        "skill": sorted(cv["skill_terms"]),
         "taxon": sorted({t for e in cv["education"] for t in e.get("taxa", [])}),
         "event": sorted({e["name"] for e in events}),
         "project": sorted({p["name"] for p in cv["funded_projects"] + cv["communities"]}),
         "journal": sorted({p["journal"] for p in publications if p.get("journal")}),
-        "degree": DEGREES,
-        "field": FIELDS,
+        "degree": sorted({study["degree"] for study in cv["education"]}),
+        "field": sorted({study.get("field_name", study["field"]) for study in cv["education"]}),
         "software": sorted({s["name"] for s in cv["libraries"] + cv["contributions"] + cv["personal_tools"]}),
     }
 
 
 def exact_matches() -> dict:
-    """Wikidata items that have an identifier that the CV already gives."""
+    """Existing identifiers are matched against Wikidata."""
     cv, publications = data("cv"), data("publications")
     rors = [o["iri"].rsplit("/", 1)[1] for o in cv["organizations"].values() if o["iri"].startswith("https://ror.org/")]
-    rors += list(OTHER_ORGANIZATIONS.values())
     repositories = [s["repository"] for s in cv["libraries"] + cv["contributions"] + cv["personal_tools"] if s.get("repository")]
     dois = [p["doi"].upper() for p in publications if p.get("doi")]
     journals: dict[str, set[str]] = {}
     for pub in publications:
         if pub.get("journal") and pub.get("doi"):
             journals.setdefault(pub["journal"], set()).update(issn(pub["doi"]))
-    by_issn = by_identifier("P236", sorted({i for values in journals.values() for i in values}))
+    by_issn = by_identifier("P236", sorted({f"issn:{i}" for values in journals.values() for i in values}))
     taxa = {}
     for term in sorted({t for e in cv["education"] for t in e.get("taxa", [])}):
         match = next((d for d in OLS.search(term, ontology="ncbitaxon")), None)
         if match:
             taxa[term] = re.sub(r".*NCBITaxon_", "", match["iri"])
     return {
-        "person (ORCID, P496)": by_identifier("P496", [cv["person"]["orcid"]]),
-        "organizations (ROR, P6782)": by_identifier("P6782", rors),
-        "languages (ISO 639-1, P218)": by_identifier("P218", [lang["code"] for lang in cv["languages"]]),
-        "publications (DOI, P356)": by_identifier("P356", dois, scholarly=True),
-        "journals (ISSN, P236)": {j: [row for i in sorted(v) for row in by_issn.get(i, [])] for j, v in journals.items()},
+        "person (ORCID, P496)": by_identifier("P496", [f"orcid:{cv['person']['orcid']}"]),
+        "organizations (ROR, P6782)": by_identifier("P6782", [f"ror:{r}" for r in rors]),
+        "languages (ISO 639-1, P218)": by_statement("P218", [lang["code"] for lang in cv["languages"]]),
+        "publications (DOI, P356)": by_identifier("P356", [f"doi:{d}" for d in dois], scholarly=True),
+        "journals (ISSN, P236)": {j: [row for i in sorted(v) for row in by_issn.get(f"issn:{i}", [])] for j, v in journals.items()},
         "taxa (NCBI Taxonomy, P685)": {
-            **by_identifier("P685", list(taxa.values())),
+            **by_identifier("P685", [f"ncbitaxon:{t}" for t in taxa.values()]),
             **{f"{k} (NCBITaxon)": [{"iri": f"http://purl.obolibrary.org/obo/NCBITaxon_{v}"}] for k, v in taxa.items()},
         },
         "software (repository, P1324)": by_identifier("P1324", repositories),
@@ -224,7 +189,7 @@ def exact_matches() -> dict:
 def main() -> None:
     jobs = [(kind, term) for kind, terms in inventory().items() for term in terms]
     with ThreadPoolExecutor(max_workers=6) as pool:
-        results = list(pool.map(lambda job: SOURCES[job[0]](job[1]), jobs))
+        results = list(pool.map(search, jobs))
     report: dict = {"exact": exact_matches()}
     for (kind, term), found in zip(jobs, results, strict=True):
         report.setdefault(kind, {})[term.split("|")[0]] = {source: rows for source, rows in found.items() if rows}

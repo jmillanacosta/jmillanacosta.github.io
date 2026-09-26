@@ -1,31 +1,21 @@
-{%- comment -%}
-  A publication's authors as an ordered RDFa list (schema:author, inlist): all of them when there
-  are ten or fewer; otherwise the first three, this CV's subject, and the last, with the rest
-  carried as hidden list members so the graph keeps the full, ordered list. An author is
-  identified by ORCID, else by their Wikidata item.
-{%- endcomment -%}
-{%- assign a_list = include.authors -%}
-{%- assign a_long = a_list.size | minus: 10 -%}
-{%- assign a_last = a_list.size | minus: 1 -%}
-{%- assign a_shown_any = false -%}
-{%- assign a_gap = false -%}
-{%- for a in a_list -%}
-  {%- assign a_i = forloop.index0 -%}
-  {%- assign a_show = true -%}
-  {%- if a_long > 0 and a_i >= 3 and a_i != a_last and a.me == nil -%}{%- assign a_show = false -%}{%- endif -%}
-  {%- assign a_full = a.given | append: " " | append: a.family | strip -%}
-  {%- if a_show -%}
-    {%- if a_shown_any %}{% if a_gap %} … {% else %}, {% endif %}{% endif -%}
-    {%- if a.me -%}
-<span property="author" inlist resource="{{ me }}"><strong>{{ person.given_name | slice: 0 }}. {{ person.family_name | escape }}</strong></span>
-    {%- else -%}
-      {%- capture a_initials -%}{%- assign a_parts = a.given | replace: "-", " " | split: " " -%}{%- for part in a_parts -%}{{ part | slice: 0 }}.{% unless forloop.last %} {% endunless %}{%- endfor -%}{%- endcapture -%}
-<span property="author" inlist{% assign a_id = a.orcid | default: a.wikidata %}{% if a_id %} resource="{{ a_id }}"{% endif %} typeof="Person"><span property="name" content="{{ a_full | escape }}">{% if a_initials != "" %}{{ a_initials }} {% endif %}{{ a.family | escape }}</span></span>
-    {%- endif -%}
-    {%- assign a_shown_any = true -%}
-    {%- assign a_gap = false -%}
+{%- assign last_author = include.authors.size | minus: 1 -%}
+{%- assign shown_author = false -%}
+{%- assign author_gap = false -%}
+{%- for author in include.authors -%}
+  {%- if include.authors.size > 10 and forloop.index0 >= 3 and forloop.index0 != last_author and author.me == nil -%}
+    {%- assign author_gap = true -%}
   {%- else -%}
-<span property="author" inlist{% assign a_id = a.orcid | default: a.wikidata %}{% if a_id %} resource="{{ a_id }}"{% endif %} typeof="Person"><span property="name" content="{{ a_full | escape }}"></span></span>
-    {%- assign a_gap = true -%}
+    {%- if shown_author %}{% if author_gap %} … {% else %}, {% endif %}{% endif -%}
+    {%- assign given = author.given | replace: "-", " " | split: " " -%}
+    {%- capture author_label -%}
+      {%- for part in given -%}{{ part | slice: 0 }}. {% endfor -%}{{ author.family }}
+    {%- endcapture -%}
+    {%- assign author_name = author.given | append: " " | append: author.family | strip -%}
+    {%- assign author_iri = author.orcid | default: author.wikidata -%}
+    {%- if author.me %}<strong>{% endif -%}
+    {% include cv/name.html name=author_name label=author_label iri=author_iri type="Person" %}
+    {%- if author.me %}</strong>{% endif -%}
+    {%- assign shown_author = true -%}
+    {%- assign author_gap = false -%}
   {%- endif -%}
 {%- endfor -%}

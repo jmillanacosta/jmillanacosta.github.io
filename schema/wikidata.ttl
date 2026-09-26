@@ -1,0 +1,51 @@
+# The Wikidata properties that this site reads, with their Wikidata labels and value types.
+# rdfsolve generates typed records from this file (scripts/cvdata/wikidata.py). A property
+# with a code as name (wdt:P580) gives a field named by its label (start_time).
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix schema: <http://schema.org/> .
+@prefix wikibase: <http://wikiba.se/ontology#> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix ps: <http://www.wikidata.org/prop/statement/> .
+@prefix pq: <http://www.wikidata.org/prop/qualifier/> .
+
+wikibase:Item a rdfs:Class ; rdfs:label "item" .
+wikibase:Property a rdfs:Class ; rdfs:label "property" .
+wikibase:Statement a rdfs:Class ; rdfs:label "statement" .
+
+# Names
+rdfs:label a rdf:Property ; rdfs:domain wikibase:Item, wikibase:Property ; rdfs:range rdf:langString .
+skos:altLabel a rdf:Property ; rdfs:domain wikibase:Item ; rdfs:range rdf:langString .
+schema:description a rdf:Property ; rdfs:domain wikibase:Item ; rdfs:range rdf:langString .
+
+# Items
+wdt:P31 a rdf:Property ; rdfs:label "instance of" ; rdfs:domain wikibase:Item ; rdfs:range wikibase:Item .
+wdt:P179 a rdf:Property ; rdfs:label "part of the series" ; rdfs:domain wikibase:Item ; rdfs:range wikibase:Item .
+wdt:P580 a rdf:Property ; rdfs:label "start time" ; rdfs:domain wikibase:Item ; rdfs:range xsd:dateTime .
+wdt:P582 a rdf:Property ; rdfs:label "end time" ; rdfs:domain wikibase:Item ; rdfs:range xsd:dateTime .
+wdt:P664 a rdf:Property ; rdfs:label "organizer" ; rdfs:domain wikibase:Item ; rdfs:range wikibase:Item .
+wdt:P856 a rdf:Property ; rdfs:label "official website" ; rdfs:domain wikibase:Item ; rdfs:range rdfs:Resource .
+wdt:P921 a rdf:Property ; rdfs:label "main subject" ; rdfs:domain wikibase:Item ; rdfs:range wikibase:Item .
+wdt:P356 a rdf:Property ; rdfs:label "DOI" ; rdfs:domain wikibase:Item ; rdfs:range xsd:string .
+wdt:P496 a rdf:Property ; rdfs:label "ORCID iD" ; rdfs:domain wikibase:Item ; rdfs:range xsd:string .
+wdt:P2037 a rdf:Property ; rdfs:label "GitHub account" ; rdfs:domain wikibase:Item ; rdfs:range xsd:string .
+wdt:P5568 a rdf:Property ; rdfs:label "PyPI project" ; rdfs:domain wikibase:Item ; rdfs:range xsd:string .
+wdt:P8262 a rdf:Property ; rdfs:label "npm package" ; rdfs:domain wikibase:Item ; rdfs:range xsd:string .
+wdt:P9100 a rdf:Property ; rdfs:label "GitHub topic" ; rdfs:domain wikibase:Item ; rdfs:range xsd:string .
+wdt:P1709 a rdf:Property ; rdfs:label "equivalent class" ; rdfs:domain wikibase:Item ; rdfs:range rdfs:Resource .
+wdt:P2888 a rdf:Property ; rdfs:label "exact match" ; rdfs:domain wikibase:Item ; rdfs:range rdfs:Resource .
+p:P50 a rdf:Property ; rdfs:label "author statement" ; rdfs:domain wikibase:Item ; rdfs:range wikibase:Statement .
+
+# Statements (the authors of a work, with their positions)
+ps:P50 a rdf:Property ; rdfs:label "author" ; rdfs:domain wikibase:Statement ; rdfs:range wikibase:Item .
+pq:P1545 a rdf:Property ; rdfs:label "series ordinal" ; rdfs:domain wikibase:Statement ; rdfs:range xsd:string .
+
+# Properties
+wikibase:propertyType a rdf:Property ; rdfs:domain wikibase:Property ; rdfs:range rdfs:Resource .
+wikibase:directClaim a rdf:Property ; rdfs:domain wikibase:Property ; rdfs:range rdfs:Resource .
+wdt:P1647 a rdf:Property ; rdfs:label "subproperty of" ; rdfs:domain wikibase:Property ; rdfs:range wikibase:Property .
+wdt:P1628 a rdf:Property ; rdfs:label "equivalent property" ; rdfs:domain wikibase:Property ; rdfs:range rdfs:Resource .
+wdt:P1630 a rdf:Property ; rdfs:label "formatter URL" ; rdfs:domain wikibase:Property ; rdfs:range xsd:string .

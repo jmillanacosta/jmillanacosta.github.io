@@ -1,28 +1,22 @@
-"""Publications from ORCID, their authors from Crossref or DataCite, and who each author is."""
+"""Publications and author identities are collected from public records."""
 
 from __future__ import annotations
 
-import json
 import urllib.error
 import urllib.parse
 import urllib.request
-from collections import defaultdict
 
 import yaml
-from rdfsolve.sparql_helper import EndpointError
 
-from .config import DATA_DIR, EVENT_WORK_TYPES, ORCID_ID
+from . import wikidata
+from .config import DATA_DIR, EVENT_WORK_TYPES, ORCID_ID, TOPIC_SCORE
 from .files import write_yaml_list
 from .names import compatible, fold, full_name, is_me, names_fit
-from .net import Cache, fetch_json, wikidata_item, wikidata_rows
+from .net import Cache, fetch_json, fetch_optional
 
 
 def authors(doi: str) -> list[dict]:
-    """Ordered author list from Crossref, or DataCite for DOIs Crossref does not register.
-
-    Each author has given and family names, an ORCID IRI when the metadata has one, and `me` for this CV's
-    subject (matched by ORCID, else by name, since registries split family names inconsistently).
-    """
+    """Author order and names are kept as published by Crossref or DataCite."""
     rows: list[tuple[str, str, str | None]] = []
     try:
         message = fetch_json(f"https://api.crossref.org/works/{urllib.parse.quote(doi)}")["message"]
@@ -69,44 +63,29 @@ def orcid_names(orcid: str) -> list[str]:
 
 
 def wikidata_authorship(doi: str) -> list[dict]:
-    """The authors of a work on Wikidata, by position (P50 with P1545), each with the names of the
-    author item (labels and aliases) and its ORCID (P496). The work is in the scholarly graph of
-    Wikidata; the authors are in the main graph."""
-    qid = wikidata_item("P356", doi.upper(), scholarly=True)
-    if not qid:
+    """The authors of a work in Wikidata with their positions (author statements with a series
+    ordinal, best rank only), their names in all languages and their ORCID."""
+    iri, scholarly = wikidata.works([doi]).get(doi.upper(), (None, False))
+    work = wikidata.read([iri], scholarly=scholarly).get(iri) if iri else None
+    if work is None:
         return []
-    rows = wikidata_rows(
-        f"SELECT ?author ?position WHERE {{ wd:{qid} p:P50 ?statement . "
-        "?statement a wikibase:BestRank; ps:P50 ?author; pq:P1545 ?position }",
-        scholarly=True,
-    )
-    positioned = {row["author"]: int(row["position"]) for row in rows if row["position"].isdigit()}
-    authors = {item: {"item": item, "position": position, "names": set(), "orcid": None} for item, position in positioned.items()}
-    ids = sorted(authors)
-    for start in range(0, len(ids), 50):
-        values = " ".join(f"<{item}>" for item in ids[start : start + 50])
-        for row in wikidata_rows(
-            f"SELECT ?author ?name ?orcid WHERE {{ VALUES ?author {{ {values} }} "
-            "{ ?author rdfs:label|skos:altLabel ?name } UNION { ?author wdt:P496 ?orcid } }"
-        ):
-            author = authors[row["author"]]
-            author["names"] |= {row["name"]} if "name" in row else set()
-            if "orcid" in row:
-                author["orcid"] = min(filter(None, [author["orcid"], f"https://orcid.org/{row['orcid']}"]))
-    return [{**a, "names": sorted(a["names"])} for a in sorted(authors.values(), key=lambda a: a["item"])]
+    authors = {}
+    for statement in wikidata.read(work.author_statement, "Statement", scholarly=scholarly).values():
+        if str(wikidata.WIKIBASE.BestRank) not in statement.rdf_type:
+            continue
+        for author in statement.author:
+            for position in statement.series_ordinal:
+                if str(position).isdigit():
+                    authors[str(author)] = {"item": str(author), "position": int(position), "names": [], "orcid": None}
+    for iri, person in wikidata.read(authors, languages=()).items():
+        authors[iri]["names"] = sorted({*map(str, person.label), *map(str, person.alt_label)})
+        if person.orcid_id:
+            authors[iri]["orcid"] = f"https://orcid.org/{wikidata.first(person.orcid_id)}"
+    return sorted(authors.values(), key=lambda author: author["item"])
 
 
 def reconcile_authors(rows: list[dict], refresh: bool = False) -> None:
-    """ORCID is the source of truth for who an author is. An author listed without one is
-    identified, in order, by:
-    1. the ORCID record of someone who claims the work and whose name fits (only if one fits);
-    2. the work's authorship on Wikidata, by position, when the name there fits: the author
-       item's ORCID, or the item itself when it has none;
-    3. the ORCID of the one identified co-author with the same full name (however it is split),
-       or the same family name and a compatible given name.
-    How each was identified is kept (`via`). Names are left as each source gives them; the shared
-    identifier, not a rewritten name, says they are one person. The one exception is this CV's
-    subject, whose name is split as cv.yml gives it (registries split names inconsistently)."""
+    """Missing identifiers are matched by ORCID claims, Wikidata authorship, then co-author names."""
     person = yaml.safe_load((DATA_DIR / "cv.yml").read_text(encoding="utf-8"))["person"]
     cache = Cache(refresh)
     me = f"https://orcid.org/{ORCID_ID}"
@@ -122,10 +101,10 @@ def reconcile_authors(rows: list[dict], refresh: bool = False) -> None:
         if not row.get("doi") or not unidentified(row):
             continue
         claimed = {a.get("orcid") for a in row["authors"]}
-        for orcid in cache.get(f"orcid-claimants:{row['doi'].lower()}", lambda doi=row["doi"]: orcid_claimants(doi)):
+        for orcid in cache.get(f"orcid-claimants:{row['doi'].lower()}", orcid_claimants, row["doi"]):
             if orcid in claimed:
                 continue
-            names = cache.get(f"orcid-names:{orcid}", lambda orcid=orcid: orcid_names(orcid))
+            names = cache.get(f"orcid-names:{orcid}", orcid_names, orcid)
             fits = [a for a in unidentified(row) if any(names_fit(a.get("given", ""), a["family"], n) for n in names)]
             if len(fits) == 1:
                 fits[0]["orcid"], fits[0]["via"] = orcid, "ORCID record claims this work"
@@ -133,7 +112,7 @@ def reconcile_authors(rows: list[dict], refresh: bool = False) -> None:
         if not unidentified(row):
             continue
         listed = row["authors"]
-        for entry in cache.get(f"wikidata-work:{row['doi'].lower()}", lambda doi=row["doi"]: wikidata_authorship(doi)):
+        for entry in cache.get(f"wikidata-work:{row['doi'].lower()}", wikidata_authorship, row["doi"]):
             index = entry["position"] - 1
             if not 0 <= index < len(listed):
                 continue
@@ -174,23 +153,27 @@ def reconcile_authors(rows: list[dict], refresh: bool = False) -> None:
 
 
 def add_subjects(rows: list[dict]) -> None:
-    dois = " ".join(json.dumps(r["doi"].upper()) for r in rows if r.get("doi"))
-    query = f"""SELECT ?doi ?subject ?name WHERE {{
-  VALUES ?doi {{ {dois} }}
-  ?work wdt:P356 ?doi; wdt:P921 ?subject .
-  ?subject rdfs:label ?name FILTER(LANG(?name) = "en")
-}}"""
-    found: dict[str, dict[str, str]] = defaultdict(dict)
+    """The Wikidata item and main subjects of each work with a DOI."""
+    works = wikidata.works(row["doi"] for row in rows if row.get("doi"))
+    records = {}
     for scholarly in (False, True):
-        try:
-            for r in wikidata_rows(query, scholarly=scholarly):
-                found[r["doi"]][r["subject"]] = r["name"]
-        except EndpointError:
-            continue
+        records.update(wikidata.read((iri for iri, graph in works.values() if graph == scholarly), scholarly=scholarly))
     for row in rows:
-        listed = found.get((row.get("doi") or "").upper())
-        if listed:
-            row["subjects"] = [{"iri": iri, "name": name} for iri, name in sorted(listed.items(), key=lambda x: x[1].casefold())]
+        iri, _ = works.get((row.get("doi") or "").upper(), (None, False))
+        if iri:
+            row["wikidata"] = iri
+            subjects = wikidata.names(records[iri].main_subject) if iri in records else []
+            if subjects:
+                row["subjects"] = subjects
+
+
+def add_topics(rows: list[dict]) -> None:
+    """The OpenAlex topics of each work with a DOI, from the configured score."""
+    for row in rows:
+        work = fetch_optional(f"https://api.openalex.org/works/doi:{row['doi']}?select=topics") if row.get("doi") else None
+        topics = [{"iri": t["id"], "name": t["display_name"]} for t in (work or {}).get("topics", []) if t["score"] >= TOPIC_SCORE]
+        if topics:
+            row["topics"] = topics
 
 
 def update_publications(works: dict) -> None:
@@ -240,5 +223,6 @@ def update_publications(works: dict) -> None:
     rows.sort(key=lambda r: r.get("year") or "0", reverse=True)
     reconcile_authors(rows)
     add_subjects(rows)
+    add_topics(rows)
     write_yaml_list(DATA_DIR / "publications.yml", rows)
     print(f"publications.yml: {len(rows)} works ({orcid_count} from ORCID, {len(rows) - orcid_count} manually tracked)")

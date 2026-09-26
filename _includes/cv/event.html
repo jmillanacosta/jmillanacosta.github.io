@@ -1,0 +1,16 @@
+{%- assign event = include.event -%}
+{%- assign event_name = event.name | append: " " | append: event.year -%}
+{%- assign event_label = event_name -%}
+{%- if include.compact -%}{%- assign event_label = event.name -%}{%- endif -%}
+{%- if event.url %}<a href="{{ event.url | escape }}">{% endif -%}
+{% include cv/name.html name=event_name label=event_label iri=event.iri type="Event" %}
+{%- if event.url %}</a>{% endif -%}
+{%- if event.location -%}
+  {%- if include.compact %}<span class="almanac-place">, {% else %} ({% endif -%}
+  {%- if event.location == "Online" -%}
+    {%- if include.compact %}online{% else %}Online{% endif -%}
+  {%- else -%}
+    {% assign include_iri = cv.places[event.location] %}{% include cv/name.html name=event.location iri=include_iri type="Place" %}
+  {%- endif -%}
+  {%- if include.compact %}</span>{% else %}){% endif -%}
+{%- endif -%}

@@ -1,0 +1,2 @@
+{%- if include.event.recording %} · <a href="{{ include.event.recording | escape }}">video</a>{% endif -%}
+{%- if include.event.funder %} · <span class="event-funding">{{ include.event.funding_note | escape }} {% include cv/org.html key=include.event.funder %}</span>{% endif -%}

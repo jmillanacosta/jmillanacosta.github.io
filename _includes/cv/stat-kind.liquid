@@ -1,6 +1,0 @@
-{%- assign sk = site.data.stat_kinds | where: "id", include.kind | first -%}
-{%- assign sk_period = include.stats.downloads_period | replace: "-", " " -%}
-{%- assign stat_name = sk.name | replace: "{$period}", sk_period -%}
-{%- assign stat_label = sk.label | replace: "{$period}", sk_period -%}
-{%- assign stat_type = sk.type -%}
-{%- assign stat_source = include.stats[sk.source] -%}

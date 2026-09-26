@@ -1,0 +1,24 @@
+- iri: http://www.wikidata.org/entity/Q130642470
+  start: '2024-11-04'
+  end: '2024-11-08'
+  url: https://biohackathon-europe.org/
+  series: http://www.wikidata.org/entity/Q109379759
+  organizers:
+  - iri: http://www.wikidata.org/entity/Q12269561
+    name: ELIXIR
+  series_name: BioHackathon Europe
+- iri: http://www.wikidata.org/entity/Q131822746
+  start: '2025-11-03'
+  end: '2025-11-07'
+  series: http://www.wikidata.org/entity/Q109379759
+  organizers:
+  - iri: http://www.wikidata.org/entity/Q12269561
+    name: ELIXIR
+  series_name: BioHackathon Europe
+- iri: http://www.wikidata.org/entity/Q138033548
+  start: '2025-02-24'
+  end: '2025-02-27'
+  url: https://www.swat4ls.org/workshops/barcelona2025/
+  series: http://www.wikidata.org/entity/Q56846035
+  organizers: []
+  series_name: Semantic Web Applications and Tools for Healthcare and Life Sciences

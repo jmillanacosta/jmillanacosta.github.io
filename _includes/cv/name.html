@@ -1,0 +1,5 @@
+{%- assign name_key = include.iri -%}
+{%- unless name_key -%}
+  {%- capture name_key -%}b:{{ include.type }}|{{ include.name }}{%- endcapture -%}
+{%- endunless -%}
+<span data-concept="{{ name_key | escape }}">{{ include.label | default: include.name | escape }}</span>

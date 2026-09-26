@@ -1,21 +1,7 @@
-"""Check every IRI in the published graphs: no IRI is minted, every IRI resolves, and each
-Wikidata item has the name that the CV gives it.
-
-Run after scripts/build-rdf.py. The graphs under output/rdf are read, or the files given as
-arguments. Network access is necessary, so this check runs locally and in the weekly data
-workflow, not on every deploy.
-
-Rules:
-- The only IRIs of this site are its pages and their files. A fragment of a page (for example
-  /#org-x) is a minted identifier and fails.
-- Every other subject or object IRI must dereference (HTTP status below 400 after redirects).
-- A Wikidata item with a schema:name must have that name (or a close variant) as a label or an
-  alias, in any language. Differences are listed for review.
-"""
+"""Published identifiers are checked for working links and matching Wikidata names."""
 
 import json
 import re
-import socket
 import sys
 import threading
 import time
@@ -27,7 +13,8 @@ from pathlib import Path
 
 import pyoxigraph as ox
 import yaml
-from rdfsolve.sparql_helper import SparqlHelper
+from cvdata import wikidata
+from cvdata import net  # Shared HTTP settings.
 
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG = yaml.safe_load((ROOT / "_config.yml").read_text(encoding="utf-8"))
@@ -50,8 +37,6 @@ BOT_BLOCKING = ("www.linkedin.com",)
 VOCABULARY = ("https://schema.org/", "http://xmlns.com/foaf/", "http://purl.org/dc/", "http://www.w3.org/")
 _wikidata_lock = threading.Lock()
 
-_getaddrinfo = socket.getaddrinfo
-socket.getaddrinfo = lambda *args, **kwargs: [r for r in _getaddrinfo(*args, **kwargs) if r[0] == socket.AF_INET] or _getaddrinfo(*args, **kwargs)
 
 
 def status(iri: str) -> int | str:
@@ -106,17 +91,11 @@ def fetch_status(iri: str) -> int | str:
 
 def wikidata_names(items: list[str]) -> dict[str, set[str]]:
     """The labels and aliases of Wikidata items, in all languages, in lower case."""
-    names: dict[str, set[str]] = {item: set() for item in items}
-    with SparqlHelper("https://query.wikidata.org/sparql", user_agent=AGENT, timeout=60) as wikidata:
-        for start in range(0, len(items), 50):
-            values = " ".join(f"<{item}>" for item in items[start : start + 50])
-            query = (
-                "SELECT ?item ?name WHERE { VALUES ?item { " + values + " } "
-                "?item <http://www.w3.org/2000/01/rdf-schema#label>|<http://www.w3.org/2004/02/skos/core#altLabel> ?name }"
-            )
-            for row in wikidata.select(query)["results"]["bindings"]:
-                names[row["item"]["value"]].add(row["name"]["value"].casefold())
-    return names
+    records = wikidata.read(items, languages=())
+    return {
+        item: {str(name).casefold() for name in (*getattr(records.get(item), "label", []), *getattr(records.get(item), "alt_label", []))}
+        for item in items
+    }
 
 
 def matches(name: str, known: set[str]) -> bool:

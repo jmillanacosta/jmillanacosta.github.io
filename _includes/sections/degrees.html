@@ -1,20 +1,9 @@
-{%- comment -%}
-  Degrees: the study period (schema:alumniOf OrganizationRole) and the credential awarded. Exchanges
-  during a degree (edu.exchanges) are study periods at another organization, stated without visible
-  text since the degree's description mentions them.
-{%- endcomment -%}
-    {%- for edu in cv.education %}
-    {%- include cv/datatype.liquid value=edu.end %}
-    <span hidden property="hasCredential" typeof="EducationalOccupationalCredential"><span property="name" content="{{ edu.degree | escape }}"></span><span property="credentialCategory" resource="{{ edu.degree_type }}"></span><span property="about" resource="{{ edu.field }}"></span><span property="recognizedBy" resource="{{ orgs[edu.organization].iri }}"></span><span property="dateCreated" datatype="{{ datatype }}" content="{{ edu.end }}"></span></span>
-    <article class="cv-entry" property="alumniOf" typeof="OrganizationRole">
-      <header class="entry-heading">
-        <div><h3 property="roleName" content="{{ edu.degree | escape }}">{{ edu.degree | escape }}</h3><p class="entry-organization">{% include cv/org.html key=edu.organization property="alumniOf" %}</p></div>
-        {%- include cv/datatype.liquid value=edu.start %}
-        <p class="entry-date"><time property="startDate" datatype="{{ datatype }}" content="{{ edu.start }}" datetime="{{ edu.start }}">{% include cv/month.html value=edu.start %}</time> – {% include cv/datatype.liquid value=edu.end %}<time property="endDate" datatype="{{ datatype }}" content="{{ edu.end }}" datetime="{{ edu.end }}">{% include cv/month.html value=edu.end %}</time></p>
-      </header>
-      <p property="description" content="{{ edu.description | strip | escape }}">{% include cv/text.html text=edu.description taxa=edu.taxa %}</p>
-    </article>
-    {%- for ex in edu.exchanges %}
-    <span hidden property="alumniOf" typeof="OrganizationRole"><span property="roleName" content="{{ ex.role | escape }}"></span>{% if ex.start %}{% include cv/datatype.liquid value=ex.start %}<span property="startDate" datatype="{{ datatype }}" content="{{ ex.start }}"></span>{% endif %}{% if ex.end %}{% include cv/datatype.liquid value=ex.end %}<span property="endDate" datatype="{{ datatype }}" content="{{ ex.end }}"></span>{% endif %}{% include cv/org.html key=ex.organization property="alumniOf" %}</span>
-    {%- endfor %}
-    {%- endfor %}
+{%- for edu in cv.education %}
+<article class="cv-entry">
+  <header class="entry-heading">
+    <div><h3>{{ edu.degree | escape }}</h3><p class="entry-organization">{% include cv/org.html key=edu.organization %}</p></div>
+    <p class="entry-date">{% include cv/dates.html start=edu.start end=edu.end %}</p>
+  </header>
+  <p>{% include cv/text.html text=edu.description taxa=edu.taxa %}</p>
+</article>
+{%- endfor %}

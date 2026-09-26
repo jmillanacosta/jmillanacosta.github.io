@@ -1,6 +1,3 @@
-{%- comment -%}
-  The publications describing a software entry (schema:subjectOf), each cited compactly.
-{%- endcomment -%}
-{%- for pp_doi in include.item.publications -%}
-{% include cv/paper.html doi=pp_doi property="subjectOf" compact=true %}
+{%- for doi in include.item.publications -%}
+{% include cv/paper.html doi=doi compact=true %}
 {%- endfor -%}

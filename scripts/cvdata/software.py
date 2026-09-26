@@ -1,4 +1,4 @@
-"""Package versions and usage figures for the listed software."""
+"""Package versions, repository metadata and usage figures."""
 
 from __future__ import annotations
 
@@ -6,12 +6,15 @@ import json
 import re
 import tomllib
 import urllib.error
+from pathlib import PurePosixPath
 
 import yaml
 
 from .config import DATA_DIR
 from .files import write_yaml_list
-from .net import WD, fetch_json, fetch_optional, github, github_raw, github_repo, items, live, wikidata_rows
+from . import wikidata
+from .net import Cache, fetch_json, fetch_optional, github, github_raw, github_repo, live
+from .wikidata import WD
 
 MANIFESTS = ("pyproject.toml", "package.json", "requirements.txt")
 EVIDENCE = {"programmingLanguage": "languages", "softwareRequirements": "packages", "about": "topics"}
@@ -75,25 +78,35 @@ def normal(name: str) -> str:
     return re.sub(r"[-_.\s]+", "-", name).lower()
 
 
+def skill_identifiers(iris):
+    """The PyPI projects, npm packages and GitHub topics that Wikidata gives for skills."""
+    rows = []
+    for iri, record in wikidata.read(iris).items():
+        for scheme, values in (("pypi", record.pypi_project), ("npm", record.npm_package), ("topic", record.github_topic)):
+            rows += [{"item": iri, "scheme": scheme, "value": str(value)} for value in sorted(values)]
+    return rows
+
+
 def skill_keys(cv: dict) -> dict[str, set[str]]:
-    terms = {iri.removeprefix(WD): name for name, iri in cv.get("skill_terms", {}).items() if iri.startswith(WD)}
-    rows = wikidata_rows(f"""SELECT ?item ?scheme ?value WHERE {{
-  VALUES ?item {{ {items(sorted(terms))} }}
-  VALUES (?direct ?scheme) {{ (wdt:P5568 "pypi") (wdt:P8262 "npm") (wdt:P9100 "topic") }}
-  ?item ?direct ?value
-}}""")
-    keys: dict[str, set[str]] = {}
+    terms = {iri: name for name, iri in cv.get("skill_terms", {}).items() if iri.startswith(WD)}
+    cache = Cache()
+    rows = cache.get("skill-identifiers:" + "|".join(sorted(terms)), skill_identifiers, tuple(sorted(terms)))
+    cache.save()
+    keys = {f"topic:{normal(name)}": {name} for name in cv.get("skill_terms", {})}
     for r in rows:
-        keys.setdefault(f"{r['scheme']}:{normal(r['value'])}", set()).add(terms[r["item"].removeprefix(WD)])
+        keys.setdefault(f"{r['scheme']}:{normal(r['value'])}", set()).add(terms[r["item"]])
     return keys
 
 
 def packages(repo: str, path: str) -> list[str]:
-    text = github_raw(repo, path) or ""
-    if path == "package.json":
+    text = github_raw(repo, path)
+    if text is None:
+        raise ValueError(f"Could not read {repo}/{path}")
+    name = PurePosixPath(path).name
+    if name == "package.json":
         data = json.loads(text or "{}")
         return [f"npm:{name}" for key in ("dependencies", "devDependencies", "peerDependencies", "optionalDependencies") for name in data.get(key) or {}]
-    if path == "pyproject.toml":
+    if name == "pyproject.toml":
         data = tomllib.loads(text)
         project = data.get("project", {})
         groups = [*project.get("optional-dependencies", {}).values(), *data.get("dependency-groups", {}).values()]
@@ -106,17 +119,31 @@ def packages(repo: str, path: str) -> list[str]:
 def repository(repo: str) -> dict:
     info = github(f"/repos/{repo}")
     owner = github(f"/users/{info['owner']['login']}")
+    tree = github(f"/repos/{repo}/git/trees/{info['default_branch']}?recursive=1")
+    if tree.get("truncated"):
+        raise ValueError(f"Incomplete file listing for {repo}")
+    paths = []
+    for entry in tree["tree"]:
+        path = PurePosixPath(entry["path"])
+        if entry["type"] == "blob" and not {"node_modules", "vendor", ".venv"}.intersection(path.parts):
+            paths.append(path)
+    requirements = [package for path in paths if path.name in MANIFESTS for package in packages(repo, str(path))]
+    if any(path.name == "Dockerfile" or path.name.startswith("Dockerfile.") for path in paths):
+        requirements.append("topic:Docker")
+    if any(path.parts[:2] == (".github", "workflows") and path.suffix in (".yml", ".yaml") for path in paths):
+        requirements.append("topic:GitHub Actions")
     blog = (owner.get("blog") or "").strip()
     return {
         "owner": owner["html_url"],
         "owner_website": blog if not blog or blog.startswith("http") else f"https://{blog}",
         "languages": [f"topic:{language}" for language in github(f"/repos/{repo}/languages")],
         "topics": [f"topic:{topic}" for topic in info.get("topics", [])],
-        "packages": [package for path in MANIFESTS for package in packages(repo, path)],
+        "packages": requirements,
     }
 
 
-def update_repositories(cv: dict) -> None:
+def update_repositories(cv: dict, refresh: bool = False) -> None:
+    cache = Cache(refresh)
     keys = skill_keys(cv)
     rows = []
     for item in [*cv.get("libraries", []), *cv.get("contributions", []), *cv.get("personal_tools", [])]:
@@ -124,19 +151,15 @@ def update_repositories(cv: dict) -> None:
         if not repo:
             continue
         try:
-            found = repository(repo)
+            found = cache.get(f"repository:{repo}", repository, repo)
         except (urllib.error.URLError, TimeoutError, ValueError) as error:
-            print(f"  skipped the repository {repo}: {error}")
-            continue
+            raise RuntimeError(f"Could not fetch {repo}; repositories.yml was not changed") from error
         skills = {
             field: sorted({name for key in found[evidence] for name in keys.get(normal(key), ())})
             for field, evidence in EVIDENCE.items()
         }
         rows.append({k: v for k, v in {"id": item["id"], "owner": found["owner"], "owner_website": found["owner_website"], **skills}.items() if v})
-    (DATA_DIR / "repositories.yml").write_text(
-        "# Written by scripts/update_cv_data.py: the owner of each listed repository, and the skills\n"
-        "# (cv.yml skill_terms) its languages, topics and packages name, by the identifiers Wikidata gives.\n"
-        + yaml.safe_dump(rows, allow_unicode=True, sort_keys=False, width=100),
-        encoding="utf-8",
-    )
+    write_yaml_list(DATA_DIR / "repositories.yml", rows)
+    cache.save()
+
     print(f"repositories.yml: owners and skills of {len(rows)} repositories")

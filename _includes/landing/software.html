@@ -1,20 +1,17 @@
-{%- comment -%}Landing: libraries I maintain, then shared projects I contribute to, in the same grid.{%- endcomment -%}
 <section class="cv-section lp-section" aria-labelledby="open-source-software">
   <h2 id="open-source-software"><a class="section-title" href="#open-source-software">Software I maintain</a></h2>
   <div class="section-body">
     <ul class="works">
-      {%- assign own_software = cv.libraries | concat: cv.personal_tools %}
-      {%- for item in own_software %}
-      {%- assign item_stats = stats | where: "id", item.id | first %}
-      {%- assign pkg = nil %}{% if item.package %}{% assign pkg = site.data.software | where: "name", item.package | first %}{% endif %}
-      {%- assign work_text = item.description | strip | escape %}
-      <li class="work" resource="{{ item.iri }}" typeof="SoftwareSourceCode">
-        {%- assign own_site = false %}{% if item.url and item.url != item.repository %}{% assign own_site = true %}{% endif %}
-        <a class="work-name" property="{% if own_site %}url{% else %}codeRepository{% if item.url %} url{% endif %}{% endif %}" href="{% if own_site %}{{ item.url }}{% else %}{{ item.repository }}{% endif %}"><span property="name" content="{{ item.name | escape }}">{{ item.name | escape }}</span></a>
-        <p class="work-text" property="description" content="{{ work_text }}">{{ work_text | slice: 0 | upcase }}{{ work_text | slice: 1, 1000 }}</p>
-        <p class="work-meta">{% if pkg %}<a property="downloadUrl" href="{{ pkg.pypi_url }}">PyPI</a><span property="softwareVersion" content="{{ pkg.version }}"></span>{% else %}<a{% if own_site %} property="codeRepository"{% endif %} href="{{ item.repository }}">GitHub</a>{% endif %}{% if pkg.docs %} · <a property="softwareHelp" href="{{ pkg.docs }}">docs</a>{% endif %}{% if item.docs %} · <a property="softwareHelp" href="{{ item.docs }}">tutorial</a>{% endif %}{% include cv/papers.html item=item %}{% include cv/stats.html stats=item_stats %}<span property="author" resource="{{ me }}"></span></p>
+      {% assign own_software = cv.libraries | concat: cv.personal_tools %}
+      {% for item in own_software %}
+      {% assign item_stats = stats | where: "id", item.id | first %}
+      {% assign package = site.data.software | where: "name", item.package | first %}
+      <li class="work">
+        <a class="work-name" href="{{ item.url | default: item.repository }}">{% include cv/name.html name=item.name iri=item.iri type="SoftwareSourceCode" %}</a>
+        <p class="work-text">{% include cv/capfirst.liquid text=item.description mentions=item.mentions %}{% include cv/text.html text=cap_text mentions=item.mentions %}</p>
+        <p class="work-meta">{% if package %}<a href="{{ package.pypi_url }}">PyPI</a>{% else %}<a href="{{ item.repository }}">GitHub</a>{% endif %}{% if package.docs %} · <a href="{{ package.docs }}">docs</a>{% endif %}{% if item.docs %} · <a href="{{ item.docs }}">tutorial</a>{% endif %}{% include cv/papers.html item=item %}{% include cv/stats.html stats=item_stats %}</p>
       </li>
-      {%- endfor %}
+      {% endfor %}
     </ul>
   </div>
 </section>
@@ -22,17 +19,15 @@
   <h2 id="contributions"><a class="section-title" href="#contributions">Software contributions</a> </h2>
   <div class="section-body">
     <ul class="works">
-      {%- for item in cv.contributions %}
-      {%- assign item_stats = stats | where: "id", item.id | first %}
-      <li class="work" resource="{{ item.iri }}" typeof="SoftwareSourceCode">
-        <a class="work-name" property="url" href="{{ item.url }}"><span property="name" content="{{ item.name | escape }}">{{ item.name | escape }}</span></a>
-        <p class="work-text" property="contributor" typeof="Role"><span property="contributor" resource="{{ me }}"></span>{% include cv/capfirst.liquid text=item.description mentions=item.mentions %}<span property="description" content="{{ item.description | strip | escape }}">{% include cv/text.html text=cap_text mentions=item.mentions %}</span></p>
-        <p class="work-meta">{% if item.repository %}<a property="codeRepository" href="{{ item.repository }}">GitHub</a>{% endif %}{% if item.doi %}{% if item.repository %} · {% endif %}<a property="{{ item.doi_relation | default: 'sameAs' }}" href="https://doi.org/{{ item.doi }}">Zenodo</a>{% endif %}{% include cv/papers.html item=item %}{% include cv/stats.html stats=item_stats %}</p>
+      {% for item in cv.contributions %}
+      {% assign item_stats = stats | where: "id", item.id | first %}
+      <li class="work">
+        <a class="work-name" href="{{ item.url }}">{% include cv/name.html name=item.name iri=item.iri type="SoftwareSourceCode" %}</a>
+        <p class="work-text">{% include cv/capfirst.liquid text=item.description mentions=item.mentions %}{% include cv/text.html text=cap_text mentions=item.mentions %}</p>
+        <p class="work-meta">{% if item.repository %}<a href="{{ item.repository }}">GitHub</a>{% endif %}{% if item.doi %}{% if item.repository %} · {% endif %}<a href="https://doi.org/{{ item.doi }}">Zenodo</a>{% endif %}{% include cv/papers.html item=item %}{% include cv/stats.html stats=item_stats %}</p>
       </li>
-      {%- endfor %}
+      {% endfor %}
     </ul>
-    <p class="works-more"><a class="button"
-      href="https://github.com/search?q=is%3Apr+author%3A{{ github_login }}+is%3Amerged+-user%3A{{ github_login }}&amp;type=pullrequests">All merged
-          pull requests in other projects</a></p>
+    <p class="works-more"><a class="button" href="https://github.com/search?q=is%3Apr+author%3A{{ github_login }}+is%3Amerged+-user%3A{{ github_login }}&amp;type=pullrequests">All merged pull requests in other projects</a></p>
   </div>
 </section>

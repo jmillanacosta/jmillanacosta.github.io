@@ -1,8 +1,4 @@
-"""The shapes of the RDF data of this site.
-
-The published vocabularies below and schema/extensions.ttl are read by rdfsolve. Each class in
-CLASSES becomes a typed model. To use one more class, add its name to CLASSES.
-"""
+"""Typed records are generated from published vocabularies and local extensions."""
 
 import urllib.request
 from pathlib import Path
@@ -33,10 +29,7 @@ CLASSES = [
 
 
 def vocabularies() -> list[Path]:
-    """The files of the published vocabularies and of the extensions of this site.
-
-    A vocabulary is downloaded once into scripts/cache.
-    """
+    """Published vocabularies are cached locally."""
     for name, url in VOCABULARIES.items():
         if not (CACHE / name).exists():
             CACHE.mkdir(parents=True, exist_ok=True)
@@ -50,5 +43,5 @@ def shapes() -> MinedSchema:
 
 
 def models() -> Client:
-    """A client that writes records of the shapes. Each record is checked against the shapes."""
+    """Records are checked against the generated rdfsolve models."""
     return Client(shapes(), contract=True)

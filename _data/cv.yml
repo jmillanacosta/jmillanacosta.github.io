@@ -11,7 +11,7 @@ person:
     locality: Maastricht
     country: Netherlands
   description: >-
-    I work on software that makes biomedical data interoperable: schema and identifier reconciliation across databases and their releases to improve access to services and the tools we build with them.
+    I work on software that makes biomedical data interoperable, mainly through schema and identifier reconciliation across databases and their releases to improve access to services and the tools we build with them. I am interested in the (agentic) automation and evalutation of interoperability workflows for biomedical data.
   profiles:
     - label: ORCID
       url: https://orcid.org/0000-0002-4166-7093
@@ -40,6 +40,21 @@ person:
   same_as:
     - http://www.wikidata.org/entity/Q116446553
 organizations:
+  recetox:
+    type: ResearchOrganization
+    name: RECETOX
+    iri: https://ror.org/032hzqh22
+    url: https://www.recetox.muni.cz/en
+    location: Brno, Czech Republic
+    parent: masaryk
+    same_as: [http://www.wikidata.org/entity/Q36877336]
+  masaryk:
+    type: CollegeOrUniversity
+    name: Masaryk University
+    iri: https://ror.org/02j46qs45
+    url: https://www.muni.cz/en
+    location: Brno, Czech Republic
+    same_as: [http://www.wikidata.org/entity/Q763586]
   um:
     type: CollegeOrUniversity
     name: Maastricht University
@@ -164,7 +179,10 @@ libraries:
     package: rdfsolve
     description:
       RDF schema discovery and conversion, typed Python clients, and SPARQL execution with batching,
-      retries, and query provenance.
+      retries, and query provenance. Used to build the linked data used for this site (see https://github.com/jmillanacosta/jmillanacosta.github.io).
+    mentions:
+      - text: https://github.com/jmillanacosta/jmillanacosta.github.io
+        url: https://github.com/jmillanacosta/jmillanacosta.github.io
     iri: https://github.com/jmillanacosta/rdfsolve
   - id: pysec2pri
     name: pysec2pri
@@ -257,6 +275,15 @@ contributions:
     publications:
       - 10.1093/bioinformatics/btag064
       - 10.24406/publica-8969
+  - id: biodatafuse-ui
+    name: biodatafuseUI
+    url: https://github.com/BioDataFuse/biodatafuseUI
+    repository: https://github.com/BioDataFuse/biodatafuseUI
+    description: contributed to the BioDataFuse API and Vue interface, especially the RDF, GraphDB and neo4j export APIs pages.
+    mentions:
+      - text: BioDataFuse
+        url: https://github.com/BioDataFuse/pyBiodatafuse
+    iri: https://github.com/BioDataFuse/biodatafuseUI
   - id: vhp4safety-platform
     name: VHP4Safety Virtual Human Platform
     url: https://platform.vhp4safety.nl

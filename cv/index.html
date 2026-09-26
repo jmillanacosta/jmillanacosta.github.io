@@ -13,12 +13,8 @@ sections:
   - { id: languages, label: Languages }
 graph: [description, roles, projects, communities, software, contributions, publications, cv-events, teaching, credentials, education, skills, languages]
 ---
-{%- comment -%}
-  Rendered from _data (see _data/cv.yml), with RDFa matching this page's JSON-LD graph
-  (scripts/build-graph.py); scripts/build-rdf.py checks that the two are identical.
-{%- endcomment -%}
 {%- include cv/data.liquid -%}
-<div class="cv" property="mainEntity foaf:primaryTopic foaf:maker dcterms:creator" resource="{{ me }}" typeof="Person foaf:Person">
+<div class="cv">
 {% include sections/header.html %}
 {% include sidebar.html %}
 {% include sections/experience.html %}

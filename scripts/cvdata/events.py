@@ -1,18 +1,36 @@
-"""Talks and posters from ORCID and Zenodo."""
+"""Talks and posters are collected from ORCID and Zenodo."""
 
 from __future__ import annotations
 
 import re
-import urllib.error
 import urllib.parse
-import urllib.request
 
+import yaml
+
+from . import wikidata
 from .config import DATA_DIR, EVENT_WORK_TYPES, ORCID_ID
 from .files import write_yaml_list
 from .net import fetch_json
 
 # Zenodo upload types that are talks or posters.
 EVENT_RECORD_ROLES = {"presentation": "Talk", "poster": "Poster"}
+
+
+def update_event_details():
+    """Dates, website, series and organizers of the events that events.yml links to Wikidata."""
+    events = yaml.safe_load((DATA_DIR / "events.yml").read_text(encoding="utf-8")) or []
+    rows = []
+    for iri, event in wikidata.read(e["iri"] for e in events if e.get("iri", "").startswith(wikidata.WD)).items():
+        row = {"iri": iri}
+        for key, values in (("start", event.start_time), ("end", event.end_time), ("url", event.official_website), ("series", event.part_of_the_series)):
+            if len(values) == 1:
+                row[key] = str(values[0])[:10] if key in ("start", "end") else str(values[0])
+        row["organizers"] = wikidata.names(event.organizer)
+        if row.get("series"):
+            row["series_name"] = wikidata.names([row["series"]])[0]["name"]
+        rows.append(row)
+    write_yaml_list(DATA_DIR / "events_wikidata.yml", rows)
+    print(f"events_wikidata.yml: {len(rows)} events described by Wikidata")
 
 
 def _quoted(title: str) -> str:
@@ -82,10 +100,7 @@ def zenodo_events() -> list[dict]:
 
 
 def update_events(works: dict) -> None:
-    """Talks and posters from ORCID and Zenodo not already curated in events.yml.
-
-    Records without a named venue are listed for review instead of being published half-empty.
-    """
+    """Unlisted talks and posters are added; records without a venue are left for review."""
     curated = (DATA_DIR / "events.yml").read_text(encoding="utf-8")
     known = {d.lower() for d in re.findall(r"^\s*doi:\s*\"?([^\s\"]+)", curated, re.MULTILINE)}
     rows, review = [], []
@@ -107,3 +122,4 @@ def update_events(works: dict) -> None:
     print(f"events_generated.yml: {len(rows)} talks and posters from ORCID and Zenodo")
     for item in review:
         print(f"  needs a venue (add it to events.yml, or to the Zenodo/ORCID record): {item}")
+    update_event_details()

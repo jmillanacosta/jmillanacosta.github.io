@@ -1,0 +1,25 @@
+name: Python dependencies
+on:
+  push:
+    branches: [main]
+    paths:
+      [
+        pyproject.toml,
+        uv.lock,
+        scripts/dependencies.py,
+        .github/workflows/dependencies.yml,
+      ]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  dependencies:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - name: Export locked dependencies
+        run: python3 scripts/dependencies.py > /tmp/dependencies.json
+      - name: Submit dependency snapshot
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/dependency-graph/snapshots" --input /tmp/dependencies.json
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -25,6 +25,9 @@ jobs:
           version: "0.12.18"
           enable-cache: true
 
+      - name: Mine the Wikidata schemas around the Wikidata items of the site
+        run: uv run --locked python scripts/mine-wikidata.py
+
       - name: Refresh publications, events, software, usage, and collaborators data
         run: uv run --locked python scripts/update_cv_data.py
         env:
@@ -35,10 +38,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet -- _data scripts/cache && [ -z "$(git ls-files --others --exclude-standard _data scripts/cache)" ]; then
+          if git diff --quiet -- _data scripts/cache schema && [ -z "$(git ls-files --others --exclude-standard _data scripts/cache schema)" ]; then
             echo "No data changes."
             exit 0
           fi
-          git add _data scripts/cache
+          git add _data scripts/cache schema
           git commit -m "Sync CV data from ORCID, Zenodo, PyPI, ecosyste.ms, and GitHub"
           git push

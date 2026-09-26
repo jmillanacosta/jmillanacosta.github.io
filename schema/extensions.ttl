@@ -24,8 +24,8 @@ schema:knows schema:rangeIncludes schema:Role; schema:domainIncludes schema:Role
 schema:mentions schema:domainIncludes schema:Role, schema:CourseInstance .
 schema:funding schema:domainIncludes schema:Role .
 
-# The subject of a study is given on the study (an OrganizationRole), for example an organism.
-schema:about schema:domainIncludes schema:OrganizationRole .
+# Subjects are attached to studies and events.
+schema:about schema:domainIncludes schema:OrganizationRole, schema:Event .
 
 # Communities are projects. Contributors are given for them.
 schema:contributor schema:domainIncludes schema:Project .

@@ -34,36 +34,20 @@
   </head>
   <body
     data-page="{{ mode }}"
-    vocab="https://schema.org/"
-    prefix="foaf: http://xmlns.com/foaf/0.1/ dcterms: http://purl.org/dc/terms/ xsd: http://www.w3.org/2001/XMLSchema#"
   >
     <a class="skip-link screen-only" href="#main-content">Skip to content</a>
     {%- include site-nav.html %}
     <main
       id="main-content"
       tabindex="-1"
-      resource="{{ page_iri }}"
-      typeof="ProfilePage foaf:PersonalProfileDocument"
     >
       {{ content }}
       <footer class="page-footer screen-only">
-        <span
-          property="name dcterms:title"
-          content="{{ doc_title | escape }}"
-        ></span>
-        <span property="inLanguage" content="en"></span>
-        Last updated
-        <time
-          property="dateModified dcterms:modified"
-          datatype="xsd:date"
-          content="{{ modified }}"
-          datetime="{{ modified }}"
-          >{{ site.time | date: "%B %-d, %Y" }}</time
-        >
+        Last updated <time datetime="{{ modified }}">{{ site.time | date: "%B %-d, %Y" }}</time>
         · Also as
         {%- for format in formats -%}
           {%- assign f_url = format.url | prepend: page_iri -%}
-          {{ " " }}<span property="encoding" resource="{{ f_url }}" typeof="MediaObject"><span property="encodingFormat" content="{{ format.type }}"></span><a property="contentUrl" href="{{ f_url }}" type="{{ format.type }}"><span property="name" content="{{ format.name }}">{{ format.name }}</span></a></span>{% unless forloop.last %},{% endunless %}
+          {{ " " }}<a href="{{ f_url }}" type="{{ format.type }}">{{ format.name }}</a>{% unless forloop.last %},{% endunless %}
         {%- endfor %}
         · <a href="/{{ site.data.concepts.schema.folder }}/">{{ site.data.concepts.schema.title }}</a>
       </footer>

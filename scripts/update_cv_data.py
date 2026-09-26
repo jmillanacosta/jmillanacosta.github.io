@@ -1,38 +1,44 @@
 #!/usr/bin/env python3
-"""Refresh the generated data in _data from public sources.
+"""Public data is refreshed in _data. Options are listed with --help."""
 
-    python scripts/update_cv_data.py            everything: publications, events, software, usage, repositories, collaborators
-    python scripts/update_cv_data.py authors    only identify the authors in _data/publications.yml
-    python scripts/update_cv_data.py collaborators  only contributors and co-authors (_data/collaborators.yml)
-    python scripts/update_cv_data.py repositories   only repository owners and skills (_data/repositories.yml)
-
-Add --refresh to `authors` or `collaborators` to redo the cached lookups. Set GITHUB_TOKEN (or GH_TOKEN)
-to lift GitHub's limit of 60 calls an hour. Settings are in _config.yml, under `updates`.
-"""
-
-import sys
+import argparse
 
 import yaml
 from cvdata.collaborators import update_collaborators
 from cvdata.config import DATA_DIR, ORCID_ID
-from cvdata.events import update_events
+from cvdata.events import update_event_details, update_events
 from cvdata.files import write_yaml_list
 from cvdata.net import fetch_json
-from cvdata.publications import reconcile_authors, update_publications
+from cvdata.publications import add_subjects, add_topics, reconcile_authors, update_publications
 from cvdata.software import update_code_stats, update_repositories, update_software
 
 
 def main() -> None:
     DATA_DIR.mkdir(exist_ok=True)
-    refresh = "--refresh" in sys.argv
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("part", nargs="?", default="all", choices=["all", "authors", "collaborators", "repositories", "wikidata", "topics", "organizations"])
+    parser.add_argument("--refresh", action="store_true", help="cached lookups are repeated")
+    args = parser.parse_args()
+    refresh = args.refresh
     cv = yaml.safe_load((DATA_DIR / "cv.yml").read_text(encoding="utf-8"))
-    if sys.argv[1:2] == ["collaborators"]:
+    if args.part == "wikidata":
+        rows = yaml.safe_load((DATA_DIR / "publications.yml").read_text(encoding="utf-8")) or []
+        add_subjects(rows)
+        update_event_details()
+        write_yaml_list(DATA_DIR / "publications.yml", rows)
+        return
+    if args.part == "topics":
+        rows = yaml.safe_load((DATA_DIR / "publications.yml").read_text(encoding="utf-8")) or []
+        add_topics(rows)
+        write_yaml_list(DATA_DIR / "publications.yml", rows)
+        return
+    if args.part == "collaborators":
         update_collaborators(cv, refresh=refresh)
         return
-    if sys.argv[1:2] == ["repositories"]:
-        update_repositories(cv)
+    if args.part == "repositories":
+        update_repositories(cv, refresh=refresh)
         return
-    if sys.argv[1:2] == ["authors"]:
+    if args.part == "authors":
         rows = yaml.safe_load((DATA_DIR / "publications.yml").read_text(encoding="utf-8"))
         reconcile_authors(rows, refresh=refresh)
         write_yaml_list(DATA_DIR / "publications.yml", rows)

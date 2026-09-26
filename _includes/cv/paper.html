@@ -1,17 +1,13 @@
-{%- comment -%}
-  A paper cited where it is mentioned (an event, a software entry), read as in the publication
-  list: title, authors, then venue · year · kind · DOI. The title link states `property` (e.g.
-  schema:subjectOf) of the enclosing subject; the rest is plain text. A DOI that is not in
-  _data/publications.yml (slides, posters) stays a plain DOI link. compact=true gives one link in a
-  line of links, named by venue and year, with the title on hover (the software entries).
-{%- endcomment -%}
-{%- assign pc = site.data.publications | where: "doi", include.doi | first -%}
-{%- if pc and include.compact -%}
-{%- assign pc_kind = pc.type | replace: "-", " " | capitalize -%}
-{{ " · " }}<a property="{{ include.property }}" href="https://doi.org/{{ include.doi }}" title="{{ pc.title | escape }}">{{ pc.journal | default: pc_kind | escape }} {{ pc.year }}</a>
-{%- elsif pc -%}
-{%- assign pc_kind = pc.type | replace: "-", " " | capitalize -%}
-<span class="citation"><a class="publication-title" property="{{ include.property }}" href="https://doi.org/{{ include.doi }}">{{ pc.title | escape }}</a>{% if pc.authors %}<span class="publication-authors">{% include cv/author-names.html authors=pc.authors %}</span>{% endif %}<span class="publication-details">{% if pc.journal %}<em>{{ pc.journal | escape }}</em> · {% endif %}{{ pc.year }} · {{ pc_kind }} · {{ include.doi }}</span></span>
+{%- assign paper = site.data.publications | where: "doi", include.doi | first -%}
+{%- assign kind = paper.type | replace: "-", " " | capitalize -%}
+{%- if paper and include.compact -%}
+ · <a href="https://doi.org/{{ include.doi }}" title="{{ paper.title | escape }}">{{ paper.journal | default: kind | escape }} {{ paper.year }}</a>
+{%- elsif paper -%}
+<span class="citation">
+  <a class="publication-title" href="https://doi.org/{{ include.doi }}">{{ paper.title | escape }}</a>
+  {% if paper.authors %}<span class="publication-authors">{% include cv/authors.html authors=paper.authors %}</span>{% endif %}
+  <span class="publication-details">{% if paper.journal %}<em>{{ paper.journal | escape }}</em> · {% endif %}{{ paper.year }} · {{ kind }} · {{ include.doi }}</span>
+</span>
 {%- else -%}
-{{ " · " }}<a property="{{ include.property }}" href="https://doi.org/{{ include.doi }}">{{ include.doi }}</a>
+ · <a href="https://doi.org/{{ include.doi }}">{{ include.doi }}</a>
 {%- endif -%}

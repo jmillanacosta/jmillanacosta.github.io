@@ -1,5 +1,4 @@
-"""Settings, all from the user's configuration: _config.yml (the site, and how data updates
-behave, under `updates`) and _data/cv.yml (who the CV is about)."""
+"""Settings are read from _config.yml and _data/cv.yml."""
 
 from __future__ import annotations
 
@@ -24,4 +23,5 @@ IGNORED_ACCOUNTS = {a.lower() for a in UPDATES["ignored_accounts"]}
 CITATION_FILES = tuple(UPDATES["citation_files"])
 # ORCID work types that are talks or posters; they feed events, not publications.
 EVENT_WORK_TYPES = set(UPDATES["event_work_types"])
+TOPIC_SCORE = float(UPDATES["topic_score"])
 WITHHELD = {f"http://www.wikidata.org/entity/{p}" for p in UPDATES["wikidata_withheld"]}

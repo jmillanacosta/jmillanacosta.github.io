@@ -1,16 +1,11 @@
-"""The schema page and the VoID description of the site, mined by rdfsolve from the built graphs.
-
-Run after scripts/build-graph.py. The graphs are read with Oxigraph. The schema is mined from all
-graphs together; the VoID description has one subset for each graph.
-"""
+"""The site schema and VoID description are mined and exported with rdfsolve."""
 
 import html
 import json
-import math
 import os
 import re
 import sys
-from collections import defaultdict
+from collections import defaultdict, deque
 from pathlib import Path
 from typing import Any
 
@@ -112,6 +107,10 @@ def words(iri: str) -> str:
     return re.sub(r"(?<=[a-z])(?=[A-Z])", " ", name).lower().capitalize()
 
 
+def local(iri: str) -> str:
+    return re.split(r"[/#]", iri)[-1]
+
+
 def links(schema: MinedSchema) -> dict[tuple[str, str], set[str]]:
     found = defaultdict(set)
     for p in schema.patterns:
@@ -122,83 +121,82 @@ def links(schema: MinedSchema) -> dict[tuple[str, str], set[str]]:
     return {pair: props for pair, props in found.items() if all(c.startswith(V) for c in pair)}
 
 
-def rings(edges: dict[tuple[str, str], set[str]]) -> tuple[str, list[str], list[str]]:
-    near = defaultdict(set)
-    for a, b in edges:
-        if a != b:
-            near[a].add(b)
-            near[b].add(a)
-    hub = max(near, key=lambda c: (len(near[c]), c))
-    (a, b), (c, d) = CONFIG["graph"]["inner"], CONFIG["graph"]["outer"]
-    room = round((len(near) - 1) * (a + b) / (a + b + c + d))
-    inner = sorted(sorted(near[hub], key=lambda n: (-len(near[n]), words(n)))[:room], key=words)
-    outer = sorted(set(near) - {hub, *inner}, key=words)
-
-    def spread(ring: list[str], around: list[str]) -> list[str]:
-        at = {c: i / len(around) for i, c in enumerate(around)}
-        return sorted(ring, key=lambda c: (sum(at[n] for n in near[c] if n in at) / max(1, len(near[c] & set(at))), words(c)))
-
-    outer = spread(outer, inner)
-    inner = spread(inner, outer) if outer else inner
-    return hub, inner, spread(outer, inner)
-
-
-def svg(edges: dict[tuple[str, str], set[str]]) -> tuple[str, str]:
-    config = CONFIG["graph"]
-    width, height = config["width"], config["height"]
-    hub, inner, outer = rings(edges)
+def tree(schema: MinedSchema) -> str:
+    """The classes as a tree from the root class, in the manner of a UML class diagram: each class
+    with its properties and the types of their values. A class opens where it is first reached
+    (breadth first); elsewhere its name leads there. Classes that the root does not reach follow."""
+    values: dict[str, dict[str, set[str]]] = defaultdict(lambda: defaultdict(set))
+    for p in schema.patterns:
+        if p.subject_class.startswith(V) and p.property_uri != str(RDF.type):
+            values[p.subject_class][p.property_uri].add(p.datatype or p.object_class)
+    lists = {(c.subject_class, c.property_uri): set(c.member_types) for c in schema.collections or []}
     folders = {t: c["folder"] for c in CONCEPTS["categories"] for t in c.get("types", [])}
-    place = {hub: (width / 2, height / 2)}
-    for ring, (rx, ry), turn in ((inner, config["inner"], 0.5), (outer, config["outer"], 0)):
-        for i, c in enumerate(ring):
-            angle = 2 * math.pi * (i + turn) / len(ring) - math.pi / 2
-            place[c] = (width / 2 + rx * math.cos(angle), height / 2 + ry * math.sin(angle))
-    ids = {c: f"n{i}" for i, c in enumerate([hub, *inner, *outer])}
-    paths, rules = [], []
-    for (a, b), props in sorted(edges.items()):
-        if a == b:
-            continue
-        (x1, y1), (x2, y2) = place[a], place[b]
-        mx, my = (x1 + x2) / 2, (y1 + y2) / 2
-        pull = 0 if hub in (a, b) else config["pull"]
-        cx, cy = mx + (width / 2 - mx) * pull, my + (height / 2 - my) * pull
-        label = html.escape(f"{words(a)} → {', '.join(sorted(re.split(r'[/#]', p)[-1] for p in props))} → {words(b)}")
-        paths.append(f'<path class="edge {ids[a]} {ids[b]}" d="M{x1:.0f},{y1:.0f} Q{cx:.0f},{cy:.0f} {x2:.0f},{y2:.0f}"><title>{label}</title></path>')
-    nodes = []
-    for c, (x, y) in place.items():
-        lines = [html.escape(t) for t in re.findall(r".{1,%d}(?:\s|$)" % config["wrap"], words(c) + " ")]
-        w = max(len(t) for t in lines) * config["char"] + 2 * config["pad"]
-        h = len(lines) * config["line"] + config["pad"]
-        text = "".join(f'<tspan x="{x:.0f}" dy="{config["line"] if i else config["line"] * (1 - len(lines)) / 2 + config["line"] / 3:.1f}">{t.strip()}</tspan>' for i, t in enumerate(lines))
-        box = f'<rect x="{x - w / 2:.0f}" y="{y - h / 2:.0f}" width="{w:.0f}" height="{h:.0f}" rx="{h / 2:.0f}"/><text x="{x:.0f}" y="{y:.0f}">{text}</text>'
-        name = re.split(r"[/#]", c)[-1]
-        near = sorted({ids[o] for pair in edges for o in pair if c in pair and o != c})
-        css = " ".join(["node", ids[c], *(f"near-{n}" for n in near), *(["hub"] if c == hub else [])])
-        target = f'/{folders[name]}/' if name in folders else c
-        nodes.append(f'<a class="{css}" href="{html.escape(target)}"><title>{html.escape(words(c))}</title>{box}</a>')
-        rules.append(
-            f".schema-graph:has(.{ids[c]}.node:is(:hover, :focus-visible)) :is(.edge:not(.{ids[c]}), .node:not(.{ids[c]}, .near-{ids[c]})) {{ opacity: 0.12; }}"
+    prefixes = {namespace: prefix for prefix, namespace in schema.get_prefixes().items()}
+
+    def types(cls: str, prop: str) -> list[str]:
+        found = lists.get((cls, prop)) or values[cls][prop] - {"BlankNode"} or values[cls][prop]
+        return sorted(found, key=lambda v: (v not in values, local(v)))
+
+    def props(cls: str) -> list[str]:  # attributes first, then associations
+        return sorted(values[cls], key=lambda p: (any(v in values for v in types(cls, p)), not p.startswith(V), local(p).casefold()))
+
+    roots, parent, queue = [], {}, deque()
+    for start in [V + CONFIG["root"], *sorted(values, key=local)]:
+        if start in values and start not in parent:
+            roots.append(start)
+            parent[start] = None
+            queue.append(start)
+        while queue:
+            cls = queue.popleft()
+            for prop in props(cls):
+                for value in types(cls, prop):
+                    if value in values and value not in parent:
+                        parent[value] = (cls, prop)
+                        queue.append(value)
+
+    def term(iri: str) -> str:
+        """The local name; a term of another vocabulary than the site's keeps its prefix."""
+        namespace = iri[: -len(local(iri))]
+        if iri.startswith(V) or namespace in (str(XSD), str(RDF)) or namespace not in prefixes:
+            return CONFIG["value_names"].get(iri, local(iri))
+        return f"{prefixes[namespace]}:{local(iri)}"
+
+    def kind(value: str) -> str:
+        if value in values:
+            return f'<a href="#schema-{local(value)}">{html.escape(local(value))}</a>'
+        return html.escape(term(value))
+
+    def box(cls: str, opened: bool = False) -> str:
+        rows = []
+        for prop in props(cls):
+            found = types(cls, prop)
+            row = f'<span class="uml-prop">{html.escape(term(prop))}</span>: <span class="uml-type">{" | ".join(kind(v) for v in found)}</span>'
+            if (cls, prop) in lists:
+                row += ' <span class="uml-type">[*] {ordered}</span>'
+            here = [v for v in found if parent.get(v) == (cls, prop)]
+            if here:
+                row += '<ul class="tree-leaves">' + "".join(f"<li>{box(v)}</li>" for v in here) + "</ul>"
+            rows.append(f"<li>{row}</li>")
+        name = html.escape(local(cls))
+        count = html.escape(CONFIG["properties"][len(rows) != 1].format(count=len(rows)))
+        instances = f' <a class="uml-instances" href="/{folders[local(cls)]}/">{html.escape(CONFIG["instances"])}</a>' if local(cls) in folders else ""
+        return (
+            f'<details class="uml-box" id="schema-{name}"{" open" if opened else ""}><summary><span class="uml-name">{name}</span>'
+            f' <span class="uml-type">{count}</span>{instances}</summary><ul class="tree-leaves">{"".join(rows)}</ul></details>'
         )
-    drawing = (
-        f'<svg class="schema-graph" viewBox="0 0 {width} {height}" role="img" aria-labelledby="diagram">'
-        f'<g class="edges">{"".join(paths)}</g><g class="nodes">{"".join(nodes)}</g></svg>'
-    )
-    return drawing, "<style>" + "\n".join(rules) + "</style>"
+
+    rest = "".join(f"<li>{box(cls)}</li>" for cls in roots[1:])
+    others = f'<p class="tree-label">{html.escape(CONFIG["unreached"])}</p><ul class="tree-leaves">{rest}</ul>' if rest else ""
+    # A link to a class opens the class.
+    script = '<script>const openTarget = () => { const box = document.getElementById(decodeURIComponent(location.hash.slice(1))); if (box instanceof HTMLDetailsElement) box.open = true; }; addEventListener("hashchange", openTarget); openTarget();</script>'
+    return f'<div class="schema-tree">{box(roots[0], opened=True)}{others}</div>{script}'
 
 
-def listing(edges: dict[tuple[str, str], set[str]]) -> str:
-    rows = defaultdict(list)
-    for (a, b), props in sorted(edges.items(), key=lambda x: (words(x[0][0]), words(x[0][1]))):
-        rows[a].append(f'{html.escape(", ".join(sorted(re.split(r"[/#]", p)[-1] for p in props)))} <span class="concept-meta">→</span> {html.escape(words(b))}')
-    items = "".join(f"<dt>{html.escape(words(a))}</dt><dd><ul>{''.join(f'<li>{x}</li>' for x in found)}</ul></dd>" for a, found in rows.items())
-    return f'<details class="schema-list"><summary>{html.escape(CONFIG["list_title"])}</summary><dl class="facts">{items}</dl></details>'
-
-
-def page(shell: str, edges: dict[tuple[str, str], set[str]]) -> str:
+def page(shell: str, schema: MinedSchema) -> str:
     site = json.loads((SITE / "site.json").read_text(encoding="utf-8"))
+    edges = links(schema)
     classes = len({c for pair in edges for c in pair})
     lede = CONFIG["lede"].format(classes=classes, links=len(edges))
-    drawing, style = svg(edges)
     downloads = "".join(
         f'<li><a href="{d["file"]}">{html.escape(d["name"])}</a>'
         + (f' <span class="concept-meta">{html.escape(d["note"])}</span>' if d.get("note") else "")
@@ -210,7 +208,7 @@ def page(shell: str, edges: dict[tuple[str, str], set[str]]) -> str:
 <h1>{html.escape(CONFIG["title"])}</h1><p class="concept-description">{html.escape(lede)}</p></header>
 <section class="cv-section" aria-labelledby="diagram"><h2 id="diagram">{html.escape(CONFIG["diagram_title"])}</h2>
 <p class="schema-hint">{html.escape(CONFIG["hint"])}</p>
-<figure class="schema-figure">{drawing}</figure>{listing(edges)}</section>
+{tree(schema)}</section>
 <section class="cv-section" aria-labelledby="downloads"><h2 id="downloads">{html.escape(CONFIG["downloads_title"])}</h2>
 <ul class="schema-downloads">{downloads}</ul></section>
 </div>"""
@@ -219,7 +217,6 @@ def page(shell: str, edges: dict[tuple[str, str], set[str]]) -> str:
         f'<meta name="description" content="{html.escape(lede)}" />',
         f'<link rel="canonical" href="{html.escape(site["canonical"] + CONFIG["folder"])}/" />',
         f'<link rel="describedby" type="application/json" href="{CONFIG["schema_file"]}" title="rdfsolve schema" />',
-        style,
     ])
     return shell.replace("<!--concept:head-->", head).replace("<!--concept:body-->", body).replace("<!--concept:footer-->", "")
 
@@ -229,7 +226,6 @@ def main() -> None:
     os.environ["RDFSOLVE_BASE_URI"] = site["canonical"] + CONFIG["void"]["base"]
     parts = graphs()
     schema = mine(ox.Dataset([q for part in parts.values() for q in part]))
-    edges = links(schema)
     files = {
         CONFIG["schema_file"]: json.dumps(schema.to_dict(), indent=1) + "\n",
         "models.py": schema.to_pydantic(contract=True),
@@ -242,8 +238,8 @@ def main() -> None:
     for name, text in files.items():
         (folder / name).write_text(text, encoding="utf-8")
     shell = (SITE / CONCEPTS["files"]["shell"]).read_text(encoding="utf-8")
-    (folder / "index.html").write_text(page(shell, edges), encoding="utf-8")
-    print(f"Wrote the schema page: {len(edges)} links, to {folder}")
+    (folder / "index.html").write_text(page(shell, schema), encoding="utf-8")
+    print(f"Wrote the schema page: {len(links(schema))} links, to {folder}")
     description = void(parts, schema).serialize(format="turtle")
     for name in CONFIG["void"]["files"]:
         (SITE / name).parent.mkdir(parents=True, exist_ok=True)

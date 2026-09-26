@@ -1,0 +1,5 @@
+{%- assign package = site.data.software | where: "name", include.item.package | first -%}
+{%- if include.item.url %} · <a href="{{ include.item.url | escape }}">{{ include.item.url | remove_first: "https://" }}</a>{% endif -%}
+{%- if include.item.docs %} · <a href="{{ include.item.docs | escape }}">tutorial</a>{% endif -%}
+{%- if package.docs %} · <a href="{{ package.docs | escape }}">docs</a>{% endif -%}
+{%- if package %} · <a href="{{ package.pypi_url }}">PyPI</a>{% endif -%}

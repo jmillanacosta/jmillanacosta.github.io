@@ -2280,7 +2280,7 @@ wheels = [
 [[package]]
 name = "rdfsolve"
 version = "0.1.0"
-source = { git = "https://github.com/jmillanacosta/rdfsolve?branch=0.1.0#1f4033293cafee1000014a8eb4e84f5b0c1c5882" }
+source = { git = "https://github.com/jmillanacosta/rdfsolve?branch=0.1.0#5ccbbf5179694968ea48871fb91d29d2a96addcc" }
 dependencies = [
     { name = "bioregistry" },
     { name = "bioversions" },

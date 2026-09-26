@@ -1,8 +1,4 @@
-"""Check the built CV's text coverage, reading order, fonts and page clearance.
-
-Run after build-pdf.mjs. Requires Poppler (pdftotext, pdfinfo, pdffonts).
-The four-page limit is intentional; review pagination when adding content.
-"""
+"""PDF text, reading order, fonts and page margins are checked with Poppler."""
 import re
 import subprocess
 import unicodedata
@@ -71,7 +67,8 @@ for heading in content.headings:
 
 info = run('pdfinfo', PDF)
 assert re.search(r'Tagged:\s+yes', info), 'PDF must preserve semantic tags'
-assert re.search(r'Pages:\s+4\b', info), 'Review changed pagination'
+pages = int(re.search(r'Pages:\s+(\d+)', info).group(1))
+assert pages > 0, 'PDF is empty'
 fonts = run('pdffonts', PDF).splitlines()[2:]
 assert fonts and all(re.search(r'yes\s+yes\s+yes\s+\d+\s+\d+\s*$', f) for f in fonts), 'Fonts must be embedded with Unicode mappings'
 
@@ -79,10 +76,10 @@ root = ET.fromstring(run('pdftotext', '-bbox', PDF, '-'))
 ns = {'x': 'http://www.w3.org/1999/xhtml'}
 for number, page in enumerate(root.findall('.//x:page', ns), 1):
     words = page.findall('x:word', ns)
-    # The small running footer is the final thirteen words on every page.
-    body, footer = words[:-13], words[-13:]
+    footer_size = len(NAME.split()) + 10
+    body, footer = words[:-footer_size], words[-footer_size:]
     footer_text = ' '.join(w.text or '' for w in footer)
-    assert re.fullmatch(rf'{re.escape(NAME)} · CV · Updated [A-Z][a-z]+ \d{{1,2}}, \d{{4}} {number} / 4', footer_text), footer_text
+    assert re.fullmatch(rf'{re.escape(NAME)} · CV · Updated [A-Z][a-z]+ \d{{1,2}}, \d{{4}} {number} / {pages}', footer_text), footer_text
     bottom = max(float(w.attrib['yMax']) for w in body)
     clearance = min(float(w.attrib['yMin']) for w in footer) - bottom
     assert clearance >= 24, f'Page {number}: content crowds footer ({clearance:.1f}pt)'

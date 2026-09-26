@@ -1,24 +1,12 @@
-{%- comment -%}
-  Shared inputs for the page's RDFa and the JSON-LD graph, so both render from the same values.
-  Jekyll includes share scope: the variables assigned here are visible to the including template.
-{%- endcomment -%}
 {%- assign cv = site.data.cv -%}
 {%- assign person = cv.person -%}
 {%- assign orgs = cv.organizations -%}
 {%- assign base = site.canonical -%}
-{%- assign me = cv.person.iri -%}
-{%- comment -%}
-  Three pages share this data: the landing page (/), the CV (/cv/), and talks and events
-  (/events/). Each page lists the parts of the graph it states in front matter (`graph`), so its
-  RDFa and JSON-LD agree.
-{%- endcomment -%}
-{%- assign graph_page = page.url -%}
-{%- assign page_path = graph_page | remove_first: "/" | replace: "index.html", "" -%}
+{%- assign me = person.iri -%}
+{%- assign page_path = page.url | remove_first: "/" | replace: "index.html", "" -%}
 {%- assign page_iri = base | append: page_path -%}
-{%- assign html_page = site.pages | where: "url", graph_page | first -%}
-{%- if html_page.title -%}{%- assign doc_title = site.title | append: " — " | append: html_page.title -%}{%- else -%}{%- assign doc_title = site.title -%}{%- endif -%}
-{%- case page_path -%}{%- when "cv/" -%}{%- assign mode = "cv" -%}{%- when "events/" -%}{%- assign mode = "events" -%}{%- else -%}{%- assign mode = "site" -%}{%- endcase -%}
-{%- assign parts = html_page.graph | join: " " | prepend: " " | append: " " -%}
+{%- assign mode = page_path | remove: "/" | default: "site" -%}
+{%- assign parts = page.graph -%}
 {%- assign modified = site.time | date: "%Y-%m-%d" -%}
 {%- assign pdf_format = site.data.formats | where: "mode", "cv" | first -%}
 {%- assign pdf_url = base | append: "cv/" | append: pdf_format.url -%}
@@ -28,8 +16,7 @@
 {%- assign formats = site.data.formats | where_exp: "f", "f.mode == nil" -%}
 {%- assign formats = formats_mode | concat: formats -%}
 {%- assign stats = site.data.code_stats -%}
-{%- assign events = site.data.events -%}
-{%- if site.data.events_generated -%}{%- assign events = events | concat: site.data.events_generated -%}{%- endif -%}
+{%- assign events = site.data.events | concat: site.data.events_generated -%}
 {%- assign events = events | where_exp: "event", "event.hidden != true" | sort: "start", "last" | reverse -%}
 {%- if mode == "cv" -%}{%- assign events = events | where_exp: "event", "event.cv != false" -%}{%- endif -%}
 {%- assign event_types = "conference,workshop,hackathon,event" | split: "," -%}

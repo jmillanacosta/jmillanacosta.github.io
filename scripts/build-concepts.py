@@ -1,12 +1,4 @@
-"""A page for every concept in the site graph, pages for categories and kinds, and one page with
-all of them.
-
-Run after scripts/build-graph.py and scripts/build-schema.py: the story paths of each page are
-checked against the mined schema. The graph is read with Oxigraph. Each page also gives its
-statements as JSON-LD, Turtle and N-Triples, written with RDFLib. When a statement has more than
-one value and only one is shown, the first value in the order of the text is used, so that each
-build gives the same pages.
-"""
+"""Concept pages and RDF files are generated from the merged site graph."""
 
 import html
 import json
@@ -197,8 +189,7 @@ class Concepts:
         return [key for key, home in self.kind_homes.items() if home == folder]
 
     def merge(self, data: Data) -> Data:
-        """Merge unnamed concept nodes that the pages give separately, and unnamed nodes with the
-        name of an identified node of a `merge_by_name` type."""
+        """Unnamed concepts are merged by type and name."""
         name, concept_types = TERMS["name"], set(CONFIG["unnamed_concept_types"])
         identified: dict[tuple[str, str], ox.NamedNode] = {}
         for kind in CONFIG["merge_by_name"]:
@@ -227,7 +218,7 @@ class Concepts:
         return sorted(local(t) for t in self.data.objects(node, TYPE) if t.value.startswith(V))
 
     def names(self, node: object) -> list[str]:
-        """Every name that the sources give, the fullest first (most words, then longest)."""
+        """Names are sorted by word count, length, then spelling."""
         found = {n.value for n in self.data.objects(node, TERMS["name"])}
         return sorted(found, key=lambda n: (-len(n.split()), -len(n), n))
 
@@ -282,8 +273,7 @@ class Concepts:
         return bool(set(self.types(node)) & set(CONFIG["citation"]["types"]))
 
     def citation(self, node: object, keep: object = None) -> str:
-        """A paper as in the list of the CV: title; authors; venue · date · kind · identifier. A
-        short author list always keeps `keep` (the person of the page)."""
+        """A publication is shown with its authors, venue, date and identifier."""
         d, config = self.data, CONFIG["citation"]
         number = d.value(node, v(config["number"]))
         title = f"{number.value} {self.name(node)}" if number is not None else self.name(node)
@@ -375,7 +365,7 @@ class Concepts:
         papers = []
         for q in sorted(d.out(node), key=lambda q: (q.predicate.value, str(q.object))):
             o = q.object
-            if o != around and o not in hide and q.predicate not in skip and isinstance(o, ox.NamedNode) and (o in self.paths or o == self.me):
+            if o != around and o not in hide and q.predicate not in skip and isinstance(o, ox.NamedNode) and self.href(o):
                 if self.is_paper(o):
                     papers.append(f'<span class="concept-citation">{self.citation(o)}</span>')
                 else:
@@ -472,9 +462,7 @@ class Concepts:
         return rows
 
     def anchor(self, node: ox.BlankNode, around: object, seen: frozenset = frozenset()) -> object:
-        """The nearest named thing that an unnamed node belongs to: its owner or, through a role,
-        what the role was in. The subject of the graph is the last choice, because everything is
-        about them."""
+        """The nearest named resource is used as the link target."""
         d = self.data
         owners = sorted((q.subject for q in d.into(node) if q.subject not in self.lists), key=str)
         for owner in owners:
@@ -633,8 +621,7 @@ def published(statements: list[ox.Quad]) -> Graph:
 
 
 def document(concepts: Concepts, statements: list[ox.Quad], page: str, name: str, about: object) -> Graph:
-    """What a page gives to machines: the statements that it shows, and the page itself (what it
-    is, what it is about, who wrote it)."""
+    """The visible statements, page subject and author are published together."""
     config, node = CONFIG["signposting"], ox.NamedNode(page)
     extra = [ox.Quad(node, TYPE, v(kind)) for kind in config["page_types"]]
     extra.append(ox.Quad(node, TERMS["name"], ox.Literal(name, language="en")))
@@ -668,7 +655,7 @@ def frame(
     shell: str, concepts: Concepts, name: str, summary: str, page: str, body: list[str],
     statements: list[ox.Quad], about: object = None, current: str | None = None, scripts: Sequence[str] = (),
 ) -> tuple[str, Graph]:
-    """A page in the frame of the site, with its graph. `current` marks that link in the top bar."""
+    """The page and its graph are inserted into the shared layout."""
     doc = document(concepts, statements, page, name, about)
     embedded = doc.serialize(format="json-ld", context={"@vocab": V, CONFIG["vocabulary_prefix"]: V})
     safe = embedded.replace("</", "<\\/")  # a script element must not contain "</"
@@ -707,13 +694,12 @@ def section(heading: str | None, rows: dict[str, list[str]]) -> str:
 
 
 def predicates(path: PropertyPath) -> list[str]:
-    """The properties that a path uses."""
+    """Properties used in a path."""
     return [path.iri] if path.iri else [iri for item in path.items for iri in predicates(item)]
 
 
 class Story:
-    """How the owner of the site is connected to each concept: the paths of `story` in
-    _data/concepts.yml, read by rdfsolve, checked against the mined schema, run with Oxigraph."""
+    """Connections are described by schema-checked SPARQL paths."""
 
     def __init__(self, concepts: Concepts, schema: MinedSchema):
         config = CONFIG["story"]
@@ -834,8 +820,10 @@ def tree(concepts: Concepts, node: ox.NamedNode, story: list[tuple[str, list[Lea
             rest = "".join(item(leaf) for leaf in leaves[config["limit"] :])
             body += f'<li class="tree-rest"><details><summary>{html.escape(text("more_leaves", count=len(leaves) - config["limit"]))}</summary><ul>{rest}</ul></details></li>'
         items.append(f'<li class="tree-branch {css}"><p class="tree-label">{html.escape(label)}{note(leaves)}</p><ul class="tree-leaves">{body}</ul></li>')
-    closest = sorted(((len(near & concepts.direct(n)), n) for n in concepts.nodes if n != node), key=lambda x: (-x[0], concepts.name(x[1]).casefold()))
-    closest = [concepts.link(n) for count, n in closest[:3] if count >= config["closest"]]
+    closest = []
+    if concepts.category(node)["folder"] in config["closest_in"]:
+        ranked = sorted(((len(near & concepts.direct(n)), n) for n in concepts.nodes if n != node), key=lambda x: (-x[0], concepts.name(x[1]).casefold()))
+        closest = [concepts.link(n) for count, n in ranked[:3] if count >= config["closest"]]
     lede = " ".join(x for x in (narrative, text("closest", name=html.escape(concepts.name(node)), names=together(closest)) if closest else "") if x)
     lede = f'<p class="tree-summary">{lede}</p>' if lede else ""
     return (
@@ -856,7 +844,10 @@ def render(concepts: Concepts, node: ox.NamedNode, shell: str, story: Story) -> 
     if listed:
         extra.append(f'<p class="concept-alternate">{html.escape(text("also_listed_as", names=", ".join(listed)))}</p>')
     if description is not None:
-        extra.append(f'<p class="concept-description">{html.escape(description.value)}</p>')
+        shown = html.escape(description.value)
+        for target in sorted({o.value for o in d.objects(node, v("mentions"))}, key=len, reverse=True):  # a mentioned link in the text
+            shown = shown.replace(html.escape(target), f'<a href="{html.escape(target)}">{html.escape(target)}</a>', 1)
+        extra.append(f'<p class="concept-description">{shown}</p>')
     extra += concepts.identity_html(node)
     kicker = f'<a href="/{concepts.category(node)["folder"]}/">{html.escape(" · ".join(labels))}</a>'
     rows: dict[str, list[Leaf]] = defaultdict(list)
@@ -889,8 +880,7 @@ def render_kind(concepts: Concepts, predicate: ox.NamedNode, value: str, shell: 
 
 
 def render_category(concepts: Concepts, category: dict[str, Any], members: list[ox.NamedNode], shell: str) -> tuple[str, Graph]:
-    """A category: its members by kind or label. With `lists`, each member is given with what
-    points to it through that predicate (a place, and what is based or held there)."""
+    """Category members are grouped by kind or label."""
     d, title = concepts.data, category["title"]
     if category.get("lists"):
         items = []
@@ -915,6 +905,46 @@ def render_category(concepts: Concepts, category: dict[str, Any], members: list[
     return frame(shell, concepts, title, summary, BASE + category["folder"] + "/", body, concepts.listing(members))
 
 
+def render_topics(concepts: Concepts, category: dict[str, Any], members: list[ox.NamedNode], shell: str) -> tuple[str, Graph]:
+    """The publications under each of their categories (Wikidata main subjects and OpenAlex
+    topics, with the source in small type), newest first; publications without one at the end."""
+    d, config = concepts.data, CONFIG["topics"]
+    about = v(CONFIG["story"]["topics"])
+
+    def sources(topic: Node) -> list[str]:
+        iris = [topic.value, *(o.value for o in d.objects(topic, TERMS["same_as"]))]
+        return [s["name"] for s in config["sources"] if any(i.startswith(s["prefix"]) for i in iris)]
+
+    def brief(pub: ox.NamedNode) -> str:
+        venue = d.value(pub, v(CONFIG["citation"]["venue"]))
+        kind = d.value(pub, v(CONFIG["citation"]["kind"]))
+        details = [f"<em>{concepts.link(venue)}</em>" if venue is not None else "", concepts.year(pub), capital(kind.value) if kind is not None else ""]
+        return f'<span class="publication-title">{concepts.link(pub)}</span><span class="publication-details">{" · ".join(x for x in details if x)}</span>'
+
+    newest = sorted(members, key=lambda p: (-int(concepts.year(p) or 0), concepts.name(p).casefold()))
+    groups: dict[Node | None, list[ox.NamedNode]] = defaultdict(list)
+    for pub in newest:
+        for topic in [t for t in d.objects(pub, about) if t in concepts.paths and sources(t)] or [None]:
+            groups[topic].append(pub)
+    blocks = []
+    for topic in sorted(groups, key=lambda t: (t is None, -len(groups[t]), concepts.name(t).casefold() if t is not None else "")):
+        if topic is None:
+            title = html.escape(config["none"])
+        else:
+            title = concepts.link(topic) + "".join(f' <span class="topic-source">({html.escape(s)})</span>' for s in sources(topic))
+        entries = "".join(f"<li>{brief(p)}</li>" for p in groups[topic])
+        blocks.append(f'<div class="topic"><h3>{title}</h3><ul class="publication-list">{entries}</ul></div>')
+    ranked = [concepts.link(t) for t in sorted((t for t in groups if t is not None), key=lambda t: (-len(groups[t]), concepts.name(t).casefold()))]
+    shown, more = ranked[: config["shown"]], ranked[config["shown"] :]
+    lede = fill(config["lede"], topics=together(shown) if not more else ", ".join(shown))
+    if more:
+        lede += f' <details class="topic-more"><summary>{html.escape(fill(config["more"], count=len(more)))}</summary>{together(more)}.</details>'
+    body = [*header(html.escape(text("category")), category["title"], f'<div class="concept-description">{lede}</div>'),
+            f'<section class="cv-section">{"".join(blocks)}</section>', "</div>"]
+    summary = re.sub("<[^>]+>", "", lede)
+    return frame(shell, concepts, category["title"], summary, BASE + category["folder"] + "/", body, concepts.listing(members))
+
+
 def render_kinds(concepts: Concepts, category: dict[str, Any], shell: str) -> tuple[str, Graph]:
     """The kinds of a category (/event/kind/), each with the number of things of that kind."""
     title = text("kinds_of", of=category["title"].lower())
@@ -930,9 +960,7 @@ def render_kinds(concepts: Concepts, category: dict[str, Any], shell: str) -> tu
 
 
 def render_content(concepts: Concepts, grouped: dict[str, list[ox.NamedNode]], categories: dict[str, dict[str, Any]], shell: str) -> tuple[str, Graph]:
-    """Everything as one table: the pages of the site, then each category and its members, with
-    the kind, the year, and the number of connected concepts of each member. A filter makes the
-    table shorter (content.js)."""
+    """Pages and concepts are listed in a searchable table."""
     config, d = CONFIG["content"], concepts.data
     columns = config["columns"]
     head = (
@@ -981,7 +1009,7 @@ def render_content(concepts: Concepts, grouped: dict[str, list[ox.NamedNode]], c
 
 
 def merge_sitemap(urls: list[str], stale: list[str], lastmod: str) -> None:
-    """Add pages to the sitemap of the site, in place of those of an earlier run."""
+    """Generated pages are replaced in the sitemap."""
     sitemap = SITE / CONFIG["files"]["sitemap"]
     existing = sitemap.read_text(encoding="utf-8")
     drop = set(urls) | set(stale)
@@ -1001,8 +1029,7 @@ def write(folder: str, rendered: tuple[str, Graph]) -> None:
 
 
 def clear_previous() -> list[str]:
-    """Remove what the last run wrote, so that renamed concepts leave no old pages when the site is
-    served. Returns the pages that were removed."""
+    """Previously generated pages are removed before the next build."""
     manifest = SITE / CONFIG["files"]["manifest"]
     if not manifest.exists():
         return []
@@ -1044,7 +1071,8 @@ def main() -> None:
         grouped[concepts.category(node)["folder"]].append(node)
     for folder, members in sorted(grouped.items()):
         if not categories[folder].get("existing"):
-            write(f"{folder}/", render_category(concepts, categories[folder], members, shell))
+            render_page = render_topics if folder == CONFIG["topics"]["category"] else render_category
+            write(f"{folder}/", render_page(concepts, categories[folder], members, shell))
             hubs.append(f"{folder}/")
     for folder in sorted(set(concepts.kind_homes.values())):
         write(concepts.kind_index(folder), render_kinds(concepts, categories[folder], shell))

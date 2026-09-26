@@ -1,13 +1,7 @@
-{%- comment -%}
-  Renders a skills description, annotating each known term (cv.skill_terms) as schema:knowsAbout
-  of the enclosing person, named as it appears, with no visible change to the text.
-{%- endcomment -%}
-{%- assign k_html = include.text | strip | escape -%}
+{%- assign skill_html = include.text | strip | escape -%}
 {%- for term in cv.skill_terms -%}
-  {%- assign k_find = term[0] | escape -%}
-  {%- if k_html contains k_find -%}
-    {%- capture k_span %}<span property="knowsAbout" resource="{{ term[1] }}"><span about="{{ term[1] }}" typeof="Thing" property="name">{{ k_find }}</span></span>{% endcapture -%}
-    {%- assign k_html = k_html | replace_first: k_find, k_span -%}
-  {%- endif -%}
+  {%- assign find = term[0] | escape -%}
+  {%- capture label -%}{% assign include_name = term[0] %}{% assign include_iri = term[1] %}{% include cv/name.html name=include_name iri=include_iri type="Thing" %}{%- endcapture -%}
+  {%- assign skill_html = skill_html | replace_first: find, label -%}
 {%- endfor -%}
-{{ k_html }}
+{{ skill_html }}

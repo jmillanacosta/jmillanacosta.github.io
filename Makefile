@@ -4,14 +4,16 @@ NODE ?= node
 BUNDLE ?= bundle
 
 GEMS := .bundle/.installed
+PYTHON_ENV := .venv/.installed
 NODE_MODULES := node_modules/.installed
 BROWSER := node_modules/.chromium
 
-.PHONY: help all setup data images icons og site pdf serve concepts check clean
+.PHONY: help all setup wikidata-schema data images icons og site pdf serve concepts check clean
 
 help:
 	@echo "make all       do everything in order: setup, data, images, site and PDF, check"
 	@echo "make setup     install everything from the lockfiles (uv.lock, package-lock.json, Gemfile.lock)"
+	@echo "make wikidata-schema  mine the Wikidata schemas around the site's Wikidata items"
 	@echo "make data      refresh _data from ORCID, Crossref, Zenodo, PyPI, GitHub, Wikidata, OpenAlex"
 	@echo "make site      build _site: pages, linked data, concept pages, schema page, VoID"
 	@echo "make pdf       build the site, then the CV as PDF"
@@ -25,16 +27,19 @@ help:
 
 # One recipe line per step, so the order holds also with make -j.
 all: setup
+	$(MAKE) wikidata-schema
 	$(MAKE) data
 	$(MAKE) images
-	$(MAKE) pdf
 	$(MAKE) check
 
-setup: $(GEMS) $(BROWSER)
+setup: $(GEMS) $(BROWSER) $(PYTHON_ENV)
+
+$(PYTHON_ENV): pyproject.toml uv.lock .python-version
 	$(UV) sync --locked
+	@touch $@
 
 $(GEMS): Gemfile Gemfile.lock
-	$(BUNDLE) install
+	$(BUNDLE) check || $(BUNDLE) install
 	@mkdir -p $(@D) && touch $@
 
 $(NODE_MODULES): package.json package-lock.json
@@ -45,14 +50,18 @@ $(BROWSER): $(NODE_MODULES)
 	npx playwright install chromium
 	@touch $@
 
-data:
+# The Wikidata client of the data step is built from these schemas.
+wikidata-schema: $(PYTHON_ENV)
+	$(PYTHON) scripts/mine-wikidata.py
+
+data: $(PYTHON_ENV)
 	$(PYTHON) scripts/update_cv_data.py
 
-site: $(GEMS)
+site: $(GEMS) $(PYTHON_ENV)
 	$(BUNDLE) exec jekyll build
 	$(MAKE) concepts
 
-concepts:
+concepts: $(PYTHON_ENV)
 	$(PYTHON) scripts/build-graph.py
 	$(PYTHON) scripts/build-rdf.py
 	$(PYTHON) scripts/build-schema.py
@@ -74,7 +83,7 @@ og: $(BROWSER)
 serve: site
 	$(BUNDLE) exec jekyll serve --livereload
 
-check: $(BROWSER)
+check: pdf
 	$(PYTHON) scripts/check-pdf.py
 	$(NODE) scripts/check-layout.mjs
 	npx prettier . --check

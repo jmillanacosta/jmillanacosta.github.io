@@ -175,6 +175,7 @@ body {
 
 main {
   max-width: 49rem;
+  overflow-wrap: anywhere;
   margin-inline: auto;
   padding: 3.5rem 2rem 4rem;
 }
@@ -337,6 +338,39 @@ li::marker {
 .publication-title {
   display: block;
   font-weight: 500;
+}
+
+/* The publications page: each topic with its sentences, then its publications. */
+.topic + .topic {
+  margin-top: 1.8rem;
+}
+
+.topic h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.topic-more {
+  display: inline;
+}
+
+.topic-more summary {
+  display: inline;
+  color: var(--link);
+  cursor: pointer;
+}
+
+.topic-source {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.topic .publication-list {
+  margin: 0;
+  padding: 0 0 0 0.9rem;
+  list-style: none;
+  border-left: 2px solid color-mix(in srgb, var(--link) 30%, var(--rule));
 }
 
 .publication-authors {
@@ -1455,95 +1489,75 @@ a.work-name:hover {
   font-size: 0.9rem;
 }
 
-.schema-figure {
-  width: min(100vw - 2rem, 76rem);
-  margin: 0 0 1.2rem calc(50% - min(50vw - 1rem, 38rem));
+/* The schema as a tree of classes from Person; each class is a small UML-like box. */
+.schema-tree {
+  --tree-line: color-mix(in srgb, var(--rule) 75%, var(--muted));
+  margin: 0 0 1.2rem;
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+}
+
+.schema-tree ul {
   padding: 0;
-  overflow-x: auto;
-  border: 1px solid var(--rule);
-  border-radius: 14px;
-  background:
-    radial-gradient(
-      circle at 50% 50%,
-      color-mix(in srgb, var(--link) 7%, transparent),
-      transparent 60%
-    ),
-    var(--card);
+  list-style: none;
 }
 
-.schema-graph {
-  display: block;
-  width: 100%;
-  min-width: 44rem;
-  height: auto;
-  font-family: var(--sans);
+.schema-tree .tree-leaves {
+  margin-top: 0.15rem;
 }
 
-.schema-graph .edge {
-  fill: none;
-  stroke: color-mix(in srgb, var(--link) 38%, var(--bg));
-  stroke-width: 1.3;
-  transition:
-    opacity 0.2s,
-    stroke 0.2s;
+.schema-tree .tree-leaves li,
+.schema-tree .tree-leaves li + li {
+  margin: 0;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  line-height: 1.35;
 }
 
-.schema-graph .edge:hover {
-  stroke: var(--link);
-  stroke-width: 2.4;
+.schema-tree > .tree-label {
+  margin-top: 1.4rem;
 }
 
-.schema-graph .node {
+.uml-box > summary {
+  width: fit-content;
   cursor: pointer;
-  transition: opacity 0.2s;
+  list-style: none;
 }
 
-.schema-graph .node rect {
-  fill: var(--bg);
-  stroke: color-mix(in srgb, var(--link) 45%, var(--bg));
-  stroke-width: 1.2;
-  transition:
-    fill 0.2s,
-    stroke 0.2s;
+.uml-box > summary::-webkit-details-marker {
+  display: none;
 }
 
-.schema-graph .node text {
-  fill: var(--text);
-  font-size: 14px;
-  text-anchor: middle;
-}
-
-.schema-graph .hub rect {
-  fill: var(--link);
-  stroke: var(--link);
-}
-
-.schema-graph .hub text {
-  fill: var(--bg);
+.uml-name {
+  display: inline-block;
+  padding: 0 0.45rem;
+  border: 1px solid color-mix(in srgb, var(--link) 40%, var(--rule));
+  border-radius: 3px;
+  background: var(--card);
+  color: var(--text);
   font-weight: 600;
 }
 
-.schema-graph .node:is(:hover, :focus-visible) rect {
-  fill: color-mix(in srgb, var(--link) 14%, var(--bg));
-  stroke: var(--link);
+.uml-box[open] > summary .uml-name {
+  border-color: var(--link);
+  background: color-mix(in srgb, var(--link) 9%, var(--card));
 }
 
-.schema-graph .hub:is(:hover, :focus-visible) rect {
-  fill: color-mix(in srgb, var(--link) 85%, var(--text));
+.uml-box > summary:is(:hover, :focus-visible) .uml-name {
+  border-color: var(--link);
 }
 
-.schema-graph .node:focus-visible {
-  outline: none;
+.uml-box:target > summary .uml-name {
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--link) 25%, transparent);
 }
 
-.schema-list summary {
-  width: fit-content;
-  color: var(--link);
-  cursor: pointer;
+.uml-type {
+  color: var(--muted);
 }
 
-.schema-list .facts {
-  margin-top: 1rem;
+.uml-instances {
+  margin-left: 0.3rem;
+  font-size: 0.82rem;
 }
 
 .schema-downloads {

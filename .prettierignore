@@ -7,5 +7,12 @@ site.json
 # Written by scripts/update_cv_data.py on every run.
 _data/collaborators.yml
 _data/repositories.yml
+_data/publications.yml
+_data/events_wikidata.yml
+_data/events_generated.yml
+_data/software.yml
+_data/code_stats.yml
 scripts/cache/
 .venv/
+# Written by scripts/mine-wikidata.py.
+schema/*.schema.json

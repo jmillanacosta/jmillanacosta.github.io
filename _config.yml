@@ -3,8 +3,7 @@ baseurl: ""
 canonical: "https://jmillanacosta.github.io/"
 title: "Javier Millán Acosta"
 description: "Research software for biomedical knowledge graphs, RDF tooling, and data integration"
-# Everything about the person (name, ORCID, work, profiles) is in _data/cv.yml; this file holds
-# only the site's own settings. Every page shares the social preview (scripts/build-og.mjs).
+# Everything about the person (name, ORCID, work, profiles) is in _data/cv.yml
 defaults:
   - scope: { path: "" }
     values:
@@ -24,7 +23,7 @@ exclude:
   - uv.lock
   - output
   - schema
-# How data updates behave (scripts/update_cv_data.py).
+  - tests
 updates:
   # Slow lookups (Wikidata, ORCID records, GitHub profiles) are cached here and redone after this
   # many days; `--refresh` redoes them at once.
@@ -38,6 +37,8 @@ updates:
   event_work_types: [lecture-speech, conference-poster]
   # Wikidata properties that are never published: sex or gender (P21).
   wikidata_withheld: [P21]
+  # The OpenAlex topics of a work are kept from this score (0 to 1); the first topic scores highest.
+  topic_score: 0.5
 plugins:
   - jekyll-seo-tag
 # Concept pages, page graphs, the schema page and VoID are written into _site after the build
@@ -63,6 +64,7 @@ keep_files:
   - places
   - projects
   - schema
+  - tests
   - publications
   - skills
   - topics

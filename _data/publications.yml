@@ -1,433 +1,481 @@
-- title: "A dataset of rare copy number variants associated with neurodevelopmental and neuropsychiatric disorders"
-  year: "2026"
-  journal: "Scientific Data"
-  type: "journal-article"
-  doi: "10.1038/s41597-026-07345-6"
-  url: "https://doi.org/10.1038/s41597-026-07345-6"
+- title: A dataset of rare copy number variants associated with neurodevelopmental and neuropsychiatric
+    disorders
+  year: '2026'
+  journal: Scientific Data
+  type: journal-article
+  doi: 10.1038/s41597-026-07345-6
+  url: https://doi.org/10.1038/s41597-026-07345-6
   authors:
-    - given: "Alexandra"
-      family: "Valeanu"
-      orcid: "https://orcid.org/0009-0007-1364-797X"
-    - given: "Yuanyuan"
-      family: "Duan"
-    - given: "Javier"
-      family: "Millán Acosta"
-      orcid: "https://orcid.org/0000-0002-4166-7093"
-      me: "true"
-    - given: "Theo M."
-      family: "de Kok"
-      orcid: "https://orcid.org/0000-0003-2102-3626"
-      via: "ORCID record claims this work"
-    - given: "Therese"
-      family: "van Amelsvoort"
-    - given: "Friederike"
-      family: "Ehrhart"
-      orcid: "https://orcid.org/0000-0002-7770-620X"
-- title: "pyBiodatafuse: extending interoperability of data using modular queries across biomedical resources"
-  year: "2026"
-  journal: "Bioinformatics"
-  type: "journal-article"
-  doi: "10.1093/bioinformatics/btag064"
-  url: "https://doi.org/10.1093/bioinformatics/btag064"
+  - given: Alexandra
+    family: Valeanu
+    orcid: https://orcid.org/0009-0007-1364-797X
+  - given: Yuanyuan
+    family: Duan
+  - given: Javier
+    family: Millán Acosta
+    orcid: https://orcid.org/0000-0002-4166-7093
+    me: 'true'
+  - given: Theo M.
+    family: de Kok
+    orcid: https://orcid.org/0000-0003-2102-3626
+    via: ORCID record claims this work
+  - given: Therese
+    family: van Amelsvoort
+  - given: Friederike
+    family: Ehrhart
+    orcid: https://orcid.org/0000-0002-7770-620X
+  topics:
+  - iri: https://openalex.org/T11213
+    name: Genomic variations and chromosomal abnormalities
+- title: 'pyBiodatafuse: extending interoperability of data using modular queries across biomedical resources'
+  year: '2026'
+  journal: Bioinformatics
+  type: journal-article
+  doi: 10.1093/bioinformatics/btag064
+  url: https://doi.org/10.1093/bioinformatics/btag064
   authors:
-    - given: "Yojana"
-      family: "Gadiya"
-      orcid: "https://orcid.org/0000-0002-7683-0452"
-    - given: "Javier"
-      family: "Millán Acosta"
-      orcid: "https://orcid.org/0000-0002-4166-7093"
-      me: "true"
-    - given: "Ammar"
-      family: "Ammar"
-      orcid: "https://orcid.org/0000-0002-8399-8990"
-    - given: "Alejandro"
-      family: "Adriaque Lozano"
-    - given: "Delano"
-      family: "Wetstede"
-    - given: "Dominik"
-      family: "Martinát"
-      orcid: "https://orcid.org/0000-0001-6611-7883"
-    - given: "Ana Claudia"
-      family: "Sima"
-      orcid: "https://orcid.org/0000-0003-3213-4495"
-    - given: "Hailiang"
-      family: "Mei"
-      orcid: "https://orcid.org/0000-0003-1781-5508"
-    - given: "Egon"
-      family: "Willighagen"
-      orcid: "https://orcid.org/0000-0001-7542-0286"
-    - given: "Tooba"
-      family: "Abbassi-Daloii"
-      orcid: "https://orcid.org/0000-0002-4904-3269"
-- title: "BioHackEU24 report: Expanding FAIR database integration through elucidation and transformation of underlying graph schemas"
-  year: "2025"
-  type: "preprint"
-  doi: "10.37044/osf.io/ptmg5_v1"
-  url: "https://doi.org/10.37044/osf.io/ptmg5_v1"
+  - given: Yojana
+    family: Gadiya
+    orcid: https://orcid.org/0000-0002-7683-0452
+  - given: Javier
+    family: Millán Acosta
+    orcid: https://orcid.org/0000-0002-4166-7093
+    me: 'true'
+  - given: Ammar
+    family: Ammar
+    orcid: https://orcid.org/0000-0002-8399-8990
+  - given: Alejandro
+    family: Adriaque Lozano
+  - given: Delano
+    family: Wetstede
+  - given: Dominik
+    family: Martinát
+    orcid: https://orcid.org/0000-0001-6611-7883
+  - given: Ana Claudia
+    family: Sima
+    orcid: https://orcid.org/0000-0003-3213-4495
+  - given: Hailiang
+    family: Mei
+    orcid: https://orcid.org/0000-0003-1781-5508
+  - given: Egon
+    family: Willighagen
+    orcid: https://orcid.org/0000-0001-7542-0286
+  - given: Tooba
+    family: Abbassi-Daloii
+    orcid: https://orcid.org/0000-0002-4904-3269
+  topics:
+  - iri: https://openalex.org/T10887
+    name: Bioinformatics and Genomic Networks
+- title: 'BioHackEU24 report: Expanding FAIR database integration through elucidation and transformation
+    of underlying graph schemas'
+  year: '2025'
+  type: preprint
+  doi: 10.37044/osf.io/ptmg5_v1
+  url: https://doi.org/10.37044/osf.io/ptmg5_v1
   authors:
-    - given: "Javier"
-      family: "Millán Acosta"
-      orcid: "https://orcid.org/0000-0002-4166-7093"
-      me: "true"
-    - given: "Shuichi"
-      family: "Kawashima"
-      orcid: "https://orcid.org/0000-0001-7883-3756"
-    - given: "Toshiaki"
-      family: "Katayama"
-      orcid: "https://orcid.org/0000-0003-2391-0384"
-    - given: "Jerven"
-      family: "Bolleman"
-      orcid: "https://orcid.org/0000-0002-7449-1266"
-    - given: "Dominik"
-      family: "Martinat"
-      orcid: "https://orcid.org/0000-0001-6611-7883"
-      via: "same name as an identified co-author"
-    - given: "Harald"
-      family: "Detering"
-    - given: "Jose Emilio Labra"
-      family: "Gayo"
-      orcid: "https://orcid.org/0000-0001-8907-5348"
-      via: "same name as an identified co-author"
-    - given: "Yojana"
-      family: "Gadiya"
-      orcid: "https://orcid.org/0000-0002-7683-0452"
-    - given: "Tooba"
-      family: "Abbassi-Daloii"
-      orcid: "https://orcid.org/0000-0002-4904-3269"
-- title: "LP-63 Making the AOP-Wiki knowledge graph usable across disciplines in toxicological assessment"
-  year: "2025"
-  journal: "Toxicology Letters"
-  type: "conference-abstract"
-  doi: "10.1016/j.toxlet.2025.07.1074"
-  url: "https://doi.org/10.1016/j.toxlet.2025.07.1074"
+  - given: Javier
+    family: Millán Acosta
+    orcid: https://orcid.org/0000-0002-4166-7093
+    me: 'true'
+  - given: Shuichi
+    family: Kawashima
+    orcid: https://orcid.org/0000-0001-7883-3756
+  - given: Toshiaki
+    family: Katayama
+    orcid: https://orcid.org/0000-0003-2391-0384
+  - given: Jerven
+    family: Bolleman
+    orcid: https://orcid.org/0000-0002-7449-1266
+  - given: Dominik
+    family: Martinat
+    orcid: https://orcid.org/0000-0001-6611-7883
+    via: same name as an identified co-author
+  - given: Harald
+    family: Detering
+  - given: Jose Emilio Labra
+    family: Gayo
+    orcid: https://orcid.org/0000-0001-8907-5348
+    via: same name as an identified co-author
+  - given: Yojana
+    family: Gadiya
+    orcid: https://orcid.org/0000-0002-7683-0452
+  - given: Tooba
+    family: Abbassi-Daloii
+    orcid: https://orcid.org/0000-0002-4904-3269
+  topics:
+  - iri: https://openalex.org/T11937
+    name: Research Data Management Practices
+  - iri: https://openalex.org/T11986
+    name: Scientific Computing and Data Management
+  - iri: https://openalex.org/T11710
+    name: Biomedical Text Mining and Ontologies
+- title: LP-63 Making the AOP-Wiki knowledge graph usable across disciplines in toxicological assessment
+  year: '2025'
+  journal: Toxicology Letters
+  type: conference-abstract
+  doi: 10.1016/j.toxlet.2025.07.1074
+  url: https://doi.org/10.1016/j.toxlet.2025.07.1074
   authors:
-    - given: "M."
-      family: "Martens"
-      orcid: "https://orcid.org/0000-0003-2230-0840"
-      via: "same name as an identified co-author"
-    - given: "S."
-      family: "Adil"
-    - given: "Javier"
-      family: "Millán Acosta"
-      orcid: "https://orcid.org/0000-0002-4166-7093"
-      me: "true"
-      via: "same name as an identified co-author"
-    - given: "E."
-      family: "Willighagen"
-      orcid: "https://orcid.org/0000-0001-7542-0286"
-      via: "same name as an identified co-author"
-- title: "Extended RDF support for Biomedical Knowledge Graphs in pyBioDataFuse: on-the-fly RDF graph generation and new resource annotators"
-  year: "2025"
-  journal: "CEUR Workshop Proceedings (SWAT4HCLS 2025)"
-  type: "conference-paper"
-  doi: "10.24406/publica-8969"
-  url: "https://doi.org/10.24406/publica-8969"
+  - given: M.
+    family: Martens
+    orcid: https://orcid.org/0000-0003-2230-0840
+    via: same name as an identified co-author
+  - given: S.
+    family: Adil
+  - given: Javier
+    family: Millán Acosta
+    orcid: https://orcid.org/0000-0002-4166-7093
+    me: 'true'
+    via: same name as an identified co-author
+  - given: E.
+    family: Willighagen
+    orcid: https://orcid.org/0000-0001-7542-0286
+    via: same name as an identified co-author
+  topics:
+  - iri: https://openalex.org/T11710
+    name: Biomedical Text Mining and Ontologies
+  - iri: https://openalex.org/T10215
+    name: Semantic Web and Ontologies
+  - iri: https://openalex.org/T14351
+    name: Statistical and Computational Modeling
+- title: 'Extended RDF support for Biomedical Knowledge Graphs in pyBioDataFuse: on-the-fly RDF graph
+    generation and new resource annotators'
+  year: '2025'
+  journal: CEUR Workshop Proceedings (SWAT4HCLS 2025)
+  type: conference-paper
+  doi: 10.24406/publica-8969
+  url: https://doi.org/10.24406/publica-8969
   authors:
-    - given: "Javier"
-      family: "Millán Acosta"
-      orcid: "https://orcid.org/0000-0002-4166-7093"
-      me: "true"
-    - given: "Egon"
-      family: "Willighagen"
-      orcid: "https://orcid.org/0000-0001-7542-0286"
-      via: "same name as an identified co-author"
-    - given: "Yojana"
-      family: "Gadiya"
-      orcid: "https://orcid.org/0000-0002-7683-0452"
-      via: "same name as an identified co-author"
-    - given: "Tooba"
-      family: "Abbassi-Daloii"
-      orcid: "https://orcid.org/0000-0002-4904-3269"
-      via: "same name as an identified co-author"
-- title: "MCP server tools with RDF shapes"
-  year: "2025"
-  type: "preprint"
-  doi: "10.37044/osf.io/8qeh5_v1"
-  url: "https://doi.org/10.37044/osf.io/8qeh5_v1"
+  - given: Javier
+    family: Millán Acosta
+    orcid: https://orcid.org/0000-0002-4166-7093
+    me: 'true'
+  - given: Egon
+    family: Willighagen
+    orcid: https://orcid.org/0000-0001-7542-0286
+    via: same name as an identified co-author
+  - given: Yojana
+    family: Gadiya
+    orcid: https://orcid.org/0000-0002-7683-0452
+    via: same name as an identified co-author
+  - given: Tooba
+    family: Abbassi-Daloii
+    orcid: https://orcid.org/0000-0002-4904-3269
+    via: same name as an identified co-author
+- title: MCP server tools with RDF shapes
+  year: '2025'
+  type: preprint
+  doi: 10.37044/osf.io/8qeh5_v1
+  url: https://doi.org/10.37044/osf.io/8qeh5_v1
   authors:
-    - given: "Jose Emilio"
-      family: "Labra-Gayo"
-      orcid: "https://orcid.org/0000-0001-8907-5348"
-    - given: "Yasunori"
-      family: "Yamamoto"
-      orcid: "https://orcid.org/0000-0002-6943-6887"
-    - given: "Akira R."
-      family: "Kinjo"
-    - given: "Andra"
-      family: "Waagmeester"
-      orcid: "https://orcid.org/0000-0001-9773-4008"
-      wikidata: "http://www.wikidata.org/entity/Q19845625"
-      via: "Wikidata authorship"
-    - given: "Javier"
-      family: "Millán Acosta"
-      orcid: "https://orcid.org/0000-0002-4166-7093"
-      me: "true"
-      wikidata: "http://www.wikidata.org/entity/Q116446553"
-      via: "Wikidata authorship"
-    - given: "Shuichi"
-      family: "Kawashima"
-      orcid: "https://orcid.org/0000-0001-7883-3756"
-    - given: "Yoko"
-      family: "Okabeppu"
-    - given: "Julia"
-      family: "Koblitz"
-      orcid: "https://orcid.org/0000-0002-7260-2129"
-    - given: "Samuel Bustamante"
-      family: "Larriet"
+  - given: Jose Emilio
+    family: Labra-Gayo
+    orcid: https://orcid.org/0000-0001-8907-5348
+  - given: Yasunori
+    family: Yamamoto
+    orcid: https://orcid.org/0000-0002-6943-6887
+  - given: Akira R.
+    family: Kinjo
+  - given: Andra
+    family: Waagmeester
+    orcid: https://orcid.org/0000-0001-9773-4008
+    wikidata: http://www.wikidata.org/entity/Q19845625
+    via: Wikidata authorship
+  - given: Javier
+    family: Millán Acosta
+    orcid: https://orcid.org/0000-0002-4166-7093
+    me: 'true'
+    wikidata: http://www.wikidata.org/entity/Q116446553
+    via: Wikidata authorship
+  - given: Shuichi
+    family: Kawashima
+    orcid: https://orcid.org/0000-0001-7883-3756
+  - given: Yoko
+    family: Okabeppu
+  - given: Julia
+    family: Koblitz
+    orcid: https://orcid.org/0000-0002-7260-2129
+  - given: Samuel Bustamante
+    family: Larriet
   subjects:
-    - iri: "http://www.wikidata.org/entity/Q133436854"
-      name: "Model Context Protocol"
-    - iri: "http://www.wikidata.org/entity/Q54872"
-      name: "Resource Description Framework"
-- title: "INTOXICOM Workshop Report: FAIRification of Toxicological Research Output: Leveraging ELIXIR Resources"
-  year: "2024"
-  type: "preprint"
-  doi: "10.37044/osf.io/un2rw"
-  url: "https://doi.org/10.37044/osf.io/un2rw"
+  - iri: http://www.wikidata.org/entity/Q133436854
+    name: Model Context Protocol
+  - iri: http://www.wikidata.org/entity/Q54872
+    name: Resource Description Framework
+  wikidata: http://www.wikidata.org/entity/Q137438800
+- title: 'INTOXICOM Workshop Report: FAIRification of Toxicological Research Output: Leveraging ELIXIR
+    Resources'
+  year: '2024'
+  type: preprint
+  doi: 10.37044/osf.io/un2rw
+  url: https://doi.org/10.37044/osf.io/un2rw
   authors:
-    - given: "Marvin"
-      family: "Martens"
-      orcid: "https://orcid.org/0000-0003-2230-0840"
-      wikidata: "http://www.wikidata.org/entity/Q42369611"
-      via: "Wikidata authorship"
-    - given: "Iseult"
-      family: "Lynch"
-      orcid: "https://orcid.org/0000-0003-4250-4584"
-    - given: "Thomas"
-      family: "Exner"
-      orcid: "https://orcid.org/0000-0002-1849-5246"
-      wikidata: "http://www.wikidata.org/entity/Q88046313"
-      via: "Wikidata authorship"
-    - given: "Rob"
-      family: "Stierum"
-      orcid: "https://orcid.org/0000-0002-4409-1974"
-      wikidata: "http://www.wikidata.org/entity/Q140771297"
-      via: "Wikidata authorship"
-    - given: "Penny"
-      family: "Nymark"
-      orcid: "https://orcid.org/0000-0002-3435-7775"
-    - given: "Dominik"
-      family: "Martinát"
-      orcid: "https://orcid.org/0000-0001-6611-7883"
-      wikidata: "http://www.wikidata.org/entity/Q117834010"
-      via: "Wikidata authorship"
-    - given: "Javier"
-      family: "Millán Acosta"
-      orcid: "https://orcid.org/0000-0002-4166-7093"
-      me: "true"
-    - given: "Ulrike"
-      family: "Wittig"
-      orcid: "https://orcid.org/0000-0002-9077-5664"
-    - given: "Clemens"
-      family: "Wittwehr"
-      orcid: "https://orcid.org/0000-0003-2760-7702"
-      wikidata: "http://www.wikidata.org/entity/Q56459199"
-      via: "Wikidata authorship"
-    - given: "Meike"
-      family: "Bünger"
-      orcid: "https://orcid.org/0009-0002-7664-0058"
-      via: "ORCID record claims this work"
-    - given: "Tooba"
-      family: "Abbassi-Daloii"
-      orcid: "https://orcid.org/0000-0002-4904-3269"
-    - given: "Gerhard"
-      family: "Burger"
-      orcid: "https://orcid.org/0000-0003-1062-5576"
-    - given: "Uday"
-      family: "Killi"
-    - given: "Jente"
-      family: "Houweling"
-      orcid: "https://orcid.org/0009-0005-3680-0645"
-      wikidata: "http://www.wikidata.org/entity/Q124399961"
-      via: "Wikidata authorship"
-    - given: "Riju Roy"
-      family: "Chowdhury"
-      orcid: "https://orcid.org/0009-0002-4110-241X"
-      via: "ORCID record claims this work"
-    - given: "Tamara"
-      family: "Danilyuk"
-      orcid: "https://orcid.org/0000-0001-6125-6147"
-    - given: "Lucy"
-      family: "Sinke"
-      orcid: "https://orcid.org/0000-0002-9209-1266"
-    - given: "Ozan"
-      family: "Çınar"
-      orcid: "https://orcid.org/0000-0003-0329-1977"
-      wikidata: "http://www.wikidata.org/entity/Q89571039"
-      via: "Wikidata authorship"
-    - given: "Egon"
-      family: "Willighagen"
-      orcid: "https://orcid.org/0000-0001-7542-0286"
+  - given: Marvin
+    family: Martens
+    orcid: https://orcid.org/0000-0003-2230-0840
+    wikidata: http://www.wikidata.org/entity/Q42369611
+    via: Wikidata authorship
+  - given: Iseult
+    family: Lynch
+    orcid: https://orcid.org/0000-0003-4250-4584
+  - given: Thomas
+    family: Exner
+    orcid: https://orcid.org/0000-0002-1849-5246
+    wikidata: http://www.wikidata.org/entity/Q88046313
+    via: Wikidata authorship
+  - given: Rob
+    family: Stierum
+    orcid: https://orcid.org/0000-0002-4409-1974
+    wikidata: http://www.wikidata.org/entity/Q140771297
+    via: Wikidata authorship
+  - given: Penny
+    family: Nymark
+    orcid: https://orcid.org/0000-0002-3435-7775
+  - given: Dominik
+    family: Martinát
+    orcid: https://orcid.org/0000-0001-6611-7883
+    wikidata: http://www.wikidata.org/entity/Q117834010
+    via: Wikidata authorship
+  - given: Javier
+    family: Millán Acosta
+    orcid: https://orcid.org/0000-0002-4166-7093
+    me: 'true'
+  - given: Ulrike
+    family: Wittig
+    orcid: https://orcid.org/0000-0002-9077-5664
+  - given: Clemens
+    family: Wittwehr
+    orcid: https://orcid.org/0000-0003-2760-7702
+    wikidata: http://www.wikidata.org/entity/Q56459199
+    via: Wikidata authorship
+  - given: Meike
+    family: Bünger
+    orcid: https://orcid.org/0009-0002-7664-0058
+    via: ORCID record claims this work
+  - given: Tooba
+    family: Abbassi-Daloii
+    orcid: https://orcid.org/0000-0002-4904-3269
+  - given: Gerhard
+    family: Burger
+    orcid: https://orcid.org/0000-0003-1062-5576
+  - given: Uday
+    family: Killi
+  - given: Jente
+    family: Houweling
+    orcid: https://orcid.org/0009-0005-3680-0645
+    wikidata: http://www.wikidata.org/entity/Q124399961
+    via: Wikidata authorship
+  - given: Riju Roy
+    family: Chowdhury
+    orcid: https://orcid.org/0009-0002-4110-241X
+    via: ORCID record claims this work
+  - given: Tamara
+    family: Danilyuk
+    orcid: https://orcid.org/0000-0001-6125-6147
+  - given: Lucy
+    family: Sinke
+    orcid: https://orcid.org/0000-0002-9209-1266
+  - given: Ozan
+    family: Çınar
+    orcid: https://orcid.org/0000-0003-0329-1977
+    wikidata: http://www.wikidata.org/entity/Q89571039
+    via: Wikidata authorship
+  - given: Egon
+    family: Willighagen
+    orcid: https://orcid.org/0000-0001-7542-0286
   subjects:
-    - iri: "http://www.wikidata.org/entity/Q12269561"
-      name: "ELIXIR"
-    - iri: "http://www.wikidata.org/entity/Q29032644"
-      name: "FAIR Data Principles"
-    - iri: "http://www.wikidata.org/entity/Q7218"
-      name: "toxicology"
-- title: "Harmonising knowledge for safer materials via the “NanoCommons” Knowledge Base"
-  year: "2023"
-  journal: "Frontiers in Physics"
-  type: "journal-article"
-  doi: "10.3389/fphy.2023.1271842"
-  url: "https://doi.org/10.3389/fphy.2023.1271842"
+  - iri: http://www.wikidata.org/entity/Q12269561
+    name: ELIXIR
+  - iri: http://www.wikidata.org/entity/Q29032644
+    name: FAIR Data Principles
+  - iri: http://www.wikidata.org/entity/Q7218
+    name: toxicology
+  wikidata: http://www.wikidata.org/entity/Q131007824
+  topics:
+  - iri: https://openalex.org/T11937
+    name: Research Data Management Practices
+- title: Harmonising knowledge for safer materials via the “NanoCommons” Knowledge Base
+  year: '2023'
+  journal: Frontiers in Physics
+  type: journal-article
+  doi: 10.3389/fphy.2023.1271842
+  url: https://doi.org/10.3389/fphy.2023.1271842
   authors:
-    - given: "Dieter"
-      family: "Maier"
-      wikidata: "http://www.wikidata.org/entity/Q136007717"
-      via: "Wikidata authorship"
-    - given: "Thomas E."
-      family: "Exner"
-      orcid: "https://orcid.org/0000-0002-1849-5246"
-      wikidata: "http://www.wikidata.org/entity/Q88046313"
-      via: "Wikidata authorship"
-    - given: "Anastasios G."
-      family: "Papadiamantis"
-      orcid: "https://orcid.org/0000-0002-1297-3104"
-      via: "ORCID record claims this work"
-    - given: "Ammar"
-      family: "Ammar"
-      orcid: "https://orcid.org/0000-0002-8399-8990"
-      via: "ORCID record claims this work"
-    - given: "Andreas"
-      family: "Tsoumanis"
-    - given: "Philip"
-      family: "Doganis"
-    - given: "Ian"
-      family: "Rouse"
-    - given: "Luke T."
-      family: "Slater"
-    - given: "Georgios V."
-      family: "Gkoutos"
-      orcid: "https://orcid.org/0000-0002-2061-091X"
-      via: "ORCID record claims this work"
-    - given: "Nina"
-      family: "Jeliazkova"
-      orcid: "https://orcid.org/0000-0002-4322-6179"
-      via: "ORCID record claims this work"
-    - given: "Hilmar"
-      family: "Ilgenfritz"
-    - given: "Martin"
-      family: "Ziegler"
-      orcid: "https://orcid.org/0009-0003-1183-4991"
-      via: "ORCID record claims this work"
-    - given: "Beatrix"
-      family: "Gerhard"
-    - given: "Sebastian"
-      family: "Kopetsky"
-    - given: "Deven"
-      family: "Joshi"
-    - given: "Lee"
-      family: "Walker"
-    - given: "Claus"
-      family: "Svendsen"
-    - given: "Haralambos"
-      family: "Sarimveis"
-      orcid: "https://orcid.org/0000-0002-8607-9965"
-      wikidata: "http://www.wikidata.org/entity/Q28541054"
-      via: "Wikidata authorship"
-    - given: "Vladimir"
-      family: "Lobaskin"
-      orcid: "https://orcid.org/0000-0002-5231-0639"
-      via: "ORCID record claims this work"
-    - given: "Martin"
-      family: "Himly"
-      orcid: "https://orcid.org/0000-0001-5416-085X"
-      via: "ORCID record claims this work"
-    - given: "Jeaphianne"
-      family: "van Rijn"
-    - given: "Laurent"
-      family: "Winckers"
-      orcid: "https://orcid.org/0000-0002-9454-4783"
-      wikidata: "http://www.wikidata.org/entity/Q92186214"
-      via: "Wikidata authorship"
-    - given: "Javier"
-      family: "Millán Acosta"
-      orcid: "https://orcid.org/0000-0002-4166-7093"
-      me: "true"
-    - given: "Egon"
-      family: "Willighagen"
-      orcid: "https://orcid.org/0000-0001-7542-0286"
-      wikidata: "http://www.wikidata.org/entity/Q20895241"
-      via: "Wikidata authorship"
-    - given: "Georgia"
-      family: "Melagraki"
-    - given: "Antreas"
-      family: "Afantitis"
-    - given: "Iseult"
-      family: "Lynch"
-      orcid: "https://orcid.org/0000-0003-4250-4584"
-      via: "ORCID record claims this work"
-- title: "WikiPathways 2024: next generation pathway database"
-  year: "2023"
-  journal: "Nucleic Acids Research"
-  type: "journal-article"
-  doi: "10.1093/nar/gkad960"
-  url: "https://doi.org/10.1093/nar/gkad960"
+  - given: Dieter
+    family: Maier
+    wikidata: http://www.wikidata.org/entity/Q136007717
+    via: Wikidata authorship
+  - given: Thomas E.
+    family: Exner
+    orcid: https://orcid.org/0000-0002-1849-5246
+    wikidata: http://www.wikidata.org/entity/Q88046313
+    via: Wikidata authorship
+  - given: Anastasios G.
+    family: Papadiamantis
+    orcid: https://orcid.org/0000-0002-1297-3104
+    via: ORCID record claims this work
+  - given: Ammar
+    family: Ammar
+    orcid: https://orcid.org/0000-0002-8399-8990
+    via: ORCID record claims this work
+  - given: Andreas
+    family: Tsoumanis
+  - given: Philip
+    family: Doganis
+  - given: Ian
+    family: Rouse
+  - given: Luke T.
+    family: Slater
+  - given: Georgios V.
+    family: Gkoutos
+    orcid: https://orcid.org/0000-0002-2061-091X
+    via: ORCID record claims this work
+  - given: Nina
+    family: Jeliazkova
+    orcid: https://orcid.org/0000-0002-4322-6179
+    via: ORCID record claims this work
+  - given: Hilmar
+    family: Ilgenfritz
+  - given: Martin
+    family: Ziegler
+    orcid: https://orcid.org/0009-0003-1183-4991
+    via: ORCID record claims this work
+  - given: Beatrix
+    family: Gerhard
+  - given: Sebastian
+    family: Kopetsky
+  - given: Deven
+    family: Joshi
+  - given: Lee
+    family: Walker
+  - given: Claus
+    family: Svendsen
+  - given: Haralambos
+    family: Sarimveis
+    orcid: https://orcid.org/0000-0002-8607-9965
+    wikidata: http://www.wikidata.org/entity/Q28541054
+    via: Wikidata authorship
+  - given: Vladimir
+    family: Lobaskin
+    orcid: https://orcid.org/0000-0002-5231-0639
+    via: ORCID record claims this work
+  - given: Martin
+    family: Himly
+    orcid: https://orcid.org/0000-0001-5416-085X
+    via: ORCID record claims this work
+  - given: Jeaphianne
+    family: van Rijn
+  - given: Laurent
+    family: Winckers
+    orcid: https://orcid.org/0000-0002-9454-4783
+    wikidata: http://www.wikidata.org/entity/Q92186214
+    via: Wikidata authorship
+  - given: Javier
+    family: Millán Acosta
+    orcid: https://orcid.org/0000-0002-4166-7093
+    me: 'true'
+  - given: Egon
+    family: Willighagen
+    orcid: https://orcid.org/0000-0001-7542-0286
+    wikidata: http://www.wikidata.org/entity/Q20895241
+    via: Wikidata authorship
+  - given: Georgia
+    family: Melagraki
+  - given: Antreas
+    family: Afantitis
+  - given: Iseult
+    family: Lynch
+    orcid: https://orcid.org/0000-0003-4250-4584
+    via: ORCID record claims this work
+  wikidata: http://www.wikidata.org/entity/Q133848757
+  topics:
+  - iri: https://openalex.org/T11937
+    name: Research Data Management Practices
+  - iri: https://openalex.org/T12157
+    name: Geochemistry and Geologic Mapping
+  - iri: https://openalex.org/T11986
+    name: Scientific Computing and Data Management
+- title: 'WikiPathways 2024: next generation pathway database'
+  year: '2023'
+  journal: Nucleic Acids Research
+  type: journal-article
+  doi: 10.1093/nar/gkad960
+  url: https://doi.org/10.1093/nar/gkad960
   authors:
-    - given: "Ayushi"
-      family: "Agrawal"
-      orcid: "https://orcid.org/0000-0003-2940-8926"
-    - given: "Hasan"
-      family: "Balcı"
-      orcid: "https://orcid.org/0000-0001-8319-7758"
-    - given: "Kristina"
-      family: "Hanspers"
-      orcid: "https://orcid.org/0000-0001-5410-599X"
-    - given: "Susan L"
-      family: "Coort"
-      orcid: "https://orcid.org/0000-0003-1224-9690"
-    - given: "Marvin"
-      family: "Martens"
-      orcid: "https://orcid.org/0000-0003-2230-0840"
-    - given: "Denise N"
-      family: "Slenter"
-      orcid: "https://orcid.org/0000-0001-8449-1318"
-    - given: "Friederike"
-      family: "Ehrhart"
-      orcid: "https://orcid.org/0000-0002-7770-620X"
-    - given: "Daniela"
-      family: "Digles"
-      orcid: "https://orcid.org/0000-0001-5934-3559"
-    - given: "Andra"
-      family: "Waagmeester"
-      orcid: "https://orcid.org/0000-0001-9773-4008"
-    - given: "Isabel"
-      family: "Wassink"
-      orcid: "https://orcid.org/0009-0007-2045-4009"
-    - given: "Tooba"
-      family: "Abbassi-Daloii"
-      orcid: "https://orcid.org/0000-0002-4904-3269"
-    - given: "Elisson N"
-      family: "Lopes"
-      orcid: "https://orcid.org/0000-0003-1661-6304"
-    - given: "Aishwarya"
-      family: "Iyer"
-      orcid: "https://orcid.org/0000-0003-2878-4049"
-    - given: "Javier"
-      family: "Millán Acosta"
-      orcid: "https://orcid.org/0000-0002-4166-7093"
-      me: "true"
-    - given: "Lars G"
-      family: "Willighagen"
-      orcid: "https://orcid.org/0000-0002-4751-4637"
-    - given: "Kozo"
-      family: "Nishida"
-      orcid: "https://orcid.org/0000-0001-8501-7319"
-    - given: "Anders"
-      family: "Riutta"
-      orcid: "https://orcid.org/0000-0002-4693-0591"
-    - given: "Helena"
-      family: "Basaric"
-    - given: "Chris T"
-      family: "Evelo"
-      orcid: "https://orcid.org/0000-0002-5301-3142"
-    - given: "Egon L"
-      family: "Willighagen"
-      orcid: "https://orcid.org/0000-0001-7542-0286"
-    - given: "Martina"
-      family: "Kutmon"
-      orcid: "https://orcid.org/0000-0002-7699-8191"
-    - given: "Alexander R"
-      family: "Pico"
-      orcid: "https://orcid.org/0000-0001-5706-2163"
+  - given: Ayushi
+    family: Agrawal
+    orcid: https://orcid.org/0000-0003-2940-8926
+  - given: Hasan
+    family: Balcı
+    orcid: https://orcid.org/0000-0001-8319-7758
+  - given: Kristina
+    family: Hanspers
+    orcid: https://orcid.org/0000-0001-5410-599X
+  - given: Susan L
+    family: Coort
+    orcid: https://orcid.org/0000-0003-1224-9690
+  - given: Marvin
+    family: Martens
+    orcid: https://orcid.org/0000-0003-2230-0840
+  - given: Denise N
+    family: Slenter
+    orcid: https://orcid.org/0000-0001-8449-1318
+  - given: Friederike
+    family: Ehrhart
+    orcid: https://orcid.org/0000-0002-7770-620X
+  - given: Daniela
+    family: Digles
+    orcid: https://orcid.org/0000-0001-5934-3559
+  - given: Andra
+    family: Waagmeester
+    orcid: https://orcid.org/0000-0001-9773-4008
+  - given: Isabel
+    family: Wassink
+    orcid: https://orcid.org/0009-0007-2045-4009
+  - given: Tooba
+    family: Abbassi-Daloii
+    orcid: https://orcid.org/0000-0002-4904-3269
+  - given: Elisson N
+    family: Lopes
+    orcid: https://orcid.org/0000-0003-1661-6304
+  - given: Aishwarya
+    family: Iyer
+    orcid: https://orcid.org/0000-0003-2878-4049
+  - given: Javier
+    family: Millán Acosta
+    orcid: https://orcid.org/0000-0002-4166-7093
+    me: 'true'
+  - given: Lars G
+    family: Willighagen
+    orcid: https://orcid.org/0000-0002-4751-4637
+  - given: Kozo
+    family: Nishida
+    orcid: https://orcid.org/0000-0001-8501-7319
+  - given: Anders
+    family: Riutta
+    orcid: https://orcid.org/0000-0002-4693-0591
+  - given: Helena
+    family: Basaric
+  - given: Chris T
+    family: Evelo
+    orcid: https://orcid.org/0000-0002-5301-3142
+  - given: Egon L
+    family: Willighagen
+    orcid: https://orcid.org/0000-0001-7542-0286
+  - given: Martina
+    family: Kutmon
+    orcid: https://orcid.org/0000-0002-7699-8191
+  - given: Alexander R
+    family: Pico
+    orcid: https://orcid.org/0000-0001-5706-2163
+  subjects:
+  - iri: http://www.wikidata.org/entity/Q7999828
+    name: WikiPathways
+  wikidata: http://www.wikidata.org/entity/Q123631008
+  topics:
+  - iri: https://openalex.org/T10887
+    name: Bioinformatics and Genomic Networks
+  - iri: https://openalex.org/T12478
+    name: Wikis in Education and Collaboration
+  - iri: https://openalex.org/T11710
+    name: Biomedical Text Mining and Ontologies

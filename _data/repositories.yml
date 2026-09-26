@@ -1,10 +1,9 @@
-# Written by scripts/update_cv_data.py: the owner of each listed repository, and the skills
-# (cv.yml skill_terms) its languages, topics and packages name, by the identifiers Wikidata gives.
 - id: rdfsolve
   owner: https://github.com/jmillanacosta
   owner_website: https://jmillanacosta.github.io
   softwareRequirements:
   - Flask
+  - GitHub Actions
   - Pydantic
   - RDFLib
   - Ruff
@@ -19,6 +18,7 @@
   owner: https://github.com/jmillanacosta
   owner_website: https://jmillanacosta.github.io
   softwareRequirements:
+  - GitHub Actions
   - Polars
   - Pydantic
   - Ruff
@@ -30,6 +30,7 @@
   owner: https://github.com/jmillanacosta
   owner_website: https://jmillanacosta.github.io
   softwareRequirements:
+  - GitHub Actions
   - Polars
   - Pydantic
   - Ruff
@@ -41,6 +42,7 @@
   owner: https://github.com/jmillanacosta
   owner_website: https://jmillanacosta.github.io
   softwareRequirements:
+  - GitHub Actions
   - Pydantic
   - Ruff
   - Sphinx
@@ -52,41 +54,70 @@
   programmingLanguage:
   - JavaScript
   softwareRequirements:
+  - Docker
   - Flask
+  - GitHub Actions
   - Pydantic
   - RDFLib
   - pandas
 - id: biodatafuse
   owner: https://github.com/BioDataFuse
   softwareRequirements:
+  - GitHub Actions
   - RDFLib
   - pandas
   - pytest
   about:
   - RDF
+- id: biodatafuse-ui
+  owner: https://github.com/BioDataFuse
+  programmingLanguage:
+  - JavaScript
+  - TypeScript
+  - Vue
+  softwareRequirements:
+  - Docker
+  - FastAPI
+  - Flask
+  - Pydantic
+  - RDFLib
+  - Vue
+  - pandas
 - id: vhp4safety-platform
   owner: https://github.com/VHP4Safety
   owner_website: https://vhp4safety.nl/
   programmingLanguage:
   - JavaScript
   softwareRequirements:
+  - Docker
   - Flask
+  - GitHub Actions
 - id: enanomapper
   owner: https://github.com/enanomapper
   owner_website: http://enanomapper.net/
+  softwareRequirements:
+  - GitHub Actions
+  - RDFLib
   about:
   - OWL
 - id: bridgedb
   owner: https://github.com/bridgedb
   owner_website: https://www.bridgedb.org/
+  softwareRequirements:
+  - Docker
+  - GitHub Actions
   about:
   - Docker
 - id: cnv-pathway-atlas
   owner: https://github.com/CNVPathwayAtlas
   programmingLanguage:
   - JavaScript
+  softwareRequirements:
+  - GitHub Actions
 - id: seejobs
   owner: https://github.com/jmillanacosta
   owner_website: https://jmillanacosta.github.io
   programmingLanguage:
   - JavaScript
+  softwareRequirements:
+  - GitHub Actions

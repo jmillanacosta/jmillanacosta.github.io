@@ -138,6 +138,7 @@
   summary: Pitched "Adopting SSSOM for FAIRer BridgeDb mappings" during the "Let’s talk about FAIR mappings! Towards common practices for sharing mappings and crosswalks BoF - Birds of a Feather" session.
   #iri: https://www.rd-alliance.org/plenaries/idw-2023-p21/
 - name: Virtual Human Platform launch
+  project: vhp4safety
   year: 2026
   start: "2026-05-28"
   location: Utrecht, Netherlands
@@ -150,6 +151,7 @@
       url: https://aopsuite.cloud.vhp4safety.nl
   iri: https://toxicologie.nl/en/launch-virtual-human-platform/
 - name: ELIXIR CZ–NL Staff Exchange
+  organizer: recetox
   year: 2026
   start: "2026-08-24"
   end: "2026-08-28"

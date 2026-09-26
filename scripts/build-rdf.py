@@ -1,9 +1,4 @@
-"""Check that the RDFa of each page and its JSON-LD give the same graph, then publish the graph.
-
-Run after `bundle exec jekyll build` and scripts/build-graph.py. The graphs are compared with
-Oxigraph after RDF Dataset Canonicalization (RDFC-1.0). The RDFa is read with pyRdfa.
-Each page graph is written as Turtle, N-Triples and RDF/XML next to its index.jsonld.
-"""
+"""RDFa and JSON-LD are compared; matching graphs are exported in RDF formats."""
 
 import sys
 from collections import Counter

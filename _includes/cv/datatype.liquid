@@ -1,7 +1,0 @@
-{%- comment -%}Assigns `datatype` (an xsd CURIE) for a "YYYY", "YYYY-MM", or "YYYY-MM-DD" value.{%- endcomment -%}
-{%- assign dt_value = include.value | append: "" -%}
-{%- case dt_value.size -%}
-  {%- when 4 -%}{%- assign datatype = "xsd:gYear" -%}
-  {%- when 7 -%}{%- assign datatype = "xsd:gYearMonth" -%}
-  {%- else -%}{%- assign datatype = "xsd:date" -%}
-{%- endcase -%}

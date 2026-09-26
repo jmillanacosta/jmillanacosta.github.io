@@ -1,4 +1,4 @@
-"""Comparing person names across sources that write and split them differently."""
+"""Names are compared across different spellings and name parts."""
 
 from __future__ import annotations
 
@@ -9,13 +9,12 @@ from .config import ORCID_ID, PERSON
 
 
 def fold(s: str) -> str:
-    """Strip accents and lowercase, for tolerant name matching."""
+    """Accents are removed and text is changed to lower case."""
     return "".join(c for c in unicodedata.normalize("NFD", s) if not unicodedata.combining(c)).lower()
 
 
 def is_me(given: str, family: str, orcid: str | None) -> bool:
-    """This CV's subject: by ORCID, else by name, allowing for registries that split the family
-    name differently (every part of it present, and the given name's first word)."""
+    """The CV owner is matched by ORCID, or by name when no ORCID is given."""
     if orcid:
         return orcid.rstrip("/").endswith(ORCID_ID)
     full = fold(f"{given} {family}").split()
@@ -29,8 +28,7 @@ def given_parts(given: str) -> list[str]:
 
 
 def compatible(a: str, b: str) -> bool:
-    """Whether two given names can be the same person's: part by part, in order, words must be
-    equal and an initial must match the word's first letter ("E." and "Egon" fit "Egon L")."""
+    """Given names are compared in order; matching initials are accepted."""
     parts_a, parts_b = given_parts(a), given_parts(b)
     if not parts_a or not parts_b:
         return False
@@ -43,15 +41,12 @@ def compatible(a: str, b: str) -> bool:
 
 
 def full_name(given: str, family: str) -> str:
-    """A name with the given/family split, hyphens, dots, and parenthesized nicknames ignored:
-    registries split names differently ("Jose Emilio Labra" + "Gayo", "Jose Emilio" +
-    "Labra-Gayo"), and profiles add nicknames ("Friederike (Freddie) Ehrhart")."""
+    """Name splits, punctuation and bracketed nicknames are ignored."""
     return " ".join(given_parts(re.sub(r"\([^)]*\)", " ", f"{given} {family}")))
 
 
 def names_fit(given: str, family: str, full: str) -> bool:
-    """Whether a name written in one piece ("Thomas E. Exner") can be this given and family name:
-    the whole name matches, or every family-name part is in it and the rest fits the given name."""
+    """Full names are compared, with surname parts and initials accepted."""
     if full_name(given, family) == full_name(full, ""):
         return True
     parts, surname = given_parts(full), given_parts(family)
