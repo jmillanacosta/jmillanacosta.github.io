@@ -1,3 +1,92 @@
 # Written by scripts/update_cv_data.py: the owner of each listed repository, and the skills
 # (cv.yml skill_terms) its languages, topics and packages name, by the identifiers Wikidata gives.
-[]
+- id: rdfsolve
+  owner: https://github.com/jmillanacosta
+  owner_website: https://jmillanacosta.github.io
+  softwareRequirements:
+  - Flask
+  - Pydantic
+  - RDFLib
+  - Ruff
+  - Sphinx
+  - mypy
+  - pandas
+  - pytest
+  about:
+  - RDF
+  - SHACL
+- id: pysec2pri
+  owner: https://github.com/jmillanacosta
+  owner_website: https://jmillanacosta.github.io
+  softwareRequirements:
+  - Polars
+  - Pydantic
+  - Ruff
+  - Sphinx
+  - mypy
+  - pandas
+  - pytest
+- id: mapkgsutils
+  owner: https://github.com/jmillanacosta
+  owner_website: https://jmillanacosta.github.io
+  softwareRequirements:
+  - Polars
+  - Pydantic
+  - Ruff
+  - Sphinx
+  - mypy
+  - pandas
+  - pytest
+- id: pyaop
+  owner: https://github.com/jmillanacosta
+  owner_website: https://jmillanacosta.github.io
+  softwareRequirements:
+  - Pydantic
+  - Ruff
+  - Sphinx
+  - mypy
+  - pytest
+- id: aop-suite
+  owner: https://github.com/VHP4Safety
+  owner_website: https://vhp4safety.nl/
+  programmingLanguage:
+  - JavaScript
+  softwareRequirements:
+  - Flask
+  - Pydantic
+  - RDFLib
+  - pandas
+- id: biodatafuse
+  owner: https://github.com/BioDataFuse
+  softwareRequirements:
+  - RDFLib
+  - pandas
+  - pytest
+  about:
+  - RDF
+- id: vhp4safety-platform
+  owner: https://github.com/VHP4Safety
+  owner_website: https://vhp4safety.nl/
+  programmingLanguage:
+  - JavaScript
+  softwareRequirements:
+  - Flask
+- id: enanomapper
+  owner: https://github.com/enanomapper
+  owner_website: http://enanomapper.net/
+  about:
+  - OWL
+- id: bridgedb
+  owner: https://github.com/bridgedb
+  owner_website: https://www.bridgedb.org/
+  about:
+  - Docker
+- id: cnv-pathway-atlas
+  owner: https://github.com/CNVPathwayAtlas
+  programmingLanguage:
+  - JavaScript
+- id: seejobs
+  owner: https://github.com/jmillanacosta
+  owner_website: https://jmillanacosta.github.io
+  programmingLanguage:
+  - JavaScript

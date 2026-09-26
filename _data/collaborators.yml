@@ -1,5 +1,112 @@
 # Written by scripts/update_cv_data.py: contributors (GitHub) and co-authors (ORCID), with what Wikidata
 # knows of them. Every name and website keeps its source.
+- id: https://github.com/GerganaTancheva123
+  names:
+  - name: GerganaTancheva123
+    source: https://github.com/GerganaTancheva123
+  contributes:
+  - enanomapper
+- id: https://github.com/JKChang2015
+  names:
+  - name: JKChang
+    source: https://github.com/JKChang2015
+  contributes:
+  - enanomapper
+- id: https://github.com/LindeSchoenmaker
+  names:
+  - name: LindeSchoenmaker
+    source: https://github.com/LindeSchoenmaker
+  contributes:
+  - vhp4safety-platform
+- id: https://github.com/ShakiraPortfolio
+  names:
+  - name: Shakira
+    source: https://github.com/ShakiraPortfolio
+  contributes:
+  - vhp4safety-platform
+- id: https://github.com/TassosP78
+  names:
+  - name: Tassos Papadiamantis
+    source: https://github.com/TassosP78
+  profiles:
+  - url: https://www.linkedin.com/in/tassospapadiamantis/
+    source: https://github.com/TassosP78
+  contributes:
+  - enanomapper
+- id: https://github.com/UanaF
+  names:
+  - name: UanaF
+    source: https://github.com/UanaF
+  contributes:
+  - enanomapper
+- id: https://github.com/djwetstede
+  names:
+  - name: djwetstede
+    source: https://github.com/djwetstede
+  contributes:
+  - biodatafuse
+- id: https://github.com/iaortega
+  names:
+  - name: Isaac Arturo Ortega Alvarado
+    source: https://github.com/iaortega
+  contributes:
+  - vhp4safety-platform
+- id: https://github.com/lrieswijk
+  names:
+  - name: Linda Rieswijk
+    source: https://github.com/lrieswijk
+  contributes:
+  - enanomapper
+- id: https://github.com/mirthhe
+  names:
+  - name: Mirthe
+    source: https://github.com/mirthhe
+  profiles:
+  - url: https://www.linkedin.com/in/mirtheklaassen/
+    source: https://github.com/mirthhe
+  - url: https://www.instagram.com/nn.irthe
+    source: https://github.com/mirthhe
+  contributes:
+  - aop-suite
+  - vhp4safety-platform
+- id: https://github.com/mmarvinm2
+  names:
+  - name: mmarvinm2
+    source: https://github.com/mmarvinm2
+  contributes:
+  - aop-suite
+- id: https://github.com/ntk73
+  names:
+  - name: Nikolay Kochev
+    source: https://github.com/ntk73
+  websites:
+  - url: https://web.uni-plovdiv.bg/nick
+    source: https://github.com/ntk73
+  contributes:
+  - enanomapper
+- id: https://github.com/nunogit
+  names:
+  - name: nunogit
+    source: https://github.com/nunogit
+  contributes:
+  - bridgedb
+- id: https://github.com/westonslaughter
+  names:
+  - name: Wes Slaughter
+    source: https://github.com/westonslaughter
+  websites:
+  - url: https://westonslaughter.github.io/me/#home
+    source: https://github.com/westonslaughter
+  contributes:
+  - enanomapper
+- id: https://github.com/youphendriks
+  names:
+  - name: Youp Hendriks
+    source: https://github.com/youphendriks
+  contributes:
+  - aop-suite
+  - biodatafuse
+  - vhp4safety-platform
 - id: https://orcid.org/0000-0001-5410-599X
   names:
   - name: Kristina Hanspers
@@ -395,16 +502,25 @@
     source: https://openalex.org/A5114530520
 - id: https://orcid.org/0000-0001-6611-7883
   names:
+  - name: DominikMartinat
+    source: https://github.com/DominikMartinat
   - name: Dominik Martinát
     source: http://www.wikidata.org/entity/Q117834010
   same_as:
+  - https://github.com/DominikMartinat
   - http://www.wikidata.org/entity/Q117834010
+  accounts:
+  - url: https://github.com/DominikMartinat
+    via: declared in citation metadata
+    source: https://github.com/BioDataFuse/pyBiodatafuse/blob/HEAD/CITATION.cff
   profiles:
   - url: https://www.scopus.com/inward/authorDetails.url?authorID=60429818600&partnerID=MN8TOARS
     label: Scopus Author ID
     source: https://orcid.org/0000-0001-6611-7883
   - url: https://openalex.org/A5093405122
     source: https://openalex.org/A5093405122
+  contributes:
+  - biodatafuse
   statements:
   - equivalent:
     - https://schema.org/hasOccupation
@@ -442,15 +558,19 @@
 - id: https://orcid.org/0000-0001-7542-0286
   names:
   - name: Egon Willighagen
+    source: https://github.com/egonw
+  - name: Egon Willighagen
     source: http://www.wikidata.org/entity/Q20895241
   same_as:
-  - http://www.wikidata.org/entity/Q20895241
   - https://github.com/egonw
+  - http://www.wikidata.org/entity/Q20895241
   accounts:
   - url: https://github.com/egonw
-    via: Wikidata
-    source: http://www.wikidata.org/entity/Q20895241
+    via: declared on ORCID record
+    source: https://orcid.org/0000-0001-7542-0286
   websites:
+  - url: https://chem-bla-ics.linkedchemistry.info/
+    source: https://github.com/egonw
   - url: https://egonw.github.io/
     source: http://www.wikidata.org/entity/Q20895241
   - url: https://cris.maastrichtuniversity.nl/portal/en/persons/egon-willighagen(2ad8fbe2-e873-404d-85c7-e0c125a6ead7).html
@@ -578,6 +698,16 @@
     source: https://orcid.org/0000-0001-7542-0286
   - url: https://openalex.org/A5135576456
     source: https://openalex.org/A5135576456
+  - url: https://social.edu.nl/@egonw
+    source: https://github.com/egonw
+  - url: https://mastodon.social/@egonw
+    source: https://github.com/egonw
+  contributes:
+  - aop-suite
+  - biodatafuse
+  - vhp4safety-platform
+  - enanomapper
+  - bridgedb
   statements:
   - equivalent: []
     label: field of work
@@ -976,15 +1106,19 @@
 - id: https://orcid.org/0000-0001-8319-7758
   names:
   - name: Hasan Balcı
+    source: https://github.com/hasanbalci
+  - name: Hasan Balcı
     source: http://www.wikidata.org/entity/Q130642378
   same_as:
-  - http://www.wikidata.org/entity/Q130642378
   - https://github.com/hasanbalci
+  - http://www.wikidata.org/entity/Q130642378
   accounts:
   - url: https://github.com/hasanbalci
     via: Wikidata
     source: http://www.wikidata.org/entity/Q130642378
   websites:
+  - url: https://hasanbalci.github.io/
+    source: https://github.com/hasanbalci
   - url: https://hasanbalci.github.io/
     source: http://www.wikidata.org/entity/Q130642378
   profiles:
@@ -996,6 +1130,8 @@
     source: https://orcid.org/0000-0001-8319-7758
   - url: https://openalex.org/A5062979397
     source: https://openalex.org/A5062979397
+  contributes:
+  - biodatafuse
   statements:
   - equivalent:
     - https://schema.org/hasOccupation
@@ -1027,13 +1163,15 @@
     value: https://hasanbalci.github.io/
 - id: https://orcid.org/0000-0001-8449-1318
   names:
+  - name: De
+    source: https://github.com/DeniseSl22
   - name: Denise Slenter
     source: http://www.wikidata.org/entity/Q43744369
   same_as:
+  - https://github.com/DeniseSl22
   - http://www.wikidata.org/entity/Q43744369
-  - https://github.com/denisesl22
   accounts:
-  - url: https://github.com/denisesl22
+  - url: https://github.com/DeniseSl22
     via: declared on ORCID record
     source: https://orcid.org/0000-0001-8449-1318
   websites:
@@ -1063,6 +1201,9 @@
     source: https://orcid.org/0000-0001-8449-1318
   - url: https://openalex.org/A5136731725
     source: https://openalex.org/A5136731725
+  contributes:
+  - biodatafuse
+  - enanomapper
   statements:
   - equivalent: []
     label: field of work
@@ -2051,6 +2192,183 @@
     property: http://www.wikidata.org/entity/P735
     value: http://www.wikidata.org/entity/Q18324373
     value_label: Penny
+- id: https://orcid.org/0000-0002-3469-4923
+  names:
+  - name: Janna Hastings
+    source: https://github.com/jannahastings
+  - name: Janna Hastings
+    source: http://www.wikidata.org/entity/Q27902110
+  same_as:
+  - https://github.com/jannahastings
+  - http://www.wikidata.org/entity/Q27902110
+  accounts:
+  - url: https://github.com/jannahastings
+    via: Wikidata
+    source: http://www.wikidata.org/entity/Q27902110
+  websites:
+  - url: http://www.babraham.ac.uk/our-research/epigenetics/olivia-casanueva/members/433/janna-hastings
+    source: http://www.wikidata.org/entity/Q27902110
+  profiles:
+  - url: https://scholar.google.com/citations?user=cz-hhPUAAAAJ
+    label: Google Scholar author ID
+    source: http://www.wikidata.org/entity/Q27902110
+  - url: https://dblp.org/pid/85%2F5079
+    label: DBLP author ID
+    source: http://www.wikidata.org/entity/Q27902110
+  - url: https://app.dimensions.ai/details/entities/publication/author/ur.0606506716.14
+    label: Dimensions author ID
+    source: http://www.wikidata.org/entity/Q27902110
+  - url: https://x.com/jannahastings
+    label: X (Twitter) username
+    source: http://www.wikidata.org/entity/Q27902110
+  - url: https://www.facebook.com/jannahastings
+    label: Facebook username
+    source: http://www.wikidata.org/entity/Q27902110
+  - url: https://www.linkedin.com/in/janna-hastings-4282981a/
+    label: LinkedIn personal profile ID
+    source: http://www.wikidata.org/entity/Q27902110
+  - url: https://d-nb.info/gnd/122119920X
+    label: GND ID
+    source: http://www.wikidata.org/entity/Q27902110
+  - url: https://viaf.org/en/viaf/7160544379009980626
+    label: VIAF cluster ID
+    source: http://www.wikidata.org/entity/Q27902110
+  - url: https://wikidata-externalid-url.toolforge.org/?p=12361&url_prefix=https%3A%2F%2Fbsky.app%2Fprofile%2F&id=jannahastings.bsky.social
+    label: Bluesky handle
+    source: http://www.wikidata.org/entity/Q27902110
+  - url: https://lux.collections.yale.edu/view/person%2Fd51b416f-a98f-4208-b380-745f29c76ad8
+    label: ‎Yale LUX ID
+    source: http://www.wikidata.org/entity/Q27902110
+  - url: https://www.deutsche-digitale-bibliothek.de/person/gnd/122119920X
+    label: DDB person (GND) ID
+    source: http://www.wikidata.org/entity/Q27902110
+  - url: https://fedirect.toolforge.org/?id=jannahastings%40mastodon.online
+    label: Mastodon address
+    source: http://www.wikidata.org/entity/Q27902110
+  - url: https://authority.bibsys.no/authority/rest/authorities/html/1691037120124
+    label: BIBSYS ID
+    source: http://www.wikidata.org/entity/Q27902110
+  - url: https://lod.nl.go.kr/resource/KAC202450287
+    label: National Library of Korea ID
+    source: http://www.wikidata.org/entity/Q27902110
+  - url: https://id.loc.gov/authorities/no2021015125
+    label: Library of Congress Authorities ID
+    source: http://www.wikidata.org/entity/Q27902110
+  - url: https://wikidata-externalid-url.toolforge.org/?p=7699&url_prefix=https://viaf.org/processed/LIH%7C&id=LNB%3ADRNe%3B%3DBf
+    label: National Library of Lithuania ID
+    source: http://www.wikidata.org/entity/Q27902110
+  - url: https://www.idref.fr/273463608
+    label: IdRef ID
+    source: http://www.wikidata.org/entity/Q27902110
+  contributes:
+  - enanomapper
+  statements:
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q1650915
+    value_label: researcher
+    value_type: https://schema.org/Occupation
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q212980
+    value_label: psychologist
+  - equivalent:
+    - https://schema.org/affiliation
+    - https://schema.org/worksFor
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q1341845
+    value_label: EMBL's European Bioinformatics Institute
+    value_type: https://schema.org/Organization
+  - equivalent:
+    - https://schema.org/affiliation
+    - https://schema.org/worksFor
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q206702
+    value_label: University of Zurich
+    value_type: https://schema.org/Organization
+  - equivalent:
+    - https://schema.org/affiliation
+    - https://schema.org/worksFor
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q262760
+    value_label: École polytechnique fédérale de Lausanne
+  - equivalent:
+    - https://schema.org/affiliation
+    - https://schema.org/worksFor
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q4838012
+    value_label: Babraham Institute
+    value_type: https://schema.org/Organization
+  - equivalent:
+    - https://schema.org/affiliation
+    - https://schema.org/worksFor
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q655866
+    value_label: University of Magdeburg
+  - equivalent:
+    - https://schema.org/affiliation
+    - https://schema.org/worksFor
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q673354
+    value_label: University of St. Gallen
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q4838012
+    value_label: Babraham Institute
+    value_type: https://schema.org/Organization
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - datatype: http://www.w3.org/2001/XMLSchema#dateTime
+    equivalent:
+    - https://schema.org/startTime
+    - https://schema.org/startDate
+    - https://schema.org/dateCreated
+    - https://schema.org/birthDate
+    label: date of birth
+    property: http://www.wikidata.org/entity/P569
+    value: '2000-01-01T00:00:00Z'
+  - equivalent:
+    - https://schema.org/affiliation
+    - https://schema.org/alumniOf
+    label: educated at
+    property: http://www.wikidata.org/entity/P69
+    value: http://www.wikidata.org/entity/Q35794
+    value_label: University of Cambridge
+    value_type: https://schema.org/EducationalOrganization
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/familyName
+    label: family name
+    property: http://www.wikidata.org/entity/P734
+    value: http://www.wikidata.org/entity/Q16276453
+    value_label: Hastings
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q20000584
+    value_label: Janna
+  - equivalent:
+    - https://schema.org/url
+    label: official website
+    property: http://www.wikidata.org/entity/P856
+    value: http://www.babraham.ac.uk/our-research/epigenetics/olivia-casanueva/members/433/janna-hastings
 - id: https://orcid.org/0000-0002-4166-7093
   same_as:
   - http://www.wikidata.org/entity/Q116446553
@@ -2066,6 +2384,18 @@
   - url: https://github.com/jmillanacosta
     label: GitHub account
     source: http://www.wikidata.org/entity/Q116446553
+  contributes:
+  - rdfsolve
+  - pysec2pri
+  - mapkgsutils
+  - pyaop
+  - aop-suite
+  - biodatafuse
+  - vhp4safety-platform
+  - enanomapper
+  - bridgedb
+  - cnv-pathway-atlas
+  - seejobs
   links:
   - url: https://openalex.org/A5061091441
     label: OpenAlex
@@ -2132,15 +2462,19 @@
 - id: https://orcid.org/0000-0002-4322-6179
   names:
   - name: Nina Jeliazkova
+    source: https://github.com/vedina
+  - name: Nina Jeliazkova
     source: http://www.wikidata.org/entity/Q27061849
   same_as:
-  - http://www.wikidata.org/entity/Q27061849
   - https://github.com/vedina
+  - http://www.wikidata.org/entity/Q27061849
   accounts:
   - url: https://github.com/vedina
     via: Wikidata
     source: http://www.wikidata.org/entity/Q27061849
   websites:
+  - url: http://vedina.users.sourceforge.net
+    source: https://github.com/vedina
   - url: https://scholar.google.com/citations?user=2eBL2WMAAAAJ&hl=en
     source: https://orcid.org/0000-0002-4322-6179
   - url: https://www.ideaconsult.net/
@@ -2185,6 +2519,12 @@
     source: https://orcid.org/0000-0002-4322-6179
   - url: https://openalex.org/A5056989071
     source: https://openalex.org/A5056989071
+  - url: https://twitter.com/10705013
+    source: https://github.com/vedina
+  - url: https://bsky.app/profile/n107055013.bsky.social
+    source: https://github.com/vedina
+  contributes:
+  - enanomapper
   statements:
   - equivalent:
     - https://schema.org/hasOccupation
@@ -2478,14 +2818,16 @@
 - id: https://orcid.org/0000-0002-4904-3269
   names:
   - name: Tooba Abbassi-Daloii
+    source: https://github.com/tabbassidaloii
+  - name: Tooba Abbassi-Daloii
     source: http://www.wikidata.org/entity/Q89321648
   same_as:
-  - http://www.wikidata.org/entity/Q89321648
   - https://github.com/tabbassidaloii
+  - http://www.wikidata.org/entity/Q89321648
   accounts:
   - url: https://github.com/tabbassidaloii
-    via: Wikidata
-    source: http://www.wikidata.org/entity/Q89321648
+    via: declared in citation metadata
+    source: https://github.com/BioDataFuse/pyBiodatafuse/blob/HEAD/CITATION.cff
   profiles:
   - url: https://app.dimensions.ai/details/entities/publication/author/ur.01030411721.57
     label: Dimensions author ID
@@ -2504,6 +2846,8 @@
     source: https://orcid.org/0000-0002-4904-3269
   - url: https://openalex.org/A5080912462
     source: https://openalex.org/A5080912462
+  contributes:
+  - biodatafuse
   statements:
   - equivalent:
     - https://schema.org/hasOccupation
@@ -2977,14 +3321,16 @@
 - id: https://orcid.org/0000-0002-7683-0452
   names:
   - name: Yojana Gadiya
+    source: https://github.com/YojanaGadiya
+  - name: Yojana Gadiya
     source: http://www.wikidata.org/entity/Q70206064
   same_as:
-  - http://www.wikidata.org/entity/Q70206064
   - https://github.com/YojanaGadiya
+  - http://www.wikidata.org/entity/Q70206064
   accounts:
   - url: https://github.com/YojanaGadiya
-    via: Wikidata
-    source: http://www.wikidata.org/entity/Q70206064
+    via: declared on ORCID record
+    source: https://orcid.org/0000-0002-7683-0452
   websites:
   - url: https://www.linkedin.com/in/yojana-gadiya-477739113/
     source: https://orcid.org/0000-0002-7683-0452
@@ -3017,6 +3363,8 @@
     source: https://orcid.org/0000-0002-7683-0452
   - url: https://openalex.org/A5004719764
     source: https://openalex.org/A5004719764
+  contributes:
+  - biodatafuse
   statements:
   - equivalent: []
     label: academic thesis
@@ -3229,10 +3577,17 @@
     value: '8'
 - id: https://orcid.org/0000-0002-7770-620X
   names:
+  - name: Friederike (Freddie) Ehrhart
+    source: https://github.com/fehrhart
   - name: Friederike Ehrhart
     source: http://www.wikidata.org/entity/Q28025534
   same_as:
+  - https://github.com/fehrhart
   - http://www.wikidata.org/entity/Q28025534
+  accounts:
+  - url: https://github.com/fehrhart
+    via: inferred from matching name
+    source: https://github.com/fehrhart
   websites:
   - url: https://www.maastrichtuniversity.nl/friederike.ehrhart
     source: http://www.wikidata.org/entity/Q28025534
@@ -3270,6 +3625,8 @@
     source: http://www.wikidata.org/entity/Q28025534
   - url: https://openalex.org/A5137599660
     source: https://openalex.org/A5137599660
+  contributes:
+  - enanomapper
   statements:
   - equivalent:
     - https://schema.org/hasOccupation
@@ -3387,10 +3744,12 @@
 - id: https://orcid.org/0000-0002-8399-8990
   names:
   - name: Ammar Ammar
+    source: https://github.com/ammar257ammar
+  - name: Ammar Ammar
     source: http://www.wikidata.org/entity/Q86442640
   same_as:
-  - http://www.wikidata.org/entity/Q86442640
   - https://github.com/ammar257ammar
+  - http://www.wikidata.org/entity/Q86442640
   accounts:
   - url: https://github.com/ammar257ammar
     via: Wikidata
@@ -3407,6 +3766,8 @@
     source: http://www.wikidata.org/entity/Q86442640
   - url: https://openalex.org/A5066436740
     source: https://openalex.org/A5066436740
+  contributes:
+  - biodatafuse
   statements:
   - equivalent:
     - https://schema.org/hasOccupation
@@ -3634,9 +3995,16 @@
 - id: https://orcid.org/0000-0002-9454-4783
   names:
   - name: Laurent Winckers
+    source: https://github.com/lwinckers
+  - name: Laurent Winckers
     source: http://www.wikidata.org/entity/Q92186214
   same_as:
+  - https://github.com/lwinckers
   - http://www.wikidata.org/entity/Q92186214
+  accounts:
+  - url: https://github.com/lwinckers
+    via: inferred from matching name
+    source: https://github.com/lwinckers
   websites:
   - url: https://www.linkedin.com/in/laurent-winckers/
     source: https://orcid.org/0000-0002-9454-4783
@@ -3646,6 +4014,8 @@
     source: http://www.wikidata.org/entity/Q92186214
   - url: https://openalex.org/A5060151962
     source: https://openalex.org/A5060151962
+  contributes:
+  - enanomapper
   statements:
   - equivalent:
     - https://schema.org/hasOccupation
@@ -3684,14 +4054,16 @@
 - id: https://orcid.org/0000-0003-0329-1977
   names:
   - name: Ozan Çınar
+    source: https://github.com/ozancinar
+  - name: Ozan Çınar
     source: http://www.wikidata.org/entity/Q89571039
   same_as:
-  - http://www.wikidata.org/entity/Q89571039
   - https://github.com/ozancinar
+  - http://www.wikidata.org/entity/Q89571039
   accounts:
   - url: https://github.com/ozancinar
-    via: Wikidata
-    source: http://www.wikidata.org/entity/Q89571039
+    via: declared on ORCID record
+    source: https://orcid.org/0000-0003-0329-1977
   profiles:
   - url: https://zbmath.org/authors/?q=ai:cinar.ozan
     label: zbMATH author ID
@@ -3710,6 +4082,9 @@
     source: http://www.wikidata.org/entity/Q89571039
   - url: https://openalex.org/A5022720376
     source: https://openalex.org/A5022720376
+  contributes:
+  - aop-suite
+  - vhp4safety-platform
   statements:
   - equivalent:
     - https://schema.org/hasOccupation
@@ -4182,9 +4557,16 @@
 - id: https://orcid.org/0000-0003-2230-0840
   names:
   - name: Marvin Martens
+    source: https://github.com/marvinm2
+  - name: Marvin Martens
     source: http://www.wikidata.org/entity/Q42369611
   same_as:
+  - https://github.com/marvinm2
   - http://www.wikidata.org/entity/Q42369611
+  accounts:
+  - url: https://github.com/marvinm2
+    via: declared in citation metadata
+    source: https://github.com/marvinm2/rnaseq-mito-cachexia-paper/blob/HEAD/CITATION.cff
   websites:
   - url: https://cris.maastrichtuniversity.nl/en/persons/a7490e9a-a51d-48a6-ad0f-4e295a3fd29e
     source: http://www.wikidata.org/entity/Q42369611
@@ -4217,6 +4599,10 @@
     source: https://orcid.org/0000-0003-2230-0840
   - url: https://openalex.org/A5140831444
     source: https://openalex.org/A5140831444
+  contributes:
+  - aop-suite
+  - vhp4safety-platform
+  - bridgedb
   statements:
   - equivalent: []
     label: academic thesis
@@ -4513,10 +4899,19 @@
 - id: https://orcid.org/0000-0003-3213-4495
   names:
   - name: Ana Claudia Sima
+    source: https://github.com/dssib
+  - name: Ana Claudia Sima
     source: http://www.wikidata.org/entity/Q118146531
   same_as:
+  - https://github.com/dssib
   - http://www.wikidata.org/entity/Q118146531
+  accounts:
+  - url: https://github.com/dssib
+    via: declared in citation metadata
+    source: https://github.com/BioDataFuse/pyBiodatafuse/blob/HEAD/CITATION.cff
   websites:
+  - url: https://sib.swiss
+    source: https://github.com/dssib
   - url: http://www.linkedin.com/in/ana-claudia-sima
     source: https://orcid.org/0000-0003-3213-4495
   profiles:
@@ -4525,6 +4920,8 @@
     source: https://orcid.org/0000-0003-3213-4495
   - url: https://openalex.org/A5032183252
     source: https://openalex.org/A5032183252
+  contributes:
+  - biodatafuse
   statements:
   - equivalent: []
     label: field of work
@@ -4727,6 +5124,492 @@
     label: social media followers
     property: http://www.wikidata.org/entity/P8687
     value: '1761'
+- id: https://orcid.org/0000-0003-4423-4370
+  names:
+  - name: Charles Tapley Hoyt
+    source: https://github.com/cthoyt
+  same_as:
+  - https://github.com/cthoyt
+  - http://www.wikidata.org/entity/Q47475003
+  accounts:
+  - url: https://github.com/cthoyt
+    via: declared on GitHub profile
+    source: https://github.com/cthoyt
+  websites:
+  - url: https://cthoyt.com
+    source: https://github.com/cthoyt
+  - url: https://cthoyt.com
+    source: http://www.wikidata.org/entity/Q47475003
+  profiles:
+  - url: https://www.researchgate.net/profile/Charles_Hoyt
+    label: ResearchGate profile ID
+    source: http://www.wikidata.org/entity/Q47475003
+  - url: https://figshare.com/authors/wd/4784217
+    label: Figshare author ID
+    source: http://www.wikidata.org/entity/Q47475003
+  - url: https://www.webofscience.com/wos/author/record/B-5720-2018
+    label: Web of Science ResearcherID
+    source: http://www.wikidata.org/entity/Q47475003
+  - url: https://scholar.google.com/citations?user=PjrpzUIAAAAJ
+    label: Google Scholar author ID
+    source: http://www.wikidata.org/entity/Q47475003
+  - url: https://www.scopus.com/authid/detail.uri?authorId=56305849200
+    label: Scopus author ID
+    source: http://www.wikidata.org/entity/Q47475003
+  - url: https://meta.wikimedia.org/wiki/Special:CentralAuth/cthoyt
+    label: Wikimedia username
+    source: http://www.wikidata.org/entity/Q47475003
+  - url: https://www.authorea.com/users/229233
+    label: Authorea author ID
+    source: http://www.wikidata.org/entity/Q47475003
+  - url: https://x.com/cthoyt
+    label: X (Twitter) username
+    source: http://www.wikidata.org/entity/Q47475003
+  - url: https://academictree.org/math/peopleinfo.php?pid=772820
+    label: Academic Tree ID
+    source: http://www.wikidata.org/entity/Q47475003
+  - url: https://publons.com/researcher/1981638/
+    label: Publons author ID
+    source: http://www.wikidata.org/entity/Q47475003
+  - url: https://dblp.org/pid/199%2F2168
+    label: DBLP author ID
+    source: http://www.wikidata.org/entity/Q47475003
+  - url: https://loop.frontiersin.org/people/827476/overview
+    label: Loop ID
+    source: http://www.wikidata.org/entity/Q47475003
+  - url: https://www.semanticscholar.org/author/-/35477117
+    label: Semantic Scholar author ID
+    source: http://www.wikidata.org/entity/Q47475003
+  - url: https://www.linkedin.com/in/cthoyt/
+    label: LinkedIn personal profile ID
+    source: http://www.wikidata.org/entity/Q47475003
+  - url: https://openreview.net/profile?id=~Charles_Tapley_Hoyt1
+    label: OpenReview.net profile ID
+    source: http://www.wikidata.org/entity/Q47475003
+  - url: https://arxiv.org/a/hoyt_c_1.html
+    label: arXiv author ID
+    source: http://www.wikidata.org/entity/Q47475003
+  - url: https://fedirect.toolforge.org/?id=cthoyt%40scholar.social
+    label: Mastodon address
+    source: http://www.wikidata.org/entity/Q47475003
+  - url: https://openalex.org/A2765723454
+    label: OpenAlex ID
+    source: http://www.wikidata.org/entity/Q47475003
+  - url: https://pypi.org/user/cthoyt
+    label: PyPI username
+    source: http://www.wikidata.org/entity/Q47475003
+  - url: https://zbmath.org/authors/?q=ai:hoyt.charles-tapley
+    label: zbMATH author ID
+    source: http://www.wikidata.org/entity/Q47475003
+  - url: https://d-nb.info/gnd/1203140533
+    label: GND ID
+    source: http://www.wikidata.org/entity/Q47475003
+  - url: https://viaf.org/en/viaf/5158003823401882178
+    label: VIAF cluster ID
+    source: http://www.wikidata.org/entity/Q47475003
+  - url: https://www.quora.com/profile/Charlie-Hoyt-1
+    label: Quora username
+    source: http://www.wikidata.org/entity/Q47475003
+  - url: https://sciprofiles.com/profile/1072667
+    label: SciProfiles ID
+    source: http://www.wikidata.org/entity/Q47475003
+  - url: https://osf.io/vytn9
+    label: Open Science Framework ID
+    source: http://www.wikidata.org/entity/Q47475003
+  - url: https://www.deutsche-digitale-bibliothek.de/person/gnd/1203140533
+    label: DDB person (GND) ID
+    source: http://www.wikidata.org/entity/Q47475003
+  - url: https://scholar.social/@cthoyt
+    source: https://github.com/cthoyt
+  contributes:
+  - biodatafuse
+  statements:
+  - equivalent: []
+    label: field of work
+    property: http://www.wikidata.org/entity/P101
+    value: http://www.wikidata.org/entity/Q1026962
+    value_label: digital humanities
+  - equivalent: []
+    label: field of work
+    property: http://www.wikidata.org/entity/P101
+    value: http://www.wikidata.org/entity/Q128570
+    value_label: bioinformatics
+  - equivalent: []
+    label: field of work
+    property: http://www.wikidata.org/entity/P101
+    value: http://www.wikidata.org/entity/Q25303877
+    value_label: pathway analysis
+  - equivalent: []
+    label: field of work
+    property: http://www.wikidata.org/entity/P101
+    value: http://www.wikidata.org/entity/Q2539
+    value_label: machine learning
+  - equivalent: []
+    label: field of work
+    property: http://www.wikidata.org/entity/P101
+    value: http://www.wikidata.org/entity/Q30642
+    value_label: natural language processing
+  - equivalent: []
+    label: field of work
+    property: http://www.wikidata.org/entity/P101
+    value: http://www.wikidata.org/entity/Q324254
+    value_label: ontology
+  - equivalent: []
+    label: field of work
+    property: http://www.wikidata.org/entity/P101
+    value: http://www.wikidata.org/entity/Q33002955
+    value_label: knowledge graph
+  - equivalent: []
+    label: field of work
+    property: http://www.wikidata.org/entity/P101
+    value: http://www.wikidata.org/entity/Q50327360
+    value_label: proteochemometrics
+  - equivalent: []
+    label: field of work
+    property: http://www.wikidata.org/entity/P101
+    value: http://www.wikidata.org/entity/Q5308921
+    value_label: drug repositioning
+  - equivalent: []
+    label: field of work
+    property: http://www.wikidata.org/entity/P101
+    value: http://www.wikidata.org/entity/Q815297
+    value_label: systems biology
+  - equivalent: []
+    label: field of work
+    property: http://www.wikidata.org/entity/P101
+    value: http://www.wikidata.org/entity/Q910164
+    value_label: cheminformatics
+  - equivalent: []
+    label: academic thesis
+    property: http://www.wikidata.org/entity/P1026
+    value: http://www.wikidata.org/entity/Q66498297
+  - equivalent:
+    - https://schema.org/knowsLanguage
+    label: native language
+    property: http://www.wikidata.org/entity/P103
+    value: http://www.wikidata.org/entity/Q1860
+    value_label: English
+    value_type: https://schema.org/Language
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q5482740
+    value_label: programmer
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q593644
+    value_label: chemist
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q82594
+    value_label: computer scientist
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q864503
+    value_label: biologist
+  - equivalent:
+    - https://schema.org/hasOccupation
+    label: occupation
+    property: http://www.wikidata.org/entity/P106
+    value: http://www.wikidata.org/entity/Q901
+    value_label: scientist
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q1451981
+    value_label: Fraunhofer Institute for Algorithms and Scientific Computing
+    value_type: https://schema.org/Organization
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q152171
+    value_label: University of Bonn
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q206921
+    value_label: Pfizer
+    value_type: https://schema.org/Organization
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q212322
+    value_label: GSK
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q273263
+    value_label: RWTH Aachen University
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q37548
+    value_label: Northeastern University
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q49121
+    value_label: Harvard Medical School
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q507154
+    value_label: Novartis
+  - equivalent:
+    - https://schema.org/worksFor
+    - https://schema.org/affiliation
+    label: employer
+    property: http://www.wikidata.org/entity/P108
+    value: http://www.wikidata.org/entity/Q94505592
+    value_label: Enveda
+  - equivalent: []
+    label: nominated for
+    property: http://www.wikidata.org/entity/P1411
+    value: http://www.wikidata.org/entity/Q118947746
+    value_label: Excellence in Biocuration Early Career Award
+  - equivalent:
+    - https://schema.org/knowsLanguage
+    label: languages spoken, written or signed
+    property: http://www.wikidata.org/entity/P1412
+    value: http://www.wikidata.org/entity/Q1860
+    value_label: English
+    value_type: https://schema.org/Language
+  - equivalent:
+    - https://schema.org/knowsLanguage
+    label: languages spoken, written or signed
+    property: http://www.wikidata.org/entity/P1412
+    value: http://www.wikidata.org/entity/Q188
+    value_label: German
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q107380113
+    value_label: Laboratory of Systems Pharmacology
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q107380120
+    value_label: Sorger Laboratory
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q107392214
+    value_label: INDRA team
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q126066280
+    value_label: Biopragmatics Group
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q152171
+    value_label: University of Bonn
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q655757
+    value_label: Erasmus Student Network
+    value_type: https://schema.org/Organization
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q892659
+    value_label: Bonn-Aachen International Center for Information Technology
+    value_type: https://schema.org/ResearchOrganization
+  - equivalent:
+    - https://schema.org/affiliation
+    label: affiliation
+    property: http://www.wikidata.org/entity/P1416
+    value: http://www.wikidata.org/entity/Q95587147
+    value_label: CoronaWhy
+  - datatype: http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
+    equivalent:
+    - https://schema.org/name
+    label: nickname
+    language: en
+    property: http://www.wikidata.org/entity/P1449
+    value: Charlie
+  - equivalent:
+    - https://schema.org/url
+    label: official blog URL
+    property: http://www.wikidata.org/entity/P1581
+    value: https://cthoyt.com
+  - equivalent:
+    - https://schema.org/award
+    label: award received
+    property: http://www.wikidata.org/entity/P166
+    value: http://www.wikidata.org/entity/Q118947746
+    value_label: Excellence in Biocuration Early Career Award
+  - equivalent:
+    - https://schema.org/award
+    label: award received
+    property: http://www.wikidata.org/entity/P166
+    value: http://www.wikidata.org/entity/Q64741615
+    value_label: Bernie Lemire Award
+  - equivalent:
+    - https://schema.org/image
+    label: image
+    property: http://www.wikidata.org/entity/P18
+    value: http://commons.wikimedia.org/wiki/Special:FilePath/Charles%20Tapley%20Hoyt%202019.jpg
+  - equivalent: []
+    label: doctoral advisor
+    property: http://www.wikidata.org/entity/P184
+    value: http://www.wikidata.org/entity/Q30002209
+    value_label: Martin Hofmann-Apitius
+  - equivalent:
+    - https://schema.org/location
+    - https://schema.org/itemLocation
+    - https://schema.org/birthPlace
+    label: place of birth
+    property: http://www.wikidata.org/entity/P19
+    value: http://www.wikidata.org/entity/Q49145
+    value_label: New Haven
+  - equivalent:
+    - https://schema.org/isPartOf
+    - https://schema.org/location
+    - https://schema.org/itemLocation
+    - https://schema.org/nationality
+    - https://schema.org/addressCountry
+    label: country of citizenship
+    property: http://www.wikidata.org/entity/P27
+    value: http://www.wikidata.org/entity/Q30
+    value_label: United States
+    value_type: https://schema.org/Country
+  - equivalent: []
+    label: instance of
+    property: http://www.wikidata.org/entity/P31
+    value: http://www.wikidata.org/entity/Q5
+    value_label: human
+  - equivalent:
+    - https://schema.org/affiliation
+    - https://schema.org/memberOf
+    - https://schema.org/isPartOf
+    label: member of
+    property: http://www.wikidata.org/entity/P463
+    value: http://www.wikidata.org/entity/Q104846776
+    value_label: Biological Expression Language Committee
+    value_type: https://schema.org/Organization
+  - equivalent:
+    - https://schema.org/affiliation
+    - https://schema.org/memberOf
+    - https://schema.org/isPartOf
+    label: member of
+    property: http://www.wikidata.org/entity/P463
+    value: http://www.wikidata.org/entity/Q23809291
+    value_label: International Society for Biocuration
+  - equivalent:
+    - https://schema.org/affiliation
+    - https://schema.org/memberOf
+    - https://schema.org/isPartOf
+    label: member of
+    property: http://www.wikidata.org/entity/P463
+    value: http://www.wikidata.org/entity/Q247556
+    value_label: American Chemical Society
+  - equivalent: []
+    label: academic degree
+    property: http://www.wikidata.org/entity/P512
+    value: http://www.wikidata.org/entity/Q752297
+    value_label: Doctor of Philosophy
+  - datatype: http://www.w3.org/2001/XMLSchema#dateTime
+    equivalent:
+    - https://schema.org/startTime
+    - https://schema.org/startDate
+    - https://schema.org/dateCreated
+    - https://schema.org/birthDate
+    label: date of birth
+    property: http://www.wikidata.org/entity/P569
+    value: '1993-01-01T00:00:00Z'
+  - equivalent: []
+    label: maintained by WikiProject
+    property: http://www.wikidata.org/entity/P6104
+    value: http://www.wikidata.org/entity/Q8487137
+    value_label: WikiProject Mathematics
+  - equivalent:
+    - https://schema.org/alumniOf
+    - https://schema.org/affiliation
+    label: educated at
+    property: http://www.wikidata.org/entity/P69
+    value: http://www.wikidata.org/entity/Q152171
+    value_label: University of Bonn
+  - equivalent:
+    - https://schema.org/alumniOf
+    - https://schema.org/affiliation
+    label: educated at
+    property: http://www.wikidata.org/entity/P69
+    value: http://www.wikidata.org/entity/Q37548
+    value_label: Northeastern University
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/familyName
+    label: family name
+    property: http://www.wikidata.org/entity/P734
+    value: http://www.wikidata.org/entity/Q16870906
+    value_label: Hoyt
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q2958359
+    value_label: Charles
+  - equivalent:
+    - https://schema.org/name
+    - https://schema.org/givenName
+    label: given name
+    property: http://www.wikidata.org/entity/P735
+    value: http://www.wikidata.org/entity/Q62758138
+    value_label: Tapley
+  - equivalent:
+    - https://schema.org/url
+    label: official website
+    property: http://www.wikidata.org/entity/P856
+    value: https://cthoyt.com
+  - datatype: http://www.w3.org/2001/XMLSchema#decimal
+    equivalent: []
+    label: social media followers
+    property: http://www.wikidata.org/entity/P8687
+    value: '358'
+  - datatype: http://www.w3.org/2001/XMLSchema#decimal
+    equivalent: []
+    label: social media followers
+    property: http://www.wikidata.org/entity/P8687
+    value: '360'
+  - datatype: http://www.w3.org/2001/XMLSchema#decimal
+    equivalent: []
+    label: social media followers
+    property: http://www.wikidata.org/entity/P8687
+    value: '364'
 - id: https://orcid.org/0009-0002-4110-241X
   websites:
   - url: https://secantox.weebly.com/people.html
@@ -4742,12 +5625,21 @@
 - id: https://orcid.org/0009-0005-3680-0645
   names:
   - name: Jente Houweling
+    source: https://github.com/johannehouweling
+  - name: Jente Houweling
     source: http://www.wikidata.org/entity/Q124399961
   same_as:
+  - https://github.com/johannehouweling
   - http://www.wikidata.org/entity/Q124399961
+  accounts:
+  - url: https://github.com/johannehouweling
+    via: inferred from matching name
+    source: https://github.com/johannehouweling
   profiles:
   - url: https://openalex.org/A5052339018
     source: https://openalex.org/A5052339018
+  contributes:
+  - vhp4safety-platform
   statements:
   - equivalent:
     - https://schema.org/affiliation
@@ -4768,10 +5660,35 @@
     value: http://www.wikidata.org/entity/Q5
     value_label: human
 - id: https://orcid.org/0009-0007-1364-797X
+  names:
+  - name: Alexandra Valeanu
+    source: https://github.com/alexandra-valeanu
+  same_as:
+  - https://github.com/alexandra-valeanu
+  accounts:
+  - url: https://github.com/alexandra-valeanu
+    via: inferred from name and co-authorship
+    source: https://doi.org/10.1038/s41597-026-07345-6
   profiles:
   - url: https://openalex.org/A5093329177
     source: https://openalex.org/A5093329177
+  - url: https://www.linkedin.com/in/alexandra-văleanu-1806a2191/
+    source: https://github.com/alexandra-valeanu
+  contributes:
+  - cnv-pathway-atlas
 - id: https://orcid.org/0009-0007-2045-4009
   profiles:
   - url: https://openalex.org/A5075686370
     source: https://openalex.org/A5075686370
+- id: https://orcid.org/0009-0007-2725-2098
+  names:
+  - name: Alejandro Adriaque Lozano
+    source: https://github.com/adriaque
+  same_as:
+  - https://github.com/adriaque
+  accounts:
+  - url: https://github.com/adriaque
+    via: declared in citation metadata
+    source: https://github.com/BioDataFuse/pyBiodatafuse/blob/HEAD/CITATION.cff
+  contributes:
+  - biodatafuse

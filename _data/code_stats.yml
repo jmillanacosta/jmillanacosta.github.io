@@ -61,3 +61,6 @@
   forks: 1
   repository_source: "https://github.com/cnvpathwayatlas/cnv-website"
 - id: "seejobs"
+  stars: 4
+  forks: 0
+  repository_source: "https://github.com/jmillanacosta/seejobs"
