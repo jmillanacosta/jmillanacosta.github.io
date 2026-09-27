@@ -312,11 +312,11 @@ hosts:
   www.wikipathways.org: WikiPathways
 # Other links are named by their address
 host_default: Website
-# Where a link came from: a link target with this statement is shown with its source ("via Wikidata").
+# An identifier of a thing (schema:PropertyValue) with a URL is a named profile elsewhere (a
+# Scopus author page, a DBLP entry): shown with the name of the identifier (identifier_name), and
+# with the record that it was taken from (provenance, "via Wikidata").
+identifier_name: propertyID
 provenance: http://purl.org/dc/terms/source
-# A link target with this statement is a named profile elsewhere (a Scopus author page, a DBLP
-# entry): shown by that name.
-link_title: http://purl.org/dc/terms/title
 # An identifier given as text is shown with this label, unless a link from that host is shown.
 identifier_label: DOI
 identity:

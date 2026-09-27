@@ -506,6 +506,26 @@ def wikidata(kind, statements, stated, own, subject):
     return fields
 
 
+def found_identifiers(someone):
+    """The profiles, websites and accounts of a person, each as an identifier of the person
+    (schema:PropertyValue) with the record that it was taken from (dcterms:source): the claim
+    "this person has this profile" has the source, not the profile page."""
+    found = [
+        *({"label": p.get("label"), "url": p["url"], "source": p["source"]} for p in someone.get("profiles", [])),
+        *({"label": None, "url": w["url"], "source": w["source"]} for w in someone.get("websites", [])),
+        *(
+            {"label": None, "url": a["url"], "source": a["source"], "via": a.get("via")}
+            for a in someone.get("accounts", [])
+            if a.get("via") in ("declared on ORCID record", "Wikidata")
+        ),
+    ]
+    return [
+        new("PropertyValue", propertyID=x["label"], url=x["url"], description=x.get("via"), dcterms_source=URIRef(x["source"]))
+        for x in found
+        if x.get("source")
+    ]
+
+
 def collaborator_records():
     """Collaborators, with the source of each name and link."""
     people = DATA["collaborators"]
@@ -516,6 +536,7 @@ def collaborator_records():
             "name": [n["name"] for n in someone.get("names", [])],
             "sameAs": [*someone.get("same_as", []), *(p["url"] for p in someone.get("profiles", []))],
             "url": [w["url"] for w in someone.get("websites", [])],
+            "identifier": found_identifiers(someone),
         }
         if someone.get("statements"):
             given = person(everything) if someone["id"] == ME else new("Person", someone["id"], **fields)
@@ -524,13 +545,6 @@ def collaborator_records():
             fields = {name: [*fields.get(name, []), *extra.get(name, [])] for name in {*fields, *extra}}
         if any(fields.values()):
             records.append(new("Person", someone["id"], **fields))
-        for website in someone.get("websites", []):
-            records.append(new("WebSite", website["url"], dcterms_source=URIRef(website["source"])))
-        for profile in someone.get("profiles", []):
-            records.append(new("WebPage", profile["url"], dcterms_title=profile.get("label"), dcterms_source=URIRef(profile["source"])))
-        for account in someone.get("accounts", []):
-            if account.get("via") in ("declared on ORCID record", "Wikidata"):
-                records.append(new("WebPage", account["url"], dcterms_source=URIRef(account["source"])))
     for entry in SOFTWARE:
         contributors = [someone["id"] for someone in people if entry["id"] in someone.get("contributes", [])]
         if contributors:

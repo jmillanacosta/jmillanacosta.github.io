@@ -530,9 +530,18 @@ class Concepts:
         return [q.subject for q in self.data.dataset.quads_for_predicate(predicate) if q.object.value == value]
 
     def identity(self, node: ox.NamedNode) -> list[dict[str, str]]:
+        """The links of a thing: its IRI, its sameAs and url values, and the URLs of its
+        identifiers. An identifier (schema:PropertyValue) gives the label (propertyID) and the
+        record that it was taken from (dcterms:source)."""
         d, found, seen = self.data, [], set()
-        title_of, provenance = ox.NamedNode(CONFIG["link_title"]), ox.NamedNode(CONFIG["provenance"])
+        provenance = ox.NamedNode(CONFIG["provenance"])
+        described: dict[str, tuple[Node | None, Node | None]] = {}
+        for value in d.objects(node, TERMS["identifier"]):
+            url = d.value(value, TERMS["url"]) if isinstance(value, ox.BlankNode) else None
+            if isinstance(url, ox.NamedNode):
+                described.setdefault(url.value, (d.value(value, v(CONFIG["identifier_name"])), d.value(value, provenance)))
         targets = [node, *sorted(d.objects(node, TERMS["same_as"]), key=str), *sorted(d.objects(node, TERMS["url"]), key=str)]
+        targets += [ox.NamedNode(url) for url in sorted(described)]
         for target in targets:
             if not isinstance(target, ox.NamedNode) or target.value.startswith(MERGED):
                 continue
@@ -541,7 +550,8 @@ class Concepts:
             if key in seen:
                 continue
             seen.add(key)
-            host, title, source = urlparse(target.value).netloc, d.value(target, title_of), d.value(target, provenance)
+            host = urlparse(target.value).netloc
+            title, source = described.get(target.value, (None, None))
             label = title.value if title is not None else CONFIG["hosts"].get(host) or host.removeprefix("www.") or CONFIG["host_default"]
             via = CONFIG["hosts"].get(urlparse(source.value).netloc, pretty_iri(source.value)) if source is not None else ""
             found.append({"url": target.value, "host": host, "label": label, "via": via if via != label else ""})
