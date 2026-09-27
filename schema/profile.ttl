@@ -1,0 +1,66 @@
+# The application profile of this site
+
+@prefix schema: <https://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# The Role pattern of schema.org (https://schema.org/Role)
+
+#a role node takes the place of a value. The role node repeats the property, and it has dates, a title and a description.
+[] a sh:NodeShape ;
+    sh:targetClass schema:Person ;
+    rdfs:comment "Roles in place of values, as https://schema.org/Role describes." ;
+    sh:property [ sh:path schema:worksFor ; sh:class schema:EmployeeRole ] ,
+        [ sh:path schema:alumniOf ; sh:class schema:OrganizationRole ] ,
+        [ sh:path schema:knowsLanguage ; sh:class schema:Role ] ,
+        [ sh:path schema:knows ; sh:class schema:Role ] .
+
+[] a sh:NodeShape ;
+    sh:targetClass schema:EmployeeRole ;
+    rdfs:comment "The Role pattern: the role repeats worksFor (https://schema.org/Role)." ;
+    sh:property [ sh:path schema:worksFor ; sh:class schema:Organization ] .
+
+[] a sh:NodeShape ;
+    sh:targetClass schema:OrganizationRole ;
+    rdfs:comment "The Role pattern: the role repeats alumniOf (https://schema.org/Role)." ;
+    sh:property [ sh:path schema:alumniOf ; sh:class schema:Organization ] .
+
+[] a sh:NodeShape ;
+    sh:targetClass schema:Role ;
+    rdfs:comment "The Role pattern: the role repeats knows, knowsLanguage or contributor (https://schema.org/Role)." ;
+    sh:property [ sh:path schema:knows ; sh:class schema:Person ] ,
+        [ sh:path schema:knowsLanguage ; sh:class schema:Language ] ,
+        [ sh:path schema:contributor ; sh:class schema:Person ] .
+
+# Source code is described with the properties that CodeMeta 3.0 gives to SoftwareSourceCode
+# (https://w3id.org/codemeta/3.0): version, download, documentation and requirements. A
+# contributor can be a role (the Role pattern).
+[] a sh:NodeShape ;
+    sh:targetClass schema:SoftwareSourceCode ;
+    rdfs:comment "CodeMeta 3.0 properties of source code (https://w3id.org/codemeta/3.0), and contributor roles." ;
+    sh:property [ sh:path schema:softwareVersion ; sh:datatype xsd:string ] ,
+        [ sh:path schema:downloadUrl ; sh:nodeKind sh:IRI ] ,
+        [ sh:path schema:softwareHelp ; sh:nodeKind sh:IRI ] ,
+        [ sh:path schema:softwareRequirements ; sh:nodeKind sh:IRI ] ,
+        [ sh:path schema:contributor ; sh:class schema:Role ] .
+
+# The authors of a publication are kept in their order, as an RDF list of people, as CodeMeta
+# does for authors (https://w3id.org/codemeta/3.0).
+[] a sh:NodeShape ;
+    sh:targetClass schema:ScholarlyArticle ;
+    rdfs:comment "Authors in their order, as an RDF list (CodeMeta 3.0 lists authors in order)." ;
+    sh:property [
+        sh:path schema:author ;
+        sh:nodeKind sh:BlankNode ;
+        sh:property [ sh:path ( [ sh:zeroOrMorePath rdf:rest ] rdf:first ) ; sh:class schema:Person ]
+    ] .
+
+# A page of this site is also a FOAF personal profile document (the page has both types), so
+# FOAF crawlers find its topic and maker.
+[] a sh:NodeShape ;
+    sh:targetClass schema:ProfilePage ;
+    rdfs:comment "Pages have both types, schema:ProfilePage and foaf:PersonalProfileDocument." ;
+    sh:property [ sh:path <http://xmlns.com/foaf/0.1/primaryTopic> ; sh:class schema:Person ] ,
+        [ sh:path <http://xmlns.com/foaf/0.1/maker> ; sh:class schema:Person ] .

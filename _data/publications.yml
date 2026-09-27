@@ -197,12 +197,12 @@
     orcid: https://orcid.org/0000-0002-7260-2129
   - given: Samuel Bustamante
     family: Larriet
+  wikidata: http://www.wikidata.org/entity/Q137438800
   subjects:
   - iri: http://www.wikidata.org/entity/Q133436854
     name: Model Context Protocol
   - iri: http://www.wikidata.org/entity/Q54872
     name: Resource Description Framework
-  wikidata: http://www.wikidata.org/entity/Q137438800
 - title: 'INTOXICOM Workshop Report: FAIRification of Toxicological Research Output: Leveraging ELIXIR
     Resources'
   year: '2024'
@@ -283,6 +283,7 @@
   - given: Egon
     family: Willighagen
     orcid: https://orcid.org/0000-0001-7542-0286
+  wikidata: http://www.wikidata.org/entity/Q131007824
   subjects:
   - iri: http://www.wikidata.org/entity/Q12269561
     name: ELIXIR
@@ -290,7 +291,6 @@
     name: FAIR Data Principles
   - iri: http://www.wikidata.org/entity/Q7218
     name: toxicology
-  wikidata: http://www.wikidata.org/entity/Q131007824
   topics:
   - iri: https://openalex.org/T11937
     name: Research Data Management Practices
@@ -468,10 +468,10 @@
   - given: Alexander R
     family: Pico
     orcid: https://orcid.org/0000-0001-5706-2163
+  wikidata: http://www.wikidata.org/entity/Q123631008
   subjects:
   - iri: http://www.wikidata.org/entity/Q7999828
     name: WikiPathways
-  wikidata: http://www.wikidata.org/entity/Q123631008
   topics:
   - iri: https://openalex.org/T10887
     name: Bioinformatics and Genomic Networks

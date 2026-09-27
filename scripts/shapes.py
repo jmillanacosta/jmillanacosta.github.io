@@ -1,4 +1,4 @@
-"""Typed records are generated from published vocabularies and local extensions."""
+"""Typed records are generated from published vocabularies and the application profile of the site."""
 
 import urllib.request
 from pathlib import Path
@@ -14,17 +14,18 @@ VOCABULARIES = {
     "foaf-0.99.rdf": "http://xmlns.com/foaf/spec/20140114.rdf",
     "dcterms-2020-01-20.ttl": "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl",
 }
-EXTENSIONS = ROOT / "schema/extensions.ttl"
+PROFILE = ROOT / "schema/profile.ttl"  # the application profile of this site (SHACL)
 
 CLASSES = [
     "ProfilePage", "MediaObject",
     "Person", "Organization", "CollegeOrUniversity", "ResearchOrganization", "Corporation",
     "GovernmentOrganization", "Place", "VirtualLocation", "PostalAddress", "PropertyValue",
     "EmployeeRole", "OrganizationRole", "PerformanceRole", "Role",
-    "ScholarlyArticle", "Report", "Periodical", "WebSite", "WebPage", "SoftwareSourceCode", "InteractionCounter",
+    "CreativeWork", "ScholarlyArticle", "Report", "Periodical", "WebSite", "WebPage", "SoftwareSourceCode", "InteractionCounter",
     "Event", "Project", "ResearchProject", "Grant",
     "Course", "CourseInstance", "EducationalOccupationalProgram",
     "EducationalOccupationalCredential", "Occupation", "Language", "Taxon", "DefinedTerm", "Thing",
+    "ComputerLanguage", "SoftwareApplication",
 ]
 
 
@@ -34,12 +35,13 @@ def vocabularies() -> list[Path]:
         if not (CACHE / name).exists():
             CACHE.mkdir(parents=True, exist_ok=True)
             urllib.request.urlretrieve(url, CACHE / name)
-    return [*(CACHE / name for name in VOCABULARIES), EXTENSIONS]
+    return [CACHE / name for name in VOCABULARIES]
 
 
 def shapes() -> MinedSchema:
-    """The declared properties and values of each class in CLASSES."""
-    return MinedSchema.from_vocabulary(vocabularies(), [SCHEMA + name for name in CLASSES])
+    """The declared properties and values of each class in CLASSES: those of the published
+    vocabularies, and those of the profile of this site."""
+    return MinedSchema.from_vocabulary(vocabularies(), [SCHEMA + name for name in CLASSES], profile=PROFILE)
 
 
 def models() -> Client:

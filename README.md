@@ -1,32 +1,84 @@
-# A personal site built with rdfsolve
+# My personal site built with rdfsolve
 
-A Jekyll template for a personal site, CV, publications and events. The linked data is
-built and checked with [rdfsolve](https://github.com/jmillanacosta/rdfsolve).
+A Jekyll template for a personal site, CV, publications and events, in which all content is
+linked data. The linked data is made and checked with
+[rdfsolve](https://github.com/jmillanacosta/rdfsolve).
 [My site](https://jmillanacosta.github.io/) is included as an example.
 
-The same records are published as RDFa, JSON-LD, Turtle, N-Triples and RDF/XML.
-Pages are generated for people, institutions, software, topics and their connections.
-At `/schema/`, the schema can be viewed as a diagram or downloaded as rdfsolve JSON,
-Pydantic models, SHACL and LinkML. A dataset description is available at `/void.ttl`.
+## The site
 
-## Local preview
+- A CV site: home page, CV, events, publications, and a PDF of the CV.
+- One page for each thing that is linked to the owner of the site: collaborators, software,
+  publications, organizations, places, events and topics (for example
+  `/collaborators/<name>/`). Each page says how the thing is connected to the owner.
+- The RDF of every page, as JSON-LD and RDFa in the page, and as Turtle, N-Triples and
+  RDF/XML files next to it (`index.ttl`, `index.nt`, `index.jsonld`).
+- A description of the data of the whole site: the schema at `/schema/`, the VoID
+  description at `/.well-known/void`, and SHACL shapes at `/.well-known/shacl`.
 
+GitHub Pages has no content negotiation. Each page therefore links to its RDF with FAIR
+Signposting (`<link rel="describedby">`, `type`, `author` and `cite-as`), so that programs
+find the data of a page from the page itself.
+
+## rdfsolve usage
+
+1. **Wikidata is read with a mined schema.** The schema of Wikidata is mined only around
+   the Wikidata items that the site data links to, in the main graph and in the graph of
+   scholarly works. Typed records are made from that schema, so that an event has
+   `start_time` and `organizer`, and a person has `orcid_id`. A change in Wikidata is found
+   at the next mining run.
+2. **The RDF is checked when it is made.** The records of the site are made with models
+   that rdfsolve generates from schema.org, FOAF and Dublin Core. A property or a value
+   that the vocabularies do not allow stops the build.
+3. **The site is described.** The graphs of the site are mined like any other RDF source.
+   The schema, the SHACL shapes, the VoID description and the downloads at `/schema/` come
+   from this.
+4. **The connections are checked.** The sentences of the concept pages ("We are co-authors
+   of…") come from property paths in `_data/concepts.yml`. Each path is checked against the
+   mined schema of the site before it is used.
+
+No axioms are added to schema.org or FOAF. Where these vocabularies do not declare a value
+that the site gives (the Role pattern of schema.org, the CodeMeta properties of source code,
+authors in their order), the application profile `schema/profile.ttl` states it in SHACL
+shapes that belong to the site.
+
+## Make site
+
+`make all` runs the following steps in order:
+
+1. `make setup`: the dependencies are installed from the lockfiles (`uv.lock`,
+   `Gemfile.lock`, `package-lock.json`). The rdfsolve revision is kept in `uv.lock`.
+2. `make wikidata-schema` (`scripts/mine-wikidata.py`): the Wikidata items in `_data` are
+   collected, and the schema around them is mined into `schema/wikidata.schema.json` and
+   `schema/wikidata-scholarly.schema.json`. The changes since the last run are listed. When
+   a field that the site reads (`FIELDS` in `scripts/cvdata/wikidata.py`) is no longer in
+   Wikidata, the run fails and the new schema is kept in `output/` for review.
+3. `make data` (`scripts/update_cv_data.py`): `_data` is refreshed from ORCID, Crossref,
+   DataCite, Zenodo, PyPI, GitHub, OpenAlex and Wikidata. Slow lookups are cached in
+   `scripts/cache`.
+4. `make images`: the icons and the preview image are drawn from `_data/cv.yml`.
+5. `make site`: the pages are built by Jekyll, then `make concepts` runs:
+   - `scripts/build-graph.py`: the RDF of each page is made from `_data`, with the
+     generated models.
+   - `scripts/build-rdf.py`: the RDFa and the JSON-LD of each page are compared, and the
+     other RDF formats are written.
+   - `scripts/build-schema.py`: the graphs of the site are mined, and the schema page, the
+     SHACL shapes and the VoID description are written.
+   - `scripts/build-concepts.py`: one page is written for each thing in the graph, with
+     its RDF and its links.
+6. `make pdf`: the PDF of the CV is printed from the CV page.
+7. `make check`: the PDF, the layout at six widths, and the formatting are checked.
+
+Each step can also be run alone. For a preview of the included data, `make site` and
+`make serve` are enough (<http://127.0.0.1:4000>); no data refresh or token is needed.
 [uv](https://docs.astral.sh/uv/), Node 22, Ruby with Bundler, and Make are required.
-Python and all dependencies are pinned. The rdfsolve revision is kept in `uv.lock`.
+Poppler is required for the PDF checks.
 
-```sh
-make site
-make serve
-```
+## Using this template
 
-The included data is used for the preview at <http://127.0.0.1:4000>.
-No data refresh or API token is needed. After a data edit, the linked pages can be rebuilt
-with `make concepts` in another terminal.
-
-## Your site
-
-A copy can be created with GitHub's **Use this template** button, or by copying this repository.
-A repository named `<username>.github.io` is intended for publication at the domain root.
+If you use GitHub pages, make a copy with the **Use this template** button. A repository named
+`<username>.github.io` is published at the domain root. The example content is replaced in
+these files:
 
 | Content                                                 | File                           |
 | ------------------------------------------------------- | ------------------------------ |
@@ -35,70 +87,30 @@ A repository named `<username>.github.io` is intended for publication at the dom
 | Events and their host institutions                      | `_data/events.yml`             |
 | Publications not listed on ORCID                        | `_data/extra_publications.yml` |
 | PDF filename and other downloads                        | `_data/formats.yml`            |
-| Page labels, categories and connections                 | `_data/concepts.yml`           |
+| Page labels, categories and connection sentences        | `_data/concepts.yml`           |
 | Colours, fonts and spacing                              | `assets/css/cv.css`            |
 
-`canonical` is the full site address, with a trailing slash. `person.iri` is the person's
-ORCID URL. Organization keys, such as `works_for`, refer to entries in `organizations`.
-Unused list sections can be left as `[]`. The example content should be replaced before publication.
+`canonical` is the full site address, with a trailing slash. `person.iri` is the ORCID URL
+of the person. Organization keys, such as `works_for`, refer to entries in `organizations`.
+Unused list sections are left as `[]`. After an edit, `make all` is run; a `GITHUB_TOKEN`
+in the environment is recommended for the data refresh.
 
-After the personal data has been edited:
+Further changes:
 
-```sh
-export GITHUB_TOKEN=...   # An authenticated data refresh is recommended.
-make data
-make images
-make pdf
-make check
-```
-
-Publications, collaborators, repository metadata and usage figures are fetched from public
-sources. Generated data is stored in `_data`; slow lookups are cached in `scripts/cache`.
-Names and links are kept with their sources. A failed contributor request stops the refresh
-before the collaborator file is replaced.
-
-The icons and preview image are generated from the name and headline in `cv.yml`.
-The PDF is written to `_site/cv/` and `output/cv/`. Poppler is required for its checks.
-`make all` is available for a full refresh and build.
+- **New shapes**: add its schema.org class to `CLASSES` in
+  `scripts/shapes.py`, and a record function to `scripts/build-graph.py`. If the class
+  needs a value that schema.org does not declare for it, add a shape to
+  `schema/profile.ttl`.
+- **Other Wikidata fields**: add the field to `FIELDS` in `scripts/cvdata/wikidata.py`,
+  and `make wikidata-schema` is run. The field names come from the English labels of the
+  Wikidata properties.
+- **Other connection sentences**: a path and its sentences can be added under `story` in
+  `_data/concepts.yml`. A path that uses a property the site does not have stops the build.
+- **Identifiers for new terms**: write
+  candidates from Wikidata, OLS, ROR and ESCO running `uv run --locked python scripts/find-iris.py`, results go to `output/iri-candidates.yml` for review.
 
 ## Publication
 
-In **Settings > Pages**, the build source should be set to **GitHub Actions**.
-The site is built and checked on a push to `main`. Data is refreshed by the weekly workflow,
-which can also be run manually. GitHub Actions must be enabled in a new copy of the repository.
-
-## The data model
-
-The published vocabularies are read with rdfsolve in `scripts/shapes.py`. Typed records are
-created in `scripts/build-graph.py`, with one function per kind of content. Invalid values
-are rejected before publication. RDFa and JSON-LD are generated from those same records;
-no RDF attributes are maintained in the display templates.
-
-For a new kind of content, its class is added to `CLASSES` in `scripts/shapes.py` and its
-record function to `scripts/build-graph.py`. Extra vocabulary declarations are kept in
-`schema/extensions.ttl`. Concept pages and exports are then generated from the graph.
-Existing identifiers are used where available; other resources are represented as blank nodes.
-
-Wikidata is read the same way, from schemas that rdfsolve mines. `make wikidata-schema` reads
-every statement of the Wikidata items that the site data links, and of the author statements
-of works, in the main graph and in the graph of scholarly works of the Wikidata Query Service
-(`scripts/mine-wikidata.py`). It writes `schema/wikidata.schema.json` and
-`schema/wikidata-scholarly.schema.json`, and says what changed. rdfsolve generates typed records
-from these schemas (`scripts/cvdata/wikidata.py`): the fields are named after the English labels
-of the properties, so an event has `start_time` and `organizer`, and a person has `orcid_id`.
-The run fails when a field that the site reads (`FIELDS`) is no longer in the data; the new
-schema is then kept in `output/` for review. Items are found by their identifiers (DOI, ORCID,
-GitHub account) with `identify`. Publication subjects, OpenAlex topics and event details can be
-refreshed with `uv run --locked python scripts/update_cv_data.py wikidata` and `... topics`.
-
-| Command                                       | Result                                                        |
-| --------------------------------------------- | ------------------------------------------------------------- |
-| `make setup`                                  | All build dependencies are installed from the lockfiles       |
-| `make site`                                   | HTML, linked data, concept pages and schema exports are built |
-| `make serve`                                  | A local preview is served                                     |
-| `make data`                                   | Public data is refreshed                                      |
-| `make wikidata-schema`                        | The Wikidata schemas are mined again, and changes are listed  |
-| `make images`                                 | Icons and the social preview are generated                    |
-| `make pdf`                                    | The site and CV PDF are built                                 |
-| `make check`                                  | The PDF, layout and formatting are checked                    |
-| `uv run --locked python scripts/find-iris.py` | Identifier candidates are saved for review                    |
+If you use GitHub pages: **Settings > Pages**, set source to **GitHub Actions**. The site is built
+and checked on a push to `main`. The data and the Wikidata schemas are refreshed by a weekly
+workflow, or manually dispatched. GitHub Actions must be enabled in a new copy.

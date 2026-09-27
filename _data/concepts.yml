@@ -455,8 +455,8 @@ story:
             "We have both studied at {things}.",
           ]
       - label: Our work presented at
-        to: schema:performerIn/schema:performerIn
-        then: ^schema:performerIn/schema:subjectOf/schema:author/rdf:rest*/rdf:first
+        to: schema:performerIn
+        then: schema:workFeatured/schema:author/rdf:rest*/rdf:first
         say:
           [
             "Our joint work was presented at {things}.",
@@ -471,8 +471,8 @@ story:
         to: ^schema:author|^schema:contributor/^schema:contributor
         then: schema:subjectOf
       - label: Presented at
-        to: schema:performerIn/schema:performerIn
-        then: ^schema:performerIn/schema:subjectOf
+        to: schema:performerIn
+        then: schema:workFeatured
     journals:
       - label: Published your papers
         to: ^(schema:author/rdf:rest*/rdf:first)
@@ -480,13 +480,12 @@ story:
     event:
       - label: Presented
         to: schema:performerIn
-        then: schema:performerIn
     places:
       - label: Events there
-        to: schema:performerIn/schema:performerIn
+        to: schema:performerIn
         then: schema:location
       - label: Organizations there
-        to: schema:worksFor|schema:worksFor/schema:worksFor|schema:alumniOf/schema:alumniOf|schema:performerIn/schema:performerIn/schema:organizer
+        to: schema:worksFor|schema:worksFor/schema:worksFor|schema:alumniOf/schema:alumniOf|schema:performerIn/schema:organizer
         then: schema:location
     software:
       - label: Author
@@ -499,9 +498,7 @@ story:
         then: ^schema:subjectOf
     projects:
       - label: Member
-        to: schema:memberOf
-      - label: Contributor
-        to: ^schema:contributor
+        to: schema:memberOf|^schema:member
     grants:
       - label: Funds your project
         to: schema:memberOf
@@ -511,7 +508,7 @@ story:
         then: schema:funding
     organizations:
       - label: Visited at
-        to: schema:performerIn/schema:performerIn
+        to: schema:performerIn
         then: schema:organizer
       - label: Works here
         to: schema:worksFor

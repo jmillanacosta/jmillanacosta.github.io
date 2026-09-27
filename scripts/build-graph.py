@@ -61,6 +61,14 @@ ALIASES = {
 }
 
 
+# Text of these fields is a code, an identifier or a personal name, not English prose: it has no
+# language tag. Other text is in English.
+PLAIN_TEXT = {
+    "identifier", "email", "telephone", "courseCode", "reportNumber", "softwareVersion", "encodingFormat",
+    "inLanguage", "propertyID", "value", "familyName", "givenName", "foaf_familyName", "foaf_givenName", "postalCode",
+}
+
+
 def new(kind, uri=None, types=(), **fields):
     """A record of *kind*. Empty fields are not used. Text is trimmed and in English."""
     values = {}
@@ -69,6 +77,8 @@ def new(kind, uri=None, types=(), **fields):
             value = [trim(item) for item in value if trim(item) not in (None, "")]
         else:
             value = trim(value)
+        if name in PLAIN_TEXT:
+            value = [Literal(v) if type(v) is str else v for v in value] if isinstance(value, list) else Literal(value) if type(value) is str else value
         if value not in (None, "", []):
             values[name] = value
     return shapes.create(kind, uri=uri, extra_types=list(types), language="en", **values)
@@ -168,7 +178,7 @@ def contribution(entry):
         name=entry["name"],
         url=entry.get("url"),
         codeRepository=entry["repository"],
-        contributor=new("Role", contributor=ME, mentions=mentioned(entry), description=entry["description"]),
+        contributor=new("Role", contributor=ME, description=entry["description"]),
         subjectOf=[doi(name) for name in entry.get("publications", [])],
         interactionStatistic=counters(entry),
         **released,
@@ -176,21 +186,24 @@ def contribution(entry):
 
 
 def community(entry):
-    return new("Project", entry["iri"], name=entry["name"], url=entry["url"], contributor=ME)
+    return new("Project", entry["iri"], name=entry["name"], url=entry["url"], member=ME)
 
 
 def course(entry):
+    """A course. A course of a program is given as a course of that program (hasCourse)."""
     program = entry.get("program")
-    return new(
+    taught = new(
         "Course",
         entry.get("iri"),
         name=entry["name"],
         url=entry.get("url"),
         courseCode=entry.get("code"),
-        isPartOf=new("EducationalOccupationalProgram", name=program, url=entry.get("program_url")) if program else None,
         provider=CV["organizations"][CV["teaching_provider"]]["iri"],
-        hasCourseInstance=new("CourseInstance", instructor=ME, mentions=mentioned(entry), description=entry["description"]),
+        hasCourseInstance=new("CourseInstance", instructor=ME, description=entry["description"]),
     )
+    if not program:
+        return taught
+    return new("EducationalOccupationalProgram", name=program, url=entry.get("program_url"), hasCourse=taught)
 
 
 def report(entry):
@@ -235,7 +248,7 @@ def article(entry):
     )
 
 
-def event(entry):
+def event(entry, featured=None):
     details = next((row for row in DATA.get("events_wikidata", []) if row["iri"] == entry.get("iri")), {})
     entry = {**details, **entry}
     online = entry["location"] == "Online"
@@ -260,25 +273,30 @@ def event(entry):
         about=project(projects[entry["project"]]) if entry.get("project") else None,
         eventAttendanceMode="https://schema.org/OnlineEventAttendanceMode" if online else None,
         location=new("VirtualLocation", name="Online") if online else place(entry["location"]),
+        workFeatured=featured,
     )
 
 
 def performance(entry):
-    """A talk or a poster at an event, with the slides and the funding."""
+    """The event of a talk or a poster. The event features the talk or poster as a work (the
+    slides or the poster, by DOI when there is one), with its kind, funding and mentions."""
     funder = entry.get("funder")
     funding = None
     if funder:
         note = f"{entry['funding_note']} {CV['organizations'][funder]['name']}" if entry.get("funding_note") else None
         funding = new("Grant", description=note, funder=organization(funder))
-    return new(
-        "Role",
-        roleName=entry.get("role"),
-        subjectOf=doi(entry["doi"]) if entry.get("doi") else None,
+    summary = (entry.get("summary") or "").strip()
+    title = summary[1:-1].strip() if summary.startswith("\u201c") and summary.endswith("\u201d") else None
+    work = new(
+        "CreativeWork",
+        doi(entry["doi"]) if entry.get("doi") else None,
+        name=title,
+        genre=entry.get("role"),
+        description=summary,
         mentions=mentioned(entry),
         funding=funding,
-        description=entry["summary"],
-        performerIn=event(entry),
     )
+    return event(entry, featured=work)
 
 
 def job(entry):
@@ -296,15 +314,18 @@ def project(entry):
     return new("ResearchProject", entry["iri"], name=entry["name"], url=entry["url"], funding=grant(entry["grant"]))
 
 
+def taxa(entry):
+    """The organisms that a study was about."""
+    return [new("Taxon", CV["taxa"][name]["iri"], name=name, sameAs=CV["taxa"][name]["same_as"]) for name in entry.get("taxa", [])]
+
+
 def study(entry):
-    taxa = [new("Taxon", CV["taxa"][name]["iri"], name=name, sameAs=CV["taxa"][name]["same_as"]) for name in entry.get("taxa", [])]
     return new(
         "OrganizationRole",
         roleName=entry["degree"],
         startDate=entry["start"],
         endDate=entry["end"],
         description=entry.get("description"),
-        about=taxa,
         alumniOf=organization(entry["organization"]),
     )
 
@@ -324,7 +345,7 @@ def degree(entry):
         "EducationalOccupationalCredential",
         name=entry["degree"],
         credentialCategory=URIRef(entry["degree_type"]),
-        about=entry["field"],
+        about=[entry["field"], *taxa(entry)],  # the field, and the organisms studied
         recognizedBy=CV["organizations"][entry["organization"]]["iri"],
         dateCreated=entry["end"],
     )
@@ -394,8 +415,15 @@ def person(parts):
     )
 
 
+def page_mentions(parts):
+    """The links in the text of the page: software contributions and teaching mention them.
+    A talk or a poster mentions its own links (see performance)."""
+    entries = [*(CV["contributions"] if "contributions" in parts else []), *(CV["teaching"] if "teaching" in parts else [])]
+    return list(dict.fromkeys(url for entry in entries for url in mentioned(entry)))
+
+
 def profile_page(page):
-    """The page: its subject, its author and its downloads."""
+    """The page: its subject, its author, its downloads and the links in its text."""
     today = Literal(datetime.date.today())
     downloads = [f for f in DATA["formats"] if f.get("mode") in (None, page["mode"])]
     return new(
@@ -411,6 +439,7 @@ def profile_page(page):
         foaf_primaryTopic=ME,
         foaf_maker=ME,
         dcterms_creator=ME,
+        mentions=page_mentions(page["parts"]),
         encoding=[
             new("MediaObject", page["iri"] + f["url"], name=f["name"], encodingFormat=f["type"], contentUrl=page["iri"] + f["url"])
             for f in downloads
@@ -439,9 +468,16 @@ def links_to(kind, name):
     return shapes.fields(kind).set_index("field").links[name]
 
 
-def wikidata(kind, statements, stated, own):
+def display_name(someone):
+    """The fullest name of a collaborator: most words, then longest."""
+    names = sorted((n["name"] for n in someone.get("names", [])), key=lambda n: (-len(n.split()), -len(n), n))
+    return names[0] if names else someone["id"]
+
+
+def wikidata(kind, statements, stated, own, subject):
     fields = defaultdict(list)
-    people = {someone["id"] for someone in DATA["collaborators"]}
+    names = {someone["id"]: display_name(someone) for someone in DATA["collaborators"]} | {str(ME): CV["person"]["name"]}
+    people = set(names)
     for statement in statements:
         if statement["property"] == "http://www.wikidata.org/entity/P101":
             fields["knowsAbout"].append(new("DefinedTerm", statement["value"], name=statement.get("value_label")))
@@ -464,7 +500,9 @@ def wikidata(kind, statements, stated, own):
             elif prop not in stated:
                 fields[name].append(literal if "datatype" in statement else statement.get("value_label"))
         if not statement["equivalent"] and item in people:
-            fields["knows"].append(new("Role", roleName=[statement["label"], URIRef(statement["property"])], knows=URIRef(item)))
+            # Wikidata states "subject P item" (P184: the item is the doctoral advisor of the subject).
+            direction = f"{names[item]} is the {statement['label']} of {names.get(subject, subject)}."
+            fields["knows"].append(new("Role", roleName=[statement["label"], URIRef(statement["property"])], description=direction, knows=URIRef(item)))
     return fields
 
 
@@ -482,7 +520,7 @@ def collaborator_records():
         if someone.get("statements"):
             given = person(everything) if someone["id"] == ME else new("Person", someone["id"], **fields)
             stated = {str(p) for p in given.to_graph().predicates(URIRef(someone["id"]))}
-            extra = wikidata("Person", someone["statements"], stated, someone["id"] == ME)
+            extra = wikidata("Person", someone["statements"], stated, someone["id"] == ME, someone["id"])
             fields = {name: [*fields.get(name, []), *extra.get(name, [])] for name in {*fields, *extra}}
         if any(fields.values()):
             records.append(new("Person", someone["id"], **fields))
@@ -517,6 +555,9 @@ def repository_records():
     for row in DATA["repositories"]:
         owner = next((i for i in (ALIASES.get(key(u)) for u in (row["owner"], row.get("owner_website")) if u) if i and i != listed[row["id"]]), None)
         skills = {field: [URIRef(CV["skill_terms"][name]) for name in row.get(field, [])] for field in ("programmingLanguage", "softwareRequirements", "about")}
+        # The languages and the requirements have the types that schema.org gives to these values.
+        skills["programmingLanguage"] = [new("ComputerLanguage", iri) for iri in skills["programmingLanguage"]]
+        skills["softwareRequirements"] = [new("SoftwareApplication", iri) for iri in skills["softwareRequirements"]]
         records.append(new("SoftwareSourceCode", listed[row["id"]], maintainer=URIRef(owner) if owner else None, **skills))
     return records
 
