@@ -2,7 +2,7 @@
 
 A Jekyll template for a personal site, CV, publications and events. The linked data is
 built and checked with [rdfsolve](https://github.com/jmillanacosta/rdfsolve).
-[Javier Millán Acosta's site](https://jmillanacosta.github.io/) is included as an example.
+[My site](https://jmillanacosta.github.io/) is included as an example.
 
 The same records are published as RDFa, JSON-LD, Turtle, N-Triples and RDF/XML.
 Pages are generated for people, institutions, software, topics and their connections.
@@ -63,13 +63,13 @@ The PDF is written to `_site/cv/` and `output/cv/`. Poppler is required for its 
 
 ## Publication
 
-In **Settings → Pages**, the build source should be set to **GitHub Actions**.
+In **Settings > Pages**, the build source should be set to **GitHub Actions**.
 The site is built and checked on a push to `main`. Data is refreshed by the weekly workflow,
 which can also be run manually. GitHub Actions must be enabled in a new copy of the repository.
 
 ## The data model
 
-The published vocabularies are read by rdfsolve in `scripts/shapes.py`. Typed records are
+The published vocabularies are read with rdfsolve in `scripts/shapes.py`. Typed records are
 created in `scripts/build-graph.py`, with one function per kind of content. Invalid values
 are rejected before publication. RDFa and JSON-LD are generated from those same records;
 no RDF attributes are maintained in the display templates.

@@ -844,10 +844,7 @@ def render(concepts: Concepts, node: ox.NamedNode, shell: str, story: Story) -> 
     if listed:
         extra.append(f'<p class="concept-alternate">{html.escape(text("also_listed_as", names=", ".join(listed)))}</p>')
     if description is not None:
-        shown = html.escape(description.value)
-        for target in sorted({o.value for o in d.objects(node, v("mentions"))}, key=len, reverse=True):  # a mentioned link in the text
-            shown = shown.replace(html.escape(target), f'<a href="{html.escape(target)}">{html.escape(target)}</a>', 1)
-        extra.append(f'<p class="concept-description">{shown}</p>')
+        extra.append(f'<p class="concept-description">{html.escape(description.value)}</p>')
     extra += concepts.identity_html(node)
     kicker = f'<a href="/{concepts.category(node)["folder"]}/">{html.escape(" · ".join(labels))}</a>'
     rows: dict[str, list[Leaf]] = defaultdict(list)

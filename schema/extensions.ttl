@@ -1,4 +1,4 @@
-# Declarations that this site adds to schema.org. These declarations are read by rdfsolve
+# Declarations that this site adds to schema.org. These declarations are read with rdfsolve
 # together with the published vocabularies. Each line lets a class have one more property,
 # or lets a property have one more kind of value.
 

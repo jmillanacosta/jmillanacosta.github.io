@@ -179,10 +179,7 @@ libraries:
     package: rdfsolve
     description:
       RDF schema discovery and conversion, typed Python clients, and SPARQL execution with batching,
-      retries, and query provenance. Used to build the linked data used for this site (see https://github.com/jmillanacosta/jmillanacosta.github.io).
-    mentions:
-      - text: https://github.com/jmillanacosta/jmillanacosta.github.io
-        url: https://github.com/jmillanacosta/jmillanacosta.github.io
+      retries, and query provenance. It builds the linked data of this site.
     iri: https://github.com/jmillanacosta/rdfsolve
   - id: pysec2pri
     name: pysec2pri

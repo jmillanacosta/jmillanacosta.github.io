@@ -3,6 +3,8 @@ baseurl: ""
 canonical: "https://jmillanacosta.github.io/"
 title: "Javier Millán Acosta"
 description: "Research software for biomedical knowledge graphs, RDF tooling, and data integration"
+# The source code of this site; its software requirements come from uv.lock.
+source_repository: https://github.com/jmillanacosta/jmillanacosta.github.io
 # Everything about the person (name, ORCID, work, profiles) is in _data/cv.yml
 defaults:
   - scope: { path: "" }

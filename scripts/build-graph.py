@@ -5,6 +5,7 @@ import html
 import json
 import re
 import sys
+import tomllib
 from collections import defaultdict
 from pathlib import Path
 from urllib.parse import urlparse
@@ -153,7 +154,6 @@ def software(entry):
         softwareHelp=[link for link in (package.get("docs"), entry.get("docs")) if link],
         author=ME,
         description=entry["description"],
-        mentions=mentioned(entry),
         subjectOf=[doi(name) for name in entry.get("publications", [])],
         interactionStatistic=counters(entry),
     )
@@ -521,6 +521,17 @@ def repository_records():
     return records
 
 
+def source_records():
+    """The source code of this site, which requires the software of the CV that uv.lock gives
+    as its direct dependencies (as scripts/dependencies.py gives them to GitHub)."""
+    lock = tomllib.loads((ROOT / "uv.lock").read_text(encoding="utf-8"))
+    project = next(p for p in lock["package"] if p["source"].get("virtual") == ".")
+    direct = {d["name"] for d in project.get("dependencies", [])}
+    source = CONFIG["source_repository"]
+    required = [URIRef(entry["iri"]) for entry in SOFTWARE if entry.get("package") in direct]
+    return [new("SoftwareSourceCode", source, name=source.rstrip("/").rsplit("/", 1)[-1], codeRepository=source, author=ME, softwareRequirements=required)]
+
+
 def pages():
     """Graph sections are read from each page’s front matter."""
     found = []
@@ -577,7 +588,7 @@ def main():
     for page in pages():
         write(page_records(page), page["folder"] + "index.jsonld", embed_in=page["folder"] + "index.html")
     write(collaborator_records(), "graph/collaborators.jsonld")
-    write(repository_records() + subject_records(), "graph/works.jsonld")
+    write(repository_records() + subject_records() + source_records(), "graph/works.jsonld")
 
 
 if __name__ == "__main__":

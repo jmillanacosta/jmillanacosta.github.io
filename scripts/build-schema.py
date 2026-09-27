@@ -229,7 +229,6 @@ def main() -> None:
     files = {
         CONFIG["schema_file"]: json.dumps(schema.to_dict(), indent=1) + "\n",
         "models.py": schema.to_pydantic(contract=True),
-        "shapes.ttl": schema.to_shacl(activate_observed=True),
         "schema.linkml.yaml": schema.to_linkml_yaml(),
         "diagram.mmd": mermaid(schema),
     }
@@ -245,6 +244,8 @@ def main() -> None:
         (SITE / name).parent.mkdir(parents=True, exist_ok=True)
         (SITE / name).write_text(description, encoding="utf-8")
     print(f"Wrote the VoID description: {', '.join(CONFIG['void']['files'])}")
+    (SITE / CONFIG["shacl"]).write_text(schema.to_shacl(activate_observed=True, void=False), encoding="utf-8")
+    print(f"Wrote the SHACL shapes: {CONFIG['shacl']}")
 
 
 if __name__ == "__main__":

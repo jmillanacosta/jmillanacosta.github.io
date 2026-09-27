@@ -66,7 +66,7 @@ def wikidata_search(term: str) -> list[dict]:
 
 def by_identifier(prop: str, identifiers: list[str], *, scholarly: bool = False) -> dict[str, list[dict]]:
     """The items whose property (P496, for example) has each identifier (a registered CURIE or an
-    IRI), found by rdfsolve."""
+    IRI), found with rdfsolve."""
     with _wikidata_lock:
         found = wikidata.items(identifiers, prop, scholarly=scholarly)
         return {identifier: candidates(iris, scholarly=scholarly) for identifier, iris in found.items() if iris}

@@ -379,7 +379,7 @@ content:
     - { name: Home, path: / }
     - { name: CV, path: /cv/ }
     - { name: My events, path: /events/ }
-    - { name: Papers and topics, path: /publications/}
+    - { name: Papers and topics, path: /publications/ }
   pages_title: Pages
   lede: "All {count} concepts in {categories} categories."
   filter: Filter by name or kind
@@ -410,7 +410,7 @@ tree:
 # line is a path from the owner: `to` goes to an intermediate thing, `then` goes on from it to the
 # concept. Without `then`, `to` goes to the concept itself. A role (an unnamed node) can be the
 # intermediate; then its name and dates are shown. The paths are SPARQL property paths. They are
-# read by rdfsolve and checked against the mined schema of the site.
+# read with rdfsolve and checked against the mined schema of the site.
 story:
   topics: about
   prefixes:
@@ -554,7 +554,7 @@ story:
       - label: Occupation
         to: schema:hasOccupation
 
-# The schema page (/schema/): the graphs of the site are mined by rdfsolve, and the schema is
+# The schema page (/schema/): the graphs of the site are mined with rdfsolve, and the schema is
 # shown as a tree of classes from Person and given in the formats of rdfsolve.
 schema:
   folder: schema
@@ -574,6 +574,7 @@ schema:
     BlankNode: node
   downloads_title: Downloads
   schema_file: site.schema.json
+  shacl: .well-known/shacl # the SHACL shapes of the site, beside the VoID description
   void:
     base: .well-known/void#
     files: [.well-known/void, void.ttl]
@@ -589,7 +590,7 @@ schema:
         name: Pydantic models,
         note: typed Python classes for each class,
       }
-    - { file: shapes.ttl, name: SHACL shapes }
+    - { file: ../.well-known/shacl, name: SHACL shapes }
     - {
         file: ../void.ttl,
         name: VoID,

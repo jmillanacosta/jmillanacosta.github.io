@@ -3,8 +3,7 @@
 scripts/mine-wikidata.py mines the schemas around the Wikidata items of the site data: one for the
 main graph of the Wikidata Query Service (people, events, properties) and one for the graph of
 scholarly works. The typed records have the fields that these items have, named after the English
-labels of the properties: label, start_time, organizer, orcid_id. FIELDS lists the fields that
-the site reads, so that a new mining run shows when Wikidata no longer gives one of them.
+labels of the properties: label, start_time, organizer, orcid_id. FIELDS lists the fields.
 """
 
 from __future__ import annotations
@@ -18,6 +17,7 @@ from rdfsolve import MinedSchema
 from rdfsolve.api import Client
 from rdfsolve.sparql_helper import EndpointError
 
+from . import net  # noqa: F401  IPv4 first: without an IPv6 route, each request waits for its time limit
 from .config import ROOT
 
 WD = "http://www.wikidata.org/entity/"
@@ -30,7 +30,7 @@ SCHEMAS = {False: ROOT / "schema/wikidata.schema.json", True: ROOT / "schema/wik
 WORK = {"label", "main_subject", "author_statement"}
 FIELDS = {
     False: {
-        "Item": WORK | {"description", "instance_of", "start_time", "end_time", "official_website", "part_of_the_series", "organizer", "orcid_id", "github_account", "pypi_project", "npm_package", "github_topic", "equivalent_class", "exact_match"},
+        "Item": WORK | {"alt_label", "description", "instance_of", "start_time", "end_time", "official_website", "part_of_the_series", "organizer", "orcid_id", "github_account", "pypi_project", "npm_package", "github_topic", "equivalent_class", "exact_match"},
         "Property": {"label", "property_type", "direct_claim", "subproperty_of", "equivalent_property", "formatter_url"},
         "Statement": {"author", "series_ordinal"},
     },
@@ -51,14 +51,16 @@ def missing(schema: MinedSchema, scholarly: bool = False) -> dict[str, set[str]]
 
 
 def read(iris: Iterable[str], kind: str = "Item", *, scholarly: bool = False, languages=("en",)) -> dict[str, Any]:
-    """The records of these IRIs (Item, Property or Statement), by IRI. Names are in the languages
-    (all languages when empty); IRIs that Wikidata no longer has are left out."""
+    """The records of these IRIs (Item, Property or Statement), with the fields that the site reads
+    (FIELDS), by IRI. Names are in the languages (all languages when empty); IRIs that Wikidata
+    no longer has are left out."""
     source = client(scholarly)
     iris = sorted({str(iri) for iri in iris})
+    fields = sorted(FIELDS[scholarly][kind])
     found = {}
     for start in range(0, len(iris), source.max_subjects):
         batch = iris[start : start + source.max_subjects]
-        for record in source.get_many(source.model(kind), batch, languages=languages, missing="skip"):
+        for record in source.get_many(source.model(kind), batch, fields=fields, languages=languages, missing="skip"):
             found[str(record.uri)] = record
     return found
 
@@ -122,7 +124,7 @@ def facts(qids: list[str]) -> list[dict[str, Any]]:
     """For each item: its IRI, English label, ORCID, GitHub account, external identifiers, and
     official websites (one row for each website, or one row without)."""
     iris = [WD + qid for qid in qids]
-    graph = client().statements(iris, languages=["en"])
+    graph = client().statements(iris, languages=["en"], names=False)
     identifiers = {
         claim: str(record.uri).removeprefix(WD)
         for claim, record in properties(set(graph.predicates())).items()
@@ -144,7 +146,7 @@ def claims(qids: list[str]) -> dict[str, list[dict[str, Any]]]:
     """The claims of items that are not identifiers, with the schema.org terms that Wikidata gives
     for their properties (P1628, also of parent properties), values and value classes (P1709, P2888)."""
     iris = [WD + qid for qid in qids]
-    graph = client().statements(iris, languages=["en"])
+    graph = client().statements(iris, names=False)  # values in every language: a name in the native language is one
     direct = {claim: record for claim, record in properties(set(graph.predicates())).items() if str(WIKIBASE.ExternalId) not in record.property_type}
     known = {str(record.uri): record for record in direct.values()}
     missing = {parent for record in known.values() for parent in record.subproperty_of} - known.keys()
