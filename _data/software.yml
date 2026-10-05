@@ -1,6 +1,6 @@
 - name: rdfsolve
   summary: Wraps several RDF schema solver tools
-  version: 0.0.2
+  version: 0.1.0
   pypi_url: https://pypi.org/project/rdfsolve/
   docs: https://rdfsolve.readthedocs.io
 - name: pysec2pri

@@ -55,7 +55,7 @@
   forks: 15
   repository_source: https://github.com/enanomapper/ontologies
 - id: bridgedb
-  docker_pulls: 5946
+  docker_pulls: 5978
   docker_source: https://hub.docker.com/r/bigcatum/bridgedb
   stars: 6
   forks: 4
