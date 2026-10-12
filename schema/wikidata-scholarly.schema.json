@@ -145,14 +145,14 @@
    },
    {
     "subject_class": "http://wikiba.se/ontology#Item",
-    "property_uri": "http://www.wikidata.org/prop/direct/P2093",
+    "property_uri": "http://schema.org/description",
     "object_class": "Literal",
     "subject_binding": "type",
     "object_binding": "type",
     "count": null,
     "count_semantics": "unknown",
     "graphs": null,
-    "datatype": "http://www.w3.org/2001/XMLSchema#string",
+    "datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
     "blank_node_predicates": null,
     "pattern_type": "datatype_property",
     "distinct_subjects": null,
@@ -160,7 +160,47 @@
     "confidence": 1.0,
     "evidence_source": "mined",
     "subject_label": "Item",
-    "property_label": "author name string",
+    "property_label": "description",
+    "object_label": "Literal"
+   },
+   {
+    "subject_class": "http://wikiba.se/ontology#Item",
+    "property_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+    "object_class": "Literal",
+    "subject_binding": "type",
+    "object_binding": "type",
+    "count": null,
+    "count_semantics": "unknown",
+    "graphs": null,
+    "datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+    "blank_node_predicates": null,
+    "pattern_type": "datatype_property",
+    "distinct_subjects": null,
+    "distinct_objects": null,
+    "confidence": 1.0,
+    "evidence_source": "mined",
+    "subject_label": "Item",
+    "property_label": "label",
+    "object_label": "Literal"
+   },
+   {
+    "subject_class": "http://wikiba.se/ontology#Item",
+    "property_uri": "http://schema.org/dateModified",
+    "object_class": "Literal",
+    "subject_binding": "type",
+    "object_binding": "type",
+    "count": null,
+    "count_semantics": "unknown",
+    "graphs": null,
+    "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+    "blank_node_predicates": null,
+    "pattern_type": "datatype_property",
+    "distinct_subjects": null,
+    "distinct_objects": null,
+    "confidence": 1.0,
+    "evidence_source": "mined",
+    "subject_label": "Item",
+    "property_label": "dateModified",
     "object_label": "Literal"
    },
    {
@@ -185,7 +225,7 @@
    },
    {
     "subject_class": "http://wikiba.se/ontology#Item",
-    "property_uri": "http://www.wikidata.org/prop/direct/P698",
+    "property_uri": "http://www.wikidata.org/prop/direct/P957",
     "object_class": "Literal",
     "subject_binding": "type",
     "object_binding": "type",
@@ -200,7 +240,7 @@
     "confidence": 1.0,
     "evidence_source": "mined",
     "subject_label": "Item",
-    "property_label": "PubMed publication ID",
+    "property_label": "ISBN-10",
     "object_label": "Literal"
    },
    {
@@ -245,46 +285,6 @@
    },
    {
     "subject_class": "http://wikiba.se/ontology#Item",
-    "property_uri": "http://www.w3.org/2000/01/rdf-schema#label",
-    "object_class": "Literal",
-    "subject_binding": "type",
-    "object_binding": "type",
-    "count": null,
-    "count_semantics": "unknown",
-    "graphs": null,
-    "datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-    "blank_node_predicates": null,
-    "pattern_type": "datatype_property",
-    "distinct_subjects": null,
-    "distinct_objects": null,
-    "confidence": 1.0,
-    "evidence_source": "mined",
-    "subject_label": "Item",
-    "property_label": "label",
-    "object_label": "Literal"
-   },
-   {
-    "subject_class": "http://wikiba.se/ontology#Item",
-    "property_uri": "http://schema.org/description",
-    "object_class": "Literal",
-    "subject_binding": "type",
-    "object_binding": "type",
-    "count": null,
-    "count_semantics": "unknown",
-    "graphs": null,
-    "datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-    "blank_node_predicates": null,
-    "pattern_type": "datatype_property",
-    "distinct_subjects": null,
-    "distinct_objects": null,
-    "confidence": 1.0,
-    "evidence_source": "mined",
-    "subject_label": "Item",
-    "property_label": "description",
-    "object_label": "Literal"
-   },
-   {
-    "subject_class": "http://wikiba.se/ontology#Item",
     "property_uri": "http://www.wikidata.org/prop/direct/P577",
     "object_class": "Literal",
     "subject_binding": "type",
@@ -305,27 +305,7 @@
    },
    {
     "subject_class": "http://wikiba.se/ontology#Item",
-    "property_uri": "http://schema.org/dateModified",
-    "object_class": "Literal",
-    "subject_binding": "type",
-    "object_binding": "type",
-    "count": null,
-    "count_semantics": "unknown",
-    "graphs": null,
-    "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-    "blank_node_predicates": null,
-    "pattern_type": "datatype_property",
-    "distinct_subjects": null,
-    "distinct_objects": null,
-    "confidence": 1.0,
-    "evidence_source": "mined",
-    "subject_label": "Item",
-    "property_label": "dateModified",
-    "object_label": "Literal"
-   },
-   {
-    "subject_class": "http://wikiba.se/ontology#Item",
-    "property_uri": "http://www.wikidata.org/prop/direct/P957",
+    "property_uri": "http://www.wikidata.org/prop/direct/P2093",
     "object_class": "Literal",
     "subject_binding": "type",
     "object_binding": "type",
@@ -340,7 +320,27 @@
     "confidence": 1.0,
     "evidence_source": "mined",
     "subject_label": "Item",
-    "property_label": "ISBN-10",
+    "property_label": "author name string",
+    "object_label": "Literal"
+   },
+   {
+    "subject_class": "http://wikiba.se/ontology#Item",
+    "property_uri": "http://www.wikidata.org/prop/direct/P698",
+    "object_class": "Literal",
+    "subject_binding": "type",
+    "object_binding": "type",
+    "count": null,
+    "count_semantics": "unknown",
+    "graphs": null,
+    "datatype": "http://www.w3.org/2001/XMLSchema#string",
+    "blank_node_predicates": null,
+    "pattern_type": "datatype_property",
+    "distinct_subjects": null,
+    "distinct_objects": null,
+    "confidence": 1.0,
+    "evidence_source": "mined",
+    "subject_label": "Item",
+    "property_label": "PubMed publication ID",
     "object_label": "Literal"
    },
    {
@@ -2613,7 +2613,7 @@
     },
     {
      "subject_class": "http://wikiba.se/ontology#Item",
-     "property_uri": "http://www.wikidata.org/prop/direct/P2093",
+     "property_uri": "http://schema.org/description",
      "subject": {
       "kind": "uri",
       "value": "http://www.wikidata.org/entity/Q123631008",
@@ -2622,8 +2622,40 @@
      },
      "value": {
       "kind": "literal",
-      "value": "Elisson N Lopes",
+      "value": "art\u00edculu cient\u00edficu",
       "datatype": null,
+      "language": "ast"
+     }
+    },
+    {
+     "subject_class": "http://wikiba.se/ontology#Item",
+     "property_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+     "subject": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/Q123631008",
+      "datatype": null,
+      "language": null
+     },
+     "value": {
+      "kind": "literal",
+      "value": "WikiPathways 2024: next generation pathway database",
+      "datatype": null,
+      "language": "en"
+     }
+    },
+    {
+     "subject_class": "http://wikiba.se/ontology#Item",
+     "property_uri": "http://schema.org/dateModified",
+     "subject": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/Q123631008",
+      "datatype": null,
+      "language": null
+     },
+     "value": {
+      "kind": "literal",
+      "value": "2025-09-29T00:39:23Z",
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
       "language": null
      }
     },
@@ -2632,13 +2664,93 @@
      "property_uri": "http://www.wikidata.org/prop/direct/P356",
      "subject": {
       "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q123631008",
+      "value": "http://www.wikidata.org/entity/Q124306321",
       "datatype": null,
       "language": null
      },
      "value": {
       "kind": "literal",
-      "value": "10.1093/NAR/GKAD960",
+      "value": "10.26481/DIS.20240116AW",
+      "datatype": null,
+      "language": null
+     }
+    },
+    {
+     "subject_class": "http://wikiba.se/ontology#Item",
+     "property_uri": "http://www.wikidata.org/prop/direct/P957",
+     "subject": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/Q124306321",
+      "datatype": null,
+      "language": null
+     },
+     "value": {
+      "kind": "literal",
+      "value": "94-6473-361-6",
+      "datatype": null,
+      "language": null
+     }
+    },
+    {
+     "subject_class": "http://wikiba.se/ontology#Item",
+     "property_uri": "http://www.wikidata.org/prop/direct/P1476",
+     "subject": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/Q124306321",
+      "datatype": null,
+      "language": null
+     },
+     "value": {
+      "kind": "literal",
+      "value": "Biological pathway abstractions: from two-dimensional drawings to multidimensional linked data",
+      "datatype": null,
+      "language": "en"
+     }
+    },
+    {
+     "subject_class": "http://wikiba.se/ontology#Item",
+     "property_uri": "http://www.wikidata.org/prop/direct/P212",
+     "subject": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/Q124381797",
+      "datatype": null,
+      "language": null
+     },
+     "value": {
+      "kind": "literal",
+      "value": "978-94-6469-725-4",
+      "datatype": null,
+      "language": null
+     }
+    },
+    {
+     "subject_class": "http://wikiba.se/ontology#Item",
+     "property_uri": "http://www.wikidata.org/prop/direct/P577",
+     "subject": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/Q124306321",
+      "datatype": null,
+      "language": null
+     },
+     "value": {
+      "kind": "literal",
+      "value": "2024-01-16T00:00:00Z",
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "language": null
+     }
+    },
+    {
+     "subject_class": "http://wikiba.se/ontology#Item",
+     "property_uri": "http://www.wikidata.org/prop/direct/P2093",
+     "subject": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/Q127223057",
+      "datatype": null,
+      "language": null
+     },
+     "value": {
+      "kind": "literal",
+      "value": "T.M.C.M. de Kok",
       "datatype": null,
       "language": null
      }
@@ -2655,118 +2767,6 @@
      "value": {
       "kind": "literal",
       "value": "37941138",
-      "datatype": null,
-      "language": null
-     }
-    },
-    {
-     "subject_class": "http://wikiba.se/ontology#Item",
-     "property_uri": "http://www.wikidata.org/prop/direct/P1476",
-     "subject": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q123631008",
-      "datatype": null,
-      "language": null
-     },
-     "value": {
-      "kind": "literal",
-      "value": "WikiPathways 2024: next generation pathway database",
-      "datatype": null,
-      "language": "en"
-     }
-    },
-    {
-     "subject_class": "http://wikiba.se/ontology#Item",
-     "property_uri": "http://www.wikidata.org/prop/direct/P212",
-     "subject": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q124306321",
-      "datatype": null,
-      "language": null
-     },
-     "value": {
-      "kind": "literal",
-      "value": "978-94-6473-361-7",
-      "datatype": null,
-      "language": null
-     }
-    },
-    {
-     "subject_class": "http://wikiba.se/ontology#Item",
-     "property_uri": "http://www.w3.org/2000/01/rdf-schema#label",
-     "subject": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q124306321",
-      "datatype": null,
-      "language": null
-     },
-     "value": {
-      "kind": "literal",
-      "value": "Biological pathway abstractions: from two-dimensional drawings to multidimensional linked data",
-      "datatype": null,
-      "language": "en"
-     }
-    },
-    {
-     "subject_class": "http://wikiba.se/ontology#Item",
-     "property_uri": "http://schema.org/description",
-     "subject": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q124306321",
-      "datatype": null,
-      "language": null
-     },
-     "value": {
-      "kind": "literal",
-      "value": "PhD thesis of 2024 by Dr Andra Waagmeester",
-      "datatype": null,
-      "language": "en"
-     }
-    },
-    {
-     "subject_class": "http://wikiba.se/ontology#Item",
-     "property_uri": "http://www.wikidata.org/prop/direct/P577",
-     "subject": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q123631008",
-      "datatype": null,
-      "language": null
-     },
-     "value": {
-      "kind": "literal",
-      "value": "2023-11-06T00:00:00Z",
-      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-      "language": null
-     }
-    },
-    {
-     "subject_class": "http://wikiba.se/ontology#Item",
-     "property_uri": "http://schema.org/dateModified",
-     "subject": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q124306321",
-      "datatype": null,
-      "language": null
-     },
-     "value": {
-      "kind": "literal",
-      "value": "2024-01-20T17:49:22Z",
-      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-      "language": null
-     }
-    },
-    {
-     "subject_class": "http://wikiba.se/ontology#Item",
-     "property_uri": "http://www.wikidata.org/prop/direct/P957",
-     "subject": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q124306321",
-      "datatype": null,
-      "language": null
-     },
-     "value": {
-      "kind": "literal",
-      "value": "94-6473-361-6",
       "datatype": null,
       "language": null
      }
@@ -4041,10 +4041,10 @@
   "class_hierarchy": {},
   "shapes": null,
   "about": {
-   "schema_id": "0cced508-ce47-49d8-961d-242730789097",
+   "schema_id": "b89a9c51-a5b4-4b68-8bf7-afc71d6d5246",
    "schema_version": "",
-   "snapshot_id": "https://w3id.org/rdfsolve/snapshot/wikidata-scholarly/2026-10-05T06%3A49%3A43.354545%2B00%3A00",
-   "retrieved_at": "2026-10-05T06:49:43.354545+00:00",
+   "snapshot_id": "https://w3id.org/rdfsolve/snapshot/wikidata-scholarly/2026-10-12T15%3A08%3A47.063344%2B00%3A00",
+   "retrieved_at": "2026-10-12T15:08:47.063344+00:00",
    "content_sha256": null,
    "snapshot_identity_basis": "retrieval_record",
    "dataset_name": "wikidata-scholarly",
@@ -4057,7 +4057,7 @@
    "discovered_graphs": null,
    "ontology_graph_uris": null,
    "generated_by": "rdfsolve 0.1.0",
-   "generated_at": "2026-10-05T06:50:15.592894+00:00",
+   "generated_at": "2026-10-12T15:09:19.241340+00:00",
    "strategy": "miner/wikibase-scope",
    "source_version": null,
    "source_version_iri": null,
@@ -4071,9 +4071,9 @@
    "description": null,
    "rdfsolve_version": "0.1.0",
    "qlever_version": null,
-   "started_at": "2026-10-05T06:49:43.354545+00:00",
-   "finished_at": "2026-10-05T06:50:15.592894+00:00",
-   "total_duration_s": 32.238,
+   "started_at": "2026-10-12T15:08:47.063344+00:00",
+   "finished_at": "2026-10-12T15:09:19.241340+00:00",
+   "total_duration_s": 32.178,
    "class_entity_counts": {},
    "class_entity_count_states": {},
    "pattern_count": 96,

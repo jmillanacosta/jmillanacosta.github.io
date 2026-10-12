@@ -103,12 +103,8 @@
     family: Abbassi-Daloii
     orcid: https://orcid.org/0000-0002-4904-3269
   topics:
-  - iri: https://openalex.org/T11937
-    name: Research Data Management Practices
-  - iri: https://openalex.org/T11986
-    name: Scientific Computing and Data Management
-  - iri: https://openalex.org/T11710
-    name: Biomedical Text Mining and Ontologies
+  - iri: https://openalex.org/T10215
+    name: Semantic Web and Ontologies
 - title: LP-63 Making the AOP-Wiki knowledge graph usable across disciplines in toxicological assessment
   year: '2025'
   journal: Toxicology Letters
@@ -134,10 +130,6 @@
   topics:
   - iri: https://openalex.org/T11710
     name: Biomedical Text Mining and Ontologies
-  - iri: https://openalex.org/T10215
-    name: Semantic Web and Ontologies
-  - iri: https://openalex.org/T14351
-    name: Statistical and Computational Modeling
 - title: 'Extended RDF support for Biomedical Knowledge Graphs in pyBioDataFuse: on-the-fly RDF graph
     generation and new resource annotators'
   year: '2025'
@@ -162,6 +154,9 @@
     family: Abbassi-Daloii
     orcid: https://orcid.org/0000-0002-4904-3269
     via: same name as an identified co-author
+  topics:
+  - iri: https://openalex.org/T11710
+    name: Biomedical Text Mining and Ontologies
 - title: MCP server tools with RDF shapes
   year: '2025'
   type: preprint
@@ -203,6 +198,9 @@
     name: Model Context Protocol
   - iri: http://www.wikidata.org/entity/Q54872
     name: Resource Description Framework
+  topics:
+  - iri: https://openalex.org/T10215
+    name: Semantic Web and Ontologies
 - title: 'INTOXICOM Workshop Report: FAIRification of Toxicological Research Output: Leveraging ELIXIR
     Resources'
   year: '2024'
@@ -391,10 +389,6 @@
   topics:
   - iri: https://openalex.org/T11937
     name: Research Data Management Practices
-  - iri: https://openalex.org/T12157
-    name: Geochemistry and Geologic Mapping
-  - iri: https://openalex.org/T11986
-    name: Scientific Computing and Data Management
 - title: 'WikiPathways 2024: next generation pathway database'
   year: '2023'
   journal: Nucleic Acids Research
@@ -475,7 +469,3 @@
   topics:
   - iri: https://openalex.org/T10887
     name: Bioinformatics and Genomic Networks
-  - iri: https://openalex.org/T12478
-    name: Wikis in Education and Collaboration
-  - iri: https://openalex.org/T11710
-    name: Biomedical Text Mining and Ontologies
