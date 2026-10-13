@@ -11,7 +11,7 @@ person:
     locality: Maastricht
     country: Netherlands
   description: >-
-    I work on software that makes biomedical data interoperable, mainly through schema and identifier reconciliation across databases and their releases to improve access to services and the tools we build with them. I am interested in the (agentic) automation and evalutation of interoperability workflows for biomedical data.
+    I work on software that makes (biomedical) data interoperable, mainly through schema and identifier reconciliation across databases and their releases to improve access to services and the tools we build with them. I am interested in the (agentic) automation and evalutation of interoperability workflows.
   profiles:
     - label: ORCID
       url: https://orcid.org/0000-0002-4166-7093
