@@ -150,7 +150,7 @@ experience:
       - >-
         Database description: I developed rdfsolve to mine schemas and paths from SPARQL endpoints and RDF dumps into descriptive (VoID) and prescriptive (SHACL) formats, generate typed Python models, and derive mappings
         across datasets. I maintain a registry of life sciences RDF resources recording what each exposes
-        and how it links to the others.
+        and how it links to the others via VoID and SHACL (manuscripts in preparation).
       - >-
         Database evolution: I conceptualized a methodology to capture the historical events of identifier deprecation and label aliasing and supersession across ChEBI, Ensembl, HGNC, HMDB, NCBI, UniProt, and virtually any database with a release archive where deprecation events are explicit or implicit, and compare releases as the basis for measuring how these revisions propagate
         into downstream tools and resources (manuscript in preparation).
