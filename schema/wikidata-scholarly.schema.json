@@ -245,26 +245,6 @@
    },
    {
     "subject_class": "http://wikiba.se/ontology#Item",
-    "property_uri": "http://www.wikidata.org/prop/direct/P2093",
-    "object_class": "Literal",
-    "subject_binding": "type",
-    "object_binding": "type",
-    "count": null,
-    "count_semantics": "unknown",
-    "graphs": null,
-    "datatype": "http://www.w3.org/2001/XMLSchema#string",
-    "blank_node_predicates": null,
-    "pattern_type": "datatype_property",
-    "distinct_subjects": null,
-    "distinct_objects": null,
-    "confidence": 1.0,
-    "evidence_source": "mined",
-    "subject_label": "Item",
-    "property_label": "author name string",
-    "object_label": "Literal"
-   },
-   {
-    "subject_class": "http://wikiba.se/ontology#Item",
     "property_uri": "http://www.wikidata.org/prop/direct/P1476",
     "object_class": "Literal",
     "subject_binding": "type",
@@ -325,6 +305,26 @@
    },
    {
     "subject_class": "http://wikiba.se/ontology#Item",
+    "property_uri": "http://www.wikidata.org/prop/direct/P2093",
+    "object_class": "Literal",
+    "subject_binding": "type",
+    "object_binding": "type",
+    "count": null,
+    "count_semantics": "unknown",
+    "graphs": null,
+    "datatype": "http://www.w3.org/2001/XMLSchema#string",
+    "blank_node_predicates": null,
+    "pattern_type": "datatype_property",
+    "distinct_subjects": null,
+    "distinct_objects": null,
+    "confidence": 1.0,
+    "evidence_source": "mined",
+    "subject_label": "Item",
+    "property_label": "author name string",
+    "object_label": "Literal"
+   },
+   {
+    "subject_class": "http://wikiba.se/ontology#Item",
     "property_uri": "http://www.wikidata.org/prop/direct/P698",
     "object_class": "Literal",
     "subject_binding": "type",
@@ -365,8 +365,8 @@
    },
    {
     "subject_class": "http://wikiba.se/ontology#Item",
-    "property_uri": "http://www.wikidata.org/prop/direct-normalized/P698",
-    "object_class": "Resource",
+    "property_uri": "http://www.wikidata.org/prop/P921",
+    "object_class": "http://wikiba.se/ontology#BestRank",
     "subject_binding": "type",
     "object_binding": "type",
     "count": null,
@@ -380,8 +380,28 @@
     "confidence": 1.0,
     "evidence_source": "mined",
     "subject_label": "Item",
-    "property_label": "PubMed publication ID normalized",
-    "object_label": "Resource"
+    "property_label": "main subject statement",
+    "object_label": "BestRank"
+   },
+   {
+    "subject_class": "http://wikiba.se/ontology#Item",
+    "property_uri": "http://www.wikidata.org/prop/P921",
+    "object_class": "http://wikiba.se/ontology#Statement",
+    "subject_binding": "type",
+    "object_binding": "type",
+    "count": null,
+    "count_semantics": "unknown",
+    "graphs": null,
+    "datatype": null,
+    "blank_node_predicates": null,
+    "pattern_type": "object_property",
+    "distinct_subjects": null,
+    "distinct_objects": null,
+    "confidence": 1.0,
+    "evidence_source": "mined",
+    "subject_label": "Item",
+    "property_label": "main subject statement",
+    "object_label": "Statement"
    },
    {
     "subject_class": "http://wikiba.se/ontology#Item",
@@ -425,246 +445,6 @@
    },
    {
     "subject_class": "http://wikiba.se/ontology#Item",
-    "property_uri": "http://www.wikidata.org/prop/P50",
-    "object_class": "http://wikiba.se/ontology#BestRank",
-    "subject_binding": "type",
-    "object_binding": "type",
-    "count": null,
-    "count_semantics": "unknown",
-    "graphs": null,
-    "datatype": null,
-    "blank_node_predicates": null,
-    "pattern_type": "object_property",
-    "distinct_subjects": null,
-    "distinct_objects": null,
-    "confidence": 1.0,
-    "evidence_source": "mined",
-    "subject_label": "Item",
-    "property_label": "author statement",
-    "object_label": "BestRank"
-   },
-   {
-    "subject_class": "http://wikiba.se/ontology#Item",
-    "property_uri": "http://www.wikidata.org/prop/P50",
-    "object_class": "http://wikiba.se/ontology#Statement",
-    "subject_binding": "type",
-    "object_binding": "type",
-    "count": null,
-    "count_semantics": "unknown",
-    "graphs": null,
-    "datatype": null,
-    "blank_node_predicates": null,
-    "pattern_type": "object_property",
-    "distinct_subjects": null,
-    "distinct_objects": null,
-    "confidence": 1.0,
-    "evidence_source": "mined",
-    "subject_label": "Item",
-    "property_label": "author statement",
-    "object_label": "Statement"
-   },
-   {
-    "subject_class": "http://wikiba.se/ontology#Item",
-    "property_uri": "http://www.wikidata.org/prop/P698",
-    "object_class": "http://wikiba.se/ontology#BestRank",
-    "subject_binding": "type",
-    "object_binding": "type",
-    "count": null,
-    "count_semantics": "unknown",
-    "graphs": null,
-    "datatype": null,
-    "blank_node_predicates": null,
-    "pattern_type": "object_property",
-    "distinct_subjects": null,
-    "distinct_objects": null,
-    "confidence": 1.0,
-    "evidence_source": "mined",
-    "subject_label": "Item",
-    "property_label": "PubMed publication ID statement",
-    "object_label": "BestRank"
-   },
-   {
-    "subject_class": "http://wikiba.se/ontology#Item",
-    "property_uri": "http://www.wikidata.org/prop/P698",
-    "object_class": "http://wikiba.se/ontology#Statement",
-    "subject_binding": "type",
-    "object_binding": "type",
-    "count": null,
-    "count_semantics": "unknown",
-    "graphs": null,
-    "datatype": null,
-    "blank_node_predicates": null,
-    "pattern_type": "object_property",
-    "distinct_subjects": null,
-    "distinct_objects": null,
-    "confidence": 1.0,
-    "evidence_source": "mined",
-    "subject_label": "Item",
-    "property_label": "PubMed publication ID statement",
-    "object_label": "Statement"
-   },
-   {
-    "subject_class": "http://wikiba.se/ontology#Item",
-    "property_uri": "http://www.wikidata.org/prop/P2860",
-    "object_class": "http://wikiba.se/ontology#BestRank",
-    "subject_binding": "type",
-    "object_binding": "type",
-    "count": null,
-    "count_semantics": "unknown",
-    "graphs": null,
-    "datatype": null,
-    "blank_node_predicates": null,
-    "pattern_type": "object_property",
-    "distinct_subjects": null,
-    "distinct_objects": null,
-    "confidence": 1.0,
-    "evidence_source": "mined",
-    "subject_label": "Item",
-    "property_label": "cites work statement",
-    "object_label": "BestRank"
-   },
-   {
-    "subject_class": "http://wikiba.se/ontology#Item",
-    "property_uri": "http://www.wikidata.org/prop/P2860",
-    "object_class": "http://wikiba.se/ontology#Statement",
-    "subject_binding": "type",
-    "object_binding": "type",
-    "count": null,
-    "count_semantics": "unknown",
-    "graphs": null,
-    "datatype": null,
-    "blank_node_predicates": null,
-    "pattern_type": "object_property",
-    "distinct_subjects": null,
-    "distinct_objects": null,
-    "confidence": 1.0,
-    "evidence_source": "mined",
-    "subject_label": "Item",
-    "property_label": "cites work statement",
-    "object_label": "Statement"
-   },
-   {
-    "subject_class": "http://wikiba.se/ontology#Item",
-    "property_uri": "http://www.wikidata.org/prop/P2093",
-    "object_class": "http://wikiba.se/ontology#BestRank",
-    "subject_binding": "type",
-    "object_binding": "type",
-    "count": null,
-    "count_semantics": "unknown",
-    "graphs": null,
-    "datatype": null,
-    "blank_node_predicates": null,
-    "pattern_type": "object_property",
-    "distinct_subjects": null,
-    "distinct_objects": null,
-    "confidence": 1.0,
-    "evidence_source": "mined",
-    "subject_label": "Item",
-    "property_label": "author name string statement",
-    "object_label": "BestRank"
-   },
-   {
-    "subject_class": "http://wikiba.se/ontology#Item",
-    "property_uri": "http://www.wikidata.org/prop/P2093",
-    "object_class": "http://wikiba.se/ontology#Statement",
-    "subject_binding": "type",
-    "object_binding": "type",
-    "count": null,
-    "count_semantics": "unknown",
-    "graphs": null,
-    "datatype": null,
-    "blank_node_predicates": null,
-    "pattern_type": "object_property",
-    "distinct_subjects": null,
-    "distinct_objects": null,
-    "confidence": 1.0,
-    "evidence_source": "mined",
-    "subject_label": "Item",
-    "property_label": "author name string statement",
-    "object_label": "Statement"
-   },
-   {
-    "subject_class": "http://wikiba.se/ontology#Item",
-    "property_uri": "http://www.wikidata.org/prop/P1433",
-    "object_class": "http://wikiba.se/ontology#BestRank",
-    "subject_binding": "type",
-    "object_binding": "type",
-    "count": null,
-    "count_semantics": "unknown",
-    "graphs": null,
-    "datatype": null,
-    "blank_node_predicates": null,
-    "pattern_type": "object_property",
-    "distinct_subjects": null,
-    "distinct_objects": null,
-    "confidence": 1.0,
-    "evidence_source": "mined",
-    "subject_label": "Item",
-    "property_label": "published in statement",
-    "object_label": "BestRank"
-   },
-   {
-    "subject_class": "http://wikiba.se/ontology#Item",
-    "property_uri": "http://www.wikidata.org/prop/P1433",
-    "object_class": "http://wikiba.se/ontology#Statement",
-    "subject_binding": "type",
-    "object_binding": "type",
-    "count": null,
-    "count_semantics": "unknown",
-    "graphs": null,
-    "datatype": null,
-    "blank_node_predicates": null,
-    "pattern_type": "object_property",
-    "distinct_subjects": null,
-    "distinct_objects": null,
-    "confidence": 1.0,
-    "evidence_source": "mined",
-    "subject_label": "Item",
-    "property_label": "published in statement",
-    "object_label": "Statement"
-   },
-   {
-    "subject_class": "http://wikiba.se/ontology#Item",
-    "property_uri": "http://www.wikidata.org/prop/P1476",
-    "object_class": "http://wikiba.se/ontology#BestRank",
-    "subject_binding": "type",
-    "object_binding": "type",
-    "count": null,
-    "count_semantics": "unknown",
-    "graphs": null,
-    "datatype": null,
-    "blank_node_predicates": null,
-    "pattern_type": "object_property",
-    "distinct_subjects": null,
-    "distinct_objects": null,
-    "confidence": 1.0,
-    "evidence_source": "mined",
-    "subject_label": "Item",
-    "property_label": "title statement",
-    "object_label": "BestRank"
-   },
-   {
-    "subject_class": "http://wikiba.se/ontology#Item",
-    "property_uri": "http://www.wikidata.org/prop/P1476",
-    "object_class": "http://wikiba.se/ontology#Statement",
-    "subject_binding": "type",
-    "object_binding": "type",
-    "count": null,
-    "count_semantics": "unknown",
-    "graphs": null,
-    "datatype": null,
-    "blank_node_predicates": null,
-    "pattern_type": "object_property",
-    "distinct_subjects": null,
-    "distinct_objects": null,
-    "confidence": 1.0,
-    "evidence_source": "mined",
-    "subject_label": "Item",
-    "property_label": "title statement",
-    "object_label": "Statement"
-   },
-   {
-    "subject_class": "http://wikiba.se/ontology#Item",
     "property_uri": "http://www.wikidata.org/prop/P577",
     "object_class": "http://wikiba.se/ontology#BestRank",
     "subject_binding": "type",
@@ -702,206 +482,6 @@
     "subject_label": "Item",
     "property_label": "publication date statement",
     "object_label": "Statement"
-   },
-   {
-    "subject_class": "http://wikiba.se/ontology#Item",
-    "property_uri": "http://www.wikidata.org/prop/P356",
-    "object_class": "http://wikiba.se/ontology#BestRank",
-    "subject_binding": "type",
-    "object_binding": "type",
-    "count": null,
-    "count_semantics": "unknown",
-    "graphs": null,
-    "datatype": null,
-    "blank_node_predicates": null,
-    "pattern_type": "object_property",
-    "distinct_subjects": null,
-    "distinct_objects": null,
-    "confidence": 1.0,
-    "evidence_source": "mined",
-    "subject_label": "Item",
-    "property_label": "DOI statement",
-    "object_label": "BestRank"
-   },
-   {
-    "subject_class": "http://wikiba.se/ontology#Item",
-    "property_uri": "http://www.wikidata.org/prop/P356",
-    "object_class": "http://wikiba.se/ontology#Statement",
-    "subject_binding": "type",
-    "object_binding": "type",
-    "count": null,
-    "count_semantics": "unknown",
-    "graphs": null,
-    "datatype": null,
-    "blank_node_predicates": null,
-    "pattern_type": "object_property",
-    "distinct_subjects": null,
-    "distinct_objects": null,
-    "confidence": 1.0,
-    "evidence_source": "mined",
-    "subject_label": "Item",
-    "property_label": "DOI statement",
-    "object_label": "Statement"
-   },
-   {
-    "subject_class": "http://wikiba.se/ontology#Item",
-    "property_uri": "http://www.wikidata.org/prop/P921",
-    "object_class": "http://wikiba.se/ontology#BestRank",
-    "subject_binding": "type",
-    "object_binding": "type",
-    "count": null,
-    "count_semantics": "unknown",
-    "graphs": null,
-    "datatype": null,
-    "blank_node_predicates": null,
-    "pattern_type": "object_property",
-    "distinct_subjects": null,
-    "distinct_objects": null,
-    "confidence": 1.0,
-    "evidence_source": "mined",
-    "subject_label": "Item",
-    "property_label": "main subject statement",
-    "object_label": "BestRank"
-   },
-   {
-    "subject_class": "http://wikiba.se/ontology#Item",
-    "property_uri": "http://www.wikidata.org/prop/P921",
-    "object_class": "http://wikiba.se/ontology#Statement",
-    "subject_binding": "type",
-    "object_binding": "type",
-    "count": null,
-    "count_semantics": "unknown",
-    "graphs": null,
-    "datatype": null,
-    "blank_node_predicates": null,
-    "pattern_type": "object_property",
-    "distinct_subjects": null,
-    "distinct_objects": null,
-    "confidence": 1.0,
-    "evidence_source": "mined",
-    "subject_label": "Item",
-    "property_label": "main subject statement",
-    "object_label": "Statement"
-   },
-   {
-    "subject_class": "http://wikiba.se/ontology#Item",
-    "property_uri": "http://www.wikidata.org/prop/P407",
-    "object_class": "http://wikiba.se/ontology#BestRank",
-    "subject_binding": "type",
-    "object_binding": "type",
-    "count": null,
-    "count_semantics": "unknown",
-    "graphs": null,
-    "datatype": null,
-    "blank_node_predicates": null,
-    "pattern_type": "object_property",
-    "distinct_subjects": null,
-    "distinct_objects": null,
-    "confidence": 1.0,
-    "evidence_source": "mined",
-    "subject_label": "Item",
-    "property_label": "language of work or name statement",
-    "object_label": "BestRank"
-   },
-   {
-    "subject_class": "http://wikiba.se/ontology#Item",
-    "property_uri": "http://www.wikidata.org/prop/P407",
-    "object_class": "http://wikiba.se/ontology#Statement",
-    "subject_binding": "type",
-    "object_binding": "type",
-    "count": null,
-    "count_semantics": "unknown",
-    "graphs": null,
-    "datatype": null,
-    "blank_node_predicates": null,
-    "pattern_type": "object_property",
-    "distinct_subjects": null,
-    "distinct_objects": null,
-    "confidence": 1.0,
-    "evidence_source": "mined",
-    "subject_label": "Item",
-    "property_label": "language of work or name statement",
-    "object_label": "Statement"
-   },
-   {
-    "subject_class": "http://wikiba.se/ontology#Item",
-    "property_uri": "http://www.wikidata.org/prop/direct/P407",
-    "object_class": "http://wikiba.se/ontology#Item",
-    "subject_binding": "type",
-    "object_binding": "type",
-    "count": null,
-    "count_semantics": "unknown",
-    "graphs": null,
-    "datatype": null,
-    "blank_node_predicates": null,
-    "pattern_type": "object_property",
-    "distinct_subjects": null,
-    "distinct_objects": null,
-    "confidence": 1.0,
-    "evidence_source": "mined",
-    "subject_label": "Item",
-    "property_label": "language of work or name",
-    "object_label": "Item"
-   },
-   {
-    "subject_class": "http://wikiba.se/ontology#Item",
-    "property_uri": "http://www.wikidata.org/prop/direct/P1433",
-    "object_class": "http://wikiba.se/ontology#Item",
-    "subject_binding": "type",
-    "object_binding": "type",
-    "count": null,
-    "count_semantics": "unknown",
-    "graphs": null,
-    "datatype": null,
-    "blank_node_predicates": null,
-    "pattern_type": "object_property",
-    "distinct_subjects": null,
-    "distinct_objects": null,
-    "confidence": 1.0,
-    "evidence_source": "mined",
-    "subject_label": "Item",
-    "property_label": "published in",
-    "object_label": "Item"
-   },
-   {
-    "subject_class": "http://wikiba.se/ontology#Item",
-    "property_uri": "http://www.wikidata.org/prop/direct/P921",
-    "object_class": "http://wikiba.se/ontology#Item",
-    "subject_binding": "type",
-    "object_binding": "type",
-    "count": null,
-    "count_semantics": "unknown",
-    "graphs": null,
-    "datatype": null,
-    "blank_node_predicates": null,
-    "pattern_type": "object_property",
-    "distinct_subjects": null,
-    "distinct_objects": null,
-    "confidence": 1.0,
-    "evidence_source": "mined",
-    "subject_label": "Item",
-    "property_label": "main subject",
-    "object_label": "Item"
-   },
-   {
-    "subject_class": "http://wikiba.se/ontology#Item",
-    "property_uri": "http://www.wikidata.org/prop/direct/P2860",
-    "object_class": "http://wikiba.se/ontology#Item",
-    "subject_binding": "type",
-    "object_binding": "type",
-    "count": null,
-    "count_semantics": "unknown",
-    "graphs": null,
-    "datatype": null,
-    "blank_node_predicates": null,
-    "pattern_type": "object_property",
-    "distinct_subjects": null,
-    "distinct_objects": null,
-    "confidence": 1.0,
-    "evidence_source": "mined",
-    "subject_label": "Item",
-    "property_label": "cites work",
-    "object_label": "Item"
    },
    {
     "subject_class": "http://wikiba.se/ontology#Item",
@@ -985,6 +565,46 @@
    },
    {
     "subject_class": "http://wikiba.se/ontology#Item",
+    "property_uri": "http://www.wikidata.org/prop/P2860",
+    "object_class": "http://wikiba.se/ontology#BestRank",
+    "subject_binding": "type",
+    "object_binding": "type",
+    "count": null,
+    "count_semantics": "unknown",
+    "graphs": null,
+    "datatype": null,
+    "blank_node_predicates": null,
+    "pattern_type": "object_property",
+    "distinct_subjects": null,
+    "distinct_objects": null,
+    "confidence": 1.0,
+    "evidence_source": "mined",
+    "subject_label": "Item",
+    "property_label": "cites work statement",
+    "object_label": "BestRank"
+   },
+   {
+    "subject_class": "http://wikiba.se/ontology#Item",
+    "property_uri": "http://www.wikidata.org/prop/P2860",
+    "object_class": "http://wikiba.se/ontology#Statement",
+    "subject_binding": "type",
+    "object_binding": "type",
+    "count": null,
+    "count_semantics": "unknown",
+    "graphs": null,
+    "datatype": null,
+    "blank_node_predicates": null,
+    "pattern_type": "object_property",
+    "distinct_subjects": null,
+    "distinct_objects": null,
+    "confidence": 1.0,
+    "evidence_source": "mined",
+    "subject_label": "Item",
+    "property_label": "cites work statement",
+    "object_label": "Statement"
+   },
+   {
+    "subject_class": "http://wikiba.se/ontology#Item",
     "property_uri": "http://www.wikidata.org/prop/P957",
     "object_class": "http://wikiba.se/ontology#BestRank",
     "subject_binding": "type",
@@ -1021,6 +641,86 @@
     "evidence_source": "mined",
     "subject_label": "Item",
     "property_label": "ISBN-10 statement",
+    "object_label": "Statement"
+   },
+   {
+    "subject_class": "http://wikiba.se/ontology#Item",
+    "property_uri": "http://www.wikidata.org/prop/P407",
+    "object_class": "http://wikiba.se/ontology#BestRank",
+    "subject_binding": "type",
+    "object_binding": "type",
+    "count": null,
+    "count_semantics": "unknown",
+    "graphs": null,
+    "datatype": null,
+    "blank_node_predicates": null,
+    "pattern_type": "object_property",
+    "distinct_subjects": null,
+    "distinct_objects": null,
+    "confidence": 1.0,
+    "evidence_source": "mined",
+    "subject_label": "Item",
+    "property_label": "language of work or name statement",
+    "object_label": "BestRank"
+   },
+   {
+    "subject_class": "http://wikiba.se/ontology#Item",
+    "property_uri": "http://www.wikidata.org/prop/P407",
+    "object_class": "http://wikiba.se/ontology#Statement",
+    "subject_binding": "type",
+    "object_binding": "type",
+    "count": null,
+    "count_semantics": "unknown",
+    "graphs": null,
+    "datatype": null,
+    "blank_node_predicates": null,
+    "pattern_type": "object_property",
+    "distinct_subjects": null,
+    "distinct_objects": null,
+    "confidence": 1.0,
+    "evidence_source": "mined",
+    "subject_label": "Item",
+    "property_label": "language of work or name statement",
+    "object_label": "Statement"
+   },
+   {
+    "subject_class": "http://wikiba.se/ontology#Item",
+    "property_uri": "http://www.wikidata.org/prop/P50",
+    "object_class": "http://wikiba.se/ontology#BestRank",
+    "subject_binding": "type",
+    "object_binding": "type",
+    "count": null,
+    "count_semantics": "unknown",
+    "graphs": null,
+    "datatype": null,
+    "blank_node_predicates": null,
+    "pattern_type": "object_property",
+    "distinct_subjects": null,
+    "distinct_objects": null,
+    "confidence": 1.0,
+    "evidence_source": "mined",
+    "subject_label": "Item",
+    "property_label": "author statement",
+    "object_label": "BestRank"
+   },
+   {
+    "subject_class": "http://wikiba.se/ontology#Item",
+    "property_uri": "http://www.wikidata.org/prop/P50",
+    "object_class": "http://wikiba.se/ontology#Statement",
+    "subject_binding": "type",
+    "object_binding": "type",
+    "count": null,
+    "count_semantics": "unknown",
+    "graphs": null,
+    "datatype": null,
+    "blank_node_predicates": null,
+    "pattern_type": "object_property",
+    "distinct_subjects": null,
+    "distinct_objects": null,
+    "confidence": 1.0,
+    "evidence_source": "mined",
+    "subject_label": "Item",
+    "property_label": "author statement",
     "object_label": "Statement"
    },
    {
@@ -1065,6 +765,46 @@
    },
    {
     "subject_class": "http://wikiba.se/ontology#Item",
+    "property_uri": "http://www.wikidata.org/prop/P1476",
+    "object_class": "http://wikiba.se/ontology#BestRank",
+    "subject_binding": "type",
+    "object_binding": "type",
+    "count": null,
+    "count_semantics": "unknown",
+    "graphs": null,
+    "datatype": null,
+    "blank_node_predicates": null,
+    "pattern_type": "object_property",
+    "distinct_subjects": null,
+    "distinct_objects": null,
+    "confidence": 1.0,
+    "evidence_source": "mined",
+    "subject_label": "Item",
+    "property_label": "title statement",
+    "object_label": "BestRank"
+   },
+   {
+    "subject_class": "http://wikiba.se/ontology#Item",
+    "property_uri": "http://www.wikidata.org/prop/P1476",
+    "object_class": "http://wikiba.se/ontology#Statement",
+    "subject_binding": "type",
+    "object_binding": "type",
+    "count": null,
+    "count_semantics": "unknown",
+    "graphs": null,
+    "datatype": null,
+    "blank_node_predicates": null,
+    "pattern_type": "object_property",
+    "distinct_subjects": null,
+    "distinct_objects": null,
+    "confidence": 1.0,
+    "evidence_source": "mined",
+    "subject_label": "Item",
+    "property_label": "title statement",
+    "object_label": "Statement"
+   },
+   {
+    "subject_class": "http://wikiba.se/ontology#Item",
     "property_uri": "http://www.wikidata.org/prop/P212",
     "object_class": "http://wikiba.se/ontology#BestRank",
     "subject_binding": "type",
@@ -1101,6 +841,46 @@
     "evidence_source": "mined",
     "subject_label": "Item",
     "property_label": "ISBN-13 statement",
+    "object_label": "Statement"
+   },
+   {
+    "subject_class": "http://wikiba.se/ontology#Item",
+    "property_uri": "http://www.wikidata.org/prop/P356",
+    "object_class": "http://wikiba.se/ontology#BestRank",
+    "subject_binding": "type",
+    "object_binding": "type",
+    "count": null,
+    "count_semantics": "unknown",
+    "graphs": null,
+    "datatype": null,
+    "blank_node_predicates": null,
+    "pattern_type": "object_property",
+    "distinct_subjects": null,
+    "distinct_objects": null,
+    "confidence": 1.0,
+    "evidence_source": "mined",
+    "subject_label": "Item",
+    "property_label": "DOI statement",
+    "object_label": "BestRank"
+   },
+   {
+    "subject_class": "http://wikiba.se/ontology#Item",
+    "property_uri": "http://www.wikidata.org/prop/P356",
+    "object_class": "http://wikiba.se/ontology#Statement",
+    "subject_binding": "type",
+    "object_binding": "type",
+    "count": null,
+    "count_semantics": "unknown",
+    "graphs": null,
+    "datatype": null,
+    "blank_node_predicates": null,
+    "pattern_type": "object_property",
+    "distinct_subjects": null,
+    "distinct_objects": null,
+    "confidence": 1.0,
+    "evidence_source": "mined",
+    "subject_label": "Item",
+    "property_label": "DOI statement",
     "object_label": "Statement"
    },
    {
@@ -1185,6 +965,46 @@
    },
    {
     "subject_class": "http://wikiba.se/ontology#Item",
+    "property_uri": "http://www.wikidata.org/prop/direct/P407",
+    "object_class": "http://wikiba.se/ontology#Item",
+    "subject_binding": "type",
+    "object_binding": "type",
+    "count": null,
+    "count_semantics": "unknown",
+    "graphs": null,
+    "datatype": null,
+    "blank_node_predicates": null,
+    "pattern_type": "object_property",
+    "distinct_subjects": null,
+    "distinct_objects": null,
+    "confidence": 1.0,
+    "evidence_source": "mined",
+    "subject_label": "Item",
+    "property_label": "language of work or name",
+    "object_label": "Item"
+   },
+   {
+    "subject_class": "http://wikiba.se/ontology#Item",
+    "property_uri": "http://www.wikidata.org/prop/direct/P921",
+    "object_class": "http://wikiba.se/ontology#Item",
+    "subject_binding": "type",
+    "object_binding": "type",
+    "count": null,
+    "count_semantics": "unknown",
+    "graphs": null,
+    "datatype": null,
+    "blank_node_predicates": null,
+    "pattern_type": "object_property",
+    "distinct_subjects": null,
+    "distinct_objects": null,
+    "confidence": 1.0,
+    "evidence_source": "mined",
+    "subject_label": "Item",
+    "property_label": "main subject",
+    "object_label": "Item"
+   },
+   {
+    "subject_class": "http://wikiba.se/ontology#Item",
     "property_uri": "http://www.wikidata.org/prop/direct/P4101",
     "object_class": "http://wikiba.se/ontology#Item",
     "subject_binding": "type",
@@ -1221,6 +1041,186 @@
     "evidence_source": "mined",
     "subject_label": "Item",
     "property_label": "thesis committee member",
+    "object_label": "Item"
+   },
+   {
+    "subject_class": "http://wikiba.se/ontology#Item",
+    "property_uri": "http://www.wikidata.org/prop/direct/P2860",
+    "object_class": "http://wikiba.se/ontology#Item",
+    "subject_binding": "type",
+    "object_binding": "type",
+    "count": null,
+    "count_semantics": "unknown",
+    "graphs": null,
+    "datatype": null,
+    "blank_node_predicates": null,
+    "pattern_type": "object_property",
+    "distinct_subjects": null,
+    "distinct_objects": null,
+    "confidence": 1.0,
+    "evidence_source": "mined",
+    "subject_label": "Item",
+    "property_label": "cites work",
+    "object_label": "Item"
+   },
+   {
+    "subject_class": "http://wikiba.se/ontology#Item",
+    "property_uri": "http://www.wikidata.org/prop/direct-normalized/P698",
+    "object_class": "Resource",
+    "subject_binding": "type",
+    "object_binding": "type",
+    "count": null,
+    "count_semantics": "unknown",
+    "graphs": null,
+    "datatype": null,
+    "blank_node_predicates": null,
+    "pattern_type": "object_property",
+    "distinct_subjects": null,
+    "distinct_objects": null,
+    "confidence": 1.0,
+    "evidence_source": "mined",
+    "subject_label": "Item",
+    "property_label": "PubMed publication ID normalized",
+    "object_label": "Resource"
+   },
+   {
+    "subject_class": "http://wikiba.se/ontology#Item",
+    "property_uri": "http://www.wikidata.org/prop/P698",
+    "object_class": "http://wikiba.se/ontology#BestRank",
+    "subject_binding": "type",
+    "object_binding": "type",
+    "count": null,
+    "count_semantics": "unknown",
+    "graphs": null,
+    "datatype": null,
+    "blank_node_predicates": null,
+    "pattern_type": "object_property",
+    "distinct_subjects": null,
+    "distinct_objects": null,
+    "confidence": 1.0,
+    "evidence_source": "mined",
+    "subject_label": "Item",
+    "property_label": "PubMed publication ID statement",
+    "object_label": "BestRank"
+   },
+   {
+    "subject_class": "http://wikiba.se/ontology#Item",
+    "property_uri": "http://www.wikidata.org/prop/P698",
+    "object_class": "http://wikiba.se/ontology#Statement",
+    "subject_binding": "type",
+    "object_binding": "type",
+    "count": null,
+    "count_semantics": "unknown",
+    "graphs": null,
+    "datatype": null,
+    "blank_node_predicates": null,
+    "pattern_type": "object_property",
+    "distinct_subjects": null,
+    "distinct_objects": null,
+    "confidence": 1.0,
+    "evidence_source": "mined",
+    "subject_label": "Item",
+    "property_label": "PubMed publication ID statement",
+    "object_label": "Statement"
+   },
+   {
+    "subject_class": "http://wikiba.se/ontology#Item",
+    "property_uri": "http://www.wikidata.org/prop/P2093",
+    "object_class": "http://wikiba.se/ontology#BestRank",
+    "subject_binding": "type",
+    "object_binding": "type",
+    "count": null,
+    "count_semantics": "unknown",
+    "graphs": null,
+    "datatype": null,
+    "blank_node_predicates": null,
+    "pattern_type": "object_property",
+    "distinct_subjects": null,
+    "distinct_objects": null,
+    "confidence": 1.0,
+    "evidence_source": "mined",
+    "subject_label": "Item",
+    "property_label": "author name string statement",
+    "object_label": "BestRank"
+   },
+   {
+    "subject_class": "http://wikiba.se/ontology#Item",
+    "property_uri": "http://www.wikidata.org/prop/P2093",
+    "object_class": "http://wikiba.se/ontology#Statement",
+    "subject_binding": "type",
+    "object_binding": "type",
+    "count": null,
+    "count_semantics": "unknown",
+    "graphs": null,
+    "datatype": null,
+    "blank_node_predicates": null,
+    "pattern_type": "object_property",
+    "distinct_subjects": null,
+    "distinct_objects": null,
+    "confidence": 1.0,
+    "evidence_source": "mined",
+    "subject_label": "Item",
+    "property_label": "author name string statement",
+    "object_label": "Statement"
+   },
+   {
+    "subject_class": "http://wikiba.se/ontology#Item",
+    "property_uri": "http://www.wikidata.org/prop/P1433",
+    "object_class": "http://wikiba.se/ontology#BestRank",
+    "subject_binding": "type",
+    "object_binding": "type",
+    "count": null,
+    "count_semantics": "unknown",
+    "graphs": null,
+    "datatype": null,
+    "blank_node_predicates": null,
+    "pattern_type": "object_property",
+    "distinct_subjects": null,
+    "distinct_objects": null,
+    "confidence": 1.0,
+    "evidence_source": "mined",
+    "subject_label": "Item",
+    "property_label": "published in statement",
+    "object_label": "BestRank"
+   },
+   {
+    "subject_class": "http://wikiba.se/ontology#Item",
+    "property_uri": "http://www.wikidata.org/prop/P1433",
+    "object_class": "http://wikiba.se/ontology#Statement",
+    "subject_binding": "type",
+    "object_binding": "type",
+    "count": null,
+    "count_semantics": "unknown",
+    "graphs": null,
+    "datatype": null,
+    "blank_node_predicates": null,
+    "pattern_type": "object_property",
+    "distinct_subjects": null,
+    "distinct_objects": null,
+    "confidence": 1.0,
+    "evidence_source": "mined",
+    "subject_label": "Item",
+    "property_label": "published in statement",
+    "object_label": "Statement"
+   },
+   {
+    "subject_class": "http://wikiba.se/ontology#Item",
+    "property_uri": "http://www.wikidata.org/prop/direct/P1433",
+    "object_class": "http://wikiba.se/ontology#Item",
+    "subject_binding": "type",
+    "object_binding": "type",
+    "count": null,
+    "count_semantics": "unknown",
+    "graphs": null,
+    "datatype": null,
+    "blank_node_predicates": null,
+    "pattern_type": "object_property",
+    "distinct_subjects": null,
+    "distinct_objects": null,
+    "confidence": 1.0,
+    "evidence_source": "mined",
+    "subject_label": "Item",
+    "property_label": "published in",
     "object_label": "Item"
    },
    {
@@ -1325,26 +1325,6 @@
    },
    {
     "subject_class": "http://wikiba.se/ontology#Item",
-    "property_uri": "http://www.wikidata.org/prop/direct/P1104",
-    "object_class": "Literal",
-    "subject_binding": "type",
-    "object_binding": "type",
-    "count": null,
-    "count_semantics": "unknown",
-    "graphs": null,
-    "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
-    "blank_node_predicates": null,
-    "pattern_type": "datatype_property",
-    "distinct_subjects": null,
-    "distinct_objects": null,
-    "confidence": 1.0,
-    "evidence_source": "mined",
-    "subject_label": "Item",
-    "property_label": "number of pages",
-    "object_label": "Literal"
-   },
-   {
-    "subject_class": "http://wikiba.se/ontology#Item",
     "property_uri": "http://www.wikidata.org/prop/direct/P1184",
     "object_class": "Literal",
     "subject_binding": "type",
@@ -1361,6 +1341,26 @@
     "evidence_source": "mined",
     "subject_label": "Item",
     "property_label": "Handle ID",
+    "object_label": "Literal"
+   },
+   {
+    "subject_class": "http://wikiba.se/ontology#Item",
+    "property_uri": "http://www.wikidata.org/prop/direct/P1104",
+    "object_class": "Literal",
+    "subject_binding": "type",
+    "object_binding": "type",
+    "count": null,
+    "count_semantics": "unknown",
+    "graphs": null,
+    "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+    "blank_node_predicates": null,
+    "pattern_type": "datatype_property",
+    "distinct_subjects": null,
+    "distinct_objects": null,
+    "confidence": 1.0,
+    "evidence_source": "mined",
+    "subject_label": "Item",
+    "property_label": "number of pages",
     "object_label": "Literal"
    },
    {
@@ -1700,7 +1700,7 @@
     "confidence": 1.0,
     "evidence_source": "mined",
     "subject_label": "BestRank",
-    "property_label": "object named as",
+    "property_label": "object of statement named as",
     "object_label": "Literal"
    },
    {
@@ -1720,7 +1720,7 @@
     "confidence": 1.0,
     "evidence_source": "mined",
     "subject_label": "Statement",
-    "property_label": "object named as",
+    "property_label": "object of statement named as",
     "object_label": "Literal"
    },
    {
@@ -2461,7 +2461,7 @@
      "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
      "text": {
       "kind": "literal",
-      "value": "object named as",
+      "value": "object of statement named as",
       "datatype": null,
       "language": "en"
      }
@@ -2664,13 +2664,13 @@
      "property_uri": "http://www.wikidata.org/prop/direct/P356",
      "subject": {
       "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q127223057",
+      "value": "http://www.wikidata.org/entity/Q124306321",
       "datatype": null,
       "language": null
      },
      "value": {
       "kind": "literal",
-      "value": "10.26481/DIS.19921218TK",
+      "value": "10.26481/DIS.20240116AW",
       "datatype": null,
       "language": null
      }
@@ -2680,29 +2680,13 @@
      "property_uri": "http://www.wikidata.org/prop/direct/P957",
      "subject": {
       "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q127223057",
+      "value": "http://www.wikidata.org/entity/Q124306321",
       "datatype": null,
       "language": null
      },
      "value": {
       "kind": "literal",
-      "value": "90-5278-050-1",
-      "datatype": null,
-      "language": null
-     }
-    },
-    {
-     "subject_class": "http://wikiba.se/ontology#Item",
-     "property_uri": "http://www.wikidata.org/prop/direct/P2093",
-     "subject": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q127223057",
-      "datatype": null,
-      "language": null
-     },
-     "value": {
-      "kind": "literal",
-      "value": "T.M.C.M. de Kok",
+      "value": "94-6473-361-6",
       "datatype": null,
       "language": null
      }
@@ -2712,13 +2696,13 @@
      "property_uri": "http://www.wikidata.org/prop/direct/P1476",
      "subject": {
       "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q127223057",
+      "value": "http://www.wikidata.org/entity/Q124306321",
       "datatype": null,
       "language": null
      },
      "value": {
       "kind": "literal",
-      "value": "Fecapentaenes and risk for colorectal cancer",
+      "value": "Biological pathway abstractions: from two-dimensional drawings to multidimensional linked data",
       "datatype": null,
       "language": "en"
      }
@@ -2757,6 +2741,22 @@
     },
     {
      "subject_class": "http://wikiba.se/ontology#Item",
+     "property_uri": "http://www.wikidata.org/prop/direct/P2093",
+     "subject": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/Q123631008",
+      "datatype": null,
+      "language": null
+     },
+     "value": {
+      "kind": "literal",
+      "value": "Elisson N Lopes",
+      "datatype": null,
+      "language": null
+     }
+    },
+    {
+     "subject_class": "http://wikiba.se/ontology#Item",
      "property_uri": "http://www.wikidata.org/prop/direct/P698",
      "subject": {
       "kind": "uri",
@@ -2776,317 +2776,13 @@
      "property_uri": "http://www.wikidata.org/prop/direct-normalized/P356",
      "subject": {
       "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q123631008",
+      "value": "http://www.wikidata.org/entity/Q124306321",
       "datatype": null,
       "language": null
      },
      "value": {
       "kind": "uri",
-      "value": "http://dx.doi.org/10.1093/NAR/GKAD960",
-      "datatype": null,
-      "language": null
-     }
-    },
-    {
-     "subject_class": "http://wikiba.se/ontology#Item",
-     "property_uri": "http://www.wikidata.org/prop/direct-normalized/P698",
-     "subject": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q123631008",
-      "datatype": null,
-      "language": null
-     },
-     "value": {
-      "kind": "uri",
-      "value": "http://rdf.ncbi.nlm.nih.gov/pubchem/reference/37941138",
-      "datatype": null,
-      "language": null
-     }
-    },
-    {
-     "subject_class": "http://wikiba.se/ontology#Item",
-     "property_uri": "http://www.wikidata.org/prop/P31",
-     "subject": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q123631008",
-      "datatype": null,
-      "language": null
-     },
-     "value": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/statement/Q123631008-0292A90C-47D4-4D83-91E0-3551138592CC",
-      "datatype": null,
-      "language": null
-     }
-    },
-    {
-     "subject_class": "http://wikiba.se/ontology#Item",
-     "property_uri": "http://www.wikidata.org/prop/P31",
-     "subject": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q123631008",
-      "datatype": null,
-      "language": null
-     },
-     "value": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/statement/Q123631008-0292A90C-47D4-4D83-91E0-3551138592CC",
-      "datatype": null,
-      "language": null
-     }
-    },
-    {
-     "subject_class": "http://wikiba.se/ontology#Item",
-     "property_uri": "http://www.wikidata.org/prop/P50",
-     "subject": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q123631008",
-      "datatype": null,
-      "language": null
-     },
-     "value": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/statement/Q123631008-02EBB10A-9C6C-41D3-9277-A9FCA89F27F8",
-      "datatype": null,
-      "language": null
-     }
-    },
-    {
-     "subject_class": "http://wikiba.se/ontology#Item",
-     "property_uri": "http://www.wikidata.org/prop/P50",
-     "subject": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q123631008",
-      "datatype": null,
-      "language": null
-     },
-     "value": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/statement/Q123631008-02EBB10A-9C6C-41D3-9277-A9FCA89F27F8",
-      "datatype": null,
-      "language": null
-     }
-    },
-    {
-     "subject_class": "http://wikiba.se/ontology#Item",
-     "property_uri": "http://www.wikidata.org/prop/P698",
-     "subject": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q123631008",
-      "datatype": null,
-      "language": null
-     },
-     "value": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/statement/Q123631008-0ec284d7-4b50-d832-83ab-9322a03788c8",
-      "datatype": null,
-      "language": null
-     }
-    },
-    {
-     "subject_class": "http://wikiba.se/ontology#Item",
-     "property_uri": "http://www.wikidata.org/prop/P698",
-     "subject": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q123631008",
-      "datatype": null,
-      "language": null
-     },
-     "value": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/statement/Q123631008-0ec284d7-4b50-d832-83ab-9322a03788c8",
-      "datatype": null,
-      "language": null
-     }
-    },
-    {
-     "subject_class": "http://wikiba.se/ontology#Item",
-     "property_uri": "http://www.wikidata.org/prop/P2860",
-     "subject": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q123631008",
-      "datatype": null,
-      "language": null
-     },
-     "value": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/statement/Q123631008-0FD65C9F-D55C-4D8A-AADF-587358E01FFA",
-      "datatype": null,
-      "language": null
-     }
-    },
-    {
-     "subject_class": "http://wikiba.se/ontology#Item",
-     "property_uri": "http://www.wikidata.org/prop/P2860",
-     "subject": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q123631008",
-      "datatype": null,
-      "language": null
-     },
-     "value": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/statement/Q123631008-0FD65C9F-D55C-4D8A-AADF-587358E01FFA",
-      "datatype": null,
-      "language": null
-     }
-    },
-    {
-     "subject_class": "http://wikiba.se/ontology#Item",
-     "property_uri": "http://www.wikidata.org/prop/P2093",
-     "subject": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q123631008",
-      "datatype": null,
-      "language": null
-     },
-     "value": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/statement/Q123631008-30CC2357-B24D-4CBB-AE09-E814CBB2983B",
-      "datatype": null,
-      "language": null
-     }
-    },
-    {
-     "subject_class": "http://wikiba.se/ontology#Item",
-     "property_uri": "http://www.wikidata.org/prop/P2093",
-     "subject": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q123631008",
-      "datatype": null,
-      "language": null
-     },
-     "value": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/statement/Q123631008-30CC2357-B24D-4CBB-AE09-E814CBB2983B",
-      "datatype": null,
-      "language": null
-     }
-    },
-    {
-     "subject_class": "http://wikiba.se/ontology#Item",
-     "property_uri": "http://www.wikidata.org/prop/P1433",
-     "subject": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q123631008",
-      "datatype": null,
-      "language": null
-     },
-     "value": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/statement/Q123631008-6BBAB0C2-38C4-48A8-9583-0E86F34F2155",
-      "datatype": null,
-      "language": null
-     }
-    },
-    {
-     "subject_class": "http://wikiba.se/ontology#Item",
-     "property_uri": "http://www.wikidata.org/prop/P1433",
-     "subject": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q123631008",
-      "datatype": null,
-      "language": null
-     },
-     "value": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/statement/Q123631008-6BBAB0C2-38C4-48A8-9583-0E86F34F2155",
-      "datatype": null,
-      "language": null
-     }
-    },
-    {
-     "subject_class": "http://wikiba.se/ontology#Item",
-     "property_uri": "http://www.wikidata.org/prop/P1476",
-     "subject": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q123631008",
-      "datatype": null,
-      "language": null
-     },
-     "value": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/statement/Q123631008-78CDC5EE-23F9-4B6D-A0C0-9F08E2C1B530",
-      "datatype": null,
-      "language": null
-     }
-    },
-    {
-     "subject_class": "http://wikiba.se/ontology#Item",
-     "property_uri": "http://www.wikidata.org/prop/P1476",
-     "subject": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q123631008",
-      "datatype": null,
-      "language": null
-     },
-     "value": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/statement/Q123631008-78CDC5EE-23F9-4B6D-A0C0-9F08E2C1B530",
-      "datatype": null,
-      "language": null
-     }
-    },
-    {
-     "subject_class": "http://wikiba.se/ontology#Item",
-     "property_uri": "http://www.wikidata.org/prop/P577",
-     "subject": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q123631008",
-      "datatype": null,
-      "language": null
-     },
-     "value": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/statement/Q123631008-99676114-C2A3-45E9-8394-4DE0E96D4D34",
-      "datatype": null,
-      "language": null
-     }
-    },
-    {
-     "subject_class": "http://wikiba.se/ontology#Item",
-     "property_uri": "http://www.wikidata.org/prop/P577",
-     "subject": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q123631008",
-      "datatype": null,
-      "language": null
-     },
-     "value": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/statement/Q123631008-99676114-C2A3-45E9-8394-4DE0E96D4D34",
-      "datatype": null,
-      "language": null
-     }
-    },
-    {
-     "subject_class": "http://wikiba.se/ontology#Item",
-     "property_uri": "http://www.wikidata.org/prop/P356",
-     "subject": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q123631008",
-      "datatype": null,
-      "language": null
-     },
-     "value": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/statement/Q123631008-C4BB5C7F-48FE-4AC1-A275-9FEA694B6429",
-      "datatype": null,
-      "language": null
-     }
-    },
-    {
-     "subject_class": "http://wikiba.se/ontology#Item",
-     "property_uri": "http://www.wikidata.org/prop/P356",
-     "subject": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q123631008",
-      "datatype": null,
-      "language": null
-     },
-     "value": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/statement/Q123631008-C4BB5C7F-48FE-4AC1-A275-9FEA694B6429",
+      "value": "http://dx.doi.org/10.26481/DIS.20240116AW",
       "datatype": null,
       "language": null
      }
@@ -3096,13 +2792,13 @@
      "property_uri": "http://www.wikidata.org/prop/P921",
      "subject": {
       "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q123631008",
+      "value": "http://www.wikidata.org/entity/Q124306321",
       "datatype": null,
       "language": null
      },
      "value": {
       "kind": "uri",
-      "value": "http://www.wikidata.org/entity/statement/Q123631008-e1d2c4e7-42cf-bb22-7964-786ce13de5bd",
+      "value": "http://www.wikidata.org/entity/statement/Q124306321-03e7e9dd-4a46-9d2d-2c45-ca6cf01c7a3d",
       "datatype": null,
       "language": null
      }
@@ -3112,109 +2808,77 @@
      "property_uri": "http://www.wikidata.org/prop/P921",
      "subject": {
       "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q123631008",
+      "value": "http://www.wikidata.org/entity/Q124306321",
       "datatype": null,
       "language": null
      },
      "value": {
       "kind": "uri",
-      "value": "http://www.wikidata.org/entity/statement/Q123631008-e1d2c4e7-42cf-bb22-7964-786ce13de5bd",
+      "value": "http://www.wikidata.org/entity/statement/Q124306321-03e7e9dd-4a46-9d2d-2c45-ca6cf01c7a3d",
       "datatype": null,
       "language": null
      }
     },
     {
      "subject_class": "http://wikiba.se/ontology#Item",
-     "property_uri": "http://www.wikidata.org/prop/P407",
+     "property_uri": "http://www.wikidata.org/prop/P31",
      "subject": {
       "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q123631008",
+      "value": "http://www.wikidata.org/entity/Q124306321",
       "datatype": null,
       "language": null
      },
      "value": {
       "kind": "uri",
-      "value": "http://www.wikidata.org/entity/statement/Q123631008-FDE62E13-D353-4504-BB34-4D002408711C",
+      "value": "http://www.wikidata.org/entity/statement/Q124306321-19b2a769-48bd-3587-8915-5020c1a690e0",
       "datatype": null,
       "language": null
      }
     },
     {
      "subject_class": "http://wikiba.se/ontology#Item",
-     "property_uri": "http://www.wikidata.org/prop/P407",
+     "property_uri": "http://www.wikidata.org/prop/P31",
      "subject": {
       "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q123631008",
+      "value": "http://www.wikidata.org/entity/Q124306321",
       "datatype": null,
       "language": null
      },
      "value": {
       "kind": "uri",
-      "value": "http://www.wikidata.org/entity/statement/Q123631008-FDE62E13-D353-4504-BB34-4D002408711C",
+      "value": "http://www.wikidata.org/entity/statement/Q124306321-19b2a769-48bd-3587-8915-5020c1a690e0",
       "datatype": null,
       "language": null
      }
     },
     {
      "subject_class": "http://wikiba.se/ontology#Item",
-     "property_uri": "http://www.wikidata.org/prop/direct/P407",
+     "property_uri": "http://www.wikidata.org/prop/P577",
      "subject": {
       "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q123631008",
+      "value": "http://www.wikidata.org/entity/Q124306321",
       "datatype": null,
       "language": null
      },
      "value": {
       "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q1860",
+      "value": "http://www.wikidata.org/entity/statement/Q124306321-1bf84a10-4c75-32e0-71e3-772349d1340b",
       "datatype": null,
       "language": null
      }
     },
     {
      "subject_class": "http://wikiba.se/ontology#Item",
-     "property_uri": "http://www.wikidata.org/prop/direct/P1433",
+     "property_uri": "http://www.wikidata.org/prop/P577",
      "subject": {
       "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q123631008",
+      "value": "http://www.wikidata.org/entity/Q124306321",
       "datatype": null,
       "language": null
      },
      "value": {
       "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q135122",
-      "datatype": null,
-      "language": null
-     }
-    },
-    {
-     "subject_class": "http://wikiba.se/ontology#Item",
-     "property_uri": "http://www.wikidata.org/prop/direct/P921",
-     "subject": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q123631008",
-      "datatype": null,
-      "language": null
-     },
-     "value": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q7999828",
-      "datatype": null,
-      "language": null
-     }
-    },
-    {
-     "subject_class": "http://wikiba.se/ontology#Item",
-     "property_uri": "http://www.wikidata.org/prop/direct/P2860",
-     "subject": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q123631008",
-      "datatype": null,
-      "language": null
-     },
-     "value": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q21092742",
+      "value": "http://www.wikidata.org/entity/statement/Q124306321-1bf84a10-4c75-32e0-71e3-772349d1340b",
       "datatype": null,
       "language": null
      }
@@ -3285,6 +2949,38 @@
     },
     {
      "subject_class": "http://wikiba.se/ontology#Item",
+     "property_uri": "http://www.wikidata.org/prop/P2860",
+     "subject": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/Q124306321",
+      "datatype": null,
+      "language": null
+     },
+     "value": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/statement/Q124306321-2aeed866-49e0-15f8-9231-9090e3d354dd",
+      "datatype": null,
+      "language": null
+     }
+    },
+    {
+     "subject_class": "http://wikiba.se/ontology#Item",
+     "property_uri": "http://www.wikidata.org/prop/P2860",
+     "subject": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/Q124306321",
+      "datatype": null,
+      "language": null
+     },
+     "value": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/statement/Q124306321-2aeed866-49e0-15f8-9231-9090e3d354dd",
+      "datatype": null,
+      "language": null
+     }
+    },
+    {
+     "subject_class": "http://wikiba.se/ontology#Item",
      "property_uri": "http://www.wikidata.org/prop/P957",
      "subject": {
       "kind": "uri",
@@ -3311,6 +3007,70 @@
      "value": {
       "kind": "uri",
       "value": "http://www.wikidata.org/entity/statement/Q124306321-4431145c-46cb-4cb5-36a2-b02995659f1d",
+      "datatype": null,
+      "language": null
+     }
+    },
+    {
+     "subject_class": "http://wikiba.se/ontology#Item",
+     "property_uri": "http://www.wikidata.org/prop/P407",
+     "subject": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/Q124306321",
+      "datatype": null,
+      "language": null
+     },
+     "value": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/statement/Q124306321-48cc7325-44a5-e080-a963-cca246cdd308",
+      "datatype": null,
+      "language": null
+     }
+    },
+    {
+     "subject_class": "http://wikiba.se/ontology#Item",
+     "property_uri": "http://www.wikidata.org/prop/P407",
+     "subject": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/Q124306321",
+      "datatype": null,
+      "language": null
+     },
+     "value": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/statement/Q124306321-48cc7325-44a5-e080-a963-cca246cdd308",
+      "datatype": null,
+      "language": null
+     }
+    },
+    {
+     "subject_class": "http://wikiba.se/ontology#Item",
+     "property_uri": "http://www.wikidata.org/prop/P50",
+     "subject": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/Q124306321",
+      "datatype": null,
+      "language": null
+     },
+     "value": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/statement/Q124306321-4b456381-450d-b3ef-ab92-605af76705b3",
+      "datatype": null,
+      "language": null
+     }
+    },
+    {
+     "subject_class": "http://wikiba.se/ontology#Item",
+     "property_uri": "http://www.wikidata.org/prop/P50",
+     "subject": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/Q124306321",
+      "datatype": null,
+      "language": null
+     },
+     "value": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/statement/Q124306321-4b456381-450d-b3ef-ab92-605af76705b3",
       "datatype": null,
       "language": null
      }
@@ -3349,6 +3109,38 @@
     },
     {
      "subject_class": "http://wikiba.se/ontology#Item",
+     "property_uri": "http://www.wikidata.org/prop/P1476",
+     "subject": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/Q124306321",
+      "datatype": null,
+      "language": null
+     },
+     "value": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/statement/Q124306321-c5210071-4604-29fc-02ea-4e3b5632716d",
+      "datatype": null,
+      "language": null
+     }
+    },
+    {
+     "subject_class": "http://wikiba.se/ontology#Item",
+     "property_uri": "http://www.wikidata.org/prop/P1476",
+     "subject": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/Q124306321",
+      "datatype": null,
+      "language": null
+     },
+     "value": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/statement/Q124306321-c5210071-4604-29fc-02ea-4e3b5632716d",
+      "datatype": null,
+      "language": null
+     }
+    },
+    {
+     "subject_class": "http://wikiba.se/ontology#Item",
      "property_uri": "http://www.wikidata.org/prop/P212",
      "subject": {
       "kind": "uri",
@@ -3375,6 +3167,38 @@
      "value": {
       "kind": "uri",
       "value": "http://www.wikidata.org/entity/statement/Q124306321-cc136aae-4082-cc32-1ac8-eae277d92198",
+      "datatype": null,
+      "language": null
+     }
+    },
+    {
+     "subject_class": "http://wikiba.se/ontology#Item",
+     "property_uri": "http://www.wikidata.org/prop/P356",
+     "subject": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/Q124306321",
+      "datatype": null,
+      "language": null
+     },
+     "value": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/statement/Q124306321-e7ae5f70-43e9-b9a9-9f20-cd10a7c7d5aa",
+      "datatype": null,
+      "language": null
+     }
+    },
+    {
+     "subject_class": "http://wikiba.se/ontology#Item",
+     "property_uri": "http://www.wikidata.org/prop/P356",
+     "subject": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/Q124306321",
+      "datatype": null,
+      "language": null
+     },
+     "value": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/statement/Q124306321-e7ae5f70-43e9-b9a9-9f20-cd10a7c7d5aa",
       "datatype": null,
       "language": null
      }
@@ -3445,6 +3269,38 @@
     },
     {
      "subject_class": "http://wikiba.se/ontology#Item",
+     "property_uri": "http://www.wikidata.org/prop/direct/P407",
+     "subject": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/Q124306321",
+      "datatype": null,
+      "language": null
+     },
+     "value": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/Q1860",
+      "datatype": null,
+      "language": null
+     }
+    },
+    {
+     "subject_class": "http://wikiba.se/ontology#Item",
+     "property_uri": "http://www.wikidata.org/prop/direct/P921",
+     "subject": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/Q124306321",
+      "datatype": null,
+      "language": null
+     },
+     "value": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/Q2013",
+      "datatype": null,
+      "language": null
+     }
+    },
+    {
+     "subject_class": "http://wikiba.se/ontology#Item",
      "property_uri": "http://www.wikidata.org/prop/direct/P4101",
      "subject": {
       "kind": "uri",
@@ -3471,6 +3327,150 @@
      "value": {
       "kind": "uri",
       "value": "http://www.wikidata.org/entity/Q19845641",
+      "datatype": null,
+      "language": null
+     }
+    },
+    {
+     "subject_class": "http://wikiba.se/ontology#Item",
+     "property_uri": "http://www.wikidata.org/prop/direct/P2860",
+     "subject": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/Q124381797",
+      "datatype": null,
+      "language": null
+     },
+     "value": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/Q24082733",
+      "datatype": null,
+      "language": null
+     }
+    },
+    {
+     "subject_class": "http://wikiba.se/ontology#Item",
+     "property_uri": "http://www.wikidata.org/prop/direct-normalized/P698",
+     "subject": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/Q123631008",
+      "datatype": null,
+      "language": null
+     },
+     "value": {
+      "kind": "uri",
+      "value": "http://rdf.ncbi.nlm.nih.gov/pubchem/reference/37941138",
+      "datatype": null,
+      "language": null
+     }
+    },
+    {
+     "subject_class": "http://wikiba.se/ontology#Item",
+     "property_uri": "http://www.wikidata.org/prop/P698",
+     "subject": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/Q123631008",
+      "datatype": null,
+      "language": null
+     },
+     "value": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/statement/Q123631008-0ec284d7-4b50-d832-83ab-9322a03788c8",
+      "datatype": null,
+      "language": null
+     }
+    },
+    {
+     "subject_class": "http://wikiba.se/ontology#Item",
+     "property_uri": "http://www.wikidata.org/prop/P698",
+     "subject": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/Q123631008",
+      "datatype": null,
+      "language": null
+     },
+     "value": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/statement/Q123631008-0ec284d7-4b50-d832-83ab-9322a03788c8",
+      "datatype": null,
+      "language": null
+     }
+    },
+    {
+     "subject_class": "http://wikiba.se/ontology#Item",
+     "property_uri": "http://www.wikidata.org/prop/P2093",
+     "subject": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/Q123631008",
+      "datatype": null,
+      "language": null
+     },
+     "value": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/statement/Q123631008-30CC2357-B24D-4CBB-AE09-E814CBB2983B",
+      "datatype": null,
+      "language": null
+     }
+    },
+    {
+     "subject_class": "http://wikiba.se/ontology#Item",
+     "property_uri": "http://www.wikidata.org/prop/P2093",
+     "subject": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/Q123631008",
+      "datatype": null,
+      "language": null
+     },
+     "value": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/statement/Q123631008-30CC2357-B24D-4CBB-AE09-E814CBB2983B",
+      "datatype": null,
+      "language": null
+     }
+    },
+    {
+     "subject_class": "http://wikiba.se/ontology#Item",
+     "property_uri": "http://www.wikidata.org/prop/P1433",
+     "subject": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/Q123631008",
+      "datatype": null,
+      "language": null
+     },
+     "value": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/statement/Q123631008-6BBAB0C2-38C4-48A8-9583-0E86F34F2155",
+      "datatype": null,
+      "language": null
+     }
+    },
+    {
+     "subject_class": "http://wikiba.se/ontology#Item",
+     "property_uri": "http://www.wikidata.org/prop/P1433",
+     "subject": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/Q123631008",
+      "datatype": null,
+      "language": null
+     },
+     "value": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/statement/Q123631008-6BBAB0C2-38C4-48A8-9583-0E86F34F2155",
+      "datatype": null,
+      "language": null
+     }
+    },
+    {
+     "subject_class": "http://wikiba.se/ontology#Item",
+     "property_uri": "http://www.wikidata.org/prop/direct/P1433",
+     "subject": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/Q123631008",
+      "datatype": null,
+      "language": null
+     },
+     "value": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/Q135122",
       "datatype": null,
       "language": null
      }
@@ -3557,22 +3557,6 @@
     },
     {
      "subject_class": "http://wikiba.se/ontology#Item",
-     "property_uri": "http://www.wikidata.org/prop/direct/P1104",
-     "subject": {
-      "kind": "uri",
-      "value": "http://www.wikidata.org/entity/Q25713029",
-      "datatype": null,
-      "language": null
-     },
-     "value": {
-      "kind": "literal",
-      "value": "162",
-      "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
-      "language": null
-     }
-    },
-    {
-     "subject_class": "http://wikiba.se/ontology#Item",
      "property_uri": "http://www.wikidata.org/prop/direct/P1184",
      "subject": {
       "kind": "uri",
@@ -3584,6 +3568,22 @@
       "kind": "literal",
       "value": "2066/72267",
       "datatype": null,
+      "language": null
+     }
+    },
+    {
+     "subject_class": "http://wikiba.se/ontology#Item",
+     "property_uri": "http://www.wikidata.org/prop/direct/P1104",
+     "subject": {
+      "kind": "uri",
+      "value": "http://www.wikidata.org/entity/Q25713029",
+      "datatype": null,
+      "language": null
+     },
+     "value": {
+      "kind": "literal",
+      "value": "162",
+      "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
       "language": null
      }
     },
@@ -4041,10 +4041,10 @@
   "class_hierarchy": {},
   "shapes": null,
   "about": {
-   "schema_id": "25bfa327-0de6-4f45-bf85-530f170aabe6",
+   "schema_id": "83d692f1-ac50-4e67-b544-05d5adb35c74",
    "schema_version": "",
-   "snapshot_id": "https://w3id.org/rdfsolve/snapshot/wikidata-scholarly/2026-10-19T12%3A51%3A45.539794%2B00%3A00",
-   "retrieved_at": "2026-10-19T12:51:45.539794+00:00",
+   "snapshot_id": "https://w3id.org/rdfsolve/snapshot/wikidata-scholarly/2026-10-26T06%3A42%3A54.466173%2B00%3A00",
+   "retrieved_at": "2026-10-26T06:42:54.466173+00:00",
    "content_sha256": null,
    "snapshot_identity_basis": "retrieval_record",
    "dataset_name": "wikidata-scholarly",
@@ -4057,7 +4057,7 @@
    "discovered_graphs": null,
    "ontology_graph_uris": null,
    "generated_by": "rdfsolve 0.1.0",
-   "generated_at": "2026-10-19T12:52:17.597776+00:00",
+   "generated_at": "2026-10-26T06:43:26.549196+00:00",
    "strategy": "miner/wikibase-scope",
    "source_version": null,
    "source_version_iri": null,
@@ -4071,9 +4071,9 @@
    "description": null,
    "rdfsolve_version": "0.1.0",
    "qlever_version": null,
-   "started_at": "2026-10-19T12:51:45.539794+00:00",
-   "finished_at": "2026-10-19T12:52:17.597776+00:00",
-   "total_duration_s": 32.058,
+   "started_at": "2026-10-26T06:42:54.466173+00:00",
+   "finished_at": "2026-10-26T06:43:26.549196+00:00",
+   "total_duration_s": 32.083,
    "class_entity_counts": {},
    "class_entity_count_states": {},
    "pattern_count": 96,

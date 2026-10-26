@@ -12,11 +12,11 @@
   "value": []
  },
  "citation:BioDataFuse/pyBiodatafuse/.zenodo.json": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "citation:BioDataFuse/pyBiodatafuse/CITATION.cff": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "file": "https://github.com/BioDataFuse/pyBiodatafuse/blob/HEAD/CITATION.cff",
@@ -61,63 +61,63 @@
   ]
  },
  "citation:BioDataFuse/pyBiodatafuse/codemeta.json": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "citation:VHP4Safety/AOP-Suite/.zenodo.json": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "citation:VHP4Safety/AOP-Suite/CITATION.cff": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "citation:VHP4Safety/AOP-Suite/codemeta.json": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "citation:VHP4Safety/virtual-human-platform/.zenodo.json": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "citation:VHP4Safety/virtual-human-platform/CITATION.cff": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "citation:VHP4Safety/virtual-human-platform/codemeta.json": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "citation:bridgedb/docker/.zenodo.json": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "citation:bridgedb/docker/CITATION.cff": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "citation:bridgedb/docker/codemeta.json": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "citation:cnvpathwayatlas/cnv-website/.zenodo.json": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "citation:cnvpathwayatlas/cnv-website/CITATION.cff": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "citation:cnvpathwayatlas/cnv-website/codemeta.json": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "citation:enanomapper/ontologies/.zenodo.json": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "citation:enanomapper/ontologies/CITATION.cff": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "file": "https://github.com/enanomapper/ontologies/blob/HEAD/CITATION.cff",
@@ -132,39 +132,39 @@
   ]
  },
  "citation:enanomapper/ontologies/codemeta.json": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "citation:jmillanacosta/mapkgsutils/.zenodo.json": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "citation:jmillanacosta/mapkgsutils/CITATION.cff": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "citation:jmillanacosta/mapkgsutils/codemeta.json": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "citation:jmillanacosta/pyaop/.zenodo.json": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "citation:jmillanacosta/pyaop/CITATION.cff": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "citation:jmillanacosta/pyaop/codemeta.json": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "citation:jmillanacosta/pysec2pri/.zenodo.json": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "citation:jmillanacosta/pysec2pri/CITATION.cff": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "file": "https://github.com/jmillanacosta/pysec2pri/blob/HEAD/CITATION.cff",
@@ -184,35 +184,50 @@
   ]
  },
  "citation:jmillanacosta/pysec2pri/codemeta.json": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "citation:jmillanacosta/rdfsolve/.zenodo.json": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "citation:jmillanacosta/rdfsolve/CITATION.cff": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "citation:jmillanacosta/rdfsolve/codemeta.json": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "citation:jmillanacosta/seejobs/.zenodo.json": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "citation:jmillanacosta/seejobs/CITATION.cff": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "citation:jmillanacosta/seejobs/codemeta.json": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
+ "citation:marvinm2/AOPWikiRDF/CITATION.cff": {
+  "checked": "2026-10-26",
+  "value": [
+   {
+    "file": "https://github.com/marvinm2/AOPWikiRDF/blob/HEAD/CITATION.cff",
+    "name": "Marvin Martens",
+    "orcid": "https://orcid.org/0000-0003-2230-0840"
+   },
+   {
+    "file": "https://github.com/marvinm2/AOPWikiRDF/blob/HEAD/CITATION.cff",
+    "name": "Egon L. Willighagen",
+    "orcid": "https://orcid.org/0000-0001-7542-0286"
+   }
+  ]
+ },
  "citation:marvinm2/rnaseq-mito-cachexia-paper/.zenodo.json": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "file": "https://github.com/marvinm2/rnaseq-mito-cachexia-paper/blob/HEAD/.zenodo.json",
@@ -222,7 +237,7 @@
   ]
  },
  "citation:marvinm2/rnaseq-mito-cachexia-paper/CITATION.cff": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "file": "https://github.com/marvinm2/rnaseq-mito-cachexia-paper/blob/HEAD/CITATION.cff",
@@ -232,72 +247,76 @@
   ]
  },
  "github-citations:adriaque": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-citations:alexandra-valeanu": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-citations:ammar257ammar": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-citations:djwetstede": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-citations:dominikmartinat": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-citations:dssib": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-citations:fehrhart": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-citations:gerganatancheva123": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-citations:hasanbalci": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-citations:iaortega": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-citations:jannahastings": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-citations:jkchang2015": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-citations:johannehouweling": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-citations:lindeschoenmaker": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-citations:lrieswijk": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-citations:lwinckers": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-citations:marvinm2": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
+   [
+    "marvinm2/AOPWikiRDF",
+    "CITATION.cff"
+   ],
    [
     "marvinm2/rnaseq-mito-cachexia-paper",
     ".zenodo.json"
@@ -309,47 +328,47 @@
   ]
  },
  "github-citations:mirthhe": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-citations:mmarvinm2": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-citations:ntk73": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-citations:nunogit": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-citations:shakiraportfolio": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-citations:tabbassidaloii": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-citations:tassosp78": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-citations:uanaf": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-citations:vedina": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-citations:westonslaughter": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-citations:youphendriks": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-item:actions-user": {
@@ -357,424 +376,424 @@
   "value": null
  },
  "github-item:adriaque": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": null
  },
  "github-item:alexandra-valeanu": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": null
  },
  "github-item:ammar257ammar": {
-  "checked": "2026-09-24",
-  "value": "Q86442640"
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-item:cthoyt": {
-  "checked": "2026-09-24",
-  "value": "Q47475003"
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-item:denisesl22": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": null
  },
  "github-item:djwetstede": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": null
  },
  "github-item:dominikmartinat": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": null
  },
  "github-item:dssib": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": null
  },
  "github-item:egonw": {
-  "checked": "2026-09-24",
-  "value": "Q20895241"
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-item:fehrhart": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": null
  },
  "github-item:gerganatancheva123": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": null
  },
  "github-item:hasanbalci": {
-  "checked": "2026-09-24",
-  "value": "Q130642378"
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-item:iaortega": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": null
  },
  "github-item:jannahastings": {
-  "checked": "2026-09-24",
-  "value": "Q27902110"
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-item:jkchang2015": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": null
  },
  "github-item:johannehouweling": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": null
  },
  "github-item:lindeschoenmaker": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": null
  },
  "github-item:lrieswijk": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": null
  },
  "github-item:lwinckers": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": null
  },
  "github-item:marvinm2": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": null
  },
  "github-item:mirthhe": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": null
  },
  "github-item:mmarvinm2": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": null
  },
  "github-item:ntk73": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": null
  },
  "github-item:nunogit": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": null
  },
  "github-item:ozancinar": {
-  "checked": "2026-09-24",
-  "value": "Q89571039"
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-item:shakiraportfolio": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": null
  },
  "github-item:tabbassidaloii": {
-  "checked": "2026-09-24",
-  "value": "Q89321648"
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-item:tassosp78": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": null
  },
  "github-item:uanaf": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": null
  },
  "github-item:vedina": {
-  "checked": "2026-09-24",
-  "value": "Q27061849"
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-item:westonslaughter": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": null
  },
  "github-item:yojanagadiya": {
-  "checked": "2026-09-24",
-  "value": "Q70206064"
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-item:youphendriks": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": null
  },
  "github-readme:adriaque": {
-  "checked": "2026-09-24",
-  "value": ""
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-readme:alexandra-valeanu": {
-  "checked": "2026-09-24",
-  "value": ""
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-readme:ammar257ammar": {
-  "checked": "2026-09-24",
-  "value": ""
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-readme:cthoyt": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "### Hi there 👋\n\nI work with biological knowledge graphs, machine learning, and artificial intelligence to identify active molecules and to deconvolute their mechanisms of action.\n\n🧰 My Projects\n\n- 📮 [Bioregistry](https://github.com/biopragmatics/bioregistry): an integrative registry of biological databases, ontologies, and nomenclatures.\n- 🧬 [Biological Expression Language (BEL)](https://biological-expression-language.github.io/): a domain specific language for representing molecular biology\n- 🌶️ [PyBEL](https://github.com/pybel): the computational ecosystem for compiling, querying, and analyzing knowledge graphs encoded in BEL\n- 📛 [PyOBO](https://github.com/pyobo): making ontologies and semantics accessible\n- 🤖 [PyKEEN](https://github.com/pykeen): knowledge graph embedding models for humans \n\n⚖️ My Core Scientific Values\n\n- ♻️ Reproducibility: code is part of the scientific process. It should be documented and re-usable by anyone.\n- 🔓 Openness: science is best when people can build on each others' work. Sharing data, code, and ideas has benefitted everyone, and is also the responsiblity of a scientist to pay forward.\n- 🎯 Thoroughness: quality is dependent on taking great care throughout all steps\n\n📫 My Interblag\n\nBesides my email and blog (on the left), I'm also in the internet in the following places:\n\n- [ORCID](https://orcid.org/0000-0003-4423-4370) \n- [Wikidata](https://www.wikidata.org/wiki/Q47475003)\n- [Google Scholar](https://scholar.google.com/citations?user=PjrpzUIAAAAJ)\n- [DBLP](https://dblp.org/pid/199/2168)\n- <a rel=\"me\" href=\"https://scholar.social/@cthoyt\" title=\"cthoyt\">https://scholar.social/@cthoyt</a>\n\nit turns out i commit a lot (always with squash merges):\n\n[![committers.top badge](https://user-badge.committers.top/germany/cthoyt.svg)](https://user-badge.committers.top/germany/cthoyt)\n"
  },
  "github-readme:denisesl22": {
-  "checked": "2026-09-24",
-  "value": ""
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-readme:djwetstede": {
-  "checked": "2026-09-24",
-  "value": ""
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-readme:dominikmartinat": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "- 👋 Hi, I’m @DominikMartinat\n- 👀 I’m interested in bioinformatics, wargaming and history.\n- 🌱 I’m currently learning how to make stuff more FAIR.\n- 💞️ I’m looking to collaborate on FAIRification and making stuff mor interoperable via linked data model.\n- 📫 How to reach me ... dominik.martinat@gmail.com\n\n<!---\nDominikMartinat/DominikMartinat is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.\nYou can click the Preview link to take a look at your changes.\n--->\n"
  },
  "github-readme:dssib": {
-  "checked": "2026-09-24",
-  "value": ""
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-readme:egonw": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "### Some selection of Projects\n\n* Funded Research: [VHP4Safety](https://twitter.com/vhp4safety), EFSA grant, [INTOXICOM](https://elixir-europe.org/internal-projects/commissioned-services/integrating-toxicology-community), [FAIR4ChemNL](https://tdcc.nl/projects/tdcc-nes-projects/fair4chemnl-accelerating-the-adoption-of-universal-data-standards-in-chemistry/), [FAIRify](https://tdcc.nl/projects/tdcc-lsh-project-initiatives/)\n* Open Science: [WikiPathways](https://github.com/wikipathways), [Chemistry Development Kit](https://github.com/cdk), [Jmol](https://jmol.org/), [Scholia](https://github.com/wdscholia), [BridgeDb](https://www.bridgedb.org/)\n* ELIXIR: [Bioschemas](https://github.com/bioschemas/), [BridgeDb](https://github.com/bridgedb)\n\n### News\n* 2026-05-28 The VHP4Safety project publicly release 1.0 of the [Virtual Human Platform](https://platform.vhp4safety.nl/)\n* 2026-03-08 [CDK 2.12](https://doi.org/10.59350/gw9at-srp84) was released\n* 2025-11-30 The VHP4Safety [Virtual Human Platform](https://platform.vhp4safety.nl/) is really shaping up\n* 2025-09-01 Two [TDCC](https://tdcc.nl/) grants have started where we will work on more FAIR competency dissemination\n* 2024-10-15 The [paper outlining VHP4Safety](https://doi.org/10.14573/altex.2407211) has been published\n* 2024-09-01 Our BiGCaT group merged with two other groups into the new [Department of Translational Genomics](https://www.maastrichtuniversity.nl/research/translational-genomics)\n* 2024-07-26 My [chem-bla-ics blog](https://chem-bla-ics.linkedchemistry.info/) moved to Git [a year ago](https://github.com/egonw/blog2/commit/097ba23d7c2cdcf848c55ccd537941d99b480abb)\n* 2023-12-15 We received an [NWO Open Science grant](https://doi.org/10.3897/rio.10.e124884) to work on the Chemistry Development Kit\n"
  },
  "github-readme:fehrhart": {
-  "checked": "2026-09-24",
-  "value": ""
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-readme:gerganatancheva123": {
-  "checked": "2026-09-24",
-  "value": ""
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-readme:hasanbalci": {
-  "checked": "2026-09-24",
-  "value": ""
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-readme:iaortega": {
-  "checked": "2026-09-24",
-  "value": ""
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-readme:jannahastings": {
-  "checked": "2026-09-24",
-  "value": ""
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-readme:jkchang2015": {
-  "checked": "2026-09-24",
-  "value": ""
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-readme:johannehouweling": {
-  "checked": "2026-09-24",
-  "value": ""
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-readme:lindeschoenmaker": {
-  "checked": "2026-09-24",
-  "value": ""
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-readme:lrieswijk": {
-  "checked": "2026-09-24",
-  "value": ""
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-readme:lwinckers": {
-  "checked": "2026-09-24",
-  "value": ""
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-readme:marvinm2": {
-  "checked": "2026-09-24",
-  "value": ""
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-readme:mirthhe": {
-  "checked": "2026-09-24",
-  "value": "# 👋 Hi, I'm [Mirthe](https://github.com/mirthhe)\n\n## About Me  \nI'm a creative and curious developer with a diverse background in **frontend development**, **UI/UX design**, **bioinformatics**, and **data science**. My goal is to make complex concepts accessible — sparking curiosity and sharing knowledge through thoughtful, user-centered design and clean, expressive code. 💡🌐\n\n## What I Do  \n- **UI/UX Design & Front-End Development:** Passionate about crafting intuitive user experiences through design systems, accessibility-first thinking, and responsive, well-documented, semantic code. 🎨🖱️💻  \n\n- **Data Visualization & Data Design:** Making the complex appear simple by transforming data into visuals that inform and inspire. 📊🧠✨  \n\n- **Bioinformatics & Scientific Software:** With an academic foundation in bioinformatics and data science, I build tools that support medical and biological research. 🔬🧬🧪  \n\n- **Tech Stack:** HTML, CSS, JavaScript, R, Python, Bash, Git, and AI tools like LLMs & RAG — always learning and iterating. ⚙️👩‍💻🛠️  \n\n## Current Projects  \nAs UI/UX & Bioinformatics Developer at Maastricht University and University of Applied Sciences Utrecht, I'm currently developing standardized software for the creation of **Physiologically-Based Pharmacokinetic (PBPK)** models and leading the **UI/UX design** for VHP4Safety. This work combines code and design to enable more transparent and accessible toxicology modeling. The repository is private, but feel free to reach out if you're curious or want to collaborate!  \n\nI'm also working on re-launching my portfolio and actively expanding my skills in front-end frameworks (such as React and Bootstrap), alongside a few playful side projects. 🚀\n\n## Outside the Screen  \nWhen I'm not designing interfaces or wrangling code, you'll likely find me exploring nature trails, gaming, or reading up on human behavior and design psychology. I believe great design starts with empathy and real-world inspiration. 🌿📚\n\n## Let's Connect!  \nI'm always open to new ideas, collaborations, or just a good chat about tech, design, or science. Whether you're building a product, visualizing data, or prototyping research tools — let’s connect and create something meaningful together! 🤝✨\n"
+  "checked": "2026-10-26",
+  "value": "# 👋 Hi, I'm Mirthe\n\nI'm a curious and creative software developer with a background in bioinformatics, scientific computing, and UI/UX design. I enjoy turning complex problems into intuitive, reliable software that makes technology and information more accessible.\n\n## What I Do\n\n- **Software Engineering & AI:** Building applications, API integrations, and AI-powered workflows using Python, TypeScript, AWS, and LLMs.\n- **Scientific Software & Bioinformatics:** Experience developing research tools for toxicology, pharmacokinetic modeling, and scientific data workflows.\n- **UI/UX & Frontend Development:** Designing and building thoughtful, user-friendly interfaces that make complex systems easier to understand.\n- **Data & Visualization:** Transforming complex information into clear, meaningful insights through data processing and visualization.\n\n## Current Work\n\nI'm currently a **Software Developer at Gladior**, where I develop AI-powered solutions, backend integrations, and applications for a variety of business challenges.\n\nPreviously, I worked as a **Research Software Developer at Maastricht University**, contributing to VHP4Safety. My work focused on scientific software for physiologically based pharmacokinetic (PBPK) modeling, research data workflows, and AI-assisted literature research.\n\n## Tech Stack\n\n**Languages:** Python, TypeScript, JavaScript, R, SQL, HTML & CSS\n\n**Technologies:** React, AWS, REST APIs, LLMs, RAG, AI agents, Git\n\n**Interests:** Scientific computing, AI engineering, data visualization, accessible software, and human-centered design\n\n## Outside the Screen\n\nWhen I'm not building software or exploring new technologies, you'll probably find me enjoying nature, gaming, or reading about human behavior and design psychology. 🌱\n\n## Let's Connect!\n\nI'm always interested in exchanging ideas about technology, science, and design. Feel free to reach out!\n"
  },
  "github-readme:mmarvinm2": {
-  "checked": "2026-09-24",
-  "value": ""
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-readme:ntk73": {
-  "checked": "2026-09-24",
-  "value": ""
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-readme:nunogit": {
-  "checked": "2026-09-24",
-  "value": ""
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-readme:ozancinar": {
-  "checked": "2026-09-24",
-  "value": ""
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-readme:shakiraportfolio": {
-  "checked": "2026-09-24",
-  "value": ""
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-readme:tabbassidaloii": {
-  "checked": "2026-09-24",
-  "value": ""
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-readme:tassosp78": {
-  "checked": "2026-09-24",
-  "value": ""
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-readme:uanaf": {
-  "checked": "2026-09-24",
-  "value": ""
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-readme:vedina": {
-  "checked": "2026-09-24",
-  "value": ""
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-readme:westonslaughter": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "- 👋 Hi, I’m @westonslaughter\n\nRivers! \n"
  },
  "github-readme:yojanagadiya": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "## Hi there, I am Yojana Gadiya 👋\n\n![Profile Hits](https://rushter.com/counter.svg)\n\n\n- 🔭 I’m currently working as a data scientist at @[Enveda](https://www.envedabio.com/)\n- 😄 Pronouns: She/her\n- 💻 Currently focusing on data aggregation and ETL pipelines for metabolomics data for drug discovery and development\n- 🌱 I love developing Python packages for community use. My works include\n  - [PEMT](https://pypi.org/project/PEMT/) - a pharmaceutical patent mining tool\n  - [pyBiodatafuse](https://pypi.org/project/pyBiodatafuse/) - a modular query biomedical data ingestion pipeline \n- 💬 Ask me about: FAIR, Knowledge graphs, Patent mining, Chemoinformatics\n- 📫 How to reach me: [LinkedIn](https://www.linkedin.com/in/yojana-gadiya-477739113/), [Google Scholar](https://scholar.google.com/citations?user=LDgRXckAAAAJ&hl=en)\n- - 👯 I have been part of several EU/IMI projects in my previous role: [FAIRplus](https://fairplus-project.eu/), [REMEDi4ALL](https://remedi4all.org/), [AMR Accelerator](https://amr-accelerator.eu/)\n- 🤓 I was also a Chemoinformatics FAIR Data Champion at [FAIRsharing.org](https://fairsharing.org/)\n\n\n### Expertise preview\n\n<p>\n  <a href=\"https://github.com/anuraghazra/github-readme-stats\"><img align=\"right\" width=\"50%\" src=\"https://github-readme-stats.vercel.app/api?username=yojanagadiya&hide=contribs,issues&show_icons=true&hide_border=true\" alt=\"Yojana's github stats\" />\n  </a>\n\n  <img alt=\"GraphQL\" src=\"https://img.shields.io/badge/-GraphQL-E10098?style=flat-square&logo=graphql&logoColor=white\" /> <img alt=\"git\" src=\"https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white\" /> <img alt=\"Neo4J\" src=\"https://img.shields.io/badge/Neo4j-008CC1?style=flat-square&logo=neo4j&logoColor=white\" /> <img alt=\"MySQL\" src=\"https://img.shields.io/badge/mysql-%2300f.svg?style=flat-square&logo=mysql&logoColor=white\" /> <img alt=\"AWS\" src=\"https://img.shields.io/badge/AWS-%23FF9900.svg?style=flat-square&logo=amazon-aws&logoColor=white\" /> \n  <br />\n  <img alt=\"LaTeX\" src=\"https://img.shields.io/badge/latex-%23008080.svg?style=flat-square&logo=latex&logoColor=white\" /> <img alt=\"Markdown\" src=\"https://img.shields.io/badge/markdown-%23000000.svg?style=flat-squre&logo=markdown&logoColor=white\" /> <img alt=\"Python\" src=\"https://img.shields.io/badge/python-3670A0?style=flat-squre&logo=python&logoColor=ffdd54\" /> <img alt=\"Matplotlib\" src=\"https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=flat-square&logo=Matplotlib&logoColor=black\" /> \n  <br />\n  ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=flat-square&logo=pandas&logoColor=white) ![Plotly](https://img.shields.io/badge/Plotly-%233F4F75.svg?style=flat-square&logo=plotly&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=flat-square&logo=scikit-learn&logoColor=white) \t![SciPy](https://img.shields.io/badge/SciPy-%230C55A5.svg?style=flat-square&logo=scipy&logoColor=%white) ![CodeCov](https://img.shields.io/badge/codecov-%23ff0077.svg?style=flat-square&logo=codecov&logoColor=white) \n  <br />\n  ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=flat-square&logo=docker&logoColor=white) ![Selenium](https://img.shields.io/badge/-selenium-%43B02A?style=flat-square&logo=selenium&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=flat-square&logo=github&logoColor=white) ![GitLab](https://img.shields.io/badge/gitlab-%23181717.svg?style=flat-square&logo=gitlab&logoColor=white) \n\n<p>\n\n"
  },
  "github-readme:youphendriks": {
-  "checked": "2026-09-24",
-  "value": ""
+  "checked": "2026-10-26",
+  "value": null
  },
  "github-social:adriaque": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-social:alexandra-valeanu": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "https://www.linkedin.com/in/alexandra-văleanu-1806a2191/"
   ]
  },
  "github-social:ammar257ammar": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-social:cthoyt": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "https://scholar.social/@cthoyt",
    "https://www.linkedin.com/in/cthoyt/"
   ]
  },
  "github-social:denisesl22": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-social:djwetstede": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-social:dominikmartinat": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-social:dssib": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-social:egonw": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "https://social.edu.nl/@egonw",
    "https://mastodon.social/@egonw"
   ]
  },
  "github-social:fehrhart": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-social:gerganatancheva123": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-social:hasanbalci": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-social:iaortega": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-social:jannahastings": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-social:jkchang2015": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-social:jmillanacosta": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "https://pypi.org/user/jmillanacosta/"
   ]
  },
  "github-social:johannehouweling": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-social:lindeschoenmaker": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-social:lrieswijk": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-social:lwinckers": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-social:marvinm2": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-social:mirthhe": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "https://www.linkedin.com/in/mirtheklaassen/",
    "https://www.instagram.com/nn.irthe"
   ]
  },
  "github-social:mmarvinm2": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-social:ntk73": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-social:nunogit": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-social:ozancinar": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-social:shakiraportfolio": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-social:tabbassidaloii": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-social:tassosp78": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "https://www.linkedin.com/in/tassospapadiamantis/"
   ]
  },
  "github-social:uanaf": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-social:vedina": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "https://twitter.com/10705013",
    "https://bsky.app/profile/n107055013.bsky.social"
   ]
  },
  "github-social:westonslaughter": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-social:yojanagadiya": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "https://www.linkedin.com/in/yojana-gadiya-477739113",
    "https://orcid.org/0000-0002-7683-0452"
   ]
  },
  "github-social:youphendriks": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "github-user:actions-user": {
@@ -785,624 +804,624 @@
   }
  },
  "github-user:adriaque": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "blog": "",
    "name": "Alejandro Adriaque Lozano"
   }
  },
  "github-user:alexandra-valeanu": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "blog": "",
    "name": "Alexandra Valeanu"
   }
  },
  "github-user:ammar257ammar": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "blog": "",
    "name": "Ammar Ammar"
   }
  },
  "github-user:cthoyt": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "blog": "https://cthoyt.com",
    "name": "Charles Tapley Hoyt"
   }
  },
  "github-user:denisesl22": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "blog": "",
    "name": "De"
   }
  },
  "github-user:djwetstede": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "blog": "",
    "name": null
   }
  },
  "github-user:dominikmartinat": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "blog": "",
    "name": null
   }
  },
  "github-user:dssib": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "blog": "sib.swiss",
    "name": "Ana Claudia Sima"
   }
  },
  "github-user:egonw": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "blog": "https://chem-bla-ics.linkedchemistry.info/",
    "name": "Egon Willighagen"
   }
  },
  "github-user:fehrhart": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "blog": "",
    "name": "Friederike (Freddie) Ehrhart"
   }
  },
  "github-user:gerganatancheva123": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "blog": "",
    "name": null
   }
  },
  "github-user:hasanbalci": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "blog": "https://hasanbalci.github.io/",
    "name": "Hasan Balcı"
   }
  },
  "github-user:iaortega": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "blog": "",
    "name": "Isaac Arturo Ortega Alvarado"
   }
  },
  "github-user:jannahastings": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "blog": "",
    "name": "Janna Hastings"
   }
  },
  "github-user:jkchang2015": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "blog": "",
    "name": "JKChang"
   }
  },
  "github-user:johannehouweling": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "blog": "",
    "name": "Jente Houweling"
   }
  },
  "github-user:lindeschoenmaker": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "blog": "",
    "name": null
   }
  },
  "github-user:lrieswijk": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "blog": "",
    "name": "Linda Rieswijk"
   }
  },
  "github-user:lwinckers": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "blog": "",
    "name": "Laurent Winckers"
   }
  },
  "github-user:marvinm2": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "blog": "",
    "name": "Marvin Martens"
   }
  },
  "github-user:mirthhe": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "blog": "",
    "name": "Mirthe"
   }
  },
  "github-user:mmarvinm2": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "blog": "",
    "name": null
   }
  },
  "github-user:ntk73": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "blog": "web.uni-plovdiv.bg/nick",
    "name": "Nikolay Kochev"
   }
  },
  "github-user:nunogit": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "blog": "",
    "name": null
   }
  },
  "github-user:ozancinar": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "blog": "",
    "name": "Ozan Çınar"
   }
  },
  "github-user:shakiraportfolio": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "blog": "",
    "name": "Shakira"
   }
  },
  "github-user:tabbassidaloii": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "blog": "",
    "name": "Tooba Abbassi-Daloii"
   }
  },
  "github-user:tassosp78": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "blog": "",
    "name": "Tassos Papadiamantis"
   }
  },
  "github-user:uanaf": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "blog": "",
    "name": null
   }
  },
  "github-user:vedina": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "blog": "http://vedina.users.sourceforge.net",
    "name": "Nina Jeliazkova"
   }
  },
  "github-user:westonslaughter": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "blog": "https://westonslaughter.github.io/me/#home",
    "name": "Wes Slaughter"
   }
  },
  "github-user:yojanagadiya": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "blog": "",
    "name": "Yojana Gadiya"
   }
  },
  "github-user:youphendriks": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "blog": "",
    "name": "Youp Hendriks"
   }
  },
  "openalex:https://orcid.org/0000-0001-5410-599X": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5063972221",
    "orcid": "https://orcid.org/0000-0001-5410-599X"
   }
  },
  "openalex:https://orcid.org/0000-0001-5416-085X": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5028735728",
    "orcid": "https://orcid.org/0000-0001-5416-085X"
   }
  },
  "openalex:https://orcid.org/0000-0001-5706-2163": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5070456387",
    "orcid": "https://orcid.org/0000-0001-5706-2163"
   }
  },
  "openalex:https://orcid.org/0000-0001-5934-3559": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5059247283",
    "orcid": "https://orcid.org/0000-0001-5934-3559"
   }
  },
  "openalex:https://orcid.org/0000-0001-6125-6147": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5114530520",
    "orcid": "https://orcid.org/0000-0001-6125-6147"
   }
  },
  "openalex:https://orcid.org/0000-0001-6611-7883": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5093405122",
    "orcid": "https://orcid.org/0000-0001-6611-7883"
   }
  },
  "openalex:https://orcid.org/0000-0001-7542-0286": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
-   "openalex": "https://openalex.org/A5135576456",
+   "openalex": "https://openalex.org/A5060194743",
    "orcid": "https://orcid.org/0000-0001-7542-0286"
   }
  },
  "openalex:https://orcid.org/0000-0001-7883-3756": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5039336067",
    "orcid": "https://orcid.org/0000-0001-7883-3756"
   }
  },
  "openalex:https://orcid.org/0000-0001-8319-7758": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5062979397",
    "orcid": "https://orcid.org/0000-0001-8319-7758"
   }
  },
  "openalex:https://orcid.org/0000-0001-8449-1318": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5136731725",
    "orcid": "https://orcid.org/0000-0001-8449-1318"
   }
  },
  "openalex:https://orcid.org/0000-0001-8501-7319": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5034175804",
    "orcid": "https://orcid.org/0000-0001-8501-7319"
   }
  },
  "openalex:https://orcid.org/0000-0001-8907-5348": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5017967454",
    "orcid": "https://orcid.org/0000-0001-8907-5348"
   }
  },
  "openalex:https://orcid.org/0000-0001-9773-4008": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5048705669",
    "orcid": "https://orcid.org/0000-0001-9773-4008"
   }
  },
  "openalex:https://orcid.org/0000-0002-1297-3104": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5140909346",
    "orcid": "https://orcid.org/0000-0002-1297-3104"
   }
  },
  "openalex:https://orcid.org/0000-0002-1849-5246": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
-   "openalex": "https://openalex.org/A5140911546",
+   "openalex": "https://openalex.org/A5137692572",
    "orcid": "https://orcid.org/0000-0002-1849-5246"
   }
  },
  "openalex:https://orcid.org/0000-0002-2061-091X": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5089900113",
    "orcid": "https://orcid.org/0000-0002-2061-091X"
   }
  },
  "openalex:https://orcid.org/0000-0002-3435-7775": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
-   "openalex": "https://openalex.org/A5018763133",
-   "orcid": "https://orcid.org/0000-0002-3435-7775"
+   "openalex": "https://openalex.org/A5061353760",
+   "orcid": "https://orcid.org/0000-0002-7770-620X"
   }
  },
  "openalex:https://orcid.org/0000-0002-4166-7093": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5061091441",
    "orcid": "https://orcid.org/0000-0002-4166-7093"
   }
  },
  "openalex:https://orcid.org/0000-0002-4322-6179": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
-   "openalex": "https://openalex.org/A5056989071",
+   "openalex": "https://openalex.org/A5121185742",
    "orcid": "https://orcid.org/0000-0002-4322-6179"
   }
  },
  "openalex:https://orcid.org/0000-0002-4409-1974": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5073178090",
    "orcid": "https://orcid.org/0000-0002-4409-1974"
   }
  },
  "openalex:https://orcid.org/0000-0002-4693-0591": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5064769212",
    "orcid": "https://orcid.org/0000-0002-4693-0591"
   }
  },
  "openalex:https://orcid.org/0000-0002-4751-4637": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5090914801",
    "orcid": "https://orcid.org/0000-0002-4751-4637"
   }
  },
  "openalex:https://orcid.org/0000-0002-4904-3269": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5080912462",
    "orcid": "https://orcid.org/0000-0002-4904-3269"
   }
  },
  "openalex:https://orcid.org/0000-0002-5231-0639": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
-   "openalex": "https://openalex.org/A5124127231",
+   "openalex": "https://openalex.org/A5059989452",
    "orcid": "https://orcid.org/0000-0002-5231-0639"
   }
  },
  "openalex:https://orcid.org/0000-0002-5301-3142": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
-   "openalex": "https://openalex.org/A5133005017",
+   "openalex": "https://openalex.org/A5075750072",
    "orcid": "https://orcid.org/0000-0002-5301-3142"
   }
  },
  "openalex:https://orcid.org/0000-0002-6943-6887": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
-   "openalex": "https://openalex.org/A5135617175",
+   "openalex": "https://openalex.org/A5010680425",
    "orcid": "https://orcid.org/0000-0002-6943-6887"
   }
  },
  "openalex:https://orcid.org/0000-0002-7260-2129": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5022180345",
    "orcid": "https://orcid.org/0000-0002-7260-2129"
   }
  },
  "openalex:https://orcid.org/0000-0002-7449-1266": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5078283120",
    "orcid": "https://orcid.org/0000-0002-7449-1266"
   }
  },
  "openalex:https://orcid.org/0000-0002-7683-0452": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5004719764",
    "orcid": "https://orcid.org/0000-0002-7683-0452"
   }
  },
  "openalex:https://orcid.org/0000-0002-7699-8191": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
-   "openalex": "https://openalex.org/A5012726859",
+   "openalex": "https://openalex.org/A5062841937",
    "orcid": "https://orcid.org/0000-0002-7699-8191"
   }
  },
  "openalex:https://orcid.org/0000-0002-7770-620X": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
-   "openalex": "https://openalex.org/A5137599660",
+   "openalex": "https://openalex.org/A5061353760",
    "orcid": "https://orcid.org/0000-0002-7770-620X"
   }
  },
  "openalex:https://orcid.org/0000-0002-8399-8990": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5066436740",
    "orcid": "https://orcid.org/0000-0002-8399-8990"
   }
  },
  "openalex:https://orcid.org/0000-0002-8607-9965": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5017246181",
    "orcid": "https://orcid.org/0000-0002-8607-9965"
   }
  },
  "openalex:https://orcid.org/0000-0002-9077-5664": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5009119354",
    "orcid": "https://orcid.org/0000-0002-9077-5664"
   }
  },
  "openalex:https://orcid.org/0000-0002-9209-1266": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5051819631",
    "orcid": "https://orcid.org/0000-0002-9209-1266"
   }
  },
  "openalex:https://orcid.org/0000-0002-9454-4783": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5060151962",
    "orcid": "https://orcid.org/0000-0002-9454-4783"
   }
  },
  "openalex:https://orcid.org/0000-0003-0329-1977": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5022720376",
    "orcid": "https://orcid.org/0000-0003-0329-1977"
   }
  },
  "openalex:https://orcid.org/0000-0003-1062-5576": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5046703960",
    "orcid": "https://orcid.org/0000-0003-1062-5576"
   }
  },
  "openalex:https://orcid.org/0000-0003-1224-9690": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5088503440",
    "orcid": "https://orcid.org/0000-0003-1224-9690"
   }
  },
  "openalex:https://orcid.org/0000-0003-1661-6304": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5041567966",
    "orcid": "https://orcid.org/0000-0003-1661-6304"
   }
  },
  "openalex:https://orcid.org/0000-0003-1781-5508": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
-   "openalex": "https://openalex.org/A5124948722",
+   "openalex": "https://openalex.org/A5067900225",
    "orcid": "https://orcid.org/0000-0003-1781-5508"
   }
  },
  "openalex:https://orcid.org/0000-0003-2102-3626": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5048229400",
    "orcid": "https://orcid.org/0000-0003-2102-3626"
   }
  },
  "openalex:https://orcid.org/0000-0003-2230-0840": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
-   "openalex": "https://openalex.org/A5140831444",
+   "openalex": "https://openalex.org/A5046933371",
    "orcid": "https://orcid.org/0000-0003-2230-0840"
   }
  },
  "openalex:https://orcid.org/0000-0003-2391-0384": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5031153467",
    "orcid": "https://orcid.org/0000-0003-2391-0384"
   }
  },
  "openalex:https://orcid.org/0000-0003-2760-7702": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5033016821",
    "orcid": "https://orcid.org/0000-0003-2760-7702"
   }
  },
  "openalex:https://orcid.org/0000-0003-2878-4049": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5049490324",
    "orcid": "https://orcid.org/0000-0003-2878-4049"
   }
  },
  "openalex:https://orcid.org/0000-0003-2940-8926": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5045654542",
    "orcid": "https://orcid.org/0000-0003-2940-8926"
   }
  },
  "openalex:https://orcid.org/0000-0003-3213-4495": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5032183252",
    "orcid": "https://orcid.org/0000-0003-3213-4495"
   }
  },
  "openalex:https://orcid.org/0000-0003-4250-4584": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
-   "openalex": "https://openalex.org/A5139914806",
+   "openalex": "https://openalex.org/A5157860614",
    "orcid": "https://orcid.org/0000-0003-4250-4584"
   }
  },
  "openalex:https://orcid.org/0009-0002-4110-241X": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5102953632",
    "orcid": "https://orcid.org/0009-0002-4110-241X"
   }
  },
  "openalex:https://orcid.org/0009-0002-7664-0058": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {}
  },
  "openalex:https://orcid.org/0009-0003-1183-4991": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5102742045",
    "orcid": "https://orcid.org/0009-0003-1183-4991"
   }
  },
  "openalex:https://orcid.org/0009-0005-3680-0645": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5052339018",
    "orcid": "https://orcid.org/0009-0005-3680-0645"
   }
  },
  "openalex:https://orcid.org/0009-0007-1364-797X": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5093329177",
    "orcid": "https://orcid.org/0009-0007-1364-797X"
   }
  },
  "openalex:https://orcid.org/0009-0007-2045-4009": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "openalex": "https://openalex.org/A5075686370",
    "orcid": "https://orcid.org/0009-0007-2045-4009"
   }
  },
  "orcid-claimants:10.1016/j.toxlet.2025.07.1074": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-claimants:10.1038/s41597-026-07345-6": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "https://orcid.org/0000-0002-4166-7093",
    "https://orcid.org/0009-0007-1364-797X",
@@ -1410,93 +1429,93 @@
   ]
  },
  "orcid-claimants:10.1093/bioinformatics/btag064": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "https://orcid.org/0000-0002-4166-7093",
    "https://orcid.org/0000-0001-6611-7883",
    "https://orcid.org/0000-0002-8399-8990",
-   "https://orcid.org/0000-0002-4904-3269",
    "https://orcid.org/0000-0003-3213-4495",
+   "https://orcid.org/0000-0002-7683-0452",
    "https://orcid.org/0000-0001-7542-0286",
-   "https://orcid.org/0000-0002-7683-0452"
+   "https://orcid.org/0000-0002-4904-3269"
   ]
  },
  "orcid-claimants:10.1093/nar/gkad960": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "https://orcid.org/0000-0001-5410-599X",
-   "https://orcid.org/0009-0007-2045-4009",
-   "https://orcid.org/0000-0001-8501-7319",
-   "https://orcid.org/0000-0002-4166-7093",
-   "https://orcid.org/0000-0003-2878-4049",
-   "https://orcid.org/0000-0001-5934-3559",
-   "https://orcid.org/0000-0003-2940-8926",
    "https://orcid.org/0000-0001-8319-7758",
+   "https://orcid.org/0009-0007-2045-4009",
+   "https://orcid.org/0000-0002-4166-7093",
+   "https://orcid.org/0000-0003-2230-0840",
    "https://orcid.org/0000-0001-9773-4008",
-   "https://orcid.org/0000-0002-4904-3269",
    "https://orcid.org/0000-0001-8449-1318",
    "https://orcid.org/0000-0003-1661-6304",
+   "https://orcid.org/0000-0003-2940-8926",
+   "https://orcid.org/0000-0002-4904-3269",
+   "https://orcid.org/0000-0001-8501-7319",
+   "https://orcid.org/0000-0003-2878-4049",
    "https://orcid.org/0000-0002-7699-8191",
-   "https://orcid.org/0000-0003-2230-0840"
+   "https://orcid.org/0000-0001-5934-3559"
   ]
  },
  "orcid-claimants:10.24406/publica-8969": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-claimants:10.3389/fphy.2023.1271842": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
-   "https://orcid.org/0009-0003-1183-4991",
    "https://orcid.org/0000-0002-2061-091X",
-   "https://orcid.org/0000-0002-4166-7093",
-   "https://orcid.org/0000-0002-8399-8990",
-   "https://orcid.org/0000-0002-4322-6179",
    "https://orcid.org/0000-0003-4250-4584",
-   "https://orcid.org/0000-0002-1297-3104",
-   "https://orcid.org/0000-0002-5231-0639",
+   "https://orcid.org/0009-0003-1183-4991",
+   "https://orcid.org/0000-0002-4166-7093",
    "https://orcid.org/0000-0001-5416-085X",
-   "https://orcid.org/0000-0001-9227-0670"
+   "https://orcid.org/0000-0002-8399-8990",
+   "https://orcid.org/0000-0002-5231-0639",
+   "https://orcid.org/0000-0001-9227-0670",
+   "https://orcid.org/0000-0002-4322-6179",
+   "https://orcid.org/0000-0002-1297-3104"
   ]
  },
  "orcid-claimants:10.37044/osf.io/8qeh5_v1": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
+   "https://orcid.org/0000-0001-7883-3756",
    "https://orcid.org/0000-0001-8907-5348",
-   "https://orcid.org/0000-0002-7260-2129",
-   "https://orcid.org/0000-0001-7883-3756"
+   "https://orcid.org/0000-0002-7260-2129"
   ]
  },
  "orcid-claimants:10.37044/osf.io/ptmg5_v1": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
+   "https://orcid.org/0000-0001-7883-3756",
    "https://orcid.org/0000-0002-4166-7093",
-   "https://orcid.org/0000-0002-7449-1266",
-   "https://orcid.org/0000-0002-4904-3269",
    "https://orcid.org/0000-0003-2391-0384",
    "https://orcid.org/0000-0002-7683-0452",
-   "https://orcid.org/0000-0001-7883-3756"
+   "https://orcid.org/0000-0002-7449-1266",
+   "https://orcid.org/0000-0002-4904-3269"
   ]
  },
  "orcid-claimants:10.37044/osf.io/un2rw": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
+   "https://orcid.org/0000-0003-4250-4584",
    "https://orcid.org/0000-0002-4166-7093",
-   "https://orcid.org/0000-0002-9077-5664",
    "https://orcid.org/0009-0002-7664-0058",
    "https://orcid.org/0000-0002-9209-1266",
    "https://orcid.org/0009-0002-4110-241X",
-   "https://orcid.org/0000-0002-3435-7775",
+   "https://orcid.org/0000-0002-9077-5664",
    "https://orcid.org/0000-0003-1062-5576",
-   "https://orcid.org/0000-0003-4250-4584"
+   "https://orcid.org/0000-0002-3435-7775"
   ]
  },
  "orcid-ids:https://orcid.org/0000-0001-5410-599X": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-ids:https://orcid.org/0000-0001-5416-085X": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "label": "Scopus Author ID",
@@ -1513,7 +1532,7 @@
   ]
  },
  "orcid-ids:https://orcid.org/0000-0001-5706-2163": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "label": "Scopus Author ID",
@@ -1522,15 +1541,15 @@
   ]
  },
  "orcid-ids:https://orcid.org/0000-0001-5934-3559": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-ids:https://orcid.org/0000-0001-6125-6147": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-ids:https://orcid.org/0000-0001-6611-7883": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "label": "Scopus Author ID",
@@ -1539,7 +1558,7 @@
   ]
  },
  "orcid-ids:https://orcid.org/0000-0001-7542-0286": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "label": "ISNI",
@@ -1552,11 +1571,11 @@
   ]
  },
  "orcid-ids:https://orcid.org/0000-0001-7883-3756": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-ids:https://orcid.org/0000-0001-8319-7758": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "label": "Scopus Author ID",
@@ -1565,7 +1584,7 @@
   ]
  },
  "orcid-ids:https://orcid.org/0000-0001-8449-1318": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "label": "Scopus Author ID",
@@ -1574,11 +1593,11 @@
   ]
  },
  "orcid-ids:https://orcid.org/0000-0001-8501-7319": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-ids:https://orcid.org/0000-0001-8907-5348": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "label": "Scopus Author ID",
@@ -1595,7 +1614,7 @@
   ]
  },
  "orcid-ids:https://orcid.org/0000-0001-9773-4008": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "label": "Scopus Author ID",
@@ -1604,7 +1623,7 @@
   ]
  },
  "orcid-ids:https://orcid.org/0000-0002-1297-3104": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "label": "Ciência ID",
@@ -1613,7 +1632,7 @@
   ]
  },
  "orcid-ids:https://orcid.org/0000-0002-1849-5246": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "label": "Loop profile",
@@ -1626,7 +1645,7 @@
   ]
  },
  "orcid-ids:https://orcid.org/0000-0002-2061-091X": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "label": "Scopus Author ID",
@@ -1643,7 +1662,7 @@
   ]
  },
  "orcid-ids:https://orcid.org/0000-0002-3435-7775": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "label": "Loop profile",
@@ -1652,11 +1671,11 @@
   ]
  },
  "orcid-ids:https://orcid.org/0000-0002-4166-7093": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-ids:https://orcid.org/0000-0002-4322-6179": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "label": "Scopus Author ID",
@@ -1669,19 +1688,19 @@
   ]
  },
  "orcid-ids:https://orcid.org/0000-0002-4409-1974": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-ids:https://orcid.org/0000-0002-4693-0591": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-ids:https://orcid.org/0000-0002-4751-4637": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-ids:https://orcid.org/0000-0002-4904-3269": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "label": "Scopus Author ID",
@@ -1694,7 +1713,7 @@
   ]
  },
  "orcid-ids:https://orcid.org/0000-0002-5231-0639": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "label": "ResearcherID",
@@ -1711,7 +1730,7 @@
   ]
  },
  "orcid-ids:https://orcid.org/0000-0002-5301-3142": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "label": "Scopus Author ID",
@@ -1720,11 +1739,11 @@
   ]
  },
  "orcid-ids:https://orcid.org/0000-0002-6943-6887": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-ids:https://orcid.org/0000-0002-7260-2129": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "label": "Loop profile",
@@ -1733,11 +1752,11 @@
   ]
  },
  "orcid-ids:https://orcid.org/0000-0002-7449-1266": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-ids:https://orcid.org/0000-0002-7683-0452": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "label": "Loop profile",
@@ -1758,27 +1777,27 @@
   ]
  },
  "orcid-ids:https://orcid.org/0000-0002-7699-8191": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-ids:https://orcid.org/0000-0002-7770-620X": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-ids:https://orcid.org/0000-0002-8399-8990": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-ids:https://orcid.org/0000-0002-8607-9965": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-ids:https://orcid.org/0000-0002-9077-5664": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-ids:https://orcid.org/0000-0002-9209-1266": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "label": "ResearcherID",
@@ -1791,15 +1810,15 @@
   ]
  },
  "orcid-ids:https://orcid.org/0000-0002-9454-4783": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-ids:https://orcid.org/0000-0003-0329-1977": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-ids:https://orcid.org/0000-0003-1062-5576": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "label": "Loop profile",
@@ -1812,11 +1831,11 @@
   ]
  },
  "orcid-ids:https://orcid.org/0000-0003-1224-9690": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-ids:https://orcid.org/0000-0003-1661-6304": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "label": "Scopus Author ID",
@@ -1825,7 +1844,7 @@
   ]
  },
  "orcid-ids:https://orcid.org/0000-0003-1781-5508": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "label": "Scopus Author ID",
@@ -1834,7 +1853,7 @@
   ]
  },
  "orcid-ids:https://orcid.org/0000-0003-2102-3626": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "label": "Digital Author ID (DAI)",
@@ -1847,7 +1866,7 @@
   ]
  },
  "orcid-ids:https://orcid.org/0000-0003-2230-0840": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "label": "Loop profile",
@@ -1860,7 +1879,7 @@
   ]
  },
  "orcid-ids:https://orcid.org/0000-0003-2391-0384": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "label": "Researcher Name Resolver ID",
@@ -1869,7 +1888,7 @@
   ]
  },
  "orcid-ids:https://orcid.org/0000-0003-2760-7702": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "label": "Scopus Author ID",
@@ -1882,11 +1901,11 @@
   ]
  },
  "orcid-ids:https://orcid.org/0000-0003-2878-4049": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-ids:https://orcid.org/0000-0003-2940-8926": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "label": "SciProfiles",
@@ -1895,7 +1914,7 @@
   ]
  },
  "orcid-ids:https://orcid.org/0000-0003-3213-4495": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "label": "Scopus Author ID",
@@ -1904,7 +1923,7 @@
   ]
  },
  "orcid-ids:https://orcid.org/0000-0003-4250-4584": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "label": "Scopus Author ID",
@@ -1937,95 +1956,95 @@
   ]
  },
  "orcid-ids:https://orcid.org/0009-0002-4110-241X": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-ids:https://orcid.org/0009-0002-7664-0058": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-ids:https://orcid.org/0009-0003-1183-4991": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-ids:https://orcid.org/0009-0005-3680-0645": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-ids:https://orcid.org/0009-0007-1364-797X": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-ids:https://orcid.org/0009-0007-2045-4009": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-item:0000-0001-5410-599X": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q28865047"
  },
  "orcid-item:0000-0001-5416-085X": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q39585759"
  },
  "orcid-item:0000-0001-5706-2163": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q28530149"
  },
  "orcid-item:0000-0001-5934-3559": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q19845608"
  },
  "orcid-item:0000-0001-6125-6147": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": null
  },
  "orcid-item:0000-0001-6611-7883": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q117834010"
  },
  "orcid-item:0000-0001-7542-0286": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q20895241"
  },
  "orcid-item:0000-0001-7883-3756": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q54302726"
  },
  "orcid-item:0000-0001-8319-7758": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q130642378"
  },
  "orcid-item:0000-0001-8449-1318": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q43744369"
  },
  "orcid-item:0000-0001-8501-7319": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q136396711"
  },
  "orcid-item:0000-0001-8907-5348": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q51602692"
  },
  "orcid-item:0000-0001-9773-4008": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q19845625"
  },
  "orcid-item:0000-0002-1297-3104": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q100409486"
  },
  "orcid-item:0000-0002-1849-5246": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q88046313"
  },
  "orcid-item:0000-0002-2061-091X": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q54303216"
  },
  "orcid-item:0000-0002-3435-7775": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q28530416"
  },
  "orcid-item:0000-0002-3469-4923": {
@@ -2033,131 +2052,131 @@
   "value": "Q27902110"
  },
  "orcid-item:0000-0002-4166-7093": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q116446553"
  },
  "orcid-item:0000-0002-4322-6179": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q27061849"
  },
  "orcid-item:0000-0002-4409-1974": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q140771297"
  },
  "orcid-item:0000-0002-4693-0591": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q43370277"
  },
  "orcid-item:0000-0002-4751-4637": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q45907528"
  },
  "orcid-item:0000-0002-4904-3269": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q89321648"
  },
  "orcid-item:0000-0002-5231-0639": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q45351113"
  },
  "orcid-item:0000-0002-5301-3142": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q19845641"
  },
  "orcid-item:0000-0002-6943-6887": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q59490274"
  },
  "orcid-item:0000-0002-7260-2129": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q63958202"
  },
  "orcid-item:0000-0002-7449-1266": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q56888653"
  },
  "orcid-item:0000-0002-7683-0452": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q70206064"
  },
  "orcid-item:0000-0002-7699-8191": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q27987764"
  },
  "orcid-item:0000-0002-7770-620X": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q28025534"
  },
  "orcid-item:0000-0002-8399-8990": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q86442640"
  },
  "orcid-item:0000-0002-8607-9965": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q28541054"
  },
  "orcid-item:0000-0002-9077-5664": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q57058833"
  },
  "orcid-item:0000-0002-9209-1266": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q127038569"
  },
  "orcid-item:0000-0002-9454-4783": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q92186214"
  },
  "orcid-item:0000-0003-0329-1977": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q89571039"
  },
  "orcid-item:0000-0003-1062-5576": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q96189622"
  },
  "orcid-item:0000-0003-1224-9690": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q19851164"
  },
  "orcid-item:0000-0003-1661-6304": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q114718357"
  },
  "orcid-item:0000-0003-1781-5508": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q56510144"
  },
  "orcid-item:0000-0003-2102-3626": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q55453416"
  },
  "orcid-item:0000-0003-2230-0840": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q42369611"
  },
  "orcid-item:0000-0003-2391-0384": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q58484212"
  },
  "orcid-item:0000-0003-2760-7702": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q56459199"
  },
  "orcid-item:0000-0003-2878-4049": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q123631021"
  },
  "orcid-item:0000-0003-2940-8926": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q123631063"
  },
  "orcid-item:0000-0003-3213-4495": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q118146531"
  },
  "orcid-item:0000-0003-4250-4584": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q28651697"
  },
  "orcid-item:0000-0003-4423-4370": {
@@ -2165,105 +2184,105 @@
   "value": "Q47475003"
  },
  "orcid-item:0009-0002-4110-241X": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": null
  },
  "orcid-item:0009-0002-7664-0058": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": null
  },
  "orcid-item:0009-0003-1183-4991": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": null
  },
  "orcid-item:0009-0005-3680-0645": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": "Q124399961"
  },
  "orcid-item:0009-0007-1364-797X": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": null
  },
  "orcid-item:0009-0007-2045-4009": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": null
  },
  "orcid-names:https://orcid.org/0000-0001-5416-085X": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "Martin Himly"
   ]
  },
  "orcid-names:https://orcid.org/0000-0001-9227-0670": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "Karin Slater"
   ]
  },
  "orcid-names:https://orcid.org/0000-0002-1297-3104": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "Anastasios Papadiamantis"
   ]
  },
  "orcid-names:https://orcid.org/0000-0002-2061-091X": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "Georgios Gkoutos"
   ]
  },
  "orcid-names:https://orcid.org/0000-0002-4322-6179": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "Nina Jeliazkova",
    "Nina Nikolova"
   ]
  },
  "orcid-names:https://orcid.org/0000-0002-5231-0639": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "Vladimir Lobaskin"
   ]
  },
  "orcid-names:https://orcid.org/0000-0002-8399-8990": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "Ammar Ammar"
   ]
  },
  "orcid-names:https://orcid.org/0000-0003-2102-3626": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "Theo de Kok"
   ]
  },
  "orcid-names:https://orcid.org/0000-0003-4250-4584": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "Iseult Lynch",
    "Iseult Yilmaz"
   ]
  },
  "orcid-names:https://orcid.org/0009-0002-4110-241X": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "Riju Roy Chowdhury"
   ]
  },
  "orcid-names:https://orcid.org/0009-0002-7664-0058": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "Meike Bunger"
   ]
  },
  "orcid-names:https://orcid.org/0009-0003-1183-4991": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "Martin Ziegler"
   ]
  },
  "orcid-urls:https://orcid.org/0000-0001-5410-599X": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "https://scholar.google.com/citations?user=lp_fj-AAAAAJ&hl=en&oi=ao",
    "https://github.com/khanspers",
@@ -2271,13 +2290,13 @@
   ]
  },
  "orcid-urls:https://orcid.org/0000-0001-5416-085X": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "https://www.plus.ac.at/biowissenschaften/der-fachbereich/arbeitsgruppen/ag-himly/martin-himly/"
   ]
  },
  "orcid-urls:https://orcid.org/0000-0001-5706-2163": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "https://gladstone.org/people/alex-pico",
    "http://nrnb.org/people.html",
@@ -2285,19 +2304,19 @@
   ]
  },
  "orcid-urls:https://orcid.org/0000-0001-5934-3559": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-urls:https://orcid.org/0000-0001-6125-6147": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-urls:https://orcid.org/0000-0001-6611-7883": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-urls:https://orcid.org/0000-0001-7542-0286": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "https://cris.maastrichtuniversity.nl/portal/en/persons/egon-willighagen(2ad8fbe2-e873-404d-85c7-e0c125a6ead7).html",
    "http://egonw.github.io/",
@@ -2316,55 +2335,55 @@
   ]
  },
  "orcid-urls:https://orcid.org/0000-0001-7883-3756": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "https://researchmap.jp/shuichikawashima/"
   ]
  },
  "orcid-urls:https://orcid.org/0000-0001-8319-7758": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-urls:https://orcid.org/0000-0001-8449-1318": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "https://github.com/DeniseSl22",
    "https://cris.maastrichtuniversity.nl/en/persons/9898711a-b781-46e3-9182-a2162e693de1"
   ]
  },
  "orcid-urls:https://orcid.org/0000-0001-8501-7319": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "https://twitter.com/kozo2",
    "https://github.com/kozo2"
   ]
  },
  "orcid-urls:https://orcid.org/0000-0001-8907-5348": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "http://www.di.uniovi.es/~labra"
   ]
  },
  "orcid-urls:https://orcid.org/0000-0001-9773-4008": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-urls:https://orcid.org/0000-0002-1297-3104": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-urls:https://orcid.org/0000-0002-1849-5246": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-urls:https://orcid.org/0000-0002-2061-091X": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "https://gkoutos.github.io/"
   ]
  },
  "orcid-urls:https://orcid.org/0000-0002-3435-7775": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "https://twitter.com/pennynymark",
    "https://publons.com/researcher/3184728/penny-nymark/",
@@ -2372,11 +2391,11 @@
   ]
  },
  "orcid-urls:https://orcid.org/0000-0002-4166-7093": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-urls:https://orcid.org/0000-0002-4322-6179": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "https://scholar.google.com/citations?user=2eBL2WMAAAAJ&hl=en",
    "https://www.ideaconsult.net/",
@@ -2385,15 +2404,15 @@
   ]
  },
  "orcid-urls:https://orcid.org/0000-0002-4409-1974": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-urls:https://orcid.org/0000-0002-4693-0591": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-urls:https://orcid.org/0000-0002-4751-4637": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "https://larsgw.github.io",
    "https://larsgw.blogspot.com",
@@ -2402,36 +2421,36 @@
   ]
  },
  "orcid-urls:https://orcid.org/0000-0002-4904-3269": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-urls:https://orcid.org/0000-0002-5231-0639": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-urls:https://orcid.org/0000-0002-5301-3142": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "http://www.bigcat.unimaas.nl",
    "https://twitter.com/Chris_Evelo"
   ]
  },
  "orcid-urls:https://orcid.org/0000-0002-6943-6887": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-urls:https://orcid.org/0000-0002-7260-2129": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-urls:https://orcid.org/0000-0002-7449-1266": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
-   "https://akademienl.social/@jerven"
+   "https://genomic.social/@jervenbolleman"
   ]
  },
  "orcid-urls:https://orcid.org/0000-0002-7683-0452": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "https://www.linkedin.com/in/yojana-gadiya-477739113/",
    "https://github.com/YojanaGadiya",
@@ -2439,26 +2458,26 @@
   ]
  },
  "orcid-urls:https://orcid.org/0000-0002-7699-8191": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-urls:https://orcid.org/0000-0002-7770-620X": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "https://www.linkedin.com/pub/friederike-ehrhart/74/181/41a?trk=pub-pbmap",
    "http://purl.org/np/RA1QiaPTiY41EfjjcPLMWu_LnRGAYxGAfqV9puFoklLWU"
   ]
  },
  "orcid-urls:https://orcid.org/0000-0002-8399-8990": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-urls:https://orcid.org/0000-0002-8607-9965": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-urls:https://orcid.org/0000-0002-9077-5664": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "http://sabiork.h-its.org/",
    "https://fair-dom.org/",
@@ -2466,23 +2485,23 @@
   ]
  },
  "orcid-urls:https://orcid.org/0000-0002-9209-1266": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-urls:https://orcid.org/0000-0002-9454-4783": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "https://www.linkedin.com/in/laurent-winckers/"
   ]
  },
  "orcid-urls:https://orcid.org/0000-0003-0329-1977": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "https://github.com/ozancinar"
   ]
  },
  "orcid-urls:https://orcid.org/0000-0003-1062-5576": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "https://nanodash.knowledgepixels.com/user?1&id=https://orcid.org/0000-0003-1062-5576",
    "https://github.com/burgerga",
@@ -2491,62 +2510,62 @@
   ]
  },
  "orcid-urls:https://orcid.org/0000-0003-1224-9690": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "https://cris.maastrichtuniversity.nl/en/persons/1a524433-c2a5-4a11-ac58-45b5b6d426dd"
   ]
  },
  "orcid-urls:https://orcid.org/0000-0003-1661-6304": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "https://fondufemittendorflab.vai.org/"
   ]
  },
  "orcid-urls:https://orcid.org/0000-0003-1781-5508": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-urls:https://orcid.org/0000-0003-2102-3626": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "https://cris.maastrichtuniversity.nl/en/persons/4e16873b-8cc7-4bb9-bc83-035bd1e205cf"
   ]
  },
  "orcid-urls:https://orcid.org/0000-0003-2230-0840": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "https://cris.maastrichtuniversity.nl/en/persons/a7490e9a-a51d-48a6-ad0f-4e295a3fd29e"
   ]
  },
  "orcid-urls:https://orcid.org/0000-0003-2391-0384": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-urls:https://orcid.org/0000-0003-2760-7702": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-urls:https://orcid.org/0000-0003-2878-4049": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "https://www.linkedin.com/in/aishwarya-iyer-5a7545173/",
    "https://github.com/ashviyer"
   ]
  },
  "orcid-urls:https://orcid.org/0000-0003-2940-8926": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "https://github.com/ayushi-agrawal-gladstone"
   ]
  },
  "orcid-urls:https://orcid.org/0000-0003-3213-4495": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "http://www.linkedin.com/in/ana-claudia-sima"
   ]
  },
  "orcid-urls:https://orcid.org/0000-0003-4250-4584": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "http://www.birmingham.ac.uk/schools/gees/people/profile.aspx?ReferenceId=56477",
    "https://www.linkedin.com/in/iseult-lynch-b5856910/",
@@ -2556,33 +2575,33 @@
   ]
  },
  "orcid-urls:https://orcid.org/0009-0002-4110-241X": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    "https://secantox.weebly.com/people.html"
   ]
  },
  "orcid-urls:https://orcid.org/0009-0002-7664-0058": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-urls:https://orcid.org/0009-0003-1183-4991": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-urls:https://orcid.org/0009-0005-3680-0645": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-urls:https://orcid.org/0009-0007-1364-797X": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "orcid-urls:https://orcid.org/0009-0007-2045-4009": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "repository:BioDataFuse/biodatafuseUI": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": {
    "languages": [
     "topic:Vue",
@@ -2760,7 +2779,7 @@
   }
  },
  "repository:BioDataFuse/pyBiodatafuse": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": {
    "languages": [
     "topic:Python",
@@ -2808,7 +2827,7 @@
   }
  },
  "repository:VHP4Safety/AOP-Suite": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": {
    "languages": [
     "topic:JavaScript",
@@ -3016,7 +3035,7 @@
   }
  },
  "repository:VHP4Safety/virtual-human-platform": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": {
    "languages": [
     "topic:JavaScript",
@@ -3045,7 +3064,7 @@
   }
  },
  "repository:bridgedb/docker": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": {
    "languages": [
     "topic:Shell",
@@ -3067,12 +3086,12 @@
   }
  },
  "repository:cnvpathwayatlas/cnv-website": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": {
    "languages": [
     "topic:JavaScript",
-    "topic:HTML",
     "topic:SCSS",
+    "topic:HTML",
     "topic:Python",
     "topic:Ruby",
     "topic:CSS"
@@ -3090,7 +3109,7 @@
   }
  },
  "repository:enanomapper/ontologies": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": {
    "languages": [
     "topic:Python",
@@ -3114,7 +3133,7 @@
   }
  },
  "repository:jmillanacosta/mapkgsutils": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": {
    "languages": [
     "topic:Python",
@@ -3161,7 +3180,7 @@
   }
  },
  "repository:jmillanacosta/pyaop": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": {
    "languages": [
     "topic:Python"
@@ -3198,7 +3217,7 @@
   }
  },
  "repository:jmillanacosta/pysec2pri": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": {
    "languages": [
     "topic:Python",
@@ -3257,11 +3276,11 @@
   }
  },
  "repository:jmillanacosta/rdfsolve": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": {
    "languages": [
-    "topic:Python",
     "topic:Jupyter Notebook",
+    "topic:Python",
     "topic:Shell"
    ],
    "owner": "https://github.com/jmillanacosta",
@@ -3273,12 +3292,11 @@
     "pypi:sssom",
     "pypi:typing-extensions",
     "pypi:rdflib",
-    "pypi:sparqlwrapper",
+    "pypi:pyoxigraph",
     "pypi:ujson",
     "pypi:pandas",
     "pypi:numpy",
     "pypi:bioregistry",
-    "pypi:bioversions",
     "pypi:linkml",
     "pypi:linkml-runtime",
     "pypi:deprecated",
@@ -3290,11 +3308,14 @@
     "pypi:click",
     "pypi:more_click",
     "pypi:flask",
-    "pypi:pyobo",
-    "pypi:semra",
+    "pypi:pyshacl",
     "pypi:pydantic-ai-slim",
     "pypi:python-dotenv",
+    "pypi:mcp",
+    "pypi:pyshacl",
+    "pypi:psutil",
     "pypi:pydantic-ai-slim",
+    "pypi:mcp",
     "pypi:pytest",
     "pypi:coverage",
     "pypi:networkx",
@@ -3313,7 +3334,7 @@
     "pypi:flask",
     "pypi:flask-cors",
     "pypi:gunicorn",
-    "pypi:pydantic-2-mermaid",
+    "pypi:psutil",
     "pypi:matplotlib",
     "pypi:seaborn",
     "pypi:plotly",
@@ -3322,6 +3343,8 @@
     "pypi:ipywidgets",
     "pypi:narwhals",
     "pypi:plotly",
+    "pypi:scipy",
+    "pypi:kgx",
     "topic:GitHub Actions"
    ],
    "topics": [
@@ -3334,7 +3357,7 @@
   }
  },
  "repository:jmillanacosta/seejobs": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": {
    "languages": [
     "topic:JavaScript",
@@ -3353,84 +3376,84 @@
   }
  },
  "wikidata-property:P1006": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "Nationale Thesaurus voor Auteursnamen ID",
    "pattern": "https://data.bibliotheken.nl/id/thes/p$1"
   }
  },
  "wikidata-property:P1015": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "BIBSYS ID",
    "pattern": "https://authority.bibsys.no/authority/rest/authorities/html/$1"
   }
  },
  "wikidata-property:P10283": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "OpenAlex ID",
    "pattern": "https://openalex.org/$1"
   }
  },
  "wikidata-property:P1053": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "Web of Science ResearcherID",
    "pattern": "https://www.webofscience.com/wos/author/record/$1"
   }
  },
  "wikidata-property:P10557": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "Zotero ID",
    "pattern": "https://www.zotero.org/$1"
   }
  },
  "wikidata-property:P10832": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "WorldCat Entities ID",
    "pattern": "https://id.oclc.org/worldcat/entity/$1"
   }
  },
  "wikidata-property:P10861": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "Springer Nature person ID",
    "pattern": "https://app.dimensions.ai/details/entities/publication/author/ur.$1"
   }
  },
  "wikidata-property:P10897": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "ORKG ID",
    "pattern": "https://orkg.org/resource/$1"
   }
  },
  "wikidata-property:P11245": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "YouTube handle",
    "pattern": "https://www.youtube.com/@$1"
   }
  },
  "wikidata-property:P11249": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "KBR person ID",
    "pattern": "https://uurl.kbr.be/aut/$1"
   }
  },
  "wikidata-property:P11496": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "CiNii Research ID",
    "pattern": "https://cir.nii.ac.jp/crid/$1"
   }
  },
  "wikidata-property:P1153": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "Scopus author ID",
    "pattern": "https://www.scopus.com/authid/detail.uri?authorId=$1"
@@ -3444,147 +3467,147 @@
   }
  },
  "wikidata-property:P12022": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "iNaturalist user ID",
    "pattern": "https://www.inaturalist.org/people/$1"
   }
  },
  "wikidata-property:P12045": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "Codeberg username",
    "pattern": "https://codeberg.org/$1"
   }
  },
  "wikidata-property:P12361": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "Bluesky handle",
    "pattern": "https://wikidata-externalid-url.toolforge.org/?p=12361&url_prefix=https%3A%2F%2Fbsky.app%2Fprofile%2F&id=$1"
   }
  },
  "wikidata-property:P1280": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "CONOR.SI ID",
    "pattern": "https://plus-legacy.cobiss.net/cobiss/si/sl/conor/$1"
   }
  },
  "wikidata-property:P13049": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "DDB person (GND) ID",
    "pattern": "https://www.deutsche-digitale-bibliothek.de/person/gnd/$1"
   }
  },
  "wikidata-property:P13591": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
-   "label": "‎Yale LUX ID",
+   "label": "Yale LUX ID",
    "pattern": "https://lux.collections.yale.edu/view/$1"
   }
  },
  "wikidata-property:P14252": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "PeerJ person ID",
    "pattern": "https://peerj.com/$1/"
   }
  },
  "wikidata-property:P1556": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "zbMATH author ID",
    "pattern": "https://zbmath.org/authors/?q=ai:$1"
   }
  },
  "wikidata-property:P1960": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "Google Scholar author ID",
    "pattern": "https://scholar.google.com/citations?user=$1"
   }
  },
  "wikidata-property:P2002": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "X (Twitter) username",
    "pattern": "https://x.com/$1"
   }
  },
  "wikidata-property:P2013": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "Facebook username",
    "pattern": "https://www.facebook.com/$1"
   }
  },
  "wikidata-property:P2037": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "GitHub account",
    "pattern": "https://github.com/$1"
   }
  },
  "wikidata-property:P2038": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "ResearchGate profile ID",
    "pattern": "https://www.researchgate.net/profile/$1"
   }
  },
  "wikidata-property:P213": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "ISNI",
    "pattern": "https://isni.org/isni/$1"
   }
  },
  "wikidata-property:P214": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "VIAF cluster ID",
    "pattern": "https://viaf.org/en/viaf/$1"
   }
  },
  "wikidata-property:P227": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "GND ID",
    "pattern": "https://d-nb.info/gnd/$1"
   }
  },
  "wikidata-property:P2381": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "Academic Tree ID",
    "pattern": "https://academictree.org/math/peopleinfo.php?pid=$1"
   }
  },
  "wikidata-property:P2397": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "YouTube channel ID",
    "pattern": "https://www.youtube.com/channel/$1"
   }
  },
  "wikidata-property:P244": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "Library of Congress Authorities ID",
    "pattern": "https://id.loc.gov/authorities/$1"
   }
  },
  "wikidata-property:P2456": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "DBLP author ID",
    "pattern": "https://dblp.org/pid/$1"
   }
  },
  "wikidata-property:P2671": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "Google Knowledge Graph ID",
    "pattern": "https://www.google.com/search?kgmid=$1"
@@ -3598,49 +3621,49 @@
   }
  },
  "wikidata-property:P2798": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "Loop ID",
    "pattern": "https://loop.frontiersin.org/people/$1/overview"
   }
  },
  "wikidata-property:P3829": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "Publons author ID",
    "pattern": "https://publons.com/researcher/$1/"
   }
  },
  "wikidata-property:P3835": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "Mendeley person ID",
    "pattern": "https://web.archive.org/web/*/https://www.mendeley.com/profiles/$1/"
   }
  },
  "wikidata-property:P4012": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "Semantic Scholar author ID",
    "pattern": "https://www.semanticscholar.org/author/-/$1"
   }
  },
  "wikidata-property:P4033": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "Mastodon address",
    "pattern": "https://fedirect.toolforge.org/?id=$1"
   }
  },
  "wikidata-property:P4174": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "Wikimedia username",
    "pattern": "https://meta.wikimedia.org/wiki/Special:CentralAuth/$1"
   }
  },
  "wikidata-property:P4232": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "Figshare author ID",
    "pattern": "https://figshare.com/authors/wd/$1"
@@ -3654,7 +3677,7 @@
   }
  },
  "wikidata-property:P4419": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "Videolectures ID",
    "pattern": "https://videolectures.net/$1/"
@@ -3668,14 +3691,14 @@
   }
  },
  "wikidata-property:P496": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "ORCID iD",
    "pattern": "https://orcid.org/$1"
   }
  },
  "wikidata-property:P5029": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "Researchmap ID",
    "pattern": "https://researchmap.jp/$1"
@@ -3696,42 +3719,42 @@
   }
  },
  "wikidata-property:P6023": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "ResearchGate contributions ID",
    "pattern": "https://www.researchgate.net/scientific-contributions/$1"
   }
  },
  "wikidata-property:P6178": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "Dimensions author ID",
    "pattern": "https://app.dimensions.ai/details/entities/publication/author/ur.$1"
   }
  },
  "wikidata-property:P6366": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "Microsoft Academic ID (discontinued)",
    "pattern": "https://web.archive.org/web/https://academic.microsoft.com/v2/detail/$1"
   }
  },
  "wikidata-property:P6634": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "LinkedIn personal profile ID",
    "pattern": "https://www.linkedin.com/in/$1/"
   }
  },
  "wikidata-property:P6660": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "Rxivist author ID",
    "pattern": "https://rxivist.org/authors/$1"
   }
  },
  "wikidata-property:P691": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "NL CR AUT ID",
    "pattern": "https://aleph.nkp.cz/F/?func=find-c&local_base=aut&ccl_term=ica=$1"
@@ -3745,7 +3768,7 @@
   }
  },
  "wikidata-property:P7449": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "NARCIS researcher ID",
    "pattern": "https://web.archive.org/web/*/https://www.narcis.nl/person/RecordID/$1"
@@ -3759,7 +3782,7 @@
   }
  },
  "wikidata-property:P7783": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "J-GLOBAL ID",
    "pattern": "https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=$1"
@@ -3773,11 +3796,11 @@
   }
  },
  "wikidata-property:P8446": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": null
  },
  "wikidata-property:P8827": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "GitLab.com username",
    "pattern": "https://gitlab.com/$1"
@@ -3791,21 +3814,21 @@
   }
  },
  "wikidata-property:P8980": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "KANTO ID",
    "pattern": "https://urn.fi/URN:NBN:fi:au:finaf:$1"
   }
  },
  "wikidata-property:P9776": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": {
    "label": "e-Rad researcher number",
    "pattern": "https://nrid.nii.ac.jp/ja/nrid/10000$1"
   }
  },
  "wikidata-statements:Q100409486": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -3827,7 +3850,7 @@
   ]
  },
  "wikidata-statements:Q114718357": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -3849,7 +3872,7 @@
   ]
  },
  "wikidata-statements:Q116446553": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -3863,8 +3886,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -3926,8 +3949,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/givenName"
+     "https://schema.org/givenName",
+     "https://schema.org/name"
     ],
     "label": "given name",
     "property": "http://www.wikidata.org/entity/P735",
@@ -3937,7 +3960,7 @@
   ]
  },
  "wikidata-statements:Q117834010": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -3951,8 +3974,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -3977,8 +4000,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/alumniOf",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/alumniOf"
     ],
     "label": "educated at",
     "property": "http://www.wikidata.org/entity/P69",
@@ -3987,8 +4010,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/givenName"
+     "https://schema.org/givenName",
+     "https://schema.org/name"
     ],
     "label": "given name",
     "property": "http://www.wikidata.org/entity/P735",
@@ -3998,7 +4021,7 @@
   ]
  },
  "wikidata-statements:Q118146531": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [],
@@ -4026,8 +4049,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -4045,7 +4068,7 @@
   ]
  },
  "wikidata-statements:Q123631021": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -4077,7 +4100,7 @@
   ]
  },
  "wikidata-statements:Q123631063": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -4099,7 +4122,7 @@
   ]
  },
  "wikidata-statements:Q124399961": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -4130,7 +4153,7 @@
   ]
  },
  "wikidata-statements:Q127038569": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -4144,14 +4167,13 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
     "value": "http://www.wikidata.org/entity/Q156598",
-    "value_label": "Leiden University",
-    "value_type": "https://schema.org/Organization"
+    "value_label": "Leiden University"
    },
    {
     "equivalent": [
@@ -4171,8 +4193,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/givenName"
+     "https://schema.org/givenName",
+     "https://schema.org/name"
     ],
     "label": "given name",
     "property": "http://www.wikidata.org/entity/P735",
@@ -4182,7 +4204,7 @@
   ]
  },
  "wikidata-statements:Q130642378": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -4205,11 +4227,11 @@
    },
    {
     "equivalent": [
+     "https://schema.org/addressCountry",
      "https://schema.org/isPartOf",
-     "https://schema.org/location",
      "https://schema.org/itemLocation",
-     "https://schema.org/nationality",
-     "https://schema.org/addressCountry"
+     "https://schema.org/location",
+     "https://schema.org/nationality"
     ],
     "label": "country of citizenship",
     "property": "http://www.wikidata.org/entity/P27",
@@ -4235,7 +4257,7 @@
   ]
  },
  "wikidata-statements:Q136396711": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -4257,12 +4279,12 @@
   ]
  },
  "wikidata-statements:Q140771297": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -4280,7 +4302,7 @@
   ]
  },
  "wikidata-statements:Q19845608": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -4294,8 +4316,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -4331,10 +4353,10 @@
    {
     "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
     "equivalent": [
-     "https://schema.org/startTime",
-     "https://schema.org/startDate",
+     "https://schema.org/birthDate",
      "https://schema.org/dateCreated",
-     "https://schema.org/birthDate"
+     "https://schema.org/startDate",
+     "https://schema.org/startTime"
     ],
     "label": "date of birth",
     "property": "http://www.wikidata.org/entity/P569",
@@ -4352,8 +4374,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/givenName"
+     "https://schema.org/givenName",
+     "https://schema.org/name"
     ],
     "label": "given name",
     "property": "http://www.wikidata.org/entity/P735",
@@ -4363,7 +4385,7 @@
   ]
  },
  "wikidata-statements:Q19845625": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [],
@@ -4464,7 +4486,8 @@
     "label": "languages spoken, written or signed",
     "property": "http://www.wikidata.org/entity/P1412",
     "value": "http://www.wikidata.org/entity/Q33989",
-    "value_label": "Sranan Tongo"
+    "value_label": "Sranan Tongo",
+    "value_type": "https://schema.org/Language"
    },
    {
     "equivalent": [
@@ -4532,9 +4555,9 @@
    },
    {
     "equivalent": [
-     "https://schema.org/location",
+     "https://schema.org/birthPlace",
      "https://schema.org/itemLocation",
-     "https://schema.org/birthPlace"
+     "https://schema.org/location"
     ],
     "label": "place of birth",
     "property": "http://www.wikidata.org/entity/P19",
@@ -4552,11 +4575,11 @@
    },
    {
     "equivalent": [
+     "https://schema.org/addressCountry",
      "https://schema.org/isPartOf",
-     "https://schema.org/location",
      "https://schema.org/itemLocation",
-     "https://schema.org/nationality",
-     "https://schema.org/addressCountry"
+     "https://schema.org/location",
+     "https://schema.org/nationality"
     ],
     "label": "country of citizenship",
     "property": "http://www.wikidata.org/entity/P27",
@@ -4581,8 +4604,8 @@
    {
     "equivalent": [
      "https://schema.org/homeLocation",
-     "https://schema.org/location",
-     "https://schema.org/itemLocation"
+     "https://schema.org/itemLocation",
+     "https://schema.org/location"
     ],
     "label": "residence",
     "property": "http://www.wikidata.org/entity/P551",
@@ -4601,10 +4624,10 @@
    {
     "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
     "equivalent": [
-     "https://schema.org/startTime",
-     "https://schema.org/startDate",
+     "https://schema.org/birthDate",
      "https://schema.org/dateCreated",
-     "https://schema.org/birthDate"
+     "https://schema.org/startDate",
+     "https://schema.org/startTime"
     ],
     "label": "date of birth",
     "property": "http://www.wikidata.org/entity/P569",
@@ -4612,8 +4635,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/alumniOf",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/alumniOf"
     ],
     "label": "educated at",
     "property": "http://www.wikidata.org/entity/P69",
@@ -4623,14 +4646,13 @@
    },
    {
     "equivalent": [
-     "https://schema.org/alumniOf",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/alumniOf"
     ],
     "label": "educated at",
     "property": "http://www.wikidata.org/entity/P69",
     "value": "http://www.wikidata.org/entity/Q214341",
-    "value_label": "University of Amsterdam",
-    "value_type": "https://schema.org/ResearchOrganization"
+    "value_label": "University of Amsterdam"
    },
    {
     "equivalent": [
@@ -4644,8 +4666,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/givenName"
+     "https://schema.org/givenName",
+     "https://schema.org/name"
     ],
     "label": "given name",
     "property": "http://www.wikidata.org/entity/P735",
@@ -4662,7 +4684,7 @@
   ]
  },
  "wikidata-statements:Q19845641": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -4695,8 +4717,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -4835,10 +4857,10 @@
    {
     "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
     "equivalent": [
-     "https://schema.org/startTime",
-     "https://schema.org/startDate",
+     "https://schema.org/birthDate",
      "https://schema.org/dateCreated",
-     "https://schema.org/birthDate"
+     "https://schema.org/startDate",
+     "https://schema.org/startTime"
     ],
     "label": "date of birth",
     "property": "http://www.wikidata.org/entity/P569",
@@ -4856,8 +4878,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/givenName"
+     "https://schema.org/givenName",
+     "https://schema.org/name"
     ],
     "label": "given name",
     "property": "http://www.wikidata.org/entity/P735",
@@ -4866,8 +4888,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/givenName"
+     "https://schema.org/givenName",
+     "https://schema.org/name"
     ],
     "label": "given name",
     "property": "http://www.wikidata.org/entity/P735",
@@ -4876,8 +4898,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/givenName"
+     "https://schema.org/givenName",
+     "https://schema.org/name"
     ],
     "label": "given name",
     "property": "http://www.wikidata.org/entity/P735",
@@ -4894,7 +4916,7 @@
   ]
  },
  "wikidata-statements:Q19851164": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [],
@@ -4924,8 +4946,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -4981,11 +5003,11 @@
    },
    {
     "equivalent": [
+     "https://schema.org/addressCountry",
      "https://schema.org/isPartOf",
-     "https://schema.org/location",
      "https://schema.org/itemLocation",
-     "https://schema.org/nationality",
-     "https://schema.org/addressCountry"
+     "https://schema.org/location",
+     "https://schema.org/nationality"
     ],
     "label": "country of citizenship",
     "property": "http://www.wikidata.org/entity/P27",
@@ -5010,10 +5032,10 @@
    {
     "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
     "equivalent": [
-     "https://schema.org/startTime",
-     "https://schema.org/startDate",
+     "https://schema.org/birthDate",
      "https://schema.org/dateCreated",
-     "https://schema.org/birthDate"
+     "https://schema.org/startDate",
+     "https://schema.org/startTime"
     ],
     "label": "date of birth",
     "property": "http://www.wikidata.org/entity/P569",
@@ -5031,8 +5053,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/givenName"
+     "https://schema.org/givenName",
+     "https://schema.org/name"
     ],
     "label": "given name",
     "property": "http://www.wikidata.org/entity/P735",
@@ -5042,7 +5064,7 @@
   ]
  },
  "wikidata-statements:Q20895241": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [],
@@ -5162,8 +5184,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -5173,8 +5195,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -5183,8 +5205,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -5194,8 +5216,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -5205,8 +5227,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -5215,8 +5237,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -5377,9 +5399,9 @@
    },
    {
     "equivalent": [
-     "https://schema.org/location",
+     "https://schema.org/birthPlace",
      "https://schema.org/itemLocation",
-     "https://schema.org/birthPlace"
+     "https://schema.org/location"
     ],
     "label": "place of birth",
     "property": "http://www.wikidata.org/entity/P19",
@@ -5398,11 +5420,11 @@
    },
    {
     "equivalent": [
+     "https://schema.org/addressCountry",
      "https://schema.org/isPartOf",
-     "https://schema.org/location",
      "https://schema.org/itemLocation",
-     "https://schema.org/nationality",
-     "https://schema.org/addressCountry"
+     "https://schema.org/location",
+     "https://schema.org/nationality"
     ],
     "label": "country of citizenship",
     "property": "http://www.wikidata.org/entity/P27",
@@ -5434,9 +5456,9 @@
    },
    {
     "equivalent": [
-     "https://schema.org/memberOf",
+     "https://schema.org/affiliation",
      "https://schema.org/isPartOf",
-     "https://schema.org/affiliation"
+     "https://schema.org/memberOf"
     ],
     "label": "member of",
     "property": "http://www.wikidata.org/entity/P463",
@@ -5453,10 +5475,10 @@
    {
     "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
     "equivalent": [
-     "https://schema.org/startTime",
-     "https://schema.org/startDate",
+     "https://schema.org/birthDate",
      "https://schema.org/dateCreated",
-     "https://schema.org/birthDate"
+     "https://schema.org/startDate",
+     "https://schema.org/startTime"
     ],
     "label": "date of birth",
     "property": "http://www.wikidata.org/entity/P569",
@@ -5464,8 +5486,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/alumniOf",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/alumniOf"
     ],
     "label": "educated at",
     "property": "http://www.wikidata.org/entity/P69",
@@ -5484,8 +5506,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/givenName"
+     "https://schema.org/givenName",
+     "https://schema.org/name"
     ],
     "label": "given name",
     "property": "http://www.wikidata.org/entity/P735",
@@ -5494,8 +5516,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/givenName"
+     "https://schema.org/givenName",
+     "https://schema.org/name"
     ],
     "label": "given name",
     "property": "http://www.wikidata.org/entity/P735",
@@ -5527,7 +5549,7 @@
   ]
  },
  "wikidata-statements:Q27061849": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -5568,11 +5590,11 @@
    },
    {
     "equivalent": [
+     "https://schema.org/addressCountry",
      "https://schema.org/isPartOf",
-     "https://schema.org/location",
      "https://schema.org/itemLocation",
-     "https://schema.org/nationality",
-     "https://schema.org/addressCountry"
+     "https://schema.org/location",
+     "https://schema.org/nationality"
     ],
     "label": "country of citizenship",
     "property": "http://www.wikidata.org/entity/P27",
@@ -5590,10 +5612,10 @@
    {
     "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
     "equivalent": [
-     "https://schema.org/startTime",
-     "https://schema.org/startDate",
+     "https://schema.org/birthDate",
      "https://schema.org/dateCreated",
-     "https://schema.org/birthDate"
+     "https://schema.org/startDate",
+     "https://schema.org/startTime"
     ],
     "label": "date of birth",
     "property": "http://www.wikidata.org/entity/P569",
@@ -5601,8 +5623,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/alumniOf",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/alumniOf"
     ],
     "label": "educated at",
     "property": "http://www.wikidata.org/entity/P69",
@@ -5611,8 +5633,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/givenName"
+     "https://schema.org/givenName",
+     "https://schema.org/name"
     ],
     "label": "given name",
     "property": "http://www.wikidata.org/entity/P735",
@@ -5800,7 +5822,7 @@
   ]
  },
  "wikidata-statements:Q27987764": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -5813,8 +5835,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -5881,11 +5903,11 @@
    },
    {
     "equivalent": [
+     "https://schema.org/addressCountry",
      "https://schema.org/isPartOf",
-     "https://schema.org/location",
      "https://schema.org/itemLocation",
-     "https://schema.org/nationality",
-     "https://schema.org/addressCountry"
+     "https://schema.org/location",
+     "https://schema.org/nationality"
     ],
     "label": "country of citizenship",
     "property": "http://www.wikidata.org/entity/P27",
@@ -5903,10 +5925,10 @@
    {
     "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
     "equivalent": [
-     "https://schema.org/startTime",
-     "https://schema.org/startDate",
+     "https://schema.org/birthDate",
      "https://schema.org/dateCreated",
-     "https://schema.org/birthDate"
+     "https://schema.org/startDate",
+     "https://schema.org/startTime"
     ],
     "label": "date of birth",
     "property": "http://www.wikidata.org/entity/P569",
@@ -5914,8 +5936,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/alumniOf",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/alumniOf"
     ],
     "label": "educated at",
     "property": "http://www.wikidata.org/entity/P69",
@@ -5925,8 +5947,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/givenName"
+     "https://schema.org/givenName",
+     "https://schema.org/name"
     ],
     "label": "given name",
     "property": "http://www.wikidata.org/entity/P735",
@@ -5951,7 +5973,7 @@
   ]
  },
  "wikidata-statements:Q28025534": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -5974,8 +5996,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -5985,8 +6007,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -5995,8 +6017,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -6045,8 +6067,8 @@
     "equivalent": [
      "https://schema.org/addressCountry",
      "https://schema.org/isPartOf",
-     "https://schema.org/location",
      "https://schema.org/itemLocation",
+     "https://schema.org/location",
      "https://schema.org/nationality"
     ],
     "label": "country of citizenship",
@@ -6065,10 +6087,10 @@
    {
     "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
     "equivalent": [
-     "https://schema.org/startTime",
-     "https://schema.org/startDate",
+     "https://schema.org/birthDate",
      "https://schema.org/dateCreated",
-     "https://schema.org/birthDate"
+     "https://schema.org/startDate",
+     "https://schema.org/startTime"
     ],
     "label": "date of birth",
     "property": "http://www.wikidata.org/entity/P569",
@@ -6076,8 +6098,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/alumniOf",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/alumniOf"
     ],
     "label": "educated at",
     "property": "http://www.wikidata.org/entity/P69",
@@ -6086,8 +6108,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/alumniOf",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/alumniOf"
     ],
     "label": "educated at",
     "property": "http://www.wikidata.org/entity/P69",
@@ -6106,8 +6128,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/givenName"
+     "https://schema.org/givenName",
+     "https://schema.org/name"
     ],
     "label": "given name",
     "property": "http://www.wikidata.org/entity/P735",
@@ -6125,7 +6147,7 @@
   ]
  },
  "wikidata-statements:Q28530149": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -6167,8 +6189,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -6186,11 +6208,11 @@
    },
    {
     "equivalent": [
+     "https://schema.org/addressCountry",
      "https://schema.org/isPartOf",
-     "https://schema.org/location",
      "https://schema.org/itemLocation",
-     "https://schema.org/nationality",
-     "https://schema.org/addressCountry"
+     "https://schema.org/location",
+     "https://schema.org/nationality"
     ],
     "label": "country of citizenship",
     "property": "http://www.wikidata.org/entity/P27",
@@ -6208,10 +6230,10 @@
    {
     "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
     "equivalent": [
-     "https://schema.org/startTime",
-     "https://schema.org/startDate",
+     "https://schema.org/birthDate",
      "https://schema.org/dateCreated",
-     "https://schema.org/birthDate"
+     "https://schema.org/startDate",
+     "https://schema.org/startTime"
     ],
     "label": "date of birth",
     "property": "http://www.wikidata.org/entity/P569",
@@ -6219,8 +6241,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/alumniOf",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/alumniOf"
     ],
     "label": "educated at",
     "property": "http://www.wikidata.org/entity/P69",
@@ -6229,8 +6251,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/alumniOf",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/alumniOf"
     ],
     "label": "educated at",
     "property": "http://www.wikidata.org/entity/P69",
@@ -6239,8 +6261,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/familyName"
+     "https://schema.org/familyName",
+     "https://schema.org/name"
     ],
     "label": "family name",
     "property": "http://www.wikidata.org/entity/P734",
@@ -6249,8 +6271,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/givenName"
+     "https://schema.org/givenName",
+     "https://schema.org/name"
     ],
     "label": "given name",
     "property": "http://www.wikidata.org/entity/P735",
@@ -6260,7 +6282,7 @@
   ]
  },
  "wikidata-statements:Q28530416": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -6283,8 +6305,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -6294,19 +6316,18 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
     "value": "http://www.wikidata.org/entity/Q21015571",
-    "value_label": "Finnish Institute of Occupational Health",
-    "value_type": "https://schema.org/ResearchOrganization"
+    "value_label": "Finnish Institute of Occupational Health"
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -6344,11 +6365,11 @@
    },
    {
     "equivalent": [
+     "https://schema.org/addressCountry",
      "https://schema.org/isPartOf",
-     "https://schema.org/location",
      "https://schema.org/itemLocation",
-     "https://schema.org/nationality",
-     "https://schema.org/addressCountry"
+     "https://schema.org/location",
+     "https://schema.org/nationality"
     ],
     "label": "country of citizenship",
     "property": "http://www.wikidata.org/entity/P27",
@@ -6366,10 +6387,10 @@
    {
     "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
     "equivalent": [
-     "https://schema.org/startTime",
-     "https://schema.org/startDate",
+     "https://schema.org/birthDate",
      "https://schema.org/dateCreated",
-     "https://schema.org/birthDate"
+     "https://schema.org/startDate",
+     "https://schema.org/startTime"
     ],
     "label": "date of birth",
     "property": "http://www.wikidata.org/entity/P569",
@@ -6377,8 +6398,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/alumniOf",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/alumniOf"
     ],
     "label": "educated at",
     "property": "http://www.wikidata.org/entity/P69",
@@ -6388,8 +6409,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/familyName"
+     "https://schema.org/familyName",
+     "https://schema.org/name"
     ],
     "label": "family name",
     "property": "http://www.wikidata.org/entity/P734",
@@ -6398,8 +6419,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/givenName"
+     "https://schema.org/givenName",
+     "https://schema.org/name"
     ],
     "label": "given name",
     "property": "http://www.wikidata.org/entity/P735",
@@ -6409,7 +6430,7 @@
   ]
  },
  "wikidata-statements:Q28541054": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -6450,10 +6471,10 @@
    {
     "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
     "equivalent": [
-     "https://schema.org/startTime",
-     "https://schema.org/startDate",
+     "https://schema.org/birthDate",
      "https://schema.org/dateCreated",
-     "https://schema.org/birthDate"
+     "https://schema.org/startDate",
+     "https://schema.org/startTime"
     ],
     "label": "date of birth",
     "property": "http://www.wikidata.org/entity/P569",
@@ -6462,7 +6483,7 @@
   ]
  },
  "wikidata-statements:Q28651697": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -6476,8 +6497,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -6486,8 +6507,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -6548,10 +6569,10 @@
    {
     "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
     "equivalent": [
-     "https://schema.org/startTime",
-     "https://schema.org/startDate",
+     "https://schema.org/birthDate",
      "https://schema.org/dateCreated",
-     "https://schema.org/birthDate"
+     "https://schema.org/startDate",
+     "https://schema.org/startTime"
     ],
     "label": "date of birth",
     "property": "http://www.wikidata.org/entity/P569",
@@ -6559,8 +6580,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/alumniOf",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/alumniOf"
     ],
     "label": "educated at",
     "property": "http://www.wikidata.org/entity/P69",
@@ -6570,8 +6591,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/familyName"
+     "https://schema.org/familyName",
+     "https://schema.org/name"
     ],
     "label": "family name",
     "property": "http://www.wikidata.org/entity/P734",
@@ -6580,8 +6601,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/givenName"
+     "https://schema.org/givenName",
+     "https://schema.org/name"
     ],
     "label": "given name",
     "property": "http://www.wikidata.org/entity/P735",
@@ -6606,7 +6627,7 @@
   ]
  },
  "wikidata-statements:Q28865047": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -6620,8 +6641,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -6647,10 +6668,10 @@
    {
     "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
     "equivalent": [
-     "https://schema.org/startTime",
-     "https://schema.org/startDate",
+     "https://schema.org/birthDate",
      "https://schema.org/dateCreated",
-     "https://schema.org/birthDate"
+     "https://schema.org/startDate",
+     "https://schema.org/startTime"
     ],
     "label": "date of birth",
     "property": "http://www.wikidata.org/entity/P569",
@@ -6658,8 +6679,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/alumniOf",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/alumniOf"
     ],
     "label": "educated at",
     "property": "http://www.wikidata.org/entity/P69",
@@ -6668,8 +6689,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/givenName"
+     "https://schema.org/givenName",
+     "https://schema.org/name"
     ],
     "label": "given name",
     "property": "http://www.wikidata.org/entity/P735",
@@ -6679,7 +6700,7 @@
   ]
  },
  "wikidata-statements:Q39585759": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -6712,8 +6733,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -6723,9 +6744,9 @@
    },
    {
     "equivalent": [
-     "https://schema.org/location",
+     "https://schema.org/birthPlace",
      "https://schema.org/itemLocation",
-     "https://schema.org/birthPlace"
+     "https://schema.org/location"
     ],
     "label": "place of birth",
     "property": "http://www.wikidata.org/entity/P19",
@@ -6752,10 +6773,10 @@
    {
     "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
     "equivalent": [
-     "https://schema.org/startTime",
-     "https://schema.org/startDate",
+     "https://schema.org/birthDate",
      "https://schema.org/dateCreated",
-     "https://schema.org/birthDate"
+     "https://schema.org/startDate",
+     "https://schema.org/startTime"
     ],
     "label": "date of birth",
     "property": "http://www.wikidata.org/entity/P569",
@@ -6763,8 +6784,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/givenName"
+     "https://schema.org/givenName",
+     "https://schema.org/name"
     ],
     "label": "given name",
     "property": "http://www.wikidata.org/entity/P735",
@@ -6774,7 +6795,7 @@
   ]
  },
  "wikidata-statements:Q42369611": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [],
@@ -6794,8 +6815,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -6854,8 +6875,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/alumniOf",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/alumniOf"
     ],
     "label": "educated at",
     "property": "http://www.wikidata.org/entity/P69",
@@ -6865,8 +6886,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/alumniOf",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/alumniOf"
     ],
     "label": "educated at",
     "property": "http://www.wikidata.org/entity/P69",
@@ -6875,8 +6896,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/alumniOf",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/alumniOf"
     ],
     "label": "educated at",
     "property": "http://www.wikidata.org/entity/P69",
@@ -6885,8 +6906,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/familyName"
+     "https://schema.org/familyName",
+     "https://schema.org/name"
     ],
     "label": "family name",
     "property": "http://www.wikidata.org/entity/P734",
@@ -6895,8 +6916,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/givenName"
+     "https://schema.org/givenName",
+     "https://schema.org/name"
     ],
     "label": "given name",
     "property": "http://www.wikidata.org/entity/P735",
@@ -6935,7 +6956,7 @@
   ]
  },
  "wikidata-statements:Q43370277": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -6949,8 +6970,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -6976,10 +6997,10 @@
    {
     "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
     "equivalent": [
-     "https://schema.org/startTime",
-     "https://schema.org/startDate",
+     "https://schema.org/birthDate",
      "https://schema.org/dateCreated",
-     "https://schema.org/birthDate"
+     "https://schema.org/startDate",
+     "https://schema.org/startTime"
     ],
     "label": "date of birth",
     "property": "http://www.wikidata.org/entity/P569",
@@ -6987,8 +7008,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/givenName"
+     "https://schema.org/givenName",
+     "https://schema.org/name"
     ],
     "label": "given name",
     "property": "http://www.wikidata.org/entity/P735",
@@ -7005,7 +7026,7 @@
   ]
  },
  "wikidata-statements:Q43744369": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [],
@@ -7045,8 +7066,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -7098,11 +7119,11 @@
    },
    {
     "equivalent": [
+     "https://schema.org/addressCountry",
      "https://schema.org/isPartOf",
-     "https://schema.org/location",
      "https://schema.org/itemLocation",
-     "https://schema.org/nationality",
-     "https://schema.org/addressCountry"
+     "https://schema.org/location",
+     "https://schema.org/nationality"
     ],
     "label": "country of citizenship",
     "property": "http://www.wikidata.org/entity/P27",
@@ -7126,19 +7147,18 @@
    },
    {
     "equivalent": [
-     "https://schema.org/alumniOf",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/alumniOf"
     ],
     "label": "educated at",
     "property": "http://www.wikidata.org/entity/P69",
     "value": "http://www.wikidata.org/entity/Q214341",
-    "value_label": "University of Amsterdam",
-    "value_type": "https://schema.org/ResearchOrganization"
+    "value_label": "University of Amsterdam"
    },
    {
     "equivalent": [
-     "https://schema.org/alumniOf",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/alumniOf"
     ],
     "label": "educated at",
     "property": "http://www.wikidata.org/entity/P69",
@@ -7147,8 +7167,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/givenName"
+     "https://schema.org/givenName",
+     "https://schema.org/name"
     ],
     "label": "given name",
     "property": "http://www.wikidata.org/entity/P735",
@@ -7158,7 +7178,7 @@
   ]
  },
  "wikidata-statements:Q45351113": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -7172,8 +7192,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -7199,8 +7219,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/givenName"
+     "https://schema.org/givenName",
+     "https://schema.org/name"
     ],
     "label": "given name",
     "property": "http://www.wikidata.org/entity/P735",
@@ -7210,7 +7230,7 @@
   ]
  },
  "wikidata-statements:Q45907528": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [],
@@ -7278,8 +7298,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/alumniOf",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/alumniOf"
     ],
     "label": "educated at",
     "property": "http://www.wikidata.org/entity/P69",
@@ -7288,8 +7308,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/familyName"
+     "https://schema.org/familyName",
+     "https://schema.org/name"
     ],
     "label": "family name",
     "property": "http://www.wikidata.org/entity/P734",
@@ -7298,8 +7318,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/givenName"
+     "https://schema.org/givenName",
+     "https://schema.org/name"
     ],
     "label": "given name",
     "property": "http://www.wikidata.org/entity/P735",
@@ -7308,8 +7328,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/givenName"
+     "https://schema.org/givenName",
+     "https://schema.org/name"
     ],
     "label": "given name",
     "property": "http://www.wikidata.org/entity/P735",
@@ -7914,7 +7934,7 @@
   ]
  },
  "wikidata-statements:Q51602692": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [],
@@ -7983,8 +8003,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -8031,9 +8051,9 @@
    },
    {
     "equivalent": [
-     "https://schema.org/location",
+     "https://schema.org/birthPlace",
      "https://schema.org/itemLocation",
-     "https://schema.org/birthPlace"
+     "https://schema.org/location"
     ],
     "label": "place of birth",
     "property": "http://www.wikidata.org/entity/P19",
@@ -8061,11 +8081,11 @@
    },
    {
     "equivalent": [
+     "https://schema.org/addressCountry",
      "https://schema.org/isPartOf",
-     "https://schema.org/location",
      "https://schema.org/itemLocation",
-     "https://schema.org/nationality",
-     "https://schema.org/addressCountry"
+     "https://schema.org/location",
+     "https://schema.org/nationality"
     ],
     "label": "country of citizenship",
     "property": "http://www.wikidata.org/entity/P27",
@@ -8083,10 +8103,10 @@
    {
     "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
     "equivalent": [
-     "https://schema.org/startTime",
-     "https://schema.org/startDate",
+     "https://schema.org/birthDate",
      "https://schema.org/dateCreated",
-     "https://schema.org/birthDate"
+     "https://schema.org/startDate",
+     "https://schema.org/startTime"
     ],
     "label": "date of birth",
     "property": "http://www.wikidata.org/entity/P569",
@@ -8101,8 +8121,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/alumniOf",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/alumniOf"
     ],
     "label": "educated at",
     "property": "http://www.wikidata.org/entity/P69",
@@ -8111,8 +8131,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/familyName"
+     "https://schema.org/familyName",
+     "https://schema.org/name"
     ],
     "label": "family name",
     "property": "http://www.wikidata.org/entity/P734",
@@ -8121,8 +8141,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/givenName"
+     "https://schema.org/givenName",
+     "https://schema.org/name"
     ],
     "label": "given name",
     "property": "http://www.wikidata.org/entity/P735",
@@ -8162,7 +8182,7 @@
   ]
  },
  "wikidata-statements:Q54302726": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -8176,24 +8196,24 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
     "value": "http://www.wikidata.org/entity/Q11346475",
-    "value_label": "Database Division for Life Science",
-    "value_type": "https://schema.org/ResearchOrganization"
+    "value_label": "Database Division for Life Science"
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
     "value": "http://www.wikidata.org/entity/Q11492802",
-    "value_label": "Research Organization of Information and Systems"
+    "value_label": "Research Organization of Information and Systems",
+    "value_type": "https://schema.org/ResearchOrganization"
    },
    {
     "datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
@@ -8207,11 +8227,11 @@
    },
    {
     "equivalent": [
+     "https://schema.org/addressCountry",
      "https://schema.org/isPartOf",
-     "https://schema.org/location",
      "https://schema.org/itemLocation",
-     "https://schema.org/nationality",
-     "https://schema.org/addressCountry"
+     "https://schema.org/location",
+     "https://schema.org/nationality"
     ],
     "label": "country of citizenship",
     "property": "http://www.wikidata.org/entity/P27",
@@ -8229,7 +8249,7 @@
   ]
  },
  "wikidata-statements:Q54303216": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -8243,8 +8263,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -8254,8 +8274,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -8264,8 +8284,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -8274,8 +8294,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -8285,8 +8305,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -8295,8 +8315,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -8328,8 +8348,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/alumniOf",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/alumniOf"
     ],
     "label": "educated at",
     "property": "http://www.wikidata.org/entity/P69",
@@ -8340,7 +8360,7 @@
   ]
  },
  "wikidata-statements:Q55453416": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [],
@@ -8370,8 +8390,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -8413,9 +8433,9 @@
    },
    {
     "equivalent": [
-     "https://schema.org/location",
+     "https://schema.org/birthPlace",
      "https://schema.org/itemLocation",
-     "https://schema.org/birthPlace"
+     "https://schema.org/location"
     ],
     "label": "place of birth",
     "property": "http://www.wikidata.org/entity/P19",
@@ -8441,10 +8461,10 @@
    {
     "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
     "equivalent": [
-     "https://schema.org/startTime",
-     "https://schema.org/startDate",
+     "https://schema.org/birthDate",
      "https://schema.org/dateCreated",
-     "https://schema.org/birthDate"
+     "https://schema.org/startDate",
+     "https://schema.org/startTime"
     ],
     "label": "date of birth",
     "property": "http://www.wikidata.org/entity/P569",
@@ -8452,8 +8472,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/familyName"
+     "https://schema.org/familyName",
+     "https://schema.org/name"
     ],
     "label": "family name",
     "property": "http://www.wikidata.org/entity/P734",
@@ -8462,8 +8482,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/givenName"
+     "https://schema.org/givenName",
+     "https://schema.org/name"
     ],
     "label": "given name",
     "property": "http://www.wikidata.org/entity/P735",
@@ -8481,7 +8501,7 @@
   ]
  },
  "wikidata-statements:Q56459199": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -8495,8 +8515,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -8506,8 +8526,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -8516,8 +8536,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -8534,7 +8554,7 @@
   ]
  },
  "wikidata-statements:Q56510144": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -8556,7 +8576,7 @@
   ]
  },
  "wikidata-statements:Q56888653": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -8570,14 +8590,13 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
     "value": "http://www.wikidata.org/entity/Q3152521",
-    "value_label": "SIB Swiss Institute of Bioinformatics",
-    "value_type": "https://schema.org/ResearchOrganization"
+    "value_label": "SIB Swiss Institute of Bioinformatics"
    },
    {
     "equivalent": [],
@@ -8603,7 +8622,7 @@
   ]
  },
  "wikidata-statements:Q57058833": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -8617,19 +8636,18 @@
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
     "value": "http://www.wikidata.org/entity/Q1555500",
-    "value_label": "Heidelberg Institute for Theoretical Studies",
-    "value_type": "https://schema.org/ResearchOrganization"
+    "value_label": "Heidelberg Institute for Theoretical Studies"
    },
    {
     "equivalent": [
-     "https://schema.org/worksFor",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/worksFor"
     ],
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
@@ -8654,8 +8672,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/alumniOf",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/alumniOf"
     ],
     "label": "educated at",
     "property": "http://www.wikidata.org/entity/P69",
@@ -8664,8 +8682,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/alumniOf",
-     "https://schema.org/affiliation"
+     "https://schema.org/affiliation",
+     "https://schema.org/alumniOf"
     ],
     "label": "educated at",
     "property": "http://www.wikidata.org/entity/P69",
@@ -8674,8 +8692,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/familyName"
+     "https://schema.org/familyName",
+     "https://schema.org/name"
     ],
     "label": "family name",
     "property": "http://www.wikidata.org/entity/P734",
@@ -8684,8 +8702,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/givenName"
+     "https://schema.org/givenName",
+     "https://schema.org/name"
     ],
     "label": "given name",
     "property": "http://www.wikidata.org/entity/P735",
@@ -8695,7 +8713,7 @@
   ]
  },
  "wikidata-statements:Q58484212": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -8715,8 +8733,7 @@
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
     "value": "http://www.wikidata.org/entity/Q11346475",
-    "value_label": "Database Division for Life Science",
-    "value_type": "https://schema.org/ResearchOrganization"
+    "value_label": "Database Division for Life Science"
    },
    {
     "equivalent": [
@@ -8729,11 +8746,11 @@
    },
    {
     "equivalent": [
+     "https://schema.org/addressCountry",
      "https://schema.org/isPartOf",
-     "https://schema.org/location",
      "https://schema.org/itemLocation",
-     "https://schema.org/nationality",
-     "https://schema.org/addressCountry"
+     "https://schema.org/location",
+     "https://schema.org/nationality"
     ],
     "label": "country of citizenship",
     "property": "http://www.wikidata.org/entity/P27",
@@ -8761,7 +8778,7 @@
   ]
  },
  "wikidata-statements:Q59490274": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -8781,8 +8798,7 @@
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
     "value": "http://www.wikidata.org/entity/Q11346475",
-    "value_label": "Database Division for Life Science",
-    "value_type": "https://schema.org/ResearchOrganization"
+    "value_label": "Database Division for Life Science"
    },
    {
     "equivalent": [
@@ -8795,11 +8811,11 @@
    },
    {
     "equivalent": [
+     "https://schema.org/addressCountry",
      "https://schema.org/isPartOf",
-     "https://schema.org/location",
      "https://schema.org/itemLocation",
-     "https://schema.org/nationality",
-     "https://schema.org/addressCountry"
+     "https://schema.org/location",
+     "https://schema.org/nationality"
     ],
     "label": "country of citizenship",
     "property": "http://www.wikidata.org/entity/P27",
@@ -8817,7 +8833,7 @@
   ]
  },
  "wikidata-statements:Q63958202": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -8837,8 +8853,7 @@
     "label": "employer",
     "property": "http://www.wikidata.org/entity/P108",
     "value": "http://www.wikidata.org/entity/Q1203864",
-    "value_label": "Leibniz Institute DSMZ-German Collection of Microorganisms and Cell Cultures",
-    "value_type": "https://schema.org/ResearchOrganization"
+    "value_label": "Leibniz Institute DSMZ-German Collection of Microorganisms and Cell Cultures"
    },
    {
     "equivalent": [
@@ -8858,8 +8873,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/familyName"
+     "https://schema.org/familyName",
+     "https://schema.org/name"
     ],
     "label": "family name",
     "property": "http://www.wikidata.org/entity/P734",
@@ -8868,8 +8883,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/givenName"
+     "https://schema.org/givenName",
+     "https://schema.org/name"
     ],
     "label": "given name",
     "property": "http://www.wikidata.org/entity/P735",
@@ -8879,7 +8894,7 @@
   ]
  },
  "wikidata-statements:Q70206064": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [],
@@ -8935,7 +8950,7 @@
     "property": "http://www.wikidata.org/entity/P1416",
     "value": "http://www.wikidata.org/entity/Q67200492",
     "value_label": "Fraunhofer SCAI - Department of Bioinformatics",
-    "value_type": "https://schema.org/department"
+    "value_type": "https://schema.org/Organization"
    },
    {
     "equivalent": [],
@@ -8997,7 +9012,7 @@
   ]
  },
  "wikidata-statements:Q86442640": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -9073,8 +9088,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/givenName"
+     "https://schema.org/givenName",
+     "https://schema.org/name"
     ],
     "label": "given name",
     "property": "http://www.wikidata.org/entity/P735",
@@ -9084,7 +9099,7 @@
   ]
  },
  "wikidata-statements:Q88046313": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -9114,8 +9129,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/familyName"
+     "https://schema.org/familyName",
+     "https://schema.org/name"
     ],
     "label": "family name",
     "property": "http://www.wikidata.org/entity/P734",
@@ -9124,8 +9139,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/givenName"
+     "https://schema.org/givenName",
+     "https://schema.org/name"
     ],
     "label": "given name",
     "property": "http://www.wikidata.org/entity/P735",
@@ -9135,7 +9150,7 @@
   ]
  },
  "wikidata-statements:Q89321648": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -9189,7 +9204,7 @@
   ]
  },
  "wikidata-statements:Q89571039": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -9281,11 +9296,11 @@
    },
    {
     "equivalent": [
+     "https://schema.org/addressCountry",
      "https://schema.org/isPartOf",
-     "https://schema.org/location",
      "https://schema.org/itemLocation",
-     "https://schema.org/nationality",
-     "https://schema.org/addressCountry"
+     "https://schema.org/location",
+     "https://schema.org/nationality"
     ],
     "label": "country of citizenship",
     "property": "http://www.wikidata.org/entity/P27",
@@ -9303,10 +9318,10 @@
    {
     "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
     "equivalent": [
-     "https://schema.org/startTime",
-     "https://schema.org/startDate",
+     "https://schema.org/birthDate",
      "https://schema.org/dateCreated",
-     "https://schema.org/birthDate"
+     "https://schema.org/startDate",
+     "https://schema.org/startTime"
     ],
     "label": "date of birth",
     "property": "http://www.wikidata.org/entity/P569",
@@ -9331,8 +9346,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/familyName"
+     "https://schema.org/familyName",
+     "https://schema.org/name"
     ],
     "label": "family name",
     "property": "http://www.wikidata.org/entity/P734",
@@ -9341,8 +9356,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/givenName"
+     "https://schema.org/givenName",
+     "https://schema.org/name"
     ],
     "label": "given name",
     "property": "http://www.wikidata.org/entity/P735",
@@ -9352,7 +9367,7 @@
   ]
  },
  "wikidata-statements:Q92186214": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -9403,8 +9418,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/givenName"
+     "https://schema.org/givenName",
+     "https://schema.org/name"
     ],
     "label": "given name",
     "property": "http://www.wikidata.org/entity/P735",
@@ -9414,7 +9429,7 @@
   ]
  },
  "wikidata-statements:Q96189622": {
-  "checked": "2026-09-26",
+  "checked": "2026-10-26",
   "value": [
    {
     "equivalent": [
@@ -9444,8 +9459,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/familyName"
+     "https://schema.org/familyName",
+     "https://schema.org/name"
     ],
     "label": "family name",
     "property": "http://www.wikidata.org/entity/P734",
@@ -9454,8 +9469,8 @@
    },
    {
     "equivalent": [
-     "https://schema.org/name",
-     "https://schema.org/givenName"
+     "https://schema.org/givenName",
+     "https://schema.org/name"
     ],
     "label": "given name",
     "property": "http://www.wikidata.org/entity/P735",
@@ -9465,19 +9480,19 @@
   ]
  },
  "wikidata-work:10.1016/j.toxlet.2025.07.1074": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "wikidata-work:10.1038/s41597-026-07345-6": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "wikidata-work:10.1093/bioinformatics/btag064": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "wikidata-work:10.1093/nar/gkad960": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "item": "http://www.wikidata.org/entity/Q116446553",
@@ -9693,11 +9708,11 @@
   ]
  },
  "wikidata-work:10.24406/publica-8969": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "wikidata-work:10.3389/fphy.2023.1271842": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "item": "http://www.wikidata.org/entity/Q116446553",
@@ -9819,7 +9834,7 @@
   ]
  },
  "wikidata-work:10.37044/osf.io/8qeh5_v1": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "item": "http://www.wikidata.org/entity/Q116446553",
@@ -9891,11 +9906,11 @@
   ]
  },
  "wikidata-work:10.37044/osf.io/ptmg5_v1": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": []
  },
  "wikidata-work:10.37044/osf.io/un2rw": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "item": "http://www.wikidata.org/entity/Q116446553",
@@ -10039,7 +10054,7 @@
   ]
  },
  "wikidata:Q100409486": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "ids": [
@@ -10055,7 +10070,7 @@
   ]
  },
  "wikidata:Q114718357": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "ids": [
@@ -10071,7 +10086,7 @@
   ]
  },
  "wikidata:Q116446553": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "gh": "jmillanacosta",
@@ -10092,7 +10107,7 @@
   ]
  },
  "wikidata:Q117834010": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "ids": [
@@ -10108,7 +10123,7 @@
   ]
  },
  "wikidata:Q118146531": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "ids": [
@@ -10124,7 +10139,7 @@
   ]
  },
  "wikidata:Q123631021": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "ids": [
@@ -10140,7 +10155,7 @@
   ]
  },
  "wikidata:Q123631063": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "ids": [
@@ -10156,7 +10171,7 @@
   ]
  },
  "wikidata:Q124399961": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "ids": [
@@ -10172,7 +10187,7 @@
   ]
  },
  "wikidata:Q127038569": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "ids": [
@@ -10188,7 +10203,7 @@
   ]
  },
  "wikidata:Q130642378": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "gh": "hasanbalci",
@@ -10214,7 +10229,7 @@
   ]
  },
  "wikidata:Q136396711": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "ids": [
@@ -10230,17 +10245,17 @@
   ]
  },
  "wikidata:Q140771297": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "ids": [
      [
-      "P1960",
-      "UWQ4b4IAAAAJ"
-     ],
-     [
       "P496",
       "0000-0002-4409-1974"
+     ],
+     [
+      "P1960",
+      "UWQ4b4IAAAAJ"
      ],
      [
       "P2798",
@@ -10254,7 +10269,7 @@
   ]
  },
  "wikidata:Q19845608": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "ids": [
@@ -10278,7 +10293,7 @@
   ]
  },
  "wikidata:Q19845625": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "gh": "andrawaag",
@@ -10292,6 +10307,10 @@
       "25652418300"
      ],
      [
+      "P1960",
+      "klqHM4sAAAAJ"
+     ],
+     [
       "P2002",
       "andrawaag"
      ],
@@ -10300,40 +10319,36 @@
       "andrawaag"
      ],
      [
-      "P4232",
-      "97751"
+      "P2397",
+      "UCflBtXUtiSUaUl4ySVGApfw"
      ],
      [
       "P2456",
       "118/8399"
      ],
      [
-      "P1960",
-      "klqHM4sAAAAJ"
-     ],
-     [
       "P4012",
       "2403074"
      ],
      [
-      "P6660",
-      "200091"
-     ],
-     [
-      "P2397",
-      "UCflBtXUtiSUaUl4ySVGApfw"
+      "P4033",
+      "Andrawaag@genomic.social"
      ],
      [
       "P4174",
       "Andrawaag"
      ],
      [
-      "P6178",
-      "01154164265.41"
+      "P4232",
+      "97751"
      ],
      [
       "P6023",
       "2083174977"
+     ],
+     [
+      "P6178",
+      "01154164265.41"
      ],
      [
       "P6366",
@@ -10344,28 +10359,28 @@
       "andra-waagmeester-4785792"
      ],
      [
-      "P10897",
-      "R68128"
-     ],
-     [
-      "P4033",
-      "Andrawaag@genomic.social"
+      "P6660",
+      "200091"
      ],
      [
       "P10861",
       "01154164265.41"
      ],
      [
+      "P10897",
+      "R68128"
+     ],
+     [
       "P11245",
       "andrawaagmeester5518"
      ],
      [
-      "P12045",
-      "andrawaag"
-     ],
-     [
       "P12022",
       "488776"
+     ],
+     [
+      "P12045",
+      "andrawaag"
      ]
     ],
     "item": "http://www.wikidata.org/entity/Q19845625",
@@ -10375,15 +10390,11 @@
   ]
  },
  "wikidata:Q19845641": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "gh": "Chris-Evelo",
     "ids": [
-     [
-      "P496",
-      "0000-0002-5301-3142"
-     ],
      [
       "P213",
       "0000000397135632"
@@ -10393,24 +10404,36 @@
       "292237755"
      ],
      [
-      "P2037",
-      "Chris-Evelo"
+      "P227",
+      "1209971186"
      ],
      [
-      "P2002",
-      "Chris_Evelo"
+      "P496",
+      "0000-0002-5301-3142"
      ],
      [
-      "P1960",
-      "2dm_Du0AAAAJ"
+      "P1006",
+      "069261504"
      ],
      [
       "P1153",
       "7003950754"
      ],
      [
-      "P1006",
-      "069261504"
+      "P1960",
+      "2dm_Du0AAAAJ"
+     ],
+     [
+      "P2002",
+      "Chris_Evelo"
+     ],
+     [
+      "P2013",
+      "chrisevelo"
+     ],
+     [
+      "P2037",
+      "Chris-Evelo"
      ],
      [
       "P2381",
@@ -10421,36 +10444,28 @@
       "74/5894"
      ],
      [
-      "P7449",
-      "PRS1311973"
+      "P4174",
+      "Chris Evelo"
      ],
      [
       "P6178",
       "0724301327.68"
      ],
      [
-      "P2013",
-      "chrisevelo"
-     ],
-     [
       "P6634",
       "chrisevelo"
      ],
      [
-      "P10861",
-      "0724301327.68"
-     ],
-     [
-      "P227",
-      "1209971186"
+      "P7449",
+      "PRS1311973"
      ],
      [
       "P10832",
       "E39PBJfx49FHKfyXCQfBFYgxjC"
      ],
      [
-      "P4174",
-      "Chris Evelo"
+      "P10861",
+      "0724301327.68"
      ],
      [
       "P13049",
@@ -10464,25 +10479,37 @@
   ]
  },
  "wikidata:Q19851164": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "ids": [
      [
-      "P496",
-      "0000-0003-1224-9690"
+      "P214",
+      "6974158982607256190006"
      ],
      [
-      "P2002",
-      "SusanCoort"
+      "P227",
+      "120998556X"
+     ],
+     [
+      "P496",
+      "0000-0003-1224-9690"
      ],
      [
       "P1960",
       "XyHJkkMAAAAJ"
      ],
      [
+      "P2002",
+      "SusanCoort"
+     ],
+     [
       "P2456",
       "01/7107"
+     ],
+     [
+      "P4033",
+      "susancoort@akademienl.social"
      ],
      [
       "P6178",
@@ -10491,18 +10518,6 @@
      [
       "P10861",
       "01252344370.39"
-     ],
-     [
-      "P227",
-      "120998556X"
-     ],
-     [
-      "P214",
-      "6974158982607256190006"
-     ],
-     [
-      "P4033",
-      "susancoort@akademienl.social"
      ],
      [
       "P13049",
@@ -10516,26 +10531,34 @@
   ]
  },
  "wikidata:Q20895241": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "gh": "egonw",
     "ids": [
      [
+      "P213",
+      "0000000389212124"
+     ],
+     [
       "P214",
       "81695167"
+     ],
+     [
+      "P227",
+      "120995639X"
      ],
      [
       "P496",
       "0000-0001-7542-0286"
      ],
      [
-      "P2037",
-      "egonw"
+      "P1006",
+      "308108485"
      ],
      [
-      "P213",
-      "0000000389212124"
+      "P1015",
+      "14028450"
      ],
      [
       "P1053",
@@ -10546,36 +10569,48 @@
       "6507481906"
      ],
      [
-      "P4232",
-      "96390"
-     ],
-     [
       "P1960",
       "u8SjMZ0AAAAJ"
      ],
      [
-      "P2798",
-      "348499"
+      "P2037",
+      "egonw"
+     ],
+     [
+      "P2381",
+      "753992"
      ],
      [
       "P2456",
       "99/3476"
      ],
      [
-      "P4174",
-      "Egonw"
+      "P2671",
+      "/g/11ckvf98t2"
+     ],
+     [
+      "P2798",
+      "348499"
+     ],
+     [
+      "P4033",
+      "egonw@social.edu.nl"
      ],
      [
       "P4174",
       "Egon_Willighagen"
      ],
      [
-      "P1006",
-      "308108485"
+      "P4174",
+      "Egonw"
      ],
      [
-      "P4033",
-      "egonw@social.edu.nl"
+      "P4232",
+      "96390"
+     ],
+     [
+      "P6023",
+      "39655307"
      ],
      [
       "P6178",
@@ -10586,40 +10621,28 @@
       "303257169"
      ],
      [
-      "P7449",
-      "PRS1326065"
-     ],
-     [
       "P6634",
       "egon-willighagen"
      ],
      [
-      "P6023",
-      "39655307"
-     ],
-     [
-      "P10557",
-      "egonw"
+      "P7449",
+      "PRS1326065"
      ],
      [
       "P10283",
       "a5060194743"
      ],
      [
-      "P10897",
-      "R68155"
-     ],
-     [
-      "P1015",
-      "14028450"
-     ],
-     [
-      "P227",
-      "120995639X"
+      "P10557",
+      "egonw"
      ],
      [
       "P10861",
       "01025257214.29"
+     ],
+     [
+      "P10897",
+      "R68155"
      ],
      [
       "P11249",
@@ -10630,24 +10653,16 @@
       "egonw"
      ],
      [
-      "P2671",
-      "/g/11ckvf98t2"
-     ],
-     [
-      "P2381",
-      "753992"
-     ],
-     [
-      "P13049",
-      "120995639X"
+      "P12361",
+      "egonw.mastodon.social.ap.brid.gy"
      ],
      [
       "P12361",
       "egonw.social.edu.nl.ap.brid.gy"
      ],
      [
-      "P12361",
-      "egonw.mastodon.social.ap.brid.gy"
+      "P13049",
+      "120995639X"
      ],
      [
       "P14252",
@@ -10662,27 +10677,11 @@
   ]
  },
  "wikidata:Q27061849": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "gh": "vedina",
     "ids": [
-     [
-      "P2002",
-      "10705013"
-     ],
-     [
-      "P2037",
-      "vedina"
-     ],
-     [
-      "P1960",
-      "2eBL2WMAAAAJ"
-     ],
-     [
-      "P2038",
-      "Nina_Jeliazkova"
-     ],
      [
       "P496",
       "0000-0002-4322-6179"
@@ -10692,12 +10691,32 @@
       "8378341000"
      ],
      [
+      "P1960",
+      "2eBL2WMAAAAJ"
+     ],
+     [
+      "P2002",
+      "10705013"
+     ],
+     [
+      "P2037",
+      "vedina"
+     ],
+     [
+      "P2038",
+      "Nina_Jeliazkova"
+     ],
+     [
       "P2456",
       "83/4154"
      ],
      [
       "P2798",
       "740592"
+     ],
+     [
+      "P4033",
+      "n10705013@mastodon.social"
      ],
      [
       "P6178",
@@ -10710,10 +10729,6 @@
      [
       "P10861",
       "01073372414.07"
-     ],
-     [
-      "P4033",
-      "n10705013@mastodon.social"
      ]
     ],
     "item": "http://www.wikidata.org/entity/Q27061849",
@@ -10817,18 +10832,18 @@
   ]
  },
  "wikidata:Q27987764": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "gh": "mkutmon",
     "ids": [
      [
-      "P1960",
-      "w8Y7oXAAAAAJ"
-     ],
-     [
       "P496",
       "0000-0002-7699-8191"
+     ],
+     [
+      "P1960",
+      "w8Y7oXAAAAAJ"
      ],
      [
       "P2002",
@@ -10839,28 +10854,28 @@
       "mkutmon"
      ],
      [
-      "P4232",
-      "547830"
+      "P2038",
+      "Martina_Kutmon"
      ],
      [
       "P2456",
       "93/11250"
      ],
      [
+      "P4033",
+      "mkutmon@social.edu.nl"
+     ],
+     [
+      "P4232",
+      "547830"
+     ],
+     [
       "P6178",
       "01021325107.94"
      ],
      [
-      "P2038",
-      "Martina_Kutmon"
-     ],
-     [
       "P10861",
       "01021325107.94"
-     ],
-     [
-      "P4033",
-      "mkutmon@social.edu.nl"
      ]
     ],
     "item": "http://www.wikidata.org/entity/Q27987764",
@@ -10871,10 +10886,22 @@
   ]
  },
  "wikidata:Q28025534": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "ids": [
+     [
+      "P213",
+      "0000000139642412"
+     ],
+     [
+      "P214",
+      "219093961"
+     ],
+     [
+      "P227",
+      "1017123535"
+     ],
      [
       "P496",
       "0000-0002-7770-620X"
@@ -10884,40 +10911,28 @@
       "RM_XJc4AAAAJ"
      ],
      [
-      "P6634",
-      "friederike-ehrhart-41a18174"
-     ],
-     [
-      "P6178",
-      "01010764054.61"
+      "P2671",
+      "/g/11ddyj3q8_"
      ],
      [
       "P4174",
       "Fehrhart"
      ],
      [
+      "P6178",
+      "01010764054.61"
+     ],
+     [
+      "P6634",
+      "friederike-ehrhart-41a18174"
+     ],
+     [
       "P10861",
       "01010764054.61"
      ],
      [
-      "P227",
-      "1017123535"
-     ],
-     [
-      "P214",
-      "219093961"
-     ],
-     [
-      "P2671",
-      "/g/11ddyj3q8_"
-     ],
-     [
       "P13049",
       "1017123535"
-     ],
-     [
-      "P213",
-      "0000000139642412"
      ]
     ],
     "item": "http://www.wikidata.org/entity/Q28025534",
@@ -10928,10 +10943,18 @@
   ]
  },
  "wikidata:Q28530149": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "ids": [
+     [
+      "P214",
+      "4303158982599556190007"
+     ],
+     [
+      "P227",
+      "1209952807"
+     ],
      [
       "P496",
       "0000-0001-5706-2163"
@@ -10941,23 +10964,43 @@
       "17342562100"
      ],
      [
-      "P2456",
-      "80/540"
+      "P1960",
+      "FUsTMX8AAAAJ"
      ],
      [
       "P2002",
       "xanderpico"
      ],
      [
-      "P1960",
-      "FUsTMX8AAAAJ"
-     ],
-     [
       "P2038",
       "Alexander_Pico"
      ],
      [
+      "P2456",
+      "80/540"
+     ],
+     [
+      "P2671",
+      "/g/11c6dhxx7d"
+     ],
+     [
+      "P4033",
+      "xanderpico@qoto.org"
+     ],
+     [
+      "P4174",
+      "AlexanderPico"
+     ],
+     [
       "P6178",
+      "010737604377.35"
+     ],
+     [
+      "P10832",
+      "E39PCjFMRc64vTXbmBTfy3PvpP"
+     ],
+     [
+      "P10861",
       "010737604377.35"
      ],
      [
@@ -10965,36 +11008,8 @@
       "R68143"
      ],
      [
-      "P4174",
-      "AlexanderPico"
-     ],
-     [
-      "P10861",
-      "010737604377.35"
-     ],
-     [
-      "P227",
-      "1209952807"
-     ],
-     [
-      "P4033",
-      "xanderpico@qoto.org"
-     ],
-     [
-      "P214",
-      "4303158982599556190007"
-     ],
-     [
-      "P10832",
-      "E39PCjFMRc64vTXbmBTfy3PvpP"
-     ],
-     [
       "P13049",
       "1209952807"
-     ],
-     [
-      "P2671",
-      "/g/11c6dhxx7d"
      ]
     ],
     "item": "http://www.wikidata.org/entity/Q28530149",
@@ -11004,69 +11019,69 @@
   ]
  },
  "wikidata:Q28530416": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "ids": [
      [
-      "P1960",
-      "cuyej7sAAAAJ"
-     ],
-     [
-      "P496",
-      "0000-0002-3435-7775"
-     ],
-     [
       "P213",
       "0000000098972748"
-     ],
-     [
-      "P2798",
-      "586709"
-     ],
-     [
-      "P244",
-      "n2010183303"
      ],
      [
       "P214",
       "126274538"
      ],
      [
-      "P8980",
-      "000140475"
+      "P227",
+      "1209984997"
      ],
      [
-      "P6178",
-      "01306363211.33"
+      "P244",
+      "n2010183303"
+     ],
+     [
+      "P496",
+      "0000-0002-3435-7775"
+     ],
+     [
+      "P1960",
+      "cuyej7sAAAAJ"
      ],
      [
       "P2002",
       "pennynymark"
      ],
      [
-      "P10861",
-      "01306363211.33"
+      "P2671",
+      "/g/11f0zc1310"
      ],
      [
-      "P227",
-      "1209984997"
-     ],
-     [
-      "P10832",
-      "E39PBJvcXHh64WC6gDQHBK9v73"
+      "P2798",
+      "586709"
      ],
      [
       "P4033",
       "pennyn@mastodon.social"
      ],
      [
-      "P13049",
-      "1209984997"
+      "P6178",
+      "01306363211.33"
      ],
      [
-      "P2671",
-      "/g/11f0zc1310"
+      "P8980",
+      "000140475"
+     ],
+     [
+      "P10832",
+      "E39PBJvcXHh64WC6gDQHBK9v73"
+     ],
+     [
+      "P10861",
+      "01306363211.33"
+     ],
+     [
+      "P13049",
+      "1209984997"
      ]
     ],
     "item": "http://www.wikidata.org/entity/Q28530416",
@@ -11076,17 +11091,17 @@
   ]
  },
  "wikidata:Q28541054": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "ids": [
      [
-      "P1960",
-      "cMSdr64AAAAJ"
-     ],
-     [
       "P496",
       "0000-0002-8607-9965"
+     ],
+     [
+      "P1960",
+      "cMSdr64AAAAJ"
      ],
      [
       "P2456",
@@ -11104,10 +11119,34 @@
   ]
  },
  "wikidata:Q28651697": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "ids": [
+     [
+      "P214",
+      "8190170939451115660000"
+     ],
+     [
+      "P244",
+      "no2024018398"
+     ],
+     [
+      "P496",
+      "0000-0003-4250-4584"
+     ],
+     [
+      "P1053",
+      "I-3915-2014"
+     ],
+     [
+      "P1153",
+      "6603538848"
+     ],
+     [
+      "P1280",
+      "266887011"
+     ],
      [
       "P1960",
       "4JfAAjsAAAAJ"
@@ -11117,36 +11156,16 @@
       "iseult5"
      ],
      [
-      "P496",
-      "0000-0003-4250-4584"
-     ],
-     [
-      "P1153",
-      "6603538848"
-     ],
-     [
-      "P1053",
-      "I-3915-2014"
+      "P2671",
+      "/g/11dxhflvys"
      ],
      [
       "P2798",
       "126618"
      ],
      [
-      "P1280",
-      "266887011"
-     ],
-     [
       "P3829",
       "435900"
-     ],
-     [
-      "P8446",
-      "56F82A27-2C2D-42BB-9D25-E62FFC06B887"
-     ],
-     [
-      "P2671",
-      "/g/11dxhflvys"
      ],
      [
       "P6178",
@@ -11157,20 +11176,16 @@
       "iseult-lynch-b5856910"
      ],
      [
-      "P10897",
-      "R135898"
+      "P8446",
+      "56F82A27-2C2D-42BB-9D25-E62FFC06B887"
      ],
      [
       "P10861",
       "01363165122.23"
      ],
      [
-      "P244",
-      "no2024018398"
-     ],
-     [
-      "P214",
-      "8190170939451115660000"
+      "P10897",
+      "R135898"
      ]
     ],
     "item": "http://www.wikidata.org/entity/Q28651697",
@@ -11181,37 +11196,37 @@
   ]
  },
  "wikidata:Q28865047": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "ids": [
      [
-      "P1960",
-      "Qji_JPIAAAAJ"
-     ],
-     [
       "P496",
       "0000-0001-5410-599X"
+     ],
+     [
+      "P1960",
+      "Qji_JPIAAAAJ"
      ],
      [
       "P2456",
       "17/7098"
      ],
      [
-      "P6178",
-      "0753211707.71"
+      "P2671",
+      "/g/11dxhfrfx7"
      ],
      [
-      "P10897",
-      "R68134"
+      "P6178",
+      "0753211707.71"
      ],
      [
       "P10861",
       "0753211707.71"
      ],
      [
-      "P2671",
-      "/g/11dxhfrfx7"
+      "P10897",
+      "R68134"
      ]
     ],
     "item": "http://www.wikidata.org/entity/Q28865047",
@@ -11221,21 +11236,29 @@
   ]
  },
  "wikidata:Q39585759": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "ids": [
+     [
+      "P214",
+      "3812163211501007580003"
+     ],
+     [
+      "P227",
+      "1241219656"
+     ],
      [
       "P496",
       "0000-0001-5416-085X"
      ],
      [
-      "P1153",
-      "6602909744"
-     ],
-     [
       "P1053",
       "D-1568-2015"
+     ],
+     [
+      "P1153",
+      "6602909744"
      ],
      [
       "P2798",
@@ -11244,14 +11267,6 @@
      [
       "P3829",
       "2426527"
-     ],
-     [
-      "P227",
-      "1241219656"
-     ],
-     [
-      "P214",
-      "3812163211501007580003"
      ],
      [
       "P13049",
@@ -11265,21 +11280,13 @@
   ]
  },
  "wikidata:Q42369611": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "ids": [
      [
       "P496",
       "0000-0003-2230-0840"
-     ],
-     [
-      "P3835",
-      "marvin-martens"
-     ],
-     [
-      "P2798",
-      "542384"
      ],
      [
       "P1960",
@@ -11290,12 +11297,20 @@
       "mmarvinm2"
      ],
      [
-      "P4033",
-      "Marvin@social.edu.nl"
-     ],
-     [
       "P2671",
       "/g/11gcl1c4cs"
+     ],
+     [
+      "P2798",
+      "542384"
+     ],
+     [
+      "P3835",
+      "marvin-martens"
+     ],
+     [
+      "P4033",
+      "Marvin@social.edu.nl"
      ]
     ],
     "item": "http://www.wikidata.org/entity/Q42369611",
@@ -11306,7 +11321,7 @@
   ]
  },
  "wikidata:Q43370277": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "ids": [
@@ -11315,12 +11330,12 @@
       "0000-0002-4693-0591"
      ],
      [
-      "P10897",
-      "R68145"
-     ],
-     [
       "P4033",
       "anders@scholar.social"
+     ],
+     [
+      "P10897",
+      "R68145"
      ]
     ],
     "item": "http://www.wikidata.org/entity/Q43370277",
@@ -11330,7 +11345,7 @@
   ]
  },
  "wikidata:Q43744369": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "ids": [
@@ -11343,8 +11358,16 @@
       "Le-4tuQAAAAJ"
      ],
      [
+      "P2671",
+      "/g/11f676sy5g"
+     ],
+     [
       "P4232",
       "4784898"
+     ],
+     [
+      "P6178",
+      "0705125735.07"
      ],
      [
       "P6634",
@@ -11353,14 +11376,6 @@
      [
       "P10897",
       "R68149"
-     ],
-     [
-      "P6178",
-      "0705125735.07"
-     ],
-     [
-      "P2671",
-      "/g/11f676sy5g"
      ]
     ],
     "item": "http://www.wikidata.org/entity/Q43744369",
@@ -11370,7 +11385,7 @@
   ]
  },
  "wikidata:Q45351113": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "ids": [
@@ -11383,12 +11398,12 @@
       "E-6214-2012"
      ],
      [
-      "P3829",
-      "1210787"
-     ],
-     [
       "P1153",
       "6603676954"
+     ],
+     [
+      "P3829",
+      "1210787"
      ]
     ],
     "item": "http://www.wikidata.org/entity/Q45351113",
@@ -11398,50 +11413,50 @@
   ]
  },
  "wikidata:Q45907528": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "gh": "larsgw",
     "ids": [
      [
-      "P2037",
-      "larsgw"
-     ],
-     [
       "P496",
       "0000-0002-4751-4637"
-     ],
-     [
-      "P3835",
-      "lars-willighagen"
-     ],
-     [
-      "P2002",
-      "larswillighagen"
-     ],
-     [
-      "P10283",
-      "A2912709654"
-     ],
-     [
-      "P2456",
-      "236/1729"
-     ],
-     [
-      "P4033",
-      "larsgw@mastodon.social"
      ],
      [
       "P1960",
       "r9lmG00AAAAJ"
      ],
      [
+      "P2002",
+      "larswillighagen"
+     ],
+     [
+      "P2037",
+      "larsgw"
+     ],
+     [
+      "P2456",
+      "236/1729"
+     ],
+     [
       "P2671",
       "/g/11hbth2kmh"
      ],
      [
+      "P3835",
+      "lars-willighagen"
+     ],
+     [
+      "P4033",
+      "larsgw@mastodon.social"
+     ],
+     [
       "P8827",
       "larsgw"
+     ],
+     [
+      "P10283",
+      "A2912709654"
      ],
      [
       "P12361",
@@ -11581,214 +11596,214 @@
   ]
  },
  "wikidata:Q51602692": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "gh": "labra",
     "ids": [
      [
-      "P496",
-      "0000-0001-8907-5348"
-     ],
-     [
-      "P1153",
-      "8374489000"
-     ],
-     [
-      "P1053",
-      "L-9181-2014"
-     ],
-     [
-      "P2456",
-      "32/2604"
-     ],
-     [
-      "P1960",
-      "TGfRNZkAAAAJ"
-     ],
-     [
-      "P244",
-      "no2017150147"
-     ],
-     [
-      "P3829",
-      "1348378"
-     ],
-     [
-      "P2037",
-      "labra"
-     ],
-     [
-      "P4419",
-      "jose_emilio_labra_gayo"
-     ],
-     [
-      "P214",
-      "43151110634237061417"
+      "P213",
+      "0000000486389263"
      ],
      [
       "P214",
       "24155189997782132904"
      ],
      [
-      "P4012",
-      "1729679"
-     ],
-     [
-      "P2038",
-      "Jose-Labra-Gayo"
-     ],
-     [
-      "P691",
-      "ctu20191025692"
-     ],
-     [
-      "P4174",
-      "Jelabra"
+      "P214",
+      "43151110634237061417"
      ],
      [
       "P227",
       "119956978X"
-     ],
-     [
-      "P4033",
-      "jelabra@mastodon.social"
-     ],
-     [
-      "P2002",
-      "jelabra"
-     ],
-     [
-      "P1556",
-      "labra-gayo.jose-emilio"
-     ],
-     [
-      "P10832",
-      "E39PBJr3rV79ff7gbBrYQYrcyd"
-     ],
-     [
-      "P213",
-      "0000000486389263"
-     ],
-     [
-      "P13591",
-      "person/3c0cfa05-ccb4-4168-ad6d-7a0ea748e889"
-     ],
-     [
-      "P13049",
-      "119956978X"
-     ]
-    ],
-    "item": "http://www.wikidata.org/entity/Q51602692",
-    "label": "José Emilio Labra Gayo",
-    "orcid": "0000-0001-8907-5348",
-    "site": "http://labra.weso.es"
-   },
-   {
-    "gh": "labra",
-    "ids": [
-     [
-      "P496",
-      "0000-0001-8907-5348"
-     ],
-     [
-      "P1153",
-      "8374489000"
-     ],
-     [
-      "P1053",
-      "L-9181-2014"
-     ],
-     [
-      "P2456",
-      "32/2604"
-     ],
-     [
-      "P1960",
-      "TGfRNZkAAAAJ"
      ],
      [
       "P244",
       "no2017150147"
      ],
      [
-      "P3829",
-      "1348378"
-     ],
-     [
-      "P2037",
-      "labra"
-     ],
-     [
-      "P4419",
-      "jose_emilio_labra_gayo"
-     ],
-     [
-      "P214",
-      "43151110634237061417"
-     ],
-     [
-      "P214",
-      "24155189997782132904"
-     ],
-     [
-      "P4012",
-      "1729679"
-     ],
-     [
-      "P2038",
-      "Jose-Labra-Gayo"
+      "P496",
+      "0000-0001-8907-5348"
      ],
      [
       "P691",
       "ctu20191025692"
      ],
      [
-      "P4174",
-      "Jelabra"
+      "P1053",
+      "L-9181-2014"
      ],
      [
-      "P227",
-      "119956978X"
-     ],
-     [
-      "P4033",
-      "jelabra@mastodon.social"
-     ],
-     [
-      "P2002",
-      "jelabra"
+      "P1153",
+      "8374489000"
      ],
      [
       "P1556",
       "labra-gayo.jose-emilio"
      ],
      [
+      "P1960",
+      "TGfRNZkAAAAJ"
+     ],
+     [
+      "P2002",
+      "jelabra"
+     ],
+     [
+      "P2037",
+      "labra"
+     ],
+     [
+      "P2038",
+      "Jose-Labra-Gayo"
+     ],
+     [
+      "P2456",
+      "32/2604"
+     ],
+     [
+      "P3829",
+      "1348378"
+     ],
+     [
+      "P4012",
+      "1729679"
+     ],
+     [
+      "P4033",
+      "jelabra@mastodon.social"
+     ],
+     [
+      "P4174",
+      "Jelabra"
+     ],
+     [
+      "P4419",
+      "jose_emilio_labra_gayo"
+     ],
+     [
       "P10832",
       "E39PBJr3rV79ff7gbBrYQYrcyd"
      ],
      [
-      "P213",
-      "0000000486389263"
+      "P13049",
+      "119956978X"
      ],
      [
       "P13591",
       "person/3c0cfa05-ccb4-4168-ad6d-7a0ea748e889"
-     ],
-     [
-      "P13049",
-      "119956978X"
      ]
     ],
     "item": "http://www.wikidata.org/entity/Q51602692",
     "label": "José Emilio Labra Gayo",
     "orcid": "0000-0001-8907-5348",
     "site": "http://di002.edv.uniovi.es/~labra/"
+   },
+   {
+    "gh": "labra",
+    "ids": [
+     [
+      "P213",
+      "0000000486389263"
+     ],
+     [
+      "P214",
+      "24155189997782132904"
+     ],
+     [
+      "P214",
+      "43151110634237061417"
+     ],
+     [
+      "P227",
+      "119956978X"
+     ],
+     [
+      "P244",
+      "no2017150147"
+     ],
+     [
+      "P496",
+      "0000-0001-8907-5348"
+     ],
+     [
+      "P691",
+      "ctu20191025692"
+     ],
+     [
+      "P1053",
+      "L-9181-2014"
+     ],
+     [
+      "P1153",
+      "8374489000"
+     ],
+     [
+      "P1556",
+      "labra-gayo.jose-emilio"
+     ],
+     [
+      "P1960",
+      "TGfRNZkAAAAJ"
+     ],
+     [
+      "P2002",
+      "jelabra"
+     ],
+     [
+      "P2037",
+      "labra"
+     ],
+     [
+      "P2038",
+      "Jose-Labra-Gayo"
+     ],
+     [
+      "P2456",
+      "32/2604"
+     ],
+     [
+      "P3829",
+      "1348378"
+     ],
+     [
+      "P4012",
+      "1729679"
+     ],
+     [
+      "P4033",
+      "jelabra@mastodon.social"
+     ],
+     [
+      "P4174",
+      "Jelabra"
+     ],
+     [
+      "P4419",
+      "jose_emilio_labra_gayo"
+     ],
+     [
+      "P10832",
+      "E39PBJr3rV79ff7gbBrYQYrcyd"
+     ],
+     [
+      "P13049",
+      "119956978X"
+     ],
+     [
+      "P13591",
+      "person/3c0cfa05-ccb4-4168-ad6d-7a0ea748e889"
+     ]
+    ],
+    "item": "http://www.wikidata.org/entity/Q51602692",
+    "label": "José Emilio Labra Gayo",
+    "orcid": "0000-0001-8907-5348",
+    "site": "http://labra.weso.es"
    }
   ]
  },
  "wikidata:Q54302726": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "ids": [
@@ -11812,7 +11827,7 @@
   ]
  },
  "wikidata:Q54303216": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "gh": "gkoutos",
@@ -11826,16 +11841,16 @@
       "6603260099"
      ],
      [
+      "P2037",
+      "gkoutos"
+     ],
+     [
       "P2456",
       "24/3635"
      ],
      [
       "P8446",
       "08A003D5-A372-44A0-B9D2-CD02C716E21B"
-     ],
-     [
-      "P2037",
-      "gkoutos"
      ]
     ],
     "item": "http://www.wikidata.org/entity/Q54303216",
@@ -11845,17 +11860,17 @@
   ]
  },
  "wikidata:Q55453416": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "ids": [
      [
-      "P1153",
-      "7003266865"
-     ],
-     [
       "P496",
       "0000-0003-2102-3626"
+     ],
+     [
+      "P1153",
+      "7003266865"
      ],
      [
       "P6634",
@@ -11870,7 +11885,7 @@
   ]
  },
  "wikidata:Q56459199": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "ids": [
@@ -11883,12 +11898,12 @@
       "37073939200"
      ],
      [
-      "P6178",
-      "0700115266.57"
-     ],
-     [
       "P2456",
       "162/0566"
+     ],
+     [
+      "P6178",
+      "0700115266.57"
      ]
     ],
     "item": "http://www.wikidata.org/entity/Q56459199",
@@ -11898,7 +11913,7 @@
   ]
  },
  "wikidata:Q56510144": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "ids": [
@@ -11918,7 +11933,7 @@
   ]
  },
  "wikidata:Q56888653": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "ids": [
@@ -11927,16 +11942,16 @@
       "0000-0002-7449-1266"
      ],
      [
+      "P2002",
+      "jervenbolleman"
+     ],
+     [
       "P2456",
       "64/8909"
      ],
      [
       "P4033",
       "jerven@akademienl.social"
-     ],
-     [
-      "P2002",
-      "jervenbolleman"
      ]
     ],
     "item": "http://www.wikidata.org/entity/Q56888653",
@@ -11946,21 +11961,21 @@
   ]
  },
  "wikidata:Q57058833": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "ids": [
      [
-      "P496",
-      "0000-0002-9077-5664"
+      "P214",
+      "3049158630991223370001"
      ],
      [
       "P227",
       "1207479845"
      ],
      [
-      "P214",
-      "3049158630991223370001"
+      "P496",
+      "0000-0002-9077-5664"
      ],
      [
       "P13049",
@@ -11974,7 +11989,7 @@
   ]
  },
  "wikidata:Q58484212": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "ids": [
@@ -11983,20 +11998,20 @@
       "0000-0003-2391-0384"
      ],
      [
-      "P5029",
-      "toshiakikatayama"
+      "P2456",
+      "31/1739"
      ],
      [
-      "P7783",
-      "201801000137642717"
+      "P5029",
+      "toshiakikatayama"
      ],
      [
       "P6178",
       "01237652002.94"
      ],
      [
-      "P2456",
-      "31/1739"
+      "P7783",
+      "201801000137642717"
      ]
     ],
     "item": "http://www.wikidata.org/entity/Q58484212",
@@ -12006,7 +12021,7 @@
   ]
  },
  "wikidata:Q59490274": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "ids": [
@@ -12015,16 +12030,16 @@
       "0000-0002-6943-6887"
      ],
      [
-      "P9776",
-      "50470076"
-     ],
-     [
       "P5029",
       "yayamamo"
      ],
      [
       "P7783",
       "202101014410918182"
+     ],
+     [
+      "P9776",
+      "50470076"
      ],
      [
       "P11496",
@@ -12038,7 +12053,7 @@
   ]
  },
  "wikidata:Q63958202": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "ids": [
@@ -12058,7 +12073,7 @@
   ]
  },
  "wikidata:Q70206064": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "gh": "YojanaGadiya",
@@ -12068,16 +12083,16 @@
       "0000-0002-7683-0452"
      ],
      [
+      "P2037",
+      "YojanaGadiya"
+     ],
+     [
       "P2798",
       "1000457"
      ],
      [
       "P2798",
       "1026896"
-     ],
-     [
-      "P2037",
-      "YojanaGadiya"
      ],
      [
       "P6634",
@@ -12095,7 +12110,7 @@
   ]
  },
  "wikidata:Q86442640": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "gh": "ammar257ammar",
@@ -12105,20 +12120,20 @@
       "0000-0002-8399-8990"
      ],
      [
-      "P2002",
-      "ammar257ammar"
-     ],
-     [
       "P1960",
       "8ZmXyZcAAAAJ"
      ],
      [
-      "P10897",
-      "R135901"
+      "P2002",
+      "ammar257ammar"
      ],
      [
       "P2037",
       "ammar257ammar"
+     ],
+     [
+      "P10897",
+      "R135901"
      ]
     ],
     "item": "http://www.wikidata.org/entity/Q86442640",
@@ -12128,7 +12143,7 @@
   ]
  },
  "wikidata:Q88046313": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "ids": [
@@ -12148,7 +12163,7 @@
   ]
  },
  "wikidata:Q89321648": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "gh": "tabbassidaloii",
@@ -12156,10 +12171,6 @@
      [
       "P496",
       "0000-0002-4904-3269"
-     ],
-     [
-      "P6178",
-      "01030411721.57"
      ],
      [
       "P1960",
@@ -12172,6 +12183,10 @@
      [
       "P4033",
       "Tooba@social.edu.nl"
+     ],
+     [
+      "P6178",
+      "01030411721.57"
      ]
     ],
     "item": "http://www.wikidata.org/entity/Q89321648",
@@ -12181,18 +12196,22 @@
   ]
  },
  "wikidata:Q89571039": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "gh": "ozancinar",
     "ids": [
      [
-      "P496",
-      "0000-0003-0329-1977"
+      "P214",
+      "6017152502937210800006"
      ],
      [
-      "P2037",
-      "ozancinar"
+      "P227",
+      "1156792371"
+     ],
+     [
+      "P496",
+      "0000-0003-0329-1977"
      ],
      [
       "P1556",
@@ -12203,16 +12222,12 @@
       "8ju6O2AAAAAJ"
      ],
      [
-      "P227",
-      "1156792371"
+      "P2037",
+      "ozancinar"
      ],
      [
       "P6178",
       "011306654323.43"
-     ],
-     [
-      "P214",
-      "6017152502937210800006"
      ]
     ],
     "item": "http://www.wikidata.org/entity/Q89571039",
@@ -12222,7 +12237,7 @@
   ]
  },
  "wikidata:Q92186214": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "ids": [
@@ -12242,7 +12257,7 @@
   ]
  },
  "wikidata:Q96189622": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-26",
   "value": [
    {
     "ids": [
